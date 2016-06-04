@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {changeTab = id; }; 
+            CLASS = CanvasInspectorController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                canvasInspector = NSView; 
+                contentBox = NSBox; 
+                graphicInspector = NSView; 
+                metricsInspector = NSView; 
+                tabMatrix = NSMatrix; 
+                textInspector = NSView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

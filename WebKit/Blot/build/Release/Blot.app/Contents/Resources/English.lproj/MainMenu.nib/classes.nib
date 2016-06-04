@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {debugShowOperations = id; showPreferences = id; }; 
+            CLASS = BlotApp; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {operationsPanel = NSPanel; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {
+            ACTIONS = {
+                appendMessages = id; 
+                changeQuoteLevel = id; 
+                debugChangeBoldStyle = id; 
+                debugUpdateFontPanel = id; 
+                insertFile = id; 
+                insertOriginalAttachments = id; 
+                makeFontBigger = id; 
+                makeFontSmaller = id; 
+                myAction = id; 
+                myAction1 = id; 
+                openLocation = id; 
+                pasteAsQuotation = id; 
+                pasteTextAsMarkup = id; 
+                removeAttachments = id; 
+                saveAllAttachments = id; 
+                sendWindowsFriendlyAttachments = id; 
+                toggleRich = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

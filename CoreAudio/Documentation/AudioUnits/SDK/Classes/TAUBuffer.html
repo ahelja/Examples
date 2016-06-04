@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>TAUBuffer</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">TAUBuffer</a></h1>
+<big><b>Superclasses : </b></big>
+none<br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUBuffer<br>
+<br><pre>template &#060class T&#062 class TAUBuffer </pre>
+<p>Allocates an array of samples of any type, to be optimally aligned for the processor.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="TAUBuffer.0">TAUBuffer</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> TAUBuffer();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="TAUBuffer.1">TAUBuffer</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> TAUBuffer(
+          UInt32                          numElems,
+          UInt32                          numChannels
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~TAUBuffer">~TAUBuffer</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual destructor</h4>
+</td></tr></table>
+<br><pre> ~TAUBuffer();</pre>
+<p>Calls <a href="#Deallocate">Deallocate</a>.</p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Allocate">Allocate</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Allocate(UInt32 numElems);</pre>
+<p>Allocates an array of aligned data.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AllocateClear">AllocateClear</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void AllocateClear(UInt32 numElems);</pre>
+<p>Allocates an array of aligned data and sets it to zero.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Clear">Clear</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Clear();</pre>
+<p>Sets the buffer to all zeroes.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Deallocate">Deallocate</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Deallocate();</pre>
+<p>Frees the space for the array.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="operator T *()">operator T *()</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> operator T *();</pre>
+<p>Returns a pointer to the aligned data.</p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAlignedBuffer">mAlignedBuffer</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> T* mAlignedBuffer;</pre>
+<p>The aligned data pointer.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mBufferSizeBytes">mBufferSizeBytes</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mBufferSizeBytes;</pre>
+<p>Size of the aligned buffer in bytes.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mMemObject">mMemObject</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> void* mMemObject;</pre>
+<p>Pointer to data allocated by this object.</p><br>
+<hr>
+</body></html>

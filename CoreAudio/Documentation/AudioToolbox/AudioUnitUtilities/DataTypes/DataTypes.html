@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AUParameterListenerRef;  name=AUParameterListenerRef --><a name="//apple_ref/c/tdef/AUParameterListenerRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterListenerRef">AUParameterListenerRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An object which receives notifications of Audio Unit parameter value changes.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/AUListenerBase //apple_ref/c/cl/AUListenerBase //apple_ref/c/tdef/AUListenerBase //apple_ref/c/tag/AUListenerBase //apple_ref/c/econst/AUListenerBase //apple_ref/c/struct/AUListenerBase //apple_ref/c/clconst/AUListenerBase" --><font class="type">AUListenerBase</font><!-- /a --> <font class="type">*</font><font class="var">AUParameterListenerRef</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AUEventListenerRef;  name=AUEventListenerRef --><a name="//apple_ref/c/tdef/AUEventListenerRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUEventListenerRef">AUEventListenerRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An object which receives Audio Unit events.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> <font class="var">AUEventListenerRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>An AUEventListenerRef may be passed to API's taking an AUEventListenerRef
+as an argument.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioUnitEvent;  name=AudioUnitEvent --><a name="//apple_ref/c/tdef/AudioUnitEvent"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioUnitEvent">AudioUnitEvent</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Describes a change to an Audio Unit's state.
+</p>
+<b>See Also:</b><br><blockquote><dl>
+<dt>
+<!-- a logicalPath="//apple_ref/c/tag/AudioUnitEvent" -->AudioUnitEvent<!-- /a -->
+</dt>
+<dd></dd>
+</dl></blockquote>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioUnitEvent" logicalPath="//apple_ref/c/cl/AudioUnitEvent //apple_ref/c/cl/AudioUnitEvent //apple_ref/c/tdef/AudioUnitEvent" target="_top"><font class="type">AudioUnitEvent</font></a> { 
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Enums/Enums.html#//apple_ref/c/tag/AudioUnitEventType" logicalPath="//apple_ref/c/cl/AudioUnitEventType //apple_ref/c/cl/AudioUnitEventType //apple_ref/c/tdef/AudioUnitEventType //apple_ref/c/tag/AudioUnitEventType" target="_top"><font class="type">AudioUnitEventType</font></a> <font class="var">mEventType</font>; 
+    <font class="keyword">union</font> { 
+        <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> <font class="var">mParameter</font>; <font class="comment">// for parameter value change, begin and end gesture</font> 
+        <!-- a logicalPath="//apple_ref/c/cl/AudioUnitProperty //apple_ref/c/cl/AudioUnitProperty //apple_ref/c/tdef/AudioUnitProperty //apple_ref/c/tag/AudioUnitProperty //apple_ref/c/econst/AudioUnitProperty //apple_ref/c/struct/AudioUnitProperty //apple_ref/c/clconst/AudioUnitProperty" --><font class="type">AudioUnitProperty</font><!-- /a --> <font class="var">mProperty</font>; <font class="comment">// for kAudioUnitEvent_PropertyChange</font> 
+        } <font class="var">mArgument</font>; 
+} <font class="var">AudioUnitEvent</font>; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mEventType</code></dt>
+<dd>The type of event.</dd>
+<dt><code>mArgument</code></dt>
+<dd>Specifies the parameter or property which has changed.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AUParameterListenerProc;  name=AUParameterListenerProc --><a name="//apple_ref/c/tdef/AUParameterListenerProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterListenerProc">AUParameterListenerProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A function called when a parameter value changes.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AUParameterListenerProc //apple_ref/c/clm/AUParameterListenerProc //apple_ref/c/intfcm/AUParameterListenerProc //apple_ref/c/func/AUParameterListenerProc //apple_ref/c/ftmplt/AUParameterListenerProc //apple_ref/c/defn/AUParameterListenerProc //apple_ref/c/macro/AUParameterListenerProc" --><font class="function">AUParameterListenerProc</font><!-- /a -->)(
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inValue</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>The value passed to AUListenerCreate when the callback function was installed.</dd>
+<dt><code>inObject</code></dt>
+<dd>The object which generated the parameter change.</dd>
+<dt><code>inParameter</code></dt>
+<dd>Signifies the parameter whose value changed.</dd>
+<dt><code>inValue</code></dt>
+<dd>The parameter's new value.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AUParameterListenerProc;  name=AUParameterListenerProc --><a name="//apple_ref/c/tdef/AUParameterListenerProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterListenerProc">AUParameterListenerProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A function called when an Audio Unit event occurs.
+</p>
+<b>See Also:</b><br><blockquote><dl>
+<dt>
+<a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUEventListenerProc" logicalPath="//apple_ref/c/tdef/AUEventListenerProc" target="_top">AUEventListenerProc</a>
+</dt>
+<dd></dd>
+</dl></blockquote>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AUEventListenerProc //apple_ref/c/clm/AUEventListenerProc //apple_ref/c/intfcm/AUEventListenerProc //apple_ref/c/func/AUEventListenerProc //apple_ref/c/ftmplt/AUEventListenerProc //apple_ref/c/defn/AUEventListenerProc //apple_ref/c/macro/AUEventListenerProc" --><font class="function">AUEventListenerProc</font><!-- /a -->)(
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inCallbackRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioUnitEvent" logicalPath="//apple_ref/c/cl/AudioUnitEvent //apple_ref/c/cl/AudioUnitEvent //apple_ref/c/tdef/AudioUnitEvent" target="_top"><font class="type">AudioUnitEvent</font></a> *<font class="param">inEvent</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt64 //apple_ref/c/cl/UInt64 //apple_ref/c/tdef/UInt64 //apple_ref/c/tag/UInt64 //apple_ref/c/econst/UInt64 //apple_ref/c/struct/UInt64 //apple_ref/c/clconst/UInt64" --><font class="type">UInt64</font><!-- /a --> <font class="param">inEventHostTime</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inParameterValue</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inCallbackRefCon</code></dt>
+<dd>The value passed to AUListenerCreate when the callback function was installed.</dd>
+<dt><code>inObject</code></dt>
+<dd>The object which generated the parameter change.</dd>
+<dt><code>inEvent</code></dt>
+<dd>The event which occurred.</dd>
+<dt><code>inEventHostTime</code></dt>
+<dd>The host time at which the event occurred.</dd>
+<dt><code>inParameterValue</code></dt>
+<dd>If the event is parameter change, the parameter's new value (otherwise, undefined).</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AUEventListenerProc;  name=AUEventListenerProc --><a name="//apple_ref/c/tdef/AUEventListenerProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUEventListenerProc">AUEventListenerProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A function called when an Audio Unit event occurs.
+</p>
+<b>See Also:</b><br><blockquote><dl>
+<dt>
+<a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerProc" logicalPath="//apple_ref/c/tdef/AUParameterListenerProc" target="_top">AUParameterListenerProc</a>
+</dt>
+<dd></dd>
+</dl></blockquote>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AUEventListenerProc //apple_ref/c/clm/AUEventListenerProc //apple_ref/c/intfcm/AUEventListenerProc //apple_ref/c/func/AUEventListenerProc //apple_ref/c/ftmplt/AUEventListenerProc //apple_ref/c/defn/AUEventListenerProc //apple_ref/c/macro/AUEventListenerProc" --><font class="function">AUEventListenerProc</font><!-- /a -->)(
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inCallbackRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioUnitEvent" logicalPath="//apple_ref/c/cl/AudioUnitEvent //apple_ref/c/cl/AudioUnitEvent //apple_ref/c/tdef/AudioUnitEvent" target="_top"><font class="type">AudioUnitEvent</font></a> *<font class="param">inEvent</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt64 //apple_ref/c/cl/UInt64 //apple_ref/c/tdef/UInt64 //apple_ref/c/tag/UInt64 //apple_ref/c/econst/UInt64 //apple_ref/c/struct/UInt64 //apple_ref/c/clconst/UInt64" --><font class="type">UInt64</font><!-- /a --> <font class="param">inEventHostTime</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inParameterValue</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inCallbackRefCon</code></dt>
+<dd>The value passed to AUListenerCreate when the callback function was installed.</dd>
+<dt><code>inObject</code></dt>
+<dd>The object which generated the parameter change.</dd>
+<dt><code>inEvent</code></dt>
+<dd>The event which occurred.</dd>
+<dt><code>inEventHostTime</code></dt>
+<dd>The host time at which the event occurred.</dd>
+<dt><code>inParameterValue</code></dt>
+<dd>If the event is parameter change, the parameter's new value (otherwise, undefined).</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'MediaAssets' target in the 'MediaAssets' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <SyncServices/SyncServices.h>
+#endif
+

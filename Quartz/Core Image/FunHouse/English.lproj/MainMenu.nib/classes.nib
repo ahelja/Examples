@@ -1,0 +1,37 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                redo = id; 
+                showEffectStackAction = id; 
+                undo = id; 
+                zoomToFullScreenAction = id; 
+            }; 
+            CLASS = FunHouseAppDelegate; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = FunHouseApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {zoomToFullScreenMenuItem = NSMenuItem; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {
+            ACTIONS = {zoomToFullScreenAction = id; }; 
+            CLASS = FunHouseDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {effectStackPanel = NSPanel; resetButton = NSButton; }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {
+            ACTIONS = {zoomToFullScreenAction = id; }; 
+            CLASS = FunHouseWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {coreImageView = CoreImageView; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

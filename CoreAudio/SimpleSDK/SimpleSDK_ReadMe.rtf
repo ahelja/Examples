@@ -1,0 +1,43 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fswiss\fcharset77 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12620\viewh15940\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 Examples in this directory are provided as a starting point to gain some familiarity with the CoreAudio API.\
+\
+These examples all build command line utilities. When built the -h command line option will display some help and description of the various arguments that can be supplied.\
+\
+It is recommended that you run the examples first, then take a look at the code\
+\
+\
+
+\f1\b ConvertFile\
+
+\f0\b0 	Takes a linear PCM source file and converts it into another file. You can specify any audio data format available on the system, as well as any file type appropriate for the chosen data format.\
+\
+	It provides two code examples that perform the same task. Firstly, look at the UseExtAF.cpp, it uses the ExtendedAudioFile API. This is the best and simplest way to do these kinds of operations. This API uses the underlying AudioFile and AudioConverter APIs to do it's work providing a simpler interface to these services. The other .cpp file shows the same code, but using the underlying APIs (AudioFile and AudioConverter) - an "under the hood" look.\
+\
+	The fully blown and complete conversion code and utility in the SDK is in the Services/AudioFileTools project - afconvert. \
+\
+
+\f1\b PlayFile\
+
+\f0\b0 	Takes any audio file that CoreAudio can read and plays it back to the default output unit. It uses the AUFilePlayer - an AudioUnit (AU) specifically provided to play audio files. You could of course create multiple instances of this AU, process the output of file player AUs with other AUs and so forth. It also demonstrates some simple usage of the AUGraph API\
+\
+	There is another example of playing an audio file in the AudioFileTools project - afplay. It is functionally equivalent to this example, but doesn't use the AUFilePlayer, but rather shows some of the underlying implementation of this AU.\
+\
+
+\f1\b DefaultOutputUnit\
+
+\f0\b0 	Very simple example of finding and opening the Default Output Unit, instantiating an input callback to this AU and "playing" a sin wave.\
+\
+
+\f1\b PlaySoftMIDI\
+
+\f0\b0 	Using AUGraph, it makes a DLSMusicDevice (Apple's AU Instrument that can use either DownLoadable Sounds or Sound Font sample banks). It then sends some simple MIDI commands to this AU to play some notes. \
+\
+
+\f1\b PlaySequence\
+
+\f0\b0 	Using AUGraph (similar to that used in PlaySoftMIDI) it also uses the MusicSequence and MusicPlayer to open a MIDI file and then play it.}

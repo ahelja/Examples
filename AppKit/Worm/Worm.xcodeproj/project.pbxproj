@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41FF675005E290D80065A162 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 41FF674F05E290D80065A162 /* README.rtf */; };
+		73471F9A049A965200C919A3 /* WormController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0558857D008E2ECC11CA0F60 /* WormController.h */; };
+		73471F9B049A965200C919A3 /* WormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0558857F008E2ECC11CA0F60 /* WormView.h */; };
+		73471F9C049A965200C919A3 /* WormGuts.h in Headers */ = {isa = PBXBuildFile; fileRef = 0558858F008E302A11CA0F60 /* WormGuts.h */; };
+		73471F9D049A965200C919A3 /* BetterWormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9210B77E00C55ADA00000001 /* BetterWormView.h */; };
+		73471F9E049A965200C919A3 /* EvenBetterWormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9210B78000C55ADA00000001 /* EvenBetterWormView.h */; };
+		73471F9F049A965200C919A3 /* GoodWormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9210B78200C55ADA00000001 /* GoodWormView.h */; };
+		73471FA0049A965200C919A3 /* ActualWormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9210B78A00C55B9900000001 /* ActualWormView.h */; };
+		73471FA1049A965200C919A3 /* Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 73471F96049A964300C919A3 /* Prefix.h */; };
+		73471FA3049A965200C919A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		73471FA4049A965200C919A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9279DF7500AC57E600CA0CA4 /* Localizable.strings */; };
+		73471FA5049A965200C919A3 /* Background Pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 926D046D00D4A45C00000001 /* Background Pattern.jpg */; };
+		73471FA6049A965200C919A3 /* Worm.nib in Resources */ = {isa = PBXBuildFile; fileRef = F5C873EC011119CF01000001 /* Worm.nib */; };
+		73471FA8049A965200C919A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		73471FA9049A965200C919A3 /* WormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0558857E008E2ECC11CA0F60 /* WormController.m */; };
+		73471FAA049A965200C919A3 /* WormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05588580008E2ECC11CA0F60 /* WormView.m */; };
+		73471FAB049A965200C919A3 /* WormGuts.c in Sources */ = {isa = PBXBuildFile; fileRef = 05588590008E302A11CA0F60 /* WormGuts.c */; };
+		73471FAC049A965200C919A3 /* BetterWormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210B77F00C55ADA00000001 /* BetterWormView.m */; };
+		73471FAD049A965200C919A3 /* EvenBetterWormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210B78100C55ADA00000001 /* EvenBetterWormView.m */; };
+		73471FAE049A965200C919A3 /* GoodWormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210B78300C55ADA00000001 /* GoodWormView.m */; };
+		73471FAF049A965200C919A3 /* ActualWormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210B78B00C55B9900000001 /* ActualWormView.m */; };
+		73471FB1049A965200C919A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		734E6325049E683D00C919A3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0558857D008E2ECC11CA0F60 /* WormController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WormController.h; sourceTree = "<group>"; };
+		0558857E008E2ECC11CA0F60 /* WormController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WormController.m; sourceTree = "<group>"; };
+		0558857F008E2ECC11CA0F60 /* WormView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WormView.h; sourceTree = "<group>"; };
+		05588580008E2ECC11CA0F60 /* WormView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WormView.m; sourceTree = "<group>"; };
+		0558858F008E302A11CA0F60 /* WormGuts.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WormGuts.h; sourceTree = "<group>"; };
+		05588590008E302A11CA0F60 /* WormGuts.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = WormGuts.c; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		41FF674F05E290D80065A162 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		73471F96049A964300C919A3 /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		73471FB4049A965200C919A3 /* Info-Worm.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-Worm.plist"; sourceTree = "<group>"; };
+		73471FB5049A965200C919A3 /* Worm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Worm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9210B77E00C55ADA00000001 /* BetterWormView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BetterWormView.h; sourceTree = "<group>"; };
+		9210B77F00C55ADA00000001 /* BetterWormView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BetterWormView.m; sourceTree = "<group>"; };
+		9210B78000C55ADA00000001 /* EvenBetterWormView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EvenBetterWormView.h; sourceTree = "<group>"; };
+		9210B78100C55ADA00000001 /* EvenBetterWormView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = EvenBetterWormView.m; sourceTree = "<group>"; };
+		9210B78200C55ADA00000001 /* GoodWormView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GoodWormView.h; sourceTree = "<group>"; };
+		9210B78300C55ADA00000001 /* GoodWormView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GoodWormView.m; sourceTree = "<group>"; };
+		9210B78A00C55B9900000001 /* ActualWormView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ActualWormView.h; sourceTree = "<group>"; };
+		9210B78B00C55B9900000001 /* ActualWormView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ActualWormView.m; sourceTree = "<group>"; };
+		926D046D00D4A45C00000001 /* Background Pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Background Pattern.jpg"; sourceTree = "<group>"; };
+		9279DF7600AC57E600CA0CA4 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5C873ED011119CF01000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Worm.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73471FB0049A965200C919A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73471FB1049A965200C919A3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0558857D008E2ECC11CA0F60 /* WormController.h */,
+				0558857E008E2ECC11CA0F60 /* WormController.m */,
+				0558857F008E2ECC11CA0F60 /* WormView.h */,
+				05588580008E2ECC11CA0F60 /* WormView.m */,
+				41FF674F05E290D80065A162 /* README.rtf */,
+				0558858F008E302A11CA0F60 /* WormGuts.h */,
+				05588590008E302A11CA0F60 /* WormGuts.c */,
+				9210B77E00C55ADA00000001 /* BetterWormView.h */,
+				9210B77F00C55ADA00000001 /* BetterWormView.m */,
+				9210B78000C55ADA00000001 /* EvenBetterWormView.h */,
+				9210B78100C55ADA00000001 /* EvenBetterWormView.m */,
+				9210B78200C55ADA00000001 /* GoodWormView.h */,
+				9210B78300C55ADA00000001 /* GoodWormView.m */,
+				9210B78A00C55B9900000001 /* ActualWormView.h */,
+				9210B78B00C55B9900000001 /* ActualWormView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73471FB5049A965200C919A3 /* Worm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Worm */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				73471F96049A964300C919A3 /* Prefix.h */,
+				73471FB4049A965200C919A3 /* Info-Worm.plist */,
+			);
+			name = Worm;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5C873EC011119CF01000001 /* Worm.nib */,
+				926D046D00D4A45C00000001 /* Background Pattern.jpg */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				9279DF7500AC57E600CA0CA4 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		73471F99049A965200C919A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73471F9A049A965200C919A3 /* WormController.h in Headers */,
+				73471F9B049A965200C919A3 /* WormView.h in Headers */,
+				73471F9C049A965200C919A3 /* WormGuts.h in Headers */,
+				73471F9D049A965200C919A3 /* BetterWormView.h in Headers */,
+				73471F9E049A965200C919A3 /* EvenBetterWormView.h in Headers */,
+				73471F9F049A965200C919A3 /* GoodWormView.h in Headers */,
+				73471FA0049A965200C919A3 /* ActualWormView.h in Headers */,
+				73471FA1049A965200C919A3 /* Prefix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73471F98049A965200C919A3 /* Worm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDF2308A2ECBC008AC9B5 /* Build configuration list for PBXNativeTarget "Worm" */;
+			buildPhases = (
+				73471F99049A965200C919A3 /* Headers */,
+				73471FA2049A965200C919A3 /* Resources */,
+				73471FA7049A965200C919A3 /* Sources */,
+				73471FB0049A965200C919A3 /* Frameworks */,
+				73471FB2049A965200C919A3 /* Rez */,
+			);
+			buildRules = (
+				734E6325049E683D00C919A3 /* PBXBuildRule */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-Worm.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Worm;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = Worm;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Worm;
+			productReference = 73471FB5049A965200C919A3 /* Worm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDF2708A2ECBC008AC9B5 /* Build configuration list for PBXProject "Worm" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Worm */;
+			projectDirPath = "";
+			targets = (
+				73471F98049A965200C919A3 /* Worm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73471FA2049A965200C919A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73471FA3049A965200C919A3 /* InfoPlist.strings in Resources */,
+				73471FA4049A965200C919A3 /* Localizable.strings in Resources */,
+				73471FA5049A965200C919A3 /* Background Pattern.jpg in Resources */,
+				73471FA6049A965200C919A3 /* Worm.nib in Resources */,
+				41FF675005E290D80065A162 /* README.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		73471FB2049A965200C919A3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73471FA7049A965200C919A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73471FA8049A965200C919A3 /* main.m in Sources */,
+				73471FA9049A965200C919A3 /* WormController.m in Sources */,
+				73471FAA049A965200C919A3 /* WormView.m in Sources */,
+				73471FAB049A965200C919A3 /* WormGuts.c in Sources */,
+				73471FAC049A965200C919A3 /* BetterWormView.m in Sources */,
+				73471FAD049A965200C919A3 /* EvenBetterWormView.m in Sources */,
+				73471FAE049A965200C919A3 /* GoodWormView.m in Sources */,
+				73471FAF049A965200C919A3 /* ActualWormView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9279DF7500AC57E600CA0CA4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9279DF7600AC57E600CA0CA4 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F5C873EC011119CF01000001 /* Worm.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C873ED011119CF01000001 /* English */,
+			);
+			name = Worm.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDF2408A2ECBC008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-Worm.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Worm;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDF2508A2ECBC008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-Worm.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Worm;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDF2608A2ECBC008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-Worm.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Worm;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		B69BDF2808A2ECBC008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		B69BDF2908A2ECBC008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		B69BDF2A08A2ECBC008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDF2308A2ECBC008AC9B5 /* Build configuration list for PBXNativeTarget "Worm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDF2408A2ECBC008AC9B5 /* Development */,
+				B69BDF2508A2ECBC008AC9B5 /* Deployment */,
+				B69BDF2608A2ECBC008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDF2708A2ECBC008AC9B5 /* Build configuration list for PBXProject "Worm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDF2808A2ECBC008AC9B5 /* Development */,
+				B69BDF2908A2ECBC008AC9B5 /* Deployment */,
+				B69BDF2A08A2ECBC008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

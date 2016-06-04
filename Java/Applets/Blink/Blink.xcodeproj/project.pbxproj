@@ -1,0 +1,248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B86001BDB6411CA292A /* Blink.java in Sources */ = {isa = PBXBuildFile; fileRef = 00E68290FEC88D7311DB9C8B /* Blink.java */; };
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Blink;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68290FEC88D7311DB9C8B /* Blink.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Blink.java; sourceTree = "<group>"; };
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F5B7120D0373610301161347 /* Blink */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = Blink; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				00E68290FEC88D7311DB9C8B /* Blink.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5B7120D0373610301161347 /* Blink */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23425808DF2E8E008B0BD4 /* Build configuration list for PBXProject "Blink" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* Blink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B86001BDB6411CA292A /* Blink.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* Blink */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23425408DF2E8E008B0BD4 /* Build configuration list for PBXToolTarget "Blink" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets/;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Blink;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = Blink;
+			productInstallPath = /usr/local/bin;
+			productName = JavaAWTApplet;
+			productReference = F5B7120D0373610301161347 /* Blink */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23425508DF2E8E008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets/;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Blink;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23425608DF2E8E008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets/;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Blink;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23425908DF2E8E008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23425A08DF2E8E008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23425408DF2E8E008B0BD4 /* Build configuration list for PBXToolTarget "Blink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23425508DF2E8E008B0BD4 /* Debug */,
+				4C23425608DF2E8E008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23425808DF2E8E008B0BD4 /* Build configuration list for PBXProject "Blink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23425908DF2E8E008B0BD4 /* Debug */,
+				4C23425A08DF2E8E008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

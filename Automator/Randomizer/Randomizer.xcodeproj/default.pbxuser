@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 = {
+		activeBuildConfigurationName = Debug;
+		activeBuildStyle = 014CEA420018CDE011CA2923;
+		activeExecutable = 25F078EA07CA7B5600C12CF1;
+		activeTarget = 65942E070711D4310089E4F1;
+		addToTargets = (
+			65942E070711D4310089E4F1,
+		);
+		codeSenseManager = 25F078E907CA7A6000C12CF1;
+		executables = (
+			25F078EA07CA7B5600C12CF1,
+		);
+		sourceControlManager = 25F078E807CA7A6000C12CF1;
+		userBuildSettings = {
+		};
+	};
+	25F078E807CA7A6000C12CF1 = {
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		isa = PBXSourceControlManager;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	25F078E907CA7A6000C12CF1 = {
+		indexTemplatePath = "";
+		isa = PBXCodeSenseManager;
+	};
+	25F078EA07CA7B5600C12CF1 = {
+		activeArgIndex = 0;
+		activeArgIndices = (
+			YES,
+		);
+		argumentStrings = (
+			"-action \"Pass Random Items.action\"",
+		);
+		configStateDict = {
+			"PBXLSLaunchAction-1" = {
+				PBXLSLaunchAction = 1;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = ASKDebuggerLaunchConfig;
+				displayName = "AppleScript Debugger";
+				identifier = com.apple.AppleScriptStudio.ASKDebugLaunchConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		cppStopOnCatchEnabled = 0;
+		cppStopOnThrowEnabled = 0;
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = ASKDebugger;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+			{
+				active = NO;
+				name = AEDebug;
+				value = 1;
+			},
+			{
+				active = NO;
+				name = AEDebugSends;
+				value = 1;
+			},
+			{
+				active = NO;
+				name = AEDebugReceives;
+				value = 1;
+			},
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		isa = PBXExecutable;
+		launchableReference = 25F078EB07CA7B5600C12CF1;
+		libgmallocEnabled = 0;
+		name = Automator;
+		shlibInfoDictList = (
+		);
+		sourceDirectories = (
+		);
+	};
+	25F078EB07CA7B5600C12CF1 = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = Automator.app;
+		path = /Applications/Automator.app;
+		refType = 0;
+		sourceTree = "<absolute>";
+	};
+	25F078F207CA7BD000C12CF1 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {809, 429}}";
+			sepNavSelRange = "{922, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{84, 206}, {750, 558}}";
+		};
+	};
+	65942E070711D4310089E4F1 = {
+		activeExec = 0;
+	};
+}

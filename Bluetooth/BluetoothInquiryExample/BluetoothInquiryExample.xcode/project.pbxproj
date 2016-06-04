@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		1058C7A0FEA54F0111CA2CBB = {
+			children = (
+				1058C7A1FEA54F0111CA2CBB,
+				31F55053C5B0639A05CD299C,
+				31F55054C5B0639A05CD299C,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1058C7A1FEA54F0111CA2CBB = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1058C7A2FEA54F0111CA2CBB = {
+			children = (
+				29B97325FDCFA39411CA2CEA,
+				29B97324FDCFA39411CA2CEA,
+				F5D6B93B02BD32AC01CB09D5,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//100
+//101
+//102
+//103
+//104
+//140
+//141
+//142
+//143
+//144
+		14D8F6410896D94F005B7F16 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = Powerbook.tiff;
+			path = Resources/Images/Powerbook.tiff;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		14D8F6420896D94F005B7F16 = {
+			fileRef = 14D8F6410896D94F005B7F16;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//140
+//141
+//142
+//143
+//144
+//190
+//191
+//192
+//193
+//194
+		19C28FACFE9D520D11CA2CBB = {
+			children = (
+				9A2EFB3C07A866EC00258FA4,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//290
+//291
+//292
+//293
+//294
+		29B97313FDCFA39411CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA,
+				4A9504CDFFE6A4B311CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 29B97314FDCFA39411CA2CEA;
+			projectDirPath = "";
+			targets = (
+				9A2EFB1D07A866EC00258FA4,
+			);
+		};
+		29B97314FDCFA39411CA2CEA = {
+			children = (
+				4D1F262F00E1091B3ACA2918,
+				29B97317FDCFA39411CA2CEA,
+				29B97323FDCFA39411CA2CEA,
+				19C28FACFE9D520D11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = BTDevices;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA = {
+			children = (
+				9A2E079E07A86AF700258FA4,
+				F5D6B8AF02BD299B01CB09D5,
+				F5D6BB4802BD36B801CB09D5,
+				F5D6BB4502BD362001CB09D5,
+				F5D6B8B902BD299B01CB09D5,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA = {
+			children = (
+				1058C7A0FEA54F0111CA2CBB,
+				1058C7A2FEA54F0111CA2CBB,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97324FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		29B97325FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//290
+//291
+//292
+//293
+//294
+//310
+//311
+//312
+//313
+//314
+		31F55053C5B0639A05CD299C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOBluetooth.framework;
+			path = /System/Library/Frameworks/IOBluetooth.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		31F55054C5B0639A05CD299C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOBluetoothUI.framework;
+			path = /System/Library/Frameworks/IOBluetoothUI.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//310
+//311
+//312
+//313
+//314
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+		4A9504CCFFE6A4B311CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+//4D0
+//4D1
+//4D2
+//4D3
+//4D4
+		4D1F262F00E1091B3ACA2918 = {
+			children = (
+				F5D6B8CE02BD29F301CB09D5,
+				F5D6B8CF02BD29F301CB09D5,
+				F5D6B8D302BD29F301CB09D5,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//4D0
+//4D1
+//4D2
+//4D3
+//4D4
+//9A0
+//9A1
+//9A2
+//9A3
+//9A4
+		9A2E079E07A86AF700258FA4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			name = Info.plist;
+			path = Resources/Info.plist;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		9A2E079F07A86AF700258FA4 = {
+			fileRef = 9A2E079E07A86AF700258FA4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB1D07A866EC00258FA4 = {
+			buildPhases = (
+				9A2EFB1E07A866EC00258FA4,
+				9A2EFB2107A866EC00258FA4,
+				9A2EFB3007A866EC00258FA4,
+				9A2EFB3407A866EC00258FA4,
+				9A2EFB3A07A866EC00258FA4,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Bluetooth Inquiry Example";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = "Bluetooth Inquiry Example";
+			productInstallPath = "$(HOME)/Applications";
+			productName = BTDevices;
+			productReference = 9A2EFB3C07A866EC00258FA4;
+			productType = "com.apple.product-type.application";
+		};
+		9A2EFB1E07A866EC00258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EFB1F07A866EC00258FA4,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EFB1F07A866EC00258FA4 = {
+			fileRef = F5D6B8CE02BD29F301CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2107A866EC00258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EFB2207A866EC00258FA4,
+				9A2EFB2307A866EC00258FA4,
+				9A2EFB2507A866EC00258FA4,
+				9A2EFB2607A866EC00258FA4,
+				9A2EFB2707A866EC00258FA4,
+				9A2EFB2A07A866EC00258FA4,
+				9A2EFB2B07A866EC00258FA4,
+				9A2E079F07A86AF700258FA4,
+				14D8F6420896D94F005B7F16,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EFB2207A866EC00258FA4 = {
+			fileRef = F5D6B8AF02BD299B01CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2307A866EC00258FA4 = {
+			fileRef = F5D6B8BC02BD299B01CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2507A866EC00258FA4 = {
+			fileRef = F5D6BB4502BD362001CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2607A866EC00258FA4 = {
+			fileRef = F5D6BB4802BD36B801CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2707A866EC00258FA4 = {
+			fileRef = F5D6BB4B02BD388A01CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2A07A866EC00258FA4 = {
+			fileRef = F550F34502BD3FCB01000103;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB2B07A866EC00258FA4 = {
+			fileRef = F550F34702BD400501000103;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3007A866EC00258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EFB3107A866EC00258FA4,
+				9A2EFB3207A866EC00258FA4,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EFB3107A866EC00258FA4 = {
+			fileRef = F5D6B8CF02BD29F301CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3207A866EC00258FA4 = {
+			fileRef = F5D6B8D302BD29F301CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3407A866EC00258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EFB3507A866EC00258FA4,
+				9A2EFB3607A866EC00258FA4,
+				9A2EFB3707A866EC00258FA4,
+				9A2EFB3807A866EC00258FA4,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EFB3507A866EC00258FA4 = {
+			fileRef = 1058C7A1FEA54F0111CA2CBB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3607A866EC00258FA4 = {
+			fileRef = F5D6B93B02BD32AC01CB09D5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3707A866EC00258FA4 = {
+			fileRef = 31F55053C5B0639A05CD299C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3807A866EC00258FA4 = {
+			fileRef = 31F55054C5B0639A05CD299C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EFB3A07A866EC00258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EFB3C07A866EC00258FA4 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "Bluetooth Inquiry Example.app";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//9A0
+//9A1
+//9A2
+//9A3
+//9A4
+//F50
+//F51
+//F52
+//F53
+//F54
+		F550F34502BD3FCB01000103 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = DesktopG4.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		F550F34702BD400501000103 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = iMac.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		F5D6B8AF02BD299B01CB09D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			name = Credits.rtf;
+			path = Resources/Credits.rtf;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5D6B8B902BD299B01CB09D5 = {
+			children = (
+				F5D6BB4B02BD388A01CB09D5,
+				F550F34502BD3FCB01000103,
+				F5D6B8BC02BD299B01CB09D5,
+				F550F34702BD400501000103,
+				14D8F6410896D94F005B7F16,
+			);
+			isa = PBXGroup;
+			name = Images;
+			path = Resources/Images;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5D6B8BC02BD299B01CB09D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = iBook.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		F5D6B8CE02BD29F301CB09D5 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = BluetoothExplorerWindow.h;
+			path = Sources/BluetoothExplorerWindow.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5D6B8CF02BD29F301CB09D5 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			name = BluetoothExplorerWindow.m;
+			path = Sources/BluetoothExplorerWindow.m;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5D6B8D302BD29F301CB09D5 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			name = main.m;
+			path = Sources/main.m;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5D6B93B02BD32AC01CB09D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOKit.framework;
+			path = /System/Library/Frameworks/IOKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		F5D6BB4502BD362001CB09D5 = {
+			children = (
+				F5D6BB4602BD362001CB09D5,
+			);
+			isa = PBXVariantGroup;
+			name = MainMenu.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		F5D6BB4602BD362001CB09D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = Resources/English.lproj/MainMenu.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		F5D6BB4802BD36B801CB09D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			name = AppIcons.icns;
+			path = Resources/AppIcons.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		F5D6BB4B02BD388A01CB09D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = BluetoothLogo.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA;
+}

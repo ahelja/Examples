@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_versions?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitV1andV2"></a>
+<h1>Audio Unit V1 and V2</h1>
+<p>	In Mac OS X version 10.2, some revisions were made to the Audio Unit API and
+implementation. These changes were made in response to developer feedback and
+involved a reassessment of the rendering model that was used with the original
+Audio Units as published in versions 10.0 and 10.1. Originally, multichannel audio data
+presented to an Audio Unit element (bus) for processing was presented as
+interleaved data. However, many developers of Audio Plugins are either
+processing only mono channels, or if multichannel, where each channel's data is
+separated into discrete blocks - deinterleaved.</p>
+
+<p>	This change was fundamental enough to the rendering API, that it was
+thought that a new function should be provided: <code><a href="au_render.html#AudioUnitRender">AudioUnitRender</a></code>, which
+supersedes the original <code>AudioUnitRenderSlice</code>. Details of these
+calls can be found in the section on <a href="au_render.html#AudioUnitRendering">Audio Unit Rendering</a>. </p>
+
+<p>	In order to publish this change, the component descriptions for an
+Audio Unit have been changed. Originally, all Audio Units were designated with a
+componentType of <code>kAudioUnitComponentType</code>, where the commonality of
+the Audio Unit component selectors (API) was expressed through sharing the same
+component type. The subType was then used to describe the different types of
+Audio Units. However, this limited the name space available to Audio Units given
+that to declare and Audio Unit of a particular type required usage of both the
+type and subType fields of the component description. The manufacturerID field
+was re-purposed to discriminate a particular effect unit from another one.</p>
+
+<p>	With the V2 Audio Unit, Apple has redefined the component type to several
+types, that represent the various different types of Audio Units. Some of these
+types will have additional component selectors (or API), and others are defined
+to discriminate a broad area of usage. Details can be found in the <a href="INVALID">??Types
+of Audio Units</a> section.</p>
+
+<p>	This repurposing of the component descriptions, enables usage of the
+manufacturer field as a manufacturer ID. All of Apple's V2 Audio Units will
+specify <code>kAudioUnitManufacturer_Apple</code> as their manufacturer ID.
+Other companies can register an ID with Apple to use to identify their company.
+As with other components, Apple reserves the definition of codes that contain
+all lower case characters.</p>
+
+<p>	With 10.2, Apple is in a transition period between the V1 and V2
+Audio Units. As such, that release will be the final release of Mac OS X that
+will contain any new V1 Audio Units. Apple will continue to provide the V1
+Audio Units in consequent releases for compatibility reasons only. All future
+development by Apple will be solely within the V2 domain. It is strongly
+recommended by Apple that third parties develop V2 Audio Units only - there
+should not be felt that there is any requirement by Apple that those companies
+support the V1 protocol. Where possible, any application that does not need to
+deploy on a 10.1 system and rely on a V1 Audio Unit, should only use a V2 unit.
+Finally we also recommend that hosts search for V2 Audio Units, and if found,
+only feel obliged to support a V2 Audio Unit, i.e. only hosting V1 Audio Units as
+a fall-back position.</p>
+
+<p>	This will hopefully help move all of us to a single protocol in this
+space, and given the scarcity of V1 Audio Units when the V2 unit was introduced
+with 10.2, Apple feels that this is the  most useful and clearest path to
+follow.</p>
+
+</body>
+</html>

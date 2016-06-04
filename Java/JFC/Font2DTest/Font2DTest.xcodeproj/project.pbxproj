@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B92001BDF0A11CA292A /* Font2DTest.java in Sources */ = {isa = PBXBuildFile; fileRef = 010341B7FEEF030011DB9C8B /* Font2DTest.java */; };
+		F5A6A4F103930B0601C917B9 /* Font2DTest.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B321610340ECED01D41B1B /* Font2DTest.html */; };
+		F5A6A4F203930B0601C917B9 /* Font2DTestPlugin.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B321630340ECED01D41B1B /* Font2DTestPlugin.html */; };
+		F5A6A50703930C8701C917B9 /* Font2DTestApplet.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B321620340ECED01D41B1B /* Font2DTestApplet.java */; };
+		F5B321710340ECED01D41B1B /* FontPanel.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B321640340ECED01D41B1B /* FontPanel.java */; };
+		F5B321720340ECED01D41B1B /* RangeMenu.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B321650340ECED01D41B1B /* RangeMenu.java */; };
+		F5B321740340ECED01D41B1B /* resource.data in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5B321680340ECED01D41B1B /* resource.data */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5B321750340ECED01D41B1B /* TextResources.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5B321690340ECED01D41B1B /* TextResources.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5B321760340ECED01D41B1B /* TextResources_de.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5B3216A0340ECED01D41B1B /* TextResources_de.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5B321770340ECED01D41B1B /* TextResources_en.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5B3216B0340ECED01D41B1B /* TextResources_en.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5B321780340ECED01D41B1B /* TextResources_en_GB.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5B3216C0340ECED01D41B1B /* TextResources_en_GB.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5B321790340ECED01D41B1B /* TextResources_ko.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5B3216D0340ECED01D41B1B /* TextResources_ko.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B95001BDF0A11CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B96001BDF0A11CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A0644BC02C7C42C0CC91562 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				F5A6A4F103930B0601C917B9 /* Font2DTest.html in CopyFiles */,
+				F5A6A4F203930B0601C917B9 /* Font2DTestPlugin.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		010341B7FEEF030011DB9C8B /* Font2DTest.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Font2DTest.java; sourceTree = "<group>"; };
+		6A8008AE02C7B68F0CC91562 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		6A9ED92C02B0286D0CC91562 /* Font2DTest.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = Font2DTest.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B321610340ECED01D41B1B /* Font2DTest.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = Font2DTest.html; sourceTree = "<group>"; };
+		F5B321620340ECED01D41B1B /* Font2DTestApplet.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Font2DTestApplet.java; sourceTree = "<group>"; };
+		F5B321630340ECED01D41B1B /* Font2DTestPlugin.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = Font2DTestPlugin.html; sourceTree = "<group>"; };
+		F5B321640340ECED01D41B1B /* FontPanel.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = FontPanel.java; sourceTree = "<group>"; };
+		F5B321650340ECED01D41B1B /* RangeMenu.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = RangeMenu.java; sourceTree = "<group>"; };
+		F5B321660340ECED01D41B1B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F5B321680340ECED01D41B1B /* resource.data */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = resource.data; sourceTree = "<group>"; };
+		F5B321690340ECED01D41B1B /* TextResources.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = TextResources.properties; sourceTree = "<group>"; };
+		F5B3216A0340ECED01D41B1B /* TextResources_de.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = TextResources_de.properties; sourceTree = "<group>"; };
+		F5B3216B0340ECED01D41B1B /* TextResources_en.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = TextResources_en.properties; sourceTree = "<group>"; };
+		F5B3216C0340ECED01D41B1B /* TextResources_en_GB.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = TextResources_en_GB.properties; sourceTree = "<group>"; };
+		F5B3216D0340ECED01D41B1B /* TextResources_ko.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = TextResources_ko.properties; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B94001BDF0A11CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				010341B7FEEF030011DB9C8B /* Font2DTest.java */,
+				F5B321620340ECED01D41B1B /* Font2DTestApplet.java */,
+				F5B321640340ECED01D41B1B /* FontPanel.java */,
+				F5B321650340ECED01D41B1B /* RangeMenu.java */,
+				F5B321610340ECED01D41B1B /* Font2DTest.html */,
+				F5B321630340ECED01D41B1B /* Font2DTestPlugin.html */,
+				F5B321670340ECED01D41B1B /* resources */,
+				F5B321660340ECED01D41B1B /* README.txt */,
+				6A8008AE02C7B68F0CC91562 /* Manifest */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A9ED92C02B0286D0CC91562 /* Font2DTest.jar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5B321670340ECED01D41B1B /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5B321680340ECED01D41B1B /* resource.data */,
+				F5B321690340ECED01D41B1B /* TextResources.properties */,
+				F5B3216A0340ECED01D41B1B /* TextResources_de.properties */,
+				F5B3216B0340ECED01D41B1B /* TextResources_en.properties */,
+				F5B3216C0340ECED01D41B1B /* TextResources_en_GB.properties */,
+				F5B3216D0340ECED01D41B1B /* TextResources_ko.properties */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B93001BDF0A11CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B321740340ECED01D41B1B /* resource.data in JavaArchive */,
+				F5B321750340ECED01D41B1B /* TextResources.properties in JavaArchive */,
+				F5B321760340ECED01D41B1B /* TextResources_de.properties in JavaArchive */,
+				F5B321770340ECED01D41B1B /* TextResources_en.properties in JavaArchive */,
+				F5B321780340ECED01D41B1B /* TextResources_en_GB.properties in JavaArchive */,
+				F5B321790340ECED01D41B1B /* TextResources_ko.properties in JavaArchive */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23436008DF2E98008B0BD4 /* Build configuration list for PBXProject "Font2DTest" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B95001BDF0A11CA292A /* Development */,
+				130F8B96001BDF0A11CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B90001BDF0A11CA292A /* Font2DTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B91001BDF0A11CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B92001BDF0A11CA292A /* Font2DTest.java in Sources */,
+				F5A6A50703930C8701C917B9 /* Font2DTestApplet.java in Sources */,
+				F5B321710340ECED01D41B1B /* FontPanel.java in Sources */,
+				F5B321720340ECED01D41B1B /* RangeMenu.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B90001BDF0A11CA292A /* Font2DTest */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23435C08DF2E98008B0BD4 /* Build configuration list for PBXToolTarget "Font2DTest" */;
+			buildPhases = (
+				130F8B91001BDF0A11CA292A /* Sources */,
+				130F8B93001BDF0A11CA292A /* JavaArchive */,
+				130F8B94001BDF0A11CA292A /* Frameworks */,
+				6A0644BC02C7C42C0CC91562 /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/Font2DTest;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Font2DTest;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = Font2DTest;
+			productInstallPath = /Developer/Examples/Java/JFC/Font2DTest;
+			productName = Font2DTest;
+			productReference = 6A9ED92C02B0286D0CC91562 /* Font2DTest.jar */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23435D08DF2E98008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/Font2DTest;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Font2DTest;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23435E08DF2E98008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/Font2DTest;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Font2DTest;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23436108DF2E98008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23436208DF2E98008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23435C08DF2E98008B0BD4 /* Build configuration list for PBXToolTarget "Font2DTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23435D08DF2E98008B0BD4 /* Debug */,
+				4C23435E08DF2E98008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23436008DF2E98008B0BD4 /* Build configuration list for PBXProject "Font2DTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23436108DF2E98008B0BD4 /* Debug */,
+				4C23436208DF2E98008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

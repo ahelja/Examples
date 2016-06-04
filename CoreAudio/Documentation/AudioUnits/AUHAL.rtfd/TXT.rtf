@@ -1,0 +1,197 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fnil\fcharset77 Monaco;
+\f3\fswiss\fcharset77 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green0\blue0;}
+\margl1440\margr1440\vieww12440\viewh15060\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs48 \cf2 Using the AUHAL AudioUnit
+\f1\b0\fs24 \
+\
+
+\f0\b [1] I/O Logic:
+\f1\b0 \
+The AUHAL has two elements:\
+\
+Element 0 is output (if there is any.)\
+Element 1 is input (if there is any.)  Note that input must be explicitly enabled with the 
+\f2\fs20 kAudioOutputUnitProperty_EnableIO
+\f1\fs24  property.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf2 The signal flow is diagrammed as follows:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+\cf0  {{\NeXTGraphic AUHALDiagram.jpg \width7740 \height8120
+}¬}
+\f1\fs24 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2 \cf2 T
+\f1 he client never directly interacts with the boxes marked "device input" or "device output".\
+\
+To provide output to an AUHAL, a client registers a render callback on input element 0.  The AUHAL then registers an IOProc with the selected device and calls the client's render callback in the IOProc thread of that device.\
+\
+To receive input, the client should first enable input on AUHAL.  Then the client \cf0 calls the AUHAL's AudioUnitRender method on output element 1 \cf2 as needed to get current input data.\
+\
+Let's look at the case of a device that provides both input and output data (for example, Built-in audio on most of Apple's machines), and a client interested in real-time audio processing.  For an AUHAL unit assigned to that device, its IOProc runs, calling your RenderCallback to provide data for output. Your RenderCallback can then call AudioUnitRender (elementID = 1) on that same AUHAL to get the input data for that I/O cycle.  A simple AUGraph for software play-through for this device would be an AUGraph of 1 audio unit:  The AUHAL unit, with one connection (from AUHAL output = 1 to the same AUHAL input = 0.)\
+\
+In the case of devices that are not full-duplex (for example, USB), clients may register a callback with the  AUHAL (
+\f2\fs20 \cf0 kAudioOutputUnitProperty_SetInputCallback
+\f1\fs24 \cf2 ) - which will be called when the AUHAL has input data.  *Please note: due to some bugs in CoreAudio in Mac OS X v10.3 (Panther),  this was NOT working as shipped.  However, with the QuickTime 6.5 update these problems have been fixed (so this with work for Panther and Jaguar systems with QuickTime v6.5 installed.)\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b \cf2 \
+[2] Formats:
+\f1\b0 \
+AUHAL units flatten the streams of a device into a single de-interleaved stream for both input and output. An AudioConverter is used to do this transformation.  If the input and output formats do not correspond with a 1:1 ratio, the AUHAL unit will use channel maps to determine which channels to present to the user.\
+\
+For DeviceOutput (AUHAL Element 0), the device format is always expressed in the output scope. This will always represents the total number of channels to which the device is currently set. It is NEVER writable.  If the format of the device needs to be changed, the user will need to set that explicitly on the device, not on the AUHAL's element. The sample rate of that format is the current sample rate of the device.\
+\
+For DeviceInput (AUHAL Element 1), the device format is always expressed in the input scope and is not writable as described for DeviceOutput.\
+\
+The client sets the format it will provide for output on AUHAL's Input Element 0.  The client sets the format it desires for input on AUHAL's Output Element 1. \
+\
+AUHAL determines what kind of AudioConverter is required by comparing the flattened device format with the Client's format. Resetting either a device format or a client format will generally be a disruptive event, requiring the AUHAL to establish a new AudioConverter.\
+\
+A client can set ANY format, provided that format has a simple conversion process. Typically, this means that a client can specify ANY variant of the PCM formats.  For example, a client could have the AUHAL's converters do both a sample rate conversion and/or a floating-point-to-integer conversion.\
+\
+The AUHAL unit bypasses the normal semantic of initialization requirements for format changes.  This is done because the AUHAL (and its derived units) must respond both to external sample rate changes on the device and to the removal of a hot-pluggable device (like USB or FireWire), but still keep on working.\
+\
+\
+\
+
+\f0\b [3] Channel Maps
+\f1\b0 \
+Clients can tell the AUHAL units which channels of the device they are interested in.  For example, the client may be processing stereo data, but outputting to a six-channel device.  This is done by using the 
+\f2\fs20 kAudioOutputUnitProperty_ChannelMap
+\f1\fs24  property.  To use this property:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f3\i \cf2 \ul \ulc2 For Output:
+\f1\i0 \ulnone \
+Create an array of SInt32 that is the size of the \ul number of channels of the device\ulnone  (Get the Format of the AUHAL's output Element == 0)\
+Initialize each of the array's values to -1 (-1 indicates that that channel is NOT to be presented in the conversion.)\
+\
+Next, for each channel of your app's output, set:\
+channelMapArray[deviceOutputChannel] = desiredAppOutputChannel.\
+\
+For example: we have a 6 channel output device and our application has a stereo source it wants to provide to the device.  Suppose we want that stereo source to go to the 3rd and 4th channels of the device. The channel map would look like this: \{ -1, -1, 0, 1, -1, -1 \}\
+\
+Where the formats are:\
+Input Element == 0: 2 channels (- client format - settable)\
+Output Element == 0: 6 channels (- device format - NOT settable)\
+\
+So channel 2 (zero-based) of the device will take the first channel of output and channel 3 will take the second channel of output. (This translates to the 3rd and 4th plugs of the 6 output plugs of the device of course!)\
+
+\f3\i \
+\ul For Input:
+\f1\i0 \ulnone \
+Create an array of SInt32 that is the size of the \ul number of channels of the format you require for input\ulnone .  Get (or Set in this case as needed) the AUHAL's output Element == 1.\
+\
+Next, for each channel of input you require, set:\
+channelMapArray[desiredAppInputChannel] = deviceOutputChannel;\
+\
+For example: we have a 6 channel input device from which we wish to receive stereo input from the 3rd and 4th channels. The channel map looks like this: \{ 2, 3 \}\
+\
+Where the formats are:\
+Input Element == 0: 2 channels (- device format - NOT settable)\
+Output Element == 0: 6 channels (- client format - settable)\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b \cf2 [4] Stream Usage\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0 \cf2 The HAL provides the ability to enable or disable a device's streams. Many devices publish multiple streams.  Some devices may just present all mono streams, some devices present streams that associate with their physical outputs (to say its analog inputs comprise one stream and its digital inputs comprise another.)\
+\
+Through understanding the topology of the device, and using the channel map property as described above, it becomes possible for the AUHAL units to disable streams which the client is not using. This can lead to a considerable CPU saving, as it avoids much unnecessary work.\
+\cf3 \
+\
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b \cf2 [5] Audio Channel Layouts: Default Stereo Channels & Default Surround Configuration
+\f1\b0 \
+This is best thought of as a feature that was fully supported in the OS with Panther.  AudioMIDISetup provides the ability for a user to specify two default speaker/format configurations for a particular piece of hardware:\
+(1)
+\f3\i  Default Stereo Channels
+\f1\i0 :  On a mulitchannel device, specify which two channels are to be used for the Left and Right stereo speakers.\
+(2)
+\f3\i  Default Surround/Multi-Channel Config
+\f1\i0 : Define which channels and which speaker format are to be used for multi-channel output.\
+\
+The AUHAL automatically uses the default stereo channels of a device for any stereo formats. This enables applications like iTunes, DVD Player, and QuickTime to play stereo sound on the preferred stereo speakers of the user. Thus, any user of the AUHAL unit will inherit this automatic behaviour as described to the system by the user.\
+\
+For surround, the AUHAL will assume that a 4 channel stream is of the channel ordering described by the AudioUnit channel layout for Quad (
+\f2\fs20 kAudioChannelLayoutTag_AudioUnit_4
+\f1\fs24  in <CoreAudio/CoreAudioTypes.h>) For 5 channels, it will assume a channel layout of 5.0 (
+\f2\fs20 kAudioChannelLayoutTag_AudioUnit_5_0
+\f1\fs24  in <CoreAudio/CoreAudioTypes.h>). This is to preserve compatibility with existing pre-panther clients of the AUHAL.\
+\
+An application can overide this default behaviour through setting an AudioChannelLayout on Input Element == 0 (using 
+\f2\fs20 kAudioUnitProperty_AudioChannelLayout
+\f1\fs24  property.)  Doing this, the client may describe any order.  And for reliability it is advised that clients always set this property.\
+ \
+Using the user's established speaker configuration as described above, the AUHAL units establish channel maps to map a client's audio data to the device's output when this property is set.\
+\
+Thus, if the client is providing a surround/multi-channel configuration with a known/specifiable channel ordering, AUHAL will do its best to map that channel ordering to the user's particular speaker configuration. This should vastly simplify any UI an application has to provide for surround output, as the user can specify this as a system wide configuration.\
+\
+AUHAL will *not* at this time do any mixing - thus there is no down-mixing or other translations from say a surround format to stereo. Thus, if the client is providing a 5.0 mix to AUHAL, but the user only has stereo, then the user will only hear the first two channels of that 5.0 mix on their stereo speakers. The system provides other API services for doing proscribed downmixes between mis-matched formats.  An app can of course do its own down-mixing as appropriate.\
+\
+\
+\
+
+\f0\b [6] AUHAL and Devices\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0 \cf2 The AUHAL units sit on top of AudioDevice objects as defined in <CoreAudio/AudioHardware.h>.\
+\
+Clients can send property calls directly to the AudioDevice the AUHAL unit is currently connected to by making the call on the AUHAL unit as either AudioUnitGetProperty or AudioUnitSetProperty. In these cases, the AUHAL detects that the property ID is actually an AudioHardware property, and it will make the AudioDeviceGet/Set Property calls for you.\
+\
+An AUHAL unit only talks to a single AudioDeviceID entity at a given time.\
+\
+Except for the overhead of the AudioConverter that can be in place between a client's buffer from the AUHAL unit and the device, there is 
+\f0\b NO
+\f1\b0  additional overhead incurred by a client using the AUHAL unit. That is, there is no incurred latency. The conversion overhead can be roughly estimated by looking at the difference between the formats on either side of either the device output (element 0) or device input (element 1). If a sample rate conversion is established the quality of that conversion (and thus the CPU load that is taken) can be adjusted using the 
+\f2\fs20 kAudioUnitProperty_RenderQuality 
+\f1\fs24 property.\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs48 \cf0 [FAQ]
+\fs24 \
+\
+How does the HALOutputUnit differ from the DefaultOutputUnit?
+\f1\b0 \
+\
+The only implementation difference between the HAL and Default units is that the default units track the "default" devices. Otherwise they are identical (except that only the HAL unit type can do input.)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6660\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 So, the essential difference is that the HAL unit must be told which device to use using the 
+\f2\fs20 kAudioOutputUnitProperty_CurrentDevice 
+\f1\fs24 property.\
+\
+\
+
+\f0\b It seems like the DefaultOutputUnit does some fancy footwork to convert the canonical format to the device format.  Would a HALOutputUnit do this by default, or does its conversion need to be handled explicitly?
+\f1\b0 \
+\
+The HAL unit contains a converter and does this by default.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf2 \
+
+\f3\i <end of document>\
+}

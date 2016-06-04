@@ -1,0 +1,351 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fnil\fcharset77 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red35\green110\blue37;}
+\margl1440\margr1440\vieww16640\viewh15020\viewkind0
+\deftab160
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f0\b\fs24 \cf0 Input and Output Audio Channel Configurations for Audio Units\
+
+\f1\b0 \
+This document describes how an Audio Unit publishes its abilities to deal with different numbers of channels on input and output. It both describes existing usage and some additional meanings to describe flexible or dynamic channel handling capabilities.\
+\
+When discussing these features some assumptions are made for both Audio Unit instruments and effects. An Audio Unit instrument is an AU of the following component type:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 	kAudioUnitType_MusicDevice    = FOUR_CHAR_CODE(\cf2 'aumu'\cf0 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+An Effect can be one of the two following component types:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 	kAudioUnitType_Effect         = FOUR_CHAR_CODE(\cf2 'aufx'\cf0 )\
+	kAudioUnitType_MusicEffect    = FOUR_CHAR_CODE(\cf2 'aumf'\cf0 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+The document discusses primarily the usage of two properties:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 	\
+	kAudioUnitProperty_SupportedNumChannels
+\f1\fs24 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+\cf0 	\
+And:\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 	kAudioUnitProperty_ElementCount
+\f1\fs24 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+\cf0 \
+
+\f0\b Summary\
+
+\f1\b0 \
+The document details an extension to the values returned by the 
+\f2\fs20 \CocoaLigature0 kAudioUnitProperty_SupportedNumChannels
+\f1\fs24 \CocoaLigature1  property (hereafter called "channel info"). This details an AU that contains an internal and dynamically configured input and/or output channel handling. In this case the AU reports the total number of channels of either input and/or output channels that it contains. Along with this, the AU also needs to allow the Element Count (
+\f2\fs20 \CocoaLigature0 kAudioUnitProperty_ElementCount 
+\f1\fs24 \CocoaLigature1 property) on input and/or output scopes to be writable and configurable (with regards to its channel count) in any manner, within the constraints of its total number of channels capability.\
+\
+Finally, a review and discussion of the semantics around surround and multi-channel configurations is detailed.\
+\
+\
+\
+
+\f0\b Contents\
+\'a5\'caSome Background: Audio Unit Scopes and Elements\
+	- Global Scope\
+	- Input Scope\
+	- Output Scope\
+	- Group Scope\
+	- Part Scope\
+\
+The Supported Number of Channels Property\
+	- Current Usage\
+		- Common Usage\
+			Audio Unit Effects\
+			Audio Unit Instruments\
+			Apple's AUConverter Unit\
+			Apple's Matrix Mixer Unit\
+	- Extended Usage\
+	- Illegal or Unexpected Values\
+\
+Rendering Semantics for Configurable I/O\
+\
+Surround and Multi-Channel Requirements\
+	- Audio Channel Layouts\
+	- Surround or Multi-channel buses\
+\
+\
+\
+
+\f1\b0 \
+
+\f0\b Some Background: Audio Unit Scopes and Elements\
+
+\f1\b0 \
+Audio Units provide two primary means of discriminating semantic and functional spaces; scopes and elements. Scopes define a broad area of functionality:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 \
+	kAudioUnitScope_Global\
+	kAudioUnitScope_Input\
+	kAudioUnitScope_Output\
+	kAudioUnitScope_Group\
+	kAudioUnitScope_Part\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+Elements define a "sub" space within a particular scope, and are indexed from 0 to (N-1), where N is the number of elements in the scope.\
+\
+
+\f0\b Global Scope
+\f1\b0  defines a semantic space for general and global state, typically state that is common to the AU in general and is thus independent of any particular sub-space, data format, etc, that are covered by the other scopes. There is only a single element in the Global Scope.\
+\
+
+\f0\b Input Scope
+\f1\b0  defines data input streams into an Audio Unit. Thus, Input Elements represent distinct data inputs. These data inputs are described with a format (AudioStreamBasicDescription) and other properties and parameters as appropriate. Some Audio Units (for eg, Apple's "DLSMusicDevice") may not have Inputs - as an Audio Unit Instrument it generates notes. Other Audio Units (for eg, many AU Effects), may have one input (the audio it will process). Mixer Audio Units will typically have multiple inputs.\
+\
+
+\f0\b Output Scope
+\f1\b0  defines data streams that are generated by an Audio Unit. Thus, Output Elements represent distinct data outputs. These data outputs are described with a format (AudioStreamBasicDescriptions) and other properties and parameters as appropriate. Many audio units only provide a single output element, though some, for example Apple's MatrixMixer, provide multiple outputs.\
+\
+
+\f0\b Group Scope
+\f1\b0  defines a means of run-time or dynamic manipulation of an AU's rendering activities. It typically only defines parameters, and the elements in a group scope represent the concept of a channel (in MIDI parlance), for logically grouping these control events. For instance, a "pitch-bend" parameter on group elementID, will typically alter the pitch of all notes that are being played on that group elementID. AU's are not limited to the 16 channels of MIDI of course.\
+\
+
+\f0\b Part Scope
+\f1\b0  provides an ability to define independent voices, where a part element (part) is one voice, and the element count represents the multi-timbral capability (the number of parts) of the AU. This scope is only typically used with AU Instruments.\
+\
+The following details how a host interacts with an AU to discover the channel handling capabilities of audio data streams of both an AU's input and output elements. \
+\
+When discussing input and output elements, it is common to refer to these as input and output buses.\
+\
+
+\f0\b The Supported Number of Channels Property\
+
+\f1\b0 \
+This property provides one or more values of the following struct:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 \
+typedef struct AUChannelInfo \{\
+	SInt16		inChannels;\
+	SInt16		outChannels;\
+\} AUChannelInfo;\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+The property defines input to output channel handling capabilities of an AU's audio inputs and outputs. We'll express values of this struct as \{ in, out \}. The property can return an array of these structures, if the AU has multiple capabilities in this area.\
+\
+The following values are currently defined for either the inChannels or outChannels field.\
+\
+
+\f0\b Current Usage\
+\pard\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\li2820\fi-2820\ql\qnatural
+\cf0 Value	Meaning\
+\pard\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\li2820\fi-2820\ql\qnatural
+
+\f1\b0 \cf0 > 0	a particular number of channels\
+0	no audio input (or output) is supported - in this case the audio element count on that scope would also be zero.\
+-1	wild card to mean any number of channels\
+-2	wild card used in conjunction with the -1 wild card, to mean any number of channels.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+\cf0 \
+
+\f0\b Some Examples\
+\pard\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\li2820\fi-2820\ql\qnatural
+\cf0 Value	Meaning\
+\pard\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\li2840\fi-2840\ql\qnatural
+
+\f1\b0 \cf0 \{ 1, 2 \}	1 channel of input, 2 channels of output\
+\{ 0, 2 \}	No inputs, 2 channel outputs. If this was the only channel info published, the AU would be expected to have zero input elements with an audio data format\
+\{ 2, -1 \}	2 channels of input, any number of channels of output\
+\{ -1, -1 \}	Any number of channels on input and output as long as the number of channels are the same\
+\{ -1, -2 \}	Any number of channels on input or output (where these channel counts do not need to be the same)\
+\{\{ 1, 1 \}, \{ 1, 2 \}, \{ 2, 2 \}\}	Takes either one or two channels on input and outputs either one or two channels. However, it can't take 2 input channels to 1 output channel.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+\cf0 \
+
+\f0\b Common Usage\
+Audio Unit Effects\
+
+\f1\b0 	If this property is not implemented, then it is assumed that the AU effect can do any number of channels in to out as long as those channel counts are the same. That is, it is assumed that the AU would publish channel info of \{ -1, -1 \}\
+\
+
+\f0\b Audio Unit Instruments\
+
+\f1\b0 	If this property is not implemented, then it is assumed that the AU instrument can only do the audio inputs and outputs that it is configured to when the AU is opened. That is, it would reject any attempt to add or remove input or output elements, and it would also reject any attempt to change the audio format of an input and output element if that format contained a different number of channels. (It would of course, accept an audio format that contained the same number of channels but a different sample rate).\
+\
+
+\f0\b Apple's AUConverter Unit
+\f1\b0 \
+This AU publishes channel info of \{ -1, -2 \}. The element count on both input and output is set to 1 (ie. it has one audio input and one audio output) and this can't be changed. Thus, this AU can take a single audio input of any number of channels, and will output a single audio output of any number of channels and these channels do not need to the same. Internally, it wraps the AudioConverter service of the AudioToolbox. It can currently do data depth translations (eg, int to float, float to int), sample rate conversions, re-ordering input channels to output channels, interleaving or de-interleaving. It does not mix when re-mapping channels, but provides an ability to duplicate or drop channels through its channel map property.\
+\
+
+\f0\b Apple's MatrixMixer Unit
+\f1\b0 \
+This AU publishes channel info of \{ -1, -2 \}. The element count on both input and output is writable, thus, the user can configure the matrix mixer to have any number of input and output elements. The matrix mixer has no practical limit on the number of input or output elements, or the number of channels, that it can handle, and provides services to mix any input channel to any output channel. The user uses the different in and out elements to provide logical or semantic groupings of channels - for eg, to represent a channel strip of a mixing board, a send bus of a mixing board, etc.. \
+\
+
+\f0\b Extended Usage\
+
+\f1\b0 We now wish to discuss a new semantic that is applied to negative values of channel info where those negative values are representing numbers that are greater than 2. In this case, the large negative value expresses the total number of channels that the AU can handle on that scope (input or output). Also, the element count on that scope must be writable. The intention here being that the host can configure any number of elements on that scope, with any number of channels on each of those elements, as long as the total number of channels (as derived from the number of channels set on each element) is less than or equal to the absolute value of this negative value.\
+\
+\pard\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\li2820\fi-2820\ql\qnatural
+
+\f0\b \cf0 Value	Meaning\
+\pard\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\li2820\fi-2820\ql\qnatural
+
+\f1\b0 \cf0 \{ 2, -16 \}	Takes 2 input channels (on any input element available) and can output a total of 16 channels configured across any number of output elements\
+\{ -4, -16 \}	Can take a total of 4 input and 16 output channels on any number of input or output elements.\
+\{ -4, -1 \}	As described above, the -1 is a wild card. Thus, this AU can take a total of 4 input channels on any number of input elements, and can output any number of channels on any available output elements.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+\cf0 \
+In these cases above, the values of -4 and -16 indicate the total number of channels on the specified input or output scope as spread across a configurable number of input and output elements. Thus, the total number of input elements for the \{ -4, -16 \} case is 4 (4 mono inputs), but could also be configured as 2 inputs (of 2 stereo inputs), 3 inputs, (one stereo, two mono inputs), or even one stereo input only, and so forth. That is, the configuration used in a particular situation may only decide to use 2 of the 4 available input channels.\
+\
+This type of configuration is not expected to support mixing or duplication of channels. That is, unless of course the AU wishes to provide this service, the configuration is primarily aimed at deciding which of the total available input and output channels the host wants to deal with.\
+
+\f0\b \
+Illegal or Unexpected Values\
+
+\f1\b0 The -1 and -2 values are reserved values and have a specific usage as wild cards. The -2 value is only expected to be seen in conjunction with the -1 value to indicate that the input and output channels can be any number. The -2 value is not expected to be used in any other context.\
+\
+It is illegal to publish a channel info using this semantic of a total number of channels and not to have that scope's element count writable. That is, the meaning is that the AU can render up to some number of channels, and the user of the I/O can bus those channels as appropriate for their usage scenario. The implications for rendering are discussed below.\
+\
+It is generally expected that an AU that publishes an audio input or output channel count that is greater than 2, also publishes information about the channel order of that audio stream. That is, such an audio stream is expected to contain a multi-channel or surround format, and thus needs to support the Audio Channel Layout properties as described below (see, Multi-channel and Surround Formats). The exception to this rule is the TotalNumChannels semantic discussed here.\
+\
+
+\f0\b Rendering Semantics for Configurable I/O\
+
+\f1\b0 In the case where an AU is publishing a total channel capability and is configured with multiple input or output elements, the following guidelines are provided:\
+\
+(1) The AU will validate its configuration at initialization (ie. 
+\f2\fs20 \CocoaLigature0 AudioUnitInitialize
+\f1\fs24 \CocoaLigature1 )\
+	Thus, the AU will not allow an audio format to be written on an input or output element if the AU is initialized.\
+	The AU will also not allow the number of elements on this scope to be changed whilst the AU is initialized.\
+\
+(2) At initialization, the AU will validate that the total number of channels (derived from adding up the number of channels on each element) does not exceed the total number of channels it can handle. It should accept less (or equal) channel counts than its total capability.\
+\
+(3) When rendering, the AU will generally follow the following strategy. In this example, lets assume that the AU is configured to have 2 inputs and 4 outputs. The 2 inputs are configured to 2 channels each, the four outputs as 2 stereo and 2 mono outputs:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 Input Scope\
+	- 2 Input Elements where:\
+Element ID			:	0		1\
+Num Channels			:	2		2\
+Internal Channel Index	:   (0-1)		(2-3) \
+\
+Output Scope\
+	- 4 Output Elements where:\
+Element ID			:	0		1		2		3\
+Num Channels			:	2		2		1		1\
+Internal Channel Index	:   (0-1)		(2-3) 	(4)		(5)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+Thus, the AU is processing 4 input channels and 6 output channels. Based on the ordering of these elements, these are the first 4 channels of input and the first 6 channels of outputs, and these are assigned from their respective input and output elements as described above to the AU's  "Internal Channel Index" as described above.\
+\
+The host will call AudioUnitRender for each of the outputs in turn. When it calls those outputs for a single time slice, it provides the same time stamp for each output. When the AU receives the first request for output for a new time, it will call all of its inputs, thus acquiring all of its input data. It then does all of its processing, and stores the output data in an internal channel data array. It then returns the channels that are to be provided for the first output that is called. As the other outputs are requested, it returns the previously processed data for those channels.\
+\
+Whilst various optimisations can be implemented by the AU in its rendering process, the above is a general description and not necessarily an implementation guideline. The important rule that must be observed, is that the AU must not call its inputs more than once for a particular time stamp. If a host calls a given output more than once with the same time stamp, it should receive the same data as the first call (ie. the data is not reprocessed) - this is *not* expected to be the case. AudioUnitReset on the global scope would clear any previously processed data (as is the normally expected consequence of this call).\
+\
+It is also possible that the host may not actually call a particular output element for data (though internally the AU may have calculated data for those channels). The UI for the AU (and for the host) should provide a means to intelligently and optimally configure the channels and I/O elements to be used in any given configuration.\
+\
+\
+
+\f0\b Surround and Multi-Channel Requirements\
+
+\f1\b0 \
+
+\f0\b Audio Channel Layouts\
+
+\f1\b0 \
+Audio Channel Layouts (ACLs) represent meta-data on an audio format to describe spatial and ordering characteristics of the channels that are contained within an audio stream. The ACLs structure is both a complex and highly flexible structure designed to deal with the complexity of both surround and multi-channel audio streams. The ACL properties in the Audio Unit specification (
+\f2\fs20 \CocoaLigature0 kAudioUnitProperty_AudioChannelLayout, kAudioUnitProperty_SupportedChannelLayoutTags
+\f1\fs24 \CocoaLigature1 ) are for many Audio Units an optional property that is generally only required when the AU does specific work with a surround or multi-channel format(s). \
+\
+Supporting ACLs is also optional if the channel capabilities of an AU is limited to just mono or stereo - it is assumed for a 2 channel audio stream that the first channel is left and the second right.\
+\
+Thus, an Audio Unit effect (for example a simple digital delay) can take a 6 channel input and provide a 6 channel output, but need not support the ACL properties because it doesn't do anything specific with any of the channels presented to it. However a reverb unit that does for example provide specific spatialisation (such as Apple's AUMatrixReverb), does support this property, as it generates spatialised reverb for stereo, quad or 5.0 channel layouts.\
+\
+An Audio Unit that does provide an output element with more than two channels is required to support the ACL properties unless it fits into the configurable I/O as described above. \
+\
+
+\f0\b Surround or Multi-channel buses\
+\
+
+\f1\b0 In the above examples there is no need for ACL structures to describe the channel orderings or layouts of these streams as the busing is either mono or stereo. However, an AU could provide the ability to generate (or receive) surround audio, and if the host presents the ability to have surround or multi-channel tracks or mixing buses, then there exists the need for the user to describe both the channel order and possibly surround format of any multi-channel buses that are configured.\
+\
+Apple's ACL support (see <CoreAudio/CoreAudioTypes.h> provides an expected ordering of channels for the most common surround formats when used within an Audio Unit context. For example, the following AU orders are described in Panther:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0     	\cf3 // These layouts are recommended for AudioUnit usage\cf0 \
+        \cf3 // These are the symmetrical layouts\cf0 \
+	kAudioChannelLayoutTag_AudioUnit_4\
+    kAudioChannelLayoutTag_AudioUnit_5\
+    kAudioChannelLayoutTag_AudioUnit_6\
+    kAudioChannelLayoutTag_AudioUnit_8\
+        \cf3 // These are the surround-based layouts\cf0 \
+    kAudioChannelLayoutTag_AudioUnit_5_0\
+	kAudioChannelLayoutTag_AudioUnit_6_0\
+	kAudioChannelLayoutTag_AudioUnit_7_0\
+	kAudioChannelLayoutTag_AudioUnit_5_1\
+	kAudioChannelLayoutTag_AudioUnit_6_1\
+	kAudioChannelLayoutTag_AudioUnit_7_1\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+Though not specifically called out as an AudioUnit layout, the following order is also provided for:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 	kAudioChannelLayoutTag_TMH_10_2_std  \cf3 // 16 channels -> L R C Vhc Lsd Rsd Ls Rs Vhl Vhr Lw Rw Csd Cs LFE1 LFE2                           \cf0 \
+	kAudioChannelLayoutTag_TMH_10_2_full // \cf3 21 channels -> TMH_10_2_std plus: Lc Rc HI VI Haptic                            \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+These proscribed channel orderings for common speaker configurations are provided to avoid unnecessary channel re-ordering between audio units and host apps, with the possible mis-matches and other problems that can arise when these orderings are not described or specified.\
+\
+In the AU Instrument case under discussion, let's imagine that the user configures the unit as follows:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 \
+Input Scope\
+	- 2 Input Elements where:\
+El ID	:	0	1\
+Channels	:	2	1\
+\
+Output Scope\
+	- 2 Output Elements where:\
+El ID	:	0	1\
+Channels	:	6	2\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+Some decision has to be made to describe to downstream processing of this audio what the channel order of this 6 channel output element is. In the common formats described above this could be one of two surround layouts:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 \
+	Surround Format	:	6.0 (Left, Right, Left Surround, Right Surround, Center, Center Surround)\
+						5.1 (Left, Right, Center, LFE, Left Surround, Right Surround)\
+\
+	Symmetrical Format:	6 channel (Left, Right, Rear Left, Rear Right, Center, Rear)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab160\ql\qnatural
+
+\f0\b\fs24 \cf0 \CocoaLigature1 	\
+
+\f1\b0 Thus, if this output were to go as input to an Audio Unit effect, then the host (as is normally expected) would set both the 6 channel audio format, as well as the 
+\f2\fs20 \CocoaLigature0 kAudioUnitProperty_AudioChannelLayout 
+\f1\fs24 \CocoaLigature1 property that would describe appropriately the channel order on that destination AU.\
+\
+The AU's UI (where the user is establishing the internal routing of the audio to the output channels), should provide the means to guide the user to route the appropriate multi-channel channels in their appropriate order. Thus, it is not expected that the hosts present or deal with the plethora of channel order choices that become available with surround and multi-channel configurations.\
+\
+}

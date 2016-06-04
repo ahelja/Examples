@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<!--
+	An object model for controlling monitor preferences: resolution,
+	color depth, etc.  This is for instructional purposes only; it is
+	not intended to be useful.
+-->
+<dictionary title="Monitors">
+	<suite name="Monitor Scripting" code="moni">
+		<enumeration name="color depth" code="edep">
+			<enumerator name="millions" code="emil"/>
+			<enumerator name="thousands" code="eths"/>
+			<enumerator name="basic" code="ebas"/>
+			<enumerator name="monochrome" code="emon"/>
+		</enumeration>
+		<class name="application" code="capp">
+			<element type="display">
+				<accessor style="index"/>
+			</element>
+			<property name="main display" code="mdsp" type="display"/>
+		</class>
+		<class name="display" code="cmon">
+			<synonym name="screen"/>
+			<element type="resolution">
+				<accessor style="index"/>
+			</element>
+			<element type="refresh rate">
+				<accessor style="index"/>
+			</element>
+			<property name="current resolution" code="pres" type="resolution"/>
+			<property name="current refresh rate" code="prat" type="refresh rate"/>
+			<property name="brightness" code="pbrt" type="integer"/>
+			<property name="colors" code="pcol" type="color depth"/>
+			<property name="position" code="ppos" type="point"/>
+		</class>
+		<class name="resolution" code="cres">
+			<property name="name" code="pnam" type="text" access="r"/>
+			<property name="stretched" code="pstr" type="boolean" access="r"/>
+			<property name="size" code="psiz" type="point" access="r"/>
+			<property name="recommended" code="prcm" type="boolean" access="r"/>
+		</class>
+		<class name="refresh rate" code="crfr">
+			<property name="freqency" code="pfrq" type="real" access="r"/>
+			<property name="recommended" code="prcm" type="boolean" access="r"/>
+		</class>
+	</suite>
+</dictionary>

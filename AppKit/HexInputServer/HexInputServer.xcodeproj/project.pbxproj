@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		730D20D7049A850800C919A3 /* HexInputContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F8E216FF3118AB11CA0EC5 /* HexInputContext.h */; };
+		730D20D8049A850800C919A3 /* HexInputModePalette.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F8E217FF3118AB11CA0EC5 /* HexInputModePalette.h */; };
+		730D20D9049A850800C919A3 /* HexInputServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F8E218FF3118AB11CA0EC5 /* HexInputServer.h */; };
+		730D20DA049A850800C919A3 /* Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 730D20D3049A84FC00C919A3 /* Prefix.h */; };
+		730D20DC049A850800C919A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		730D20DD049A850800C919A3 /* HexInputModePalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = 21F8E223FF3119B011CA0EC5 /* HexInputModePalette.nib */; };
+		730D20DE049A850800C919A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21F8E225FF3119B011CA0EC5 /* Localizable.strings */; };
+		730D20DF049A850800C919A3 /* HexInputServerApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 21F8E227FF3119B011CA0EC5 /* HexInputServerApp.icns */; };
+		730D20E1049A850800C919A3 /* HexInputContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8E212FF3118AB11CA0EC5 /* HexInputContext.m */; settings = {ATTRIBUTES = (); }; };
+		730D20E2049A850800C919A3 /* HexInputModePalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8E213FF3118AB11CA0EC5 /* HexInputModePalette.m */; settings = {ATTRIBUTES = (); }; };
+		730D20E3049A850800C919A3 /* HexInputServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8E214FF3118AB11CA0EC5 /* HexInputServer.m */; settings = {ATTRIBUTES = (); }; };
+		730D20E4049A850800C919A3 /* AppKitExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8E219FF3118AB11CA0EC5 /* AppKitExtra.m */; settings = {ATTRIBUTES = (); }; };
+		730D20E5049A850800C919A3 /* HexInputServer_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8E21AFF3118AB11CA0EC5 /* HexInputServer_main.m */; settings = {ATTRIBUTES = (); }; };
+		730D20E7049A850800C919A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		730D20EA049A850800C919A3 /* HexInputServer.dict in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21F8E229FF3119B011CA0EC5 /* HexInputServer.dict */; };
+		730D20EB049A850800C919A3 /* HexInputServer.tiff in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21F8E22AFF3119B011CA0EC5 /* HexInputServer.tiff */; };
+		730D20EC049A850800C919A3 /* Info in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21F8E22BFF3119B011CA0EC5 /* Info */; };
+		730D20ED049A850800C919A3 /* README.rtf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21F8E22CFF3119B011CA0EC5 /* README.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		734E63AF049E6BB400C919A3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXBuildStyle section */
+		0182AD94001CB5EC11CA0C5D /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		0182AD95001CB5EC11CA0C5D /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		730D20E9049A850800C919A3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "/$(INSTALL_PATH)";
+			dstSubfolderSpec = 0;
+			files = (
+				730D20EA049A850800C919A3 /* HexInputServer.dict in CopyFiles */,
+				730D20EB049A850800C919A3 /* HexInputServer.tiff in CopyFiles */,
+				730D20EC049A850800C919A3 /* Info in CopyFiles */,
+				730D20ED049A850800C919A3 /* README.rtf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		21F8E212FF3118AB11CA0EC5 /* HexInputContext.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HexInputContext.m; sourceTree = "<group>"; };
+		21F8E213FF3118AB11CA0EC5 /* HexInputModePalette.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HexInputModePalette.m; sourceTree = "<group>"; };
+		21F8E214FF3118AB11CA0EC5 /* HexInputServer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HexInputServer.m; sourceTree = "<group>"; };
+		21F8E216FF3118AB11CA0EC5 /* HexInputContext.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HexInputContext.h; sourceTree = "<group>"; };
+		21F8E217FF3118AB11CA0EC5 /* HexInputModePalette.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HexInputModePalette.h; sourceTree = "<group>"; };
+		21F8E218FF3118AB11CA0EC5 /* HexInputServer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HexInputServer.h; sourceTree = "<group>"; };
+		21F8E219FF3118AB11CA0EC5 /* AppKitExtra.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppKitExtra.m; sourceTree = "<group>"; };
+		21F8E21AFF3118AB11CA0EC5 /* HexInputServer_main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HexInputServer_main.m; sourceTree = "<group>"; };
+		21F8E224FF3119B011CA0EC5 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/HexInputModePalette.nib; sourceTree = "<group>"; };
+		21F8E226FF3119B011CA0EC5 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		21F8E227FF3119B011CA0EC5 /* HexInputServerApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HexInputServerApp.icns; sourceTree = "<group>"; };
+		21F8E229FF3119B011CA0EC5 /* HexInputServer.dict */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = HexInputServer.dict; sourceTree = "<group>"; };
+		21F8E22AFF3119B011CA0EC5 /* HexInputServer.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = HexInputServer.tiff; sourceTree = "<group>"; };
+		21F8E22BFF3119B011CA0EC5 /* Info */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Info; sourceTree = "<group>"; };
+		21F8E22CFF3119B011CA0EC5 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		730D20D3049A84FC00C919A3 /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		730D20EF049A850800C919A3 /* Info-HexInputServer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-HexInputServer.plist"; sourceTree = "<group>"; };
+		730D20F0049A850800C919A3 /* HexInputServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexInputServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		730D20E6049A850800C919A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730D20E7049A850800C919A3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				21F8E212FF3118AB11CA0EC5 /* HexInputContext.m */,
+				21F8E213FF3118AB11CA0EC5 /* HexInputModePalette.m */,
+				21F8E214FF3118AB11CA0EC5 /* HexInputServer.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				730D20F0049A850800C919A3 /* HexInputServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21F8E215FF3118AB11CA0EC5 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				21F8E216FF3118AB11CA0EC5 /* HexInputContext.h */,
+				21F8E217FF3118AB11CA0EC5 /* HexInputModePalette.h */,
+				21F8E218FF3118AB11CA0EC5 /* HexInputServer.h */,
+				730D20D3049A84FC00C919A3 /* Prefix.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		21F8E228FF3119B011CA0EC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21F8E229FF3119B011CA0EC5 /* HexInputServer.dict */,
+				21F8E22AFF3119B011CA0EC5 /* HexInputServer.tiff */,
+				21F8E22BFF3119B011CA0EC5 /* Info */,
+				21F8E22CFF3119B011CA0EC5 /* README.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CocoaApp */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				21F8E215FF3118AB11CA0EC5 /* Headers */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				21F8E228FF3119B011CA0EC5 /* Supporting Files */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				730D20EF049A850800C919A3 /* Info-HexInputServer.plist */,
+			);
+			name = CocoaApp;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				21F8E219FF3118AB11CA0EC5 /* AppKitExtra.m */,
+				21F8E21AFF3118AB11CA0EC5 /* HexInputServer_main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				21F8E223FF3119B011CA0EC5 /* HexInputModePalette.nib */,
+				21F8E225FF3119B011CA0EC5 /* Localizable.strings */,
+				21F8E227FF3119B011CA0EC5 /* HexInputServerApp.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		730D20D6049A850800C919A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730D20D7049A850800C919A3 /* HexInputContext.h in Headers */,
+				730D20D8049A850800C919A3 /* HexInputModePalette.h in Headers */,
+				730D20D9049A850800C919A3 /* HexInputServer.h in Headers */,
+				730D20DA049A850800C919A3 /* Prefix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		730D20D5049A850800C919A3 /* HexInputServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDDCF08A2EC31008AC9B5 /* Build configuration list for PBXNativeTarget "HexInputServer" */;
+			buildPhases = (
+				730D20D6049A850800C919A3 /* Headers */,
+				730D20DB049A850800C919A3 /* Resources */,
+				730D20E0049A850800C919A3 /* Sources */,
+				730D20E6049A850800C919A3 /* Frameworks */,
+				730D20E8049A850800C919A3 /* Rez */,
+				730D20E9049A850800C919A3 /* CopyFiles */,
+			);
+			buildRules = (
+				734E63AF049E6BB400C919A3 /* PBXBuildRule */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-HexInputServer.plist";
+				INSTALL_PATH = "$(HOME)/Library/InputManagers/HexInputServer";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = HexInputServer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = HexInputServer;
+			productInstallPath = "$(HOME)/Library/InputManagers/HexInputServer";
+			productName = HexInputServer;
+			productReference = 730D20F0049A850800C919A3 /* HexInputServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDDD308A2EC31008AC9B5 /* Build configuration list for PBXProject "HexInputServer" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				0182AD94001CB5EC11CA0C5D /* Development */,
+				0182AD95001CB5EC11CA0C5D /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CocoaApp */;
+			projectDirPath = "";
+			targets = (
+				730D20D5049A850800C919A3 /* HexInputServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		730D20DB049A850800C919A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730D20DC049A850800C919A3 /* InfoPlist.strings in Resources */,
+				730D20DD049A850800C919A3 /* HexInputModePalette.nib in Resources */,
+				730D20DE049A850800C919A3 /* Localizable.strings in Resources */,
+				730D20DF049A850800C919A3 /* HexInputServerApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		730D20E8049A850800C919A3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		730D20E0049A850800C919A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730D20E1049A850800C919A3 /* HexInputContext.m in Sources */,
+				730D20E2049A850800C919A3 /* HexInputModePalette.m in Sources */,
+				730D20E3049A850800C919A3 /* HexInputServer.m in Sources */,
+				730D20E4049A850800C919A3 /* AppKitExtra.m in Sources */,
+				730D20E5049A850800C919A3 /* HexInputServer_main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		21F8E223FF3119B011CA0EC5 /* HexInputModePalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21F8E224FF3119B011CA0EC5 /* English */,
+			);
+			name = HexInputModePalette.nib;
+			sourceTree = "<group>";
+		};
+		21F8E225FF3119B011CA0EC5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21F8E226FF3119B011CA0EC5 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDDD008A2EC31008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-HexInputServer.plist";
+				INSTALL_PATH = "$(HOME)/Library/InputManagers/HexInputServer";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = HexInputServer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDDD108A2EC31008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-HexInputServer.plist";
+				INSTALL_PATH = "$(HOME)/Library/InputManagers/HexInputServer";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = HexInputServer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDDD208A2EC31008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-HexInputServer.plist";
+				INSTALL_PATH = "$(HOME)/Library/InputManagers/HexInputServer";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = HexInputServer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		B69BDDD408A2EC31008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		B69BDDD508A2EC31008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		B69BDDD608A2EC31008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDDCF08A2EC31008AC9B5 /* Build configuration list for PBXNativeTarget "HexInputServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDDD008A2EC31008AC9B5 /* Development */,
+				B69BDDD108A2EC31008AC9B5 /* Deployment */,
+				B69BDDD208A2EC31008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDDD308A2EC31008AC9B5 /* Build configuration list for PBXProject "HexInputServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDDD408A2EC31008AC9B5 /* Development */,
+				B69BDDD508A2EC31008AC9B5 /* Deployment */,
+				B69BDDD608A2EC31008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

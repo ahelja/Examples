@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Functions</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1><br>
+<hr><a name="//apple_ref/c/func/AudioHardwareClaimAudioDeviceID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareClaimAudioDeviceID">AudioHardwareClaimAudioDeviceID</a></h2>
+</td></tr></table><hr>Reserve a new AudioDeviceID.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareClaimAudioDeviceID (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID* outAudioDeviceID
+)                       AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance requesting the new AudioDeviceID.</dd>
+<dt><tt><em>outAudioDeviceID</em></tt></dt><dd>On exit, the new AudioDeviceID.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareClaimAudioStreamID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareClaimAudioStreamID">AudioHardwareClaimAudioStreamID</a></h2>
+</td></tr></table><hr>Reserve a new AudioStreamID.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareClaimAudioStreamID (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inOwningDeviceID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID* outAudioStreamID
+)                       AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance requesting the new AudioStreamID.</dd>
+<dt><tt><em>inOwningDeviceID</em></tt></dt><dd>The AudioDeviceID of the AudioDevice that is to own the AudioStream.</dd>
+<dt><tt><em>outAudioStreamID</em></tt></dt><dd>On exit, the new AudioStreamID.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareDevicePropertyChanged"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareDevicePropertyChanged">AudioHardwareDevicePropertyChanged</a></h2>
+</td></tr></table><hr>Tell the HAL that the property of an AudioDevice owned by the plug-in has
+changed.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareDevicePropertyChanged (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDeviceID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID
+)                           AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The HAL will take care of calling any registered listeners.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance that owns the AudioDevice whose property has changed.</dd>
+<dt><tt><em>inDeviceID</em></tt></dt><dd>The AudioDeviceID of the AudioDevice whose property has changed.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the AudioDevice whose property has changed.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>The section of the AudioDevice whose proeprty has changed.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioObjectPropertySelector of the property that changed.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareDevicesCreated"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareDevicesCreated">AudioHardwareDevicesCreated</a></h2>
+</td></tr></table><hr>Tell the HAL that new AudioDevices have come into being.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareDevicesCreated (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberDevices,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioDeviceID* inAudioDeviceIDs
+)                           AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The plug-in must have previously reserved the AudioDeviceIDs using
+AudioHardwareClaimAudioDeviceID().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance that owns the new AudioDevices.</dd>
+<dt><tt><em>inNumberDevices</em></tt></dt><dd>The number of items in the inAudioDeviceIDs array.</dd>
+<dt><tt><em>inAudioDeviceIDs</em></tt></dt><dd>An array of AudioDeviceIDs that refer to the new AudioDevices.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareDevicesDied"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareDevicesDied">AudioHardwareDevicesDied</a></h2>
+</td></tr></table><hr>Tell the HAL that some AudioDevices have gone away.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareDevicesDied (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberDevices,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioDeviceID* inAudioDeviceIDs
+)                               AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance that owns the dead AudioDevices.</dd>
+<dt><tt><em>inNumberDevices</em></tt></dt><dd>The number of items in the inAudioDeviceIDs array.</dd>
+<dt><tt><em>inAudioDeviceIDs</em></tt></dt><dd>An array of AudioDeviceIDs that refer to the dead AudioDevices.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareStreamPropertyChanged"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareStreamPropertyChanged">AudioHardwareStreamPropertyChanged</a></h2>
+</td></tr></table><hr>Tell the HAL that the property of an AudioStream owned by the plug-in has
+changed.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareStreamPropertyChanged (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inOwningDeviceID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID inStreamID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID
+)                           AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The HAL will take care of calling any registered listeners.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance that owns the AudioStream whose property has changed.</dd>
+<dt><tt><em>inOwningDeviceID</em></tt></dt><dd>The AudioDeviceID of the AudioDevice that owns the AudioStream.</dd>
+<dt><tt><em>inStreamID</em></tt></dt><dd>The AudioStreamID of the AudioStream whose property has changed.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the AudioStream whose property has changed.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioObjectPropertySelector of the property that changed.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareStreamsCreated"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareStreamsCreated">AudioHardwareStreamsCreated</a></h2>
+</td></tr></table><hr>Tell the HAL that new AudioStreams have come into being.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareStreamsCreated (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inOwningDeviceID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberStreams,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioStreamID* inAudioStreamIDs
+)                           AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The plug-in must have previously reserved the AudioStreamIDs using
+AudioHardwareClaimAudioStreamID().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance that owns the new AudioStreams.</dd>
+<dt><tt><em>inOwningDeviceID</em></tt></dt><dd>The AudioDeviceID of the AudioDevice that owns the AudioStreams.</dd>
+<dt><tt><em>inNumberStreams</em></tt></dt><dd>The number of items in the inAudioStreamIDs array.</dd>
+<dt><tt><em>inAudioStreamIDs</em></tt></dt><dd>An array of AudioStreamIDs that refer to the new AudioStreams.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareStreamsDied"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareStreamsDied">AudioHardwareStreamsDied</a></h2>
+</td></tr></table><hr>Tell the HAL that some AudioStreams have gone away.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareStreamsDied (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwner,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inOwningDeviceID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberStreams,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioStreamID* inAudioStreamIDs
+)                               AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwner</em></tt></dt><dd>The plug-in instance that owns the dead AudioStreams.</dd>
+<dt><tt><em>inOwningDeviceID</em></tt></dt><dd>The AudioDeviceID of the AudioDevice that owns the AudioStreams.</dd>
+<dt><tt><em>inNumberDevices</em></tt></dt><dd>The number of items in the inAudioStreamIDs array.</dd>
+<dt><tt><em>inAudioStreamIDs</em></tt></dt><dd>An array of AudioStreamIDs that refer to the dead AudioStreams.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectCreate"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectCreate">AudioObjectCreate</a></h2>
+</td></tr></table><hr>Instantiates a new AudioObject.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectCreate (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwningPlugIn,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inOwningObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioClassID inClassID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID* outAudioObjectID
+)                                       AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Newly instantiated AudioObjects are not made available to the HAL's clients
+until the object is published using AudioObjectsPublishedAndDied().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwningPlugIn</em></tt></dt><dd>The plug-in instance instantiating the new AudioObject.</dd>
+<dt><tt><em>inOwningObjectID</em></tt></dt><dd>The AudioObjectID of the AudioObject that owns the new AudioObject.</dd>
+<dt><tt><em>inClassID</em></tt></dt><dd>The ID of the class of the new AudioObject.</dd>
+<dt><tt><em>outAudioObjectID</em></tt></dt><dd>On exit, the AudioObjectID of the new AudioObject.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectPropertiesChanged"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectPropertiesChanged">AudioObjectPropertiesChanged</a></h2>
+</td></tr></table><hr>Tell the HAL that properties have changed on the given AudioObject.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectPropertiesChanged (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwningPlugIn,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberAddresses,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress inAddresses[]
+)                  AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The HAL will take care of calling any registered listeners.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwningPlugIn</em></tt></dt><dd>The plug-in instance that owns the AudioObject whose properties have
+changed.</dd>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObjectID of the AudioObject whose properties have changed.</dd>
+<dt><tt><em>inNumberAddresses</em></tt></dt><dd>The number of items in the inAddresses array.</dd>
+<dt><tt><em>inAddresses</em></tt></dt><dd>An array of AudioObjectPropertyAddress structs indicating which properties
+of the device have changed.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectsPublishedAndDied"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectsPublishedAndDied">AudioObjectsPublishedAndDied</a></h2>
+</td></tr></table><hr>Tell the HAL to publish some AudioObjects and tear down others.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectsPublishedAndDied (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePlugInRef inOwningPlugIn,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inOwningObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberPublishedAudioObjects,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectID inPublishedAudioObjects[],
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inNumberDeadAudioObjects,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectID inDeadAudioObjects[]
+)                       AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that all the objects must be owned by inOwningObjectID.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inOwningPlugIn</em></tt></dt><dd>The plug-in instance that owns the AudioObjects.</dd>
+<dt><tt><em>inOwningObjectID</em></tt></dt><dd>The AudioObjectID of the AudioObject that owns the objects being published
+or destroyed.</dd>
+<dt><tt><em>inNumberPublishedAudioObjects</em></tt></dt><dd>The number of items in the inPublishedAudioObjects array.</dd>
+<dt><tt><em>inPublishedAudioObjects</em></tt></dt><dd>An array of AudioObjectIDs for the AudioObjects that are to be made
+available to the HAL's clients.</dd>
+<dt><tt><em>inNumberDeadAudioObjects</em></tt></dt><dd>The number of items in the inDeadAudioObjects array.</dd>
+<dt><tt><em>inDeadAudioObjects</em></tt></dt><dd>An array of AudioObjectIDs for the AudioObjects that are no longer
+available.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

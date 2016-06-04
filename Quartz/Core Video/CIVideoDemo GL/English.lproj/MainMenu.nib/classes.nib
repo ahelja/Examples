@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {openMovie = id; }; 
+            CLASS = VideoController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                filterDrawer = id; 
+                nextButton = id; 
+                playButton = id; 
+                prevButton = id; 
+                timecodeField = id; 
+                videoScrubber = id; 
+                videoView = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                nextFrame = id; 
+                prevFrame = id; 
+                safeFrameToFile = id; 
+                scrub = id; 
+                setFilterParameter = id; 
+                setMovieTime = id; 
+                togglePlay = id; 
+            }; 
+            CLASS = VideoView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = NSOpenGLView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

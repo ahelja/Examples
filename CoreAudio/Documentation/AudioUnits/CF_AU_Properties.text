@@ -1,0 +1,118 @@
+The following properties can either get or set property values using CoreFoundation (CF) objects.
+
+CF Objects are referenced counted, where a caller can call CFRetain (to increase the reference count), and CFRelease, to release the reference count. When a CF object's reference count reaches zero, the memory that it uses is free'd and the object is no longer valid.
+
+The CF API distinguish between calls that will copy the object that is returned, or just retrieve that object. In that usage, the Copy calls will increment the ref count (by calling CFRetain), which then requires the client to release the object (CFRelease) when finsihed with it. The CF Get calls, do not retain, so the client does not release these.
+
+With Audio Units, the Get Property calls return the value of the specified property.
+
+When the value of this property is (or contains) a CF Object, the ownership of object is transferred to the user. With some AU properties this may involve the creation of a new CF Object, in others the object's ref count will be incremented by the AU - Thus, the caller is responsible for calling CFRelease on these returned objects.
+
+When a CF object is set on the AU, it will (if needed) either retain the object for its own use, or just read values from the object itself.
+
+Thus, in these cases the caller owns its reference to the CF object in question, and thus is responsible for releasing the object when it is finished with it. (There are two properties that have special rules - see below)
+
+The following is a list of properties that deal with CF objects:
+
+
+Set
+		kAudioUnitProperty_ClassInfo
+		kAudioUnitProperty_PresentPreset
+		kAudioUnitProperty_ElementName
+		kAudioUnitProperty_ContextName
+	
+Get
+		kAudioUnitProperty_ClassInfo
+		kAudioUnitProperty_ParameterValueStrings
+		kAudioUnitProperty_FactoryPresets
+		kAudioUnitProperty_ParameterValueName
+		kMusicDeviceProperty_BankName
+		kAudioUnitProperty_ParameterIDName
+		kAudioUnitProperty_ParameterClumpName
+		kAudioUnitProperty_ElementName
+		kAudioUnitProperty_CocoaUI
+		kAudioUnitOfflineProperty_PreflightName
+		kAudioUnitProperty_PresentPreset
+		kAudioUnitProperty_IconLocation	
+			
+		
+Qualitified CFRelease
+		kAudioUnitProperty_ParameterInfo's CFName iff kAudioUnitParameterFlag_CFNameRelease is set in ParameterInfo
+
+
+
+
+kAudioUnitProperty_PresentPreset
+
+This is a new property that replaces kAudioUnitProperty_CurrentPreset. The reason being that the CF retain semantics around the Current Preset property were unclear (and because releasing an object that is not retained can lead to crashes, or not releasing can cause memory leaks), it was decided that this property should be deprecated and replaced with a new one. Thus, kAudioUnitProperty_PresentPreset
+
+The CFString that is contained in the AUPreset returned by this property should be released when the property is retrieved (and of course when the user sets this property, the string should also be released when the user code is finished with that string)
+
+
+
+
+Now, what about the parameter names?
+
+Parameter names are generally published with CFStrings for their names. As the release/retain semantics around these were never fully described, we cannot make assumptions about whether these strings should be released (or not) when they are retrieved.
+
+Thus, a new flag has been introduced for parameter names:
+	kAudioUnitParameterFlag_CFNameRelease
+
+This describes to the host whether the name should be released or not when it is finished with this name.
+
+So, how does a host deal with this?
+
+Its actually pretty simple - it required one additional line in the generic view to support this flag properly (and that code is in this SDK)
+
+The following code is taken from AUVParameter.cpp (its constructor)
+
+	UInt32 propertySize = sizeof(mParamInfo);
+		// get the parameter info
+	OSStatus err = AudioUnitGetProperty(au, kAudioUnitProperty_ParameterInfo,
+			scope, param, &mParamInfo, &propertySize);
+		
+		// does it have a CFString name
+	if (mParamInfo.flags & kAudioUnitParameterFlag_HasCFNameString) {
+			// set this to our instance variable (this is CFReleased in the object's destructor)
+		mParamName = mParamInfo.cfNameString;
+			// if the release flag for this is NOT set, then we retain it, so our release will be symmetric
+		if (!(mParamInfo.flags & kAudioUnitParameterFlag_CFNameRelease)) 
+			CFRetain (mParamName);
+	} else {
+			// doesn't have a CFString, so we create one from the c string
+		mParamName = CFStringCreateWithCString(NULL, mParamInfo.name, kCFStringEncodingUTF8);
+	}
+
+
+
+kAudioUnitProperty_FactoryPresets
+
+
+The CFArray should be released of course, by the host when the presets are returned, and its finished with this array.
+
+Because the data that is contained within this array (its elements), are *not* CF objects, then when the array is released (in the implementation we've done for the reverb at least), the array elements are not released. Thus, our implementation assumes (which it does), that the CFString names do not require releasing (we're just returning essentially static strings)...
+
+(Here's the code we use for that):
+ComponentResult		AUMatrixReverb::GetPresets (CFArrayRef * outData) const
+{
+	if (outData == NULL) return noErr;
+	
+	CFMutableArrayRef theArray = CFArrayCreateMutable (NULL, kNumRoomPresets, NULL);
+	for (int i = 0; i < kNumRoomPresets; ++i)
+		CFArrayAppendValue (theArray, &sRoomPresets[i]);
+
+	*outData = (CFArrayRef)theArray;
+	return noErr;
+}
+
+The important point is the creation of the CFArrayCreateMutable with the two NULL args - the third argument is a CFArrayCallBacks arg. If this is NULL, then the defined behaviour is that the array elements are not retained (or released) - this is the correct argument to pass when storing non-CF types into an array like this, *and* retain and release on the array should do nothing.
+
+So, in the reverb case, this is fine, because these strings are static, will always be valid, don't need to be released when the array is released (or retained). (We do now also localise the preset name strings, but that is only done once, and its the localised name that is returned and kept in sRoomPresets).
+
+If you are generating these names dynamically, then to correctly retain/release these strings, you'd have to define the CFArrayCallBacks struct, and implement the retain release semantics to correctly retain or release the strings contained in presets in the array.
+If you are releasing (or otherwise using the strings you give to this array), then you should also ensure that you do not release these WITHOUT defining these callbacks (otherwise, you could release strings that the host/caller may still use at a later date) 
+
+Essentially, as with the other CF properties that an AU returns, once returned, the CF Object really becomes the property of the caller (or host) - the AU cannot disregard this contract and either re-use these CF objects, or release CF objects that are contained (either in this array or in the preset/class info dictionary) either, without defining these semantics. 
+
+Thus in AUBase::SaveState, the CF objects are created each time the state is saved, and the AU retains no knowledge of these.
+

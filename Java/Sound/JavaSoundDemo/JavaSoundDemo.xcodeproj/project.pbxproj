@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5456A7B038B1DA001E8FE26 /* CapturePlayback.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A72038B1DA001E8FE26 /* CapturePlayback.java */; };
+		F5456A7C038B1DA001E8FE26 /* ControlContext.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A73038B1DA001E8FE26 /* ControlContext.java */; };
+		F5456A7D038B1DA001E8FE26 /* Groove.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A74038B1DA001E8FE26 /* Groove.java */; };
+		F5456A7E038B1DA001E8FE26 /* JavaSound.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A75038B1DA001E8FE26 /* JavaSound.java */; };
+		F5456A7F038B1DA001E8FE26 /* JavaSoundApplet.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A76038B1DA001E8FE26 /* JavaSoundApplet.java */; };
+		F5456A80038B1DA001E8FE26 /* Juke.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A77038B1DA001E8FE26 /* Juke.java */; };
+		F5456A81038B1DA001E8FE26 /* MidiSynth.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A78038B1DA001E8FE26 /* MidiSynth.java */; };
+		F5456A82038B1DA001E8FE26 /* TempoDial.java in Sources */ = {isa = PBXBuildFile; fileRef = F5456A79038B1DA001E8FE26 /* TempoDial.java */; };
+		F5D44B4103A7F79C01AD5520 /* Manifest in JavaArchive */ = {isa = PBXBuildFile; fileRef = 6A8008AE02C7B68F0CC91562 /* Manifest */; settings = {JAVA_ARCHIVE_SUBDIR = ""; }; };
+		F5D44B9303A82BD601AD5520 /* 1-welcome.wav in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A84038B222101E8FE26 /* 1-welcome.wav */; };
+		F5D44B9403A82BD601AD5520 /* 22-new.aif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A85038B222101E8FE26 /* 22-new.aif */; };
+		F5D44B9503A82BD601AD5520 /* destMouse_Peru.AIF in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A86038B222101E8FE26 /* destMouse_Peru.AIF */; };
+		F5D44B9603A82BD601AD5520 /* sfx-medley.rmf in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A87038B222101E8FE26 /* sfx-medley.rmf */; };
+		F5D44B9703A82BD601AD5520 /* spacemusic.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A88038B222101E8FE26 /* spacemusic.au */; };
+		F5D44B9803A82BD601AD5520 /* trippygaia1.mid in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A89038B222101E8FE26 /* trippygaia1.mid */; };
+		F5D44B9A03A82C0601AD5520 /* JavaSoundDemoPlugin.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A94038B3C0C01E8FE26 /* JavaSoundDemoPlugin.html */; };
+		F5D44B9B03A82C0601AD5520 /* JavaSoundDemo.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5456A95038B3C0C01E8FE26 /* JavaSoundDemo.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B95001BDF0A11CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B96001BDF0A11CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5D44B9203A82BC801AD5520 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = audio;
+			dstSubfolderSpec = 16;
+			files = (
+				F5D44B9303A82BD601AD5520 /* 1-welcome.wav in CopyFiles */,
+				F5D44B9403A82BD601AD5520 /* 22-new.aif in CopyFiles */,
+				F5D44B9503A82BD601AD5520 /* destMouse_Peru.AIF in CopyFiles */,
+				F5D44B9603A82BD601AD5520 /* sfx-medley.rmf in CopyFiles */,
+				F5D44B9703A82BD601AD5520 /* spacemusic.au in CopyFiles */,
+				F5D44B9803A82BD601AD5520 /* trippygaia1.mid in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D44B9903A82BFA01AD5520 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				F5D44B9A03A82C0601AD5520 /* JavaSoundDemoPlugin.html in CopyFiles */,
+				F5D44B9B03A82C0601AD5520 /* JavaSoundDemo.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6A8008AE02C7B68F0CC91562 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		6A9ED92C02B0286D0CC91562 /* JavaSoundDemo.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = JavaSoundDemo.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5456A72038B1DA001E8FE26 /* CapturePlayback.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = CapturePlayback.java; sourceTree = "<group>"; };
+		F5456A73038B1DA001E8FE26 /* ControlContext.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ControlContext.java; sourceTree = "<group>"; };
+		F5456A74038B1DA001E8FE26 /* Groove.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Groove.java; sourceTree = "<group>"; };
+		F5456A75038B1DA001E8FE26 /* JavaSound.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = JavaSound.java; sourceTree = "<group>"; };
+		F5456A76038B1DA001E8FE26 /* JavaSoundApplet.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = JavaSoundApplet.java; sourceTree = "<group>"; };
+		F5456A77038B1DA001E8FE26 /* Juke.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Juke.java; sourceTree = "<group>"; };
+		F5456A78038B1DA001E8FE26 /* MidiSynth.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = MidiSynth.java; sourceTree = "<group>"; };
+		F5456A79038B1DA001E8FE26 /* TempoDial.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TempoDial.java; sourceTree = "<group>"; };
+		F5456A84038B222101E8FE26 /* 1-welcome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-welcome.wav"; sourceTree = "<group>"; };
+		F5456A85038B222101E8FE26 /* 22-new.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "22-new.aif"; sourceTree = "<group>"; };
+		F5456A86038B222101E8FE26 /* destMouse_Peru.AIF */ = {isa = PBXFileReference; lastKnownFileType = file; path = destMouse_Peru.AIF; sourceTree = "<group>"; };
+		F5456A87038B222101E8FE26 /* sfx-medley.rmf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfx-medley.rmf"; sourceTree = "<group>"; };
+		F5456A88038B222101E8FE26 /* spacemusic.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = spacemusic.au; sourceTree = "<group>"; };
+		F5456A89038B222101E8FE26 /* trippygaia1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = trippygaia1.mid; sourceTree = "<group>"; };
+		F5456A93038B3C0C01E8FE26 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F5456A94038B3C0C01E8FE26 /* JavaSoundDemoPlugin.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = JavaSoundDemoPlugin.html; sourceTree = "<group>"; };
+		F5456A95038B3C0C01E8FE26 /* JavaSoundDemo.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = JavaSoundDemo.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B94001BDF0A11CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				F5456A70038B1DA001E8FE26 /* src */,
+				F5456A83038B222101E8FE26 /* audio */,
+				F5456A94038B3C0C01E8FE26 /* JavaSoundDemoPlugin.html */,
+				F5456A95038B3C0C01E8FE26 /* JavaSoundDemo.html */,
+				F5456A93038B3C0C01E8FE26 /* README.txt */,
+				6A8008AE02C7B68F0CC91562 /* Manifest */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A9ED92C02B0286D0CC91562 /* JavaSoundDemo.jar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5456A70038B1DA001E8FE26 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F5456A72038B1DA001E8FE26 /* CapturePlayback.java */,
+				F5456A73038B1DA001E8FE26 /* ControlContext.java */,
+				F5456A74038B1DA001E8FE26 /* Groove.java */,
+				F5456A75038B1DA001E8FE26 /* JavaSound.java */,
+				F5456A76038B1DA001E8FE26 /* JavaSoundApplet.java */,
+				F5456A77038B1DA001E8FE26 /* Juke.java */,
+				F5456A78038B1DA001E8FE26 /* MidiSynth.java */,
+				F5456A79038B1DA001E8FE26 /* TempoDial.java */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F5456A83038B222101E8FE26 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				F5456A84038B222101E8FE26 /* 1-welcome.wav */,
+				F5456A85038B222101E8FE26 /* 22-new.aif */,
+				F5456A86038B222101E8FE26 /* destMouse_Peru.AIF */,
+				F5456A87038B222101E8FE26 /* sfx-medley.rmf */,
+				F5456A88038B222101E8FE26 /* spacemusic.au */,
+				F5456A89038B222101E8FE26 /* trippygaia1.mid */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B93001BDF0A11CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D44B4103A7F79C01AD5520 /* Manifest in JavaArchive */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2343E208DF2E9E008B0BD4 /* Build configuration list for PBXProject "JavaSoundDemo" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B95001BDF0A11CA292A /* Development */,
+				130F8B96001BDF0A11CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B90001BDF0A11CA292A /* JavaSoundDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B91001BDF0A11CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5456A7B038B1DA001E8FE26 /* CapturePlayback.java in Sources */,
+				F5456A7C038B1DA001E8FE26 /* ControlContext.java in Sources */,
+				F5456A7D038B1DA001E8FE26 /* Groove.java in Sources */,
+				F5456A7E038B1DA001E8FE26 /* JavaSound.java in Sources */,
+				F5456A7F038B1DA001E8FE26 /* JavaSoundApplet.java in Sources */,
+				F5456A80038B1DA001E8FE26 /* Juke.java in Sources */,
+				F5456A81038B1DA001E8FE26 /* MidiSynth.java in Sources */,
+				F5456A82038B1DA001E8FE26 /* TempoDial.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B90001BDF0A11CA292A /* JavaSoundDemo */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2343DE08DF2E9E008B0BD4 /* Build configuration list for PBXToolTarget "JavaSoundDemo" */;
+			buildPhases = (
+				130F8B91001BDF0A11CA292A /* Sources */,
+				130F8B93001BDF0A11CA292A /* JavaArchive */,
+				130F8B94001BDF0A11CA292A /* Frameworks */,
+				F5D44B9903A82BFA01AD5520 /* CopyFiles */,
+				F5D44B9203A82BC801AD5520 /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Sound/JavaSoundDemo;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JavaSoundDemo;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = JavaSoundDemo;
+			productInstallPath = /Developer/Examples/Java/Sound/JavaSoundDemo;
+			productName = JavaSoundDemo;
+			productReference = 6A9ED92C02B0286D0CC91562 /* JavaSoundDemo.jar */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2343DF08DF2E9E008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Sound/JavaSoundDemo;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JavaSoundDemo;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2343E008DF2E9E008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Sound/JavaSoundDemo;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JavaSoundDemo;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2343E308DF2E9E008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2343E408DF2E9E008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2343DE08DF2E9E008B0BD4 /* Build configuration list for PBXToolTarget "JavaSoundDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2343DF08DF2E9E008B0BD4 /* Debug */,
+				4C2343E008DF2E9E008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2343E208DF2E9E008B0BD4 /* Build configuration list for PBXProject "JavaSoundDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2343E308DF2E9E008B0BD4 /* Debug */,
+				4C2343E408DF2E9E008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

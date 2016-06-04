@@ -1,0 +1,63 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {runApplescript = id; }; 
+            CLASS = AppleScriptPlayground; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fEditPanel = id; 
+                fProgressIndicator = id; 
+                fResultPanel = id; 
+                fStubsPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {fetch = id; runAppleScript = id; }; 
+            CLASS = XMethodCoordinator; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fAppleScriptPlayground = id; 
+                fAppleScriptResults = id; 
+                fAppleScriptStubView = id; 
+                fCPlusPlusStubView = id; 
+                "fCPlusPlusStubView_h" = id; 
+                fInspector = id; 
+                fObjcStubView = id; 
+                "fObjcStubView_h" = id; 
+                fProgressIndicator = id; 
+                fServiceList = id; 
+                fServiceTable = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = XMethodInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fDescription = id; 
+                fDiscussionURL = id; 
+                fEmail = id; 
+                fID = id; 
+                fImplementationID = id; 
+                fInfoURL = id; 
+                fName = id; 
+                fNotes = id; 
+                fPublisherID = id; 
+                fShortDescription = id; 
+                fTModelID = id; 
+                fUUID = id; 
+                fWSDLURL = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = XMethodsServiceList; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fList = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

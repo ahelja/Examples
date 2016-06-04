@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59B39EFD05D0582400BBFBDA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		59B39EFE05D0582400BBFBDA /* dru_burning.c in Sources */ = {isa = PBXBuildFile; fileRef = F5848B9002884BCC01FF6454 /* dru_burning.c */; };
+		59B39EFF05D0582400BBFBDA /* dru_devices.c in Sources */ = {isa = PBXBuildFile; fileRef = F5848B9102884BCC01FF6454 /* dru_devices.c */; };
+		59B39F0005D0582400BBFBDA /* dru_progress.c in Sources */ = {isa = PBXBuildFile; fileRef = F5848B9202884BCC01FF6454 /* dru_progress.c */; };
+		59B39F0205D0582400BBFBDA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */; };
+		59B39F0E05D0585600BBFBDA /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B39F0D05D0585600BBFBDA /* DiscRecording.framework */; };
+		59B39F5F05D0586200BBFBDA /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B39F5E05D0586200BBFBDA /* CoreServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA490018CE3211CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA4A0018CE3211CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		59B39F0705D0582400BBFBDA /* bulkerase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bulkerase; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B39F0D05D0585600BBFBDA /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
+		59B39F5E05D0586200BBFBDA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		F5848B9002884BCC01FF6454 /* dru_burning.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dru_burning.c; path = ../discrecutils/dru_burning.c; sourceTree = SOURCE_ROOT; };
+		F5848B9102884BCC01FF6454 /* dru_devices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dru_devices.c; path = ../discrecutils/dru_devices.c; sourceTree = SOURCE_ROOT; };
+		F5848B9202884BCC01FF6454 /* dru_progress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dru_progress.c; path = ../discrecutils/dru_progress.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59B39F0105D0582400BBFBDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B39F0205D0582400BBFBDA /* CoreFoundation.framework in Frameworks */,
+				59B39F0E05D0585600BBFBDA /* DiscRecording.framework in Frameworks */,
+				59B39F5F05D0586200BBFBDA /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* bulkerase */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				19C28FBDFE9D53C911CA2CBB /* Products */,
+			);
+			name = bulkerase;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F5848B8F02884BAB01FF6454 /* dru */,
+				08FB7796FE84155DC02AAC07 /* main.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				59B39F0D05D0585600BBFBDA /* DiscRecording.framework */,
+				09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */,
+				59B39F5E05D0586200BBFBDA /* CoreServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		19C28FBDFE9D53C911CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59B39F0705D0582400BBFBDA /* bulkerase */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5848B8F02884BAB01FF6454 /* dru */ = {
+			isa = PBXGroup;
+			children = (
+				F5848B9002884BCC01FF6454 /* dru_burning.c */,
+				F5848B9102884BCC01FF6454 /* dru_devices.c */,
+				F5848B9202884BCC01FF6454 /* dru_progress.c */,
+			);
+			name = dru;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		59B39EFB05D0582400BBFBDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		59B39EFA05D0582400BBFBDA /* bulkerase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59756A62087C5112002CB306 /* Build configuration list for PBXNativeTarget "bulkerase" */;
+			buildPhases = (
+				59B39EFB05D0582400BBFBDA /* Headers */,
+				59B39EFC05D0582400BBFBDA /* Sources */,
+				59B39F0105D0582400BBFBDA /* Frameworks */,
+				59B39F0505D0582400BBFBDA /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bulkerase;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = bulkerase;
+			productInstallPath = "$(HOME)/bin";
+			productName = bulkerase;
+			productReference = 59B39F0705D0582400BBFBDA /* bulkerase */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 59756A66087C5112002CB306 /* Build configuration list for PBXProject "bulkerase" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA490018CE3211CA2923 /* Development */,
+				014CEA4A0018CE3211CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* bulkerase */;
+			projectDirPath = "";
+			targets = (
+				59B39EFA05D0582400BBFBDA /* bulkerase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		59B39F0505D0582400BBFBDA /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59B39EFC05D0582400BBFBDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B39EFD05D0582400BBFBDA /* main.c in Sources */,
+				59B39EFE05D0582400BBFBDA /* dru_burning.c in Sources */,
+				59B39EFF05D0582400BBFBDA /* dru_devices.c in Sources */,
+				59B39F0005D0582400BBFBDA /* dru_progress.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		59756A63087C5112002CB306 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bulkerase;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		59756A64087C5112002CB306 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bulkerase;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		59756A65087C5112002CB306 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bulkerase;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		59756A67087C5112002CB306 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		59756A68087C5112002CB306 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		59756A69087C5112002CB306 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59756A62087C5112002CB306 /* Build configuration list for PBXNativeTarget "bulkerase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59756A63087C5112002CB306 /* Development */,
+				59756A64087C5112002CB306 /* Deployment */,
+				59756A65087C5112002CB306 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		59756A66087C5112002CB306 /* Build configuration list for PBXProject "bulkerase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59756A67087C5112002CB306 /* Development */,
+				59756A68087C5112002CB306 /* Deployment */,
+				59756A69087C5112002CB306 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

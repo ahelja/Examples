@@ -1,0 +1,3 @@
+soap.sh and xmlrpc.sh show how to use osascript to make WebService
+method calls. These examples are kept explicitly simple.
+

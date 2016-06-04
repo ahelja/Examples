@@ -1,0 +1,33 @@
+BlastApp is a simple, "blast-everything-in-sight" type of game, inspired by similar games available on many different platforms... The goal of the game is to fly your helicopter through twenty levels of deadly enemy bases, mines, and ships. You get three helicopters per game. Your high score and level are remembered between games.
+
+The game is controlled through the keypad: Simply use the keys around the 5 to accelerate in the indicated direction: 
+
+	7 8 9
+	4   6
+	1 2 3
+
+For instance, 9 accelerates you forward and upward. You can't go backwards; thus the 4 key slows you down and eventually stops you. Use the 5 key to stop quickly; this will prove very useful.
+
+To shoot bullets, use the 0 key or the space bar. Your helicopter is equipped with a simple weapon system: It shoots one type of missile, in one fixed direction. You have to learn to be creative.
+
+To start a new game, hit the Restart button (or the r key).
+
+To pause a game and continue a paused game, use the Pause button (or the p key). Hiding the application will also pause the game.
+
+Scoring is simple: You get one point for destroying any enemy object (missiles and bullets don't count). You also get ten bonus points if you end a level in under two minutes. The points acquired during a level are multiplied by the level number.
+
+At a score of 1000 you receive a bonus helicopter.
+
+Happy blasting!
+
+BlastApp is freely distributable.
+
+
+BlastApp history:
+Nov 90: First version of BlastApp, featuring 12 levels, written for NextStep 2.0
+Dec 91: Two new levels added
+Mar 93: NextStep 3.1 version released with six more levels
+Apr 95: Converted to OpenStep, running on Mach and Windows
+Aug 97: Recompiled for Rhapsody/PowerPC
+Sep 97: Rewritten in Java against the alpha YellowBox/Java
+Mar 98: Converted to final YellowBox/Java APIs

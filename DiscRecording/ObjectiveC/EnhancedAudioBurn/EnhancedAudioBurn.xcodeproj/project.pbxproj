@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592E059105DBEE00008ACB0A /* AudioCDDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A37F4AEFDCFA73011CA2CEA /* AudioCDDocument.h */; };
+		592E059205DBEE00008ACB0A /* AudioCDWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FA9A2E04281DE60157F106 /* AudioCDWindowController.h */; };
+		592E059305DBEE00008ACB0A /* EABQuickTimeHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D653F6042A103A01000102 /* EABQuickTimeHelpers.h */; };
+		592E059405DBEE00008ACB0A /* TrackTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AE0DAA1042E0E0100000102 /* TrackTable.h */; };
+		592E059505DBEE00008ACB0A /* EABDictionaryHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A98C7F4042FE76C00BDBAE6 /* EABDictionaryHelpers.h */; };
+		592E059705DBEE00008ACB0A /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		592E059905DBEE00008ACB0A /* AudioCDDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = F597291304278BDD01753048 /* AudioCDDocument.nib */; };
+		592E059A05DBEE00008ACB0A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5634F3704289ECB01260B53 /* Localizable.strings */; };
+		592E059B05DBEE00008ACB0A /* EAB-Application.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C528F05816D220078AB97 /* EAB-Application.icns */; };
+		592E059C05DBEE00008ACB0A /* EAB-AudioBurn.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C529005816D220078AB97 /* EAB-AudioBurn.icns */; };
+		592E059E05DBEE00008ACB0A /* AudioCDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* AudioCDDocument.m */; settings = {ATTRIBUTES = (); }; };
+		592E059F05DBEE00008ACB0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		592E05A005DBEE00008ACB0A /* AudioCDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FA9A2D04281DE60157F106 /* AudioCDWindowController.m */; };
+		592E05A105DBEE00008ACB0A /* EABQuickTimeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D653F7042A103A01000102 /* EABQuickTimeHelpers.m */; };
+		592E05A205DBEE00008ACB0A /* TrackTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0DAA2042E0E0100000102 /* TrackTable.m */; };
+		592E05A305DBEE00008ACB0A /* EABDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C7F3042FE76C00BDBAE6 /* EABDictionaryHelpers.m */; };
+		592E05A505DBEE00008ACB0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		592E05A605DBEE00008ACB0A /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59729160427C57E01753048 /* DiscRecording.framework */; };
+		592E05A705DBEE00008ACB0A /* DiscRecordingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59729170427C57E01753048 /* DiscRecordingUI.framework */; };
+		592E05A805DBEE00008ACB0A /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D653FC042A1C5001000102 /* QuickTime.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504D0FFE6A4CB11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504D1FFE6A4CB11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* AudioCDDocument.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AudioCDDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* AudioCDDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AudioCDDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3A3C528F05816D220078AB97 /* EAB-Application.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "EAB-Application.icns"; sourceTree = "<group>"; };
+		3A3C529005816D220078AB97 /* EAB-AudioBurn.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "EAB-AudioBurn.icns"; sourceTree = "<group>"; };
+		592E05AA05DBEE00008ACB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		592E05AB05DBEE00008ACB0A /* EnhancedAudioBurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnhancedAudioBurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A98C7F3042FE76C00BDBAE6 /* EABDictionaryHelpers.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = EABDictionaryHelpers.m; sourceTree = SOURCE_ROOT; };
+		8A98C7F4042FE76C00BDBAE6 /* EABDictionaryHelpers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EABDictionaryHelpers.h; sourceTree = SOURCE_ROOT; };
+		8AE0DAA1042E0E0100000102 /* TrackTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackTable.h; sourceTree = "<group>"; };
+		8AE0DAA2042E0E0100000102 /* TrackTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTable.m; sourceTree = "<group>"; };
+		F5634F3804289ECC01260B53 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F597291404278BDD01753048 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/AudioCDDocument.nib; sourceTree = "<group>"; };
+		F59729160427C57E01753048 /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
+		F59729170427C57E01753048 /* DiscRecordingUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecordingUI.framework; path = /System/Library/Frameworks/DiscRecordingUI.framework; sourceTree = "<absolute>"; };
+		F5D653F6042A103A01000102 /* EABQuickTimeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EABQuickTimeHelpers.h; sourceTree = "<group>"; };
+		F5D653F7042A103A01000102 /* EABQuickTimeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EABQuickTimeHelpers.m; sourceTree = "<group>"; };
+		F5D653FC042A1C5001000102 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		F5FA9A2D04281DE60157F106 /* AudioCDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCDWindowController.m; sourceTree = "<group>"; };
+		F5FA9A2E04281DE60157F106 /* AudioCDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCDWindowController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592E05A405DBEE00008ACB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592E05A505DBEE00008ACB0A /* Cocoa.framework in Frameworks */,
+				592E05A605DBEE00008ACB0A /* DiscRecording.framework in Frameworks */,
+				592E05A705DBEE00008ACB0A /* DiscRecordingUI.framework in Frameworks */,
+				592E05A805DBEE00008ACB0A /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				F59729160427C57E01753048 /* DiscRecording.framework */,
+				F59729170427C57E01753048 /* DiscRecordingUI.framework */,
+				F5D653FC042A1C5001000102 /* QuickTime.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592E05AB05DBEE00008ACB0A /* EnhancedAudioBurn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* EnhancedAudioBurn */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+				592E05AA05DBEE00008ACB0A /* Info.plist */,
+			);
+			name = EnhancedAudioBurn;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4AEFDCFA73011CA2CEA /* AudioCDDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* AudioCDDocument.m */,
+				F5FA9A2E04281DE60157F106 /* AudioCDWindowController.h */,
+				F5FA9A2D04281DE60157F106 /* AudioCDWindowController.m */,
+				8AE0DAA1042E0E0100000102 /* TrackTable.h */,
+				8AE0DAA2042E0E0100000102 /* TrackTable.m */,
+				8A98C7F4042FE76C00BDBAE6 /* EABDictionaryHelpers.h */,
+				8A98C7F3042FE76C00BDBAE6 /* EABDictionaryHelpers.m */,
+				F5D653F6042A103A01000102 /* EABQuickTimeHelpers.h */,
+				F5D653F7042A103A01000102 /* EABQuickTimeHelpers.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A3C528F05816D220078AB97 /* EAB-Application.icns */,
+				3A3C529005816D220078AB97 /* EAB-AudioBurn.icns */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				F597291304278BDD01753048 /* AudioCDDocument.nib */,
+				F5634F3704289ECB01260B53 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		592E059005DBEE00008ACB0A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592E059105DBEE00008ACB0A /* AudioCDDocument.h in Headers */,
+				592E059205DBEE00008ACB0A /* AudioCDWindowController.h in Headers */,
+				592E059305DBEE00008ACB0A /* EABQuickTimeHelpers.h in Headers */,
+				592E059405DBEE00008ACB0A /* TrackTable.h in Headers */,
+				592E059505DBEE00008ACB0A /* EABDictionaryHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		592E058F05DBEE00008ACB0A /* EnhancedAudioBurn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59756B88087C527F002CB306 /* Build configuration list for PBXNativeTarget "EnhancedAudioBurn" */;
+			buildPhases = (
+				592E059005DBEE00008ACB0A /* Headers */,
+				592E059605DBEE00008ACB0A /* Resources */,
+				592E059D05DBEE00008ACB0A /* Sources */,
+				592E05A405DBEE00008ACB0A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EnhancedAudioBurn;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = EnhancedAudioBurn;
+			productInstallPath = "$(HOME)/Applications";
+			productName = EnhancedAudioBurn;
+			productReference = 592E05AB05DBEE00008ACB0A /* EnhancedAudioBurn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 59756B8C087C527F002CB306 /* Build configuration list for PBXProject "EnhancedAudioBurn" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504D0FFE6A4CB11CA0CBA /* Development */,
+				4A9504D1FFE6A4CB11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* EnhancedAudioBurn */;
+			projectDirPath = "";
+			targets = (
+				592E058F05DBEE00008ACB0A /* EnhancedAudioBurn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592E059605DBEE00008ACB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592E059705DBEE00008ACB0A /* MainMenu.nib in Resources */,
+				592E059905DBEE00008ACB0A /* AudioCDDocument.nib in Resources */,
+				592E059A05DBEE00008ACB0A /* Localizable.strings in Resources */,
+				592E059B05DBEE00008ACB0A /* EAB-Application.icns in Resources */,
+				592E059C05DBEE00008ACB0A /* EAB-AudioBurn.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592E059D05DBEE00008ACB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592E059E05DBEE00008ACB0A /* AudioCDDocument.m in Sources */,
+				592E059F05DBEE00008ACB0A /* main.m in Sources */,
+				592E05A005DBEE00008ACB0A /* AudioCDWindowController.m in Sources */,
+				592E05A105DBEE00008ACB0A /* EABQuickTimeHelpers.m in Sources */,
+				592E05A205DBEE00008ACB0A /* TrackTable.m in Sources */,
+				592E05A305DBEE00008ACB0A /* EABDictionaryHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		F5634F3704289ECB01260B53 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5634F3804289ECC01260B53 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F597291304278BDD01753048 /* AudioCDDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F597291404278BDD01753048 /* English */,
+			);
+			name = AudioCDDocument.nib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59756B89087C527F002CB306 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EnhancedAudioBurn;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		59756B8A087C527F002CB306 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EnhancedAudioBurn;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		59756B8B087C527F002CB306 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EnhancedAudioBurn;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		59756B8D087C527F002CB306 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		59756B8E087C527F002CB306 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		59756B8F087C527F002CB306 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59756B88087C527F002CB306 /* Build configuration list for PBXNativeTarget "EnhancedAudioBurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59756B89087C527F002CB306 /* Development */,
+				59756B8A087C527F002CB306 /* Deployment */,
+				59756B8B087C527F002CB306 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		59756B8C087C527F002CB306 /* Build configuration list for PBXProject "EnhancedAudioBurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59756B8D087C527F002CB306 /* Development */,
+				59756B8E087C527F002CB306 /* Deployment */,
+				59756B8F087C527F002CB306 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

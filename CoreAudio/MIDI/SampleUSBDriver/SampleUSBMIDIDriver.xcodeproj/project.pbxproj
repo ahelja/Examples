@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EB3AB3F079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4D90177994001CA2136;
+		};
+		3EB3AB40079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4DD0177994001CA2136;
+		};
+		3EB3AB41079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4DF0177994001CA2136;
+		};
+		3EB3AB42079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E10177994001CA2136;
+		};
+		3EB3AB43079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E30177994001CA2136;
+		};
+		3EB3AB44079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E50177994001CA2136;
+		};
+		3EB3AB45079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E70177994001CA2136;
+		};
+		3EB3AB46079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E90177994001CA2136;
+		};
+		3EB3AB47079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4EB0177994001CA2136;
+		};
+		3EB3AB48079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4ED0177994001CA2136;
+		};
+		3EB3AB49079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4EF0177994001CA2136;
+		};
+		3EB3AB4A079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F50A017799E301CA2136;
+		};
+		3EB3AB4B079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F490F211C5B03DDB00A007D0;
+		};
+		3EB3AB4C079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F490F215C5B03DDB00A007D0;
+		};
+		3EB3AB4F079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4D80177994001CA2136;
+		};
+		3EB3AB50079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4DC0177994001CA2136;
+		};
+		3EB3AB51079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4DE0177994001CA2136;
+		};
+		3EB3AB52079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E00177994001CA2136;
+		};
+		3EB3AB53079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E20177994001CA2136;
+		};
+		3EB3AB54079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E40177994001CA2136;
+		};
+		3EB3AB55079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E60177994001CA2136;
+		};
+		3EB3AB56079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4E80177994001CA2136;
+		};
+		3EB3AB57079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4EA0177994001CA2136;
+		};
+		3EB3AB58079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4EC0177994001CA2136;
+		};
+		3EB3AB59079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F4EE0177994001CA2136;
+		};
+		3EB3AB5A079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F509F509017799E301CA2136;
+		};
+		3EB3AB5B079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F490F210C5B03DDB00A007D0;
+		};
+		3EB3AB5C079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F490F214C5B03DDB00A007D0;
+		};
+		3EB3AB5E079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 0AA1909FFE8422F4C02AAC07;
+		};
+		3EB3AB5F079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5706D20014B0B17015B338A;
+		};
+		3EB3AB60079D51BB0046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5706D23014B0BC6015B338A;
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA3F0018CDD111CA2923 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "\U0001-DDEBUG";
+			};
+			name = Development;
+		};
+		014CEA400018CDD111CA2923 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0AA1909FFE8422F4C02AAC07 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreFoundation.framework;
+			path = /System/Library/Frameworks/CoreFoundation.framework;
+			sourceTree = "<absolute>";
+		};
+		3EB3AB62079D51BB0046E3F3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "Info-SampleUSBMIDIDriver.plist";
+			sourceTree = "<group>";
+		};
+		3EB3AB63079D51BB0046E3F3 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = SampleUSBMIDIDriver.plugin;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F490F210C5B03DDB00A007D0 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CAHostTimeBase.cpp;
+			sourceTree = "<group>";
+		};
+		F490F211C5B03DDB00A007D0 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAHostTimeBase.h;
+			sourceTree = "<group>";
+		};
+		F490F214C5B03DDB00A007D0 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CAMutex.cpp;
+			sourceTree = "<group>";
+		};
+		F490F215C5B03DDB00A007D0 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAMutex.h;
+			sourceTree = "<group>";
+		};
+		F509F4D70177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = text;
+			path = Architecture.txt;
+			sourceTree = "<group>";
+		};
+		F509F4D80177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = IOServiceClient.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4D90177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = IOServiceClient.h;
+			sourceTree = "<group>";
+		};
+		F509F4DA0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MIDIBackCompatible.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4DB0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = MIDIBackCompatible.h;
+			sourceTree = "<group>";
+		};
+		F509F4DC0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MIDIDriver.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4DD0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = MIDIDriverClass.h;
+			sourceTree = "<group>";
+		};
+		F509F4DE0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MIDIDriverDevice.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4DF0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = MIDIDriverDevice.h;
+			sourceTree = "<group>";
+		};
+		F509F4E00177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MIDIDriverUtils.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4E10177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = MIDIDriverUtils.h;
+			sourceTree = "<group>";
+		};
+		F509F4E20177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBDevice.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4E30177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBDevice.h;
+			sourceTree = "<group>";
+		};
+		F509F4E40177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBDeviceManager.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4E50177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBDeviceManager.h;
+			sourceTree = "<group>";
+		};
+		F509F4E60177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBInterfaceManager.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4E70177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBInterfaceManager.h;
+			sourceTree = "<group>";
+		};
+		F509F4E80177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBMIDIDevice.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4E90177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBMIDIDevice.h;
+			sourceTree = "<group>";
+		};
+		F509F4EA0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBMIDIDeviceManager.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4EB0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBMIDIDeviceManager.h;
+			sourceTree = "<group>";
+		};
+		F509F4EC0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBMIDIDriverBase.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4ED0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBMIDIDriverBase.h;
+			sourceTree = "<group>";
+		};
+		F509F4EE0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = USBVendorMIDIDriver.cpp;
+			sourceTree = "<group>";
+		};
+		F509F4EF0177994001CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = USBVendorMIDIDriver.h;
+			sourceTree = "<group>";
+		};
+		F509F508017799E301CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.exports;
+			path = SampleUSBMIDI.exp;
+			sourceTree = "<group>";
+		};
+		F509F509017799E301CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = SampleUSBMIDI.cpp;
+			sourceTree = "<group>";
+		};
+		F509F50A017799E301CA2136 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = SampleUSBMIDI.h;
+			sourceTree = "<group>";
+		};
+		F55F18B701554564010C93F4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreMIDI.framework;
+			path = /System/Library/Frameworks/CoreMIDI.framework;
+			sourceTree = "<absolute>";
+		};
+		F5706D20014B0B17015B338A = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreMIDIServer.framework;
+			path = /System/Library/Frameworks/CoreMIDIServer.framework;
+			sourceTree = "<absolute>";
+		};
+		F5706D23014B0BC6015B338A = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOKit.framework;
+			path = /System/Library/Frameworks/IOKit.framework;
+			sourceTree = "<absolute>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EB3AB5D079D51BB0046E3F3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AB5E079D51BB0046E3F3,
+				3EB3AB5F079D51BB0046E3F3,
+				3EB3AB60079D51BB0046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				F509F4D40177994001CA2136,
+				089C1671FE841209C02AAC07,
+				19C28FB6FE9D52B211CA2CBB,
+				3EB3AB62079D51BB0046E3F3,
+			);
+			name = MIDIDrivers;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				0AA1909FFE8422F4C02AAC07,
+				F5706D20014B0B17015B338A,
+				F5706D23014B0BC6015B338A,
+				F55F18B701554564010C93F4,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				3EB3AB63079D51BB0046E3F3,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F490F11DC5B03DDB00A007D0 = {
+			isa = PBXGroup;
+			children = (
+				F490F210C5B03DDB00A007D0,
+				F490F211C5B03DDB00A007D0,
+				F490F214C5B03DDB00A007D0,
+				F490F215C5B03DDB00A007D0,
+			);
+			name = PublicUtility;
+			path = /Developer/Examples/CoreAudio/PublicUtility;
+			sourceTree = "<absolute>";
+		};
+		F509F4D40177994001CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F509F4D50177994001CA2136,
+				F490F11DC5B03DDB00A007D0,
+				F509F4D60177994001CA2136,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		F509F4D50177994001CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F509F508017799E301CA2136,
+				F509F509017799E301CA2136,
+				F509F50A017799E301CA2136,
+			);
+			path = SampleUSBMIDIDriver;
+			sourceTree = "<group>";
+		};
+		F509F4D60177994001CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F509F4D70177994001CA2136,
+				F509F4D80177994001CA2136,
+				F509F4D90177994001CA2136,
+				F509F4DA0177994001CA2136,
+				F509F4DB0177994001CA2136,
+				F509F4DC0177994001CA2136,
+				F509F4DD0177994001CA2136,
+				F509F4DE0177994001CA2136,
+				F509F4DF0177994001CA2136,
+				F509F4E00177994001CA2136,
+				F509F4E10177994001CA2136,
+				F509F4E20177994001CA2136,
+				F509F4E30177994001CA2136,
+				F509F4E40177994001CA2136,
+				F509F4E50177994001CA2136,
+				F509F4E60177994001CA2136,
+				F509F4E70177994001CA2136,
+				F509F4E80177994001CA2136,
+				F509F4E90177994001CA2136,
+				F509F4EA0177994001CA2136,
+				F509F4EB0177994001CA2136,
+				F509F4EC0177994001CA2136,
+				F509F4ED0177994001CA2136,
+				F509F4EE0177994001CA2136,
+				F509F4EF0177994001CA2136,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EB3AB3E079D51BB0046E3F3 = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AB3F079D51BB0046E3F3,
+				3EB3AB40079D51BB0046E3F3,
+				3EB3AB41079D51BB0046E3F3,
+				3EB3AB42079D51BB0046E3F3,
+				3EB3AB43079D51BB0046E3F3,
+				3EB3AB44079D51BB0046E3F3,
+				3EB3AB45079D51BB0046E3F3,
+				3EB3AB46079D51BB0046E3F3,
+				3EB3AB47079D51BB0046E3F3,
+				3EB3AB48079D51BB0046E3F3,
+				3EB3AB49079D51BB0046E3F3,
+				3EB3AB4A079D51BB0046E3F3,
+				3EB3AB4B079D51BB0046E3F3,
+				3EB3AB4C079D51BB0046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EB3AB3D079D51BB0046E3F3 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAAFBD908984664003EB3A7;
+			buildPhases = (
+				3EB3AB3E079D51BB0046E3F3,
+				3EB3AB4D079D51BB0046E3F3,
+				3EB3AB4E079D51BB0046E3F3,
+				3EB3AB5D079D51BB0046E3F3,
+				3EB3AB61079D51BB0046E3F3,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 2;
+				EXPORTED_SYMBOLS_FILE = SampleUSBMIDIDriver/SampleUSBMIDI.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INFOPLIST_FILE = "Info-SampleUSBMIDIDriver.plist";
+				INSTALL_PATH = "/Library/Audio/MIDI Drivers";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SampleUSBMIDIDriver;
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = plugin;
+			};
+			dependencies = (
+			);
+			name = SampleUSBMIDIDriver;
+			productInstallPath = "/Library/Audio/MIDI Drivers";
+			productName = RolandUSBMIDI;
+			productReference = 3EB3AB63079D51BB0046E3F3;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 = {
+			isa = PBXProject;
+			buildConfigurationList = 3EAAFBDC08984664003EB3A7;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA3F0018CDD111CA2923,
+				014CEA400018CDD111CA2923,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07;
+			projectDirPath = "";
+			targets = (
+				3EB3AB3D079D51BB0046E3F3,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EB3AB4D079D51BB0046E3F3 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		3EB3AB61079D51BB0046E3F3 = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EB3AB4E079D51BB0046E3F3 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AB4F079D51BB0046E3F3,
+				3EB3AB50079D51BB0046E3F3,
+				3EB3AB51079D51BB0046E3F3,
+				3EB3AB52079D51BB0046E3F3,
+				3EB3AB53079D51BB0046E3F3,
+				3EB3AB54079D51BB0046E3F3,
+				3EB3AB55079D51BB0046E3F3,
+				3EB3AB56079D51BB0046E3F3,
+				3EB3AB57079D51BB0046E3F3,
+				3EB3AB58079D51BB0046E3F3,
+				3EB3AB59079D51BB0046E3F3,
+				3EB3AB5A079D51BB0046E3F3,
+				3EB3AB5B079D51BB0046E3F3,
+				3EB3AB5C079D51BB0046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3EAAFBDA08984664003EB3A7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUGGING_SYMBOLS = YES;
+				EXPORTED_SYMBOLS_FILE = SampleUSBMIDIDriver/SampleUSBMIDI.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-SampleUSBMIDIDriver.plist";
+				INSTALL_PATH = "/Library/Audio/MIDI Drivers";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = " -DDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SampleUSBMIDIDriver;
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Development;
+		};
+		3EAAFBDB08984664003EB3A7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				EXPORTED_SYMBOLS_FILE = SampleUSBMIDIDriver/SampleUSBMIDI.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INFOPLIST_FILE = "Info-SampleUSBMIDIDriver.plist";
+				INSTALL_PATH = "/Library/Audio/MIDI Drivers";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SampleUSBMIDIDriver;
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		3EAAFBDD08984664003EB3A7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		3EAAFBDE08984664003EB3A7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EAAFBD908984664003EB3A7 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAAFBDA08984664003EB3A7,
+				3EAAFBDB08984664003EB3A7,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		3EAAFBDC08984664003EB3A7 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAAFBDD08984664003EB3A7,
+				3EAAFBDE08984664003EB3A7,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07;
+}

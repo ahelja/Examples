@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B92001BDF0A11CA292A /* SampleTree.java in Sources */ = {isa = PBXBuildFile; fileRef = 010341B7FEEF030011DB9C8B /* SampleTree.java */; };
+		F536FFD1039597E301C917B9 /* collapsed.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F536FFCF039597E301C917B9 /* collapsed.gif */; settings = {JAVA_ARCHIVE_SUBDIR = images; }; };
+		F536FFD2039597E301C917B9 /* expanded.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F536FFD0039597E301C917B9 /* expanded.gif */; settings = {JAVA_ARCHIVE_SUBDIR = images; }; };
+		F5B6491B0340F3760129247B /* DynamicTreeNode.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B649130340F3760129247B /* DynamicTreeNode.java */; };
+		F5B649200340F3760129247B /* SampleData.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B649180340F3760129247B /* SampleData.java */; };
+		F5B649210340F3760129247B /* SampleTreeCellRenderer.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B649190340F3760129247B /* SampleTreeCellRenderer.java */; };
+		F5B649220340F3760129247B /* SampleTreeModel.java in Sources */ = {isa = PBXBuildFile; fileRef = F5B6491A0340F3760129247B /* SampleTreeModel.java */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B95001BDF0A11CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B96001BDF0A11CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		010341B7FEEF030011DB9C8B /* SampleTree.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = SampleTree.java; sourceTree = "<group>"; };
+		6A8008AE02C7B68F0CC91562 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		6A9ED92C02B0286D0CC91562 /* SampleTree.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = SampleTree.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		F536FFCF039597E301C917B9 /* collapsed.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = collapsed.gif; sourceTree = "<group>"; };
+		F536FFD0039597E301C917B9 /* expanded.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = expanded.gif; sourceTree = "<group>"; };
+		F5B649130340F3760129247B /* DynamicTreeNode.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = DynamicTreeNode.java; sourceTree = "<group>"; };
+		F5B649150340F3760129247B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F5B649180340F3760129247B /* SampleData.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = SampleData.java; sourceTree = "<group>"; };
+		F5B649190340F3760129247B /* SampleTreeCellRenderer.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = SampleTreeCellRenderer.java; sourceTree = "<group>"; };
+		F5B6491A0340F3760129247B /* SampleTreeModel.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = SampleTreeModel.java; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B94001BDF0A11CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				010341B7FEEF030011DB9C8B /* SampleTree.java */,
+				F5B649130340F3760129247B /* DynamicTreeNode.java */,
+				F5B649180340F3760129247B /* SampleData.java */,
+				F5B649190340F3760129247B /* SampleTreeCellRenderer.java */,
+				F5B6491A0340F3760129247B /* SampleTreeModel.java */,
+				F536FFCE039597E301C917B9 /* images */,
+				F5B649150340F3760129247B /* README.txt */,
+				6A8008AE02C7B68F0CC91562 /* Manifest */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A9ED92C02B0286D0CC91562 /* SampleTree.jar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F536FFCE039597E301C917B9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F536FFCF039597E301C917B9 /* collapsed.gif */,
+				F536FFD0039597E301C917B9 /* expanded.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B93001BDF0A11CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F536FFD1039597E301C917B9 /* collapsed.gif in JavaArchive */,
+				F536FFD2039597E301C917B9 /* expanded.gif in JavaArchive */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23439408DF2E9A008B0BD4 /* Build configuration list for PBXProject "SampleTree" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B95001BDF0A11CA292A /* Development */,
+				130F8B96001BDF0A11CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B90001BDF0A11CA292A /* SampleTree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B91001BDF0A11CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B92001BDF0A11CA292A /* SampleTree.java in Sources */,
+				F5B6491B0340F3760129247B /* DynamicTreeNode.java in Sources */,
+				F5B649200340F3760129247B /* SampleData.java in Sources */,
+				F5B649210340F3760129247B /* SampleTreeCellRenderer.java in Sources */,
+				F5B649220340F3760129247B /* SampleTreeModel.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B90001BDF0A11CA292A /* SampleTree */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23439008DF2E9A008B0BD4 /* Build configuration list for PBXToolTarget "SampleTree" */;
+			buildPhases = (
+				130F8B91001BDF0A11CA292A /* Sources */,
+				130F8B93001BDF0A11CA292A /* JavaArchive */,
+				130F8B94001BDF0A11CA292A /* Frameworks */,
+			);
+			buildSettings = {
+				INSTALL_PATH = /Developer/Examples/Java/JFC/SampleTree;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = SampleTree;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = SampleTree;
+			productInstallPath = /Developer/Examples/Java/JFC/SampleTree;
+			productName = SampleTree;
+			productReference = 6A9ED92C02B0286D0CC91562 /* SampleTree.jar */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23439108DF2E9A008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/SampleTree;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = SampleTree;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23439208DF2E9A008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/SampleTree;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = SampleTree;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23439508DF2E9A008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23439608DF2E9A008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23439008DF2E9A008B0BD4 /* Build configuration list for PBXToolTarget "SampleTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23439108DF2E9A008B0BD4 /* Debug */,
+				4C23439208DF2E9A008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23439408DF2E9A008B0BD4 /* Build configuration list for PBXProject "SampleTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23439508DF2E9A008B0BD4 /* Debug */,
+				4C23439608DF2E9A008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+		F5FE92340376EFAB01138057 /* Graph.java in Sources */ = {isa = PBXBuildFile; fileRef = F5FE92330376EFAB01138057 /* Graph.java */; };
+		F5FE92430376F01101138057 /* example2.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5FE92360376EFF101138057 /* example2.html */; };
+		F5FE92440376F01101138057 /* example3.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5FE92370376EFF101138057 /* example3.html */; };
+		F5FE92450376F01101138057 /* example4.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5FE92380376EFF101138057 /* example4.html */; };
+		F5FE92470376F04201138057 /* computer.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5FE923D0376EFFB01138057 /* computer.au */; };
+		F5FE92480376F04201138057 /* drip.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5FE923E0376EFFB01138057 /* drip.au */; };
+		F5FE92490376F04201138057 /* gong.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5FE923F0376EFFB01138057 /* gong.au */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = GraphLayout;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+				F5FE92430376F01101138057 /* example2.html in CopyFiles */,
+				F5FE92440376F01101138057 /* example3.html in CopyFiles */,
+				F5FE92450376F01101138057 /* example4.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FE92460376F02601138057 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = GraphLayout/audio;
+			dstSubfolderSpec = 16;
+			files = (
+				F5FE92470376F04201138057 /* computer.au in CopyFiles */,
+				F5FE92480376F04201138057 /* drip.au in CopyFiles */,
+				F5FE92490376F04201138057 /* gong.au in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F5FE92330376EFAB01138057 /* Graph.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Graph.java; sourceTree = "<group>"; };
+		F5FE92360376EFF101138057 /* example2.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example2.html; sourceTree = "<group>"; };
+		F5FE92370376EFF101138057 /* example3.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example3.html; sourceTree = "<group>"; };
+		F5FE92380376EFF101138057 /* example4.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example4.html; sourceTree = "<group>"; };
+		F5FE923D0376EFFB01138057 /* computer.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = computer.au; sourceTree = "<group>"; };
+		F5FE923E0376EFFB01138057 /* drip.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = drip.au; sourceTree = "<group>"; };
+		F5FE923F0376EFFB01138057 /* gong.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = gong.au; sourceTree = "<group>"; };
+		F5FE92520376F07C01138057 /* GraphLayout */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = GraphLayout; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				F5FE92330376EFAB01138057 /* Graph.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				F5FE92360376EFF101138057 /* example2.html */,
+				F5FE92370376EFF101138057 /* example3.html */,
+				F5FE92380376EFF101138057 /* example4.html */,
+				F5FE923C0376EFFB01138057 /* audio */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5FE92520376F07C01138057 /* GraphLayout */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5FE923C0376EFFB01138057 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				F5FE923D0376EFFB01138057 /* computer.au */,
+				F5FE923E0376EFFB01138057 /* drip.au */,
+				F5FE923F0376EFFB01138057 /* gong.au */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2342BA08DF2E92008B0BD4 /* Build configuration list for PBXProject "GraphLayout" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* GraphLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FE92340376EFAB01138057 /* Graph.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* GraphLayout */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2342B608DF2E92008B0BD4 /* Build configuration list for PBXToolTarget "GraphLayout" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F5FE92460376F02601138057 /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = GraphLayout;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = GraphLayout;
+			productInstallPath = /usr/local/bin;
+			productName = JavaAWTApplet;
+			productReference = F5FE92520376F07C01138057 /* GraphLayout */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2342B708DF2E92008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = GraphLayout;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2342B808DF2E92008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = GraphLayout;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2342BB08DF2E92008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2342BC08DF2E92008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2342B608DF2E92008B0BD4 /* Build configuration list for PBXToolTarget "GraphLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342B708DF2E92008B0BD4 /* Debug */,
+				4C2342B808DF2E92008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2342BA08DF2E92008B0BD4 /* Build configuration list for PBXProject "GraphLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342BB08DF2E92008B0BD4 /* Debug */,
+				4C2342BC08DF2E92008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

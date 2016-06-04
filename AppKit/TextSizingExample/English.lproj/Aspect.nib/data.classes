@@ -1,0 +1,2 @@
+"Aspect" = {ACTIONS = {}; OUTLETS = {view = id; window = id; }; SUPERCLASS = NSObject; };
+"FirstResponder" = {ACTIONS = {}; CATEGORY = LocalActions; OUTLETS = {}; };

@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {DevicePopUpAction = id; }; 
+            CLASS = HLDeviceMenuController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDelegate = id; mDevicePopUp = NSPopUpButton; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                DeviceInfoButtonAction = id; 
+                LoadFileButtonAction = id; 
+                SendFileToAllChannelsCheckBoxAction = id; 
+                StartHardwareButtonAction = id; 
+                StartIOButtonAction = id; 
+                StopHardwareButtonAction = id; 
+                StopIOButtonAction = id; 
+            }; 
+            CLASS = HLFilePlayerWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDeviceBufferSizeTextField = NSTextField; 
+                mDeviceInfoButton = NSButton; 
+                mDeviceMenuController = HLDeviceMenuController; 
+                mDeviceNumberChannelsTextField = NSTextField; 
+                mDeviceSampleRateTextField = NSTextField; 
+                mFileFormatTextField = NSTextField; 
+                mFileNameTextField = NSTextField; 
+                mFileSampleRateTextField = NSTextField; 
+                mFileSizeTextField = NSTextField; 
+                mIsPlayingIndicator = NSProgressIndicator; 
+                mLoadFileButton = NSButton; 
+                mSendFileToAllChannelsCheckBox = NSButton; 
+                mStartDelayPopUp = NSPopUpButton; 
+                mTelemetryTextView = NSTextView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }
+    ); 
+    IBVersion = 1; 
+}

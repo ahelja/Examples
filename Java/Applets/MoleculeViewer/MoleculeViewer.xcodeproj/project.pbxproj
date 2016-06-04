@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+		F5CA713F0381E2E701D9C453 /* Matrix3D.java in Sources */ = {isa = PBXBuildFile; fileRef = F5CA713B0381E2E701D9C453 /* Matrix3D.java */; };
+		F5CA71400381E2E701D9C453 /* XYZApp.java in Sources */ = {isa = PBXBuildFile; fileRef = F5CA713C0381E2E701D9C453 /* XYZApp.java */; };
+		F5CA71500381E36501D9C453 /* example2.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71390381E2E701D9C453 /* example2.html */; };
+		F5CA71510381E36501D9C453 /* example3.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA713A0381E2E701D9C453 /* example3.html */; };
+		F5CA71530381E38401D9C453 /* benzene.xyz in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71420381E30501D9C453 /* benzene.xyz */; };
+		F5CA71540381E38401D9C453 /* buckminsterfullerine.xyz in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71430381E30501D9C453 /* buckminsterfullerine.xyz */; };
+		F5CA71550381E38401D9C453 /* cyclohexane.xyz in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71440381E30501D9C453 /* cyclohexane.xyz */; };
+		F5CA71560381E38401D9C453 /* ethane.xyz in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71450381E30501D9C453 /* ethane.xyz */; };
+		F5CA71570381E38401D9C453 /* HyaluronicAcid.xyz in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71460381E30501D9C453 /* HyaluronicAcid.xyz */; };
+		F5CA71580381E38401D9C453 /* water.xyz in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5CA71470381E30501D9C453 /* water.xyz */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = MoleculeViewer;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+				F5CA71500381E36501D9C453 /* example2.html in CopyFiles */,
+				F5CA71510381E36501D9C453 /* example3.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CA71520381E37001D9C453 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = MoleculeViewer/models;
+			dstSubfolderSpec = 16;
+			files = (
+				F5CA71530381E38401D9C453 /* benzene.xyz in CopyFiles */,
+				F5CA71540381E38401D9C453 /* buckminsterfullerine.xyz in CopyFiles */,
+				F5CA71550381E38401D9C453 /* cyclohexane.xyz in CopyFiles */,
+				F5CA71560381E38401D9C453 /* ethane.xyz in CopyFiles */,
+				F5CA71570381E38401D9C453 /* HyaluronicAcid.xyz in CopyFiles */,
+				F5CA71580381E38401D9C453 /* water.xyz in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F5CA71390381E2E701D9C453 /* example2.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example2.html; sourceTree = "<group>"; };
+		F5CA713A0381E2E701D9C453 /* example3.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example3.html; sourceTree = "<group>"; };
+		F5CA713B0381E2E701D9C453 /* Matrix3D.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Matrix3D.java; sourceTree = "<group>"; };
+		F5CA713C0381E2E701D9C453 /* XYZApp.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = XYZApp.java; sourceTree = "<group>"; };
+		F5CA71420381E30501D9C453 /* benzene.xyz */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = benzene.xyz; sourceTree = "<group>"; };
+		F5CA71430381E30501D9C453 /* buckminsterfullerine.xyz */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = buckminsterfullerine.xyz; sourceTree = "<group>"; };
+		F5CA71440381E30501D9C453 /* cyclohexane.xyz */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = cyclohexane.xyz; sourceTree = "<group>"; };
+		F5CA71450381E30501D9C453 /* ethane.xyz */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = ethane.xyz; sourceTree = "<group>"; };
+		F5CA71460381E30501D9C453 /* HyaluronicAcid.xyz */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = HyaluronicAcid.xyz; sourceTree = "<group>"; };
+		F5CA71470381E30501D9C453 /* water.xyz */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = water.xyz; sourceTree = "<group>"; };
+		F5CA71610381E39C01D9C453 /* MoleculeViewer */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = MoleculeViewer; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				F5CA713B0381E2E701D9C453 /* Matrix3D.java */,
+				F5CA713C0381E2E701D9C453 /* XYZApp.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				F5CA71390381E2E701D9C453 /* example2.html */,
+				F5CA713A0381E2E701D9C453 /* example3.html */,
+				F5CA71410381E30501D9C453 /* models */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5CA71610381E39C01D9C453 /* MoleculeViewer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5CA71410381E30501D9C453 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F5CA71420381E30501D9C453 /* benzene.xyz */,
+				F5CA71430381E30501D9C453 /* buckminsterfullerine.xyz */,
+				F5CA71440381E30501D9C453 /* cyclohexane.xyz */,
+				F5CA71450381E30501D9C453 /* ethane.xyz */,
+				F5CA71460381E30501D9C453 /* HyaluronicAcid.xyz */,
+				F5CA71470381E30501D9C453 /* water.xyz */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2342E408DF2E93008B0BD4 /* Build configuration list for PBXProject "MoleculeViewer" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* MoleculeViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CA713F0381E2E701D9C453 /* Matrix3D.java in Sources */,
+				F5CA71400381E2E701D9C453 /* XYZApp.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* MoleculeViewer */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2342E008DF2E93008B0BD4 /* Build configuration list for PBXToolTarget "MoleculeViewer" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F5CA71520381E37001D9C453 /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = MoleculeViewer;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = MoleculeViewer;
+			productInstallPath = /Developer/Examples/Java/Applets;
+			productName = JavaAWTApplet;
+			productReference = F5CA71610381E39C01D9C453 /* MoleculeViewer */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2342E108DF2E93008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = MoleculeViewer;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2342E208DF2E93008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = MoleculeViewer;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2342E508DF2E93008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2342E608DF2E93008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2342E008DF2E93008B0BD4 /* Build configuration list for PBXToolTarget "MoleculeViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342E108DF2E93008B0BD4 /* Debug */,
+				4C2342E208DF2E93008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2342E408DF2E93008B0BD4 /* Build configuration list for PBXProject "MoleculeViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342E508DF2E93008B0BD4 /* Debug */,
+				4C2342E608DF2E93008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

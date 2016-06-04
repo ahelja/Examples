@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {sendText = id; }; 
+            CLASS = SubViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {view = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {sendText = id; }; 
+            CLASS = TypeTextHere; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {owner = SubViewController; text = NSTextField; }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EB3ADA5079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5FC64700369D06D01CA212A;
+		};
+		3EB3ADA6079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 921F7BFE04A618A200CA2167;
+		};
+		3EB3ADA7079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 0AF0566804D9CE0A00FE5222;
+		};
+		3EB3ADA9079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 29B97318FDCFA39411CA2CEA;
+		};
+		3EB3ADAA079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 089C165CFE840E0CC02AAC07;
+		};
+		3EB3ADAC079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 29B97316FDCFA39411CA2CEA;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		3EB3ADAD079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5FC64710369D06D01CA212A;
+		};
+		3EB3ADAE079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 921F7BFF04A618A200CA2167;
+		};
+		3EB3ADAF079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 0AF0566704D9CE0A00FE5222;
+		};
+		3EB3ADB1079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 1058C7A1FEA54F0111CA2CBB;
+		};
+		3EB3ADB2079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5F503BB036DB59301CA212A;
+		};
+		3EB3ADB3079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5F503BC036DB59301CA212A;
+		};
+		3EB3ADB4079D58C40046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5F503BD036DB59301CA212A;
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 = {
+			isa = PBXFileReference;
+			fileEncoding = 10;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AF0566704D9CE0A00FE5222 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = CAStreamBasicDescription.cpp;
+			path = /Developer/Examples/CoreAudio/PublicUtility/CAStreamBasicDescription.cpp;
+			sourceTree = "<absolute>";
+		};
+		0AF0566804D9CE0A00FE5222 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			name = CAStreamBasicDescription.h;
+			path = /Developer/Examples/CoreAudio/PublicUtility/CAStreamBasicDescription.h;
+			sourceTree = "<absolute>";
+		};
+		1058C7A1FEA54F0111CA2CBB = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			sourceTree = "<absolute>";
+		};
+		29B97316FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			path = main.mm;
+			sourceTree = "<group>";
+		};
+		29B97319FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		29B97324FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			sourceTree = "<absolute>";
+		};
+		29B97325FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			sourceTree = "<absolute>";
+		};
+		3EB3ADB5079D58C40046E3F3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "Info-MatrixMixerTest.plist";
+			sourceTree = "<group>";
+		};
+		3EB3ADB6079D58C40046E3F3 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = MatrixMixerTest.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		921F7BFE04A618A200CA2167 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = MeteringView.h;
+			sourceTree = "<group>";
+		};
+		921F7BFF04A618A200CA2167 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			path = MeteringView.mm;
+			sourceTree = "<group>";
+		};
+		F5F503BB036DB59301CA212A = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = /System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = "<absolute>";
+		};
+		F5F503BC036DB59301CA212A = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioUnit.framework;
+			path = /System/Library/Frameworks/AudioUnit.framework;
+			sourceTree = "<absolute>";
+		};
+		F5F503BD036DB59301CA212A = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudio.framework;
+			path = /System/Library/Frameworks/CoreAudio.framework;
+			sourceTree = "<absolute>";
+		};
+		F5FC64700369D06D01CA212A = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = MixerController.h;
+			sourceTree = "<group>";
+		};
+		F5FC64710369D06D01CA212A = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			path = MixerController.mm;
+			sourceTree = "<group>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EB3ADB0079D58C40046E3F3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3ADB1079D58C40046E3F3,
+				3EB3ADB2079D58C40046E3F3,
+				3EB3ADB3079D58C40046E3F3,
+				3EB3ADB4079D58C40046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA,
+				29B97324FDCFA39411CA2CEA,
+				F5F503BB036DB59301CA212A,
+				F5F503BC036DB59301CA212A,
+				F5F503BD036DB59301CA212A,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				3EB3ADB6079D58C40046E3F3,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001,
+				29B97315FDCFA39411CA2CEA,
+				29B97317FDCFA39411CA2CEA,
+				29B97323FDCFA39411CA2CEA,
+				19C28FACFE9D520D11CA2CBB,
+				3EB3ADB5079D58C40046E3F3,
+			);
+			name = MatrixMixerTest;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA,
+				F5FC64700369D06D01CA212A,
+				F5FC64710369D06D01CA212A,
+				921F7BFE04A618A200CA2167,
+				921F7BFF04A618A200CA2167,
+				0AF0566704D9CE0A00FE5222,
+				0AF0566804D9CE0A00FE5222,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA,
+				089C165CFE840E0CC02AAC07,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB,
+				1058C7A2FEA54F0111CA2CBB,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EB3ADA4079D58C40046E3F3 = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3ADA5079D58C40046E3F3,
+				3EB3ADA6079D58C40046E3F3,
+				3EB3ADA7079D58C40046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EB3ADA3079D58C40046E3F3 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A998248E0899578300093D40;
+			buildPhases = (
+				3EB3ADA4079D58C40046E3F3,
+				3EB3ADA8079D58C40046E3F3,
+				3EB3ADAB079D58C40046E3F3,
+				3EB3ADB0079D58C40046E3F3,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MatrixMixerTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MatrixMixerTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = MatrixMixerTest;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MatrixMixerTest;
+			productReference = 3EB3ADB6079D58C40046E3F3;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA = {
+			isa = PBXProject;
+			buildConfigurationList = A99824920899578300093D40;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA,
+				4A9504CDFFE6A4B311CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA;
+			projectDirPath = "";
+			targets = (
+				3EB3ADA3079D58C40046E3F3,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EB3ADA8079D58C40046E3F3 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3ADA9079D58C40046E3F3,
+				3EB3ADAA079D58C40046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EB3ADAB079D58C40046E3F3 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3ADAC079D58C40046E3F3,
+				3EB3ADAD079D58C40046E3F3,
+				3EB3ADAE079D58C40046E3F3,
+				3EB3ADAF079D58C40046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A998248F0899578300093D40 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MatrixMixerTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MatrixMixerTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		A99824900899578300093D40 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MatrixMixerTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MatrixMixerTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A99824910899578300093D40 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-MatrixMixerTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MatrixMixerTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		A99824930899578300093D40 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		A99824940899578300093D40 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		A99824950899578300093D40 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A998248E0899578300093D40 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A998248F0899578300093D40,
+				A99824900899578300093D40,
+				A99824910899578300093D40,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A99824920899578300093D40 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99824930899578300093D40,
+				A99824940899578300093D40,
+				A99824950899578300093D40,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA;
+}

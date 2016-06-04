@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		400BD58A086202FD007AB715 /* krb5-auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 400BD589086202FD007AB715 /* krb5-auth.c */; };
+		400BD5B90862048D007AB715 /* krb5-auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 400BD589086202FD007AB715 /* krb5-auth.c */; };
+		40416FF908465967001EB4D9 /* Kerberos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40416FF808465967001EB4D9 /* Kerberos.framework */; };
+		4041703308468390001EB4D9 /* dir_svc_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 4041703108468390001EB4D9 /* dir_svc_client.c */; };
+		408FC06F084CE3A300BFA89E /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = 408FC06E084CE3A300BFA89E /* test.c */; };
+		408FC07C084D0A2500BFA89E /* dir_svc_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 4041703108468390001EB4D9 /* dir_svc_client.c */; };
+		408FC0A3084D0CCF00BFA89E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FEEC6F0847EEBD0001621B /* CoreFoundation.framework */; };
+		408FC0A4084D0CCF00BFA89E /* DirectoryService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FEEC760847EEC60001621B /* DirectoryService.framework */; };
+		408FC0A5084D0CCF00BFA89E /* Kerberos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40416FF808465967001EB4D9 /* Kerberos.framework */; };
+		79FEEC700847EEBD0001621B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FEEC6F0847EEBD0001621B /* CoreFoundation.framework */; };
+		79FEEC770847EEC60001621B /* DirectoryService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FEEC760847EEC60001621B /* DirectoryService.framework */; };
+		8D5B49B2048680CD000E48DA /* authplugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* authplugin.c */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA420018CDE011CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA430018CDE011CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		08FB77B6FE84183AC02AAC07 /* authplugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = authplugin.c; sourceTree = "<group>"; };
+		400BD588086202FD007AB715 /* krb5-auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "krb5-auth.h"; sourceTree = "<group>"; };
+		400BD589086202FD007AB715 /* krb5-auth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "krb5-auth.c"; sourceTree = "<group>"; };
+		40416FF808465967001EB4D9 /* Kerberos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kerberos.framework; path = /System/Library/Frameworks/Kerberos.framework; sourceTree = "<absolute>"; };
+		4041703108468390001EB4D9 /* dir_svc_client.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = dir_svc_client.c; sourceTree = "<group>"; };
+		4041703208468390001EB4D9 /* dir_svc_client.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = dir_svc_client.h; sourceTree = "<group>"; };
+		407A33D508689C4E00488135 /* README */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		408FC06B084CE38400BFA89E /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		408FC06E084CE3A300BFA89E /* test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
+		79FEEC6F0847EEBD0001621B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		79FEEC760847EEC60001621B /* DirectoryService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectoryService.framework; path = /System/Library/Frameworks/DirectoryService.framework; sourceTree = "<absolute>"; };
+		8D5B49B6048680CD000E48DA /* kerberos.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kerberos.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		408FC069084CE38400BFA89E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408FC0A3084D0CCF00BFA89E /* CoreFoundation.framework in Frameworks */,
+				408FC0A4084D0CCF00BFA89E /* DirectoryService.framework in Frameworks */,
+				408FC0A5084D0CCF00BFA89E /* Kerberos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40416FF908465967001EB4D9 /* Kerberos.framework in Frameworks */,
+				79FEEC700847EEBD0001621B /* CoreFoundation.framework in Frameworks */,
+				79FEEC770847EEC60001621B /* DirectoryService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* kerberos-authplugin */ = {
+			isa = PBXGroup;
+			children = (
+				407A33D508689C4E00488135 /* README */,
+				408FC124084D257100BFA89E /* src */,
+				408FC06D084CE39200BFA89E /* test */,
+				408FC143084E2D2500BFA89E /* lib */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = "kerberos-authplugin";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* kerberos.bundle */,
+				408FC06B084CE38400BFA89E /* test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		408FC06D084CE39200BFA89E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				408FC06E084CE3A300BFA89E /* test.c */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		408FC124084D257100BFA89E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4041703208468390001EB4D9 /* dir_svc_client.h */,
+				4041703108468390001EB4D9 /* dir_svc_client.c */,
+				400BD588086202FD007AB715 /* krb5-auth.h */,
+				400BD589086202FD007AB715 /* krb5-auth.c */,
+				08FB77B6FE84183AC02AAC07 /* authplugin.c */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		408FC143084E2D2500BFA89E /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				79FEEC6F0847EEBD0001621B /* CoreFoundation.framework */,
+				79FEEC760847EEC60001621B /* DirectoryService.framework */,
+				40416FF808465967001EB4D9 /* Kerberos.framework */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		408FC06A084CE38400BFA89E /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 520BEBD1087C8EB2007CAFB6 /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				408FC068084CE38400BFA89E /* Sources */,
+				408FC069084CE38400BFA89E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = test;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = test;
+			productName = test;
+			productReference = 408FC06B084CE38400BFA89E /* test */;
+			productType = "com.apple.product-type.tool";
+		};
+		8D5B49AC048680CD000E48DA /* kerberos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 520BEBCD087C8EB2007CAFB6 /* Build configuration list for PBXNativeTarget "kerberos" */;
+			buildPhases = (
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_CORE_SERVICES_DIR)/SecurityAgentPlugins";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = kerberos;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			dependencies = (
+			);
+			name = kerberos;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "kerberos-authplugin";
+			productReference = 8D5B49B6048680CD000E48DA /* kerberos.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 520BEBD5087C8EB2007CAFB6 /* Build configuration list for PBXProject "kerberos-authplugin" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA420018CDE011CA2923 /* Development */,
+				014CEA430018CDE011CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* kerberos-authplugin */;
+			projectDirPath = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* kerberos */,
+				408FC06A084CE38400BFA89E /* test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		408FC068084CE38400BFA89E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408FC07C084D0A2500BFA89E /* dir_svc_client.c in Sources */,
+				408FC06F084CE3A300BFA89E /* test.c in Sources */,
+				400BD58A086202FD007AB715 /* krb5-auth.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B2048680CD000E48DA /* authplugin.c in Sources */,
+				400BD5B90862048D007AB715 /* krb5-auth.c in Sources */,
+				4041703308468390001EB4D9 /* dir_svc_client.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		520BEBCE087C8EB2007CAFB6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_CORE_SERVICES_DIR)/SecurityAgentPlugins";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = kerberos;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		520BEBCF087C8EB2007CAFB6 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_CORE_SERVICES_DIR)/SecurityAgentPlugins";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = kerberos;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		520BEBD0087C8EB2007CAFB6 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_CORE_SERVICES_DIR)/SecurityAgentPlugins";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = kerberos;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+		520BEBD2087C8EB2007CAFB6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = test;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		520BEBD3087C8EB2007CAFB6 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = test;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		520BEBD4087C8EB2007CAFB6 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = test;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		520BEBD6087C8EB2007CAFB6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		520BEBD7087C8EB2007CAFB6 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		520BEBD8087C8EB2007CAFB6 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		520BEBCD087C8EB2007CAFB6 /* Build configuration list for PBXNativeTarget "kerberos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520BEBCE087C8EB2007CAFB6 /* Development */,
+				520BEBCF087C8EB2007CAFB6 /* Deployment */,
+				520BEBD0087C8EB2007CAFB6 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		520BEBD1087C8EB2007CAFB6 /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520BEBD2087C8EB2007CAFB6 /* Development */,
+				520BEBD3087C8EB2007CAFB6 /* Deployment */,
+				520BEBD4087C8EB2007CAFB6 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		520BEBD5087C8EB2007CAFB6 /* Build configuration list for PBXProject "kerberos-authplugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520BEBD6087C8EB2007CAFB6 /* Development */,
+				520BEBD7087C8EB2007CAFB6 /* Deployment */,
+				520BEBD8087C8EB2007CAFB6 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

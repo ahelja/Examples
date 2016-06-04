@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GridFeederColorBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {addButtonAction = id; removeButtonAction = id; typePopUpAction = id; }; 
+            CLASS = ParamEaterArgumentViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_addButton" = NSButton; 
+                "_randomTypeFromTextField" = NSTextField; 
+                "_randomTypeSizeTextField" = NSTextField; 
+                "_randomTypeSubview" = NSView; 
+                "_randomTypeToTextField" = NSTextField; 
+                "_removeButton" = NSButton; 
+                "_sequenceTypeByTextField" = NSTextField; 
+                "_sequenceTypeFromTextField" = NSTextField; 
+                "_sequenceTypeSubview" = NSView; 
+                "_sequenceTypeToTextField" = NSTextField; 
+                "_staticTypeSubview" = NSView; 
+                "_staticTypeTextField" = NSTextField; 
+                "_titleField" = NSTextField; 
+                "_typePopUp" = NSPopUpButton; 
+                "_typeView" = NSView; 
+                "_view" = NSView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

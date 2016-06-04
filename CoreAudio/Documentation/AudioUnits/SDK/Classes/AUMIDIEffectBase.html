@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUMIDIEffectBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUMIDIEffectBase</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "AUEffectBase_fs.html" target="_top">AUEffectBase</a>, <a href = "AUMIDIBase_fs.html" target="_top">AUMIDIBase</a><br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUMIDIEffectBase<br>
+<br><pre>class AUMIDIEffectBase : public AUEffectBase, public AUMIDIBase </pre>
+<p>Base class for an effect that handles MIDI.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUMIDIEffectBase">AUMIDIEffectBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUMIDIEffectBase(
+          ComponentInstance               inInstance,
+          bool                            inProcessesInPlace = false
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ComponentEntryDispatch">ComponentEntryDispatch</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static ComponentResult ComponentEntryDispatch(
+          ComponentParameters*            params,
+          AUMIDIEffectBase*               This
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetProperty">SetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const void*                     inData,
+          UInt32                          inDataSize
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Properties</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetProperty">GetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          void*                           outData
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetPropertyInfo">GetPropertyInfo</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetPropertyInfo(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          UInt32&                         outDataSize,
+          Boolean&                        outWritable
+    );</pre>
+<p></p><br>
+<hr>
+</body></html>

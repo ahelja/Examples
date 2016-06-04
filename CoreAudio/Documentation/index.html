@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Core Audio Documentation</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1>Core Audio Documentation</h1>
+
+<ul>
+	<li><a href="HAL/index.html"><font size="+2" color="#FF7700">HAL</font></a>
+		<dd><dt>Describes the API and objects that are defined in the CoreAudio framework.
+		</dt></dd>
+		</li>
+	<p><br></p>
+
+	<li><a href="CoreMIDI/index.html"><font size="+2" color="#FF7700">MIDI</font></a>
+		<dd><dt>Describes the API and objects that are defined in the CoreMIDI framework.
+		</dt></dd>
+		</li>
+	<p><br></p>
+	
+	<li><a href="/Developer/Applications/Audio/AU%20Lab%20Documentation/AULabDocs.html"><font size="+2" color="#FF7700">AU Lab Documentation</font></a>
+		<dd><dt>Describes the AU Lab application and how to use it.
+		</dt></dd>
+		</li>
+	<p><br></p>
+
+	<li><a href="AudioUnits/index.html"><font size="+2" color="#FF7700">Audio Units</font></a>
+	(and Audio Unit-related utilities in AudioToolbox.framework). <dd><dt>This is the main documenation for the Audio Unit API.</dt></dd></li>
+	
+	<ul>
+		<p>The following documents contain addendums, additional features, etc, that have yet to be unified with the main documentation.<br></p>
+		<li><a href="AudioUnits/AUValidationReadMe.rtf">AUValidation Tool ReadMe</a>
+			<dd><dt>Some general guidelines for how to use the AU Validation Tool (auval)
+			</dt></dd>
+		<P><BR></P>
+		<li>These items deal with API and AU features definitions.
+		<ul>
+			<li><a href="AudioUnits/CF_AU_Properties.text">CF AU Properties</a>
+				<dd><dt>Clarifies the requirements for both hosts and AU's on the retain and release semantics that apply to CF objects returned by Audio Units.
+				</dt></dd>
+				</li>
+			<li><a href="AudioUnits/PantherAUProperties.rtf">Panther AU Properties</a>
+				<dd><dt>Provides a summary of the properties that were first defined with the Panther OS release.
+				</dt></dd>
+				</li>
+			<li><a href="AudioUnits/OfflineRendering.rtf">Offline AudioUnit Type</a>
+				<ul>
+				<li><a href="AudioUnits/OfflineAPIAdditions.text">Offline API Additions</a></li>
+				</ul>
+				<dd><dt>Describes both a new Audio Unit type that was introduced in Panther, and the usage of existing AU's in an 'offline' context. AU's are generally expected to be used in a real-time context. The Offline Unit is an AU type that does not have that requirement placed on it (and would typically be used to process the contents of files)
+				</dt></dd>
+				</li>
+			<li><a href="AudioUnits/AUPannerUnits.text">Panner AudioUnit Type</a>
+				<dd><dt>Describes a new Audio Unit type that was introduced in Panther. Its specific purpose is to describe the semantic and a required set of APIs that should be common to all panner styles of AUs.
+				</dt></dd>
+				</li>
+	
+			<li><a href="AudioUnits/GroupsPartsAndMulti-timbrality.rtf">Groups, Parts and Multi-timbrality</a>
+				<dd><dt>Describes how multi-timbral AU Instruments are represented, and how different MIDI Channels (Groups) can be used to independently control the separate parts.
+				</dt></dd>
+				</li>
+			<li><a href="AudioUnits/IOChannelConfigurations.rtf">I/O Channel Configurations</a>
+				<dd><dt>Discusses some of the complexities of publishing and handling input and output channel capabilities, particularly with AU's that present complex internal bussing. It supplements information contained in the main AU documentation.
+				</dt></dd></li>
+		</ul>
+		<P><BR></P>
+		<li>The Following documents detail Post-Panther API additions<br> 
+			<ul>
+				<li><a href="AudioUnits/AUPropertiesPostPantherAdditions.h">Post Panther AU Additions Header</a>
+					<dd><dt>Contains declarations for API that aren't in the Panther headers, but are described below.
+					</dt></dd>
+					</li>
+				<li><a href="AudioUnits/AUParameterStrings.rtf">Parameter Values and String</a>
+					<dd><dt>Describes the complete mechanism that is available to AU's to translate strings to/from parameter values. Requires additional API not complete in Panther (declarations can be found in the Panther AU Additions header).
+					</dt></dd>
+					</li>
+				<li><a href="AudioUnits/OtherPluginsToAU.rtf">Translating Other Plugin Settings to Audio Units</a>
+					<dd><dt>Describes how an AU can translate and represent a "previous incarnation" of itself as a VST or MAS plugin. This is particularly important for users who are migrating their projects from Mac OS 9 based systems, to Mac OS X. Requires additional API not complete in Panther (declarations can be found in the Panther AU Additions header)
+					</dt></dd>
+					</li>
+				<li><a href="AudioUnits/AUPresetsAndFileReferences.rtf">Audio Unit Presets and File References</a>
+					<dd><dt>Describes how an AU can describe the files referenced by its presets in a uniform way. This permits hosts to gather the assets used by a project.
+					</dt></dd>
+					</li>
+			</ul>
+			</li>
+	<p><br></p>
+	<li>This list deals with AU usage scenarios.<br>
+		<ul>
+			<li><a href="AudioUnits/ThreadedNoteScheduling.rtf">Threaded Note Scheduling</a>
+				<dd><dt>Describes an algorithm that can be used internally by an AU Instrument to do thread-safe scheduling of note (and other) control events.
+				</dt></dd>
+				</li>
+			<li><a href="AudioUnits/AUHAL.rtfd">AUHAL Output AudioUnit discussion</a>
+				<dd><dt>Discusses the usage of the AUHAL Audio Device unit, that is not capable of doing both input and/or output. It describes how to configure this unit, and how it interfaces to device's audio streams.
+				</dt></dd></li>
+			<li><a target="_" href="AudioUnits/WritingCocoaAUUIs.pdf">Writing Cocoa UI's for Audio Units</a>
+			</li>
+			<li><a target="_" href="AudioUnits/CarbonViewCocoaWindow.rtfd">Hosting a Carbon View in a Cocoa Window</a>
+			</li>
+		</ul>
+	</li>
+	<p><br></p>
+	</ul>
+
+	<li><a href="OS_SDK_CA.rtf"><font size="+2" color="#FF7700">Building with older OS SDKs</font></a>
+		<dd><dt>Describes how various OS Versions and their SDKs interact with the CA SDK examples (in particular the AudioUnit SDK).
+		</dt></dd>
+		</li>
+	<p><br></p>
+
+</ul>
+
+</body>
+</html>

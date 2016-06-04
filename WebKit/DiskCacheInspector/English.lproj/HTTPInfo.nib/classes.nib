@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = HTTPInfoController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {tableView = id; }; 
+            SUPERCLASS = UtilityWindowController; 
+        }, 
+        {
+            CLASS = UtilityWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

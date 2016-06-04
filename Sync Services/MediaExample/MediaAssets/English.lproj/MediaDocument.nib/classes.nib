@@ -1,0 +1,43 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                revertDocumentToSync = id; 
+                setTrickleSync = id; 
+                slowSyncDocument = id; 
+                syncDocument = id; 
+            }; 
+            CLASS = EntityDocument; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = EntityRecords; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {search = id; }; 
+            CLASS = FilteringArrayController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {searchField = NSSearchField; }; 
+            SUPERCLASS = NSArrayController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GenericRecord; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {importFiles = id; smartEvents = id; }; 
+            CLASS = MediaDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_progressIndicator" = NSProgressIndicator; 
+                "_trickleButton" = NSButton; 
+                eventController = id; 
+            }; 
+            SUPERCLASS = EntityDocument; 
+        }, 
+        {
+            CLASS = Person; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {address = id; firstName = id; lastName = id; phone = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

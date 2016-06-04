@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>MIDIDriverInterface</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">MIDIDriverInterface</font></h1>
+<br><a name="//apple_ref/doc/class/MIDIDriverInterface" title="MIDIDriverInterface"></a><h2>Abstract</h2>
+<p>
+		The COM-style interface to a MIDI driver.</p>
+<h2>Discussion</h2>
+<p>
+
+This is the function table interface to a MIDI driver.  Both version 1 and 2 drivers use
+this same table of function pointers (except as noted).
+<br><br>
+Drivers which support both the version 1 and version 2 interfaces can tell which version
+of the server is running by checking to see whether kMIDIDriverInterface2ID or
+kMIDIDriverInterfaceID is passed to the factory function.  If the version 1 interface is
+requested, the driver should behave as if it is a version 1 driver.
+</p>
+<hr>
+<br><h2>Member Functions</h2>
+<a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/FindDevices" target="_top">FindDevices</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/Start" target="_top">Start</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/Stop" target="_top">Stop</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/Configure" target="_top">Configure</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/Send" target="_top">Send</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/EnableSource" target="_top">EnableSource</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/Flush" target="_top">Flush</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/Monitor" target="_top">Monitor</a></tt></dt>
+<dd></dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/FindDevices;  name=FindDevices --><a name="//apple_ref/doc/compositePage/c/func/FindDevices"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="FindDevices">FindDevices</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/FindDevices" logicalPath="//apple_ref/c/instm/FindDevices //apple_ref/c/clm/FindDevices //apple_ref/c/intfcm/FindDevices //apple_ref/c/func/FindDevices" target="_top"><font class="function">FindDevices</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceListRef" logicalPath="//apple_ref/c/cl/MIDIDeviceListRef //apple_ref/c/cl/MIDIDeviceListRef //apple_ref/c/tdef/MIDIDeviceListRef" target="_top"><font class="type">MIDIDeviceListRef</font></a> <font class="param">devList</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This is only called for version 1 drivers. The server is requesting that the driver
+detect the devices which are present. For each device present, the driver should
+create a MIDIDeviceRef with entities, using MIDIDeviceCreate and
+MIDIDeviceAddEntity, and add the device to the supplied MIDIDeviceListRef, using
+MIDIDeviceListAddDevice.<br>
+The driver should not retain any references to the created devices and entities.
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/Start;  name=Start --><a name="//apple_ref/doc/compositePage/c/func/Start"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="Start">Start</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/Start" logicalPath="//apple_ref/c/instm/Start //apple_ref/c/clm/Start //apple_ref/c/intfcm/Start //apple_ref/c/func/Start" target="_top"><font class="function">Start</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceListRef" logicalPath="//apple_ref/c/cl/MIDIDeviceListRef //apple_ref/c/cl/MIDIDeviceListRef //apple_ref/c/tdef/MIDIDeviceListRef" target="_top"><font class="type">MIDIDeviceListRef</font></a> <font class="param">devList</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The server is telling the driver to begin MIDI I/O.<br>
+The provided device list contains the devices which were previously located by
+FindDevices (in the case of a version 1 driver), or the devices which are owned by
+this driver and are currently in the current MIDISetup (for version 2 drivers).<br>
+The provided devices may or may not still be present. A version 1 driver should
+attempt to use as many of the devices as are actually present.<br>
+A version 2 driver may make calls such as MIDISetupAddDevice, MIDIDeviceAddEntity,
+MIDIDeviceRemoveEntity to dynamically modify the system's current state. For devices
+in the provided device list which are not present, the driver should set their
+kMIDIPropertyOffline property to 1. A version 2 driver may also set up
+notifications when the IORegistry changes, to detect connection and disconnection of
+devices it wishes to control. At these times also, the driver may change the
+devices' kMIDIPropertyOffline, and dynamically modify the system's current state to
+reflect the devices which are present. When passing a CFRunLoopRef to IOKit for
+notification purposes, the driver must use the server's main runloop, which is
+obtained with CFRunLoopGetCurrent().<br>
+The driver will probably want to iterate through the destination endpoints and
+assign their driver refCons, so as to identify multiple destinations when Send() is
+called.<br>
+The provided device list remains owned by the system and can be assumed to contain
+only devices owned by this driver. The driver may retain references to the devices
+in this list and any it creates while running.
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/Stop;  name=Stop --><a name="//apple_ref/doc/compositePage/c/func/Stop"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="Stop">Stop</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/Stop" logicalPath="//apple_ref/c/instm/Stop //apple_ref/c/clm/Stop //apple_ref/c/intfcm/Stop //apple_ref/c/func/Stop" target="_top"><font class="function">Stop</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The server is telling the driver to terminate MIDI I/O. All I/O operations that
+were begun in Start, or as a result of a subsequent IOKit notification, should be
+terminated.
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/Configure;  name=Configure --><a name="//apple_ref/doc/compositePage/c/func/Configure"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="Configure">Configure</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/Configure" logicalPath="//apple_ref/c/instm/Configure //apple_ref/c/clm/Configure //apple_ref/c/intfcm/Configure //apple_ref/c/func/Configure" target="_top"><font class="function">Configure</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <a href="../../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>not currently used
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/Send;  name=Send --><a name="//apple_ref/doc/compositePage/c/func/Send"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="Send">Send</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/Send" logicalPath="//apple_ref/c/instm/Send //apple_ref/c/clm/Send //apple_ref/c/intfcm/Send //apple_ref/c/func/Send" target="_top"><font class="function">Send</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <font class="keyword">const</font> <a href="../../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">destRefCon1</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">destRefCon2</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Send a MIDIPacketList to the destination endpoint whose refCons are being passed as
+arguments.
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/EnableSource;  name=EnableSource --><a name="//apple_ref/doc/compositePage/c/func/EnableSource"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="EnableSource">EnableSource</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/EnableSource" logicalPath="//apple_ref/c/instm/EnableSource //apple_ref/c/clm/EnableSource //apple_ref/c/intfcm/EnableSource //apple_ref/c/func/EnableSource" target="_top"><font class="function">EnableSource</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <a href="../../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">src</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">enabled</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A client has opened or closed a connection, and now the server is telling the driver
+that input from a particular source either does or does not have any listeners in
+the system. The driver may use this information to decide whether to pass messages
+from the source to the server, and it may even be able to tell the source hardware
+not to generate incoming MIDI I/O for that source.
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/Flush;  name=Flush --><a name="//apple_ref/doc/compositePage/c/func/Flush"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="Flush">Flush</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/Flush" logicalPath="//apple_ref/c/instm/Flush //apple_ref/c/clm/Flush //apple_ref/c/intfcm/Flush //apple_ref/c/func/Flush" target="_top"><font class="function">Flush</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <a href="../../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">dest</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">destRefCon1</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">destRefCon2</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Only for version 2 drivers (new for CoreMIDI 1.1).<br>
+Drivers which support schedule-ahead, when receiving this message, should unschedule
+all pending output to the specified destination. If the destination is null, the
+driver should unschedule all pending output to all destinations.
+ </p>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/Monitor;  name=Monitor --><a name="//apple_ref/doc/compositePage/c/func/Monitor"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h2><a name="Monitor">Monitor</a></h2>
+</td></tr></table>
+<blockquote><pre><tt></tt>
+<br><!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<a href="../../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html?Functions/Functions.html#//apple_ref/c/func/Monitor" logicalPath="//apple_ref/c/instm/Monitor //apple_ref/c/clm/Monitor //apple_ref/c/intfcm/Monitor //apple_ref/c/func/Monitor" target="_top"><font class="function">Monitor</font></a>)(
+    <a href="../../../../CoreMIDI/MIDIDriver/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDriverRef" logicalPath="//apple_ref/c/cl/MIDIDriverRef //apple_ref/c/cl/MIDIDriverRef //apple_ref/c/tdef/MIDIDriverRef" target="_top"><font class="type">MIDIDriverRef</font></a> <font class="param">self</font>,
+    <a href="../../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">dest</font>,
+    <font class="keyword">const</font> <a href="../../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Only for version 2 drivers (new for CoreMIDI 1.1).<br>
+Some specialized drivers (e.g. a MIDI monitor display) may wish to intercept and
+look at all outgoing MIDI messages. After a driver calls
+MIDIDriverEnableMonitoring(true) on itself, this function is called with the
+outgoing MIDI packets for all destinations in the system. The Monitor function
+cannot rely on the MIDI events arriving in order, due to MIDIServer's schedule-ahead
+facilities.
+ </p>
+<hr>
+<h2>Member Data</h2>
+<hr>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

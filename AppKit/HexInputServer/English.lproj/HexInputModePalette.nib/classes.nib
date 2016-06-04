@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = HexInputModeMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            ACTIONS = {buttonSelected = id; }; 
+            CLASS = HexInputModePalette; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_buttonMatrix" = id; }; 
+            SUPERCLASS = NSPanel; 
+        }, 
+        {
+            CLASS = HexInputServer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_hexInputModePalette" = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

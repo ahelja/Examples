@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_components?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="UsingtheComponentManagerwithAudioUnits"></a>
+<h1>Using the Component Manager with Audio Units</h1>
+
+<p>	An Audio Unit is packaged as a component. Extensive documentation and
+example code exists for the Component Manager, but a brief introduction is
+provided here to provide some orientation.</p>
+
+<p>	There are several Component Manager calls that the user of an Audio Unit
+will need to understand. These calls revolve around the simple operations of
+finding which Audio Units are registered, and opening and closing components.</p>
+
+<p>	The Component Manager API is exported by <code>CoreServices.framework</code> and is
+found in the <code>Components.h</code> header file.</p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="2"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_components.html#FindingAudioUnits">Finding Audio Units</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_components.html#OpeningAudioUnitComponents">Opening Audio Unit Components</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_components.html#AudioUnit">AudioUnit</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+
+<a name="FindingAudioUnits"></a>
+<h2>Finding Audio Units</h2>
+
+<p>	Components are essentially pieces of dynamically loaded code. They are
+installed in the system in several known locations, which are then searched when
+a user logs in. When this search occurs, any components that are found are
+registered by the system. There is a background process called <code>coreservicesd</code>
+that is responsible for this task. Once a Component is registered, it can then
+be found by any application on the system, opened and used.</p>
+
+<p>	Apple's Audio Units are distributed in a CFBundle called
+CoreAudio.component, which is installed in 
+	<pre>/System/Library/Components</pre>
+	Two directories are created specifically for use by third party developers
+as locations to install their Audio Units. The first directory,
+	<pre>/Library/Audio/Plug-Ins/Components/</pre>
+	represents a directory that the Component Manager will register components
+for any user that logs in to that machine. The second directory
+	<pre>~/Library/Audio/Plug-Ins/Components/</pre>
+	is a directory that can be created for each user. The ~ symbol is used to
+indicate the current user's home directory. Components found here are
+only registered when that particular user logs in.</p>
+
+<p>	Using the <code>RegisterComponents</code> calls, an application can also register
+components installed in any location for use by that application only.</p>
+
+<p>	Components are described in this structure:
+
+<pre>
+    struct ComponentDescription {
+        OSType              componentType;
+        OSType              componentSubType;
+        OSType              componentManufacturer;
+        unsigned long       componentFlags;
+        unsigned long       componentFlagsMask;
+    };
+</pre>
+
+	A component will define all three of the OSType fields with a non-zero
+value. For instance:
+
+<pre>
+    desc.componentType = 'aufx';
+    desc.componentSubType = 'dely';
+    desc.componentManufacturer = 'appl';
+</pre>
+	
+	is the component identifier for Apple's Delay Audio Unit. These three fields
+together must define a system-wide, unique key . If two or more components are
+found with the same identifiers, then the Component with the higher version
+number (in the Component's resource) will be the one that is registered. Apple
+keeps a registry of component ID's that third parties should register for a
+unique manufacturer ID. Apple also reserves usage of these fields where they are
+defined by all lower case characters.</p>
+
+	<p>For instance, the following could be defined by a 3rd party:
+<pre>
+    desc.componentType = 'aufx';
+    desc.componentSubType = 'dely';
+    desc.componentManufacturer = 'ACME';
+</pre>
+
+	
+	Here, ACME Inc. has defined an Audio Unit that is an effect unit, and more
+specifically it is also a delay unit, that could, at least according to ACME's
+intention, be seen as an equivalent, and therefore substitutable, version of
+Apple's delay unit.
+
+<pre>
+    desc.componentType = 'aufx';
+    desc.componentSubType = 'Dely';
+    desc.componentManufacturer = 'ACME';
+</pre>
+
+	With the usage of the 'Dely' subtype, this equivalence is no longer
+asserted, but the Audio Unit is still of course considered to be an effect
+unit.</p>
+
+<p>	Given these specifications, components can be found using known values
+for these fields of the ComponentDescription. A value of zero for any field will
+tell the Component Manager to match any value for that field.</p>
+
+<p>	Firstly, an application can count the number of components that are
+currently registered with the system. Thus, to find out how many Audio Unit
+Effect components are currently available:
+
+<pre>
+    ComponentDescription desc;
+    desc.componentType = kAudioUnitType_Effect; //'aufx'
+    desc.componentSubType = 0;
+    desc.componentManufacturer = 0;
+    desc.componentFlags = 0;
+    desc.componentFlagsMask = 0;
+    
+    printf ("Found %ld Effect Audio Units\n", CountComponents(&desc));
+</pre>
+	
+
+	Thus, to find out how many Audio Unit Effect that are provided by Apple that
+are currently available:
+<pre>
+    ComponentDescription desc;
+    desc.componentType = kAudioUnitType_Effect; //'aufx'
+    desc.componentSubType = 0;
+    desc.componentManufacturer = kAudioUnitManufacturer_Apple; //'appl'
+    desc.componentFlags = 0;
+    desc.componentFlagsMask = 0;
+    
+    printf ("Found %ld Apple Effect Units\", CountComponents(&desc));
+</pre>
+</p>
+
+<p>	To find out what components are currently available on the system, the
+<code>FindNextComponent</code> call is used. <code>FindNextComponent</code>
+starts with a Component from which to start looking, and <code>NULL</code> can be specified
+to indicate to start with the first one found. The same usage of the zero wild
+card is supported in this call.</p>
+
+<p>	Thus, to find all of the Audio Unit effect components currently available:
+
+<pre>
+    ComponentDescription desc;
+    desc.componentType = kAudioUnitType_Effect; //'aufx'
+    desc.componentSubType = 0;
+    desc.componentManufacturer = 0;
+    desc.componentFlags = 0;
+    desc.componentFlagsMask = 0;
+    
+    Component theAUComponent = FindNextComponent (NULL, &desc);
+    while (theAUComponent != NULL)
+    {
+            // now we need to get the information on the found component
+            // swap this to big-endian for display purposes
+        ComponentDescription found;
+        GetComponentInfo (theAUComponent, &found, 0, 0, 0);
+
+		OSType bigEndianValue = CFSwapInt32HostToBig(found.componentType);
+		printf ("%4.4s - ", (char*)&bigEndianValue);
+		bigEndianValue = CFSwapInt32HostToBig(found.componentSubType);
+		printf ("%4.4s - ", (char*)&bigEndianValue);
+		bigEndianValue = CFSwapInt32HostToBig(found.componentManufacturer);
+		printf ("%4.4s", (char*)&bigEndianValue);		
+            
+        theAUComponent = FindNextComponent (theAUComponent, &desc);
+    }
+</pre>
+</p>
+
+<p>	By providing the previously found AUComponent to
+<code>FindNextComponent</code>, the
+above code will find the next component that is registered after the one that is
+supplied to this call. Eventually, of course, the code will find no more
+components, and the return value of <code>FindNextComponent</code> will be
+<code>NULL</code>.</p>
+
+<a name="OpeningAudioUnitComponents"></a>
+<h2>Opening Audio Unit Components</h2>
+
+<p>	A Component is used to allocate instances. The Component also provides an
+API that can be used with that instance of the Component. Typically, the
+<code>ComponentInstance</code> is typedef'd to an identifier. It is the instances of course
+that are of most interest to us, as this is where the code is that will do
+something.</p>
+
+<a name="//apple_ref/c/tdef/AudioUnit"></a>
+<h3><a name="AudioUnit">AudioUnit</a></h3>
+
+		<pre>typedef ComponentInstance <b>AudioUnit</b>;</pre>
+	
+		An <code>AudioUnit</code> is defined to be of type
+		<code>ComponentInstance</code>.
+	
+
+
+
+<p>	The API that can be used with an Audio Unit
+is chiefly declared in <code>AudioUnit/AUComponent.h</code>.</p>
+
+<p>	Creating a <code>ComponentInstance</code> is done through a call to the Component to
+open it. The act of opening a Component creates an instance of the component in
+question, and as many instances of a component as needed can be created by a
+program. When a program is finished with a particular instance of a component,
+then it should close it. This will destroy the component instance, and the
+instance is required to free any of the resources that it has allocated for its
+own usage.</p>
+
+<p>	There are several calls that can be used to create an instance of a
+component. We will look at one of these.
+<pre>
+    OSErr OpenAComponent(Component aComponent, ComponentInstance *ci);
+</pre>
+
+	Thus, to open Apple's delay Audio Unit:
+
+<pre>
+    ComponentDescription desc;
+    desc.componentType = kAudioUnitType_Effect; //'aufx'
+    desc.componentSubType = kAudioUnitSubType_Delay;
+    desc.componentManufacturer = kAudioUnitManufacturer_Apple; //'appl'
+    desc.componentFlags = 0;
+    desc.componentFlagsMask = 0;
+    
+    Component auComp = FindNextComponent (NULL, &desc);
+    if (auComp == NULL) {
+        fprintf (stderr,  "didn't find the component\n");
+        return;
+    }
+    
+    <a href="au_components.html#AudioUnit">AudioUnit</a> delayUnit;
+    OSErr result = OpenAComponent (auComp, &delayUnit);
+    if (result) {
+        fprintf (stderr, "Error:%d opening AU\n", result);
+        return;
+    }
+    // OK Now we have the <a href="au_components.html#AudioUnit">AudioUnit</a>
+    // Do something with it
+    
+    // When we're finished with it
+    CloseComponent (delayUnit);
+</pre>
+</p>
+
+<p>	A <code>ComponentInstance</code> (in this case an <code><a href="au_components.html#AudioUnit">AudioUnit</a></code>)
+can also be used in any of the places that a Component is used. Thus, after we
+have the Audio Unit above, we could use it like this:
+
+<pre>
+    desc.componentManufacturer = 0;
+    
+    Component theAUComponent = FindNextComponent ((Component)delayUnit, &desc);
+</pre>
+</p>
+
+<p>	This would return a non-null value if there are any other components
+around that have the same type and subType. It represents a way to find if there
+are any other components of that kind available.</p>
+
+<p>	The following call can tell you how many particular instances of a
+component  are open at any particular time:
+<pre>
+    extern long CountComponentInstances(Component aComponent);
+</pre>
+</p>
+
+<p>	Finally, as components are dynamically loaded, they also provide a means
+to extend their functionality over time. This is done through declaring a new
+API that Components of a particular type should implement and there are ways to
+query a Component to see if it implements a particular Component selector.</p>
+
+<p>	The Component API is implemented through an association of a reserved
+integer value with a particular Component API call. This is called a Component
+Selector, and the selectors that are reserved for usage with Audio Units by Apple
+are described in the <code>AUComponent.h</code> and <code>AUNTComponent.h</code>
+header files.</p>
+
+<p>	In the cases where a Component does not implement all of the interfaces
+that are specified by the designer of the componentType, a call to an
+unimplemented Component API will (not crash!) return a
+<code>badComponentSelector</code> result code. Similarly, if a call is
+consequently made on a <code>ComponentInstance</code> that has previously been
+closed, the
+<code>badComponentInstance</code> result code will be returned.</p>
+
+</body>
+</html>

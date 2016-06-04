@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {takeMediaSource = id; takeMixingAmount = id; }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mediaViewA = MediaSourceView; 
+                mediaViewB = MediaSourceView; 
+                renderView = NSView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MediaSourceView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }
+    ); 
+    IBVersion = 1; 
+}

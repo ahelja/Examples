@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>#defines</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">#defines</font></h1>
+<br><hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/NumBytesToNumAudioFileMarkers;  name=NumBytesToNumAudioFileMarkers --><a name="//apple_ref/c/macro/NumBytesToNumAudioFileMarkers"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="NumBytesToNumAudioFileMarkers">NumBytesToNumAudioFileMarkers</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a size in bytes to the number of AudioFileMarkers that can be contained in that number of bytes.</p>
+<blockquote><pre>#define <a href="../../../AudioToolbox/AudioFile/index.html?PDefines/PDefines.html#//apple_ref/c/macro/NumBytesToNumAudioFileMarkers" logicalPath="//apple_ref/c/instm/NumBytesToNumAudioFileMarkers //apple_ref/c/clm/NumBytesToNumAudioFileMarkers //apple_ref/c/intfcm/NumBytesToNumAudioFileMarkers //apple_ref/c/func/NumBytesToNumAudioFileMarkers //apple_ref/c/ftmplt/NumBytesToNumAudioFileMarkers //apple_ref/c/defn/NumBytesToNumAudioFileMarkers //apple_ref/c/macro/NumBytesToNumAudioFileMarkers" target="_top"><font class="function">NumBytesToNumAudioFileMarkers</font></a>(
+    <font class="var">inNumBytes</font>)  </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inNumBytes</i></code></dt>
+<dd>a number of bytes.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>the number of AudioFileMarkers that can be contained in that number of bytes.</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This can be used for the kAudioFilePropertyMarkerList property when calculating the number of 
+markers that will be returned. </p>
+</dl>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/NumAudioFileMarkersToNumBytes;  name=NumAudioFileMarkersToNumBytes --><a name="//apple_ref/c/macro/NumAudioFileMarkersToNumBytes"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="NumAudioFileMarkersToNumBytes">NumAudioFileMarkersToNumBytes</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a number of AudioFileMarkers to a size in bytes.</p>
+<blockquote><pre>#define <a href="../../../AudioToolbox/AudioFile/index.html?PDefines/PDefines.html#//apple_ref/c/macro/NumAudioFileMarkersToNumBytes" logicalPath="//apple_ref/c/instm/NumAudioFileMarkersToNumBytes //apple_ref/c/clm/NumAudioFileMarkersToNumBytes //apple_ref/c/intfcm/NumAudioFileMarkersToNumBytes //apple_ref/c/func/NumAudioFileMarkersToNumBytes //apple_ref/c/ftmplt/NumAudioFileMarkersToNumBytes //apple_ref/c/defn/NumAudioFileMarkersToNumBytes //apple_ref/c/macro/NumAudioFileMarkersToNumBytes" target="_top"><font class="function">NumAudioFileMarkersToNumBytes</font></a>(
+    <font class="var">inNumMarkers</font>)  </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inNumMarkers</i></code></dt>
+<dd>a number of AudioFileMarkers.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>the size in bytes required to contain that number of AudioFileMarkers.</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This can be used for the kAudioFilePropertyMarkerList property when calculating the size required to 
+contain a number of AudioFileMarkers. </p>
+</dl>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/NextAudioFileRegion;  name=NextAudioFileRegion --><a name="//apple_ref/c/macro/NextAudioFileRegion"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="NextAudioFileRegion">NextAudioFileRegion</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>convenience macro for traversing the region list.</p>
+<blockquote><pre>#define <a href="../../../AudioToolbox/AudioFile/index.html?PDefines/PDefines.html#//apple_ref/c/macro/NextAudioFileRegion" logicalPath="//apple_ref/c/instm/NextAudioFileRegion //apple_ref/c/clm/NextAudioFileRegion //apple_ref/c/intfcm/NextAudioFileRegion //apple_ref/c/func/NextAudioFileRegion //apple_ref/c/ftmplt/NextAudioFileRegion //apple_ref/c/defn/NextAudioFileRegion //apple_ref/c/macro/NextAudioFileRegion" target="_top"><font class="function">NextAudioFileRegion</font></a>(
+    <font class="var">inAFRegionPtr</font>) \ ((
+    <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegion" logicalPath="//apple_ref/c/cl/AudioFileRegion //apple_ref/c/cl/AudioFileRegion //apple_ref/c/tdef/AudioFileRegion //apple_ref/c/tag/AudioFileRegion" target="_top"><font class="type">AudioFileRegion</font></a>*)((
+    <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/econst/char //apple_ref/c/struct/char //apple_ref/c/clconst/char" --><font class="type">char</font><!-- /a -->*)(
+    <font class="var">inAFRegionPtr</font>) + <!-- a logicalPath="//apple_ref/c/instm/offsetof //apple_ref/c/clm/offsetof //apple_ref/c/intfcm/offsetof //apple_ref/c/func/offsetof //apple_ref/c/ftmplt/offsetof //apple_ref/c/defn/offsetof //apple_ref/c/macro/offsetof" --><font class="function">offsetof</font><!-- /a -->(
+    <font class="var">AudioFileRegion</font>, <font class="var">mMarkers</font>) + ((
+    <font class="var">inAFRegionPtr</font>)-&gt;<font class="var">mNumberMarkers</font>)*<!-- a logicalPath="//apple_ref/c/instm/sizeof //apple_ref/c/clm/sizeof //apple_ref/c/intfcm/sizeof //apple_ref/c/func/sizeof //apple_ref/c/ftmplt/sizeof //apple_ref/c/defn/sizeof //apple_ref/c/macro/sizeof" --><font class="function">sizeof</font><!-- /a -->(
+    <font class="var">CAFMarker</font>))) </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAFRegionPtr</i></code></dt>
+<dd>a pointer to the current region.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>a pointer to the region after the current region. This does not protect you from walking off the end of the list, 
+so obey mNumberRegions.</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>because AudioFileRegions are variable length, you cannot access them as an array. Use NextAudioFileRegion 
+to walk the list.</p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

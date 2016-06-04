@@ -1,0 +1,51 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                cancel = id; 
+                cancelRead = id; 
+                doRead = id; 
+                loginToDevice = id; 
+                logoutOfDevice = id; 
+                performRW = id; 
+                performRead = id; 
+                performWRCmp = id; 
+                performWrite = id; 
+                readLoop = id; 
+                wrcLoop = id; 
+                writeLoop = id; 
+            }; 
+            CLASS = LUNController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fCancelButton = id; 
+                fLoginButton = id; 
+                fLogoutButton = id; 
+                fProgressIndicator = NSProgressIndicator; 
+                fRWButton = id; 
+                fRWEndBlocks = id; 
+                fRWStartBlocks = id; 
+                fReadButton = id; 
+                fReadEndBlocks = id; 
+                fReadLoop = id; 
+                fReadProgressIndicator = id; 
+                fReadStartBlocks = id; 
+                fTextView = id; 
+                fWRCLoop = id; 
+                fWRCmpButton = id; 
+                fWRCmpEndBlocks = id; 
+                fWRCmpProgressIndicator = id; 
+                fWRCmpStartBlocks = id; 
+                fWindow = id; 
+                fWriteButton = id; 
+                fWriteEndBlocks = id; 
+                fWriteLoop = id; 
+                fWriteProgressIndicator = id; 
+                fWriteStartBlocks = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

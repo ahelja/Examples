@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		02345980000FD03B11CA0E72 = {
+			children = (
+				1870340FFE93FCAF11CA0CD7,
+			);
+			isa = PBXVariantGroup;
+			name = main.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//020
+//021
+//022
+//023
+//024
+//080
+//081
+//082
+//083
+//084
+		0867D6AAFE840B52C02AAC07 = {
+			children = (
+				0867D6ABFE840B52C02AAC07,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0867D6ABFE840B52C02AAC07 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//180
+//181
+//182
+//183
+//184
+		1870340FFE93FCAF11CA0CD7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/main.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//180
+//181
+//182
+//183
+//184
+//190
+//191
+//192
+//193
+//194
+		195DF8CFFE9D517E11CA2CBB = {
+			children = (
+				8D0C4E970486CD37000505A6,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//200
+//201
+//202
+//203
+//204
+		20286C28FDCF999611CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA,
+				4A9504C6FFE6A39111CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 20286C29FDCF999611CA2CEA;
+			projectDirPath = "";
+			targets = (
+				8D0C4E890486CD37000505A6,
+			);
+		};
+		20286C29FDCF999611CA2CEA = {
+			children = (
+				895603F40777997100573029,
+				20286C2AFDCF999611CA2CEA,
+				20286C2CFDCF999611CA2CEA,
+				20286C32FDCF999611CA2CEA,
+				195DF8CFFE9D517E11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = ATSUIFontPanelDemo;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA = {
+			children = (
+				32DBCF6D0370B57F00C91783,
+				8956F78007774A6A00573029,
+				8956F77F07774A6A00573029,
+				8956F78207774A6A00573029,
+				8956F78107774A6A00573029,
+				8956F78407774A6A00573029,
+				8956F78307774A6A00573029,
+				8956F78807774A6A00573029,
+				8956F78707774A6A00573029,
+				8956F78507774A6A00573029,
+				20286C2BFDCF999611CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C2BFDCF999611CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = main.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA = {
+			children = (
+				8D0C4E960486CD37000505A6,
+				0867D6AAFE840B52C02AAC07,
+				02345980000FD03B11CA0E72,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA = {
+			children = (
+				8956FE0507778F3D00573029,
+				8956FD7A07778F3600573029,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C33FDCF999611CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Carbon.framework;
+			path = /System/Library/Frameworks/Carbon.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//200
+//201
+//202
+//203
+//204
+//320
+//321
+//322
+//323
+//324
+		32DBCF6D0370B57F00C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = ATSUIFontPanelDemo_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+		4A9504C5FFE6A39111CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		4A9504C8FFE6A3BC11CA0CBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = ApplicationServices.framework;
+			path = /System/Library/Frameworks/ApplicationServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4A9504CAFFE6A41611CA0CBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreServices.framework;
+			path = /System/Library/Frameworks/CoreServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+//890
+//891
+//892
+//893
+//894
+		89262E02079E138A007A2E84 = {
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/tcsh;
+			shellScript = "xcodebuild installsrc SRCROOT=$DSTROOT/Developer/Examples/ATSUI/Font\\ Panel\\ Support\n/bin/rm -rf $DSTROOT/Developer/Examples/ATSUI/Font\\ Panel\\ Support/build/\n/usr/sbin/chown root:wheel $DSTROOT/Developer/Examples/ATSUI/Font\\ Panel\\ Support/*\n";
+		};
+		895603F40777997100573029 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.rtfd;
+			path = ReadMe.rtfd;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F77F07774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = atsui.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78007774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = atsui.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78107774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = controls.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78207774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = controls.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78307774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = globals.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78407774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = globals.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78507774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = main.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78707774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = window.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78807774A6A00573029 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = window.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956F78907774A6A00573029 = {
+			fileRef = 8956F77F07774A6A00573029;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8956F78A07774A6A00573029 = {
+			fileRef = 8956F78107774A6A00573029;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8956F78B07774A6A00573029 = {
+			fileRef = 8956F78307774A6A00573029;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8956F78C07774A6A00573029 = {
+			fileRef = 8956F78707774A6A00573029;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8956FD7A07778F3600573029 = {
+			children = (
+				4A9504CAFFE6A41611CA0CBA,
+				4A9504C8FFE6A3BC11CA0CBA,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8956FE0507778F3D00573029 = {
+			children = (
+				20286C33FDCF999611CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//890
+//891
+//892
+//893
+//894
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D0C4E890486CD37000505A6 = {
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6,
+				8D0C4E8F0486CD37000505A6,
+				8D0C4E910486CD37000505A6,
+				89262E02079E138A007A2E84,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ATSUIFontPanelDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = ATSUIFontPanelDemo;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = ATSUIFontPanelDemo;
+			productInstallPath = "$(HOME)/Applications";
+			productName = ATSUIFontPanelDemo;
+			productReference = 8D0C4E970486CD37000505A6;
+			productType = "com.apple.product-type.application";
+		};
+		8D0C4E8C0486CD37000505A6 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6,
+				8D0C4E8E0486CD37000505A6,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0C4E8D0486CD37000505A6 = {
+			fileRef = 0867D6AAFE840B52C02AAC07;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D0C4E8E0486CD37000505A6 = {
+			fileRef = 02345980000FD03B11CA0E72;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D0C4E8F0486CD37000505A6 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E900486CD37000505A6,
+				8956F78907774A6A00573029,
+				8956F78A07774A6A00573029,
+				8956F78B07774A6A00573029,
+				8956F78C07774A6A00573029,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0C4E900486CD37000505A6 = {
+			fileRef = 20286C2BFDCF999611CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		8D0C4E910486CD37000505A6 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0C4E920486CD37000505A6 = {
+			fileRef = 20286C33FDCF999611CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D0C4E960486CD37000505A6 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D0C4E970486CD37000505A6 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = ATSUIFontPanelDemo.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+	};
+	rootObject = 20286C28FDCF999611CA2CEA;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUOutputElement</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUOutputElement</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "AUIOElement_fs.html" target="_top">AUIOElement</a><br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUOutputElement<br>
+<br><pre>class AUOutputElement : public AUIOElement </pre>
+<p></p><hr>
+<h2>Methods</h2>
+<h3><u>Buffers</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="NeedsBufferSpace">NeedsBufferSpace</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool NeedsBufferSpace() const;</pre>
+<p>Overridden to return true.</p><br>
+<hr>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUOutputElement">AUOutputElement</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUOutputElement(AUBase *audioUnit);</pre>
+<p></p><br>
+<hr>
+<h3><u>Format</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetStreamFormat">SetStreamFormat</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus SetStreamFormat(const CAStreamBasicDescription &desc);</pre>
+<p>Overridden to reallocate buffers as a result of a format change.</p><br>
+<hr>
+</body></html>

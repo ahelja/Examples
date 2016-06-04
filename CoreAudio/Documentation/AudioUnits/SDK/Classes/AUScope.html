@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUScope</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUScope</a></h1>
+<big><b>Superclasses : </b></big>
+none<br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUScopeElement<br>
+<br><pre>class AUScope </pre>
+<p>AudioUnit parameters are referenced by scope and element.  One AUScope object
+	contains all of the elements for a single scope within an instance of AUBase.
+	There are four scopes referenced by the constants kAudioUnitScope_Input,
+	kAudioUnitScope_Output, kAudioUnitScope_Global, or kAudioUnitScope_Group.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUScope">AUScope</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUScope();</pre>
+<p>Constructor. Internal. This is called from <a href="AUBase_fs.html" target="_top">AUBase</a>.</p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUScope">~AUScope</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual destructor</h4>
+</td></tr></table>
+<br><pre> ~AUScope();</pre>
+<p>Destructor. Frees all of the elements.</p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AddElementNamesToDict">AddElementNamesToDict</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void AddElementNamesToDict (CFMutableDictionaryRef& inNameDict);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetElement">GetElement</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUElement* GetElement(UInt32 elementIndex);</pre>
+<p>Accessor. Returns the indexed <a href="AUElement_fs.html" target="_top">AUElement</a> object or NULL if the index
+			is out of range.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetIOElement">GetIOElement</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUIOElement* GetIOElement(UInt32 elementIndex);</pre>
+<p>Accessor. Returns the indexed <a href="AUIOElement_fs.html" target="_top">AUIOElement</a> object.
+			This scope MUST be either kAudioUnitScope_Input or kAudioUnitScope_Output.
+			</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetNumberOfElements">GetNumberOfElements</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> UInt32 GetNumberOfElements() const;</pre>
+<p>Returns the number of elements in this scope.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasElementWithName">HasElementWithName</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool HasElementWithName () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Initialize">Initialize</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Initialize(
+          AUElementCreator*               creator,
+          AudioUnitScope                  scope,
+          UInt32                          numElements
+    );</pre>
+<p>Internal. This method creates the correct number of elements for the AUScope object.
+			This gets called by the AUBase object/</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SafeGetElement">SafeGetElement</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUElement* SafeGetElement(UInt32 elementIndex);</pre>
+<p>Accessor. Returns the indexed <a href="AUElement_fs.html" target="_top">AUElement</a> object or throws an exception if the index
+			is out of range.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetNumberOfElements">SetNumberOfElements</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetNumberOfElements(UInt32 numElements);</pre>
+<p>Can be used to change the number of elements after the unit has been initialized.
+			Currently the deinterleaver AudioUnit does this to create enough output elements to match the number
+			of input channels.
+			</p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mCreator">mCreator</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AUElementCreator* mCreator;</pre>
+<p>The object that created this. See <a href="AUElementCreator_fs.html" target="_top">AUElementCreator</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mElements">mElements</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> ElementVector mElements;</pre>
+<p>A list of the elements in this scope.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mScope">mScope</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AudioUnitScope mScope;</pre>
+<p>The scope constant.</p><br>
+<hr>
+</body></html>

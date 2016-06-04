@@ -1,0 +1,125 @@
+{\rtf1\mac\ansicpg10000\cocoartf816
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+{\info}\margl1440\margr1440\vieww11040\viewh9000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs36 \cf0 GridSample Example\
+\
+
+\f1\b0\fs28 The 
+\f0\b GridSample
+\f1\b0  example provides a skeleton upon which your own custom batch-processing applications can be built. Three example applications are provided, each built by a different target. The applications demonstrate how to customize the skeleton.\
+\
+
+\f0\b\fs36 Targets
+\f1\b0\fs28 \
+\
+
+\f0\b Xgrid Sample
+\f1\b0  is the basic skeleton application.\
+\
+
+\f0\b Xgrid Feeder Sample
+\f1\b0  builds upon the skeleton by providing a more sophisticated job submission interface. Nearly all of the same classes from the 
+\f0\b Xgrid Sample
+\f1\b0  target are used.\
+\
+
+\f0\b Xgrid MPI Sample
+\f1\b0  is also based on the same skeleton and demonstrates how to submit MPI jobs.\
+\
+
+\f0\b\fs36 Classes
+\f1\b0\fs28 \
+\
+
+\f0\b\fs32 Xgrid Sample
+\f1\b0\fs28 \
+\
+
+\f0\b GridSampleApplicationDelegate
+\f1\b0  is instantiated during loading of MainMenu.nib. The application delegate instantiates a 
+\f0\b GridSampleServiceBrowser
+\f1\b0  instance during nib loading. Once the application has finished loading the application delegate registers the 
+\f0\b GridSampleJobStateToStringTransformer
+\f1\b0  value transformer, starts the service browser browsing, and creates a new 
+\f0\b GridSampleConnectionController
+\f1\b0  instance.\
+\
+
+\f0\b GridSampleServiceBrowser
+\f1\b0  browses for Xgrid controller services. The service browser is key-value coding compliant for the "netServices" key, which returns an array of 
+\f0\b NSNetService
+\f1\b0  instances that can be used to resolve Xgrid controller services.\
+\
+
+\f0\b GridSampleConnectionController
+\f1\b0  is the "document" class. The connection controller is responsible for instantiating the 
+\f0\b GridSampleMainWindowController
+\f1\b0  and beginning the login process.\
+\
+
+\f0\b GridSampleMainWindowController
+\f1\b0  contains the core application logic. Upon instantiation the main window controller creates a 
+\f0\b GridSampleLoginController
+\f1\b0  to handle the login details. When the window is loaded a 
+\f0\b GridSampleToolbarController
+\f1\b0  is created to handle the toolbar details. \
+\
+
+\f0\b GridSampleLoginController
+\f1\b0  handles the user interaction to allow service browsing, connection, and authentication.\
+\
+
+\f0\b GridSampleToolbarController
+\f1\b0  handles setting up the toolbar.\
+\
+
+\f0\b GridSampleJobStateToStringTransformer
+\f1\b0  handles converting job state (an integer) to a string suitable for display.\
+\
+
+\f0\b GridSampleNewJobWindowController
+\f1\b0  is created when the user clicks the "New Job" toolbar button. The new job window controller is responsible for taking the user input and generating and submitting a job specification\
+\
+
+\f0\b GridSampleJobInfoWindowController
+\f1\b0  is created when the user clicks the "Show Info" toolbar button. The job info window controller is responsible for displaying the job attributes. The UI is bound to the job entirely via Cocoa Bindings and updates dynamically.\
+\
+
+\f0\b GridSampleJobResultsWindowController
+\f1\b0  is created when the user clicks the "Show Results" toolbar button. The job results window controller is responsible for downloading the job output and displaying it to the user.\
+\
+
+\f0\b\fs32 Xgrid Feeder Sample
+\f1\b0\fs28 \
+\
+
+\f0\b GridFeederApplicationDelegate
+\f1\b0  is a subclass of the 
+\f0\b GridSampleApplicationDelegate
+\f1\b0 . The purpose of the subclass is to indicate a custom class is to be used for the new job window controller.\
+\
+
+\f0\b GridFeederNewJobWindowController
+\f1\b0  is a subclass of the 
+\f0\b GridSampleNewJobWindowController
+\f1\b0 . The purpose of the subclass is to customize the UI and generation of the job specification.\
+\
+
+\f0\b\fs32 Xgrid MPI Sample
+\f1\b0\fs28 \
+\
+
+\f0\b GridMPIApplicationDelegate
+\f1\b0  is a subclass of the 
+\f0\b GridSampleApplicationDelegate
+\f1\b0 . The purpose of the subclass is to indicate a custom class is to be used for the new job window controller.\
+\
+
+\f0\b GridMPINewJobWindowController
+\f1\b0  is a subclass of the 
+\f0\b GridSampleNewJobWindowController
+\f1\b0 . The purpose of the subclass is to customize the UI and generation of the job specification.\
+}

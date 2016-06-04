@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUInputFormatConverter</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUInputFormatConverter</a></h1>
+<big><b>Superclasses : </b></big>
+FormatConverterClient<br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUInputFormatConverter<br>
+<br><pre>class AUInputFormatConverter : public FormatConverterClient </pre>
+<p></p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUInputFormatConverter">AUInputFormatConverter</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUInputFormatConverter(
+          AUBase*                         hostAU,
+          int                             inputBus
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUInputFormatConverter">~AUInputFormatConverter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual destructor</h4>
+</td></tr></table>
+<br><pre> ~AUInputFormatConverter();</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="FillComplexBuffer">FillComplexBuffer</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> OSStatus AUFillComplexBuffer(
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32&                         ioOutputDataPacketSize,
+          AudioBufferList&                outOutputData,
+          AudioStreamPacketDescription*   outPacketDescription,
+          bool&                           outSilence
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="FormatConverterInputProc">FormatConverterInputProc</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus FormatConverterInputProc(
+          UInt32&                         ioNumberDataPackets,
+          AudioBufferList&                ioData,
+          AudioStreamPacketDescription**  outDataPacketDescription
+    );</pre>
+<p></p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mHost">mHost</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AUBase* mHost;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mHostBus">mHostBus</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> int mHostBus;</pre>
+<p></p><br>
+<hr>
+</body></html>

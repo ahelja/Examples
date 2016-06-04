@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F94F10707B309E700AE9F13 /* TCarbonEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F50D99BE0302E45701000120 /* TCarbonEvent.h */; };
+		4F94F10807B309E700AE9F13 /* TView.h in Headers */ = {isa = PBXBuildFile; fileRef = F50D99C00302E45701000120 /* TView.h */; };
+		4F94F10907B309E700AE9F13 /* Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = F50D99C50302E84701000120 /* Prefix.h */; };
+		4F94F10A07B309E700AE9F13 /* TURLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5EBC16D0303811C01000120 /* TURLTextView.h */; };
+		4F94F10B07B309E700AE9F13 /* TRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F2BE29030AEEE103000125 /* TRect.h */; };
+		4F94F10C07B309E700AE9F13 /* TObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6029BEA603F9CE880BFF4F4D /* TObject.h */; };
+		4F94F10D07B309E700AE9F13 /* HIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 332478D10690D01900AAEC61 /* HIFramework.h */; };
+		4F94F10E07B309E700AE9F13 /* TEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 332478D30690D01900AAEC61 /* TEventHandler.h */; };
+		4F94F11007B309E700AE9F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		4F94F11107B309E700AE9F13 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		4F94F11207B309E700AE9F13 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 25316126034E3DD503DB9E96 /* README.rtf */; };
+		4F94F11407B309E700AE9F13 /* main.cp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* main.cp */; settings = {ATTRIBUTES = (); }; };
+		4F94F11507B309E700AE9F13 /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = F50D99BD0302E45701000120 /* TCarbonEvent.cp */; };
+		4F94F11607B309E700AE9F13 /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = F50D99BF0302E45701000120 /* TView.cp */; };
+		4F94F11707B309E700AE9F13 /* TURLTextView.cp in Sources */ = {isa = PBXBuildFile; fileRef = F5EBC16C0303811C01000120 /* TURLTextView.cp */; };
+		4F94F11807B309E700AE9F13 /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = 25F2BE28030AEEE103000125 /* TRect.cp */; };
+		4F94F11907B309E700AE9F13 /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6029BEA503F9CE880BFF4F4D /* TObject.cp */; };
+		4F94F11A07B309E700AE9F13 /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 332478D20690D01900AAEC61 /* TEventHandler.cp */; };
+		4F94F11C07B309E700AE9F13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* main.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cp; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		25316126034E3DD503DB9E96 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		25F2BE28030AEEE103000125 /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TRect.cp; path = ../HIFramework/TRect.cp; sourceTree = "<group>"; };
+		25F2BE29030AEEE103000125 /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TRect.h; path = ../HIFramework/TRect.h; sourceTree = "<group>"; };
+		332478D10690D01900AAEC61 /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HIFramework.h; sourceTree = "<group>"; };
+		332478D20690D01900AAEC61 /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TEventHandler.cp; sourceTree = "<group>"; };
+		332478D30690D01900AAEC61 /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TEventHandler.h; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4F94F11E07B309E700AE9F13 /* Info-URLTextView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-URLTextView.plist"; sourceTree = "<group>"; };
+		4F94F11F07B309E700AE9F13 /* URLTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029BEA503F9CE880BFF4F4D /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TObject.cp; path = ../HIFramework/TObject.cp; sourceTree = "<group>"; };
+		6029BEA603F9CE880BFF4F4D /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TObject.h; path = ../HIFramework/TObject.h; sourceTree = "<group>"; };
+		F50D99BD0302E45701000120 /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCarbonEvent.cp; path = ../HIFramework/TCarbonEvent.cp; sourceTree = "<group>"; };
+		F50D99BE0302E45701000120 /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCarbonEvent.h; path = ../HIFramework/TCarbonEvent.h; sourceTree = "<group>"; };
+		F50D99BF0302E45701000120 /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TView.cp; path = ../HIFramework/TView.cp; sourceTree = "<group>"; };
+		F50D99C00302E45701000120 /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TView.h; path = ../HIFramework/TView.h; sourceTree = "<group>"; };
+		F50D99C50302E84701000120 /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		F5EBC16C0303811C01000120 /* TURLTextView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TURLTextView.cp; sourceTree = "<group>"; };
+		F5EBC16D0303811C01000120 /* TURLTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TURLTextView.h; sourceTree = "<group>"; };
+		F5EBC1700308713C01000120 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F94F11B07B309E700AE9F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94F11C07B309E700AE9F13 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F94F11F07B309E700AE9F13 /* URLTextView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* URLTextView */ = {
+			isa = PBXGroup;
+			children = (
+				25316126034E3DD503DB9E96 /* README.rtf */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+				4F94F11E07B309E700AE9F13 /* Info-URLTextView.plist */,
+			);
+			name = URLTextView;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2BFDCF999611CA2CEA /* main.cp */,
+				F5EBC16C0303811C01000120 /* TURLTextView.cp */,
+				F5EBC16D0303811C01000120 /* TURLTextView.h */,
+				6029BEA903F9CE8D0BFF4F4D /* HIFramework */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+				F50D99C50302E84701000120 /* Prefix.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+				F5EBC1700308713C01000120 /* CoreGraphics.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		6029BEA903F9CE8D0BFF4F4D /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				332478D10690D01900AAEC61 /* HIFramework.h */,
+				F50D99BD0302E45701000120 /* TCarbonEvent.cp */,
+				F50D99BE0302E45701000120 /* TCarbonEvent.h */,
+				332478D20690D01900AAEC61 /* TEventHandler.cp */,
+				332478D30690D01900AAEC61 /* TEventHandler.h */,
+				6029BEA503F9CE880BFF4F4D /* TObject.cp */,
+				6029BEA603F9CE880BFF4F4D /* TObject.h */,
+				25F2BE28030AEEE103000125 /* TRect.cp */,
+				25F2BE29030AEEE103000125 /* TRect.h */,
+				F50D99BF0302E45701000120 /* TView.cp */,
+				F50D99C00302E45701000120 /* TView.h */,
+			);
+			name = HIFramework;
+			path = ../HIFramework;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F94F10607B309E700AE9F13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94F10707B309E700AE9F13 /* TCarbonEvent.h in Headers */,
+				4F94F10807B309E700AE9F13 /* TView.h in Headers */,
+				4F94F10907B309E700AE9F13 /* Prefix.h in Headers */,
+				4F94F10A07B309E700AE9F13 /* TURLTextView.h in Headers */,
+				4F94F10B07B309E700AE9F13 /* TRect.h in Headers */,
+				4F94F10C07B309E700AE9F13 /* TObject.h in Headers */,
+				4F94F10D07B309E700AE9F13 /* HIFramework.h in Headers */,
+				4F94F10E07B309E700AE9F13 /* TEventHandler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F94F10507B309E700AE9F13 /* URLTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F2B067708A02BDD0055E173 /* Build configuration list for PBXNativeTarget "URLTextView" */;
+			buildPhases = (
+				4F94F10607B309E700AE9F13 /* Headers */,
+				4F94F10F07B309E700AE9F13 /* Resources */,
+				4F94F11307B309E700AE9F13 /* Sources */,
+				4F94F11B07B309E700AE9F13 /* Frameworks */,
+				4F94F11D07B309E700AE9F13 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-URLTextView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = URLTextView;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = URLTextView;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = URLTextView;
+			productReference = 4F94F11F07B309E700AE9F13 /* URLTextView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F2B067B08A02BDD0055E173 /* Build configuration list for PBXProject "URLTextView" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* URLTextView */;
+			projectDirPath = "";
+			targets = (
+				4F94F10507B309E700AE9F13 /* URLTextView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F94F10F07B309E700AE9F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94F11007B309E700AE9F13 /* InfoPlist.strings in Resources */,
+				4F94F11107B309E700AE9F13 /* main.nib in Resources */,
+				4F94F11207B309E700AE9F13 /* README.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4F94F11D07B309E700AE9F13 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F94F11307B309E700AE9F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94F11407B309E700AE9F13 /* main.cp in Sources */,
+				4F94F11507B309E700AE9F13 /* TCarbonEvent.cp in Sources */,
+				4F94F11607B309E700AE9F13 /* TView.cp in Sources */,
+				4F94F11707B309E700AE9F13 /* TURLTextView.cp in Sources */,
+				4F94F11807B309E700AE9F13 /* TRect.cp in Sources */,
+				4F94F11907B309E700AE9F13 /* TObject.cp in Sources */,
+				4F94F11A07B309E700AE9F13 /* TEventHandler.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F2B067808A02BDD0055E173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-URLTextView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = URLTextView;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F2B067908A02BDD0055E173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-URLTextView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = URLTextView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F2B067C08A02BDD0055E173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F2B067D08A02BDD0055E173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F2B067708A02BDD0055E173 /* Build configuration list for PBXNativeTarget "URLTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F2B067808A02BDD0055E173 /* Debug */,
+				4F2B067908A02BDD0055E173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F2B067B08A02BDD0055E173 /* Build configuration list for PBXProject "URLTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F2B067C08A02BDD0055E173 /* Debug */,
+				4F2B067D08A02BDD0055E173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

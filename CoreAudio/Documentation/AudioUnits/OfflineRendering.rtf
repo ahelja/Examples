@@ -1,0 +1,55 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fswiss\fcharset77 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12520\viewh13960\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural
+
+\f0\fs24 \cf0 Off-line Rendering.\
+\
+There are two cases that the AudioUnit (AU) specification deals with.\
+\
+\
+
+\f1\b Summary\
+
+\f0\b0 \
+Firstly,  an AU that is primarily a real-time based process, that can work in real-time, but is being used in an off-line situation (for eg, it is being used to "freeze" a track in Logic's "Freeze Track" feature). This possibility is true both for AU's that are both instruments or effects.\
+\
+Second, an AU can only be used in an off-line rendering context - for example an AU that normalises the contents of a file, reverses the samples in the file, etc. In this case, the AU declares its type as:\
+	kAudioUnitType_OfflineEffect         = FOUR_CHAR_CODE('auol')\
+\
+There are some additional semantics and properties with an AU of this type - there is some code in the SDK for creating an off-line AU that reverses the samples and some test code that uses the additional API for off-line units. The file "OfflineAPIAdditions" describes those properties and the general means used to interact with an AU of this type.\
+\
+The rest of this document describes the situation and changes introduced to deal with an AU that is primarily a real-time based AU, but is being used in an off-line context.\
+\
+\
+\
+
+\f1\b Real-Time AU used in an Off-line Context\
+
+\f0\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 Most synth and effect style of AU's are written to operate within real time contexts.\
+\
+In some usage scenarios - Logic's "Freeze Track" functionality and Jeremy Sagan's recent discussion of exporting to a file for example - this semantic needs to be adjusted.\
+\
+As an example - the DLS Synth currently has two features that really shouldn't be "on" when rendering in a non-real time (lets call this Offline Rendering). One is disk streaming, where the disk streaming timing is based around the semantic of an AU rendering in a real-time situation. The other is the application of note-dropping, which relies on an estimation of time passed with no preemption, etc.\
+\
+To accommodate this scenario we've decided to introduce a new property:\
+	kAudioUnitProperty_OfflineRender                                = 37,\
+\
+The property is set in Global Scope, its value is a UInt32 (0 or 1) and is both read/write\
+\
+When set to 1, the AU is expected to set itself in state where it can render in an offline situation (thus for the DLS Synth we'd turn off disk streaming if it was on, and *not* do note-dropping if that were on)\
+\
+When set back to 0, the AU is expected to restore any previous settings it had changed to go into the offline case (if these haven't been changed in the interim of course).\
+\
+Whilst offline rendering can change some state within an AU that a user may set, we *don't* expect that state change to be reflected to the user - thus for the DLS synth, "disk streaming" would still be considered to be on (even though we temporarily turn it off), and when the AU's render state is reset, disk streaming would again be active.\
+\
+The default value of this property is 0 (ie. OfflineRendering is off).\
+\
+We'd considered other approaches, but given that this might involve a considerable state change in the AU, decided that an explicit property setting was the appropriate methodology to apply.\
+\
+If host apps or AU's want to use/implement this property now they can using the constant as defined above (which will appear in the AudioUnitProperties.h file in the next (ie. Post-Panther) Developer Tools release's version of this header).\
+}

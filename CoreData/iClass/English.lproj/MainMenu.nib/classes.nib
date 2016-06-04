@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {resetDatabaseAction = id; saveAction = id; }; 
+            CLASS = iClassAppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {coursesWindow = NSWindow; peopleWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

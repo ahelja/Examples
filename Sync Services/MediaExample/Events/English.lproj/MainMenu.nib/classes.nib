@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {openCalendar = id; }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = Calendar; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {view = id; window = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

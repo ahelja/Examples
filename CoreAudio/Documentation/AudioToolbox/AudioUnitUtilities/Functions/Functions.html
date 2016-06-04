@@ -1,0 +1,567 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1>
+<br><a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUListenerCreate" target="doc">AUListenerCreate</a></tt></dt>
+<dd>Create an object for fielding notifications when AudioUnit parameter values change.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUListenerDispose" target="doc">AUListenerDispose</a></tt></dt>
+<dd>Dispose a parameter listener object.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUListenerAddParameter" target="doc">AUListenerAddParameter</a></tt></dt>
+<dd>Connect a parameter to a listener.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUListenerRemoveParameter" target="doc">AUListenerRemoveParameter</a></tt></dt>
+<dd>Remove a parameter/listener connection.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUParameterSet" target="doc">AUParameterSet</a></tt></dt>
+<dd>Set an AudioUnit parameter value and notify listeners.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUParameterListenerNotify" target="doc">AUParameterListenerNotify</a></tt></dt>
+<dd>Notify listeners of a past parameter change.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUEventListenerCreate" target="doc">AUEventListenerCreate</a></tt></dt>
+<dd>Creates an Audio Unit event listener.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUEventListenerAddEventType" target="doc">AUEventListenerAddEventType</a></tt></dt>
+<dd>Begin delivering a particular type of events to a listener.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUEventListenerRemoveEventType" target="doc">AUEventListenerRemoveEventType</a></tt></dt>
+<dd>Stop delivering a particular type of events to a listener.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUEventListenerNotify" target="doc">AUEventListenerNotify</a></tt></dt>
+<dd>Deliver an AudioUnitEvent to all listeners registered to receive it.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUParameterValueFromLinear" target="doc">AUParameterValueFromLinear</a></tt></dt>
+<dd>Converts a linear value to a parameter value according to the parameter's units.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUParameterValueToLinear" target="doc">AUParameterValueToLinear</a></tt></dt>
+<dd>Converts a parameter value to a linear value according to the parameter's units.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AUParameterFormatValue" target="doc">AUParameterFormatValue</a></tt></dt>
+<dd>Format a parameter value into a string.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUListenerCreate;  name=AUListenerCreate --><a name="//apple_ref/c/func/AUListenerCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUListenerCreate">AUListenerCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create an object for fielding notifications when AudioUnit parameter values change.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUListenerCreate" logicalPath="//apple_ref/c/instm/AUListenerCreate //apple_ref/c/clm/AUListenerCreate //apple_ref/c/intfcm/AUListenerCreate //apple_ref/c/func/AUListenerCreate" target="_top"><font class="function">AUListenerCreate</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerProc" logicalPath="//apple_ref/c/cl/AUParameterListenerProc //apple_ref/c/cl/AUParameterListenerProc //apple_ref/c/tdef/AUParameterListenerProc" target="_top"><font class="type">AUParameterListenerProc</font></a> <font class="param">inProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFRunLoopRef //apple_ref/c/cl/CFRunLoopRef //apple_ref/c/tdef/CFRunLoopRef //apple_ref/c/tag/CFRunLoopRef //apple_ref/c/econst/CFRunLoopRef //apple_ref/c/struct/CFRunLoopRef //apple_ref/c/clconst/CFRunLoopRef" --><font class="type">CFRunLoopRef</font><!-- /a --> <font class="param">inRunLoop</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inRunLoopMode</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inNotificationInterval</font>, 
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> *<font class="param">outListener</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inProc</i></code></dt>
+<dd>Function called when the parameter's value changes.</dd>
+<dt><code><i>inRefCon</i></code></dt>
+<dd>A reference value for the use of the callback function.</dd>
+<dt><code><i>inRunLoop</i></code></dt>
+<dd>The run loop on which the callback is called.  If NULL,
+CFRunLoopGetCurrent() is used.</dd>
+<dt><code><i>inRunLoopMode</i></code></dt>
+<dd>The run loop mode in which the callback's underlying run loop source will be
+attached.  If NULL, kCFRunLoopDefaultMode is used.</dd>
+<dt><code><i>inNotificationInterval</i></code></dt>
+<dd>The minimum time interval, in seconds, at which the callback will be called.
+If multiple parameter value changes occur within this time interval, the
+listener will only receive a notification for the last value change that
+occurred before the callback.  If inNotificationInterval is 0, the inRunLoop
+and inRunLoopMode arguments are ignored, and the callback will be issued
+immediately, on the thread on which the parameter was changed.</dd>
+<dt><code><i>outListener</i></code></dt>
+<dd>On succcessful return, an AUParameterListenerRef.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Note that only parameter changes issued through AUParameterSet will generate
+notifications to listeners; thus, in most cases, AudioUnit clients should use
+AUParameterSet in preference to AudioUnitSetParameterValue.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUListenerDispose;  name=AUListenerDispose --><a name="//apple_ref/c/func/AUListenerDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUListenerDispose">AUListenerDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Dispose a parameter listener object.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUListenerDispose" logicalPath="//apple_ref/c/instm/AUListenerDispose //apple_ref/c/clm/AUListenerDispose //apple_ref/c/intfcm/AUListenerDispose //apple_ref/c/func/AUListenerDispose" target="_top"><font class="function">AUListenerDispose</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> <font class="param">inListener</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>The parameter listener to dispose.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUListenerAddParameter;  name=AUListenerAddParameter --><a name="//apple_ref/c/func/AUListenerAddParameter"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUListenerAddParameter">AUListenerAddParameter</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Connect a parameter to a listener.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUListenerAddParameter" logicalPath="//apple_ref/c/instm/AUListenerAddParameter //apple_ref/c/clm/AUListenerAddParameter //apple_ref/c/intfcm/AUListenerAddParameter //apple_ref/c/func/AUListenerAddParameter" target="_top"><font class="function">AUListenerAddParameter</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> <font class="param">inListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>The parameter listener which will receive the callback.</dd>
+<dt><code><i>inObject</i></code></dt>
+<dd>The object which is interested in the value of the parameter.  This will be
+passed as the inObject parameter to the listener callback function when the
+parameter changes.</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The parameter whose value changes are to generate callbacks.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Associates an arbitrary object (often a user interface widget) with an
+AudioUnitParameter, and delivers notifications to the specified listener, telling it
+that the object needs to be informed of the parameter's value change.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUListenerRemoveParameter;  name=AUListenerRemoveParameter --><a name="//apple_ref/c/func/AUListenerRemoveParameter"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUListenerRemoveParameter">AUListenerRemoveParameter</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Remove a parameter/listener connection.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUListenerRemoveParameter" logicalPath="//apple_ref/c/instm/AUListenerRemoveParameter //apple_ref/c/clm/AUListenerRemoveParameter //apple_ref/c/intfcm/AUListenerRemoveParameter //apple_ref/c/func/AUListenerRemoveParameter" target="_top"><font class="function">AUListenerRemoveParameter</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> <font class="param">inListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>The parameter listener to stop receiving callbacks.</dd>
+<dt><code><i>inObject</i></code></dt>
+<dd>The object which is no longer interested in the value of the parameter.</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The parameter whose value changes are to stop generating callbacks.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUParameterSet;  name=AUParameterSet --><a name="//apple_ref/c/func/AUParameterSet"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterSet">AUParameterSet</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Set an AudioUnit parameter value and notify listeners.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUParameterSet" logicalPath="//apple_ref/c/instm/AUParameterSet //apple_ref/c/clm/AUParameterSet //apple_ref/c/intfcm/AUParameterSet //apple_ref/c/func/AUParameterSet" target="_top"><font class="function">AUParameterSet</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> <font class="param">inSendingListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSendingObject</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inValue</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inBufferOffsetInFrames</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>A parameter listener generating the change and which does not want to
+receive a callback as a result of it. May be NULL.</dd>
+<dt><code><i>inObject</i></code></dt>
+<dd>The object generating the change and which does not want to receive a
+callback as a result of it. NULL is treated specially when inListener is
+non-null; it signifies that none of the specified listener's objects will
+receive notifications.</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The parameter being changed.</dd>
+<dt><code><i>inValue</i></code></dt>
+<dd>The new value of the parameter.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Calls AudioUnitSetParameter, and performs/schedules notification callbacks to all
+parameter listeners, for that parameter -- except that no callback will be generated to
+the inListener/inObject pair.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUParameterListenerNotify;  name=AUParameterListenerNotify --><a name="//apple_ref/c/func/AUParameterListenerNotify"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterListenerNotify">AUParameterListenerNotify</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Notify listeners of a past parameter change.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUParameterListenerNotify" logicalPath="//apple_ref/c/instm/AUParameterListenerNotify //apple_ref/c/clm/AUParameterListenerNotify //apple_ref/c/intfcm/AUParameterListenerNotify //apple_ref/c/func/AUParameterListenerNotify" target="_top"><font class="function">AUParameterListenerNotify</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUParameterListenerRef" logicalPath="//apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/cl/AUParameterListenerRef //apple_ref/c/tdef/AUParameterListenerRef" target="_top"><font class="type">AUParameterListenerRef</font></a> <font class="param">inSendingListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSendingObject</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>A parameter listener generating the change and which does not want to
+receive a callback as a result of it. May be NULL.</dd>
+<dt><code><i>inObject</i></code></dt>
+<dd>The object generating the change and which does not want to receive a
+callback as a result of it. NULL is treated specially when inListener is
+non-null; it signifies that none of the specified listener's objects will
+receive notifications.</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The parameter which was changed changed.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Performs and schedules the notification callbacks of AUParameterSet, without
+actually setting an AudioUnit parameter value.
+<br><br>
+Clients scheduling ramped parameter changes to AudioUnits must make this call
+dynamically during playback in order for AudioUnitViews to be updated.  When the view's
+listener receives a notification, it will be passed the current value of the parameter.
+<br><br>
+A special meaning is applied if the mParameterID value of inParameter is equal to
+kAUParameterListener_AnyParameter. In this case, ANY listener for ANY parameter value
+changes on the specified AudioUnit will be notified of the current value of that
+parameter.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUEventListenerCreate;  name=AUEventListenerCreate --><a name="//apple_ref/c/func/AUEventListenerCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUEventListenerCreate">AUEventListenerCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Creates an Audio Unit event listener.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUEventListenerCreate" logicalPath="//apple_ref/c/instm/AUEventListenerCreate //apple_ref/c/clm/AUEventListenerCreate //apple_ref/c/intfcm/AUEventListenerCreate //apple_ref/c/func/AUEventListenerCreate" target="_top"><font class="function">AUEventListenerCreate</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUEventListenerProc" logicalPath="//apple_ref/c/cl/AUEventListenerProc //apple_ref/c/cl/AUEventListenerProc //apple_ref/c/tdef/AUEventListenerProc" target="_top"><font class="type">AUEventListenerProc</font></a> <font class="param">inProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inCallbackRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFRunLoopRef //apple_ref/c/cl/CFRunLoopRef //apple_ref/c/tdef/CFRunLoopRef //apple_ref/c/tag/CFRunLoopRef //apple_ref/c/econst/CFRunLoopRef //apple_ref/c/struct/CFRunLoopRef //apple_ref/c/clconst/CFRunLoopRef" --><font class="type">CFRunLoopRef</font><!-- /a --> <font class="param">inRunLoop</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inRunLoopMode</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inNotificationInterval</font>, <font class="comment">// seconds</font> 
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inValueChangeGranularity</font>, <font class="comment">// seconds</font> 
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUEventListenerRef" logicalPath="//apple_ref/c/cl/AUEventListenerRef //apple_ref/c/cl/AUEventListenerRef //apple_ref/c/tdef/AUEventListenerRef" target="_top"><font class="type">AUEventListenerRef</font></a> *<font class="param">outListener</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inProc</i></code></dt>
+<dd>Function called when an event occurs.</dd>
+<dt><code><i>inCallbackRefCon</i></code></dt>
+<dd>A reference value for the use of the callback function.</dd>
+<dt><code><i>inRunLoop</i></code></dt>
+<dd>The run loop on which the callback is called.  If NULL,
+CFRunLoopGetCurrent() is used.</dd>
+<dt><code><i>inRunLoopMode</i></code></dt>
+<dd>The run loop mode in which the callback's underlying run loop source will be
+attached.  If NULL, kCFRunLoopDefaultMode is used.</dd>
+<dt><code><i>inNotificationInterval</i></code></dt>
+<dd>The minimum time interval, in seconds, at which the callback will be called.</dd>
+<dt><code><i>inValueChangeGranularity</i></code></dt>
+<dd>Determines how parameter value changes occuring within this interval are
+queued; when an event follows a previous one by a smaller time interval than
+the granularity, then the listener will only be notified for the second
+parameter change.</dd>
+<dt><code><i>outListener</i></code></dt>
+<dd>On succcessful return, an AUEventListenerRef.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>AUEventListener is a specialization of AUParameterListener; use AUListenerDispose to
+dispose of an AUEventListener. You may use AUListenerAddParameter and
+AUListenerRemoveParameter with AUEventListerRef's, in addition to
+AUEventListenerAddEventType / AUEventListenerRemoveEventType.
+<br><br>
+Some examples illustrating inNotificationInterval and inValueChangeGranularity:
+<br><br>
+[1] a UI receiver: inNotificationInterval = 100 ms, inValueChangeGranularity = 100 ms.
+User interfaces almost never care about previous values, only the current one,
+and don't wish to perform redraws too often.
+<br><br>
+[2] An automation recorder: inNotificationInterval = 200 ms, inValueChangeGranularity = 10 ms.
+Automation systems typically wish to record events with a high degree of timing precision,
+but do not need to be woken up for each event.
+<br><br>
+In case [1], the listener will be called within 100 ms (the notification interval) of an
+event. It will only receive one notification for any number of value changes to the
+parameter concerned, occurring within a 100 ms window (the granularity).
+<br><br>
+In case [2], the listener will be received within 200 ms (the notification interval) of
+an event It can receive more than one notification per parameter, for the last of each
+group of value changes occurring within a 10 ms window (the granularity).
+<br><br>
+In both cases, thread scheduling latencies may result in more events being delivered to
+the listener callback than the theoretical maximum (notification interval /
+granularity).
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUEventListenerAddEventType;  name=AUEventListenerAddEventType --><a name="//apple_ref/c/func/AUEventListenerAddEventType"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUEventListenerAddEventType">AUEventListenerAddEventType</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Begin delivering a particular type of events to a listener.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUEventListenerAddEventType" logicalPath="//apple_ref/c/instm/AUEventListenerAddEventType //apple_ref/c/clm/AUEventListenerAddEventType //apple_ref/c/intfcm/AUEventListenerAddEventType //apple_ref/c/func/AUEventListenerAddEventType" target="_top"><font class="function">AUEventListenerAddEventType</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUEventListenerRef" logicalPath="//apple_ref/c/cl/AUEventListenerRef //apple_ref/c/cl/AUEventListenerRef //apple_ref/c/tdef/AUEventListenerRef" target="_top"><font class="type">AUEventListenerRef</font></a> <font class="param">inListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioUnitEvent" logicalPath="//apple_ref/c/cl/AudioUnitEvent //apple_ref/c/cl/AudioUnitEvent //apple_ref/c/tdef/AudioUnitEvent" target="_top"><font class="type">AudioUnitEvent</font></a> *<font class="param">inEvent</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>The parameter listener which will receive the events.</dd>
+<dt><code><i>inObject</i></code></dt>
+<dd>The object which is interested in the value of the parameter.  This will be
+passed as the inObject parameter to the listener callback function when the
+parameter changes.</dd>
+<dt><code><i>inEvent</i></code></dt>
+<dd>The type of event to listen for.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUEventListenerRemoveEventType;  name=AUEventListenerRemoveEventType --><a name="//apple_ref/c/func/AUEventListenerRemoveEventType"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUEventListenerRemoveEventType">AUEventListenerRemoveEventType</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Stop delivering a particular type of events to a listener.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUEventListenerRemoveEventType" logicalPath="//apple_ref/c/instm/AUEventListenerRemoveEventType //apple_ref/c/clm/AUEventListenerRemoveEventType //apple_ref/c/intfcm/AUEventListenerRemoveEventType //apple_ref/c/func/AUEventListenerRemoveEventType" target="_top"><font class="function">AUEventListenerRemoveEventType</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUEventListenerRef" logicalPath="//apple_ref/c/cl/AUEventListenerRef //apple_ref/c/cl/AUEventListenerRef //apple_ref/c/tdef/AUEventListenerRef" target="_top"><font class="type">AUEventListenerRef</font></a> <font class="param">inListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inObject</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioUnitEvent" logicalPath="//apple_ref/c/cl/AudioUnitEvent //apple_ref/c/cl/AudioUnitEvent //apple_ref/c/tdef/AudioUnitEvent" target="_top"><font class="type">AudioUnitEvent</font></a> *<font class="param">inEvent</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inListener</i></code></dt>
+<dd>The parameter listener to stop receiving events.</dd>
+<dt><code><i>inObject</i></code></dt>
+<dd>The object which is no longer interested in the value of the parameter.</dd>
+<dt><code><i>inEvent</i></code></dt>
+<dd>The type of event to stop listening for.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUEventListenerNotify;  name=AUEventListenerNotify --><a name="//apple_ref/c/func/AUEventListenerNotify"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUEventListenerNotify">AUEventListenerNotify</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Deliver an AudioUnitEvent to all listeners registered to receive it.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUEventListenerNotify" logicalPath="//apple_ref/c/instm/AUEventListenerNotify //apple_ref/c/clm/AUEventListenerNotify //apple_ref/c/intfcm/AUEventListenerNotify //apple_ref/c/func/AUEventListenerNotify" target="_top"><font class="function">AUEventListenerNotify</font></a>(
+    <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AUEventListenerRef" logicalPath="//apple_ref/c/cl/AUEventListenerRef //apple_ref/c/cl/AUEventListenerRef //apple_ref/c/tdef/AUEventListenerRef" target="_top"><font class="type">AUEventListenerRef</font></a> <font class="param">inSendingListener</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSendingObject</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioUnitEvent" logicalPath="//apple_ref/c/cl/AudioUnitEvent //apple_ref/c/cl/AudioUnitEvent //apple_ref/c/tdef/AudioUnitEvent" target="_top"><font class="type">AudioUnitEvent</font></a> *<font class="param">inEvent</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inSendingListener</i></code></dt>
+<dd>A parameter listener generating the change and which does not want to
+receive a callback as a result of it. May be NULL.</dd>
+<dt><code><i>inSendingObject</i></code></dt>
+<dd>The object generating the change and which does not want to receive a
+callback as a result of it. NULL is treated specially when inListener is
+non-null; it signifies that none of the specified listener's objects will
+receive notifications.</dd>
+<dt><code><i>inEvent</i></code></dt>
+<dd>The event to be delivered.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUParameterValueFromLinear;  name=AUParameterValueFromLinear --><a name="//apple_ref/c/func/AUParameterValueFromLinear"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterValueFromLinear">AUParameterValueFromLinear</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a linear value to a parameter value according to the parameter's units.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUParameterValueFromLinear" logicalPath="//apple_ref/c/instm/AUParameterValueFromLinear //apple_ref/c/clm/AUParameterValueFromLinear //apple_ref/c/intfcm/AUParameterValueFromLinear //apple_ref/c/func/AUParameterValueFromLinear" target="_top"><font class="function">AUParameterValueFromLinear</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inLinearValue</font>, <font class="comment">// 0-1</font> 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inLinearValue</i></code></dt>
+<dd>The linear value (0.0-1.0) to convert.</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The parameter, including its Audio Unit, that will define the conversion of
+the supplied linear value to a value that is natural to that parameter.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The converted parameter value, in the parameter's natural units.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUParameterValueToLinear;  name=AUParameterValueToLinear --><a name="//apple_ref/c/func/AUParameterValueToLinear"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterValueToLinear">AUParameterValueToLinear</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a parameter value to a linear value according to the parameter's units.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUParameterValueToLinear" logicalPath="//apple_ref/c/instm/AUParameterValueToLinear //apple_ref/c/clm/AUParameterValueToLinear //apple_ref/c/intfcm/AUParameterValueToLinear //apple_ref/c/func/AUParameterValueToLinear" target="_top"><font class="function">AUParameterValueToLinear</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/Float32 //apple_ref/c/cl/Float32 //apple_ref/c/tdef/Float32 //apple_ref/c/tag/Float32 //apple_ref/c/econst/Float32 //apple_ref/c/struct/Float32 //apple_ref/c/clconst/Float32" --><font class="type">Float32</font><!-- /a --> <font class="param">inParameterValue</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inParameterValue</i></code></dt>
+<dd>The value in the natural units of the specified parameter.
+<br><br>
+</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The parameter, including its Audio Unit, that will define the conversion of
+the supplied parameter value to a corresponding linear value.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A number 0.0-1.0.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AUParameterFormatValue;  name=AUParameterFormatValue --><a name="//apple_ref/c/func/AUParameterFormatValue"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AUParameterFormatValue">AUParameterFormatValue</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Format a parameter value into a string.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/econst/char //apple_ref/c/struct/char //apple_ref/c/clconst/char" --><font class="type">char</font><!-- /a --> <font class="type">*</font> <a href="../../../AudioToolbox/AudioUnitUtilities/index.html?Functions/Functions.html#//apple_ref/c/func/AUParameterFormatValue" logicalPath="//apple_ref/c/instm/AUParameterFormatValue //apple_ref/c/clm/AUParameterFormatValue //apple_ref/c/intfcm/AUParameterFormatValue //apple_ref/c/func/AUParameterFormatValue" target="_top"><font class="function">AUParameterFormatValue</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/double //apple_ref/c/cl/double //apple_ref/c/tdef/double //apple_ref/c/tag/double //apple_ref/c/econst/double //apple_ref/c/struct/double //apple_ref/c/clconst/double" --><font class="type">double</font><!-- /a --> <font class="param">inParameterValue</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioUnitParameter //apple_ref/c/cl/AudioUnitParameter //apple_ref/c/tdef/AudioUnitParameter //apple_ref/c/tag/AudioUnitParameter //apple_ref/c/econst/AudioUnitParameter //apple_ref/c/struct/AudioUnitParameter //apple_ref/c/clconst/AudioUnitParameter" --><font class="type">AudioUnitParameter</font><!-- /a --> *<font class="param">inParameter</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/econst/char //apple_ref/c/struct/char //apple_ref/c/clconst/char" --><font class="type">char</font><!-- /a --> *<font class="param">inTextBuffer</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inDigits</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inParameterValue</i></code></dt>
+<dd>The parameter value to be formatted.</dd>
+<dt><code><i>inParameter</i></code></dt>
+<dd>The Audio Unit, scope, element, and parameter whose value this is.</dd>
+<dt><code><i>inTextBuffer</i></code></dt>
+<dd>The character array to receive the formatted text.  Should be at least 32
+characters.</dd>
+<dt><code><i>inDigits</i></code></dt>
+<dd>The resolution of the string (see example above).</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>
+<tt>inTextBuffer</tt>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Formats a floating point value into a string.  Computes a power of 10 to which the value
+will be rounded and displayed as follows:  if the the parameter is logarithmic (Hertz),
+the number of significant digits is inDigits - pow10(inParameterValue) + 1.  Otherwise,
+it is inDigits - pow10(maxValue - minValue) + 1.
+<br><br>
+Example for inDigits=3:
+</p>
+<pre>
+	    pow10   range           digits after decimal place display
+<ol start="-2">
+<li>     .0100-.0999     4
+</li>
+<li>     .100-.999       3
+</li>
+<li>      1.00-9.99       2
+</li>
+<li>      10.0-99.9       1
+</li>
+<li>      100-999         0
+</li>
+<li>      1000-9990       -1
+</li>
+<li>      10000-99900     -2</li>
+</ol></pre>
+
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

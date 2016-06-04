@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUEffectBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUEffectBase</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "AUBase_fs.html" target="_top">AUBase</a><br>
+<big><b>Subclasses : </b></big>
+<a href = "AUMIDIEffectBase_fs.html" target="_top">AUMIDIEffectBase</a>, <a href = "AUInlineEffectBase_fs.html" target="_top">AUInlineEffectBase</a><br>
+<big><b>Header : </b></big>AUEffectBase<br>
+<br><pre>class AUEffectBase : public AUBase </pre>
+<p>This class supports effects processes with one input and output stream where the 
+	number of input channels is equal to the number of output channels. 
+	A subclass of <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a> is used to encapsulate the signal processing.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUEffectBase">AUEffectBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUEffectBase(
+          AudioUnit                       audioUnit,
+          bool                            inProcessesInPlace = true
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUEffectBase">~AUEffectBase</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual destructor</h4>
+</td></tr></table>
+<br><pre> ~AUEffectBase();</pre>
+<p>Deletes the <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a> objects.</p><br>
+<hr>
+<h3><u>Format</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ChangeStreamFormat">ChangeStreamFormat</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult ChangeStreamFormat (
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const CAStreamBasicDescription& inPrevFormat,
+          const CAStreamBasicDescription& inNewFormat
+    );</pre>
+<p>Internal. Overridden to update kernels and sample rate dependant properties when a stream format is changed.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetSampleRate">GetSampleRate</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> Float64 GetSampleRate();</pre>
+<p>Returns the sample rate.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="StreamFormatWritable">StreamFormatWritable</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool StreamFormatWritable (
+          AudioUnitScope                  scope,
+          AudioUnitElement                element
+    );</pre>
+<p>Overridden to return true.</p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Cleanup">Cleanup</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void Cleanup();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetNumberOfChannels">GetNumberOfChannels</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> UInt32 GetNumberOfChannels();</pre>
+<p>Returns the number of channels through the unit.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Initialize">Initialize</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Initialize();</pre>
+<p>Overridden to initialize dsp kernels.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsBypassEffect">IsBypassEffect</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool IsBypassEffect ();</pre>
+<p>Return whether the effect bypass is on.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsInputSilent">IsInputSilent</a></h4>
+</td><td width="50%">
+<h4>private nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool IsInputSilent (
+          AudioUnitRenderActionFlags      inActionFlags,
+          UInt32                          inFramesToProcess
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="MaintainKernels">MaintainKernels</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void MaintainKernels();</pre>
+<p>Internal. Allocates or frees enough kernels to track changes in the effect's channel count.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="NewKernel">NewKernel</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual AUKernelBase* NewKernel();</pre>
+<p>Override this method to return an instance of a subclass of <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a> that implements your effect process.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ProcessBufferLists">ProcessBufferLists</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus ProcessBufferLists(
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioBufferList&          inBuffer,
+          AudioBufferList&                outBuffer,
+          UInt32                          inFramesToProcess
+    );</pre>
+<p>Internal. Calls the Render method of the <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetBypassEffect">SetBypassEffect</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void SetBypassEffect (bool inFlag);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ShouldBypassEffect">ShouldBypassEffect</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool ShouldBypassEffect ();</pre>
+<p></p><br>
+<hr>
+<h3><u>Parameters</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParamHasSampleRateDependency">GetParamHasSampleRateDependency</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool GetParamHasSampleRateDependency () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameter">GetParameter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> Float32 GetParameter(UInt32 paramID);</pre>
+<p>This is an overloaded function name which has no scope argument. Used for convenient access to global scope parameter values.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetParamHasSampleRateDependency">SetParamHasSampleRateDependency</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetParamHasSampleRateDependency (bool inFlag);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetParameter">SetParameter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetParameter(
+          UInt32                          paramID,
+          Float32                         value
+    );</pre>
+<p>This is an overloaded function name which has no scope argument. Used for convenient access to global scope parameter values.</p><br>
+<hr>
+<h3><u>Properties</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetProperty">GetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetProperty (
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          void*                           outData
+    );</pre>
+<p>Overridden to support kAudioUnitProperty_BypassEffect.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetPropertyInfo">GetPropertyInfo</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetPropertyInfo (
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          UInt32&                         outDataSize,
+          Boolean&                        outWritable
+    );</pre>
+<p>Overridden to support kAudioUnitProperty_BypassEffect.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetProperty">SetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const void*                     inData,
+          UInt32                          inDataSize
+    );</pre>
+<p>Overridden to support kAudioUnitProperty_BypassEffect.</p><br>
+<hr>
+<h3><u>Rendering</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Render">Render</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Render(
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inNumberFrames
+    );</pre>
+<p>Overridden to use <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a> object to perform rendering.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Reset">Reset</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Reset(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p>Overridden to reset all kernels.</p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mBypassEffect">mBypassEffect</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mBypassEffect;</pre>
+<p>If true, then buffers are passed through without calling the unit's rendering code.
+			This flag is set by the property kAudioUnitProperty_BypassEffect.
+			See also <a href="#IsBypassEffect">IsBypassEffect</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mKernelList">mKernelList</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> KernelList mKernelList;</pre>
+<p>A list of all of the dsp kernel objects. See <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParamSRDep">mParamSRDep</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mParamSRDep;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mProcessesInplace">mProcessesInplace</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mProcessesInPlace;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mSilentTimeout">mSilentTimeout</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AUSilentTimeout mSilentTimeout;</pre>
+<p></p><br>
+<hr>
+</body></html>

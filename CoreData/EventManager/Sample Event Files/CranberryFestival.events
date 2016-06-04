@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE database SYSTEM "file:///System/Library/DTDs/CoreData.dtd">
+
+<database>
+    <databaseInfo>
+        <version>134481920</version>
+        <UUID>1759868C-6F34-4BAA-AFF0-1D148E32171E</UUID>
+        <nextObjectID>119</nextObjectID>
+        <metadata></metadata>
+    </databaseInfo>
+    <object type="PERSON" id="z102">
+        <attribute name="firstname" type="string">Nancy</attribute>
+        <attribute name="lastname" type="string">Wells</attribute>
+        <attribute name="notes" type="string">Out-of-town dignitary</attribute>
+        <relationship name="participatingevents" type="0/0" destination="EVENTPARTICIPANT" idrefs="z108"></relationship>
+    </object>
+    <object type="EVENTPARTICIPANT" id="z103">
+        <attribute name="role" type="string">Registrar</attribute>
+        <relationship name="event" type="1/1" destination="EVENT" idrefs="z118"></relationship>
+        <relationship name="person" type="1/1" destination="PERSON" idrefs="z117"></relationship>
+    </object>
+    <object type="EVENT" id="z104">
+        <attribute name="date" type="date">131356800.00000000000000000000</attribute>
+        <attribute name="detaildescription" type="string">Opening ceremonies at Town Hall</attribute>
+        <attribute name="endtime" type="date">126302400.00000000000000000000</attribute>
+        <attribute name="eventid" type="string">101</attribute>
+        <attribute name="name" type="string">Opening Ceremony</attribute>
+        <attribute name="starttime" type="date">126298800.00000000000000000000</attribute>
+        <relationship name="location" type="1/1" destination="LOCATION" idrefs="z111"></relationship>
+        <relationship name="occasion" type="1/1" destination="OCCASION" idrefs="z116"></relationship>
+        <relationship name="participants" type="0/0" destination="EVENTPARTICIPANT" idrefs="z108 z110"></relationship>
+    </object>
+    <object type="EVENT" id="z105">
+        <attribute name="date" type="date">131443200.00000000000000000000</attribute>
+        <attribute name="detaildescription" type="string">Free cranberry picking</attribute>
+        <attribute name="endtime" type="date">126313200.00000000000000000000</attribute>
+        <attribute name="eventid" type="string">104</attribute>
+        <attribute name="name" type="string">Pick your own Cranberries</attribute>
+        <attribute name="starttime" type="date">126295200.00000000000000000000</attribute>
+        <relationship name="location" type="1/1" destination="LOCATION" idrefs="z109"></relationship>
+        <relationship name="occasion" type="1/1" destination="OCCASION" idrefs="z116"></relationship>
+        <relationship name="participants" type="0/0" destination="EVENTPARTICIPANT"></relationship>
+    </object>
+    <object type="PERSON" id="z106">
+        <attribute name="firstname" type="string">Sue</attribute>
+        <attribute name="lastname" type="string">Smith</attribute>
+        <attribute name="notes" type="string">The town mayor</attribute>
+        <relationship name="participatingevents" type="0/0" destination="EVENTPARTICIPANT" idrefs="z110"></relationship>
+    </object>
+    <object type="PERSON" id="z107">
+        <attribute name="firstname" type="string">Edgar</attribute>
+        <attribute name="lastname" type="string">Johnson</attribute>
+        <attribute name="notes" type="string">Resident cranberry expert</attribute>
+        <relationship name="participatingevents" type="0/0" destination="EVENTPARTICIPANT" idrefs="z119 z112"></relationship>
+    </object>
+    <object type="EVENTPARTICIPANT" id="z108">
+        <attribute name="role" type="string">Speaker</attribute>
+        <relationship name="event" type="1/1" destination="EVENT" idrefs="z104"></relationship>
+        <relationship name="person" type="1/1" destination="PERSON" idrefs="z102"></relationship>
+    </object>
+    <object type="LOCATION" id="z109">
+        <attribute name="detaildescription" type="string">4th and Grove Street</attribute>
+        <attribute name="name" type="string">Johnson's Cranberry Bog</attribute>
+        <relationship name="events" type="0/0" destination="EVENT" idrefs="z115 z105 z114"></relationship>
+    </object>
+    <object type="EVENTPARTICIPANT" id="z110">
+        <attribute name="role" type="string">Speaker</attribute>
+        <relationship name="event" type="1/1" destination="EVENT" idrefs="z104"></relationship>
+        <relationship name="person" type="1/1" destination="PERSON" idrefs="z106"></relationship>
+    </object>
+    <object type="LOCATION" id="z111">
+        <attribute name="name" type="string">Town Hall</attribute>
+        <relationship name="events" type="0/0" destination="EVENT" idrefs="z104"></relationship>
+    </object>
+    <object type="EVENTPARTICIPANT" id="z112">
+        <attribute name="role" type="string">Host</attribute>
+        <relationship name="event" type="1/1" destination="EVENT" idrefs="z115"></relationship>
+        <relationship name="person" type="1/1" destination="PERSON" idrefs="z107"></relationship>
+    </object>
+    <object type="LOCATION" id="z113">
+        <attribute name="detaildescription" type="string">The lawn directly in front of Town Hall</attribute>
+        <attribute name="name" type="string">Town Green</attribute>
+        <relationship name="events" type="0/0" destination="EVENT" idrefs="z118"></relationship>
+    </object>
+    <object type="EVENT" id="z114">
+        <attribute name="date" type="date">131356800.00000000000000000000</attribute>
+        <attribute name="detaildescription" type="string">Learn all about the wonders of the Cranberry</attribute>
+        <attribute name="endtime" type="date">126313200.00000000000000000000</attribute>
+        <attribute name="eventid" type="string">103</attribute>
+        <attribute name="name" type="string">Educational Workshop</attribute>
+        <attribute name="starttime" type="date">126306000.00000000000000000000</attribute>
+        <relationship name="location" type="1/1" destination="LOCATION" idrefs="z109"></relationship>
+        <relationship name="occasion" type="1/1" destination="OCCASION" idrefs="z116"></relationship>
+        <relationship name="participants" type="0/0" destination="EVENTPARTICIPANT" idrefs="z119"></relationship>
+    </object>
+    <object type="EVENT" id="z115">
+        <attribute name="date" type="date">131356800.00000000000000000000</attribute>
+        <attribute name="detaildescription" type="string">Lunch provided courtesy of Johnson's Cranberry Co.</attribute>
+        <attribute name="endtime" type="date">126306000.00000000000000000000</attribute>
+        <attribute name="eventid" type="string">102</attribute>
+        <attribute name="name" type="string">Lunch by the Bog</attribute>
+        <attribute name="starttime" type="date">126302400.00000000000000000000</attribute>
+        <relationship name="location" type="1/1" destination="LOCATION" idrefs="z109"></relationship>
+        <relationship name="occasion" type="1/1" destination="OCCASION" idrefs="z116"></relationship>
+        <relationship name="participants" type="0/0" destination="EVENTPARTICIPANT" idrefs="z112"></relationship>
+    </object>
+    <object type="OCCASION" id="z116">
+        <attribute name="detaildescription" type="string">It's time once again for our annual Cranberry Festival! This year Edgar Johnson will be hosting the main events at his marvelous Cranberry bog.</attribute>
+        <attribute name="enddate" type="date">131443200.00000000000000000000</attribute>
+        <attribute name="name" type="string">The Cranberry Festival</attribute>
+        <attribute name="startdate" type="date">131356800.00000000000000000000</attribute>
+        <relationship name="events" type="0/0" destination="EVENT" idrefs="z115 z105 z104 z114 z118"></relationship>
+    </object>
+    <object type="PERSON" id="z117">
+        <attribute name="firstname" type="string">Tom </attribute>
+        <attribute name="lastname" type="string">Erickson</attribute>
+        <attribute name="notes" type="string">Event coordinator</attribute>
+        <relationship name="participatingevents" type="0/0" destination="EVENTPARTICIPANT" idrefs="z103"></relationship>
+    </object>
+    <object type="EVENT" id="z118">
+        <attribute name="date" type="date">131356800.00000000000000000000</attribute>
+        <attribute name="endtime" type="date">126298800.00000000000000000000</attribute>
+        <attribute name="eventid" type="string">100</attribute>
+        <attribute name="name" type="string">Registration</attribute>
+        <attribute name="starttime" type="date">126295200.00000000000000000000</attribute>
+        <relationship name="location" type="1/1" destination="LOCATION" idrefs="z113"></relationship>
+        <relationship name="occasion" type="1/1" destination="OCCASION" idrefs="z116"></relationship>
+        <relationship name="participants" type="0/0" destination="EVENTPARTICIPANT" idrefs="z103"></relationship>
+    </object>
+    <object type="EVENTPARTICIPANT" id="z119">
+        <attribute name="role" type="string">Lecturer</attribute>
+        <relationship name="event" type="1/1" destination="EVENT" idrefs="z114"></relationship>
+        <relationship name="person" type="1/1" destination="PERSON" idrefs="z107"></relationship>
+    </object>
+</database>

@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {downloadOrCancel = id; }; 
+            CLASS = MyDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                URLField = NSTextField; 
+                decodeButton = NSButton; 
+                directoryMatrix = NSMatrix; 
+                downloadCancelButton = NSButton; 
+                openButton = NSButton; 
+                progressIndicator = NSProgressIndicator; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}

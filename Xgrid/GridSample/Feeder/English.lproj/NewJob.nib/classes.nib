@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {addArgument = id; removeArgument = id; }; 
+            CLASS = GridFeederArgumentContainerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_container" = NSScrollView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {chooseCommand = id; chooseSourceDirectory = id; }; 
+            CLASS = GridFeederNewJobWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_argumentContainerController" = GridFeederArgumentContainerController; }; 
+            SUPERCLASS = GridSampleNewJobWindowController; 
+        }, 
+        {
+            ACTIONS = {submitJob = id; }; 
+            CLASS = GridSampleNewJobWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_gridControllerObjectController" = NSObjectController; 
+                "_gridsArrayController" = NSArrayController; 
+                "_ownerObjectController" = NSObjectController; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

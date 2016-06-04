@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B86001BDB6411CA292A /* TicTacToe.java in Sources */ = {isa = PBXBuildFile; fileRef = 00E68290FEC88D7311DB9C8B /* TicTacToe.java */; };
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+		F527725A0383450C0198521B /* beep.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527724E038344E10198521B /* beep.au */; };
+		F527725B0383450C0198521B /* ding.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527724F038344E10198521B /* ding.au */; };
+		F527725C0383450C0198521B /* return.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5277250038344E10198521B /* return.au */; };
+		F527725D0383450C0198521B /* yahoo1.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5277251038344E10198521B /* yahoo1.au */; };
+		F527725E0383450C0198521B /* yahoo2.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5277252038344E10198521B /* yahoo2.au */; };
+		F52772600383452B0198521B /* cross.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5277249038344D10198521B /* cross.gif */; };
+		F52772610383452B0198521B /* not.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527724A038344D10198521B /* not.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = TicTacToe;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5277258038344F00198521B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = TicTacToe/audio;
+			dstSubfolderSpec = 16;
+			files = (
+				F527725A0383450C0198521B /* beep.au in CopyFiles */,
+				F527725B0383450C0198521B /* ding.au in CopyFiles */,
+				F527725C0383450C0198521B /* return.au in CopyFiles */,
+				F527725D0383450C0198521B /* yahoo1.au in CopyFiles */,
+				F527725E0383450C0198521B /* yahoo2.au in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F527725F038345100198521B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = TicTacToe/images;
+			dstSubfolderSpec = 16;
+			files = (
+				F52772600383452B0198521B /* cross.gif in CopyFiles */,
+				F52772610383452B0198521B /* not.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68290FEC88D7311DB9C8B /* TicTacToe.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TicTacToe.java; sourceTree = "<group>"; };
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F5277247038344C10198521B /* TicTacToe */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = TicTacToe; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5277249038344D10198521B /* cross.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cross.gif; sourceTree = "<group>"; };
+		F527724A038344D10198521B /* not.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = not.gif; sourceTree = "<group>"; };
+		F527724E038344E10198521B /* beep.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = beep.au; sourceTree = "<group>"; };
+		F527724F038344E10198521B /* ding.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = ding.au; sourceTree = "<group>"; };
+		F5277250038344E10198521B /* return.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = return.au; sourceTree = "<group>"; };
+		F5277251038344E10198521B /* yahoo1.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = yahoo1.au; sourceTree = "<group>"; };
+		F5277252038344E10198521B /* yahoo2.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = yahoo2.au; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				00E68290FEC88D7311DB9C8B /* TicTacToe.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				F527724D038344E10198521B /* audio */,
+				F5277248038344D10198521B /* images */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5277247038344C10198521B /* TicTacToe */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5277248038344D10198521B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F5277249038344D10198521B /* cross.gif */,
+				F527724A038344D10198521B /* not.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		F527724D038344E10198521B /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				F527724E038344E10198521B /* beep.au */,
+				F527724F038344E10198521B /* ding.au */,
+				F5277250038344E10198521B /* return.au */,
+				F5277251038344E10198521B /* yahoo1.au */,
+				F5277252038344E10198521B /* yahoo2.au */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23433808DF2E96008B0BD4 /* Build configuration list for PBXProject "TicTacToe" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* TicTacToe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B86001BDB6411CA292A /* TicTacToe.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* TicTacToe */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23433408DF2E96008B0BD4 /* Build configuration list for PBXToolTarget "TicTacToe" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F5277258038344F00198521B /* CopyFiles */,
+				F527725F038345100198521B /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = TicTacToe;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = TicTacToe;
+			productInstallPath = /Developer/Examples/Java/Applets;
+			productName = JavaAWTApplet;
+			productReference = F5277247038344C10198521B /* TicTacToe */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23433508DF2E96008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = TicTacToe;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23433608DF2E96008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = TicTacToe;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23433908DF2E96008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23433A08DF2E96008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23433408DF2E96008B0BD4 /* Build configuration list for PBXToolTarget "TicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23433508DF2E96008B0BD4 /* Debug */,
+				4C23433608DF2E96008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23433808DF2E96008B0BD4 /* Build configuration list for PBXProject "TicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23433908DF2E96008B0BD4 /* Debug */,
+				4C23433A08DF2E96008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

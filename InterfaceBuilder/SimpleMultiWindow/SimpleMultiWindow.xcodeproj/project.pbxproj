@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25DB2B7A04D73A4500231ED7 /* SMWSecondWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 014EFCAD007970DD7F000001 /* SMWSecondWindowController.h */; };
+		25DB2B7B04D73A4500231ED7 /* SMWAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F557798A00F4E49C01CA0CD5 /* SMWAppDelegate.h */; };
+		25DB2B7D04D73A4500231ED7 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		25DB2B7E04D73A4500231ED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		25DB2B7F04D73A4500231ED7 /* SecondWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 014EFCAA00796EAA7F000001 /* SecondWindow.nib */; };
+		25DB2B8004D73A4500231ED7 /* answerFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F05CE0E014939280CCA0D55 /* answerFile.plist */; };
+		25DB2B8104D73A4500231ED7 /* SMW.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F05CE1B01493EA70CCA0D55 /* SMW.strings */; };
+		25DB2B8304D73A4500231ED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		25DB2B8404D73A4500231ED7 /* SMWSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014EFCAE007970DD7F000001 /* SMWSecondWindowController.m */; };
+		25DB2B8504D73A4500231ED7 /* SMWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F557798B00F4E49C01CA0CD5 /* SMWAppDelegate.m */; };
+		25DB2B8704D73A4500231ED7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		014EFCAB00796EAA7F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/SecondWindow.nib; sourceTree = "<group>"; };
+		014EFCAD007970DD7F000001 /* SMWSecondWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SMWSecondWindowController.h; sourceTree = "<group>"; };
+		014EFCAE007970DD7F000001 /* SMWSecondWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SMWSecondWindowController.m; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		25DB2B8A04D73A4500231ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		25DB2B8B04D73A4500231ED7 /* SimpleMultiWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMultiWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3F05CE0F014939280CCA0D55 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist; name = English; path = English.lproj/answerFile.plist; sourceTree = "<group>"; };
+		3F05CE1C01493EA70CCA0D55 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/SMW.strings; sourceTree = "<group>"; };
+		F557798A00F4E49C01CA0CD5 /* SMWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SMWAppDelegate.h; sourceTree = "<group>"; };
+		F557798B00F4E49C01CA0CD5 /* SMWAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SMWAppDelegate.m; sourceTree = "<group>"; };
+		F5FBA40C007A916B01CA0CD5 /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25DB2B8604D73A4500231ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25DB2B8704D73A4500231ED7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				014EFCAD007970DD7F000001 /* SMWSecondWindowController.h */,
+				014EFCAE007970DD7F000001 /* SMWSecondWindowController.m */,
+				F557798A00F4E49C01CA0CD5 /* SMWAppDelegate.h */,
+				F557798B00F4E49C01CA0CD5 /* SMWAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25DB2B8B04D73A4500231ED7 /* SimpleMultiWindow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SimpleMultiWindow */ = {
+			isa = PBXGroup;
+			children = (
+				F5FBA40C007A916B01CA0CD5 /* README.rtf */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				25DB2B8A04D73A4500231ED7 /* Info.plist */,
+			);
+			name = SimpleMultiWindow;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F05CE1B01493EA70CCA0D55 /* SMW.strings */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				014EFCAA00796EAA7F000001 /* SecondWindow.nib */,
+				3F05CE0E014939280CCA0D55 /* answerFile.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		25DB2B7904D73A4500231ED7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25DB2B7A04D73A4500231ED7 /* SMWSecondWindowController.h in Headers */,
+				25DB2B7B04D73A4500231ED7 /* SMWAppDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		25DB2B7804D73A4500231ED7 /* SimpleMultiWindow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C017331908A95E4A009534D0 /* Build configuration list for PBXNativeTarget "SimpleMultiWindow" */;
+			buildPhases = (
+				25DB2B7904D73A4500231ED7 /* Headers */,
+				25DB2B7C04D73A4500231ED7 /* Resources */,
+				25DB2B8204D73A4500231ED7 /* Sources */,
+				25DB2B8604D73A4500231ED7 /* Frameworks */,
+				25DB2B8804D73A4500231ED7 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = SimpleMultiWindow;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SimpleMultiWindow;
+			productReference = 25DB2B8B04D73A4500231ED7 /* SimpleMultiWindow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C017331D08A95E4A009534D0 /* Build configuration list for PBXProject "SimpleMultiWindow" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SimpleMultiWindow */;
+			projectDirPath = "";
+			targets = (
+				25DB2B7804D73A4500231ED7 /* SimpleMultiWindow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25DB2B7C04D73A4500231ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25DB2B7D04D73A4500231ED7 /* MainMenu.nib in Resources */,
+				25DB2B7E04D73A4500231ED7 /* InfoPlist.strings in Resources */,
+				25DB2B7F04D73A4500231ED7 /* SecondWindow.nib in Resources */,
+				25DB2B8004D73A4500231ED7 /* answerFile.plist in Resources */,
+				25DB2B8104D73A4500231ED7 /* SMW.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		25DB2B8804D73A4500231ED7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25DB2B8204D73A4500231ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25DB2B8304D73A4500231ED7 /* main.m in Sources */,
+				25DB2B8404D73A4500231ED7 /* SMWSecondWindowController.m in Sources */,
+				25DB2B8504D73A4500231ED7 /* SMWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		014EFCAA00796EAA7F000001 /* SecondWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				014EFCAB00796EAA7F000001 /* English */,
+			);
+			name = SecondWindow.nib;
+			sourceTree = "<group>";
+		};
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		3F05CE0E014939280CCA0D55 /* answerFile.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F05CE0F014939280CCA0D55 /* English */,
+			);
+			name = answerFile.plist;
+			sourceTree = "<group>";
+		};
+		3F05CE1B01493EA70CCA0D55 /* SMW.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F05CE1C01493EA70CCA0D55 /* English */,
+			);
+			name = SMW.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C017331A08A95E4A009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SimpleMultiWindow;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C017331B08A95E4A009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SimpleMultiWindow;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C017331E08A95E4A009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C017331F08A95E4A009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C017331908A95E4A009534D0 /* Build configuration list for PBXNativeTarget "SimpleMultiWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017331A08A95E4A009534D0 /* Debug */,
+				C017331B08A95E4A009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017331D08A95E4A009534D0 /* Build configuration list for PBXProject "SimpleMultiWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017331E08A95E4A009534D0 /* Debug */,
+				C017331F08A95E4A009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

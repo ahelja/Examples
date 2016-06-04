@@ -1,0 +1,82 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                browserDoFind = id; 
+                browserFindNext = id; 
+                browserFindPrev = id; 
+                doPrefs = id; 
+                newBrowser = id; 
+            }; 
+            CLASS = ApplicationController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mPrefsMenuItem = NSMenuItem; mPrefsWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                changePlanes = id; 
+                newFind = id; 
+                registryChanged = id; 
+                stepFind = id; 
+                toggleDrawer = id; 
+            }; 
+            CLASS = BrowserController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mFindStepper = NSStepper; 
+                mFindTextEditText = NSTextField; 
+                mInspectorController = InspectorController; 
+                mPlanePopup = NSPopUpButton; 
+                mPropertiesDrawer = NSDrawer; 
+                mRegistryOutlineView = NSOutlineView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = DictionaryOutlineItem; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mValue = id; }; 
+            SUPERCLASS = OutlineItem; 
+        }, 
+        {
+            CLASS = FireWireOutlineItem; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = RegistryOutlineItem; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {updateNow = id; }; 
+            CLASS = InspectorController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mClassName = NSTextField; 
+                mDrawerButton = NSControl; 
+                mKeyTextField = NSTextField; 
+                mOutlineView = NSOutlineView; 
+                mServiceName = NSTextField; 
+                mUpdateNowButton = NSControl; 
+                mValueTabView = NSTabView; 
+                mValueTableView = NSTableView; 
+                mValueTextField = NSTextView; 
+                mWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSDataTableDataSource; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OutlineCell; LANGUAGE = ObjC; SUPERCLASS = NSButtonCell; }, 
+        {CLASS = OutlineItem; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OutlineTableCell; LANGUAGE = ObjC; SUPERCLASS = NSTextFieldCell; }, 
+        {CLASS = OutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }, 
+        {CLASS = OutlineViewDataSource; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {crashNow = id; save = id; }; 
+            CLASS = PrefsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mPrefsWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = RegistryOutlineItem; LANGUAGE = ObjC; SUPERCLASS = OutlineItem; }
+    ); 
+    IBVersion = 1; 
+}

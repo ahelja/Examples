@@ -1,0 +1,40 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {DevicePopUpAction = id; }; 
+            CLASS = HLDeviceMenuController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDelegate = id; mDevicePopUp = NSPopUpButton; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                DeviceInfoButtonAction = id; 
+                PlayThruCheckBoxAction = id; 
+                RecordingCheckBoxAction = id; 
+                StartHardwareButtonAction = id; 
+                StartIOButtonAction = id; 
+                StopHardwareButtonAction = id; 
+                StopIOButtonAction = id; 
+            }; 
+            CLASS = HLInputWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDeviceBufferSizeTextField = NSTextField; 
+                mDeviceInfoButton = NSButton; 
+                mDeviceMenuController = HLDeviceMenuController; 
+                mDeviceNumberChannelsTextField = NSTextField; 
+                mDeviceSampleRateTextField = NSTextField; 
+                mIsDoingIOIndicator = NSProgressIndicator; 
+                mPlayThruCheckBox = NSButton; 
+                mRecordingCheckBox = NSButton; 
+                mStartDelayPopUp = NSPopUpButton; 
+                mTelemetryTextView = NSTextView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }
+    ); 
+    IBVersion = 1; 
+}

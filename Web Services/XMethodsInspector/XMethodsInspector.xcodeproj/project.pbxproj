@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA04C77607B1F70D005E7CF0 /* XMethodsServiceList.h in Headers */ = {isa = PBXBuildFile; fileRef = 941C688D02512FA202CA0E31 /* XMethodsServiceList.h */; };
+		AA04C77707B1F70D005E7CF0 /* XMethodInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 942A0D1A025150F902CA0E31 /* XMethodInspector.h */; };
+		AA04C77807B1F70D005E7CF0 /* XMethodCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 942A0D1E0251513C02CA0E31 /* XMethodCoordinator.h */; };
+		AA04C77907B1F70D005E7CF0 /* AppleScriptPlayground.h in Headers */ = {isa = PBXBuildFile; fileRef = 948D72050275F4DE02CA0E31 /* AppleScriptPlayground.h */; };
+		AA04C77B07B1F70D005E7CF0 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		AA04C77C07B1F70D005E7CF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		AA04C77E07B1F70D005E7CF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		AA04C77F07B1F70D005E7CF0 /* XMethodsServiceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 941C688C02512FA202CA0E31 /* XMethodsServiceList.m */; };
+		AA04C78007B1F70D005E7CF0 /* XMethodInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 942A0D19025150F902CA0E31 /* XMethodInspector.m */; };
+		AA04C78107B1F70D005E7CF0 /* XMethodCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 942A0D1D0251513C02CA0E31 /* XMethodCoordinator.m */; };
+		AA04C78207B1F70D005E7CF0 /* AppleScriptPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D72030275F4C602CA0E31 /* AppleScriptPlayground.m */; };
+		AA04C78307B1F70D005E7CF0 /* BuildGeneratedCode.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2BEBA04C390D600F12A44 /* BuildGeneratedCode.m */; };
+		AA04C78507B1F70D005E7CF0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AA04C78607B1F70D005E7CF0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B41AE00276085502CA0E31 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		941C688C02512FA202CA0E31 /* XMethodsServiceList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = XMethodsServiceList.m; path = Source/XMethodsServiceList.m; sourceTree = SOURCE_ROOT; };
+		941C688D02512FA202CA0E31 /* XMethodsServiceList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = XMethodsServiceList.h; path = Headers/XMethodsServiceList.h; sourceTree = SOURCE_ROOT; };
+		942A0D19025150F902CA0E31 /* XMethodInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = XMethodInspector.m; path = Source/XMethodInspector.m; sourceTree = "<group>"; };
+		942A0D1A025150F902CA0E31 /* XMethodInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = XMethodInspector.h; path = Headers/XMethodInspector.h; sourceTree = SOURCE_ROOT; };
+		942A0D1D0251513C02CA0E31 /* XMethodCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = XMethodCoordinator.m; path = Source/XMethodCoordinator.m; sourceTree = "<group>"; };
+		942A0D1E0251513C02CA0E31 /* XMethodCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = XMethodCoordinator.h; path = Headers/XMethodCoordinator.h; sourceTree = SOURCE_ROOT; };
+		946E75B1027487B302CA0E31 /* WSGeneratedObj.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file; path = WSGeneratedObj.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		946E75B2027487B302CA0E31 /* WSGeneratedObj.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file; path = WSGeneratedObj.m; sourceTree = BUILT_PRODUCTS_DIR; };
+		946E75B3027487B302CA0E31 /* XMethodsStubs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file; path = XMethodsStubs.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		946E75B4027487B302CA0E31 /* XMethodsStubs.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file; path = XMethodsStubs.m; sourceTree = BUILT_PRODUCTS_DIR; };
+		948D72030275F4C602CA0E31 /* AppleScriptPlayground.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AppleScriptPlayground.m; path = Source/AppleScriptPlayground.m; sourceTree = "<group>"; };
+		948D72050275F4DE02CA0E31 /* AppleScriptPlayground.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AppleScriptPlayground.h; path = Headers/AppleScriptPlayground.h; sourceTree = "<group>"; };
+		94B41AE00276085502CA0E31 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		AA04C78707B1F70D005E7CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA04C78807B1F70D005E7CF0 /* XMethodsInspector.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = XMethodsInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F2BEBA04C390D600F12A44 /* BuildGeneratedCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGeneratedCode.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA04C78407B1F70D005E7CF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA04C78507B1F70D005E7CF0 /* Cocoa.framework in Frameworks */,
+				AA04C78607B1F70D005E7CF0 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				941C688C02512FA202CA0E31 /* XMethodsServiceList.m */,
+				941C688D02512FA202CA0E31 /* XMethodsServiceList.h */,
+				942A0D19025150F902CA0E31 /* XMethodInspector.m */,
+				942A0D1A025150F902CA0E31 /* XMethodInspector.h */,
+				942A0D1D0251513C02CA0E31 /* XMethodCoordinator.m */,
+				942A0D1E0251513C02CA0E31 /* XMethodCoordinator.h */,
+				948D72030275F4C602CA0E31 /* AppleScriptPlayground.m */,
+				948D72050275F4DE02CA0E31 /* AppleScriptPlayground.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				94B41AE00276085502CA0E31 /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA04C78807B1F70D005E7CF0 /* XMethodsInspector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* XMethodsInspector */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				941F51160252A96A02CA0E31 /* Generated */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				AA04C78707B1F70D005E7CF0 /* Info.plist */,
+			);
+			name = XMethodsInspector;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		941F51160252A96A02CA0E31 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D6F2BEBA04C390D600F12A44 /* BuildGeneratedCode.m */,
+				946E75B1027487B302CA0E31 /* WSGeneratedObj.h */,
+				946E75B2027487B302CA0E31 /* WSGeneratedObj.m */,
+				946E75B3027487B302CA0E31 /* XMethodsStubs.h */,
+				946E75B4027487B302CA0E31 /* XMethodsStubs.m */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AA04C77507B1F70D005E7CF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA04C77607B1F70D005E7CF0 /* XMethodsServiceList.h in Headers */,
+				AA04C77707B1F70D005E7CF0 /* XMethodInspector.h in Headers */,
+				AA04C77807B1F70D005E7CF0 /* XMethodCoordinator.h in Headers */,
+				AA04C77907B1F70D005E7CF0 /* AppleScriptPlayground.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AA04C77307B1F70D005E7CF0 /* XMethodsInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B9EB7BBC5B040F000721F6F /* Build configuration list for PBXNativeTarget "XMethodsInspector" */;
+			buildPhases = (
+				AA04C77407B1F70D005E7CF0 /* ShellScript */,
+				AA04C77507B1F70D005E7CF0 /* Headers */,
+				AA04C77A07B1F70D005E7CF0 /* Resources */,
+				AA04C77D07B1F70D005E7CF0 /* Sources */,
+				AA04C78407B1F70D005E7CF0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(DERIVED_SOURCES_DIR)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = XMethodsInspector;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = XMethodsInspector;
+			productInstallPath = "$(HOME)/Applications";
+			productName = XMethodsInspector;
+			productReference = AA04C78807B1F70D005E7CF0 /* XMethodsInspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6B9EB7BFC5B040F000721F6F /* Build configuration list for PBXProject "XMethodsInspector" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* XMethodsInspector */;
+			projectDirPath = "";
+			targets = (
+				AA04C77307B1F70D005E7CF0 /* XMethodsInspector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA04C77A07B1F70D005E7CF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA04C77B07B1F70D005E7CF0 /* MainMenu.nib in Resources */,
+				AA04C77C07B1F70D005E7CF0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA04C77407B1F70D005E7CF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "printenv\nmkdir -p \"${DERIVED_SOURCES_DIR}\"\n/Developer/Tools/WSMakeStubs -x ObjC -dir \"${DERIVED_SOURCES_DIR}\" -name XMethodsStubs -url http://www.xmethods.net/wsdl/query.wsdl\nprintenv";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA04C77D07B1F70D005E7CF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA04C77E07B1F70D005E7CF0 /* main.m in Sources */,
+				AA04C77F07B1F70D005E7CF0 /* XMethodsServiceList.m in Sources */,
+				AA04C78007B1F70D005E7CF0 /* XMethodInspector.m in Sources */,
+				AA04C78107B1F70D005E7CF0 /* XMethodCoordinator.m in Sources */,
+				AA04C78207B1F70D005E7CF0 /* AppleScriptPlayground.m in Sources */,
+				AA04C78307B1F70D005E7CF0 /* BuildGeneratedCode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B9EB7BCC5B040F000721F6F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(DERIVED_SOURCES_DIR)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = XMethodsInspector;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		6B9EB7BDC5B040F000721F6F /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(DERIVED_SOURCES_DIR)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = XMethodsInspector;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		6B9EB7BEC5B040F000721F6F /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(DERIVED_SOURCES_DIR)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = XMethodsInspector;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		6B9EB7C0C5B040F000721F6F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		6B9EB7C1C5B040F000721F6F /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		6B9EB7C2C5B040F000721F6F /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B9EB7BBC5B040F000721F6F /* Build configuration list for PBXNativeTarget "XMethodsInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9EB7BCC5B040F000721F6F /* Development */,
+				6B9EB7BDC5B040F000721F6F /* Deployment */,
+				6B9EB7BEC5B040F000721F6F /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		6B9EB7BFC5B040F000721F6F /* Build configuration list for PBXProject "XMethodsInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9EB7C0C5B040F000721F6F /* Development */,
+				6B9EB7C1C5B040F000721F6F /* Deployment */,
+				6B9EB7C2C5B040F000721F6F /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

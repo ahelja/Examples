@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D0E85B8055B349700B4EDC6 /* FWLib_NuDCLPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E859F055B349600B4EDC6 /* FWLib_NuDCLPool.cpp */; };
+		4D0E85BA055B349700B4EDC6 /* FWLib_Matcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85A1055B349600B4EDC6 /* FWLib_Matcher.cpp */; };
+		4D0E85BC055B349700B4EDC6 /* FWLib_LocalUnitDirectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85A3055B349600B4EDC6 /* FWLib_LocalUnitDirectory.cpp */; };
+		4D0E85BD055B349700B4EDC6 /* FWLib_LocalIsochPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85A4055B349600B4EDC6 /* FWLib_LocalIsochPort.cpp */; };
+		4D0E85BF055B349700B4EDC6 /* FWLib_Listener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85A6055B349600B4EDC6 /* FWLib_Listener.cpp */; };
+		4D0E85C1055B349700B4EDC6 /* FWLib_IO_Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85A8055B349600B4EDC6 /* FWLib_IO_Service.cpp */; };
+		4D0E85C3055B349700B4EDC6 /* FWLib_Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85AA055B349600B4EDC6 /* FWLib_Device.cpp */; };
+		4D0E85C5055B349700B4EDC6 /* FWLib_ConfigDirectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85AC055B349600B4EDC6 /* FWLib_ConfigDirectory.cpp */; };
+		4D0E85C7055B349700B4EDC6 /* FWLib_Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85AE055B349600B4EDC6 /* FWLib_Command.cpp */; };
+		4D0E85C9055B349700B4EDC6 /* FWLib_AddressSpace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E85B0055B349600B4EDC6 /* FWLib_AddressSpace.cpp */; };
+		4D0E85CA055B349700B4EDC6 /* About FWLib.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E85B1055B349600B4EDC6 /* About FWLib.rtf */; };
+		4D0E8609055B372A00B4EDC6 /* FWLib_IsochChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E8607055B372A00B4EDC6 /* FWLib_IsochChannel.cpp */; };
+		4D0E8611055B376B00B4EDC6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0E8610055B376B00B4EDC6 /* IOKit.framework */; };
+		4D0E8A25055B37AA00B4EDC6 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0E8A24055B37AA00B4EDC6 /* CoreFoundation.framework */; };
+		4D0E8AA9055B3EDD00B4EDC6 /* FWLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E8AA4055B3E2500B4EDC6 /* FWLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AAA055B3EDD00B4EDC6 /* FWLib_AddressSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85AF055B349600B4EDC6 /* FWLib_AddressSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AAB055B3EDD00B4EDC6 /* FWLib_Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85AD055B349600B4EDC6 /* FWLib_Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AAC055B3EDD00B4EDC6 /* FWLib_ConfigDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85AB055B349600B4EDC6 /* FWLib_ConfigDirectory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AAD055B3EDD00B4EDC6 /* FWLib_Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85A9055B349600B4EDC6 /* FWLib_Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AAE055B3EDD00B4EDC6 /* FWLib_IO_Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85A7055B349600B4EDC6 /* FWLib_IO_Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AAF055B3EDD00B4EDC6 /* FWLib_IsochChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E8606055B372A00B4EDC6 /* FWLib_IsochChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AB0055B3EDD00B4EDC6 /* FWLib_Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85A5055B349600B4EDC6 /* FWLib_Listener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AB1055B3EDD00B4EDC6 /* FWLib_LocalIsochPort.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85B2055B349600B4EDC6 /* FWLib_LocalIsochPort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AB2055B3EDD00B4EDC6 /* FWLib_LocalUnitDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85A2055B349600B4EDC6 /* FWLib_LocalUnitDirectory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AB3055B3EDD00B4EDC6 /* FWLib_Matcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E85A0055B349600B4EDC6 /* FWLib_Matcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0E8AB4055B3EDD00B4EDC6 /* FWLib_NuDCLPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E859E055B349600B4EDC6 /* FWLib_NuDCLPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D42670E057EA979002F3912 /* FWLib_LocalNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D42670C057EA979002F3912 /* FWLib_LocalNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D42670F057EA979002F3912 /* FWLib_LocalNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D42670D057EA979002F3912 /* FWLib_LocalNode.cpp */; };
+		4D5EBD74056039B5008228D8 /* FWLib_IsochPort.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D5EBD72056039B5008228D8 /* FWLib_IsochPort.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D5EBD75056039B5008228D8 /* FWLib_IsochPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EBD73056039B5008228D8 /* FWLib_IsochPort.cpp */; };
+		4DE45FC805E5A5260055671E /* FWLib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D07F2C80486CC7A007CD1D0 /* FWLib.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4F0BB7EC011F40E904CA0E50 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				PREBINDING = NO;
+				SKIP_INSTALL = YES;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		4F0BB7ED011F40E904CA0E50 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4DE45FC605E5A5050055671E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /Developer/Frameworks/IOKit/firewire;
+			dstSubfolderSpec = 0;
+			files = (
+				4DE45FC805E5A5260055671E /* FWLib.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		32BAE0B70371A74B00C91783 /* FWLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLib_Prefix.pch; sourceTree = "<group>"; };
+		4D0E859B055B349600B4EDC6 /* FWLib_UI_ServicePicker.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_UI_ServicePicker.h; sourceTree = "<group>"; };
+		4D0E859C055B349600B4EDC6 /* FWLib_UI_ServicePicker.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_UI_ServicePicker.cpp; sourceTree = "<group>"; };
+		4D0E859D055B349600B4EDC6 /* FWLib_UI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_UI.h; sourceTree = "<group>"; };
+		4D0E859E055B349600B4EDC6 /* FWLib_NuDCLPool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_NuDCLPool.h; sourceTree = "<group>"; };
+		4D0E859F055B349600B4EDC6 /* FWLib_NuDCLPool.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_NuDCLPool.cpp; sourceTree = "<group>"; };
+		4D0E85A0055B349600B4EDC6 /* FWLib_Matcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_Matcher.h; sourceTree = "<group>"; };
+		4D0E85A1055B349600B4EDC6 /* FWLib_Matcher.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_Matcher.cpp; sourceTree = "<group>"; };
+		4D0E85A2055B349600B4EDC6 /* FWLib_LocalUnitDirectory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_LocalUnitDirectory.h; sourceTree = "<group>"; };
+		4D0E85A3055B349600B4EDC6 /* FWLib_LocalUnitDirectory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_LocalUnitDirectory.cpp; sourceTree = "<group>"; };
+		4D0E85A4055B349600B4EDC6 /* FWLib_LocalIsochPort.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_LocalIsochPort.cpp; sourceTree = "<group>"; };
+		4D0E85A5055B349600B4EDC6 /* FWLib_Listener.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_Listener.h; sourceTree = "<group>"; };
+		4D0E85A6055B349600B4EDC6 /* FWLib_Listener.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_Listener.cpp; sourceTree = "<group>"; };
+		4D0E85A7055B349600B4EDC6 /* FWLib_IO_Service.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_IO_Service.h; sourceTree = "<group>"; };
+		4D0E85A8055B349600B4EDC6 /* FWLib_IO_Service.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_IO_Service.cpp; sourceTree = "<group>"; };
+		4D0E85A9055B349600B4EDC6 /* FWLib_Device.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_Device.h; sourceTree = "<group>"; };
+		4D0E85AA055B349600B4EDC6 /* FWLib_Device.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_Device.cpp; sourceTree = "<group>"; };
+		4D0E85AB055B349600B4EDC6 /* FWLib_ConfigDirectory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_ConfigDirectory.h; sourceTree = "<group>"; };
+		4D0E85AC055B349600B4EDC6 /* FWLib_ConfigDirectory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_ConfigDirectory.cpp; sourceTree = "<group>"; };
+		4D0E85AD055B349600B4EDC6 /* FWLib_Command.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_Command.h; sourceTree = "<group>"; };
+		4D0E85AE055B349600B4EDC6 /* FWLib_Command.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_Command.cpp; sourceTree = "<group>"; };
+		4D0E85AF055B349600B4EDC6 /* FWLib_AddressSpace.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_AddressSpace.h; sourceTree = "<group>"; };
+		4D0E85B0055B349600B4EDC6 /* FWLib_AddressSpace.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_AddressSpace.cpp; sourceTree = "<group>"; };
+		4D0E85B1055B349600B4EDC6 /* About FWLib.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About FWLib.rtf"; sourceTree = "<group>"; };
+		4D0E85B2055B349600B4EDC6 /* FWLib_LocalIsochPort.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWLib_LocalIsochPort.h; sourceTree = "<group>"; };
+		4D0E8606055B372A00B4EDC6 /* FWLib_IsochChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLib_IsochChannel.h; sourceTree = "<group>"; };
+		4D0E8607055B372A00B4EDC6 /* FWLib_IsochChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_IsochChannel.cpp; sourceTree = "<group>"; };
+		4D0E8610055B376B00B4EDC6 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		4D0E8A24055B37AA00B4EDC6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		4D0E8AA4055B3E2500B4EDC6 /* FWLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLib.h; sourceTree = "<group>"; };
+		4D42670C057EA979002F3912 /* FWLib_LocalNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWLib_LocalNode.h; sourceTree = "<group>"; };
+		4D42670D057EA979002F3912 /* FWLib_LocalNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_LocalNode.cpp; sourceTree = "<group>"; };
+		4D5EBD72056039B5008228D8 /* FWLib_IsochPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWLib_IsochPort.h; sourceTree = "<group>"; };
+		4D5EBD73056039B5008228D8 /* FWLib_IsochPort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FWLib_IsochPort.cpp; sourceTree = "<group>"; };
+		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D07F2C80486CC7A007CD1D0 /* FWLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FWLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D07F2C30486CC7A007CD1D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0E8611055B376B00B4EDC6 /* IOKit.framework in Frameworks */,
+				4D0E8A25055B37AA00B4EDC6 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DDFF38A45A11DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D07F2C80486CC7A007CD1D0 /* FWLib.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* FWLib */ = {
+			isa = PBXGroup;
+			children = (
+				4D0E85B1055B349600B4EDC6 /* About FWLib.rtf */,
+				08FB77ACFE841707C02AAC07 /* Source */,
+				4D0E859A055B348300B4EDC6 /* Classes */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DDFF38A45A11DB9C8B /* Products */,
+			);
+			name = FWLib;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4D0E8610055B376B00B4EDC6 /* IOKit.framework */,
+				4D0E8A24055B37AA00B4EDC6 /* CoreFoundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D07F2C70486CC7A007CD1D0 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ACFE841707C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				32BAE0B70371A74B00C91783 /* FWLib_Prefix.pch */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		4D0E859A055B348300B4EDC6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4D0E859E055B349600B4EDC6 /* FWLib_NuDCLPool.h */,
+				4D0E859F055B349600B4EDC6 /* FWLib_NuDCLPool.cpp */,
+				4D0E85A0055B349600B4EDC6 /* FWLib_Matcher.h */,
+				4D0E85A1055B349600B4EDC6 /* FWLib_Matcher.cpp */,
+				4D0E85A2055B349600B4EDC6 /* FWLib_LocalUnitDirectory.h */,
+				4D0E85A3055B349600B4EDC6 /* FWLib_LocalUnitDirectory.cpp */,
+				4D0E85B2055B349600B4EDC6 /* FWLib_LocalIsochPort.h */,
+				4D0E85A4055B349600B4EDC6 /* FWLib_LocalIsochPort.cpp */,
+				4D0E85A5055B349600B4EDC6 /* FWLib_Listener.h */,
+				4D0E85A6055B349600B4EDC6 /* FWLib_Listener.cpp */,
+				4D0E85A7055B349600B4EDC6 /* FWLib_IO_Service.h */,
+				4D0E85A8055B349600B4EDC6 /* FWLib_IO_Service.cpp */,
+				4D0E85A9055B349600B4EDC6 /* FWLib_Device.h */,
+				4D0E85AA055B349600B4EDC6 /* FWLib_Device.cpp */,
+				4D0E85AB055B349600B4EDC6 /* FWLib_ConfigDirectory.h */,
+				4D0E85AC055B349600B4EDC6 /* FWLib_ConfigDirectory.cpp */,
+				4D0E85AD055B349600B4EDC6 /* FWLib_Command.h */,
+				4D0E85AE055B349600B4EDC6 /* FWLib_Command.cpp */,
+				4D0E85AF055B349600B4EDC6 /* FWLib_AddressSpace.h */,
+				4D0E85B0055B349600B4EDC6 /* FWLib_AddressSpace.cpp */,
+				4D0E8606055B372A00B4EDC6 /* FWLib_IsochChannel.h */,
+				4D0E8607055B372A00B4EDC6 /* FWLib_IsochChannel.cpp */,
+				4D5EBD72056039B5008228D8 /* FWLib_IsochPort.h */,
+				4D5EBD73056039B5008228D8 /* FWLib_IsochPort.cpp */,
+				4D0E8AA4055B3E2500B4EDC6 /* FWLib.h */,
+				4D42670D057EA979002F3912 /* FWLib_LocalNode.cpp */,
+				4D42670C057EA979002F3912 /* FWLib_LocalNode.h */,
+				4D0E85CF055B34AD00B4EDC6 /* In Progress */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4D0E85CF055B34AD00B4EDC6 /* In Progress */ = {
+			isa = PBXGroup;
+			children = (
+				4D0E859B055B349600B4EDC6 /* FWLib_UI_ServicePicker.h */,
+				4D0E859C055B349600B4EDC6 /* FWLib_UI_ServicePicker.cpp */,
+				4D0E859D055B349600B4EDC6 /* FWLib_UI.h */,
+			);
+			name = "In Progress";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D07F2BD0486CC7A007CD1D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0E8AA9055B3EDD00B4EDC6 /* FWLib.h in Headers */,
+				4D0E8AAA055B3EDD00B4EDC6 /* FWLib_AddressSpace.h in Headers */,
+				4D0E8AAB055B3EDD00B4EDC6 /* FWLib_Command.h in Headers */,
+				4D0E8AAC055B3EDD00B4EDC6 /* FWLib_ConfigDirectory.h in Headers */,
+				4D0E8AAD055B3EDD00B4EDC6 /* FWLib_Device.h in Headers */,
+				4D0E8AAE055B3EDD00B4EDC6 /* FWLib_IO_Service.h in Headers */,
+				4D0E8AAF055B3EDD00B4EDC6 /* FWLib_IsochChannel.h in Headers */,
+				4D0E8AB0055B3EDD00B4EDC6 /* FWLib_Listener.h in Headers */,
+				4D0E8AB1055B3EDD00B4EDC6 /* FWLib_LocalIsochPort.h in Headers */,
+				4D0E8AB2055B3EDD00B4EDC6 /* FWLib_LocalUnitDirectory.h in Headers */,
+				4D0E8AB3055B3EDD00B4EDC6 /* FWLib_Matcher.h in Headers */,
+				4D0E8AB4055B3EDD00B4EDC6 /* FWLib_NuDCLPool.h in Headers */,
+				4D5EBD74056039B5008228D8 /* FWLib_IsochPort.h in Headers */,
+				4D42670E057EA979002F3912 /* FWLib_LocalNode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D07F2BC0486CC7A007CD1D0 /* FWLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 144F8EB1090066C500B94B25 /* Build configuration list for PBXNativeTarget "FWLib" */;
+			buildPhases = (
+				8D07F2BD0486CC7A007CD1D0 /* Headers */,
+				8D07F2BF0486CC7A007CD1D0 /* Resources */,
+				8D07F2C10486CC7A007CD1D0 /* Sources */,
+				8D07F2C30486CC7A007CD1D0 /* Frameworks */,
+				8D07F2C50486CC7A007CD1D0 /* Rez */,
+				4DE45FC605E5A5050055671E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEPLOYMENT_LOCATION = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FWLib_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = Dynamic;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = FWLib;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+			};
+			dependencies = (
+			);
+			name = FWLib;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = FWLib;
+			productReference = 8D07F2C80486CC7A007CD1D0 /* FWLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 144F8EB5090066C500B94B25 /* Build configuration list for PBXProject "FWLib" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4F0BB7EC011F40E904CA0E50 /* Development */,
+				4F0BB7ED011F40E904CA0E50 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* FWLib */;
+			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				8D07F2BC0486CC7A007CD1D0 /* FWLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D07F2BF0486CC7A007CD1D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0E85CA055B349700B4EDC6 /* About FWLib.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D07F2C50486CC7A007CD1D0 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D07F2C10486CC7A007CD1D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0E8609055B372A00B4EDC6 /* FWLib_IsochChannel.cpp in Sources */,
+				4D0E85B8055B349700B4EDC6 /* FWLib_NuDCLPool.cpp in Sources */,
+				4D0E85C3055B349700B4EDC6 /* FWLib_Device.cpp in Sources */,
+				4D0E85BD055B349700B4EDC6 /* FWLib_LocalIsochPort.cpp in Sources */,
+				4D0E85BA055B349700B4EDC6 /* FWLib_Matcher.cpp in Sources */,
+				4D0E85BC055B349700B4EDC6 /* FWLib_LocalUnitDirectory.cpp in Sources */,
+				4D0E85BF055B349700B4EDC6 /* FWLib_Listener.cpp in Sources */,
+				4D0E85C1055B349700B4EDC6 /* FWLib_IO_Service.cpp in Sources */,
+				4D0E85C5055B349700B4EDC6 /* FWLib_ConfigDirectory.cpp in Sources */,
+				4D0E85C7055B349700B4EDC6 /* FWLib_Command.cpp in Sources */,
+				4D0E85C9055B349700B4EDC6 /* FWLib_AddressSpace.cpp in Sources */,
+				4D5EBD75056039B5008228D8 /* FWLib_IsochPort.cpp in Sources */,
+				4D42670F057EA979002F3912 /* FWLib_LocalNode.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		144F8EB2090066C500B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FWLib_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = Dynamic;
+				PRODUCT_NAME = FWLib;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		144F8EB3090066C500B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FWLib_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = Dynamic;
+				PRODUCT_NAME = FWLib;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		144F8EB6090066C500B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		144F8EB7090066C500B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		144F8EB1090066C500B94B25 /* Build configuration list for PBXNativeTarget "FWLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8EB2090066C500B94B25 /* Debug */,
+				144F8EB3090066C500B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		144F8EB5090066C500B94B25 /* Build configuration list for PBXProject "FWLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8EB6090066C500B94B25 /* Debug */,
+				144F8EB7090066C500B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -1,0 +1,29 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {makeFontBigger = id; makeFontSmaller = id; print = id; }; 
+            CLASS = HTMLView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = NSTableViewWithDraggableItems; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = SherlockChannel; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {startAnimation = id; stopAnimation = id; }; 
+            CLASS = SpinningArrows; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

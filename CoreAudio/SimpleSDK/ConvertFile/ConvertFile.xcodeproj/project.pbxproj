@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		928618F50819CA3800813FBA = {
+			isa = PBXBuildFile;
+			fileRef = 928618F10819CA3800813FBA;
+		};
+		928618F60819CA3800813FBA = {
+			isa = PBXBuildFile;
+			fileRef = 928618F20819CA3800813FBA;
+		};
+		9286192F0819D47100813FBA = {
+			isa = PBXBuildFile;
+			fileRef = 9286192D0819D47100813FBA;
+		};
+		A90AEDAF08874C110039A516 = {
+			isa = PBXBuildFile;
+			fileRef = A90AEDAD08874C100039A516;
+		};
+		A90AEDB008874C110039A516 = {
+			isa = PBXBuildFile;
+			fileRef = A90AEDAE08874C100039A516;
+		};
+		A92B92FF088849FC001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A92B92FE088849FC001F57E6;
+		};
+		A92B931308884AC1001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = 928618F10819CA3800813FBA;
+		};
+		A92B931408884AC1001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A90AEDAD08874C100039A516;
+		};
+		A92B931708884AC1001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = 9286192D0819D47100813FBA;
+		};
+		A92B931808884AC1001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A94087E7083132720031D1A4;
+		};
+		A92B931A08884AC1001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = 928618F20819CA3800813FBA;
+		};
+		A92B931B08884AC1001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A90AEDAE08874C100039A516;
+		};
+		A92B936C08886619001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A92B932F08884B1E001F57E6;
+		};
+		A92B93BD08886FBE001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A92B93BC08886FBE001F57E6;
+		};
+		A92B93BE08886FBE001F57E6 = {
+			isa = PBXBuildFile;
+			fileRef = A92B93BC08886FBE001F57E6;
+		};
+		A94087E8083132720031D1A4 = {
+			isa = PBXBuildFile;
+			fileRef = A94087E7083132720031D1A4;
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA460018CE2711CA2923 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		014CEA470018CE2711CA2923 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				928618F60819CA3800813FBA,
+				A90AEDB008874C110039A516,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A92B931908884AC1001F57E6 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				A92B931A08884AC1001F57E6,
+				A92B931B08884AC1001F57E6,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8DD76F6C0486A84900D96B5E = {
+			isa = PBXFileReference;
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			path = ConvertFile;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		928618F10819CA3800813FBA = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = CAStreamBasicDescription.cpp;
+			path = /Developer/Examples/CoreAudio/PublicUtility/CAStreamBasicDescription.cpp;
+			sourceTree = "<absolute>";
+		};
+		928618F20819CA3800813FBA = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			name = CAStreamBasicDescription.h;
+			path = /Developer/Examples/CoreAudio/PublicUtility/CAStreamBasicDescription.h;
+			sourceTree = "<absolute>";
+		};
+		9286192D0819D47100813FBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = /System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = "<absolute>";
+		};
+		A90AEDAD08874C100039A516 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = CAXException.cpp;
+			path = /Developer/Examples/CoreAudio/PublicUtility/CAXException.cpp;
+			sourceTree = "<absolute>";
+		};
+		A90AEDAE08874C100039A516 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			name = CAXException.h;
+			path = /Developer/Examples/CoreAudio/PublicUtility/CAXException.h;
+			sourceTree = "<absolute>";
+		};
+		A92B92FE088849FC001F57E6 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = "UseAC-AF.cpp";
+			sourceTree = SOURCE_ROOT;
+		};
+		A92B932008884AC1001F57E6 = {
+			isa = PBXFileReference;
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			path = ConvertFile;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A92B932F08884B1E001F57E6 = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = UseExtAF.cpp;
+			sourceTree = "<group>";
+		};
+		A92B93BC08886FBE001F57E6 = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = utils.cpp;
+			sourceTree = "<group>";
+		};
+		A94087E7083132720031D1A4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreFoundation.framework;
+			path = /System/Library/Frameworks/CoreFoundation.framework;
+			sourceTree = "<absolute>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9286192F0819D47100813FBA,
+				A94087E8083132720031D1A4,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A92B931608884AC1001F57E6 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A92B931708884AC1001F57E6,
+				A92B931808884AC1001F57E6,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				A92B932F08884B1E001F57E6,
+				A92B93BC08886FBE001F57E6,
+				A92B92FE088849FC001F57E6,
+				A90AEDB208874C1A0039A516,
+				A94087E7083132720031D1A4,
+				9286192D0819D47100813FBA,
+				C6859E8C029090F304C91782,
+				1AB674ADFE9D54B511CA2CBB,
+			);
+			name = convert2ima;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E,
+				A92B932008884AC1001F57E6,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A90AEDB208874C1A0039A516 = {
+			isa = PBXGroup;
+			children = (
+				A90AEDAE08874C100039A516,
+				A90AEDAD08874C100039A516,
+				928618F10819CA3800813FBA,
+				928618F20819CA3800813FBA,
+			);
+			name = "Public Utility";
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E1620C087B60B6006BF7C2;
+			buildPhases = (
+				8DD76F640486A84900D96B5E,
+				8DD76F660486A84900D96B5E,
+				8DD76F690486A84900D96B5E,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = convert2ima;
+			};
+			dependencies = (
+			);
+			name = "UseAC-AF";
+			productInstallPath = "$(HOME)/bin";
+			productName = convert2ima;
+			productReference = 8DD76F6C0486A84900D96B5E;
+			productType = "com.apple.product-type.tool";
+		};
+		A92B931108884AC1001F57E6 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A92B931C08884AC1001F57E6;
+			buildPhases = (
+				A92B931208884AC1001F57E6,
+				A92B931608884AC1001F57E6,
+				A92B931908884AC1001F57E6,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = convert2ima;
+			};
+			dependencies = (
+			);
+			name = UseExtAF;
+			productInstallPath = "$(HOME)/bin";
+			productName = convert2ima;
+			productReference = A92B932008884AC1001F57E6;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 = {
+			isa = PBXProject;
+			buildConfigurationList = A9E16210087B60B6006BF7C2;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA460018CE2711CA2923,
+				014CEA470018CE2711CA2923,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07;
+			projectDirPath = "";
+			targets = (
+				8DD76F620486A84900D96B5E,
+				A92B931108884AC1001F57E6,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928618F50819CA3800813FBA,
+				A90AEDAF08874C110039A516,
+				A92B92FF088849FC001F57E6,
+				A92B93BE08886FBE001F57E6,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A92B931208884AC1001F57E6 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A92B931308884AC1001F57E6,
+				A92B931408884AC1001F57E6,
+				A92B936C08886619001F57E6,
+				A92B93BD08886FBE001F57E6,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A92B931D08884AC1001F57E6 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConvertFile;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		A92B931E08884AC1001F57E6 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConvertFile;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A92B931F08884AC1001F57E6 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConvertFile;
+			};
+			name = Default;
+		};
+		A9E1620D087B60B6006BF7C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConvertFile;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		A9E1620E087B60B6006BF7C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConvertFile;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A9E1620F087B60B6006BF7C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConvertFile;
+			};
+			name = Default;
+		};
+		A9E16211087B60B6006BF7C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "-DDEBUG=1";
+			};
+			name = Development;
+		};
+		A9E16212087B60B6006BF7C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		A9E16213087B60B6006BF7C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A92B931C08884AC1001F57E6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A92B931D08884AC1001F57E6,
+				A92B931E08884AC1001F57E6,
+				A92B931F08884AC1001F57E6,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E1620C087B60B6006BF7C2 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E1620D087B60B6006BF7C2,
+				A9E1620E087B60B6006BF7C2,
+				A9E1620F087B60B6006BF7C2,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E16210087B60B6006BF7C2 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E16211087B60B6006BF7C2,
+				A9E16212087B60B6006BF7C2,
+				A9E16213087B60B6006BF7C2,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>attributes</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>title</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+	</array>
+	<key>className</key>
+	<string>NSMutableDictionary</string>
+	<key>displayName</key>
+	<string>Calendar</string>
+	<key>entityName</key>
+	<string>com.mycompany.syncexamples.Calendar</string>
+	<key>identityKeys</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>title</string>
+		</dict>
+	</array>
+	<key>name</key>
+	<string>Calendar</string>
+	<key>relationships</key>
+	<array>
+		<dict>
+			<key>deleteRule</key>
+			<string>nullify</string>
+			<key>destination</key>
+			<string>com.mycompany.syncexamples.Event</string>
+			<key>displayName</key>
+			<string>Events</string>
+			<key>isToMany</key>
+			<string>yes</string>
+			<key>name</key>
+			<string>events</string>
+			<key>required</key>
+			<string>no</string>
+			<key>source</key>
+			<string>com.mycompany.syncexamples.Calendar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

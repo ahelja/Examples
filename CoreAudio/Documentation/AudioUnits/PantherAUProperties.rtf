@@ -1,0 +1,208 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fnil\fcharset77 ProFont;}
+{\colortbl;\red255\green255\blue255;\red56\green177\blue60;\red214\green26\blue145;\red255\green109\blue124;
+}
+\margl1440\margr1440\vieww20040\viewh16200\viewkind0
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f0\fs24 \cf0 This document, whilst not exhaustive, covers many of the main additions to properties for AU's in Panther. Broadly (and of most interest), are properties to deal with surround formats, naming of parameters in different situations (clumps), start at time support for tighter synchronisation, CocoaUI\
+\
+	New Property Values:		\
+	kAudioUnitProperty_CocoaUI\
+		Value is a										struct AudioUnitCocoaViewInfo\
+		The Host can determine how big this structure is by querying the size of \
+		the property (ie. How many alternate UI classes there are for the AU)\
+		Typically, most audio units will provide 1 UI class per unit\
+\
+	kAudioUnitProperty_SupportedChannelLayoutTags		read-only	AudioChannelLayoutTags[kVariableLengthArray]\
+	 	Used with GetProperty to ascertain what an AudioUnit understands about\
+		laying out of channel orders. This will normally return one or more of the specified layout tags.\
+		\
+		When a specific set of layouts are returned, the client then uses the kAudioUnitProperty_AudioChannelLayout\
+		property (with one of those layout tags specified) to set the unit to use that layout. In this case\
+		the client (and the AudioUnit when reporting its AudioChannelLayout) is only expected to have set\
+		an AudioChannelLayout which only sets the layout tag as the valid field.\
+		\
+		Custom Channel Maps:\
+		Some audio units may return the tag:\
+			kAudioChannelLayoutTag_UseChannelDescriptions\
+		\
+		In this case, the host then can look at supported number of channels on that scope\
+		(using the kAudioUnitProperty_SupportedNumChannels), and supply an AudioChannelLayout with the \
+		kAudioUnitProperty_AudioChannelLayout property to specify the layout, number of channels\
+		and location of each of those channels. This custom channel map MUST have a channel valence\
+		that is supported by the Audio Unit.\
+		\
+		The UseChannelBitmap field is NOT used within the context of the AudioUnit.\
+	\
+	kAudioUnitProperty_AudioChannelLayout				struct AudioChannelLayout read/write\
+		See above for a general description.\
+\
+		The AudioChannelLayout property describes for a given scope/element the order of \
+		channels within a given stream. This property should be used to set the format\
+		of that scope and element (as it describes not only the number of channels, but\
+		the layout of those channels). Using the _StreamFormat property is generally\
+		not sufficient in this case (as this only describes the number of channels, \
+		but not either the ordering of channels, whether the rendering is for speakers\
+		or headphones (in the stereo case), and so forth). The 3DMixer is one such example\
+		of an AudioUnit that requires an ACM on its output bus.\
+		\
+		Provisional Support for Channel Layouts:\
+		This property (and some others) may be supported by an AudioUnit but may not\
+		have been set, and doesn't have a reasonable default value. In that case a\
+		call to AudioUnitGetProperty will return the following status:\
+			kAudioUnitErr_PropertyNotInUse\
+			\
+		For eg, imagine that you have an AUConverter unit that can convert between\
+		2 different AudioChannelLayout structures. However, the user has set up this\
+		unit just with calls to the StreamDescription.. ie, the ACM property has never\
+		been set. As there are several differenct ACM versions that can represent a\
+		stream with the same number of channels, there is:\
+			(1) No means for the AUConverter in this case to make a guess\
+			(2) The stream itself may just be a N channel stream and have no surround or\
+				speaker implications.\
+				\
+		Thus the need for this status code. The user can interpret this to mean that the \
+		property would be valid if it were set, but currently it hasn't been, there is no\
+		reasonable default (or even need for it), so the unit cannot return a sensible \
+		value for that property.\
+		\
+		For an AudioUnit where the channel layout is not required (but is optional), the\
+		user can call AudioUnitSetProperty with this propertyID and a value of NULL\
+		(size of 0) to clear that setting. \
+			-	If this call is successful, the unit would\
+		then return kAudioUnitErr_PropertyNotInUse in a consequent attempt to get this\
+		property value, until it is set with a valid value again.\
+			-	If this call is unsuccessful, a typical result code is \
+		kAudioUnitErr_InvalidPropertyValue - that result can be taken to mean that\
+		the property value cannot be removed\
+		\
+		On those AudioUnits that require a channel layout (which is the typical case \
+		for an effect unit, for the output of the 3DMixer for example), this "clearing"\
+		call will fail (invalid property value).\
+\
+	kAudioOutputUnitProperty_EnableIO				UInt32 read/write\
+		scope output, element 0 = output\
+		scope input, element 1 = input\
+		output units default to output-only; may disable output or enable input, providing\
+		that the underlying device supports it, with this property. 0=disabled, 1=enabled\
+		using I/O proc.\
+\
+	kAudioOutputUnitProperty_HasIO					UInt32 read-only\
+		scope output, element 0 = output\
+		scope input, element 1 = input\
+		see kAudioOutputUnitProperty_EnableIO\
+		property value is 1 if input or output is enabled on the specified element.\
+	\
+	kAudioOutputUnitProperty_StartTime				AudioOutputUnitStartAtTimeParams, write-only\
+		when this property is set on an output unit, it will cause the next Start request\
+		(but no subsequent Starts) to use AudioDeviceStartAtTime, using the specified timestamp,\
+		passing false for inRequestedStartTimeIsInput.\
+	\
+	kAudioOutputUnitProperty_SetInputCallback		AURenderCallbackStruct, read/write\
+		when an output unit has been enabled for input, this callback can be used to provide\
+		a single callback to the client from the input I/O proc, in order to notify the\
+		client that input is available and may be obtained by calling AudioUnitRender.\
+\
+	kAudioUnitProperty_ParameterValueName			AudioUnitParameterValueName read-only\
+		This property is used with parameters that are marked with the\
+		kAudioUnitParameterFlag_HasName parameter info flag. This indicates that some\
+		(or all) of the values represented by the parameter can and should be\
+		represented by a special display string.\
+		\
+		This is NOT to be confused with kAudioUnitProperty_ParameterValueStrings. That property\
+		is used with parameters that are indexed and is typically used for instance to build\
+		a menu item of choices for one of several parameter values.\
+		\
+		kAudioUnitProperty_ParameterValueName can have a continuous range, and merely states\
+		to the host that if it is displaying those parameter's values, they should request\
+		a name any time any value of the parameter is set when displaying that parameter.\
+		\
+		For instance (a trivial example), a unit may present a gain parameter in a dB scale,\
+		and wish to display its minimum value as "negative infinity". In this case, the AU\
+		will not return names for any parameter value greater than its minimum value - so the host\
+		will then just display the parameter value as is. For values less than or equal to the \
+		minimum value, the AU will return a string for "negative infinity" which the host can\
+		use to display appropriately.\
+		\
+		A less trivial example might be a parameter that presents its values as seconds. However,\
+		in some situations this value should be better displayed in a SMPTE style of display:\
+			HH:MM:SS:FF\
+		In this case, the AU would return a name for any value of the parameter.\
+		\
+		The GetProperty call is used in the same scope and element as the inParamID \
+		that is declared in the struct passed in to this property.\
+		\
+		If the *inValue member is NULL, then the AudioUnit should take the current value\
+		of the specified parameter. If the *inValue member is NOT NULL, then the AU should\
+		return the name used for the specified value.\
+		\
+		On exit, the outName may point to a CFStringRef (which if so must be released by the caller).\
+		If the parameter has no special name that should be applied to that parameter value,\
+		then outName will point to NULL, and the host should display the parameter value as\
+		appropriate.\
+	\
+	kAudioUnitProperty_ParameterIDName						AudioUnitParameterNameInfo (read)\
+		An AudioUnit returns the full parameter name in the GetParameterInfo struct/property.\
+		In some display situations however, there may only be room for a few characters, and\
+		truncating this full name may give a less than optimal name for the user. Thus, \
+		this property can be used to ask the AU whether it can supply a truncated name, with\
+		the host suggesting a length (number of characters). If the AU returns a longer\
+		name than the host requests, that name maybe truncated to the requested characters in display.\
+		The AU could return a shorter name than requeseted as well. The AU returns a CFString\
+		that should be released by the host. When using this property, the host asks for\
+		the name in the same scope and element as the AU publishes the parameter.\
+	\
+	kAudioUnitProperty_ParameterClumpName					AudioUnitParameterNameInfo (read)\
+		This works in a similar manner to the ParameterIDName property, except that the inID\
+		value is one of the clumpID's that are returned with the AU's ParameterInfo struct.\
+	\
+	kMusicDeviceProperty_PartGroup							AudioUnitElement (read/write)\
+		AudioUnitElement that is the groupID (The Group Scope's Element) the part is (or should be) \
+		assigned to. The property is used in the Part Scope, where the element ID is the part\
+		that is being queried (or assigned). This property may in some cases be read only, it may\
+		in some cases only be settable if the AU is uninitialized, or it may be completely dynamic/\
+		These constraints are dependent on the AU's implmentation restrictions, though ideally\
+		this property should be dynamically assignable at any time. The affect of assigning a new\
+		group to a part is undefined (though typically it would be expected that all of the existing\
+		notes would be turned OFF before the re-assignment is made by the AU).\
+	\
+\
+Supporting Structs:\
+
+\f1\fs20 \cf2 \CocoaLigature0 // mCocoaAUViewBundleLocation - contains the location of the bundle which the host app can then use to locate the bundle\cf0 \
+\cf2 // mCocoaAUViewClass - contains the names of the classes that implements the required protocol for an AUView\cf0 \
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+\cf3 typedef\cf0  \cf3 struct\cf0  AudioUnitCocoaViewInfo \{\
+	CFURLRef	mCocoaAUViewBundleLocation;\
+	CFStringRef	mCocoaAUViewClass[\cf4 1\cf0 ];\
+\} AudioUnitCocoaViewInfo;\
+\
+\cf3 typedef\cf0  \cf3 struct\cf0  AudioUnitParameterValueName \{\
+	AudioUnitParameterID	inParamID;\
+	Float32					*inValue;	\cf2 //maybe NULL if should translate current parameter value\cf0 \
+	CFStringRef				outName;  	\cf2 // see comments for kAudioUnitProperty_ParameterValueName\cf0 \
+\} AudioUnitParameterValueName;\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+\cf2 // AU Developers should *not* use a clumpID of zero - this is a reerved value for system usage\cf0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+\cf3 enum\cf0  \{\
+	kAudioUnitClumpID_System = \cf4 0\cf0 \
+\};\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+\cf2 // This is used with the AudioUnitParameterNameInfo.inDesiredLength to signify the full name\cf0 \
+\cf2 // of the paramter information (like its ClumpName, or a "shortened" parameter name, being requeseted\cf0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+\cf3 enum\cf0  \{\
+	kAudioUnitParameterName_Full = \cf4 -1\cf0 \
+\};\
+\
+\cf3 typedef\cf0  \cf3 struct\cf0  AudioUnitParameterNameInfo \{\
+	UInt32					inID;\
+	SInt32					inDesiredLength;\
+	CFStringRef				outName;\
+\} AudioUnitParameterIDName;\
+}

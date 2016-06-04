@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F94EE0107B308C000AE9F13 /* ColorSwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9849E402FF0A3C0ACA0C9A /* ColorSwatch.h */; };
+		4F94EE0207B308C000AE9F13 /* TCarbonEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B561ED1030444400ACA0C9A /* TCarbonEvent.h */; };
+		4F94EE0307B308C000AE9F13 /* TView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B561ED5030444400ACA0C9A /* TView.h */; };
+		4F94EE0407B308C000AE9F13 /* TRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B208B65030AF2E90ACA0C9A /* TRect.h */; };
+		4F94EE0507B308C000AE9F13 /* TObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6029BE9403F9CE210BFF4F4D /* TObject.h */; };
+		4F94EE0607B308C000AE9F13 /* HIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 332477D20690C8C700AAEC61 /* HIFramework.h */; };
+		4F94EE0707B308C000AE9F13 /* TEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 332477D40690C8C700AAEC61 /* TEventHandler.h */; };
+		4F94EE0907B308C000AE9F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		4F94EE0A07B308C000AE9F13 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		4F94EE0C07B308C000AE9F13 /* main.cp in Sources */ = {isa = PBXBuildFile; fileRef = F5B5E4860302E27201B8B912 /* main.cp */; };
+		4F94EE0D07B308C000AE9F13 /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = 8B561ED0030444400ACA0C9A /* TCarbonEvent.cp */; };
+		4F94EE0E07B308C000AE9F13 /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 8B561ED4030444400ACA0C9A /* TView.cp */; };
+		4F94EE0F07B308C000AE9F13 /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = 8B208B64030AF2E90ACA0C9A /* TRect.cp */; };
+		4F94EE1007B308C000AE9F13 /* ColorSwatch.cp in Sources */ = {isa = PBXBuildFile; fileRef = 60928D16034CF5450BCA0CB8 /* ColorSwatch.cp */; };
+		4F94EE1107B308C000AE9F13 /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6029BE9303F9CE210BFF4F4D /* TObject.cp */; };
+		4F94EE1207B308C000AE9F13 /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 332477D30690C8C700AAEC61 /* TEventHandler.cp */; };
+		4F94EE1407B308C000AE9F13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		332477D20690C8C700AAEC61 /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HIFramework.h; sourceTree = "<group>"; };
+		332477D30690C8C700AAEC61 /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TEventHandler.cp; sourceTree = "<group>"; };
+		332477D40690C8C700AAEC61 /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TEventHandler.h; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4F94EE1607B308C000AE9F13 /* Info-ColorSwatch.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-ColorSwatch.plist"; sourceTree = "<group>"; };
+		4F94EE1707B308C000AE9F13 /* ColorSwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029BE9303F9CE210BFF4F4D /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TObject.cp; path = ../HIFramework/TObject.cp; sourceTree = SOURCE_ROOT; };
+		6029BE9403F9CE210BFF4F4D /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TObject.h; path = ../HIFramework/TObject.h; sourceTree = SOURCE_ROOT; };
+		60928D16034CF5450BCA0CB8 /* ColorSwatch.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ColorSwatch.cp; sourceTree = "<group>"; };
+		8B208B64030AF2E90ACA0C9A /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TRect.cp; path = ../HIFramework/TRect.cp; sourceTree = SOURCE_ROOT; };
+		8B208B65030AF2E90ACA0C9A /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TRect.h; path = ../HIFramework/TRect.h; sourceTree = SOURCE_ROOT; };
+		8B561ED0030444400ACA0C9A /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCarbonEvent.cp; path = ../HIFramework/TCarbonEvent.cp; sourceTree = SOURCE_ROOT; };
+		8B561ED1030444400ACA0C9A /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCarbonEvent.h; path = ../HIFramework/TCarbonEvent.h; sourceTree = SOURCE_ROOT; };
+		8B561ED4030444400ACA0C9A /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TView.cp; path = ../HIFramework/TView.cp; sourceTree = SOURCE_ROOT; };
+		8B561ED5030444400ACA0C9A /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TView.h; path = ../HIFramework/TView.h; sourceTree = SOURCE_ROOT; };
+		8B9849E402FF0A3C0ACA0C9A /* ColorSwatch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ColorSwatch.h; sourceTree = "<group>"; };
+		F5B5E4860302E27201B8B912 /* main.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F94EE1307B308C000AE9F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EE1407B308C000AE9F13 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F94EE1707B308C000AE9F13 /* ColorSwatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* ColorSwatch */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+				4F94EE1607B308C000AE9F13 /* Info-ColorSwatch.plist */,
+			);
+			name = ColorSwatch;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5B5E4860302E27201B8B912 /* main.cp */,
+				8B9849E402FF0A3C0ACA0C9A /* ColorSwatch.h */,
+				60928D16034CF5450BCA0CB8 /* ColorSwatch.cp */,
+				8B561ECF030444400ACA0C9A /* HIFramework */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		8B561ECF030444400ACA0C9A /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				332477D20690C8C700AAEC61 /* HIFramework.h */,
+				8B561ED0030444400ACA0C9A /* TCarbonEvent.cp */,
+				8B561ED1030444400ACA0C9A /* TCarbonEvent.h */,
+				332477D30690C8C700AAEC61 /* TEventHandler.cp */,
+				332477D40690C8C700AAEC61 /* TEventHandler.h */,
+				6029BE9303F9CE210BFF4F4D /* TObject.cp */,
+				6029BE9403F9CE210BFF4F4D /* TObject.h */,
+				8B208B64030AF2E90ACA0C9A /* TRect.cp */,
+				8B208B65030AF2E90ACA0C9A /* TRect.h */,
+				8B561ED4030444400ACA0C9A /* TView.cp */,
+				8B561ED5030444400ACA0C9A /* TView.h */,
+			);
+			name = HIFramework;
+			path = ../HIFramework;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F94EE0007B308C000AE9F13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EE0107B308C000AE9F13 /* ColorSwatch.h in Headers */,
+				4F94EE0207B308C000AE9F13 /* TCarbonEvent.h in Headers */,
+				4F94EE0307B308C000AE9F13 /* TView.h in Headers */,
+				4F94EE0407B308C000AE9F13 /* TRect.h in Headers */,
+				4F94EE0507B308C000AE9F13 /* TObject.h in Headers */,
+				4F94EE0607B308C000AE9F13 /* HIFramework.h in Headers */,
+				4F94EE0707B308C000AE9F13 /* TEventHandler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F94EDFF07B308C000AE9F13 /* ColorSwatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5571D208A00F0300BAA99A /* Build configuration list for PBXNativeTarget "ColorSwatch" */;
+			buildPhases = (
+				4F94EE0007B308C000AE9F13 /* Headers */,
+				4F94EE0807B308C000AE9F13 /* Resources */,
+				4F94EE0B07B308C000AE9F13 /* Sources */,
+				4F94EE1307B308C000AE9F13 /* Frameworks */,
+				4F94EE1507B308C000AE9F13 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-ColorSwatch.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ColorSwatch;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = ColorSwatch;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = ColorSwatch;
+			productReference = 4F94EE1707B308C000AE9F13 /* ColorSwatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F5571D608A00F0300BAA99A /* Build configuration list for PBXProject "ColorSwatch" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* ColorSwatch */;
+			projectDirPath = "";
+			targets = (
+				4F94EDFF07B308C000AE9F13 /* ColorSwatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F94EE0807B308C000AE9F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EE0907B308C000AE9F13 /* InfoPlist.strings in Resources */,
+				4F94EE0A07B308C000AE9F13 /* main.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4F94EE1507B308C000AE9F13 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F94EE0B07B308C000AE9F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EE0C07B308C000AE9F13 /* main.cp in Sources */,
+				4F94EE0D07B308C000AE9F13 /* TCarbonEvent.cp in Sources */,
+				4F94EE0E07B308C000AE9F13 /* TView.cp in Sources */,
+				4F94EE0F07B308C000AE9F13 /* TRect.cp in Sources */,
+				4F94EE1007B308C000AE9F13 /* ColorSwatch.cp in Sources */,
+				4F94EE1107B308C000AE9F13 /* TObject.cp in Sources */,
+				4F94EE1207B308C000AE9F13 /* TEventHandler.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F5571D308A00F0300BAA99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-ColorSwatch.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = ColorSwatch;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F5571D408A00F0300BAA99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-ColorSwatch.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = ColorSwatch;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F5571D708A00F0300BAA99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F5571D808A00F0300BAA99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F5571D208A00F0300BAA99A /* Build configuration list for PBXNativeTarget "ColorSwatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5571D308A00F0300BAA99A /* Debug */,
+				4F5571D408A00F0300BAA99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F5571D608A00F0300BAA99A /* Build configuration list for PBXProject "ColorSwatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5571D708A00F0300BAA99A /* Debug */,
+				4F5571D808A00F0300BAA99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

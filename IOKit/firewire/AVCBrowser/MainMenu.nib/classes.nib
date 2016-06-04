@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {openDevice = id; }; 
+            CLASS = DevicesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_devCount" = id; "_devList" = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

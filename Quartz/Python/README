@@ -1,0 +1,43 @@
+
+README
+======
+
+The CoreGraphics python module is a simple wrapper of the CG C-API
+
+For example, what would in C look like:
+
+	CGContextDrawImage (ctx, rect, image)
+
+in Python becomes:
+
+	ctx.drawImage (rect, image)
+
+Additionally, the CoreGraphics module links in functionality from
+QuickTime and Cocoa to provide convenience functions which can easily:
+
+	- Create CGImageRefs from files (via Quicktime Importer)
+	- Save CGBitmapContext to files (via Quicktime Exporter)
+	- Load HTML, RTF and Unicode Text (via Cocoa NSText)	
+	- Convert EPS and PS to PDF (via PS to PDF)
+
+This enables scripters to write simple batch oriented graphics programs
+against the CG API without needing developer tools, or understanding
+compilers, debuggers, IDEs, etc. This is useful for a lot of simple
+common tasks. Some examples of simple scripts that can be written in
+less than a page of code:
+
+	- Rasterize PDF, HTML, RTF, PS documents into a bitmap and export
+	  via QuickTime
+	- Advanced imposition - page-to-paper mappings.
+	- PDF concatenation
+	- Add a cover page, watermarks to a PDF
+	- Dynamic graphics generation on a server
+	- Create a contact sheet from a directory of PDFs.
+
+The CoreGraphics python module is also a simple way to explore and
+experiment with the CG API!
+
+See the API-SUMMARY file for the scheme by which C APIs are mapped to
+Python, and for the complete listing of available functions and
+methods.
+

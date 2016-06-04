@@ -1,0 +1,26 @@
+{\rtf1\mac\ansicpg10000\cocoartf793
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fnil\fcharset77 Monaco;
+}
+{\colortbl;\red255\green255\blue255;}
+{\info}\margl1440\margr1440\vieww13240\viewh15080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs24 \cf0 ReadMe for ATUSIFontPanelDemo
+\f1\b0 \
+\
+This sample shows how to send and receive events from the font panel in ATSUI. In particular, it demonstrates how to use the dropshadow, color, underline, strikethrough, and typography controls, including variations and font features. Events returned from these controls are handled in the function 
+\f2\fs18 \CocoaLigature0 DoFontPanelSelectionEvent()
+\f1\fs24 \CocoaLigature1  in the file controls.c.\
+\
+When running the demo, be sure to make use of the typography panel, available in Mac OS X 10.3 Panther and later:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic TypographyMenu.png \width9840 \height9380
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 The font panel will return a CFDictionary of settings whenever any changes to these controls are made. Not all fonts have available features, the following fonts included with Mac OS X include the most rich feature lists:\
+\
+Zapfino\
+Hoefler Text\
+Skia (includes variation support)}

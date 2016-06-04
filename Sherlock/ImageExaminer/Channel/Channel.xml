@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+(C) Copyright 2002-2003 Apple Computer, Inc. All rights reserved.
+
+IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc. (ÒAppleÓ) in consideration of your agreement to the following terms, and your use, installation, modification or redistribution of this Apple software constitutes acceptance of these terms.  If you do not agree with these terms, please do not use, install, modify or redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and subject to these terms, Apple grants you a personal, non-exclusive license, under AppleÕs copyrights in this original Apple software (the ÒApple SoftwareÓ), to use, reproduce, modify and redistribute the Apple Software, with or without modifications, in source and/or binary forms; provided that if you redistribute the Apple Software in its entirety and without modifications, you must retain this notice and the following text and disclaimers in all such redistributions of the Apple Software.  Neither the name, trademarks, service marks or logos of Apple Computer, Inc. may be used to endorse or promote products derived from the Apple Software without specific prior written permission from Apple.  Except as expressly stated in this notice, no other rights or licenses, express or implied, are granted by Apple herein, including but not limited to any patent rights that may be infringed by your derivative works or by other works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.         												
+-->
+
+
+<!--
+
+	NOTE:	In order to see the debug messages printed in Console,
+			the SHERLOCK_DEBUG_CHANNELS environment variable must
+			be set to 1.
+-->
+
+
+
+<channel>
+
+  <initialize language="JavaScript">
+	
+	debug("----- Initializing the data store -----");
+	
+	/* Set the channel's minimum size */
+ 	DataStore.Set("ImageExaminer.minViewSize", "{width=310; height=260}");
+
+	/* Update the data store representation of the search field as the
+		user types into it. This way, if they click the search button
+		before hitting return, the data store will reflect the latest
+		changes made by the user.
+	*/
+	DataStore.Set("ImageExaminer.MainQueryField.updateValueOnTextChanged", true);
+		
+	/* Customize the NSTableView a bit */
+	DataStore.Set("ImageExaminer.SearchResultsTable.visibleDragColumns", "image");
+	
+	/* Setup the custom first column */
+	DataStore.Set("ImageExaminer.SearchResultsTable.columns.image.cell.nibURL", "ImageCell.nib/objects.nib");
+	DataStore.Set("ImageExaminer.SearchResultsTable.columns.image.dataCellType", "SherlockCell");
+ </initialize>
+
+<triggers>
+
+
+<trigger path="ImageExaminer.didInstall" language="JavaScript">
+
+	debug("----- Channel did install -----");
+
+	/* Set a default value in the search field */
+	DataStore.Set("ImageExaminer.MainQueryField.objectValue", "http://www.apple.com");
+</trigger> 
+
+
+<trigger path="ImageExaminer.GetButton.action" language="JavaScript">
+
+	debug("----- User clicked the Get button -----");
+
+	/* Clear out the previous results */
+	DataStore.Set("ImageExaminer.SearchResultsTable.dataValue", null);
+	
+	/* Indicate that a search is about to take place */
+	DataStore.Set("ImageExaminer.NetworkArrows.animating", true);
+
+
+	/* Kick off the search. Searches are usually done in XQuery, since
+		it has better data parsing/manipulating characteristics than
+		JavaScript.
+	*/
+	DataStore.Notify("DATA.action.performSearch");
+</trigger> 
+
+ 
+<trigger path="DATA.action.performSearch" language="XQuery"
+	inputs="query=ImageExaminer.MainQueryField.objectValue">
+
+	let $log := msg("----- Performing the search -----")
+	let $log := msg("----- Query: ", $query)
+
+	{-- In this example, the "search" will be to go to the apple.com web site,
+		and return all links as "results"
+	--}
+	
+	let $httpRequest := http-request($query)
+	let $html := http-request-value($httpRequest, "DATA")
+	let $baseURL := http-request-value($httpRequest, "ACTUAL_URL") {-- used below... --}
+	
+	{-- Since XQuery is case-sensitive, we need to look for various
+	    cases of the image tag.
+	--}
+	let $imageTags := ($html//img, $html//IMG, $html//Img)
+	
+	{-- Create a list of search results. Each result is a dictionary with a few
+		entries:
+					image - a dictionary with the following entries (used by the
+						custom column view):
+						imageView - dictionary with info for the imageView
+							imageURL - url to the image
+						altText - dictionary with info for the label under the imageView
+							objectValue - a title displayed under the image
+					
+					imageDetail - a string that describes the image tag
+
+		Note that the keys in the dictionary match the columns identifiers (as set in
+		Interface Builder) as appropriate.
+	--}
+	
+	let $results := for $item in $imageTags
+		{-- Get the entire image tag as the image detail --}
+		let $imageDetail := $item/xml-source(.)/string(.)
+		let $imageDetail := concat(substring-before($imageDetail, "&gt;"), "&gt;")
+		{-- Convert spaces to carriage returns --}
+		let $imageDetail := string-replace($imageDetail, " ", "
+")
+		
+		{-- Get the URL of the actual image; check for various case sensitivities --}
+		let $src := $item/@SRC
+		let $src := if ($src) then $src else $item/@src
+		let $src := if ($src) then $src else $item/@Src
+		let $imageURL := if ($src) then url-with-base($src, $baseURL) else ()
+		
+		{-- Get the URL of the actual image; check for various case sensitivities --}
+		let $altText := $item/@ALT
+		let $altText := if ($altText) then $altText else $item/@alt
+		let $altText := if ($altText) then $altText else $item/@Alt
+		let $altText := if ($altText) then $altText else "(no alternate text)"
+		let $altTextDict := dictionary(("objectValue", $altText))
+		
+		{-- Create a dictionary with the imageURL and altText --}
+		let $image := dictionary(
+			("altText", $altTextDict))
+
+		{-- Return the full description of one result --}
+		return dictionary(
+			("imageURL", $imageURL),
+			("image", $image),
+			("imageDetail", $imageDetail)
+			)
+
+	{-- Filter out any results which don't have any image source --}
+	let $results := for $item in $results where ($item/imageURL)
+		return $item
+
+	{-- From the trigger, return a dictionary with key/value pairs representing
+		data store locations and their values.
+	--}
+
+	return dictionary(
+		("ImageExaminer.resultsNeedingImageData", $results),
+		("ImageExaminer.SearchResultsTable.selectedRows", null()),
+		("ImageExaminer.NetworkArrows.animating", false()) )
+ </trigger>
+
+
+
+  <trigger language="XQuery" path="ImageExaminer.resultsNeedingImageData"
+    inputs="searchResults=ImageExaminer.resultsNeedingImageData"
+    output="ImageExaminer.action.downloadImage" 
+    stream="true">
+$searchResults
+  </trigger>
+  
+
+  <trigger language="XQuery" path="ImageExaminer.action.downloadImage"
+    inputs="item= ImageExaminer.action.downloadImage" 
+	output="ImageExaminer.SearchResultsTable.dataValue" append="true">
+	let $imageData := http-get($item/imageURL)/DATA
+	let $imageInfo := if (exists($imageData)) then dictionary(("data", $imageData)) else ()
+	let $imageDataDict := if (exists($imageInfo)) then dictionary(("imageView", $imageInfo)) else ()
+	let $imageDict := $item/image
+	let $imageDict := if (exists($imageInfo)) then dictionary($imageDict, $imageDataDict) else $imageDict
+	return dictionary($item, ("image", $imageDict))
+  </trigger>
+
+
+ </trigger>
+
+
+</triggers>
+
+</channel>
+

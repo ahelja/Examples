@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema version="1.0" xmlns="http://www.apple.com/metadata"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.apple.com/metadata file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd">
+    <note>
+        Base metadata schema for the built in UTI types
+    </note>
+    <attributes>
+        <attribute name="CFBundleGetInfoString" type="CFString"/>
+        <attribute name="CFBundleIdentifier" type="CFString"/>
+        <attribute name="CFBundleShortVersionString" type="CFString"/>
+    </attributes>
+
+    <types>
+        <type name="MY-UTI-Type">
+            <note>
+                This is the base type
+            </note>
+            <allattrs>
+            </allattrs>
+            <displayattrs>
+               CFBundleGetInfoString
+               CFBundleIdentifier
+               CFBundleShortVersionString
+            </displayattrs>
+        </type>
+    </types>
+</schema>
+

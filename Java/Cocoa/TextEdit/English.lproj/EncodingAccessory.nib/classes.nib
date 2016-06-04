@@ -1,0 +1,12 @@
+{
+    IBClasses = (
+        {
+            CLASS = EncodingAccessoryOwner; 
+            LANGUAGE = Java; 
+            OUTLETS = {encodingAccessory = id; encodingPopUpButton = id; ignoreRichTextButton = id; }; 
+            SUPERCLASS = java.lang.Object; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

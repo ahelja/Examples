@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_render?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitRendering"></a>
+<h1>Audio Unit Rendering</h1>
+
+<p>The Audio Unit does its real work when the call to <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> is made. This method is the heart of the Audio Unit; all of the other calls facilitate the operation of this call. This section describes the semantics that are applied in the V2 Audio Unit.</p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_render.html#Introduction">Introduction</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_render.html#SupplyingInput">Supplying Input</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#AudioUnitConnections">Audio Unit Connections</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#RenderCallbacks">Render Callbacks</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#FormatNegotiationBetweenAudioUnits">Format Negotiation Between Audio Units</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_render.html#GettingOutput">Getting Output</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#CallingAudioUnitRender">Calling AudioUnitRender</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#RenderNotifications">Render Notifications</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_render.html#TheCompleteRenderOperation">The Complete Render Operation</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_render.html#AudioUnitBufferManagement">Audio Unit Buffer Management</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#InputRenderCallbackBuffers">Input RenderCallback Buffers</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_render.html#OutputBuffers">Output Buffers</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_render.html#AudioUnitRender">AudioUnitRender</a></td>
+<td></td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_render.html#AudioUnitAddRenderNotify">AudioUnitAddRenderNotify</a></td>
+<td></td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_render.html#AudioUnitRemoveRenderNotify">AudioUnitRemoveRenderNotify</a></td>
+<td></td>
+</tr>
+<tr><td colspan="3"><b>Callbacks</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_render.html#AURenderCallback">AURenderCallback</a></td>
+<td></td>
+</tr>
+<tr><td colspan="3"><b>Enumerations</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+
+<a name="Introduction"></a>
+<h2>Introduction</h2>
+
+	<p>Many Audio Units will require data to process, the most common of these being the effects units. The AudioDevice based output units also require input data to provide to the device they are attached too. Some Audio Units provide their own data (essentially they are a source of audio data). For instance the DLSMusicDevice Audio Unit that generates audio data in response to Note on commands (whether through MIDI messages or the extended note API).</p>
+
+	<p>So, the first issue that a user of an Audio Unit must address is this: if an Audio Unit requires input data, then this input data must be provided through some means.</p>
+
+	<p>There are two methods that can be used to do this. Firstly, through connecting the input of an Audio Unit to the output of another Audio Unit that then provides the audio data for the unit to process. However, if you have a chain of effects units, then at the top of that chain you still need to provide some source of audio data (whether this is being read from a file, or some other source, or generated through some means).</p>
+
+	<p>This input data may come from an Audio Unit like the DLSMusicDevice, that generates audio itself, requiring no audio input. However, in many cases you will want to provide this audio data directly to an Audio Unit, and for this the application needs to use the <a href="au_render.html#AURenderCallback"><tt>AURenderCallback</tt></a> to provide this input data for an Audio Unit to process.</p>
+	
+<a name="SupplyingInput"></a>
+<h2>Supplying Input</h2>
+
+<a name="AudioUnitConnections"></a>
+<h3>Audio Unit Connections</h3>
+	<p>The AUGraph API in the AudioToolbox framework manages alot of this connection state between audio units; in the SDK code examples you will see many examples of using the AUGraph to do just this. But, it is interesting and worthwhile to examine this in more detail.</p>
+	
+	<p>The Audio Unit is connected to another unit through the <a href="au_properties.html#kAudioUnitProperty_MakeConnection"><tt>kAudioUnitProperty_MakeConnection</tt></a> property. For example, lets say that we have opened (and initialized) two effects units - and we want to pass the source material through a filter first, then through a delay unit. 
+
+<pre>
+    <a href="au_properties.html#AudioUnitConnection">AudioUnitConnection</a> myConnection;
+    myConnection.sourceAudioUnit = myFilterUnit;
+    myConnection.sourceOutputNumber = 0;
+    myConnection.destInputNumber = 0;
+
+    <a href="au_property_funcs.html#AudioUnitSetProperty">AudioUnitSetProperty</a> (myDelayUnit, 
+                      <a href="au_properties.html#kAudioUnitProperty_MakeConnection">kAudioUnitProperty_MakeConnection</a>,
+                      <a href="au_state.html#AudioUnitScope">kAudioUnitScope_Input</a>,
+                      0,
+                      &myConnection,
+                      sizeof (myConnection));
+
+</pre></p>
+	
+	<p>This code connects output zero of <tt>myFilterUnit</tt> to input zero of <tt>myDelayUnit</tt>. The SetProperty call is made on the destination unit's input scope, where the <tt>elementID</tt> is the same as the <tt>destInputNumber</tt> that is specified in the connection. But where is the filter unit going to get its input from? The answer of course is from the <a href="au_render.html#AURenderCallback"><tt>AURenderCallback</tt></a>.</p>
+	
+<a name="RenderCallbacks"></a>
+<h3>Render Callbacks</h3>
+
+	<p>A render callback is also a property that is set on an audio unit: the <a href="au_properties.html#kAudioUnitProperty_SetRenderCallback"><tt>kAudioUnitProperty_SetRenderCallback</tt></a> property. In this property, the supplied elementID will correspond to the input bus that this function will be called upon to provide data for when the audio unit calls it. What does this function look like?</p>
+
+<pre>
+    OSStatus 	MyInputCallback (void                       *inRefCon, 
+                            <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a>      *inActionFlags,
+                            const AudioTimeStamp            *inTimeStamp, 
+                            UInt32                          inBusNumber,
+                            UInt32                          inNumFrames, 
+                            AudioBufferList                 *ioData);
+</pre>
+	
+	<p>When this callback is called by the audio unit, the <tt>inBusNumber</tt> is the same value as the <tt>elementID</tt> that is passed in to the <a href="au_property_funcs.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> call that is used to register the callback. ie. This is the input bus that the callback is being asked to provide audio data for.</p>
+	
+	<p>In the following code, we use the <tt>refCon</tt> to point to an instance of a C++ class, where the <tt>inputProc</tt> is a static method defined on this class.</p>
+
+<pre>
+    <a href="au_properties.html#AURenderCallbackStruct">AURenderCallbackStruct</a> myCallback;
+    myCallback.inputProc = SourceDataClass::MyInputCallback;
+    myCallback.inputProcRefCon = &mySourceData; //where mySourceData is an instance of SourceDataClass
+
+    <a href="au_property_funcs.html#AudioUnitSetProperty">AudioUnitSetProperty</a> (myFilterUnit, 
+                      <a href="au_properties.html#kAudioUnitProperty_SetRenderCallback">kAudioUnitProperty_SetRenderCallback</a>,
+                      <a href="au_state.html#AudioUnitScope">kAudioUnitScope_Input</a>,
+                      0,
+                      &myCallback,
+                      sizeof (myCallback));
+   
+    // then the definition of the input callback...
+    OSStatus    SourceDataClass::MyInputCallback (void     *inRefCon, 
+                            <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a>      *ioActionFlags,
+                            const AudioTimeStamp            *inTimeStamp, 
+                            UInt32                          inBusNumber,
+                            UInt32                          inNumFrames, 
+                            AudioBufferList                 *ioData)
+    {
+        SourceDataClass* This = (SourceDataClass*)inRefCon;
+        return This->RenderSource (*inActionFlags, *inTimeStamp, inBusNumber, inNumFrames, ioData);   
+    }
+    
+    // and the Instance method RenderSource...
+    OSStataus    SourceDataClass::RenderSource (
+                            <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a>      & ioActionFlags,
+                            const AudioTimeStamp            & inTimeStamp, 
+                            UInt32                          inBusNumber,
+                            UInt32                          inNumFrames, 
+                            AudioBufferList                 * ioData)
+    {
+            // provide the audio data into ioData
+        return noErr;
+    }
+        // get source data for the supplied bus number
+        // ioData will contain a valid list of AUBuffers
+        // These AUBuffers will also contain allocated memory in their mData fields
+        // We must put the audio data into those mData fields.
+        // If the client has NO Data, then it is responsible for
+        // setting the data to zero - ie. silence - see memset(...)
+</pre>
+
+	<p>Our RenderSource method is then responsible for filling in the buffers that are supplied in the ioData parameter with the relevant audio data. This AudioBufferList will have AudioBuffers that contain valid memory locations for the audio data. If the callback does <b>not</b> have valid audio data when called, then it should <tt>memset</tt> these buffers to a value of zero (ie. silence), and in that case can also set the ioActionFlags with the <a href="au_render.html#AudioUnitRenderActionFlags"><tt>kAudioUnitRenderAction_OutputIsSilence</tt></a> flag to provide a hint that this buffer may not need to be processed. The important point to realise here, is that the audio unit itself is <b>not</b> going to provide this buffer already set to zeroes, so a failure to take this action can lead to garbage being passed through the signal chain. Buffer management in general is discussed in more detail below.</p>
+	
+	<p>If an error is returned from this call, the audio unit will then return that error from its <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call. In the case of an audio unit with multiple input busses, it may just decide to ignore that input and process the valid inputs.</p>
+		
+	<p>What about the format of the data? How does the filter unit know what format we are going to provide data in MyCallbackProc? Or, do we have to provide data in some default format? To fully answer this we should also consider what happens with format negotiation when a connection is made between two audio units.</p>
+
+<a name="FormatNegotiationBetweenAudioUnits"></a>
+<h3>Format Negotiation Between Audio Units</h3>
+
+	<p>When a connection is made, the destination unit (myDelayUnit) will ask the source unit of the connection what the format of the output is on that elementID (or bus). If this format is acceptable, then the connection will be made. If the format is <b>not</b> then an error will be returned and the connection will not be made. Many Audio Units are not able to validate their formats until after initialization, and whether an audio unit is capable of dealing with both formats on its input and matching output will not be validated until initialization. Thus, the AUGraph will only actually do connections that are pending after the graph has been initialized.</p>
+
+	<p>So, when a connection is being made all that the calling code needs to do is to make sure that the format on the output of the source unit (in this case the filter unit) is set up appropriately. This can either use the default format of the audio unit, or set it explicitly using the <a href="au_properties.html#kAudioUnitProperty_StreamFormat"><tt>kAudioUnitProperty_StreamFormat</tt></a> property.</p>
+
+	<p>Of course, this is fine for connections, but when registering a render callback to provide input data to an audio unit, there is nothing that the audio unit can ask for the format of that input. Thus, the format must be set explicitly.</p>
+
+	<p>In the following example, we are going to provide Float32, 2 channels at 44.1KHz. The format also describes a non-interleaved format, where the eventual AudioBufferList will contain one AudioBuffer for each channel, so the mBytesPerPacket, etc, fields, describe the sample format for one of these AudioBuffers. The number of channels describes how many buffers will be contained in the AudioBufferList.
+
+<pre>
+    AudioStreamBasicDescription theStreamFormat;
+    theStreamFormat.mSampleRate = 44100.0;
+    theStreamFormat.mFormatID = kAudioFormatLinearPCM;
+    theStreamFormat.mFormatFlags = kAudioFormatFlagsNativeFloatPacked 
+                                   | kAudioFormatFlagIsNonInterleaved;
+    theStreamFormat.mBytesPerPacket = 4;	
+    theStreamFormat.mFramesPerPacket = 1;	
+    theStreamFormat.mBytesPerFrame = 4;		
+    theStreamFormat.mChannelsPerFrame = 2;	
+    theStreamFormat.mBitsPerChannel = sizeof (Float32) * 8;	
+
+    <a href="au_property_funcs.html#AudioUnitSetProperty">AudioUnitSetProperty</a> (myFilterUnit, 
+                      <a href="au_properties.html#kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a>,
+                      <a href="au_state.html#AudioUnitScope">kAudioUnitScope_Input</a>,
+                      0,
+                      &theStreamFormat,
+                      sizeof (theStreamFormat));
+
+</pre></p>
+
+	<p>So, to set a render callback you have to supply both the callback information and the format that you're callback is going to provide its data to the Audio Unit. When a connection is made between two units, the destination unit will get the format from the source unit, so all you have to do in this case is ensure that the output format of the source unit is correct before the connection is made.</p>
+
+<a name="GettingOutput"></a>
+<h2>Getting Output</h2>
+
+	<a name="CallingAudioUnitRender"></a>
+<h3>Calling AudioUnitRender</h3>
+	
+	<p>In the normal case of outputting to an AudioDevice, the head of a graph of connected Audio Units will be one of the AudioDevice output units. These units attach themselves to a particular Audio Device, and in the I/O Proc of this device, the output unit's render call is made for you. This call will then call through to the connected audio units, and the result of that call is placed in the output buffers of the device by the output unit itself.</p>
+
+	<p>There are other situations though where a host may want to drive the Audio Unit rendering process itself, in which case <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> will need to be called by the host directly. Following the above example, we have source audio being provided to <tt>myFilterUnit</tt> in a render callback. The filter unit's output is connected to <tt>myDelayUnit</tt>. Thus, in order to process any source data, the host calls the render function of <tt>myDelayUnit</tt>, which then calls its source connection (the filter unit), which then calls its source, the render callback of the filter unit.</p>
+
+	<p>In the example below we're going to simulate a series of calls that will render 5120 sample frames (stereo, 44.1KHz) of audio data, in slices of 512 sample frames at a time. To do this we need to provide a valid AudioTimeStamp structure that keeps a sample count that increments with each pull (call to <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> that we make on the delay unit).</p>
+
+<pre>
+    int kNumChannels = 2;
+    int kNumFramesPerSlice = 512;
+    
+    AudioTimeStamp myTimeStamp;
+    myTimeStamp.mSampleTime = 0;
+    myTimeStamp.mFlags = kAudioTimeStampSampleTimeValid;
+    
+        // this allocates enough space for a buffer list with kNumChannels AudioBuffers in it
+    AudioBufferList *theAudioData = 
+                    (AudioBufferList *)malloc (offsetof(AudioBufferList, mBuffers[kNumChannels]));
+    
+    theAudioData->mNumberBuffers = kNumChannels;
+    
+    for (int i = 0; i < kNumChannels; i++) 
+    {
+        theAudioData->mBuffers[i].mNumberChannels = 1;
+        theAudioData->mBuffers[i].mDataByteSize = kNumFramesPerSlice * sizeof(Float32);
+    }
+    
+    for (int i = 0; i < 10; ++i, myTimeStamp.mSampleTime += kNumFramesPerSlice)
+    { 
+        <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a> actionFlags = 0;
+        
+        for (int j = 0; j < kNumChannels; j++)
+            theAudioData->mBuffers[j].mData = NULL;
+
+        <a href="au_render.html#AudioUnitRender">AudioUnitRender</a> (myDelayUnit, 
+                            &actionFlags, 
+                            &myTimeStamp, 
+                            0, 
+                            kNumFramesPerSlice, 
+                            theAudioData); 
+        
+         // now we have the rendered audio data in theAudioData
+         for (int j = 0; j < kNumChannels; j++)
+         {
+         // what do you want to do with this data?    
+            // theAudioData->mBuffers[j].mData
+         }
+    }
+    
+    //some time later - we're done - remember to free!!!
+    free (theAudioData);
+</pre>
+
+	<p>One further thing that is a part of the rendering process is the notifications that can be given to a host that rendering is either about to occur or has occured.</p>
+
+<a name="RenderNotifications"></a>
+<h3>Render Notifications</h3>
+
+	<p>Render notifications are a service that is provided by an Audio Unit to indicate when its <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call has been called. These notifications are provided both before and after the body of code that is executed by the render call, and are thus executed on the <b>output</b> side of the Audio Unit.</p>
+
+	<p>This service provides a very useful means to localize code that has to know about rendering, and do either some preparation before an audio unit should actually render a slice of audio, or do some other work after an audio unit has rendered.</p>
+	
+	<p>A typical head of a graph is an output unit that is attached to an AudioDevice. In this case, the output unit itself is calling the <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call for us, so without this notification we have no idea when the I/O thread is actually running and requiring data to be rendered. In that case, these notifications allow the application to install code to be run on the same thread as the rendering is occuring, and for that code to be run both before and after the audio unit's rendering operation is performed.</p>
+
+<pre>
+    <a href="au_render.html#AudioUnitAddRenderNotify">AudioUnitAddRenderNotify</a> (myFilterUnit, SourceDataClass::MyRenderNotification, &mySourceData);
+    
+        //now we need to redefine the render call to do the right thing
+    OSStatus    SourceDataClass::MyRenderNotification (void *inRefCon, 
+                            <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a>      *ioActionFlags,
+                            const AudioTimeStamp            *inTimeStamp, 
+                            UInt32                          inBusNumber,
+                            UInt32                          inNumFrames, 
+                            AudioBufferList                 *ioData)
+    {
+        SourceDataClass* This = (SourceDataClass*)inRefCon;
+        if (ioActionFlags & <a href="au_render.html#AudioUnitRenderActionFlags">kAudioUnitRenderAction_PreRender</a>) {
+        	// inBusNumber is the bus number for the OUTPUT bus of the unit
+            return This->DoPreRender (*inTimeStamp, ...); //whatever information we'd need
+        }
+        
+        if (ioActionFlags & <a href="au_render.html#AudioUnitRenderActionFlags">kAudioUnitRenderAction_PostRender</a>) {
+        	// inBusNumber is the bus number for the OUTPUT bus of the unit
+            return This->DoPostRender (*inTimeStamp, ...); //whatever information we'd need
+		}
+    }
+</pre>
+
+	<p>Here, we are using MyRenderNotification to dispatch to one of two instance methods, a pre or post render call. In this case, the <tt>inBusNumber</tt> in these calls corresponds to the <b>output</b> bus that the audio unit is being asked to render data for.</p>
+
+<a name="TheCompleteRenderOperation"></a>
+<h2>The Complete Render Operation</h2>
+
+	<p>So, how does all this process look - ie. what does the <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call involve completely. Lets take a look at this for the filter unit?</p>
+
+<pre>
+    Render (myDelayUnit)
+        Call Input Connection
+            Render (myFilterUnit)
+                -> PRE RenderNotify (SourceDataClass::MyRenderNotification)
+                Start Render Work
+                    -> RenderCallback (SourceDataClass::MyInputCallback)
+                Do Render Work
+                -> POST RenderNotify (SourceDataClass::MyRenderNotification)
+            Finish Render (myFilterUnit)
+        Do Render Work
+        Finish Render (myDelayUnit)
+</pre>
+
+	<p>As you can see the pre and post render notifications completely surround the work that goes on in the <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call.</p>
+	
+	<p>What would this look like if we attached a render notification to the delay unit instead of the filter?</p>
+
+<pre>
+    Render (myDelayUnit)
+        -> PRE RenderNotify (DelayNotificationCBack)
+        Call Input Connection
+            Render (myFilterUnit)
+                Start Render Work
+                    -> RenderCallback (SourceDataClass::MyInputCallback)
+                Do Render Work (filter)
+        Do Render Work (delay)
+        -> POST RenderNotify (DelayNotificationCBack)
+        Finish Render (myDelayUnit)
+</pre>
+
+	<p>For the delay unit's render call, all that it knows is that it needs to pull on an input connection (which results in a call to the Filter's render call), but what occurs within that render call the delay unit has no insight into; it just gets back the audio data from that call. Then it does its render work on that data, finally notifying that it has finished rendering, then returns.</p>
+
+	<p>The prototype for the render notification is the same as for the render input callback itself, but the context in which they are called and what can be done is quite different. The render notification is called at the output stage of an audio unit - both before any code is executed in the <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call, and after. A render input callback's role is to provide input on a specific elementID (bus), thus it is called as part of the rendering process, and directly from within the body of the code of the render call itself.</p>
+
+	<p>The render notifications can be used to measure the time it takes (in this example) to get the source data, apply the filter processing to it, and then apply the delay processing. This is how the AUGraph for instance is able to estimate fairly accurately the CPU usage of a particular graph. It measures the time between the pre and post render notification (which is attached to its head unit), then takes that time as some percentage of the buffer time - which is represented by the number of sample frames of that slice of data divided by the sample rate of that data  (as understood by the head unit's output sample rate of course).</p>
+
+	<p>To further clarify this, lets take another example. Lets imaginge that we have a mixer with 3 inputs and 1 output (bus/elementID 0), and we have both render notifications for the mixer and callbacks for each of its inputs. To further discriminate this, lets also say that the inputs are attached to busses 1 to 3 on the input. How does this look?</p>
+
+<pre>
+    <a href="au_render.html#AudioUnitRender">AudioUnitRender</a> (myMixerUnit, 
+                       &actionFlags, //== 0
+                       &myTimeStamp, 
+                       0, //this is our output bus number
+                       kNumFramesPerSlice, 
+                       theAudioData);
+                                           
+                            
+    Render (myMixerUnit)
+        -> PRE RenderNotify (MixerNotificationCBack: inBusNumber == 0 output bus we're rendering)
+            Begin Render
+                -> Pulls Input Render Callback - inBusNumber == 1 input bus we're providing data
+                -> Pulls Input Render Callback - inBusNumber == 2 input bus we're providing data
+                -> Pulls Input Render Callback - inBusNumber == 3 input bus we're providing data
+            Finish Mix
+        -> POST RenderNotify (MixerNotificationCBack: inBusNumber == 0 output bus we've rendered)
+        Finish Render (myMixerUnit)
+
+</pre>
+
+<a name="AudioUnitBufferManagement"></a>
+<h2>Audio Unit Buffer Management</h2>
+	
+	<p>This topic relates to several areas, generally covering how an Audio Unit will both manage its buffers, how an application can manage buffers for an Audio Unit, and some of the points to be aware of. We will cover the possibilities on the buffers that are supplied to the input render callbacks, the buffers that the caller of <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> can supply, and how the <a href="au_properties.html#kAudioUnitProperty_SetExternalBuffer"><tt>kAudioUnitProperty_SetExternalBuffer</tt></a> can be used to optimise such usage.</p>
+
+	<p>When we talk about buffers in this context we are referring to the <tt>mData</tt> field of the AudioBuffer structure, which itself is a member of the AudioBufferList that is used as a container to pass those buffers around. It is simplest to think of this in the following way. The AudioBufferList contains some number of buffers (which are described by its accompanying AudioStreamBasicDescription). The AudioBuffer contains both the buffer itself (the <tt>mData</tt> field) and the number of bytes that are contained within that buffer.</p>
+ 
+	<p>Firstly, it is required that <b>ALL</b> buffers that are supplied or used by an Audio Unit begin at an altivec aligned boundary. That is, the starting address of the buffer must be equally divisible by 16. <tt>malloc</tt> will automatically return allocations that are aligned in this manner.</p>
+
+	<a name="InputRenderCallbackBuffers"></a>
+<h3>Input RenderCallback Buffers</h3>
+	
+	<p>In the above discussion, we described the <a href="au_render.html#AURenderCallback"><tt>AURenderCallback</tt></a> that can be passed in to an Audio Unit to set as that unit's input callback for a particular input elementID (bus). One of the parameters to this callback is an AudioBufferList <tt>ioData</tt>. Audio Units are required to provide a valid buffer when calling an input callback. The contents of this buffer are <b>not</b> prepared in any way, ie, the data is not zeroed.</p>
+
+	<p>In the typical operation, the input callback code will copy or set the contents of this buffer with the audio data that it wishes to supply to the audio unit through this callback.</p>
+
+	<p>Alternatively, the callback could reset the buffer pointers, providing pointers into its own buffers. If the callback does this, the code must ensure that the buffer remains valid for the possible duration of that render call, and that once supplied the contents of that buffer can be changed at will - for instance, any audio units including the audio unit that is making the input callback, may be able to process the data in place, and thus not copying the input data into an output buffer.</p>
+
+	<p>If the callback is going to reset a buffer in this way, the buffer must begin at an altivec aligned (ie 16 byte boundary).</p>
+
+	<a name="OutputBuffers"></a>
+<h3>Output Buffers</h3>
+	
+	<p>In the above example we called <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> supplying AudioBuffer structures where the mData field (the buffer itself) was set to NULL. This allows the Audio Unit to provide a buffer back to the caller, which can potentially save extraneous copies. In the above example, the Filter unit provides a buffer to the input callback. Now, if the filter can process in place, it is free to do that, and provide that input buffer to the buffer in its <tt>ioBuffer</tt> parameter of its <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call. Remember the Delay unit will be making that call.</p>
+
+	<p>Now, the default behaviour of an Audio Unit when it calls a connected unit for data, is to <b>not</b> provide buffers to that source unit (ie. same as described above). So, when the Delay unit calls the Filter unit for its render data, it won't provide buffers.</p>
+
+	<p>So, to continue, when the filter unit has finished its rendering it will then place its input buffers in the output <tt>ioData</tt> buffer list. The Delay unit will take that data and process it. If the delay unit can process in-place, then it will operate directly on those buffers, so the buffers that the caller of the delay's render call sees in this case are actually the source buffers taht have been operated on in place through the entire chain.</p>
+
+	<p>Inline processing of data is not a necessary feature of an audio unit. So, in that case the Audio Unit is responsible for returning a buffer from its render call, if the caller does not provide one (as is the case in the example we're discussing, as well as the normal case when a connected Audio Unit is called). As the Audio Unit is now responsible for the buffer it needs to know how much memory it must allocate in order to handle this potential request. It makes this decision based on two factors, firstly the format of its output bus. Seconly there is a property called <a href="au_properties.html#kAudioUnitProperty_MaximumFramesPerSlice"><tt>kAudioUnitProperty_MaximumFramesPerSlice</tt></a> which provides an Audio Unit with a maximum buffer size that it is required to support. Calling for it to provide more frames of data than this limit will result in an error. The host can set this value as appropriate.</p>
+
+	<p>If <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> is called where the caller supplies buffers, the Audio Unit is required to ensure that those buffers contain its output. It cannot (unlike the input proc) reset those buffer pointers to another buffer. The Audio Unit may render directly into those buffers, or it may copy its internally rendered result into those buffers (this behaviour is unspecified and is in large part dependent on the kind of DSP that the Audio Unit is doing).</p>
+	
+	<p>Finally, the <a href="au_properties.html#kAudioUnitProperty_SetExternalBuffer"><tt>kAudioUnitProperty_SetExternalBuffer</tt></a> property allows a host to provide the buffers that the Audio Unit will use. This property is set on the specific input or output scope and the elementID (bus). The supplied buffer must be large enough to contain the required data (based on the format), if it isn't the Audio Unit will not use it for that scope and element, and will instead use its own buffer. The restriction implied by the <a href="au_properties.html#kAudioUnitProperty_MaximumFramesPerSlice"><tt>kAudioUnitProperty_MaximumFramesPerSlice</tt></a> property is also applied to this buffer, even if the buffer itself is large enough. This property allows the host to use a ping-pong buffer management scheme, allowing the sharing of buffers between audio units.</p>
+
+<hr></hr>
+
+<a name="//apple_ref/c/func/AudioUnitRender"></a>
+<h3><a name="AudioUnitRender">AudioUnitRender</a></h3>
+
+<pre>ComponentResult <b>AudioUnitRender</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>                     ci,
+  <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a> *  ioActionFlags,
+  const AudioTimeStamp *        inTimeStamp,
+  UInt32                        inOutputBusNumber,
+  UInt32                        inNumberFrames,
+  AudioBufferList *             ioData
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+			The Audio Unit being asked to render audio.
+		</dd>
+<dt><tt>ioActionFlags</tt></dt>
+<dd>
+			The caller should provide a valid address here (NULL is not
+			accepted). The flags value should also be zero, the Audio Unit will then set the flags
+			appropriately internally. The Audio Unit can return the
+			<code><a href="au_render.html#AudioUnitRenderActionFlags">kAudioUnitRenderAction_OutputIsSilence</a></code> flag after this
+			call.
+		</dd>
+<dt><tt>inTimeStamp</tt></dt>
+<dd>
+			An <tt>AudioTimeStamp</tt> that will not be altered by the Audio Unit. This
+			time stamp should contain at least a valid sample count, where that
+			count accumlates from one call to the next. It is defined in
+			<code>CoreAudio/CoreAudioTypes.h</code>. If the Audio Unit is doing
+			its work in real time, then it can be useful to also provide the
+			HostTime field in this struct (alongside the sample count)
+		</dd>
+<dt><tt>inOutputBusNumber</tt></dt>
+<dd>
+			The output bus (element) of the Audio Unit for which audio is to
+			be rendered.  A unit with multiple output busses must be called 
+			separately to render for each bus.
+		</dd>
+<dt><tt>inNumberFrames</tt></dt>
+<dd>
+			Despite its redundancy with the <tt>mDataByteSize</tt> member of each 
+			<tt>AudioBuffer</tt> in <tt>ioData</tt>, this is a much more
+			convenient and natural way to specify the number of sample frames
+			to be rendered, and must be correct.
+		</dd>
+<dt><tt>ioData</tt></dt>
+<dd>
+			A valid <tt>AudioBufferList</tt> where the Audio Unit will place its
+			audio data. A valid ioData is one that must match the format that
+			has been previously set with (or reported through) the
+			<code><a href="au_properties.html#kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a></code> property for the
+			specified output bus.
+		</dd>
+</dl>
+
+
+
+
+<hr></hr>
+
+<a name="//apple_ref/c/func/AudioUnitAddRenderNotify"></a>
+<h3><a name="AudioUnitAddRenderNotify">AudioUnitAddRenderNotify</a></h3>
+
+<pre>ComponentResult <b>AudioUnitAddRenderNotify</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>         ci,
+  <a href="au_render.html#AURenderCallback">AURenderCallback</a>  inProc,
+  void *            inProcRefCon
+);</pre>
+	
+		This registers the supplied <a href="au_render.html#AURenderCallback"><tt>AURenderCallback</tt></a> function with the
+		Audio Unit will be called by the Audio Unit both before and after it
+		performs its actual rendering. The registration of this notification is
+		paired to both the address of the render callback and the provided ref
+		con. This allows for multiple copies of the same function to be
+		registered with different ref cons, and vice versa.
+	
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitRemoveRenderNotify"></a>
+<h3><a name="AudioUnitRemoveRenderNotify">AudioUnitRemoveRenderNotify</a></h3>
+
+<pre>ComponentResult <b>AudioUnitRemoveRenderNotify</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>         ci,
+  <a href="au_render.html#AURenderCallback">AURenderCallback</a>  inProc,
+  void *            inProcRefCon
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inProc</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inProcRefCon</tt></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+
+
+<a name="//apple_ref/c/tdef/AURenderCallback"></a>
+<h3><a name="AURenderCallback">AURenderCallback</a></h3>
+
+<pre>typedef OSStatus (*<b>AURenderCallback</b>)(
+  void *                        inRefCon,
+  <a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a> *  ioActionFlags,
+  const AudioTimeStamp *        inTimeStamp,
+  UInt32                        inBusNumber,
+  UInt32                        inNumberFrames,
+  AudioBufferList *             ioData
+);</pre>
+	
+		This callback is very similar to the <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a>
+		function. <code>ioActionFlags</code> is passed by reference because it
+		is possible to pass information back from a render call to the caller.
+		When this callback is called before <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> actually begins to
+		render, this variable will have the
+		<code><a href="au_render.html#AudioUnitRenderActionFlags">kAudioUnitRenderAction_PreRender</a></code> bit set, and when called
+		after rendering the <code><a href="au_render.html#AudioUnitRenderActionFlags">kAudioUnitRenderAction_PostRender</a></code> bit
+		will be set.<p>
+
+		In both the pre and post calls, the notification parameters are expected
+		to be showing the receiver the same values that are passed to the Audio
+		Unit before and after it renders respectively. The pre-render
+		notification is a very good place to schedule events for example for an
+		Audio Unit, particularly if the Audio Unit's rendering process is
+		happening directly in the thread of an AudioDevice's I/O Proc. The
+		<code>inTimeStamp</code> will contain a valid sample count at least and
+		so the receiver of the notification can determine (as will the Audio
+		Unit in its render call) what the current sample count is and how many
+		sample frames this particular render call should produce.<p>
+
+		The post-render notification will present (at least in most cases), the
+		audio data that resulted from the render process. As a client can hook
+		into any Audio Unit in this fashion, it is possible to retrieve the
+		results of any part of the rendering process. This could be used for
+		example to gather the audio data for visualization (which of course
+		would be analyzed in a different thread than the I/O thread!) before it
+		is submitted to the hardware, without having to manually call through
+		the chain.<p>
+
+		The <code>AURenderCallback</code> is also used with the
+		<code><a href="au_properties.html#kAudioUnitProperty_SetRenderCallback">kAudioUnitProperty_SetRenderCallback</a></code> property. It is
+		possible to register the same callback with both the render notify call
+		and the call by the Audio Unit for input data.
+	
+
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitRenderActionFlags"></a>
+<h3><a name="AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a></h3>
+
+		<pre>typedef UInt32 <b>AudioUnitRenderActionFlags</b>;</pre>
+<pre>enum {
+  kAudioUnitRenderAction_PreRender        = (1 << 2),
+  kAudioUnitRenderAction_PostRender       = (1 << 3),
+  kAudioUnitRenderAction_OutputIsSilence  = (1 << 4)
+};</pre>
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioUnitRenderAction_PreRender"><tt>kAudioUnitRenderAction_PreRender</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitRenderAction_PostRender"><tt>kAudioUnitRenderAction_PostRender</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitRenderAction_OutputIsSilence"><tt>kAudioUnitRenderAction_OutputIsSilence</tt></a></dt>
+<dd>
+			If the <tt>kAudioUnitRenderAction_OutputIsSilence</tt> is set, this indicates to the caller that the Audio Unit did not
+			generate any audio data (or have any audio data to process from its
+			input sources). The caller can use this, for instance, as a hint to
+			not do any processing on the contents of that returned buffer. If this flag
+			is set, the Audio Unit or caller, is still expected to provide valid buffers on return,
+			with the contents of those buffers zeroed out.
+		</dd>
+</dl>
+
+
+
+</body>
+</html>

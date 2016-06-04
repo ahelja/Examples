@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73B89BFA049A947E00C919A3 /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65530FEEE29E27F000001 /* Controller.h */; };
+		73B89BFB049A947E00C919A3 /* Aspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65531FEEE29E27F000001 /* Aspect.h */; };
+		73B89BFC049A947E00C919A3 /* VertScrollAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65532FEEE29E27F000001 /* VertScrollAspect.h */; };
+		73B89BFD049A947E00C919A3 /* BiScrollAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65533FEEE29E27F000001 /* BiScrollAspect.h */; };
+		73B89BFE049A947E00C919A3 /* FixedSizeAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65534FEEE29E27F000001 /* FixedSizeAspect.h */; };
+		73B89BFF049A947E00C919A3 /* TwoColumnsAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65535FEEE29E27F000001 /* TwoColumnsAspect.h */; };
+		73B89C00049A947E00C919A3 /* FieldAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C65536FEEE29E27F000001 /* FieldAspect.h */; };
+		73B89C01049A947E00C919A3 /* Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B89BF6049A946E00C919A3 /* Prefix.h */; };
+		73B89C03049A947E00C919A3 /* Aspect.nib in Resources */ = {isa = PBXBuildFile; fileRef = 00C6553AFEEE29E27F000001 /* Aspect.nib */; };
+		73B89C04049A947E00C919A3 /* TextSizingExample.nib in Resources */ = {isa = PBXBuildFile; fileRef = 00C6553CFEEE29E27F000001 /* TextSizingExample.nib */; };
+		73B89C05049A947E00C919A3 /* FieldAspect.nib in Resources */ = {isa = PBXBuildFile; fileRef = 00C6553FFEEE29E27F000001 /* FieldAspect.nib */; };
+		73B89C06049A947E00C919A3 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00C65542FEEE29E27F000001 /* README.rtf */; };
+		73B89C07049A947E00C919A3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00C65543FEEE29E27F000001 /* Credits.rtf */; };
+		73B89C09049A947E00C919A3 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C65528FEEE29E27F000001 /* Controller.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C0A049A947E00C919A3 /* Aspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C65529FEEE29E27F000001 /* Aspect.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C0B049A947E00C919A3 /* VertScrollAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6552AFEEE29E27F000001 /* VertScrollAspect.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C0C049A947E00C919A3 /* BiScrollAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6552BFEEE29E27F000001 /* BiScrollAspect.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C0D049A947E00C919A3 /* FixedSizeAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6552CFEEE29E27F000001 /* FixedSizeAspect.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C0E049A947E00C919A3 /* TwoColumnsAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6552DFEEE29E27F000001 /* TwoColumnsAspect.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C0F049A947E00C919A3 /* FieldAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6552EFEEE29E27F000001 /* FieldAspect.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C10049A947E00C919A3 /* TextSizingExample_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C65538FEEE29E27F000001 /* TextSizingExample_main.m */; settings = {ATTRIBUTES = (); }; };
+		73B89C12049A947E00C919A3 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C6554DFEEE29E27F000001 /* AppKit.framework */; };
+		73B89C13049A947E00C919A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C6554EFEEE29E27F000001 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		734E6333049E690A00C919A3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXBuildStyle section */
+		01D4F814FFB7A9BD11CA0CA4 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		01D4F815FFB7A9BD11CA0CA4 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		00C65528FEEE29E27F000001 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		00C65529FEEE29E27F000001 /* Aspect.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Aspect.m; sourceTree = "<group>"; };
+		00C6552AFEEE29E27F000001 /* VertScrollAspect.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VertScrollAspect.m; sourceTree = "<group>"; };
+		00C6552BFEEE29E27F000001 /* BiScrollAspect.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BiScrollAspect.m; sourceTree = "<group>"; };
+		00C6552CFEEE29E27F000001 /* FixedSizeAspect.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FixedSizeAspect.m; sourceTree = "<group>"; };
+		00C6552DFEEE29E27F000001 /* TwoColumnsAspect.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TwoColumnsAspect.m; sourceTree = "<group>"; };
+		00C6552EFEEE29E27F000001 /* FieldAspect.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FieldAspect.m; sourceTree = "<group>"; };
+		00C65530FEEE29E27F000001 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		00C65531FEEE29E27F000001 /* Aspect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Aspect.h; sourceTree = "<group>"; };
+		00C65532FEEE29E27F000001 /* VertScrollAspect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VertScrollAspect.h; sourceTree = "<group>"; };
+		00C65533FEEE29E27F000001 /* BiScrollAspect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BiScrollAspect.h; sourceTree = "<group>"; };
+		00C65534FEEE29E27F000001 /* FixedSizeAspect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FixedSizeAspect.h; sourceTree = "<group>"; };
+		00C65535FEEE29E27F000001 /* TwoColumnsAspect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TwoColumnsAspect.h; sourceTree = "<group>"; };
+		00C65536FEEE29E27F000001 /* FieldAspect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FieldAspect.h; sourceTree = "<group>"; };
+		00C65538FEEE29E27F000001 /* TextSizingExample_main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TextSizingExample_main.m; sourceTree = "<group>"; };
+		00C6553BFEEE29E27F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Aspect.nib; sourceTree = "<group>"; };
+		00C6553DFEEE29E27F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/TextSizingExample.nib; sourceTree = "<group>"; };
+		00C6553EFEEE29E27F000001 /* English - windows */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = "English - windows"; path = "English.lproj/TextSizingExample-windows.nib"; sourceTree = "<group>"; };
+		00C65540FEEE29E27F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/FieldAspect.nib; sourceTree = "<group>"; };
+		00C65542FEEE29E27F000001 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		00C65544FEEE29E27F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		00C6554DFEEE29E27F000001 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		00C6554EFEEE29E27F000001 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		73B89BF6049A946E00C919A3 /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		73B89C16049A947E00C919A3 /* Info-TextSizingExample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-TextSizingExample.plist"; sourceTree = "<group>"; };
+		73B89C17049A947E00C919A3 /* TextSizingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextSizingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73B89C11049A947E00C919A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B89C12049A947E00C919A3 /* AppKit.framework in Frameworks */,
+				73B89C13049A947E00C919A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C65524FEEE29E27F000001 /* TextSizingExample */ = {
+			isa = PBXGroup;
+			children = (
+				00C65525FEEE29E27F000001 /* Products */,
+				00C65527FEEE29E27F000001 /* Classes */,
+				00C6552FFEEE29E27F000001 /* Headers */,
+				00C65537FEEE29E27F000001 /* Other Sources */,
+				00C65539FEEE29E27F000001 /* Interfaces */,
+				00C65541FEEE29E27F000001 /* Resources */,
+				00C65545FEEE29E27F000001 /* Supporting Files */,
+				00C6554CFEEE29E27F000001 /* External Frameworks and Libraries */,
+				73B89C16049A947E00C919A3 /* Info-TextSizingExample.plist */,
+			);
+			name = TextSizingExample;
+			sourceTree = "<group>";
+		};
+		00C65525FEEE29E27F000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73B89C17049A947E00C919A3 /* TextSizingExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C65527FEEE29E27F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				00C65528FEEE29E27F000001 /* Controller.m */,
+				00C65529FEEE29E27F000001 /* Aspect.m */,
+				00C6552AFEEE29E27F000001 /* VertScrollAspect.m */,
+				00C6552BFEEE29E27F000001 /* BiScrollAspect.m */,
+				00C6552CFEEE29E27F000001 /* FixedSizeAspect.m */,
+				00C6552DFEEE29E27F000001 /* TwoColumnsAspect.m */,
+				00C6552EFEEE29E27F000001 /* FieldAspect.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		00C6552FFEEE29E27F000001 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				00C65530FEEE29E27F000001 /* Controller.h */,
+				00C65531FEEE29E27F000001 /* Aspect.h */,
+				00C65532FEEE29E27F000001 /* VertScrollAspect.h */,
+				00C65533FEEE29E27F000001 /* BiScrollAspect.h */,
+				00C65534FEEE29E27F000001 /* FixedSizeAspect.h */,
+				00C65535FEEE29E27F000001 /* TwoColumnsAspect.h */,
+				00C65536FEEE29E27F000001 /* FieldAspect.h */,
+				73B89BF6049A946E00C919A3 /* Prefix.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		00C65537FEEE29E27F000001 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				00C65538FEEE29E27F000001 /* TextSizingExample_main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		00C65539FEEE29E27F000001 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				00C6553AFEEE29E27F000001 /* Aspect.nib */,
+				00C6553CFEEE29E27F000001 /* TextSizingExample.nib */,
+				00C6553FFEEE29E27F000001 /* FieldAspect.nib */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		00C65541FEEE29E27F000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00C65542FEEE29E27F000001 /* README.rtf */,
+				00C65543FEEE29E27F000001 /* Credits.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		00C65545FEEE29E27F000001 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00C6554CFEEE29E27F000001 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				00C6554DFEEE29E27F000001 /* AppKit.framework */,
+				00C6554EFEEE29E27F000001 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		73B89BF9049A947E00C919A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B89BFA049A947E00C919A3 /* Controller.h in Headers */,
+				73B89BFB049A947E00C919A3 /* Aspect.h in Headers */,
+				73B89BFC049A947E00C919A3 /* VertScrollAspect.h in Headers */,
+				73B89BFD049A947E00C919A3 /* BiScrollAspect.h in Headers */,
+				73B89BFE049A947E00C919A3 /* FixedSizeAspect.h in Headers */,
+				73B89BFF049A947E00C919A3 /* TwoColumnsAspect.h in Headers */,
+				73B89C00049A947E00C919A3 /* FieldAspect.h in Headers */,
+				73B89C01049A947E00C919A3 /* Prefix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73B89BF8049A947E00C919A3 /* TextSizingExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDF5108A2ECC3008AC9B5 /* Build configuration list for PBXNativeTarget "TextSizingExample" */;
+			buildPhases = (
+				73B89BF9049A947E00C919A3 /* Headers */,
+				73B89C02049A947E00C919A3 /* Resources */,
+				73B89C08049A947E00C919A3 /* Sources */,
+				73B89C11049A947E00C919A3 /* Frameworks */,
+				73B89C14049A947E00C919A3 /* Rez */,
+			);
+			buildRules = (
+				734E6333049E690A00C919A3 /* PBXBuildRule */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-TextSizingExample.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = TextSizingExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = TextSizingExample;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = TextSizingExample;
+			productReference = 73B89C17049A947E00C919A3 /* TextSizingExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00C65523FEEE29E27F000001 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDF5508A2ECC3008AC9B5 /* Build configuration list for PBXProject "TextSizingExample" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				01D4F814FFB7A9BD11CA0CA4 /* Development */,
+				01D4F815FFB7A9BD11CA0CA4 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00C65524FEEE29E27F000001 /* TextSizingExample */;
+			productRefGroup = 00C65525FEEE29E27F000001 /* Products */;
+			projectDirPath = "";
+			targets = (
+				73B89BF8049A947E00C919A3 /* TextSizingExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73B89C02049A947E00C919A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B89C03049A947E00C919A3 /* Aspect.nib in Resources */,
+				73B89C04049A947E00C919A3 /* TextSizingExample.nib in Resources */,
+				73B89C05049A947E00C919A3 /* FieldAspect.nib in Resources */,
+				73B89C06049A947E00C919A3 /* README.rtf in Resources */,
+				73B89C07049A947E00C919A3 /* Credits.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		73B89C14049A947E00C919A3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73B89C08049A947E00C919A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B89C09049A947E00C919A3 /* Controller.m in Sources */,
+				73B89C0A049A947E00C919A3 /* Aspect.m in Sources */,
+				73B89C0B049A947E00C919A3 /* VertScrollAspect.m in Sources */,
+				73B89C0C049A947E00C919A3 /* BiScrollAspect.m in Sources */,
+				73B89C0D049A947E00C919A3 /* FixedSizeAspect.m in Sources */,
+				73B89C0E049A947E00C919A3 /* TwoColumnsAspect.m in Sources */,
+				73B89C0F049A947E00C919A3 /* FieldAspect.m in Sources */,
+				73B89C10049A947E00C919A3 /* TextSizingExample_main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00C6553AFEEE29E27F000001 /* Aspect.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00C6553BFEEE29E27F000001 /* English */,
+			);
+			name = Aspect.nib;
+			sourceTree = "<group>";
+		};
+		00C6553CFEEE29E27F000001 /* TextSizingExample.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00C6553DFEEE29E27F000001 /* English */,
+				00C6553EFEEE29E27F000001 /* English - windows */,
+			);
+			name = TextSizingExample.nib;
+			sourceTree = "<group>";
+		};
+		00C6553FFEEE29E27F000001 /* FieldAspect.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00C65540FEEE29E27F000001 /* English */,
+			);
+			name = FieldAspect.nib;
+			sourceTree = "<group>";
+		};
+		00C65543FEEE29E27F000001 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00C65544FEEE29E27F000001 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDF5208A2ECC3008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-TextSizingExample.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = TextSizingExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDF5308A2ECC3008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-TextSizingExample.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = TextSizingExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDF5408A2ECC3008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-TextSizingExample.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = TextSizingExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		B69BDF5608A2ECC3008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		B69BDF5708A2ECC3008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		B69BDF5808A2ECC3008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDF5108A2ECC3008AC9B5 /* Build configuration list for PBXNativeTarget "TextSizingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDF5208A2ECC3008AC9B5 /* Development */,
+				B69BDF5308A2ECC3008AC9B5 /* Deployment */,
+				B69BDF5408A2ECC3008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDF5508A2ECC3008AC9B5 /* Build configuration list for PBXProject "TextSizingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDF5608A2ECC3008AC9B5 /* Development */,
+				B69BDF5708A2ECC3008AC9B5 /* Deployment */,
+				B69BDF5808A2ECC3008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00C65523FEEE29E27F000001 /* Project object */;
+}

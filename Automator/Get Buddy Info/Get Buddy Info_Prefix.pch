@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Get Buddy Info' target in the 'Get Buddy Info' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

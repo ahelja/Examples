@@ -1,0 +1,196 @@
+/*
+
+File: FramingGallery.css
+
+Abstract: CSS properties for Framing Gallery sample widget
+
+Version: 2.0
+
+© Copyright 2005 Apple Computer, Inc. All rights reserved.
+
+IMPORTANT:  This Apple software is supplied to 
+you by Apple Computer, Inc. ("Apple") in 
+consideration of your agreement to the following 
+terms, and your use, installation, modification 
+or redistribution of this Apple software 
+constitutes acceptance of these terms.  If you do 
+not agree with these terms, please do not use, 
+install, modify or redistribute this Apple 
+software.
+
+In consideration of your agreement to abide by 
+the following terms, and subject to these terms, 
+Apple grants you a personal, non-exclusive 
+license, under Apple's copyrights in this 
+original Apple software (the "Apple Software"), 
+to use, reproduce, modify and redistribute the 
+Apple Software, with or without modifications, in 
+source and/or binary forms; provided that if you 
+redistribute the Apple Software in its entirety 
+and without modifications, you must retain this 
+notice and the following text and disclaimers in 
+all such redistributions of the Apple Software. 
+Neither the name, trademarks, service marks or 
+logos of Apple Computer, Inc. may be used to 
+endorse or promote products derived from the 
+Apple Software without specific prior written 
+permission from Apple.  Except as expressly 
+stated in this notice, no other rights or 
+licenses, express or implied, are granted by 
+Apple herein, including but not limited to any 
+patent rights that may be infringed by your 
+derivative works or by other works in which the 
+Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS 
+IS" basis.  APPLE MAKES NO WARRANTIES, EXPRESS OR 
+IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED 
+WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY 
+AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING 
+THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE 
+OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY 
+SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS 
+OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, 
+REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF 
+THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER 
+UNDER THEORY OF CONTRACT, TORT (INCLUDING 
+NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN 
+IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF 
+SUCH DAMAGE.
+
+*/
+	
+/*	Styles
+ *  Style sheets allow for precise control of elements within your widget.
+ *  All style information is contained within the <style> tags. If you want to
+ *  utilize style information, use the class or id attributes on most any tag, and set
+ *  them equal to one of your defined styles. Use the class attribute when a style 
+ *  is to remain static, and id if you change the style in your scripts.  When
+ *  defining the style, begin the style with a period (.) if it is to remain
+ *  static, and a hash (#) if it is going to be altered programatically.
+ */
+	 
+	 
+body {
+	margin: 0;
+	background: #FFFFFF;
+}
+
+
+/*  The Picture Frame
+ *  The picture frame effect is obtained by using five borders, all of varying
+ *  thickness and color.
+ */
+ 
+ .outsideEdge {
+	border: 1px solid #0A0A09;
+ }
+
+#frame { 
+	border-top: 10px solid #030303;
+	border-right: 10px solid #1A1B1A;
+	border-bottom: 10px solid #030303;
+	border-left: 10px solid #1A1B1A;
+ }
+
+.middleEdge {
+	border: 1px solid #545454;
+}
+
+#mat {
+	border: 13px solid #F8F7F1;
+}
+
+.insideEdge {
+	border: 1px solid #BBBBBB;
+}
+
+#hiddenPic {
+	opacity: 0.0;
+}
+
+/*  The Preference layer
+ *  The preferences exist on a layer called "back." It's initially hidden and
+ *  has a few attributesm like a border and its kraft paper background. In it
+ *  is the prefBox, an area that you can resize to make the prefs side is the
+ *  same size as the front side.  In addition, there are a number of elements
+ *  belong to the preference layer, including a hanger graphic, some menus, 
+ *  a button, and label text.
+ */
+ 
+#back {
+	display: none;
+	border-top: 2px solid #B6A27F;
+	border-right: 3px solid #908360;
+	border-bottom: 2px solid #B6A27F;
+	border-left: 3px solid #908360;
+	font: 10px "Helvetica Neue";
+	font-weight: bold;
+	color: white;
+	background-image: url("Images/kraft.jpg");
+} 
+
+#prefBox {
+	text-align: center;
+}
+
+/* The next two elements are for the info button, present in the bottom right of the widget.
+ * Note that we've used an -apple-dashboard-region here; this means that the widget
+ * can not be dragged by this element (as you would expect out of a control)
+ */
+ 
+#infoButton {
+	position:absolute;
+	bottom: 27px;
+	right: 27px;
+}
+
+#hanger {
+	position: absolute;
+	top: 5px;
+	left: 215px;
+}
+
+#frameText {
+	position: absolute;
+	top: 45px;
+	left: 20px; 
+   	text-shadow: black 0px 1px 0px;
+}
+
+#framePopup {
+	position: absolute;
+	top: 41px;
+	left: 62px;
+	width: 130px;
+}
+
+#matText {
+	position: absolute;
+	top: 70px;
+	left: 32px; 
+   	text-shadow: black 0px 1px 0px;
+}
+
+#matPopup {
+	position: absolute;
+	top: 66px;
+	left: 62px;
+	width: 130px;
+}
+
+#doneButton {
+	position: absolute;
+	bottom: 15px;
+	left: 197px;
+}
+
+#dndindicator {
+	position: absolute;
+	opacity: 0.0;
+}

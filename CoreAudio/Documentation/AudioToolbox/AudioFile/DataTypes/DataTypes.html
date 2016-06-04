@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioFileID;  name=AudioFileID --><a name="//apple_ref/c/tdef/AudioFileID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileID">AudioFileID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An opaque reference to an AudioFile object.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueAudioFileID //apple_ref/c/cl/OpaqueAudioFileID //apple_ref/c/tdef/OpaqueAudioFileID //apple_ref/c/tag/OpaqueAudioFileID //apple_ref/c/econst/OpaqueAudioFileID //apple_ref/c/struct/OpaqueAudioFileID //apple_ref/c/clconst/OpaqueAudioFileID" --><font class="type">OpaqueAudioFileID</font><!-- /a --> <font class="type">*</font><font class="var">AudioFileID</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioFilePropertyID;  name=AudioFilePropertyID --><a name="//apple_ref/c/tdef/AudioFilePropertyID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFilePropertyID">AudioFilePropertyID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A constant for an AudioFile property.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">AudioFilePropertyID</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioFile_ReadProc;  name=AudioFile_ReadProc --><a name="//apple_ref/c/tdef/AudioFile_ReadProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_ReadProc">AudioFile_ReadProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for reading data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_ReadProc //apple_ref/c/clm/AudioFile_ReadProc //apple_ref/c/intfcm/AudioFile_ReadProc //apple_ref/c/func/AudioFile_ReadProc //apple_ref/c/ftmplt/AudioFile_ReadProc //apple_ref/c/defn/AudioFile_ReadProc //apple_ref/c/macro/AudioFile_ReadProc" --><font class="function">AudioFile_ReadProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inPosition</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="param">requestCount</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">buffer</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> *<font class="param">actualCount</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+<dt><code>inPosition</code></dt>
+<dd>An offset into the data from which to read.</dd>
+<dt><code>requestCount</code></dt>
+<dd>The number of bytes to read.</dd>
+<dt><code>buffer</code></dt>
+<dd>The buffer in which to put the data read.</dd>
+<dt><code>actualCount</code></dt>
+<dd>The callback should set this to the number of bytes successfully read.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return noErr on success, or an appropriate error code on failure.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to read data.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioFile_WriteProc;  name=AudioFile_WriteProc --><a name="//apple_ref/c/tdef/AudioFile_WriteProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_WriteProc">AudioFile_WriteProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for writing data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_WriteProc //apple_ref/c/clm/AudioFile_WriteProc //apple_ref/c/intfcm/AudioFile_WriteProc //apple_ref/c/func/AudioFile_WriteProc //apple_ref/c/ftmplt/AudioFile_WriteProc //apple_ref/c/defn/AudioFile_WriteProc //apple_ref/c/macro/AudioFile_WriteProc" --><font class="function">AudioFile_WriteProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inPosition</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="param">requestCount</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">buffer</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> *<font class="param">actualCount</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+<dt><code>inPosition</code></dt>
+<dd>An offset into the data from which to read.</dd>
+<dt><code>requestCount</code></dt>
+<dd>The number of bytes to write.</dd>
+<dt><code>buffer</code></dt>
+<dd>The buffer containing the data to write.</dd>
+<dt><code>actualCount</code></dt>
+<dd>The callback should set this to the number of bytes successfully written.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return noErr on success, or an appropriate error code on failure.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to write data.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioFile_GetSizeProc;  name=AudioFile_GetSizeProc --><a name="//apple_ref/c/tdef/AudioFile_GetSizeProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_GetSizeProc">AudioFile_GetSizeProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for getting the size of the file data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_GetSizeProc //apple_ref/c/clm/AudioFile_GetSizeProc //apple_ref/c/intfcm/AudioFile_GetSizeProc //apple_ref/c/func/AudioFile_GetSizeProc //apple_ref/c/ftmplt/AudioFile_GetSizeProc //apple_ref/c/defn/AudioFile_GetSizeProc //apple_ref/c/macro/AudioFile_GetSizeProc" --><font class="function">AudioFile_GetSizeProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return the size of the data.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to determine the size of the file data. This size is for all of the 
+data in the file, not just the audio data.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioFile_SetSizeProc;  name=AudioFile_SetSizeProc --><a name="//apple_ref/c/tdef/AudioFile_SetSizeProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_SetSizeProc">AudioFile_SetSizeProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for setting the size of the file data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_SetSizeProc //apple_ref/c/clm/AudioFile_SetSizeProc //apple_ref/c/intfcm/AudioFile_SetSizeProc //apple_ref/c/func/AudioFile_SetSizeProc //apple_ref/c/ftmplt/AudioFile_SetSizeProc //apple_ref/c/defn/AudioFile_SetSizeProc //apple_ref/c/macro/AudioFile_SetSizeProc" --><font class="function">AudioFile_SetSizeProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inSize</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return the size of the data.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to set the size of the file data. This size is for all of the 
+data in the file, not just the audio data. This will only be called if the file is written to.
+</p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

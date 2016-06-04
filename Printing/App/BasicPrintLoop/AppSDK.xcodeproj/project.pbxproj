@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5239A4D107BA9A3C005D1E0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5239A4D007BA9A3C005D1E0F /* Info.plist */; };
+		5239A4D507BA9A68005D1E0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5239A4D407BA9A68005D1E0F /* Info.plist */; };
+		5239A4D707BA9A7E005D1E0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5239A4D607BA9A7E005D1E0F /* Info.plist */; };
+		EE5575E007B3FEE100739564 /* PDECommon.h in Headers */ = {isa = PBXBuildFile; fileRef = F5965AA500E022BA01CA207C /* PDECommon.h */; };
+		EE5575E207B3FEE100739564 /* AppSDKMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 9173B2FD0426477002CA2483 /* AppSDKMenu.nib */; };
+		EE5575E407B3FEE100739564 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 01ACF44CFFC1C9E411CA2470 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		EE5575E607B3FEE100739564 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01823927FFE8053411CA24C1 /* Carbon.framework */; };
+		EE5575E807B3FEE100739564 /* AESupport.r in Rez */ = {isa = PBXBuildFile; fileRef = 9173B2FC0426477002CA2483 /* AESupport.r */; };
+		EE5575F107B3FEE100739564 /* PageSetupPDE.h in Headers */ = {isa = PBXBuildFile; fileRef = 015B6DAB004B19887F000001 /* PageSetupPDE.h */; settings = {ATTRIBUTES = (); }; };
+		EE5575F307B3FEE100739564 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 015B6DB3004B1A727F000001 /* Localizable.strings */; };
+		EE5575F507B3FEE100739564 /* PageSetupPDE.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BB60A9100FE0FD10ACA207C /* PageSetupPDE.c */; };
+		EE5575F707B3FEE100739564 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01823927FFE8053411CA24C1 /* Carbon.framework */; };
+		EE5575F907B3FEE100739564 /* PageSetupPDE.r in Rez */ = {isa = PBXBuildFile; fileRef = 015B6DB5004B1A727F000001 /* PageSetupPDE.r */; };
+		EE5575FE07B3FEE100739564 /* PrintDialogPDE.h in Headers */ = {isa = PBXBuildFile; fileRef = 015B6DC8004B2CEE7F000001 /* PrintDialogPDE.h */; };
+		EE55760007B3FEE100739564 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 015B6DCA004B2CEE7F000001 /* Localizable.strings */; };
+		EE55760207B3FEE100739564 /* PrintDialogPDE.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDB16200FE047E0ACA207C /* PrintDialogPDE.c */; };
+		EE55760407B3FEE100739564 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01823927FFE8053411CA24C1 /* Carbon.framework */; };
+		EE55760607B3FEE100739564 /* PrintDialogPDE.r in Rez */ = {isa = PBXBuildFile; fileRef = 015B6DCC004B2CEE7F000001 /* PrintDialogPDE.r */; };
+		EE55760D07B3FEE100739564 /* PageSetupPDE.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE5575FB07B3FEE100739564 /* PageSetupPDE.plugin */; };
+		EE55760E07B3FEE100739564 /* PrintDialogPDE.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE55760807B3FEE100739564 /* PrintDialogPDE.plugin */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		01ACF443FFC1C83D11CA2470 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "qOurDebug=1";
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		01ACF444FFC1C83D11CA2470 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		EE55760907B3FEE100739564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE5575EF07B3FEE100739564;
+			remoteInfo = "PageSetupPDE.plugin (Upgraded)";
+		};
+		EE55760B07B3FEE100739564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE5575FC07B3FEE100739564;
+			remoteInfo = "PrintDialogPDE.plugin (Upgraded)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE5575E907B3FEE100739564 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EE55760D07B3FEE100739564 /* PageSetupPDE.plugin in CopyFiles */,
+				EE55760E07B3FEE100739564 /* PrintDialogPDE.plugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		015B6DAB004B19887F000001 /* PageSetupPDE.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PageSetupPDE.h; path = PageSetupPDE/Headers/PageSetupPDE.h; sourceTree = "<group>"; };
+		015B6DB4004B1A727F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = PageSetupPDE/Resources/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		015B6DB6004B1A727F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = English; path = PageSetupPDE/Resources/English.lproj/PageSetupPDE.r; sourceTree = "<group>"; };
+		015B6DC8004B2CEE7F000001 /* PrintDialogPDE.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PrintDialogPDE.h; path = PrintDialogPDE/Headers/PrintDialogPDE.h; sourceTree = "<group>"; };
+		015B6DCB004B2CEE7F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = PrintDialogPDE/Resources/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		015B6DCD004B2CEE7F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = English; path = PrintDialogPDE/Resources/English.lproj/PrintDialogPDE.r; sourceTree = "<group>"; };
+		01823927FFE8053411CA24C1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		01ACF44CFFC1C9E411CA2470 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = main.c; path = PrintLoop/Source/main.c; sourceTree = "<group>"; };
+		3BB60A9100FE0FD10ACA207C /* PageSetupPDE.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = PageSetupPDE.c; path = PageSetupPDE/Source/PageSetupPDE.c; sourceTree = "<group>"; };
+		3BFDB16200FE047E0ACA207C /* PrintDialogPDE.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = PrintDialogPDE.c; path = PrintDialogPDE/Source/PrintDialogPDE.c; sourceTree = "<group>"; };
+		5239A4D007BA9A3C005D1E0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = PrintLoop/Info.plist; sourceTree = "<group>"; };
+		5239A4D407BA9A68005D1E0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = PageSetupPDE/Info.plist; sourceTree = "<group>"; };
+		5239A4D607BA9A7E005D1E0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = PrintDialogPDE/Info.plist; sourceTree = "<group>"; };
+		9173B2FC0426477002CA2483 /* AESupport.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = AESupport.r; sourceTree = "<group>"; };
+		9173B2FD0426477002CA2483 /* AppSDKMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = AppSDKMenu.nib; sourceTree = "<group>"; };
+		EE5575ED07B3FEE100739564 /* PrintLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE5575FB07B3FEE100739564 /* PageSetupPDE.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageSetupPDE.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE55760807B3FEE100739564 /* PrintDialogPDE.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintDialogPDE.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5965AA500E022BA01CA207C /* PDECommon.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PDECommon.h; path = PrintLoop/Headers/PDECommon.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE5575E507B3FEE100739564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575E607B3FEE100739564 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575F607B3FEE100739564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575F707B3FEE100739564 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE55760307B3FEE100739564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE55760407B3FEE100739564 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		015B6DBD004B2A8D7F000001 /* PrintDialogPDE */ = {
+			isa = PBXGroup;
+			children = (
+				5239A4D607BA9A7E005D1E0F /* Info.plist */,
+				015B6DC6004B2C007F000001 /* Sources */,
+				015B6DC7004B2C007F000001 /* Resources */,
+			);
+			name = PrintDialogPDE;
+			sourceTree = "<group>";
+		};
+		015B6DC6004B2C007F000001 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				015B6DC8004B2CEE7F000001 /* PrintDialogPDE.h */,
+				3BFDB16200FE047E0ACA207C /* PrintDialogPDE.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		015B6DC7004B2C007F000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				015B6DCA004B2CEE7F000001 /* Localizable.strings */,
+				015B6DCC004B2CEE7F000001 /* PrintDialogPDE.r */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		01ACF448FFC1C94011CA2470 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				01ACF44CFFC1C9E411CA2470 /* main.c */,
+				F5965AA500E022BA01CA207C /* PDECommon.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		01ACF44AFFC1C94011CA2470 /* PageSetupPDE */ = {
+			isa = PBXGroup;
+			children = (
+				5239A4D407BA9A68005D1E0F /* Info.plist */,
+				08FB77AFFE84173DC02AAC07 /* Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+			);
+			name = PageSetupPDE;
+			sourceTree = "<group>";
+		};
+		04082499FF4228BA11CA2470 /* PrintLoop Sample Code */ = {
+			isa = PBXGroup;
+			children = (
+				5239A4D007BA9A3C005D1E0F /* Info.plist */,
+				01ACF448FFC1C94011CA2470 /* Sources */,
+				9173B2FB0426477002CA2483 /* Resources */,
+			);
+			name = "PrintLoop Sample Code";
+			sourceTree = "<group>";
+		};
+		089C166AFE841209C02AAC07 /* CFPlugInBundle */ = {
+			isa = PBXGroup;
+			children = (
+				04082499FF4228BA11CA2470 /* PrintLoop Sample Code */,
+				01ACF44AFFC1C94011CA2470 /* PageSetupPDE */,
+				015B6DBD004B2A8D7F000001 /* PrintDialogPDE */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = CFPlugInBundle;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				01823927FFE8053411CA24C1 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				015B6DB3004B1A727F000001 /* Localizable.strings */,
+				015B6DB5004B1A727F000001 /* PageSetupPDE.r */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				015B6DAB004B19887F000001 /* PageSetupPDE.h */,
+				3BB60A9100FE0FD10ACA207C /* PageSetupPDE.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE5575ED07B3FEE100739564 /* PrintLoop.app */,
+				EE5575FB07B3FEE100739564 /* PageSetupPDE.plugin */,
+				EE55760807B3FEE100739564 /* PrintDialogPDE.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9173B2FB0426477002CA2483 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9173B2FC0426477002CA2483 /* AESupport.r */,
+				9173B2FD0426477002CA2483 /* AppSDKMenu.nib */,
+			);
+			name = Resources;
+			path = PrintLoop/Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EE5575DF07B3FEE100739564 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575E007B3FEE100739564 /* PDECommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575F007B3FEE100739564 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575F107B3FEE100739564 /* PageSetupPDE.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575FD07B3FEE100739564 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575FE07B3FEE100739564 /* PrintDialogPDE.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EE5575DC07B3FEE100739564 /* ApplicationPrintLoop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A809900208FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "ApplicationPrintLoop" */;
+			buildPhases = (
+				EE5575DF07B3FEE100739564 /* Headers */,
+				EE5575E107B3FEE100739564 /* Resources */,
+				EE5575E307B3FEE100739564 /* Sources */,
+				EE5575E507B3FEE100739564 /* Frameworks */,
+				EE5575E707B3FEE100739564 /* Rez */,
+				EE5575E907B3FEE100739564 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = PrintLoop/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				INSTALL_PATH = ./install;
+				PREBINDING = NO;
+				PRODUCT_NAME = PrintLoop;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				SECTORDER_FLAGS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+				EE55760A07B3FEE100739564 /* PBXTargetDependency */,
+				EE55760C07B3FEE100739564 /* PBXTargetDependency */,
+			);
+			name = ApplicationPrintLoop;
+			productInstallPath = ./install;
+			productName = PrintLoop;
+			productReference = EE5575ED07B3FEE100739564 /* PrintLoop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE5575EF07B3FEE100739564 /* PageSetupPDE.plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8098FFA08FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "PageSetupPDE.plugin" */;
+			buildPhases = (
+				EE5575F007B3FEE100739564 /* Headers */,
+				EE5575F207B3FEE100739564 /* Resources */,
+				EE5575F407B3FEE100739564 /* Sources */,
+				EE5575F607B3FEE100739564 /* Frameworks */,
+				EE5575F807B3FEE100739564 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks",
+				);
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = PrintLoop/Headers/;
+				INFOPLIST_FILE = PageSetupPDE/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				PREBINDING = NO;
+				PRODUCT_NAME = PageSetupPDE;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				SECTORDER_FLAGS = "";
+				WRAPPER_EXTENSION = plugin;
+			};
+			dependencies = (
+			);
+			name = PageSetupPDE.plugin;
+			productName = PrintSelection;
+			productReference = EE5575FB07B3FEE100739564 /* PageSetupPDE.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EE5575FC07B3FEE100739564 /* PrintDialogPDE.plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8098FFE08FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "PrintDialogPDE.plugin" */;
+			buildPhases = (
+				EE5575FD07B3FEE100739564 /* Headers */,
+				EE5575FF07B3FEE100739564 /* Resources */,
+				EE55760107B3FEE100739564 /* Sources */,
+				EE55760307B3FEE100739564 /* Frameworks */,
+				EE55760507B3FEE100739564 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks",
+				);
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = PrintLoop/Headers/;
+				INFOPLIST_FILE = PrintDialogPDE/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				PREBINDING = NO;
+				PRODUCT_NAME = PrintDialogPDE;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				SECTORDER_FLAGS = "";
+				WRAPPER_EXTENSION = plugin;
+			};
+			dependencies = (
+			);
+			name = PrintDialogPDE.plugin;
+			productName = PrintDialogPDE.plugin;
+			productReference = EE55760807B3FEE100739564 /* PrintDialogPDE.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A809900608FC1E7000BF8803 /* Build configuration list for PBXProject "AppSDK" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				01ACF443FFC1C83D11CA2470 /* Development */,
+				01ACF444FFC1C83D11CA2470 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* CFPlugInBundle */;
+			projectDirPath = "";
+			targets = (
+				EE5575DC07B3FEE100739564 /* ApplicationPrintLoop */,
+				EE5575EF07B3FEE100739564 /* PageSetupPDE.plugin */,
+				EE5575FC07B3FEE100739564 /* PrintDialogPDE.plugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE5575E107B3FEE100739564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575E207B3FEE100739564 /* AppSDKMenu.nib in Resources */,
+				5239A4D107BA9A3C005D1E0F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575F207B3FEE100739564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575F307B3FEE100739564 /* Localizable.strings in Resources */,
+				5239A4D507BA9A68005D1E0F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575FF07B3FEE100739564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE55760007B3FEE100739564 /* Localizable.strings in Resources */,
+				5239A4D707BA9A7E005D1E0F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		EE5575E707B3FEE100739564 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575E807B3FEE100739564 /* AESupport.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575F807B3FEE100739564 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575F907B3FEE100739564 /* PageSetupPDE.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE55760507B3FEE100739564 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE55760607B3FEE100739564 /* PrintDialogPDE.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE5575E307B3FEE100739564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575E407B3FEE100739564 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5575F407B3FEE100739564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5575F507B3FEE100739564 /* PageSetupPDE.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE55760107B3FEE100739564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE55760207B3FEE100739564 /* PrintDialogPDE.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE55760A07B3FEE100739564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE5575EF07B3FEE100739564 /* PageSetupPDE.plugin */;
+			targetProxy = EE55760907B3FEE100739564 /* PBXContainerItemProxy */;
+		};
+		EE55760C07B3FEE100739564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE5575FC07B3FEE100739564 /* PrintDialogPDE.plugin */;
+			targetProxy = EE55760B07B3FEE100739564 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		015B6DB3004B1A727F000001 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				015B6DB4004B1A727F000001 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		015B6DB5004B1A727F000001 /* PageSetupPDE.r */ = {
+			isa = PBXVariantGroup;
+			children = (
+				015B6DB6004B1A727F000001 /* English */,
+			);
+			name = PageSetupPDE.r;
+			sourceTree = "<group>";
+		};
+		015B6DCA004B2CEE7F000001 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				015B6DCB004B2CEE7F000001 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		015B6DCC004B2CEE7F000001 /* PrintDialogPDE.r */ = {
+			isa = PBXVariantGroup;
+			children = (
+				015B6DCD004B2CEE7F000001 /* English */,
+			);
+			name = PrintDialogPDE.r;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8098FFB08FC1E7000BF8803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "qOurDebug=1";
+				HEADER_SEARCH_PATHS = PrintLoop/Headers/;
+				INFOPLIST_FILE = PageSetupPDE/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				OTHER_REZFLAGS = "-F \"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"";
+				PRODUCT_NAME = PageSetupPDE;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		A8098FFC08FC1E7000BF8803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = PrintLoop/Headers/;
+				INFOPLIST_FILE = PageSetupPDE/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				OTHER_REZFLAGS = "-F \"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"";
+				PRODUCT_NAME = PageSetupPDE;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+		A8098FFF08FC1E7000BF8803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "qOurDebug=1";
+				HEADER_SEARCH_PATHS = PrintLoop/Headers/;
+				INFOPLIST_FILE = PrintDialogPDE/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				OTHER_REZFLAGS = "-F \"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"";
+				PRODUCT_NAME = PrintDialogPDE;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		A809900008FC1E7000BF8803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = PrintLoop/Headers/;
+				INFOPLIST_FILE = PrintDialogPDE/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				OTHER_REZFLAGS = "-F \"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"";
+				PRODUCT_NAME = PrintDialogPDE;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+		A809900308FC1E7000BF8803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "qOurDebug=1";
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				INFOPLIST_FILE = PrintLoop/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				INSTALL_PATH = ./install;
+				PRODUCT_NAME = PrintLoop;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		A809900408FC1E7000BF8803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				INFOPLIST_FILE = PrintLoop/Info.plist;
+				INSTALL_MODE_FLAG = "u+w";
+				INSTALL_PATH = ./install;
+				PRODUCT_NAME = PrintLoop;
+				REZ_SEARCH_PATHS = PrintLoop/Headers/;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A809900708FC1E7000BF8803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		A809900808FC1E7000BF8803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8098FFA08FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "PageSetupPDE.plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8098FFB08FC1E7000BF8803 /* Debug */,
+				A8098FFC08FC1E7000BF8803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8098FFE08FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "PrintDialogPDE.plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8098FFF08FC1E7000BF8803 /* Debug */,
+				A809900008FC1E7000BF8803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A809900208FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "ApplicationPrintLoop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A809900308FC1E7000BF8803 /* Debug */,
+				A809900408FC1E7000BF8803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A809900608FC1E7000BF8803 /* Build configuration list for PBXProject "AppSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A809900708FC1E7000BF8803 /* Debug */,
+				A809900808FC1E7000BF8803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            CLASS = Aspect; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {view = id; window = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = FieldAspect; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                centerAlignedBox = id; 
+                leftAlignedBox = id; 
+                rightAlignedBox = id; 
+                scrollingCenterAlignedBox = id; 
+                scrollingLeftAlignedBox = id; 
+                scrollingRightAlignedBox = id; 
+            }; 
+            SUPERCLASS = Aspect; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

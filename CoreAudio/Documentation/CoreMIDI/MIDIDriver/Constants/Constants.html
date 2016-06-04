@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Constants</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Constants</font></h1>
+<br><hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIDriverPropertyUsesSerial;  name=kMIDIDriverPropertyUsesSerial --><a name="//apple_ref/c/data/kMIDIDriverPropertyUsesSerial"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIDriverPropertyUsesSerial">kMIDIDriverPropertyUsesSerial</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIDriverPropertyUsesSerial</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This constant, "MIDIDriverUsesSerial", when defined to "YES" in a driver's 
+bundle, tells MIDIServer that the driver uses serial ports and is eligible to
+have serial ports assigned to it.
+<br><br>
+When a serial driver's Start() method is called, it should use
+MIDIGetSerialPortOwner to discover which serial ports it has
+been assigned to use, and only use those ports.
+<br><br>
+New for CoreMIDI 1.1.
+</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

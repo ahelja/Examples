@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0160163A0079316D11CA0CD7 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C017327B08A95E47009534D0 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+				0160163B0079316D11CA0CD7 /* PBXTargetDependency */,
+				0160163C0079316D11CA0CD7 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		253E3188052CDB9000CC5168 /* ExpressionEvaluator.h in Headers */ = {isa = PBXBuildFile; fileRef = F87BB6C0007501B704CA0CBA /* ExpressionEvaluator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		253E3189052CDB9000CC5168 /* ExpressionFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F87BB6C2007501B704CA0CBA /* ExpressionFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		253E318A052CDB9000CC5168 /* BusyPaletteFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F87BB6DF0075075C04CA0CBA /* BusyPaletteFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		253E318B052CDB9000CC5168 /* NiftyMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F86829080079011704CA0CBA /* NiftyMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		253E318E052CDB9000CC5168 /* ExpressionEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = F87BB6C1007501B704CA0CBA /* ExpressionEvaluator.m */; };
+		253E318F052CDB9000CC5168 /* ExpressionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F87BB6C3007501B704CA0CBA /* ExpressionFormatter.m */; };
+		253E3190052CDB9000CC5168 /* NiftyMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F86829090079011704CA0CBA /* NiftyMenuItem.m */; };
+		253E3192052CDB9000CC5168 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87BB6CC0075026504CA0CBA /* Cocoa.framework */; };
+		253E319B052CDB9500CC5168 /* BusyPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = F87BB6CE007502E704CA0CBA /* BusyPalette.h */; };
+		253E319C052CDB9500CC5168 /* NiftyMenuItemInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = F8682915007919CD04CA0CBA /* NiftyMenuItemInspector.h */; };
+		253E319D052CDB9500CC5168 /* DataCellInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = F862647400C7616E04CA0CBA /* DataCellInspector.h */; };
+		253E319F052CDB9500CC5168 /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = F87BB6DB0075035C04CA0CBA /* palette.table */; };
+		253E31A0052CDB9500CC5168 /* BusyPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = F87BB6D80075033704CA0CBA /* BusyPalette.nib */; };
+		253E31A1052CDB9500CC5168 /* ExpressionFormatter.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F87BB6DD0075058504CA0CBA /* ExpressionFormatter.tiff */; };
+		253E31A2052CDB9500CC5168 /* BusyPalette.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F89D297300750E7504CA0CBA /* BusyPalette.tiff */; };
+		253E31A3052CDB9500CC5168 /* menuImage.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F868290E007913DF04CA0CBA /* menuImage.tiff */; };
+		253E31A4052CDB9500CC5168 /* NiftyMenuItem.ibclassdescription in Resources */ = {isa = PBXBuildFile; fileRef = F86829120079173F04CA0CBA /* NiftyMenuItem.ibclassdescription */; };
+		253E31A5052CDB9500CC5168 /* NiftyMenuItemInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = F868291A00791A7504CA0CBA /* NiftyMenuItemInspector.nib */; };
+		253E31A6052CDB9500CC5168 /* DataCellInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = F862647800C761A404CA0CBA /* DataCellInspector.nib */; };
+		253E31A8052CDB9500CC5168 /* BusyPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = F87BB6CF007502E704CA0CBA /* BusyPalette.m */; };
+		253E31A9052CDB9500CC5168 /* NiftyMenuItemInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = F8682916007919CD04CA0CBA /* NiftyMenuItemInspector.m */; };
+		253E31AA052CDB9500CC5168 /* DataCellInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = F862647500C7616E04CA0CBA /* DataCellInspector.m */; };
+		253E31AD052CDB9500CC5168 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87BB6CC0075026504CA0CBA /* Cocoa.framework */; };
+		253E31AE052CDB9500CC5168 /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87BB6D3007502E704CA0CBA /* InterfaceBuilder.framework */; };
+		253E3246052CDF0000CC5168 /* BusyPaletteFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253E3196052CDB9000CC5168 /* BusyPaletteFramework.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		F89D297100750DFB04CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		F89D297200750DFB04CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		253E31E8052CDC7500CC5168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F87BB6AC0074FFDA04CA0CBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 253E3186052CDB9000CC5168;
+			remoteInfo = BusyPaletteFramework;
+		};
+		536D4CE204D717FF001C31A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F87BB6AC0074FFDA04CA0CBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 253E3186052CDB9000CC5168;
+			remoteInfo = BusyPaletteFramework;
+		};
+		536D4CE304D717FF001C31A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F87BB6AC0074FFDA04CA0CBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 253E3199052CDB9500CC5168;
+			remoteInfo = BusyPalette;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		253E3195052CDB9000CC5168 /* Info-BusyPaletteFramework.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Info-BusyPaletteFramework.plist"; sourceTree = "<group>"; };
+		253E3196052CDB9000CC5168 /* BusyPaletteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusyPaletteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		253E31B1052CDB9500CC5168 /* Info-BusyPalette.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Info-BusyPalette.plist"; sourceTree = "<group>"; };
+		253E31B2052CDB9500CC5168 /* BusyPalette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusyPalette.palette; sourceTree = BUILT_PRODUCTS_DIR; };
+		F862647400C7616E04CA0CBA /* DataCellInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DataCellInspector.h; sourceTree = "<group>"; };
+		F862647500C7616E04CA0CBA /* DataCellInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DataCellInspector.m; sourceTree = "<group>"; };
+		F862647900C761A404CA0CBA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DataCellInspector.nib; sourceTree = "<group>"; };
+		F86829080079011704CA0CBA /* NiftyMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NiftyMenuItem.h; sourceTree = "<group>"; };
+		F86829090079011704CA0CBA /* NiftyMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NiftyMenuItem.m; sourceTree = "<group>"; };
+		F868290E007913DF04CA0CBA /* menuImage.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuImage.tiff; sourceTree = "<group>"; };
+		F86829120079173F04CA0CBA /* NiftyMenuItem.ibclassdescription */ = {isa = PBXFileReference; lastKnownFileType = text; path = NiftyMenuItem.ibclassdescription; sourceTree = "<group>"; };
+		F8682915007919CD04CA0CBA /* NiftyMenuItemInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NiftyMenuItemInspector.h; sourceTree = "<group>"; };
+		F8682916007919CD04CA0CBA /* NiftyMenuItemInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NiftyMenuItemInspector.m; sourceTree = "<group>"; };
+		F868291B00791A7504CA0CBA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/NiftyMenuItemInspector.nib; sourceTree = "<group>"; };
+		F86BB6F3007A3A0904CA0CBA /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		F87BB6C0007501B704CA0CBA /* ExpressionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ExpressionEvaluator.h; sourceTree = "<group>"; };
+		F87BB6C1007501B704CA0CBA /* ExpressionEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ExpressionEvaluator.m; sourceTree = "<group>"; };
+		F87BB6C2007501B704CA0CBA /* ExpressionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ExpressionFormatter.h; sourceTree = "<group>"; };
+		F87BB6C3007501B704CA0CBA /* ExpressionFormatter.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ExpressionFormatter.m; sourceTree = "<group>"; };
+		F87BB6CC0075026504CA0CBA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		F87BB6CE007502E704CA0CBA /* BusyPalette.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BusyPalette.h; sourceTree = "<group>"; };
+		F87BB6CF007502E704CA0CBA /* BusyPalette.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BusyPalette.m; sourceTree = "<group>"; };
+		F87BB6D1007502E704CA0CBA /* English */ = {isa = PBXFileReference; lastKnownFileType = text; name = English; path = English.lproj/palette.table; sourceTree = "<group>"; };
+		F87BB6D3007502E704CA0CBA /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
+		F87BB6D90075033704CA0CBA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BusyPalette.nib; sourceTree = "<group>"; };
+		F87BB6DD0075058504CA0CBA /* ExpressionFormatter.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ExpressionFormatter.tiff; sourceTree = "<group>"; };
+		F87BB6DF0075075C04CA0CBA /* BusyPaletteFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BusyPaletteFramework.h; sourceTree = "<group>"; };
+		F89D297300750E7504CA0CBA /* BusyPalette.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = BusyPalette.tiff; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		253E3191052CDB9000CC5168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E3192052CDB9000CC5168 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253E31AB052CDB9500CC5168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E3246052CDF0000CC5168 /* BusyPaletteFramework.framework in Frameworks */,
+				253E31AD052CDB9500CC5168 /* Cocoa.framework in Frameworks */,
+				253E31AE052CDB9500CC5168 /* InterfaceBuilder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F86829110079173F04CA0CBA /* Undo Support */ = {
+			isa = PBXGroup;
+			children = (
+				F86829120079173F04CA0CBA /* NiftyMenuItem.ibclassdescription */,
+			);
+			name = "Undo Support";
+			sourceTree = "<group>";
+		};
+		F8682914007919CD04CA0CBA /* Inspectors */ = {
+			isa = PBXGroup;
+			children = (
+				F8682915007919CD04CA0CBA /* NiftyMenuItemInspector.h */,
+				F8682916007919CD04CA0CBA /* NiftyMenuItemInspector.m */,
+				F862647400C7616E04CA0CBA /* DataCellInspector.h */,
+				F862647500C7616E04CA0CBA /* DataCellInspector.m */,
+				F868291900791A7504CA0CBA /* Resources */,
+			);
+			name = Inspectors;
+			sourceTree = "<group>";
+		};
+		F868291900791A7504CA0CBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F862647800C761A404CA0CBA /* DataCellInspector.nib */,
+				F868291A00791A7504CA0CBA /* NiftyMenuItemInspector.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F87BB6AD0074FFDA04CA0CBA = {
+			isa = PBXGroup;
+			children = (
+				F86BB6F3007A3A0904CA0CBA /* README.rtf */,
+				F87BB6BE0075014B04CA0CBA /* Palette */,
+				F87BB6BF0075014B04CA0CBA /* Framework */,
+				F87BB6D2007502E704CA0CBA /* LinkedFrameworks */,
+				F87BB6AE0075002304CA0CBA /* Products */,
+				253E3195052CDB9000CC5168 /* Info-BusyPaletteFramework.plist */,
+				253E31B1052CDB9500CC5168 /* Info-BusyPalette.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		F87BB6AE0075002304CA0CBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				253E31B2052CDB9500CC5168 /* BusyPalette.palette */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F87BB6BE0075014B04CA0CBA /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				F87BB6CE007502E704CA0CBA /* BusyPalette.h */,
+				F87BB6CF007502E704CA0CBA /* BusyPalette.m */,
+				F8682914007919CD04CA0CBA /* Inspectors */,
+				F86829110079173F04CA0CBA /* Undo Support */,
+				F87BB6D0007502E704CA0CBA /* Resources */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		F87BB6BF0075014B04CA0CBA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F87BB6C0007501B704CA0CBA /* ExpressionEvaluator.h */,
+				F87BB6C1007501B704CA0CBA /* ExpressionEvaluator.m */,
+				F87BB6C2007501B704CA0CBA /* ExpressionFormatter.h */,
+				F87BB6C3007501B704CA0CBA /* ExpressionFormatter.m */,
+				F87BB6DF0075075C04CA0CBA /* BusyPaletteFramework.h */,
+				F86829080079011704CA0CBA /* NiftyMenuItem.h */,
+				F86829090079011704CA0CBA /* NiftyMenuItem.m */,
+			);
+			name = Framework;
+			path = Framemwork;
+			sourceTree = "<group>";
+		};
+		F87BB6D0007502E704CA0CBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F87BB6DB0075035C04CA0CBA /* palette.table */,
+				F87BB6D80075033704CA0CBA /* BusyPalette.nib */,
+				F87BB6DD0075058504CA0CBA /* ExpressionFormatter.tiff */,
+				F89D297300750E7504CA0CBA /* BusyPalette.tiff */,
+				F868290E007913DF04CA0CBA /* menuImage.tiff */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F87BB6D2007502E704CA0CBA /* LinkedFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				253E3196052CDB9000CC5168 /* BusyPaletteFramework.framework */,
+				F87BB6CC0075026504CA0CBA /* Cocoa.framework */,
+				F87BB6D3007502E704CA0CBA /* InterfaceBuilder.framework */,
+			);
+			name = LinkedFrameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		253E3187052CDB9000CC5168 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E3188052CDB9000CC5168 /* ExpressionEvaluator.h in Headers */,
+				253E3189052CDB9000CC5168 /* ExpressionFormatter.h in Headers */,
+				253E318A052CDB9000CC5168 /* BusyPaletteFramework.h in Headers */,
+				253E318B052CDB9000CC5168 /* NiftyMenuItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253E319A052CDB9500CC5168 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E319B052CDB9500CC5168 /* BusyPalette.h in Headers */,
+				253E319D052CDB9500CC5168 /* DataCellInspector.h in Headers */,
+				253E319C052CDB9500CC5168 /* NiftyMenuItemInspector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		253E3186052CDB9000CC5168 /* BusyPaletteFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C017327308A95E47009534D0 /* Build configuration list for PBXNativeTarget "BusyPaletteFramework" */;
+			buildPhases = (
+				253E3187052CDB9000CC5168 /* Headers */,
+				253E318C052CDB9000CC5168 /* Resources */,
+				253E318D052CDB9000CC5168 /* Sources */,
+				253E3191052CDB9000CC5168 /* Frameworks */,
+				253E3193052CDB9000CC5168 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = BusyPaletteFramework;
+			productInstallPath = /Library/Frameworks/;
+			productName = BusyPaletteFramework;
+			productReference = 253E3196052CDB9000CC5168 /* BusyPaletteFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		253E3199052CDB9500CC5168 /* BusyPalette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C017327708A95E47009534D0 /* Build configuration list for PBXNativeTarget "BusyPalette" */;
+			buildPhases = (
+				253E319A052CDB9500CC5168 /* Headers */,
+				253E319E052CDB9500CC5168 /* Resources */,
+				253E31A7052CDB9500CC5168 /* Sources */,
+				253E31AB052CDB9500CC5168 /* Frameworks */,
+				253E31AF052CDB9500CC5168 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+				253E31E9052CDC7500CC5168 /* PBXTargetDependency */,
+			);
+			name = BusyPalette;
+			productInstallPath = /Developer/Palettes;
+			productName = BusyPalette;
+			productReference = 253E31B2052CDB9500CC5168 /* BusyPalette.palette */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F87BB6AC0074FFDA04CA0CBA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C017327F08A95E47009534D0 /* Build configuration list for PBXProject "BusyPalette" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				F89D297100750DFB04CA0CBA /* Development */,
+				F89D297200750DFB04CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = F87BB6AD0074FFDA04CA0CBA;
+			productRefGroup = F87BB6AE0075002304CA0CBA /* Products */;
+			projectDirPath = "";
+			targets = (
+				0160163A0079316D11CA0CD7 /* All */,
+				253E3186052CDB9000CC5168 /* BusyPaletteFramework */,
+				253E3199052CDB9500CC5168 /* BusyPalette */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		253E318C052CDB9000CC5168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253E319E052CDB9500CC5168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E319F052CDB9500CC5168 /* palette.table in Resources */,
+				253E31A0052CDB9500CC5168 /* BusyPalette.nib in Resources */,
+				253E31A1052CDB9500CC5168 /* ExpressionFormatter.tiff in Resources */,
+				253E31A2052CDB9500CC5168 /* BusyPalette.tiff in Resources */,
+				253E31A3052CDB9500CC5168 /* menuImage.tiff in Resources */,
+				253E31A4052CDB9500CC5168 /* NiftyMenuItem.ibclassdescription in Resources */,
+				253E31A5052CDB9500CC5168 /* NiftyMenuItemInspector.nib in Resources */,
+				253E31A6052CDB9500CC5168 /* DataCellInspector.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		253E3193052CDB9000CC5168 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253E31AF052CDB9500CC5168 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		253E318D052CDB9000CC5168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E318E052CDB9000CC5168 /* ExpressionEvaluator.m in Sources */,
+				253E318F052CDB9000CC5168 /* ExpressionFormatter.m in Sources */,
+				253E3190052CDB9000CC5168 /* NiftyMenuItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253E31A7052CDB9500CC5168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253E31A8052CDB9500CC5168 /* BusyPalette.m in Sources */,
+				253E31A9052CDB9500CC5168 /* NiftyMenuItemInspector.m in Sources */,
+				253E31AA052CDB9500CC5168 /* DataCellInspector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0160163B0079316D11CA0CD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 253E3186052CDB9000CC5168 /* BusyPaletteFramework */;
+			targetProxy = 536D4CE204D717FF001C31A8 /* PBXContainerItemProxy */;
+		};
+		0160163C0079316D11CA0CD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 253E3199052CDB9500CC5168 /* BusyPalette */;
+			targetProxy = 536D4CE304D717FF001C31A8 /* PBXContainerItemProxy */;
+		};
+		253E31E9052CDC7500CC5168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 253E3186052CDB9000CC5168 /* BusyPaletteFramework */;
+			targetProxy = 253E31E8052CDC7500CC5168 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F862647800C761A404CA0CBA /* DataCellInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F862647900C761A404CA0CBA /* English */,
+			);
+			name = DataCellInspector.nib;
+			sourceTree = "<group>";
+		};
+		F868291A00791A7504CA0CBA /* NiftyMenuItemInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F868291B00791A7504CA0CBA /* English */,
+			);
+			name = NiftyMenuItemInspector.nib;
+			sourceTree = "<group>";
+		};
+		F87BB6D80075033704CA0CBA /* BusyPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F87BB6D90075033704CA0CBA /* English */,
+			);
+			name = BusyPalette.nib;
+			sourceTree = "<group>";
+		};
+		F87BB6DB0075035C04CA0CBA /* palette.table */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F87BB6D1007502E704CA0CBA /* English */,
+			);
+			name = palette.table;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C017327408A95E47009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-BusyPaletteFramework.plist";
+				INSTALL_PATH = /Library/Frameworks/;
+				PRODUCT_NAME = BusyPaletteFramework;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C017327508A95E47009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				INFOPLIST_FILE = "Info-BusyPaletteFramework.plist";
+				INSTALL_PATH = /Library/Frameworks/;
+				PRODUCT_NAME = BusyPaletteFramework;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		C017327808A95E47009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-BusyPalette.plist";
+				INSTALL_PATH = /Developer/Palettes;
+				PRODUCT_NAME = BusyPalette;
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C017327908A95E47009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				INFOPLIST_FILE = "Info-BusyPalette.plist";
+				INSTALL_PATH = /Developer/Palettes;
+				PRODUCT_NAME = BusyPalette;
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Release;
+		};
+		C017327C08A95E47009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C017327D08A95E47009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = All;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C017328008A95E47009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C017328108A95E47009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C017327308A95E47009534D0 /* Build configuration list for PBXNativeTarget "BusyPaletteFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017327408A95E47009534D0 /* Debug */,
+				C017327508A95E47009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017327708A95E47009534D0 /* Build configuration list for PBXNativeTarget "BusyPalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017327808A95E47009534D0 /* Debug */,
+				C017327908A95E47009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017327B08A95E47009534D0 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017327C08A95E47009534D0 /* Debug */,
+				C017327D08A95E47009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017327F08A95E47009534D0 /* Build configuration list for PBXProject "BusyPalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017328008A95E47009534D0 /* Debug */,
+				C017328108A95E47009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F87BB6AC0074FFDA04CA0CBA /* Project object */;
+}

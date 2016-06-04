@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMAccepts</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Optional</key>
+		<false/>
+		<key>Types</key>
+		<array>
+			<string>com.apple.cocoa.string</string>
+		</array>
+	</dict>
+	<key>AMApplication</key>
+	<string>Terminal</string>
+	<key>AMCanShowSelectedItemsWhenRun</key>
+	<true/>
+	<key>AMCanShowWhenRun</key>
+	<true/>
+	<key>AMCategory</key>
+	<string>Terminal</string>
+	<key>AMDefaultParameters</key>
+	<dict>
+		<key>sortColumn</key>
+		<string>1</string>
+		<key>sortDirection</key>
+		<string>0</string>
+		<key>sortStyle</key>
+		<string>0</string>
+	</dict>
+	<key>AMDescription</key>
+	<dict>
+		<key>AMDAlert</key>
+		<string></string>
+		<key>AMDInput</key>
+		<string></string>
+		<key>AMDNote</key>
+		<string></string>
+		<key>AMDOptions</key>
+		<string>Choose the blank-separated column to sort on (starting at 1), the sort order (sort's "-r" option), and whether to sort numbers properly (sort's "-n" option).</string>
+		<key>AMDRelatedActions</key>
+		<string>com.apple.Automator.GetContentofTextEditDocument</string>
+		<key>AMDRequires</key>
+		<string></string>
+		<key>AMDResult</key>
+		<string></string>
+		<key>AMDSummary</key>
+		<string>This action sorts lines of text using the Unix "sort" command.</string>
+	</dict>
+	<key>AMIconName</key>
+	<string>Terminal</string>
+	<key>AMKeywords</key>
+	<array/>
+	<key>AMName</key>
+	<string>Sort Items</string>
+	<key>AMProvides</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Types</key>
+		<array>
+			<string>com.apple.cocoa.string</string>
+		</array>
+	</dict>
+	<key>AMRequiredResources</key>
+	<array/>
+	<key>AMWarning</key>
+	<dict>
+		<key>Action</key>
+		<string>(* Action name to be suggested to add prior to this action to make the task safer, e.g. com.apple.Automator.CopyFiles, goes here. *)</string>
+		<key>ApplyButton</key>
+		<string>(* Button label for user to add proposed Action, e.g. Add. *)</string>
+		<key>IgnoreButton</key>
+		<string>(* Button label for user not to add proposed Action, e.g. Don't Add. *)</string>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Message</key>
+		<string>(* Warning message presented to user goes here. *)</string>
+	</dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Sort Items version 1.0, Copyright (c) 2005, Apple Computer, Inc.</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.AutomatorExamples.SortItems</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Sort Items</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSPrincipalClass</key>
+	<string>AMShellScriptAction</string>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                deleteClip = id; 
+                playClip = id; 
+                playMovie = id; 
+                saveMovie = id; 
+                setSoundTrack = id; 
+                splitClip = id; 
+            }; 
+            CLASS = MovieEditingController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {movieClips = NSTableView; movieView = NSMovieView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = MovieEditorPalette; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                controllerImage = NSImageView; 
+                quickTimeView = NSImageView; 
+                soundFileWell = SoundFileWell; 
+            }; 
+            SUPERCLASS = IBPalette; 
+        }, 
+        {CLASS = MyMovie; LANGUAGE = ObjC; SUPERCLASS = NSMovie; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {CLASS = SoundFileWell; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	035E43A3FEEE2AEC7F000001 /* Project object */ = {
+		activeBuildConfigurationName = Development;
+		activeBuildStyle = 0186160FFFB7A57311CA0CA4 /* Development */;
+		activeExecutable = 6BF1D223C5B03A1A00134FF9 /* Rulers */;
+		activeTarget = 73D1B208049A51C300C919A3 /* Rulers */;
+		codeSenseManager = 6BF1D235C5B03A2700134FF9 /* Code sense */;
+		executables = (
+			6BF1D223C5B03A1A00134FF9 /* Rulers */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48.1626,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = "-978306534";
+			PBXWorkspaceStateSaveDate = "-978306534";
+		};
+		sourceControlManager = 6BF1D234C5B03A2700134FF9 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	6BF1D223C5B03A1A00134FF9 /* Rulers */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Rulers;
+		sourceDirectories = (
+		);
+	};
+	6BF1D234C5B03A2700134FF9 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	6BF1D235C5B03A2700134FF9 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	73D1B208049A51C300C919A3 /* Rulers */ = {
+		activeExec = 0;
+		executables = (
+			6BF1D223C5B03A1A00134FF9 /* Rulers */,
+		);
+	};
+}

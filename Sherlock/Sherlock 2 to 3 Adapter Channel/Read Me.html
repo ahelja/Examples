@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd"><HTML><HEAD><TITLE>Sherlock Channel Read Me</TITLE></HEAD><BODY BGCOLOR=#FFFFFF><H3>Notes</H3>
+
+<UL>
+If you have an existing Sherlock 2 Internet channel (.src file), and you want to create a simple Sherlock 3 channel, you are in the right place.
+<p>
+Caveats: This has only been tested with a handful of .src files. Your mileage may vary.
+<p>
+Known issues: This only works with Internet plug-ins (not People, not News, not LDAP). This only works with GET (not POST) style searches.
+</UL>
+<H3>Set Up The Channel Build Environment</H3><OL>	<LI><B>Copy this Channel to A Web Server</B>
+
+<p>Every channel must be hosted by a web server. This can be any http server, including any Mac OS X machine running Personal Web Server.
+<p>Some possible locations:<font face="Courier" size=2><table border=1 cellPadding=5><tr bgcolor="lightBlue">	<td>Path</td>	<td>Base URL</td></tr><tr>	<td>/Library/WebServer/Documents/</td>	<td>http://localhost/</td></tr><tr>	<td>&lt;your home directory&gt;/Sites/</td>	<td>http://localhost/~yourUserName/</td></tr><tr>	<td>&lt;your iDisk&gt;/Sites/</td>	<td>http://homepage.mac.com/&lt;iDiskUserName&gt;/</td></tr></table></font>	<BR>
+If you choose to use your local machine as a the host server (the first two options listed), you will need to turn on Personal Web Server. Open the Sharing panel of System Preferences and make sure "Personal Web Sharing" is checked.	In order for Sherlock to access channels on the same machine or "localhost", the environment variable <code>SHERLOCK_DEBUG_CHANNELS</code> must be set.  To enable this configuration, open a Terminal window on your system and define the environment variable <code>SHERLOCK_DEBUG_CHANNELS</code> with a value of 1.
+<br>
+</LI>	
+	<LI><B>Launch Sherlock in Debug Mode</B><BR>The Project Builder project for the Sherlock Channel template is set up to run Sherlock as the execution environment. When Sherlock is opened by selecting Run Executable from Project Builder's Debug menu, the <code>SHERLOCK_DEBUG_CHANNELS</code> environment variable is set to 1, enabling a channel debugging mode. This enables a Debug menu within Sherlock, and also enables debug messages to be sent from JavaScript and XQuery to the Console.</LI>	<BR>	<LI><B>Adding The Channel To Sherlock's Toolbar</B><BR>Typically, users will add your channel to their toolbar by clicking a <code>sherlock://</code> URL from a web page or an email sent to them. You can add this channel by typing in a link to the channel's xml file in a popular browser, and hitting return. The URL will depend on where you put the channel. For example, a URL for a channel hosted in the <code>/Library/WebServer/Documents/</code> folder might look like...<p>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<code>sherlock://localhost/MyChannel/SherlockChannel.xml?action=add</code></LI></OL><br><br><H3>Customizing The Channel</H3><OL>	<LI><B>Channel Identifier</B><BR>Each channel must have a unique identifier, in the style of JavaScript naming. This identifier is specified in the SherlockChannel.xml file.</LI>	<BR>	<LI><B>Channel Name</B><BR>The channel name is located in the /Channel/en.lproj/LocalizedResources.plist file.</LI>	<BR>	<LI><B>Channel Icon</B><BR>The channel icon can be either a .tiff or a .icns file. The path to the icon is specified in the SherlockChannel.xml file.</LI>	<BR>	<LI><B> Your Search File</B><BR>Copy your Sherlock 2 search site (.src) file to MyChannel/Sherlock2/Channel.src, replacing the one included in this sample.</LI></OL>
+<ul>Note that once you make a change to the channel, you can either quit/re-open Sherlock or reload the channel using Sherlock's Debug menu.
+</ul>
+
+</BODY></HTML>

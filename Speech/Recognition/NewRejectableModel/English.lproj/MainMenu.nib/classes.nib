@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {setRejectableOff = id; setRejectableOn = id; }; 
+            CLASS = RejectableController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                _recognitionTextView = id; 
+                _recognitionWindow = id; 
+                _rejectableOffButton = id; 
+                _rejectableOnButton = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

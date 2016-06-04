@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>CFBundleExecutable</key>
+	<string>AppearanceSample</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>NSMainNibFile</key>
+	<string>Foo.nib</string>
+	<key>NSExtensions</key>
+	<dict/>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+</dict>
+</plist>

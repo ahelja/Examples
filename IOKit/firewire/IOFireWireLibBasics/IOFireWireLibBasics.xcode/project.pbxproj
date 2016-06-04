@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D704D84060FC36700934A2E /* FWLib_Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D704D82060FC36700934A2E /* FWLib_Device.cpp */; };
+		4D704D85060FC36700934A2E /* FWLib_Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D704D83060FC36700934A2E /* FWLib_Device.h */; };
+		4DE906E7053F52CE001658D6 /* IOFireWireLibBasics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F57EB1FD01723F2901CE2124 /* IOFireWireLibBasics.cpp */; };
+		4DE906E9053F52CE001658D6 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */; };
+		4DE906EA053F52CE001658D6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57EB21001723FDD01CE2124 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA490018CE3211CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		014CEA4A0018CE3211CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		4D704D82060FC36700934A2E /* FWLib_Device.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = FWLib_Device.cpp; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Device.cpp; sourceTree = "<absolute>"; };
+		4D704D83060FC36700934A2E /* FWLib_Device.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FWLib_Device.h; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Device.h; sourceTree = "<absolute>"; };
+		4D8BB346037B87BD00000202 /* About IOFireWireLibBasics.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About IOFireWireLibBasics.rtf"; sourceTree = "<group>"; };
+		4DE906ED053F52CE001658D6 /* IOFireWireLibBasics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IOFireWireLibBasics; sourceTree = BUILT_PRODUCTS_DIR; };
+		F57EB1FD01723F2901CE2124 /* IOFireWireLibBasics.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = IOFireWireLibBasics.cpp; sourceTree = "<group>"; };
+		F57EB21001723FDD01CE2124 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DE906E8053F52CE001658D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE906E9053F52CE001658D6 /* CoreFoundation.framework in Frameworks */,
+				4DE906EA053F52CE001658D6 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* IOFireWireLibDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4D8BB346037B87BD00000202 /* About IOFireWireLibBasics.rtf */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				19C28FBDFE9D53C911CA2CBB /* Products */,
+			);
+			name = IOFireWireLibDemo;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F57EB1FD01723F2901CE2124 /* IOFireWireLibBasics.cpp */,
+				4D704D89060FC36B00934A2E /* FWLib */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */,
+				F57EB21001723FDD01CE2124 /* IOKit.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		19C28FBDFE9D53C911CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DE906ED053F52CE001658D6 /* IOFireWireLibBasics */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D704D89060FC36B00934A2E /* FWLib */ = {
+			isa = PBXGroup;
+			children = (
+				4D704D82060FC36700934A2E /* FWLib_Device.cpp */,
+				4D704D83060FC36700934A2E /* FWLib_Device.h */,
+			);
+			name = FWLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4DE906E5053F52CE001658D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D704D85060FC36700934A2E /* FWLib_Device.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DE906E4053F52CE001658D6 /* IOFireWireLibBasics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 144F8FAD090066CE00B94B25 /* Build configuration list for PBXNativeTarget "IOFireWireLibBasics" */;
+			buildPhases = (
+				4DE906E5053F52CE001658D6 /* Headers */,
+				4DE906E6053F52CE001658D6 /* Sources */,
+				4DE906E8053F52CE001658D6 /* Frameworks */,
+				4DE906EB053F52CE001658D6 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.0.3;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = IOFireWireLibBasics;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			dependencies = (
+			);
+			name = IOFireWireLibBasics;
+			productInstallPath = /usr/local/bin;
+			productName = IOFireWireLibBasic;
+			productReference = 4DE906ED053F52CE001658D6 /* IOFireWireLibBasics */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 144F8FB1090066CE00B94B25 /* Build configuration list for PBXProject "IOFireWireLibBasics" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA490018CE3211CA2923 /* Development */,
+				014CEA4A0018CE3211CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* IOFireWireLibDemo */;
+			projectDirPath = "";
+			targets = (
+				4DE906E4053F52CE001658D6 /* IOFireWireLibBasics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		4DE906EB053F52CE001658D6 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DE906E6053F52CE001658D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE906E7053F52CE001658D6 /* IOFireWireLibBasics.cpp in Sources */,
+				4D704D84060FC36700934A2E /* FWLib_Device.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		144F8FAE090066CE00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = IOFireWireLibBasics;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		144F8FAF090066CE00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = IOFireWireLibBasics;
+			};
+			name = Release;
+		};
+		144F8FB2090066CE00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		144F8FB3090066CE00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		144F8FAD090066CE00B94B25 /* Build configuration list for PBXNativeTarget "IOFireWireLibBasics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8FAE090066CE00B94B25 /* Debug */,
+				144F8FAF090066CE00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		144F8FB1090066CE00B94B25 /* Build configuration list for PBXProject "IOFireWireLibBasics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8FB2090066CE00B94B25 /* Debug */,
+				144F8FB3090066CE00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

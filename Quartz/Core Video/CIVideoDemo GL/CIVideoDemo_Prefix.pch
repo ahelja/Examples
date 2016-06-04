@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CIVideoDemo' target in the 'CIVideoDemo' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

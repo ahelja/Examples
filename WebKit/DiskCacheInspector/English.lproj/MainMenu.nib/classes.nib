@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                filterDiskCacheObjectArrayUsingSearchString = id; 
+                loadDiskCacheFiles = id; 
+                runDiskCacheDirectoryOpenPanel = id; 
+                toggleViewingContentViewerWindow = id; 
+                toggleViewingHTTPInfoWindow = id; 
+                toggleViewingValidityInfoWindow = id; 
+            }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                createdLabel = id; 
+                diskCacheDirectoryLabel = id; 
+                fileList = id; 
+                fileLoadProgressIndicator = id; 
+                fileLoadProgressLabel = id; 
+                fileLoadProgressSheet = id; 
+                filePathLabel = id; 
+                fileSizeLabel = id; 
+                iconView = id; 
+                itemCountLabel = id; 
+                mainWindow = id; 
+                searchField = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DataClasses</key>
+	<array>
+		<dict>
+			<key>Name</key>
+			<string>com.mycompany.syncexamples.zensync.customdataclass</string>
+			<key>ImagePath</key>
+			<string>ZenSyncDataClass</string>
+		</dict>
+	</array>
+	<key>Entities</key>
+	<array>
+		<dict>
+			<key>Attributes</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Name</string>
+					<key>Type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Team</string>
+					<key>Type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Time1</string>
+					<key>Type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Time2</string>
+					<key>Type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>DataClass</key>
+			<string>com.mycompany.syncexamples.zensync.customdataclass</string>
+			<key>IdentityProperties</key>
+			<array>
+				<string>Name</string>
+				<string>Team</string>
+			</array>
+			<key>Name</key>
+			<string>com.mycompany.syncexamples.zensync.customentity</string>
+		</dict>
+	</array>
+	<key>Name</key>
+	<string>com.mycompany.syncexamples.zensync.customschema</string>
+</dict>
+</plist>

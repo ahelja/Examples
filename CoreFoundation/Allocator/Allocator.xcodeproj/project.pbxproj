@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41DA6CCB07B1AA4B00958F0E /* AllocatorExample.c in Sources */ = {isa = PBXBuildFile; fileRef = 04857697FEEDB08B11CA0C5D /* AllocatorExample.c */; settings = {ATTRIBUTES = (); }; };
+		41DA6CCD07B1AA4B00958F0E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0485769EFEEDB08B11CA0C5D /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		01D4F7FEFFB7A81311CA0CA4 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		01D4F7FFFFB7A81311CA0CA4 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		04857697FEEDB08B11CA0C5D /* AllocatorExample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AllocatorExample.c; sourceTree = "<group>"; };
+		0485769EFEEDB08B11CA0C5D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		41DA6CCF07B1AA4B00958F0E /* AllocatorExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AllocatorExample; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41DA6CCC07B1AA4B00958F0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DA6CCD07B1AA4B00958F0E /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04857693FEEDB08B11CA0C5D /* AllocatorExample */ = {
+			isa = PBXGroup;
+			children = (
+				04857697FEEDB08B11CA0C5D /* AllocatorExample.c */,
+				04857694FEEDB08B11CA0C5D /* Products */,
+				04857698FEEDB08B11CA0C5D /* Supporting Files */,
+				0485769DFEEDB08B11CA0C5D /* External Frameworks and Libraries */,
+			);
+			name = AllocatorExample;
+			sourceTree = "<group>";
+		};
+		04857694FEEDB08B11CA0C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41DA6CCF07B1AA4B00958F0E /* AllocatorExample */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04857698FEEDB08B11CA0C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0485769DFEEDB08B11CA0C5D /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0485769EFEEDB08B11CA0C5D /* CoreFoundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41DA6CC907B1AA4B00958F0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		41DA6CC807B1AA4B00958F0E /* AllocatorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDBED08A2DD52008AC9B5 /* Build configuration list for PBXNativeTarget "AllocatorExample" */;
+			buildPhases = (
+				41DA6CC907B1AA4B00958F0E /* Headers */,
+				41DA6CCA07B1AA4B00958F0E /* Sources */,
+				41DA6CCC07B1AA4B00958F0E /* Frameworks */,
+				41DA6CCE07B1AA4B00958F0E /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AllocatorExample;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = AllocatorExample;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = AllocatorExample;
+			productReference = 41DA6CCF07B1AA4B00958F0E /* AllocatorExample */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04857692FEEDB08B11CA0C5D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDBF108A2DD52008AC9B5 /* Build configuration list for PBXProject "Allocator" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				01D4F7FEFFB7A81311CA0CA4 /* Development */,
+				01D4F7FFFFB7A81311CA0CA4 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 04857693FEEDB08B11CA0C5D /* AllocatorExample */;
+			productRefGroup = 04857694FEEDB08B11CA0C5D /* Products */;
+			projectDirPath = "";
+			targets = (
+				41DA6CC807B1AA4B00958F0E /* AllocatorExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		41DA6CCE07B1AA4B00958F0E /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41DA6CCA07B1AA4B00958F0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DA6CCB07B1AA4B00958F0E /* AllocatorExample.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDBEE08A2DD52008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AllocatorExample;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDBEF08A2DD52008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AllocatorExample;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDBF008A2DD52008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AllocatorExample;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		B69BDBF208A2DD52008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		B69BDBF308A2DD52008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		B69BDBF408A2DD52008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDBED08A2DD52008AC9B5 /* Build configuration list for PBXNativeTarget "AllocatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDBEE08A2DD52008AC9B5 /* Development */,
+				B69BDBEF08A2DD52008AC9B5 /* Deployment */,
+				B69BDBF008A2DD52008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDBF108A2DD52008AC9B5 /* Build configuration list for PBXProject "Allocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDBF208A2DD52008AC9B5 /* Development */,
+				B69BDBF308A2DD52008AC9B5 /* Deployment */,
+				B69BDBF408A2DD52008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04857692FEEDB08B11CA0C5D /* Project object */;
+}

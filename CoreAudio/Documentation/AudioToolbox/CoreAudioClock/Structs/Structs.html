@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Structs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1>
+<br><hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/CAClockTime;  name=CAClockTime --><a name="//apple_ref/c/tag/CAClockTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockTime">CAClockTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Represents a time value using one of several possible units.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> { 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockTimeFormat" logicalPath="//apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/tdef/CAClockTimeFormat //apple_ref/c/tag/CAClockTimeFormat" target="_top"><font class="type">CAClockTimeFormat</font></a> <font class="var">format</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">reserved</font>; 
+    <font class="keyword">union</font> { 
+        <!-- a logicalPath="//apple_ref/c/cl/UInt64 //apple_ref/c/cl/UInt64 //apple_ref/c/tdef/UInt64 //apple_ref/c/tag/UInt64 //apple_ref/c/econst/UInt64 //apple_ref/c/struct/UInt64 //apple_ref/c/clconst/UInt64" --><font class="type">UInt64</font><!-- /a --> <font class="var">hostTime</font>; 
+        <!-- a logicalPath="//apple_ref/c/cl/CAClockSamples //apple_ref/c/cl/CAClockSamples //apple_ref/c/tdef/CAClockSamples //apple_ref/c/tag/CAClockSamples //apple_ref/c/econst/CAClockSamples //apple_ref/c/struct/CAClockSamples //apple_ref/c/clconst/CAClockSamples" --><font class="type">CAClockSamples</font><!-- /a --> <font class="var">samples</font>; 
+        <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockBeats" logicalPath="//apple_ref/c/cl/CAClockBeats //apple_ref/c/cl/CAClockBeats //apple_ref/c/tdef/CAClockBeats" target="_top"><font class="type">CAClockBeats</font></a> <font class="var">beats</font>; 
+        <!-- a logicalPath="//apple_ref/c/cl/CAClockSeconds //apple_ref/c/cl/CAClockSeconds //apple_ref/c/tdef/CAClockSeconds //apple_ref/c/tag/CAClockSeconds //apple_ref/c/econst/CAClockSeconds //apple_ref/c/struct/CAClockSeconds //apple_ref/c/clconst/CAClockSeconds" --><font class="type">CAClockSeconds</font><!-- /a --> <font class="var">seconds</font>; 
+        <!-- a logicalPath="//apple_ref/c/cl/SMPTETime //apple_ref/c/cl/SMPTETime //apple_ref/c/tdef/SMPTETime //apple_ref/c/tag/SMPTETime //apple_ref/c/econst/SMPTETime //apple_ref/c/struct/SMPTETime //apple_ref/c/clconst/SMPTETime" --><font class="type">SMPTETime</font><!-- /a --> <font class="var">smpte</font>; 
+        } <font class="var">time</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>format</code></dt>
+<dd>Specifies the time's format and units.</dd>
+<dt><code>reserved</code></dt>
+<dd>Must be 0.</dd>
+<dt><code>time</code></dt>
+<dd>The time value. Use the member of the union appropriate to the format (see the
+description of CAClockTimeFormat).</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/CABarBeatTime;  name=CABarBeatTime --><a name="//apple_ref/c/tag/CABarBeatTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CABarBeatTime">CABarBeatTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A display representation of a musical time in beats.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CABarBeatTime" logicalPath="//apple_ref/c/cl/CABarBeatTime //apple_ref/c/cl/CABarBeatTime //apple_ref/c/tdef/CABarBeatTime //apple_ref/c/tag/CABarBeatTime" target="_top"><font class="type">CABarBeatTime</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">bar</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">beat</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">subbeat</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">subbeatDivisor</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">reserved</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>bar</code></dt>
+<dd>A measure number.</dd>
+<dt><code>beat</code></dt>
+<dd>A beat number (1..n).</dd>
+<dt><code>subbeat</code></dt>
+<dd>The numerator of the fractional number of beats.</dd>
+<dt><code>subbeatDivisor</code></dt>
+<dd>The denominator of the fractional number of beats.</dd>
+<dt><code>reserved</code></dt>
+<dd>Must be 0.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A clock's internal representation of musical time is in beats based on the
+beginning of the timeline. Normally, such times should be displayed to the user
+in terms of bars, beats, and subbeats (sometimes called "units" or "parts per
+quarter" [PPQ]). This data structure is such a display representation.
+<br><br>
+By convention, bar 1 is the beginning of the sequence. Beat 1 is the first beat
+of the measure. In 4/4 time, beat will have a value from 1 to 4. Music
+applications often use beat divisions such as 480 and 960.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/CATempoMapEntry;  name=CATempoMapEntry --><a name="//apple_ref/c/tag/CATempoMapEntry"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CATempoMapEntry">CATempoMapEntry</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A tempo change event.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CATempoMapEntry" logicalPath="//apple_ref/c/cl/CATempoMapEntry //apple_ref/c/cl/CATempoMapEntry //apple_ref/c/tdef/CATempoMapEntry //apple_ref/c/tag/CATempoMapEntry" target="_top"><font class="type">CATempoMapEntry</font></a> { 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockBeats" logicalPath="//apple_ref/c/cl/CAClockBeats //apple_ref/c/cl/CAClockBeats //apple_ref/c/tdef/CAClockBeats" target="_top"><font class="type">CAClockBeats</font></a> <font class="var">beats</font>; 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockTempo" logicalPath="//apple_ref/c/cl/CAClockTempo //apple_ref/c/cl/CAClockTempo //apple_ref/c/tdef/CAClockTempo" target="_top"><font class="type">CAClockTempo</font></a> <font class="var">tempoBPM</font>; <font class="comment">// beats per minute</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>beats</code></dt>
+<dd>The beat time at which the tempo changes.</dd>
+<dt><code>tempoBPM</code></dt>
+<dd>The new tempo as of that time.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The clock's tempo map defines the correspondence between seconds and musical
+beats, and is used in conversions between the two.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/CAMeterTrackEntry;  name=CAMeterTrackEntry --><a name="//apple_ref/c/tag/CAMeterTrackEntry"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAMeterTrackEntry">CAMeterTrackEntry</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A time signature change event.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAMeterTrackEntry" logicalPath="//apple_ref/c/cl/CAMeterTrackEntry //apple_ref/c/cl/CAMeterTrackEntry //apple_ref/c/tdef/CAMeterTrackEntry //apple_ref/c/tag/CAMeterTrackEntry" target="_top"><font class="type">CAMeterTrackEntry</font></a> { 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockBeats" logicalPath="//apple_ref/c/cl/CAClockBeats //apple_ref/c/cl/CAClockBeats //apple_ref/c/tdef/CAClockBeats" target="_top"><font class="type">CAClockBeats</font></a> <font class="var">beats</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">meterNumer</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">meterDenom</font>; <font class="comment">// 1,2,4,8 etc.</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>beats</code></dt>
+<dd>The beat time at which the time signature (meter) changes.</dd>
+<dt><code>meterNum</code></dt>
+<dd>The numerator of the new time signature.</dd>
+<dt><code>meterDenom</code></dt>
+<dd>The denominator of the new time signature (1, 2, 4, 8, etc.).
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The meter track is used for converting between beats as floating-point
+numbers (CAClockBeats) and their display representations (CABarBeatTime).
+</p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

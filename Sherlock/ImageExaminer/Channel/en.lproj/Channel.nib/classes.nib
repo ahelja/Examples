@@ -1,0 +1,45 @@
+{
+    IBClasses = (
+        {CLASS = Aqua2SplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = ColorView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = ElasticMatrix; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataSource = id; }; 
+            SUPERCLASS = NSMatrix; 
+        }, 
+        {
+            ACTIONS = {makeFontBigger = id; makeFontSmaller = id; print = id; }; 
+            CLASS = HTMLView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {clear = id; }; 
+            CLASS = NSTableViewWithDraggableItems; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {CLASS = RankCell; LANGUAGE = ObjC; SUPERCLASS = NSActionCell; }, 
+        {
+            CLASS = SherlockChannel; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelView = NSView; thumbnailCell = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {clear = id; }; 
+            CLASS = SherlockNSTableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            ACTIONS = {startAnimation = id; stopAnimation = id; }; 
+            CLASS = SpinningArrows; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

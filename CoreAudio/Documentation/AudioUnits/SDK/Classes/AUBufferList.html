@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUBufferList</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUBufferList</a></h1>
+<big><b>Superclasses : </b></big>
+none<br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUBuffer<br>
+<br><pre>class AUBufferList </pre>
+<p>AUBufferList is a container for managing AudioBufferLists.</p><hr>
+<h2>Methods</h2>
+<h3><u>Allocation</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Allocate">Allocate</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Allocate(
+          const CAStreamBasicDescription& format,
+          UInt32                          nFrames
+    );</pre>
+<p>Allocates buffer space large enough for the number of stream/channels specified in the 
+			format and the number of frames requested.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Deallocate">Deallocate</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Deallocate();</pre>
+<p>Frees the buffer space. The streams are not freed.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetAllocatedFrames">GetAllocatedFrames</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> UInt32 GetAllocatedFrames() const;</pre>
+<p>Returns the number of frames allocated for internal buffer space.</p><br>
+<hr>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUBufferList">AUBufferList</a></h4>
+</td><td width="50%">
+<h4>private  constructor</h4>
+</td></tr></table>
+<br><pre> AUBufferList(AUBufferList &);</pre>
+<p></p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUBufferList">~AUBufferList</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual destructor</h4>
+</td></tr></table>
+<br><pre> ~AUBufferList();</pre>
+<p>Frees all buffer space and streams.</p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CopyBufferContentsTo">CopyBufferContentsTo</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void CopyBufferContentsTo(AudioBufferList &abl) const;</pre>
+<p>Copy the contents of the buffers to another AudioBufferList.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CopyBufferListTo">CopyBufferListTo</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void CopyBufferListTo(AudioBufferList &abl) const;</pre>
+<p>Copy the buffer list pointers to another AudioBufferList.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetBufferList">GetBufferList</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AudioBufferList& GetBufferList();</pre>
+<p>Returns a reference to the contained AudioBufferList.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="InvalidateBufferList">InvalidateBufferList</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void InvalidateBufferList();</pre>
+<p>Mark the buffer pointers as invalid. Attempts to access the buffers after this will fail until 
+			PrepareBuffer, PrepareNullBuffer, or SetBufferList is called.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PrepareBuffer">PrepareBuffer</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AudioBufferList& PrepareBuffer(
+          const CAStreamBasicDescription& format,
+          UInt32                          nFrames
+    );</pre>
+<p>Sets the buffer formats in the buffer list to the desired format and partitions the already 
+				allocated buffer memory accordingly.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PrepareNullBuffer">PrepareNullBuffer</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AudioBufferList& PrepareNullBuffer(
+          const CAStreamBasicDescription& format,
+          UInt32                          nFrames
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PrintBuffer">PrintBuffer</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static void PrintBuffer(
+          const char*                     label,
+          int                             subscript,
+          const AudioBufferList&          abl,
+          UInt32                          nFrames = 8,
+          bool                            asFloats = true
+    );</pre>
+<p>Print the buffer contents for debugging purposes. Assumes floating point format.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetBuffer">SetBuffer</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetBuffer(
+          UInt32                          index,
+          const AudioBuffer&              ab
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetBufferList">SetBufferList</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AudioBufferList& SetBufferList(const AudioBufferList &abl);</pre>
+<p>Sets the AUBufferList to use another AudioBufferList for its buffers. 
+			This is often used for reusing input buffers as output buffers in order to optimize cache usage.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="UseExternalBuffer">UseExternalBuffer</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void UseExternalBuffer(
+          const CAStreamBasicDescription& format,
+          const AudioUnitExternalBuffer&  buf
+    );</pre>
+<p>Sets the buffer to use memory not owned by itself. 
+			This memory will not be freed by Deallocate or the destructor.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ZeroBuffer">ZeroBuffer</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static void ZeroBuffer(AudioBufferList &abl);</pre>
+<p>Fill buffers with zero. Usually used in a Render routine to fill output buffers with silence before mixing into them.</p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAllocatedBytes">mAllocatedBytes</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mAllocatedBytes;</pre>
+<p>Number of bytes allocated for buffer memory.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAllocatedFrames">mAllocatedFrames</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mAllocatedFrames;</pre>
+<p>Number of frames allocated for buffer memory.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAllocatedStreams">mAllocatedStreams</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mAllocatedStreams;</pre>
+<p>Number of streams allocated.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mExternalMemory">mExternalMemory</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mExternalMemory;</pre>
+<p>True if mMemory is not owned by this object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mMemory">mMemory</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> Byte* mMemory;</pre>
+<p>The pointer to buffer space.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mPtrState">mPtrState</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> EPtrState mPtrState;</pre>
+<p>Whether the buffer list is invalid, external, or internal.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mPtrs">mPtrs</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AudioBufferList* mPtrs;</pre>
+<p>An array of pointers to the AudioBufferLists.</p><br>
+<hr>
+</body></html>

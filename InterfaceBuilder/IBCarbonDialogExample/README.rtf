@@ -1,0 +1,47 @@
+{\rtf1\mac\ansicpg10000\cocoartf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs24 \cf0 Objective
+\f1\b0 :\
+\
+A frequently asked question is "Can I use nibs with the Dialog Manager?" The answer is no, but you can create modal dialogs using InterfaceBuilder and Carbon Events. This example will show you how.\
+\
+This sample project has five major points of interest:\
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li340\fi-340\ql\qnatural
+
+\f0\b \cf0 main.c
+\f1\b0  - This is the entry point for our application. It's main() function starts the process of showing the main window and menu and then starts the run loop.\
+
+\f0\b \
+mainWindowHandler
+\f1\b0  - This file contains several important pieces of code which handle events for the main window. CreateMainWindow() does the work of finding, loading and showing the main window and menubar. MainwindowEventHandler() listens and responds to events specific to the window and its controls. HandleResponse() changes the appearance of the main window depending on which buttons were clicked in the dialog.\
+\
+
+\f0\b modalDialogHandler
+\f1\b0  - This file contains code which handles the dialog window. CreateDialogWindow() will load the window and put it in an application modal state. Events are handled by DialogWindowEventHandler(). The YES NO responses are sent to HandleResponse() in mainWindowHandler.\
+\
+
+\f0\b main.nib
+\f1\b0  - This nib contains the main menu and window. It contains a button with the action 'SHOW' and a static text field with signature DEMO and id 131.\
+\
+
+\f0\b dialog.nib
+\f1\b0  - The window for the dialog is contained in this nib. It has two buttons with four character HI commands 'YES ' and 'NO  '. The window event handler in modalDialogHandler listens for these commands.\
+\
+
+\f0\b Overview:\
+
+\f1\b0 \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+\cf0 When the application is launched, it finds, loads and shows the user interface elements defined in main.nib. The window event handler MainwindowEventHandler() is attached so it can listen for the 'SHOW' command. If that command comes through, it calls CreateDialogWindow(). \
+\
+CreateDialogWindow() finds, loads and displays the window defined in dialog.nib. However, instead of calling RunApplicationEventLoop(), it calls RunAppModalLoopForWindow(). This call puts the window in a modal state and blocks until QuitAppModalLoopForWindow() is called. \
+\
+If the window handler, DialogWindowEventHandler(), receives a 'NO  ' or 'YES ' message, it will present HandleResponse() with the button clicked and stop the modal loop. HandleResponse() finds the static text field and changes its text.\
+\
+The call to RunAppModalLoopForWindow() will unblock, and the code to close and dispose of the dialog window and UPP will run.\
+\
+}

@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25B1540D04D73B8F0061D822 /* SubViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F32353302F8962C0CCA0D55 /* SubViewController.h */; };
+		25B1540E04D73B8F0061D822 /* WindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F32353702F8962C0CCA0D55 /* WindowController.h */; };
+		25B1540F04D73B8F0061D822 /* TypeTextHere.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F32353802F8962C0CCA0D55 /* TypeTextHere.h */; };
+		25B1541004D73B8F0061D822 /* TextFormattingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F32353902F8962C0CCA0D55 /* TextFormattingView.h */; };
+		25B1541204D73B8F0061D822 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		25B1541304D73B8F0061D822 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		25B1541404D73B8F0061D822 /* EnterText.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3F32352D02F896250CCA0D55 /* EnterText.nib */; };
+		25B1541504D73B8F0061D822 /* SetColor.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3F32352F02F896250CCA0D55 /* SetColor.nib */; };
+		25B1541704D73B8F0061D822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		25B1541804D73B8F0061D822 /* TypeTextHere.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32353402F8962C0CCA0D55 /* TypeTextHere.m */; };
+		25B1541904D73B8F0061D822 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32353502F8962C0CCA0D55 /* WindowController.m */; };
+		25B1541A04D73B8F0061D822 /* TextFormattingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32353602F8962C0CCA0D55 /* TextFormattingView.m */; };
+		25B1541B04D73B8F0061D822 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F32353A02F8962C0CCA0D55 /* SubViewController.m */; };
+		25B1541D04D73B8F0061D822 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		25B1541F04D73B8F0061D822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		25B1542004D73B8F0061D822 /* MultipleNibTabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleNibTabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3F32352E02F896250CCA0D55 /* EnterText.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = EnterText.nib; path = English.lproj/EnterText.nib; sourceTree = "<group>"; };
+		3F32353002F896250CCA0D55 /* SetColor.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = SetColor.nib; path = English.lproj/SetColor.nib; sourceTree = "<group>"; };
+		3F32353302F8962C0CCA0D55 /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
+		3F32353402F8962C0CCA0D55 /* TypeTextHere.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TypeTextHere.m; sourceTree = "<group>"; };
+		3F32353502F8962C0CCA0D55 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+		3F32353602F8962C0CCA0D55 /* TextFormattingView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TextFormattingView.m; sourceTree = "<group>"; };
+		3F32353702F8962C0CCA0D55 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		3F32353802F8962C0CCA0D55 /* TypeTextHere.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TypeTextHere.h; sourceTree = "<group>"; };
+		3F32353902F8962C0CCA0D55 /* TextFormattingView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TextFormattingView.h; sourceTree = "<group>"; };
+		3F32353A02F8962C0CCA0D55 /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
+		540B3AE104CF611D0065ECE7 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25B1541C04D73B8F0061D822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B1541D04D73B8F0061D822 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				540B3AE104CF611D0065ECE7 /* ReadMe.rtf */,
+				3F32353702F8962C0CCA0D55 /* WindowController.h */,
+				3F32353502F8962C0CCA0D55 /* WindowController.m */,
+				3F32353302F8962C0CCA0D55 /* SubViewController.h */,
+				3F32353A02F8962C0CCA0D55 /* SubViewController.m */,
+				3F32353802F8962C0CCA0D55 /* TypeTextHere.h */,
+				3F32353402F8962C0CCA0D55 /* TypeTextHere.m */,
+				3F32353902F8962C0CCA0D55 /* TextFormattingView.h */,
+				3F32353602F8962C0CCA0D55 /* TextFormattingView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25B1542004D73B8F0061D822 /* MultipleNibTabView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* MultipleNibTabView */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				25B1541F04D73B8F0061D822 /* Info.plist */,
+			);
+			name = MultipleNibTabView;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F32352D02F896250CCA0D55 /* EnterText.nib */,
+				3F32352F02F896250CCA0D55 /* SetColor.nib */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		25B1540C04D73B8F0061D822 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B1540D04D73B8F0061D822 /* SubViewController.h in Headers */,
+				25B1540E04D73B8F0061D822 /* WindowController.h in Headers */,
+				25B1540F04D73B8F0061D822 /* TypeTextHere.h in Headers */,
+				25B1541004D73B8F0061D822 /* TextFormattingView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		25B1540B04D73B8F0061D822 /* MultipleNibTabView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01732EE08A95E49009534D0 /* Build configuration list for PBXNativeTarget "MultipleNibTabView" */;
+			buildPhases = (
+				25B1540C04D73B8F0061D822 /* Headers */,
+				25B1541104D73B8F0061D822 /* Resources */,
+				25B1541604D73B8F0061D822 /* Sources */,
+				25B1541C04D73B8F0061D822 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = MultipleNibTabView;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MultipleNibTabView;
+			productReference = 25B1542004D73B8F0061D822 /* MultipleNibTabView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01732F208A95E49009534D0 /* Build configuration list for PBXProject "MultipleNibTabView" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* MultipleNibTabView */;
+			projectDirPath = "";
+			targets = (
+				25B1540B04D73B8F0061D822 /* MultipleNibTabView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25B1541104D73B8F0061D822 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B1541204D73B8F0061D822 /* MainMenu.nib in Resources */,
+				25B1541304D73B8F0061D822 /* InfoPlist.strings in Resources */,
+				25B1541404D73B8F0061D822 /* EnterText.nib in Resources */,
+				25B1541504D73B8F0061D822 /* SetColor.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25B1541604D73B8F0061D822 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B1541704D73B8F0061D822 /* main.m in Sources */,
+				25B1541804D73B8F0061D822 /* TypeTextHere.m in Sources */,
+				25B1541904D73B8F0061D822 /* WindowController.m in Sources */,
+				25B1541A04D73B8F0061D822 /* TextFormattingView.m in Sources */,
+				25B1541B04D73B8F0061D822 /* SubViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		3F32352D02F896250CCA0D55 /* EnterText.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F32352E02F896250CCA0D55 /* EnterText.nib */,
+			);
+			name = EnterText.nib;
+			sourceTree = "<group>";
+		};
+		3F32352F02F896250CCA0D55 /* SetColor.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F32353002F896250CCA0D55 /* SetColor.nib */,
+			);
+			name = SetColor.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01732EF08A95E49009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = MultipleNibTabView;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01732F008A95E49009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = MultipleNibTabView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01732F308A95E49009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01732F408A95E49009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01732EE08A95E49009534D0 /* Build configuration list for PBXNativeTarget "MultipleNibTabView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01732EF08A95E49009534D0 /* Debug */,
+				C01732F008A95E49009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01732F208A95E49009534D0 /* Build configuration list for PBXProject "MultipleNibTabView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01732F308A95E49009534D0 /* Debug */,
+				C01732F408A95E49009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

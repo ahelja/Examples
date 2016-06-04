@@ -1,0 +1,200 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = HLDeviceWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mInfoController = HLDeviceWindowInfoController; 
+                mNotificationsController = HLDeviceWindowNotificationsController; 
+                mStreamsController = HLDeviceWindowStreamsController; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {
+                DataSourcePopUpAction = id; 
+                ISubMuteCheckBoxAction = id; 
+                ISubVolumeSliderAction = id; 
+                InputMuteMatrixAction = id; 
+                InputPlayThruMatrixAction = id; 
+                InputVolumeMatrixAction = id; 
+                OutputMuteMatrixAction = id; 
+                OutputVolumeMatrixAction = id; 
+                OwnISubCheckBoxAction = id; 
+                StereoPairPopUpAction = id; 
+            }; 
+            CLASS = HLDeviceWindowControlsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mISubMuteCheckBox = NSButton; 
+                mISubVolumeSlider = NSSlider; 
+                mISubVolumeTextField = NSTextField; 
+                mInputDataSourcePopUp = NSPopUpButton; 
+                mInputIsConnectedTextField = NSTextField; 
+                mInputLeftChannelPopUp = NSPopUpButton; 
+                mInputRightChannelPopUp = NSPopUpButton; 
+                mInputScrollView = NSScrollView; 
+                mInputStripView = HLStripView; 
+                mOutputDataSourcePopUp = NSPopUpButton; 
+                mOutputIsConnectedTextField = NSTextField; 
+                mOutputLeftChannelPopUp = NSPopUpButton; 
+                mOutputRightChannelPopUp = NSPopUpButton; 
+                mOutputScrollView = NSScrollView; 
+                mOutputStripView = HLStripView; 
+                mOwnISubCheckBox = NSButton; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                ClockSourcePopUpAction = id; 
+                IOBufferSizeComboBoxAction = id; 
+                LaunchConfigAppButtonAction = id; 
+                MixingRadioButtonMatrixAction = id; 
+                NominalSampleRateComboBoxAction = id; 
+                TakeHogModeButtonAction = id; 
+            }; 
+            CLASS = HLDeviceWindowInfoController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mActualSampleRateTextField = NSTextField; 
+                mAudioDeviceIDTextField = NSTextField; 
+                mClockDomainTextField = NSTextField; 
+                mClockSourcePopUp = NSPopUpButton; 
+                mConfigAppTextField = NSTextField; 
+                mDeviceIsAliveTextField = NSTextField; 
+                mDeviceNameTextField = NSTextField; 
+                mDevicePlugInTextField = NSTextField; 
+                mHogModeOwnerTextField = NSTextField; 
+                mIOBufferSizeComboBox = NSComboBox; 
+                mIOBufferSizeRangeTextField = NSTextField; 
+                mInputLatencyTextField = NSTextField; 
+                mInputSafetyOffsetTextField = NSTextField; 
+                mIsRunningSomewhereTextField = NSTextField; 
+                mIsRunningTextField = NSTextField; 
+                mLaunchConfigAppButton = NSButton; 
+                mManufacturerTextField = NSTextField; 
+                mMixingRadioButtonMatrix = NSMatrix; 
+                mModelUIDTextField = NSTextField; 
+                mNominalSampleRateComboBox = NSComboBox; 
+                mOutputLatencyTextField = NSTextField; 
+                mOutputSafetyOffsetTextField = NSTextField; 
+                mOwningPlugInTextField = NSTextField; 
+                mRelatedDevicesTextField = NSTextField; 
+                mTakeHogModeButton = NSButton; 
+                mTransportTypeTextField = NSTextField; 
+                mUIDTextField = NSTextField; 
+                mUsesVariableBufferSizesTextField = NSTextField; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                DataSourceMatrixAction = id; 
+                MuteMatrixAction = id; 
+                SoloMatrixAction = id; 
+                StereoPairPopUpAction = id; 
+                VolumeMatrixAction = id; 
+            }; 
+            CLASS = HLDeviceWindowInputControlsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mIsConnectedTextField = NSTextField; 
+                mLeftChannelPopUp = NSPopUpButton; 
+                mRightChannelPopUp = NSPopUpButton; 
+                mScrollView = NSScrollView; 
+                mStripView = HLStripView; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = HLDeviceWindowNotificationsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDeviceNotificationsTextView = NSTextView; 
+                mStreamNotificationsTextView = NSTextView; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                DataSourceMatrixAction = id; 
+                ISubMuteCheckBoxAction = id; 
+                ISubVolumeSliderAction = id; 
+                MuteMatrixAction = id; 
+                OwnISubCheckBoxAction = id; 
+                SoloMatrixAction = id; 
+                StereoPairPopUpAction = id; 
+                VolumeMatrixAction = id; 
+            }; 
+            CLASS = HLDeviceWindowOutputControlsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mISubMuteCheckBox = NSButton; 
+                mISubVolumeSlider = NSSlider; 
+                mISubVolumeTextField = NSTextField; 
+                mIsConnectedTextField = NSTextField; 
+                mLeftChannelPopUp = NSPopUpButton; 
+                mOwnISubCheckBox = NSButton; 
+                mRightChannelPopUp = NSPopUpButton; 
+                mScrollView = NSScrollView; 
+                mStripView = HLStripView; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                CurrentStreamPopUpAction = id; 
+                DataSourcePopUpAction = id; 
+                IOProcFormatPopUpAction = id; 
+                PhysicalFormatPopUpAction = id; 
+            }; 
+            CLASS = HLDeviceWindowStreamsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mInputAudioStreamIDTextField = NSTextField; 
+                mInputConnectedTextField = NSTextField; 
+                mInputCurrentStreamPopUp = NSPopUpButton; 
+                mInputDataSourcePopUp = NSPopUpButton; 
+                mInputIOProcFormatPopUp = NSPopUpButton; 
+                mInputPhysicalFormatPopUp = NSPopUpButton; 
+                mInputStartingChannelTextField = NSTextField; 
+                mInputTerminalTypeTextField = NSTextField; 
+                mOutputAudioStreamIDTextField = NSTextField; 
+                mOutputConnectedTextField = NSTextField; 
+                mOutputCurrentStreamPopUp = NSPopUpButton; 
+                mOutputDataSourcePopUp = NSPopUpButton; 
+                mOutputIOProcFormatPopUp = NSPopUpButton; 
+                mOutputPhysicalFormatPopUp = NSPopUpButton; 
+                mOutputStartingChannelTextField = NSTextField; 
+                mOutputTerminalTypeTextField = NSTextField; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                DataDestinationMatrixAction = id; 
+                OnOffMatrixAction = id; 
+                SoloMatrixAction = id; 
+                VolumeMatrixAction = id; 
+            }; 
+            CLASS = HLDeviceWindowThruControlsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mScrollView = NSScrollView; 
+                mStripView = HLStripView; 
+                mWindowController = HLDeviceWindowController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = HLStripView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,249 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fnil\fcharset77 Monaco;
+\f3\fswiss\fcharset77 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red11\green106\blue13;\red118\green15\blue80;\red35\green110\blue37;
+}
+\margl1440\margr1440\vieww20220\viewh15540\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs24 \cf0 Embedding a Carbon View in a Cocoa Window\
+\
+Introduction:
+\f1\b0 \
+Now that Audio Units support both Cocoa and Carbon custom views, Audio Unit host applications face the burden of having to support both kinds of views in order to provide a complete user experience.  Using Cocoa's parent-child window relationships (WindowGroups in Carbon) creatively, we can provide the illusion of supporting a carbon view in a cocoa window, or of supporting a cocoa view in a carbon window.  This document details the implementation of carbon view support in a cocoa inspector window.\
+\
+
+\f0\b Process:
+\f1\b0 \
+This hybrid view embedding illusion is accomplished with use of Cocoa's NSWindow API set and Carbon's WindowManager.  There is a good deal of crossover between the two (i.e., the WindowManager can be used to manipulate Cocoa windows to some degree, and the NSWindow API can be used to manipulate Carbon windows to some degree.)  If your hosting application is written with Carbon APIs, feel free to lean more heavily on the WindowManager equivalents of the Cocoa calls indicated.\
+\
+The Cocoa window hosting the Carbon view looks like the following:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Figure1.png \width13360 \height7060
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 <figure 1>\
+\
+\
+The Carbon view is contained in a shadowless, plain Carbon window that is exactly the size of the Carbon view it contains.  Its window is linked to the owning Cocoa window.  Figure 2 shows how the windows are stacked visually:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Figure2.png \width9560 \height10140
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 <figure 2> window exploded view\
+\
+Note that the Cocoa Window contains a navigation toolbar and a drawer.\
+\
+After having created your Cocoa and Carbon windows:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs20 \cf0 	NSWindow *owningCocoaWindow;\
+	WindowRef ownedCarbonWindow;
+\f1\fs24 \
+\
+First, position the Carbon window so that it is aligned with the Cocoa window the way you want using:\
+
+\f2\fs20 	void MoveWindow (short x, short y);\
+	void SizeWindow (short width, short height);
+\f1\fs24 \
+\
+Second, wrap your Carbon window in Cocoa:\
+\
+
+\f2\fs20 	NSWindow *wrappedCarbonWindow = [[NSWindow alloc] initWithWindowRef:ownedCarbonWindow];\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 \
+Third, establish the parent-child relationship:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs20 \cf0 	[owningCocoaWindow addChildWindow:wrappedCarbonWindow ordered:NSWindowAbove];\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 \
+This will "lock" the child window to the parent window.  Moving the parent window will move the child window as if they are the same entity.  A word of caution: in this state child windows can be moved independently of the parent.  Consequently, using textured windows, or windows with titlebars can present UI difficulties.\
+\
+That's it: you're linked.\
+\
+When you want to remove the Carbon view, first end the parent-child relationship:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs20 \cf0 	[owningCocoaWindow removeChildWindow:wrappedCarbonWindow];\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 \
+And then close or hide the window, relinquishing resources as normal.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b \cf0 Managing Carbon/Cocoa Window activation\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\b0 \cf0 When a carbon window is the child of a cocoa window, there can be activation issues. For example, when a window is not active and the user clicks on the carbon window, the carbon child window becomes active without activating its parent. This results in a strange appearance because the window still appears inactive even though the user clicked in the content. \
+\
+Your application can choose to use a floating window to alleviate some of these problems, but you may need to install a carbon event handler on the carbon child window to activate the parent window when the carbon child gets activated.\
+\
+This is accomplished by using the carbon event manager API:\
+	
+\f2\fs20 \CocoaLigature0 EventHandlerRef 	mCarbonEventHandlerRef;	\cf2 // Keep this variable as a data member of your parent window. \
+								// It needs to be valid as long as the window is visible\cf0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+\cf0 	\
+	  EventTypeSpec	windowEventTypes[] = \{\
+	    \{kEventClassWindow, kEventWindowGetClickActivation \},\
+		\{kEventClassWindow, kEventWindowHandleDeactivate \}\
+	  \};\
+
+\f1\fs24 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 	
+\f2\fs20 \CocoaLigature0 EventHandlerUPP   ehUPP = NewEventHandlerUPP(CarbonWindowEventHandler);\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+\cf0 	  OSStatus result = InstallWindowEventHandler( \CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 , ehUPP, \cf3 sizeof\cf0 (windowEventTypes) / \cf3 sizeof\cf0 (EventTypeSpec), \
+					    						   windowEventTypes, \cf3 self\cf0 , &mCarbonWindowHandlerRef );
+\f1\fs24 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+Once you have installed the event handler, you will need to handle those two events:\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+
+\f2\fs20 \cf3 \CocoaLigature0 	pascal\cf0  OSStatus CarbonWindowEventHandler (EventHandlerCallRef nextHandlerRef, EventRef event, \cf3 void\cf0  *userData) \{\
+   		UInt32 		eventKind = GetEventKind(event);\
+		\cf3 switch\cf0  (eventKind) \{\
+			\cf3 case\cf0  kEventWindowHandleDeactivate:\
+				\cf4 // don't allow window to get deactivated while app is active (do this only if you are a floating window that doesn't hide)\cf0 \
+				ActivateWindow(\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 , \cf3 TRUE\cf0 );\
+				\cf3 break\cf0 ;\
+				\
+			\cf3 case\cf0  kEventWindowGetClickActivation:\
+			\{\
+				ClickActivationResult howToHandleClick = kActivateAndHandleClick;\
+				SetEventParameter(event, kEventParamClickActivation, typeClickActivationResult, \
+							\cf3 sizeof\cf0 (ClickActivationResult), &howToHandleClick);\
+			\}\
+			\cf3 break\cf0 ;\
+\
+		\cf3 return\cf0  noErr;\
+	\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+Finally, you will need to remove your event handler in the windowWillClose: delegate method of your cocoa window before you remove the child carbon window from its parent:\
+	
+\f2\fs20 \CocoaLigature0 RemoveEventHandler(mCarbonWindowHandlerRef);\
+
+\f1\fs24 \CocoaLigature1 \
+If you do not use a floating window, you will also need to handle application activation and deactivation. You will need to install an application event handler:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 	EventHandlerRef mApplicationHandlerRef;\
+\
+	EventTypeSpec   applicationEventTypes[] = \{\
+		\{kEventClassApplication, kEventAppActivated \},\
+		\{kEventClassApplication, kEventAppDeactivated \}\
+	\};\
+\
+	EventHandlerUPP ehUPP = NewEventHandlerUPP(CarbonApplicationEventHandler);\
+    OSStatus result = InstallApplicationEventHandler( ehUPP, \cf3 sizeof\cf0 (applicationEventTypes) / \cf3 sizeof\cf0 (EventTypeSpec), \
+													  applicationEventTypes, \cf3 self\cf0 , &mApplicationHandlerRef ));\
+
+\f1\fs24 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 Once you have installed the event handler, you will need to handle those two events:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+
+\f2\fs20 \cf3 \CocoaLigature0 	pascal\cf0  OSStatus CarbonApplicationEventHandler (EventHandlerCallRef nextHandlerRef, EventRef event, \cf3 void\cf0  *userData) \{\
+   		UInt32 		eventKind = GetEventKind(event);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 		\cf3 switch\cf0  (eventKind) \{\
+			\cf3 case\cf0  kEventAppActivated:\
+				ActivateWindow(\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 , \cf3 TRUE\cf0 );\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+\cf3 				return\cf0  noErr;\
+			\cf3 case\cf0  kEventAppDeactivated:\
+				ActivateWindow(\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 , \cf3 FALSE\cf0 );\
+				\cf3 return\cf0  noErr;\
+		\
+			\cf3 default\cf0 :\
+				\cf4 // pass-thru all kEventClassApplication events we're not interested in.\cf0 \
+				\cf3 break\cf0 ;\
+		\}\
+		\cf3 return\cf0  eventNotHandledErr;\
+	\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+You will need to do something similar for the cocoa window when its child Carbon window receives an activation notification:\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 - (\cf3 void\cf0 )applicationDidBecomeActiveNotification:(NSNotification *)inNotification\
+\{\
+	\cf3 if\cf0  (\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 )\
+		ActivateWindow(\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 , \cf3 TRUE\cf0 );\
+\}\
+\
+- (\cf3 void\cf0 )windowDidBecomeKey:(NSNotification *)inNotification\
+\{\
+	[NSApp activateIgnoringOtherApps:\cf3 YES\cf0 ];\
+	\
+	\cf3 if\cf0  (\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 ) \
+		ActivateWindow(\CocoaLigature1 wrappedCarbonWindow\CocoaLigature0 , \cf3 TRUE\cf0 );\
+\}
+\f1\fs24 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+As you did previously, remove your event handler in your windowWillClose: delegate method:\
+	
+\f2\fs20 \CocoaLigature0 RemoveEventHandler(mApplicationHandlerRef);\
+
+\f1\fs24 \CocoaLigature1 \
+Keep in mind that this source code is simplified. Your application will need to ensure that when ActivateWindow is called from within the application event handler that the event is not processed in the window event handler. We recommend setting a flag whenever ActivateWindow is called on the carbon window. Then in the even handler, you can return noErr if that flag is set. This prevents the carbon event handler from processing the event twice.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b \cf0 \
+Links:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\b0 \cf0 Cocoa NSWindow APIs:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "http://developer.apple.com/documentation/Cocoa/Reference/ApplicationKit/ObjC_classic/Classes/NSWindow.html"}}{\fldrslt \cf0 http://developer.apple.com/documentation/Cocoa/Reference/ApplicationKit/ObjC_classic/Classes/NSWindow.html}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+Carbon WindowManager APIs:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "http://developer.apple.com/documentation/Carbon/Reference/Window_Manager/index.html"}}{\fldrslt \cf0 http://developer.apple.com/documentation/Carbon/Reference/Window_Manager/index.html}}\
+\
+Carbon EventManager APIs:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "http://developer.apple.com/documentation/Carbon/Reference/Carbon_Event_Manager_Ref/index.html"}}{\fldrslt \cf0 http://developer.apple.com/documentation/Carbon/Reference/Carbon_Event_Manager_Ref/index.html}}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 Cocoa in Carbon Sample Code:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "http://developer.apple.com/samplecode/Sample_Code/Cocoa/CocoaInCarbon.htm"}}{\fldrslt \cf0 http://developer.apple.com/samplecode/Sample_Code/Cocoa/CocoaInCarbon.htm}}\
+\
+Carbon in Cocoa:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "http://developer.apple.com/documentation/Cocoa/Conceptual/CarbonCocoaDoc/cci_chap1/chapter_1_section_1.html"}}{\fldrslt \cf0 http://developer.apple.com/documentation/Cocoa/Conceptual/CarbonCocoaDoc/cci_chap1/chapter_1_section_1.html}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f3\i \cf0 < end of document; last modified 17 Aug, 2005 >\
+}

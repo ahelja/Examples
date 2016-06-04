@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_midicontroller?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitMIDIControllers"></a>
+<h1>Audio Unit MIDI Controllers</h1>
+
+<p><b>Header file:</b> <tt>AudioToolbox/AUMIDIController.h</tt></p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_midicontroller.html#Overview">Overview</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_midicontroller.html#ForAudioUnits">For Audio Units</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_midicontroller.html#ForMusicDevicesandMusicEffects">For MusicDevices and Music Effects</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_midicontroller.html#Reference">Reference</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerCreate">AUMIDIControllerCreate</a></td>
+<td>Create an AUMIDIController.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerDispose">AUMIDIControllerDispose</a></td>
+<td>Dispose an AUMIDIController.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerMapChannelToAU">AUMIDIControllerMapChannelToAU</a></td>
+<td>Map one or all MIDI channels to control an Audio Unit.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerMapEventToParameter">AUMIDIControllerMapEventToParameter</a></td>
+<td>Map a MIDI event to a single Audio Unit parameter.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerHandleMIDI">AUMIDIControllerHandleMIDI</a></td>
+<td>Manually route MIDI to an AUMIDIController.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerConnectSource">AUMIDIControllerConnectSource</a></td>
+<td>Connect a CoreMIDI source directly to an AUMIDIController.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerDisconnectSource">AUMIDIControllerDisconnectSource</a></td>
+<td>Disconnect a CoreMIDI source from an AUMIDIController.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerExportXMLNames">AUMIDIControllerExportXMLNames</a></td>
+<td>Export an AUMIDIController's configuration as an XML file.</td>
+</tr>
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+<a name="Overview"></a>
+<h2>Overview</h2>
+
+<p>	AUMIDIController is an object that routes MIDI messages to one or more
+Audio Units (including the MusicEffect and MusicDevice types of units).</p>
+
+<p>	The AUMIDIController may, at the client's discretion, create a CoreMIDI
+virtual destination for itself.  The client may also connect and disconnect MIDI
+sources to and from a CoreMIDI input port associated with the
+AUMIDIController.</p>
+
+<p> See the CoreMIDI headers and documentation for information about some of the
+data types and objects used in these services.</p>
+
+
+<a name="ForAudioUnits"></a>
+<h3>For Audio Units</h3>
+
+<p>	The AUMIDIController will map a 7 or 14-bit MIDI control or NRPN
+(non-registered parameter, see the MIDI specification) to an
+AudioUnitParameterID/AudioUnitScope/AudioUnitElement, map the integer MIDI
+control value to the parameter value range, and call <a href="au_params.html#AudioUnitSetParameter"><tt>AudioUnitSetParameter</tt></a>.</p>
+
+<p>	To provide MIDI control for Audio Units written to previous versions of
+the Audio Unit API, the AUMIDIController provides a default mapping of controls
+and NRPNs to parameters, but only for Audio Units, not MusicDevices, which are
+assumed by default to do their own control parsing when receiving MIDI
+events:</p>
+
+<p>	If the Audio Unit has 31 or fewer parameters in the global scope, all
+with parameterID's less than 31, then they are mapped from 14-bit MIDI controls
+as follows:
+	
+	<pre>
+	    control     parameterID (in global scope)
+	    0-5         0-5
+	    7-31        6-30</pre>
+</p>
+
+<p>	For parameters in non-global scopes, as well as parameters in the global
+scope if it has too many parameters to be mapped to standard MIDI controls, MIDI
+non-registered parameters (NRPN's) are mapped to Audio Unit parameters as
+follows:
+
+	<pre>
+	    MIDI   NRPN MSB    NRPN LSB
+	           abcdefg     hijklmn	   (bits)
+
+	    AU     Scope       Element     Parameter
+	           ab          cdefgh      ijklmn
+			
+	    except: global scope is always element 0 so bits cdefghijklmn are mapped
+	    to 12 bits of parameters (0-4095)</pre>
+</p>
+
+<a name="ForMusicDevicesandMusicEffects"></a>
+<h3>For MusicDevices and Music Effects</h3>
+
+<p>	There is no default mapping of MIDI controls/NRPNs to AU parameters;
+mapping only happens for parameters which the MusicDevice explicitly publishes
+as being MIDI-controllable, in the parameters' <a href="au_params.html#AudioUnitParameterInfo"><tt>AudioUnitParameterInfo</tt></a>.</p>
+
+<p>	All events not mapped to <a href="au_params.html#AudioUnitSetParameter"><tt>AudioUnitSetParameter</tt></a> are passed through to
+<a href="au_music.html#MusicDeviceMIDIEvent"><tt>MusicDeviceMIDIEvent</tt></a>.</p>
+
+<hr></hr>
+
+<a name="Reference"></a>
+<h2>Reference</h2>
+
+<a name="//apple_ref/c/func/AUMIDIControllerCreate"></a>
+<h3><a name="AUMIDIControllerCreate">AUMIDIControllerCreate</a></h3>
+Create an AUMIDIController.
+<pre>OSStatus <b>AUMIDIControllerCreate</b>(
+  CFStringRef            inVirtualDestinationName,
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a> *  outController
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inVirtualDestinationName</tt></dt>
+<dd>
+			If non-null, a CoreMIDI virtual destination is created with this name.
+		</dd>
+<dt><tt>outController</tt></dt>
+<dd>
+			On successful return, an <a href="au_midicontroller.html#AUMIDIControllerRef"><tt>AUMIDIControllerRef</tt></a> object.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerDispose"></a>
+<h3><a name="AUMIDIControllerDispose">AUMIDIControllerDispose</a></h3>
+Dispose an AUMIDIController.
+<pre>OSStatus <b>AUMIDIControllerDispose</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>  inController
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inController</tt></dt>
+<dd>
+			The AUMIDIController to dispose.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerMapChannelToAU"></a>
+<h3><a name="AUMIDIControllerMapChannelToAU">AUMIDIControllerMapChannelToAU</a></h3>
+Map one or all MIDI channels to control an Audio Unit.
+<pre>OSStatus <b>AUMIDIControllerMapChannelToAU</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>  inController,
+  SInt32               inSourceMIDIChannel,
+  <a href="au_components.html#AudioUnit">AudioUnit</a>            inAudioUnit,
+  SInt32               inDestMIDIChannel,
+  Boolean              inCreateDefaultControlMappings
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inController</tt></dt>
+<dd>
+			The AUMIDIController being configured.
+		</dd>
+<dt><tt>inSourceMIDIChannel</tt></dt>
+<dd>
+			0-15, corresponding to MIDI channels 1-16, or -1 to map all 16
+			channels to the supplied Audio Unit.
+		</dd>
+<dt><tt>inAudioUnit</tt></dt>
+<dd>
+			The Audio Unit to control, or 0 to remove a mapping to this unit.
+		</dd>
+<dt><tt>inDestMIDIChannel</tt></dt>
+<dd>
+			0-15, corresponding to MIDI channels 1-16.  If inSourceMIDIChannel
+			is -1, this parameter is ignored.  Otherwise, when channel events
+			are routed to a MusicDevice, they are rechannelized to this channel.
+		</dd>
+<dt><tt>inCreateDefaultControlMappings</tt></dt>
+<dd>
+			If true, the MIDI-to-parameter mappings are obtained from the Audio
+			Unit, if it supplies them, or the default control mapping described
+			in detail above is used.
+			
+			If false, no MIDI-to-parameter mappings are made.<p>
+
+			If the Audio Unit is a MusicDevice or a MusicEffect type unit, this argument is ignored and default control mappings are NOT made; the MusicDevice must implement response to MIDI controls itself.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerMapEventToParameter"></a>
+<h3><a name="AUMIDIControllerMapEventToParameter">AUMIDIControllerMapEventToParameter</a></h3>
+Map a MIDI event to a single Audio Unit parameter.
+<pre>OSStatus <b>AUMIDIControllerMapEventToParameter</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>         inController,
+  UInt8                       inMIDIStatusByte,
+  UInt16                      inMIDIControl,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inController</tt></dt>
+<dd>
+			The AUMIDIController being configured.
+		</dd>
+<dt><tt>inMIDIStatusByte</tt></dt>
+<dd>
+			The event type and channel to be mapped.  Only control events,
+			status bytes 0xB0-0xBF, are currently supported.
+		</dd>
+<dt><tt>inMIDIControl</tt></dt>
+<dd>
+			The MIDI control number to be mapped.  MIDI controls 32-63 are
+			always parsed as the LSB's of controls 0-31, so they may not be
+			mapped separately.  Also, the following MIDI controls have special
+			meanings and thus may not be mapped in this manner:<p>
+
+	<pre>
+	    6, 38        data entry MSB, LSB
+	    96-101       data increment, decrement, RPN, NRPN select</pre>
+		
+			To specify a NRPN, put the 14-bit MSB/LSB of the parameter number in
+			the low 14 bits of the UInt16, and or that with 0x8000.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The Audio Unit parameter to control.  It may be null, or its <tt>mAudioUnit</tt>
+			member may be null, which in either case will remove a mapping.
+		</dd>
+</dl>
+
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerHandleMIDI"></a>
+<h3><a name="AUMIDIControllerHandleMIDI">AUMIDIControllerHandleMIDI</a></h3>
+Manually route MIDI to an AUMIDIController.
+<pre>OSStatus <b>AUMIDIControllerHandleMIDI</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>     inController,
+  const MIDIPacketList *  inMIDIPacketList
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inController</tt></dt>
+<dd>
+			The AUMIDIController to play the supplied MIDI events.
+		</dd>
+<dt><tt>inMIDIPacketList</tt></dt>
+<dd>
+			The MIDI events to be played.  (The <tt>MIDIPacketList</tt>
+			structure is defined in the CoreMIDI framework.)
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerConnectSource"></a>
+<h3><a name="AUMIDIControllerConnectSource">AUMIDIControllerConnectSource</a></h3>
+Connect a CoreMIDI source directly to an AUMIDIController.
+<pre>OSStatus <b>AUMIDIControllerConnectSource</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>  inController,
+  MIDIEndpointRef      inSource
+);</pre>
+	
+		This could be used to connect a keyboard to a Music Device, for example.
+		
+		It's possible to connect multiple sources to one AUMIDIController.
+	<h4>Parameters</h4>
+<dl><dt><tt>inController</tt></dt>
+<dd>
+			The AUMIDIController being configured.
+		</dd>
+<dt><tt>inSource</tt></dt>
+<dd>
+			The CoreMIDI source from which events will be routed to
+			the AUMIDIController.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerDisconnectSource"></a>
+<h3><a name="AUMIDIControllerDisconnectSource">AUMIDIControllerDisconnectSource</a></h3>
+Disconnect a CoreMIDI source from an AUMIDIController.
+<pre>OSStatus <b>AUMIDIControllerDisconnectSource</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>  inController,
+  MIDIEndpointRef      inSource
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inController</tt></dt>
+<dd>
+			The AUMIDIController being configured.
+		</dd>
+<dt><tt>inSource</tt></dt>
+<dd>
+			The CoreMIDI source being disconnected.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUMIDIControllerExportXMLNames"></a>
+<h3><a name="AUMIDIControllerExportXMLNames">AUMIDIControllerExportXMLNames</a></h3>
+Export an AUMIDIController's configuration as an XML file.
+<pre>OSStatus <b>AUMIDIControllerExportXMLNames</b>(
+  <a href="au_midicontroller.html#AUMIDIControllerRef">AUMIDIControllerRef</a>  inController,
+  CFURLRef *           outXMLFileURL
+);</pre>
+	
+		Tells an AUMIDIController to generate an XML description of the
+		control/NRPN mapping.  Returns a (local file) URL to the file written.
+		
+		If the AUMIDIController has a virtual destination associated with
+		it, the AUMIDIController will call MIDIObjectSetNameConfiguration to
+		publish those names as the current ones for that destination.
+	
+
+
+
+<a name="//apple_ref/c/tdef/AUMIDIControllerRef"></a>
+<h3><a name="AUMIDIControllerRef">AUMIDIControllerRef</a></h3>
+
+		<pre>typedef struct OpaqueAUMIDIController *<b>AUMIDIControllerRef</b>;</pre>
+	
+	
+
+
+
+
+</body>
+</html>

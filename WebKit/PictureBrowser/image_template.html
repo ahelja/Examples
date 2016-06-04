@@ -1,0 +1,86 @@
+<html>
+<head>
+</head>
+
+<script>
+
+var maxImageHeight=%d;
+
+/*
+    Called from the Cocoa application.  Make the image 50 percent bigger.
+*/
+function zoomImageIn(imageURL)
+{
+    alert('zoomImageIn:  ' + imageURL);
+    var images = document.getElementsByTagName('image');
+    var anImage = images[0];
+    anImage.width = parseInt(anImage.width) * 1.5;
+    anImage.height = parseInt(anImage.height) * 1.5;
+    
+    /* Hack to get the table to re-layout.  Ack! This crashes WebCore.
+    var imageRow = anImage.parentNode.parentNode.parentNode;
+    var imageTable = imageRow.parentNode;
+    imageTable.removeChild(imageRow);
+    imageTable.addChild(imageRow);
+    */
+    
+    return 'YES';
+}
+
+/*
+    Called from the Cocoa application.  Make the image 50 percent smaller.  Doesn't shrink below 20px height.
+*/
+function zoomImageOut(imageURL)
+{
+    alert('zoomImageOut:  ' + imageURL);
+    var images = document.getElementsByTagName('image');
+    var anImage = images[0];
+    if (parseInt(anImage.height) > 20){
+        anImage.width = parseInt(anImage.width) / 1.5;
+        anImage.height = parseInt(anImage.height) / 1.5;
+        return 'YES';
+    }
+    return 'NO';
+}
+
+/*
+    Called from the Cocoa application.  Make the image 20 percent smaller.
+*/
+function rotateImage(imageURL)
+{
+    alert('rotateImage:  ' + imageURL);
+}
+
+function init()
+{
+    var aDiv = document.getElementById('counter');
+    var theImage = document.getElementById('theImage');
+    
+    if (theImage.height < maxImageHeight){
+        imageHeight = theImage.height;
+        imageWidth = theImage.width;
+    }
+    else {
+        imageHeight = maxImageHeight;
+        imageWidth = (maxImageHeight / theImage.height) * theImage.width;
+    }
+    
+    theImage.width = imageWidth;
+    theImage.height = imageHeight;
+
+    document.zoomImageIn = zoomImageIn;
+    document.zoomImageOut = zoomImageOut;
+    document.rotateImage = rotateImage;
+}
+
+</script>
+
+<body style="background-color: #E5E5E5" onLoad="init();">
+
+<div>
+<a href="file://%@"><img id="theImage" src="file://%@"></a>
+</div>
+
+</body>
+</html>
+

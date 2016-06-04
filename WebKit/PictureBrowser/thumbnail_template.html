@@ -1,0 +1,180 @@
+<html>
+<head>
+<script>
+
+var imagePaths = new Array (
+%@
+);
+
+var imageLabels = new Array (
+%@
+);
+
+var nextImage = 0;
+var loadedCount = 1;
+
+function imageLoaded(event)
+{
+    var anImage = event.target;
+    
+    if (anImage.isDone != 'yes'){
+        lastImageWidth = anImage.width;
+        lastImageHeight = anImage.height;
+        if (lastImageHeight < 120){
+            imageHeight = lastImageHeight;
+            imageWidth = lastImageWidth;
+        }
+        else {
+            imageHeight = 120;
+            imageWidth = (120 / lastImageHeight) * lastImageWidth;
+        }
+
+        lastImageSpan = anImage.parentNode;
+        
+        lastImageSpan.removeChild(anImage);
+
+        directory = anImage.id.substring(0,anImage.id.lastIndexOf('/'));
+        filename = anImage.id.substring(anImage.id.lastIndexOf('/')+1,anImage.id.length);
+        lastImageSpan.innerHTML = '<table style=\"display:inline;margin: 2px; font-size:10px;font-family:geneva\"><tr><td><a href=\"PictureBrowser://' + directory + '|' +  filename + '\"/></a></td></tr><tr><td>' + anImage.label + '<br>' + lastImageWidth + ' x ' + lastImageHeight + '</td></tr></table>';
+
+        anImage.style.visibility = "visible";
+        anImage.style.position = "static";
+        anImage.style.left = "0px";
+        anImage.style.top = "0px";
+        anImage.style.width = imageWidth;
+        anImage.style.height = imageHeight;
+        
+        var linkElement = lastImageSpan.getElementsByTagName("a")[0];
+        linkElement.appendChild(anImage);
+        
+        var aDiv = document.getElementById('counter');
+        aDiv.innerHTML = 'Showing ' + loadedCount + ' of ' + imagePaths.length + ' images';
+        loadedCount= loadedCount + 1;
+        
+        anImage.isDone = 'yes';
+    }
+}
+
+/*
+    Load image one at a time so pages load progressively.
+*/
+function showImages()
+{
+    var imagePath = imagePaths[nextImage];
+    var imageLabel = imageLabels[nextImage];
+    var imageSpan = document.getElementById('' + nextImage);
+    
+    if (nextImage < imagePaths.length){
+        var imageElement = document.createElement("img");
+        imageElement.style.visibility = "hidden";
+        imageElement.style.position = "absolute";
+        imageElement.style.left = "-9999px";
+        imageElement.style.top = "-9999px";
+        imageElement.style.border = "solid black 1px";
+        imageElement.setAttribute("id", imagePath);
+        imageElement.setAttribute("src", 'file://' + imagePath);
+        imageElement.addEventListener("load", imageLoaded)
+        imageElement.label = imageLabel;
+        imageSpan.appendChild(imageElement);
+    }
+    
+    nextImage++;
+    if (nextImage < imagePaths.length)
+        setTimeout('showImages()', 1);
+}
+
+function makeImageSpans()
+{
+    alert('makeImageSpans:  ' + imagePaths.length + ' images');
+    var aDiv = document.getElementById('output');
+    var spanElement, imageElement;
+    
+    for (i = 0; i < imagePaths.length; i++){
+        alert('makeImageSpans:  ' + imagePaths[i]);
+        spanElement = document.createElement("span");
+        spanElement.setAttribute("id", "" + i);
+        aDiv.appendChild(spanElement);
+    }
+    
+    setTimeout('showImages()',1);
+}
+
+/*
+    Called from the Cocoa application.  Make the image 50 percent bigger.
+*/
+function zoomImageIn(imageURL)
+{
+    alert('zoomImageIn:  ' + imageURL);
+    var images = document.getElementsByTagName('image');
+    var i, imageCount = images.length;
+    for (i = 0; i < images.length; i++){
+        var anImage = images[i];
+        if (anImage.src == imageURL){
+            var anImage = images[i];
+            anImage.style.width = parseInt(anImage.style.width) * 1.5;
+            anImage.style.height = parseInt(anImage.style.height) * 1.5;
+            
+            /* Hack to get the table to re-layout.  Ack! This crashes WebCore.
+            var imageRow = anImage.parentNode.parentNode.parentNode;
+            var imageTable = imageRow.parentNode;
+            imageTable.removeChild(imageRow);
+            imageTable.addChild(imageRow);
+            */
+            
+            return 'YES';
+        }
+    }
+    return 'NO';
+}
+
+/*
+    Called from the Cocoa application.  Make the image 50 percent smaller.  Doesn't shrink below 20px height.
+*/
+function zoomImageOut(imageURL)
+{
+    alert('zoomImageOut:  ' + imageURL);
+    var images = document.getElementsByTagName('image');
+    var i, imageCount = images.length;
+    for (i = 0; i < images.length; i++){
+        var anImage = images[i];
+        if (anImage.src == imageURL && parseInt(anImage.style.height) > 20){
+            anImage.style.width = parseInt(anImage.style.width) / 1.5;
+            anImage.style.height = parseInt(anImage.style.height) / 1.5;
+            return 'YES';
+        }
+    }
+    return 'NO';
+}
+
+/*
+    Called from the Cocoa application.  Make the image 20 percent smaller.
+*/
+function rotateImage(imageURL)
+{
+    alert('rotateImage:  ' + imageURL);
+}
+
+function init()
+{
+    var aDiv = document.getElementById('counter');
+    aDiv.innerHTML = 'Loading ' + imagePaths.length + ' images<br>';
+    makeImageSpans();
+    
+    document.zoomImageIn = zoomImageIn;
+    document.zoomImageOut = zoomImageOut;
+    document.rotateImage = rotateImage;
+}
+
+</script>
+
+</head>
+
+<body style="background-color: #E5E5E5" onLoad="init();">
+
+<div id="counter" style="position:fixed; top:10px; right:10px; background-image:url(%@);border:solid black 1px;padding:2px;font-size:10px;font-family:geneva;color:white">
+</div>
+<div id="output">
+</div>
+
+</body>
+</html>

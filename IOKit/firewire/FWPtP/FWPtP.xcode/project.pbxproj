@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4D556D8107AB06DF0023D150 /* all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 144F8F51090066CC00B94B25 /* Build configuration list for PBXAggregateTarget "all" */;
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = all;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+				4D556D8D07AB06E60023D150 /* PBXTargetDependency */,
+				4D556D8B07AB06E60023D150 /* PBXTargetDependency */,
+			);
+			name = all;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4D615D2407AEE3200058EBA2 /* FWLib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D556D4C07AB03440023D150 /* FWLib.framework */; };
+		4D79897705ED7E6700C8B4EB /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = F503AC35023676D001D16206 /* Application.h */; };
+		4D79897805ED7E6700C8B4EB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = F503AC3D02367A2901D16206 /* Window.h */; };
+		4D79897905ED7E6700C8B4EB /* PtPLocalNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F503AC4402367F4001D16206 /* PtPLocalNode.h */; };
+		4D79897A05ED7E6700C8B4EB /* PtPConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F5266A560237C9730184E911 /* PtPConstants.h */; };
+		4D79897B05ED7E6700C8B4EB /* PtPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = F5266A580237D4B60184E911 /* PtPMatcher.h */; };
+		4D79897C05ED7E6700C8B4EB /* PtPRemoteUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = F5266A600237DA190184E911 /* PtPRemoteUnit.h */; };
+		4D79898205ED7E6700C8B4EB /* prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0196DF048411D300CE20D6 /* prefix.h */; };
+		4D79898605ED7E6700C8B4EB /* About FWPtP.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BB33E037B878700000202 /* About FWPtP.rtf */; };
+		4D79898805ED7E6700C8B4EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D79898905ED7E6700C8B4EB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F503AC36023676D001D16206 /* Application.cpp */; };
+		4D79898A05ED7E6700C8B4EB /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F503AC3E02367A2901D16206 /* Window.cpp */; };
+		4D79898B05ED7E6700C8B4EB /* PtPLocalNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F503AC4502367F4001D16206 /* PtPLocalNode.cpp */; };
+		4D79898C05ED7E6700C8B4EB /* PtPMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5266A590237D4B60184E911 /* PtPMatcher.cpp */; };
+		4D79898D05ED7E6700C8B4EB /* PtPRemoteUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5266A610237DA190184E911 /* PtPRemoteUnit.cpp */; };
+		4D79899405ED7E6700C8B4EB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		4D79899505ED7E6700C8B4EB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F503AC4202367B8A01D16206 /* IOKit.framework */; };
+		4DCB3D3007B19148008B1015 /* FWLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D556D4C07AB03440023D150 /* FWLib.framework */; };
+		4DFAE0CE067A966F009D9869 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1870340FFE93FCAF11CA0CD7 /* main.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.3;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DLOOPBACK_TEST=0";
+				PREBINDING = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		4D556D4D07AB03440023D150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D556D3207AB02E80023D150 /* FWLib.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D07F2C80486CC7A007CD1D0;
+			remoteInfo = FWLib;
+		};
+		4D556D8A07AB06E60023D150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20286C28FDCF999611CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D79897505ED7E6700C8B4EB;
+			remoteInfo = FWPtP;
+		};
+		4D556D8C07AB06E60023D150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D556D3207AB02E80023D150 /* FWLib.xcode */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D07F2BC0486CC7A007CD1D0;
+			remoteInfo = FWLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D7989AE05ED7E9800C8B4EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D615D2407AEE3200058EBA2 /* FWLib.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1870340FFE93FCAF11CA0CD7 /* main.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4D0196DF048411D300CE20D6 /* prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.h; sourceTree = "<group>"; };
+		4D556D3207AB02E80023D150 /* FWLib.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FWLib.xcode; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib.xcode; sourceTree = "<absolute>"; };
+		4D79899805ED7E6700C8B4EB /* Info-FWPtP.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-FWPtP.plist"; sourceTree = "<group>"; };
+		4D79899905ED7E6700C8B4EB /* FWPtP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWPtP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D79899B05ED7E8300C8B4EB /* FWLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FWLib.framework; path = /Developer/Frameworks/IOKit/firewire/FWLib.framework; sourceTree = "<absolute>"; };
+		4D8BB33E037B878700000202 /* About FWPtP.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About FWPtP.rtf"; sourceTree = "<group>"; };
+		F503AC35023676D001D16206 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		F503AC36023676D001D16206 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		F503AC3D02367A2901D16206 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		F503AC3E02367A2901D16206 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		F503AC4202367B8A01D16206 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		F503AC4402367F4001D16206 /* PtPLocalNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PtPLocalNode.h; sourceTree = "<group>"; };
+		F503AC4502367F4001D16206 /* PtPLocalNode.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = PtPLocalNode.cpp; sourceTree = "<group>"; };
+		F5266A560237C9730184E911 /* PtPConstants.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PtPConstants.h; sourceTree = "<group>"; };
+		F5266A580237D4B60184E911 /* PtPMatcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PtPMatcher.h; sourceTree = "<group>"; };
+		F5266A590237D4B60184E911 /* PtPMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = PtPMatcher.cpp; sourceTree = "<group>"; };
+		F5266A600237DA190184E911 /* PtPRemoteUnit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PtPRemoteUnit.h; sourceTree = "<group>"; };
+		F5266A610237DA190184E911 /* PtPRemoteUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = PtPRemoteUnit.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D79899305ED7E6700C8B4EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DCB3D3007B19148008B1015 /* FWLib.framework in Frameworks */,
+				4D79899405ED7E6700C8B4EB /* Carbon.framework in Frameworks */,
+				4D79899505ED7E6700C8B4EB /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D79899905ED7E6700C8B4EB /* FWPtP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* FWPtP */ = {
+			isa = PBXGroup;
+			children = (
+				4D556D3207AB02E80023D150 /* FWLib.xcode */,
+				4D8BB33E037B878700000202 /* About FWPtP.rtf */,
+				4D0196DF048411D300CE20D6 /* prefix.h */,
+				F5266A640237FA540184E911 /* PtP FW Classes */,
+				F503AC34023676D001D16206 /* Classes */,
+				20286C2AFDCF999611CA2CEA /* Other Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = FWPtP;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5266A560237C9730184E911 /* PtPConstants.h */,
+				20286C2BFDCF999611CA2CEA /* main.cpp */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D79899805ED7E6700C8B4EB /* Info-FWPtP.plist */,
+				1870340FFE93FCAF11CA0CD7 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4D79899B05ED7E8300C8B4EB /* FWLib.framework */,
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+				F503AC4202367B8A01D16206 /* IOKit.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		4D556D3307AB02E80023D150 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D556D4C07AB03440023D150 /* FWLib.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F503AC34023676D001D16206 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F503AC35023676D001D16206 /* Application.h */,
+				F503AC36023676D001D16206 /* Application.cpp */,
+				F503AC3D02367A2901D16206 /* Window.h */,
+				F503AC3E02367A2901D16206 /* Window.cpp */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F5266A640237FA540184E911 /* PtP FW Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F503AC4402367F4001D16206 /* PtPLocalNode.h */,
+				F503AC4502367F4001D16206 /* PtPLocalNode.cpp */,
+				F5266A580237D4B60184E911 /* PtPMatcher.h */,
+				F5266A590237D4B60184E911 /* PtPMatcher.cpp */,
+				F5266A600237DA190184E911 /* PtPRemoteUnit.h */,
+				F5266A610237DA190184E911 /* PtPRemoteUnit.cpp */,
+			);
+			name = "PtP FW Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D79897605ED7E6700C8B4EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D79897705ED7E6700C8B4EB /* Application.h in Headers */,
+				4D79897805ED7E6700C8B4EB /* Window.h in Headers */,
+				4D79897905ED7E6700C8B4EB /* PtPLocalNode.h in Headers */,
+				4D79897A05ED7E6700C8B4EB /* PtPConstants.h in Headers */,
+				4D79897B05ED7E6700C8B4EB /* PtPMatcher.h in Headers */,
+				4D79897C05ED7E6700C8B4EB /* PtPRemoteUnit.h in Headers */,
+				4D79898205ED7E6700C8B4EB /* prefix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D79897505ED7E6700C8B4EB /* FWPtP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 144F8F4D090066CC00B94B25 /* Build configuration list for PBXNativeTarget "FWPtP" */;
+			buildPhases = (
+				4D79897605ED7E6700C8B4EB /* Headers */,
+				4D79898305ED7E6700C8B4EB /* Resources */,
+				4D79898705ED7E6700C8B4EB /* Sources */,
+				4D79899305ED7E6700C8B4EB /* Frameworks */,
+				4D79899605ED7E6700C8B4EB /* Rez */,
+				4D7989AE05ED7E9800C8B4EB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-FWPtP.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = FWPtP;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = FWPtP;
+			productInstallPath = /Developer/Applications/FireWire;
+			productName = FWPtP;
+			productReference = 4D79899905ED7E6700C8B4EB /* FWPtP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 144F8F55090066CC00B94B25 /* Build configuration list for PBXProject "FWPtP" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* FWPtP */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4D556D3307AB02E80023D150 /* Products */;
+					ProjectRef = 4D556D3207AB02E80023D150 /* FWLib.xcode */;
+				},
+			);
+			targets = (
+				4D556D8107AB06DF0023D150 /* all */,
+				4D79897505ED7E6700C8B4EB /* FWPtP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4D556D4C07AB03440023D150 /* FWLib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FWLib.framework;
+			remoteRef = 4D556D4D07AB03440023D150 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D79898305ED7E6700C8B4EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DFAE0CE067A966F009D9869 /* main.nib in Resources */,
+				4D79898605ED7E6700C8B4EB /* About FWPtP.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4D79899605ED7E6700C8B4EB /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D79898705ED7E6700C8B4EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D79898805ED7E6700C8B4EB /* main.cpp in Sources */,
+				4D79898905ED7E6700C8B4EB /* Application.cpp in Sources */,
+				4D79898A05ED7E6700C8B4EB /* Window.cpp in Sources */,
+				4D79898B05ED7E6700C8B4EB /* PtPLocalNode.cpp in Sources */,
+				4D79898C05ED7E6700C8B4EB /* PtPMatcher.cpp in Sources */,
+				4D79898D05ED7E6700C8B4EB /* PtPRemoteUnit.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D556D8B07AB06E60023D150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D79897505ED7E6700C8B4EB /* FWPtP */;
+			targetProxy = 4D556D8A07AB06E60023D150 /* PBXContainerItemProxy */;
+		};
+		4D556D8D07AB06E60023D150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FWLib (from FWLib.xcode)";
+			targetProxy = 4D556D8C07AB06E60023D150 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		144F8F4E090066CC00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.h;
+				INFOPLIST_FILE = "Info-FWPtP.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				PRODUCT_NAME = FWPtP;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		144F8F4F090066CC00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.h;
+				INFOPLIST_FILE = "Info-FWPtP.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				PRODUCT_NAME = FWPtP;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		144F8F52090066CC00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.3;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "-DLOOPBACK_TEST=0";
+				PRODUCT_NAME = all;
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		144F8F53090066CC00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = all;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		144F8F56090066CC00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		144F8F57090066CC00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		144F8F4D090066CC00B94B25 /* Build configuration list for PBXNativeTarget "FWPtP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F4E090066CC00B94B25 /* Debug */,
+				144F8F4F090066CC00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		144F8F51090066CC00B94B25 /* Build configuration list for PBXAggregateTarget "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F52090066CC00B94B25 /* Debug */,
+				144F8F53090066CC00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		144F8F55090066CC00B94B25 /* Build configuration list for PBXProject "FWPtP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F56090066CC00B94B25 /* Debug */,
+				144F8F57090066CC00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

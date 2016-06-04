@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showJobHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = GMApplicationDelegate; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RectangleDraggerView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }
+    ); 
+    IBVersion = 1; 
+}

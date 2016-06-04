@@ -1,0 +1,238 @@
+<?xml version="1.0" standalone="yes"?>
+<object class="NSIBObjectData">
+  <string name="targetFramework">IBCarbonFramework</string>
+  <object name="rootObject" class="NSCustomObject" id="1">
+    <string name="customClass">NSApplication</string>
+  </object>
+  <array count="22" name="allObjects">
+    <object class="IBCarbonMenu" id="29">
+      <string name="title">main</string>
+      <array count="2" name="items">
+        <object class="IBCarbonMenuItem" id="185">
+          <string name="title">ATSUIBasics</string>
+          <object name="submenu" class="IBCarbonMenu" id="184">
+            <string name="title">ATSUIBasics</string>
+            <array count="1" name="items">
+              <object class="IBCarbonMenuItem" id="187">
+                <string name="title">About ATSUIBasics</string>
+                <int name="keyEquivalentModifier">0</int>
+                <ostype name="command">abou</ostype>
+              </object>
+            </array>
+            <string name="name">_NSAppleMenu</string>
+          </object>
+        </object>
+        <object class="IBCarbonMenuItem" id="192">
+          <string name="title">Window</string>
+          <object name="submenu" class="IBCarbonMenu" id="195">
+            <string name="title">Window</string>
+            <array count="6" name="items">
+              <object class="IBCarbonMenuItem" id="190">
+                <boolean name="dynamic">TRUE</boolean>
+                <string name="title">Minimize</string>
+                <string name="keyEquivalent">m</string>
+                <ostype name="command">mini</ostype>
+              </object>
+              <object class="IBCarbonMenuItem" id="191">
+                <boolean name="dynamic">TRUE</boolean>
+                <string name="title">Minimize All</string>
+                <string name="keyEquivalent">m</string>
+                <int name="keyEquivalentModifier">1572864</int>
+                <ostype name="command">mina</ostype>
+              </object>
+              <object class="IBCarbonMenuItem" id="197">
+                <string name="title">Zoom</string>
+                <ostype name="command">zoom</ostype>
+              </object>
+              <object class="IBCarbonMenuItem" id="194">
+                <boolean name="separator">TRUE</boolean>
+              </object>
+              <object class="IBCarbonMenuItem" id="196">
+                <boolean name="dynamic">TRUE</boolean>
+                <string name="title">Bring All to Front</string>
+                <ostype name="command">bfrt</ostype>
+              </object>
+              <object class="IBCarbonMenuItem" id="193">
+                <boolean name="dynamic">TRUE</boolean>
+                <string name="title">Arrange in Front</string>
+                <int name="keyEquivalentModifier">1572864</int>
+                <ostype name="command">frnt</ostype>
+              </object>
+            </array>
+            <string name="name">_NSWindowsMenu</string>
+          </object>
+        </object>
+      </array>
+      <string name="name">_NSMainMenu</string>
+    </object>
+    <reference idRef="184"/>
+    <reference idRef="185"/>
+    <reference idRef="187"/>
+    <reference idRef="190"/>
+    <reference idRef="191"/>
+    <reference idRef="192"/>
+    <reference idRef="193"/>
+    <reference idRef="194"/>
+    <reference idRef="195"/>
+    <reference idRef="196"/>
+    <reference idRef="197"/>
+    <object class="IBCarbonWindow" id="217">
+      <string name="windowRect">71 44 431 524 </string>
+      <string name="title">Hello World!</string>
+      <object name="rootControl" class="IBCarbonRootControl" id="218">
+        <string name="bounds">0 0 360 480 </string>
+        <string name="viewFrame">0 0 480 360 </string>
+      </object>
+      <boolean name="receiveUpdates">FALSE</boolean>
+      <boolean name="hasCloseBox">FALSE</boolean>
+      <boolean name="hasHorizontalZoom">FALSE</boolean>
+      <boolean name="isResizable">FALSE</boolean>
+      <boolean name="hasVerticalZoom">FALSE</boolean>
+      <boolean name="liveResize">TRUE</boolean>
+      <boolean name="compositing">TRUE</boolean>
+      <int name="windowPosition">4</int>
+      <boolean name="asyncDrag">TRUE</boolean>
+      <boolean name="isConstrained">FALSE</boolean>
+      <boolean name="hideOnFullScreen">FALSE</boolean>
+      <boolean name="hideOnSuspend">FALSE</boolean>
+      <boolean name="hasShadow">TRUE</boolean>
+      <boolean name="doesNotCycle">FALSE</boolean>
+      <boolean name="inWindowMenu">TRUE</boolean>
+    </object>
+    <reference idRef="218"/>
+    <object class="IBCarbonWindow" id="219">
+      <string name="windowRect">108 78 468 558 </string>
+      <string name="title">Multiple Styles</string>
+      <object name="rootControl" class="IBCarbonRootControl" id="220">
+        <string name="bounds">0 0 360 480 </string>
+        <string name="viewFrame">0 0 480 360 </string>
+      </object>
+      <boolean name="receiveUpdates">FALSE</boolean>
+      <boolean name="hasCloseBox">FALSE</boolean>
+      <boolean name="hasHorizontalZoom">FALSE</boolean>
+      <boolean name="isResizable">FALSE</boolean>
+      <boolean name="hasVerticalZoom">FALSE</boolean>
+      <boolean name="liveResize">TRUE</boolean>
+      <boolean name="compositing">TRUE</boolean>
+      <int name="windowPosition">4</int>
+      <boolean name="asyncDrag">TRUE</boolean>
+      <boolean name="isConstrained">FALSE</boolean>
+      <boolean name="hideOnFullScreen">FALSE</boolean>
+      <boolean name="hideOnSuspend">FALSE</boolean>
+      <boolean name="hasShadow">TRUE</boolean>
+      <boolean name="doesNotCycle">FALSE</boolean>
+      <boolean name="inWindowMenu">TRUE</boolean>
+    </object>
+    <reference idRef="220"/>
+    <object class="IBCarbonWindow" id="221">
+      <string name="windowRect">184 156 544 636 </string>
+      <string name="title">Vertical Text</string>
+      <object name="rootControl" class="IBCarbonRootControl" id="222">
+        <string name="bounds">0 0 360 480 </string>
+        <string name="viewFrame">0 0 480 360 </string>
+      </object>
+      <boolean name="receiveUpdates">FALSE</boolean>
+      <boolean name="hasCloseBox">FALSE</boolean>
+      <boolean name="hasHorizontalZoom">FALSE</boolean>
+      <boolean name="isResizable">FALSE</boolean>
+      <boolean name="hasVerticalZoom">FALSE</boolean>
+      <boolean name="liveResize">TRUE</boolean>
+      <boolean name="compositing">TRUE</boolean>
+      <int name="windowPosition">4</int>
+      <boolean name="asyncDrag">TRUE</boolean>
+      <boolean name="isConstrained">FALSE</boolean>
+      <boolean name="hideOnFullScreen">FALSE</boolean>
+      <boolean name="hideOnSuspend">FALSE</boolean>
+      <boolean name="hasShadow">TRUE</boolean>
+      <boolean name="doesNotCycle">FALSE</boolean>
+      <boolean name="inWindowMenu">TRUE</boolean>
+    </object>
+    <reference idRef="222"/>
+    <object class="IBCarbonWindow" id="223">
+      <string name="windowRect">224 200 584 680 </string>
+      <string name="title">Paragraphs</string>
+      <object name="rootControl" class="IBCarbonRootControl" id="224">
+        <string name="bounds">0 0 360 480 </string>
+        <string name="viewFrame">0 0 480 360 </string>
+      </object>
+      <boolean name="receiveUpdates">FALSE</boolean>
+      <boolean name="hasCloseBox">FALSE</boolean>
+      <boolean name="liveResize">TRUE</boolean>
+      <boolean name="compositing">TRUE</boolean>
+      <int name="windowPosition">4</int>
+      <boolean name="asyncDrag">TRUE</boolean>
+      <boolean name="isConstrained">FALSE</boolean>
+      <boolean name="hideOnFullScreen">FALSE</boolean>
+      <boolean name="hideOnSuspend">FALSE</boolean>
+      <boolean name="hasShadow">TRUE</boolean>
+      <boolean name="doesNotCycle">FALSE</boolean>
+      <boolean name="inWindowMenu">TRUE</boolean>
+    </object>
+    <reference idRef="224"/>
+    <object class="IBCarbonWindow" id="233">
+      <string name="windowRect">149 118 509 598 </string>
+      <string name="title">Font Substitution</string>
+      <object name="rootControl" class="IBCarbonRootControl" id="234">
+        <string name="bounds">0 0 360 480 </string>
+        <string name="viewFrame">0 0 480 360 </string>
+      </object>
+      <boolean name="receiveUpdates">FALSE</boolean>
+      <boolean name="hasCloseBox">FALSE</boolean>
+      <boolean name="hasHorizontalZoom">FALSE</boolean>
+      <boolean name="isResizable">FALSE</boolean>
+      <boolean name="hasVerticalZoom">FALSE</boolean>
+      <boolean name="liveResize">TRUE</boolean>
+      <boolean name="compositing">TRUE</boolean>
+      <int name="windowPosition">4</int>
+      <boolean name="asyncDrag">TRUE</boolean>
+      <boolean name="isConstrained">FALSE</boolean>
+      <boolean name="hideOnFullScreen">FALSE</boolean>
+      <boolean name="hideOnSuspend">FALSE</boolean>
+      <boolean name="hasShadow">TRUE</boolean>
+      <boolean name="doesNotCycle">FALSE</boolean>
+      <boolean name="inWindowMenu">TRUE</boolean>
+    </object>
+    <reference idRef="234"/>
+  </array>
+  <array count="22" name="allParents">
+    <reference idRef="1"/>
+    <reference idRef="185"/>
+    <reference idRef="29"/>
+    <reference idRef="184"/>
+    <reference idRef="195"/>
+    <reference idRef="195"/>
+    <reference idRef="29"/>
+    <reference idRef="195"/>
+    <reference idRef="195"/>
+    <reference idRef="192"/>
+    <reference idRef="195"/>
+    <reference idRef="195"/>
+    <reference idRef="1"/>
+    <reference idRef="217"/>
+    <reference idRef="1"/>
+    <reference idRef="219"/>
+    <reference idRef="1"/>
+    <reference idRef="221"/>
+    <reference idRef="1"/>
+    <reference idRef="223"/>
+    <reference idRef="1"/>
+    <reference idRef="233"/>
+  </array>
+  <dictionary count="7" name="nameTable">
+    <string>Files Owner</string>
+    <reference idRef="1"/>
+    <string>FontSubstitutionWindow</string>
+    <reference idRef="233"/>
+    <string>HelloWorldWindow</string>
+    <reference idRef="217"/>
+    <string>MenuBar</string>
+    <reference idRef="29"/>
+    <string>MultipleStylesWindow</string>
+    <reference idRef="219"/>
+    <string>ParagraphsWindow</string>
+    <reference idRef="223"/>
+    <string>VerticalTextWindow</string>
+    <reference idRef="221"/>
+  </dictionary>
+  <unsigned_int name="nextObjectID">235</unsigned_int>
+</object>

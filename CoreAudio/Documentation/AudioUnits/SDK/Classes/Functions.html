@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>Functions</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h2>Functions</h2>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AudioUnitBaseGetParameter">AudioUnitBaseGetParameter</a></h4>
+</td><td width="50%">
+<h4>function</h4>
+</td></tr></table>
+<br><pre>pascal ComponentResult AudioUnitBaseGetParameter(
+          AUBase*                         This,
+          AudioUnitParameterID            inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          float*                          outValue
+    );</pre>
+<p>This is a function for getting a parameter value.
+		This function is used to bypass the Component Manager dispatching in order to enable fast dispatch of real time sensitive operations.
+		</p><br>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AudioUnitBaseRender">AudioUnitBaseRender</a></h4>
+</td><td width="50%">
+<h4>function</h4>
+</td></tr></table>
+<br><pre>pascal ComponentResult AudioUnitBaseRender(
+          AUBase*                         This,
+          AudioUnitRenderActionFlags*     ioActionFlags,
+          const AudioTimeStamp*           inTimeStamp,
+          UInt32                          inBusNumber,
+          UInt32                          inNumberFrames,
+          AudioBufferList*                ioData
+    );</pre>
+<p>This is a function for calling the Render method of a v2 AudioUnit.
+		This function is used to bypass the Component Manager dispatching in order to enable fast dispatch of real time sensitive operations.</p><br>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AudioUnitBaseRenderSlice">AudioUnitBaseRenderSlice</a></h4>
+</td><td width="50%">
+<h4>function</h4>
+</td></tr></table>
+<br><pre>pascal ComponentResult AudioUnitBaseRenderSlice(
+          AUBase*                         This,
+          AudioUnitRenderActionFlags      inActionFlags,
+          const AudioTimeStamp*           inTimeStamp,
+          UInt32                          inBusNumber,
+          AudioBuffer*                    ioData
+    );</pre>
+<p>This is a function for calling the RenderSlice method of a v1 AudioUnit.
+		This function is used to bypass the Component Manager dispatching in order to enable fast dispatch of real time sensitive operations.</p><br>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AudioUnitBaseSetParameter">AudioUnitBaseSetParameter</a></h4>
+</td><td width="50%">
+<h4>function</h4>
+</td></tr></table>
+<br><pre>pascal ComponentResult AudioUnitBaseSetParameter(
+          AUBase*                         This,
+          AudioUnitParameterID            inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          float                           inValue,
+          UInt32                          inBufferOffset
+    );</pre>
+<p>This is a function for setting a parameter value.
+		This function is used to bypass the Component Manager dispatching in order to enable fast dispatch of real time sensitive operations.</p><br>
+</body></html>

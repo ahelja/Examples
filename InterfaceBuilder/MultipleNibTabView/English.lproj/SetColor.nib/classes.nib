@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {sendText = id; }; 
+            CLASS = SubViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {view = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {setBackgroundColor = id; setTextColor = id; }; 
+            CLASS = TextFormattingView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {backgroundColorWell = id; owner = id; textColorWell = id; }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

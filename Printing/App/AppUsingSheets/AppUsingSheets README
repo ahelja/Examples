@@ -1,0 +1,15 @@
+This is a simple document based application that uses sheets during 
+printing. It properly handles the availability of sheets on Mac OS X 
+and the fact that sheets are not implemented on Mac OS 8/9. The sample 
+print loop code is modern and uses the Printing "Session" Based API.
+
+Extra features include:
+a) Print One Copy handling (printing without the Print dialog)
+b) Demonstration of Save As PDF functionality without using the printing 
+dialogs. The routines used to perform this are only available on 
+Mac OS X v10.1 and later and are NOT available in CarbonLib. The code
+can conditionally be built as CFM and if so, the needed routines are 
+looked up at runtime and, when executing on Mac OS X v10.1 and later, 
+are looked up dynamically and called when appropriate.
+
+

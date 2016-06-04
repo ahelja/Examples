@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>creatorShortVersionString</key>
+	<string>1.1.0</string>
+	<key>primitive</key>
+	<string>1</string>
+	<key>programTabViewIndex</key>
+	<string>0</string>
+	<key>renderingPassList</key>
+	<dict>
+		<key>Default Rendering Pass</key>
+		<dict>
+			<key>baseColor</key>
+			<string>[0.787597, 0.874195, 1.000000, 1.000000]</string>
+			<key>fragmentProgramExecuter</key>
+			<dict>
+				<key>language</key>
+				<integer>34820</integer>
+				<key>programString</key>
+				<string></string>
+				<key>symbolTable</key>
+				<dict/>
+			</dict>
+			<key>multiTextureList</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33984, 1, 34168, 5890, 8448]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>textureFilename</key>
+					<string>64shade.bmp</string>
+					<key>wrappingOptions</key>
+					<string>[33071, 33071]</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33985, 0, 34168, 5890, 8448]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>textureFilename</key>
+					<string>2shade.bmp</string>
+					<key>wrappingOptions</key>
+					<string>[33071, 33071]</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33986, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33987, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33988, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33989, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33990, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33991, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+			</dict>
+			<key>opacity</key>
+			<string>1.000000</string>
+			<key>vertexProgramExecuter</key>
+			<dict>
+				<key>programString</key>
+				<string>!!ARBvp1.0
+
+# Toon Shader by James A. McCombe, Tue Jun 17 2003
+#
+# Implements a very crude toon shader.  Basically, a simple dot product between a 
+# light direction vector and the vertex normal is performed.  The output of this is 
+# used to set the texture coordinates to lookup inside a special texture which 
+# effectively quantises the light intensity into 3 bands.
+#
+# Parameters:
+#    program.env[0] - Light direction vector
+
+ATTRIB vPosition    = vertex.position;
+ATTRIB vNormal      = vertex.normal;
+
+PARAM lightDirection = program.env[0];
+
+TEMP t0, transVertex;
+
+DP4  result.position.x, state.matrix.mvp.row[0], vPosition;
+DP4  result.position.y, state.matrix.mvp.row[1], vPosition;
+DP4  result.position.z, state.matrix.mvp.row[2], vPosition;
+DP4  result.position.w, state.matrix.mvp.row[3], vPosition;
+
+DP3  t0.x, state.matrix.modelview[0].invtrans.row[0], vNormal;
+DP3  t0.y, state.matrix.modelview[0].invtrans.row[1], vNormal;
+DP3  t0.z, state.matrix.modelview[0].invtrans.row[2], vNormal;
+
+# Dot product of normal and light vector to do tone lookup
+DP3  t0, t0, lightDirection;
+SWZ  result.texcoord[0], t0, x,1,1,1;
+
+# Write the primary vertex color
+MOV  result.color, vertex.color;
+
+END</string>
+				<key>symbolTable</key>
+				<dict>
+					<key>lightDirection</key>
+					<dict>
+						<key>data</key>
+						<string>[0.27, 0.49, 0.85, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>t0</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>transVertex</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vNormal</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>windowFrame</key>
+	<string>{{1.875, 0}, {0, 0}}</string>
+</dict>
+</plist>

@@ -1,0 +1,42 @@
+{
+    IBClasses = (
+        {
+            CLASS = Calendar; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {view = id; window = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = DataSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {entityModel = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                revertDocumentToSync = id; 
+                setTrickleSync = id; 
+                slowSyncDocument = id; 
+                syncDocument = id; 
+                syncDocumentWithDelay = id; 
+            }; 
+            CLASS = EntityDocument; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {
+            ACTIONS = {importCalendar = id; openCalendar = id; }; 
+            CLASS = EventDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_progressIndicator" = NSProgressIndicator; 
+                "_trickleButton" = NSButton; 
+                calendar = id; 
+            }; 
+            SUPERCLASS = EntityDocument; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = SyncUtilities; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

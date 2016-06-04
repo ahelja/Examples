@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		252AAF5804D73AF400657BE7 /* ProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57AFE90428111CA0C5A /* ProgressView.h */; };
+		252AAF5904D73AF400657BE7 /* ProgressViewInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57BFE90428111CA0C5A /* ProgressViewInspector.h */; };
+		252AAF5A04D73AF400657BE7 /* ProgressViewPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57CFE90428111CA0C5A /* ProgressViewPalette.h */; };
+		252AAF5B04D73AF400657BE7 /* ProgressCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AC131401458D7404CA0CBC /* ProgressCell.h */; };
+		252AAF5D04D73AF400657BE7 /* ProgressViewInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0259C57EFE90428111CA0C5A /* ProgressViewInspector.nib */; };
+		252AAF5E04D73AF400657BE7 /* ProgressViewPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0259C580FE90428111CA0C5A /* ProgressViewPalette.nib */; };
+		252AAF5F04D73AF400657BE7 /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = 0259C583FE90428111CA0C5A /* palette.table */; };
+		252AAF6104D73AF400657BE7 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* ProgressView.m */; settings = {ATTRIBUTES = (); }; };
+		252AAF6204D73AF400657BE7 /* ProgressViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* ProgressViewInspector.m */; settings = {ATTRIBUTES = (); }; };
+		252AAF6304D73AF400657BE7 /* ProgressViewPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C578FE90428111CA0C5A /* ProgressViewPalette.m */; settings = {ATTRIBUTES = (); }; };
+		252AAF6404D73AF400657BE7 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC131501458D7404CA0CBC /* ProgressCell.m */; };
+		252AAF6604D73AF400657BE7 /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */; };
+		252AAF6704D73AF400657BE7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53A3C7BC5B0686D01CA0CBA /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0259C576FE90428111CA0C5A /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		0259C577FE90428111CA0C5A /* ProgressViewInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ProgressViewInspector.m; sourceTree = "<group>"; };
+		0259C578FE90428111CA0C5A /* ProgressViewPalette.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ProgressViewPalette.m; sourceTree = "<group>"; };
+		0259C57AFE90428111CA0C5A /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		0259C57BFE90428111CA0C5A /* ProgressViewInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ProgressViewInspector.h; sourceTree = "<group>"; };
+		0259C57CFE90428111CA0C5A /* ProgressViewPalette.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ProgressViewPalette.h; sourceTree = "<group>"; };
+		0259C57FFE90428111CA0C5A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ProgressViewInspector.nib; sourceTree = "<group>"; };
+		0259C581FE90428111CA0C5A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ProgressViewPalette.nib; sourceTree = "<group>"; };
+		0259C583FE90428111CA0C5A /* palette.table */ = {isa = PBXFileReference; lastKnownFileType = text; path = palette.table; sourceTree = "<group>"; };
+		0259C588FE90428111CA0C5A /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		252AAF6A04D73AF400657BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		252AAF6B04D73AF400657BE7 /* ProgressViewPalette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressViewPalette.palette; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
+		F53A3C7BC5B0686D01CA0CBA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		F8AC131401458D7404CA0CBC /* ProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ProgressCell.h; sourceTree = "<group>"; };
+		F8AC131501458D7404CA0CBC /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ProgressCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		252AAF6504D73AF400657BE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252AAF6604D73AF400657BE7 /* InterfaceBuilder.framework in Frameworks */,
+				252AAF6704D73AF400657BE7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* ProgressViewPalette */ = {
+			isa = PBXGroup;
+			children = (
+				0259C588FE90428111CA0C5A /* README.rtf */,
+				0259C576FE90428111CA0C5A /* ProgressView.m */,
+				0259C577FE90428111CA0C5A /* ProgressViewInspector.m */,
+				0259C578FE90428111CA0C5A /* ProgressViewPalette.m */,
+				0259C57AFE90428111CA0C5A /* ProgressView.h */,
+				0259C57BFE90428111CA0C5A /* ProgressViewInspector.h */,
+				0259C57CFE90428111CA0C5A /* ProgressViewPalette.h */,
+				F8AC131401458D7404CA0CBC /* ProgressCell.h */,
+				F8AC131501458D7404CA0CBC /* ProgressCell.m */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				252AAF6A04D73AF400657BE7 /* Info.plist */,
+			);
+			name = ProgressViewPalette;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0259C57EFE90428111CA0C5A /* ProgressViewInspector.nib */,
+				0259C580FE90428111CA0C5A /* ProgressViewPalette.nib */,
+				0259C583FE90428111CA0C5A /* palette.table */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				252AAF6B04D73AF400657BE7 /* ProgressViewPalette.palette */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */,
+				F53A3C7BC5B0686D01CA0CBA /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		252AAF5704D73AF400657BE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252AAF5804D73AF400657BE7 /* ProgressView.h in Headers */,
+				252AAF5904D73AF400657BE7 /* ProgressViewInspector.h in Headers */,
+				252AAF5A04D73AF400657BE7 /* ProgressViewPalette.h in Headers */,
+				252AAF5B04D73AF400657BE7 /* ProgressCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		252AAF5604D73AF400657BE7 /* ProgressViewPalette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C017330208A95E49009534D0 /* Build configuration list for PBXNativeTarget "ProgressViewPalette" */;
+			buildPhases = (
+				252AAF5704D73AF400657BE7 /* Headers */,
+				252AAF5C04D73AF400657BE7 /* Resources */,
+				252AAF6004D73AF400657BE7 /* Sources */,
+				252AAF6504D73AF400657BE7 /* Frameworks */,
+				252AAF6804D73AF400657BE7 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = ProgressViewPalette;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = ProgressViewPalette;
+			productReference = 252AAF6B04D73AF400657BE7 /* ProgressViewPalette.palette */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C017330608A95E49009534D0 /* Build configuration list for PBXProject "ProgressViewPalette" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* ProgressViewPalette */;
+			projectDirPath = "";
+			targets = (
+				252AAF5604D73AF400657BE7 /* ProgressViewPalette */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		252AAF5C04D73AF400657BE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252AAF5D04D73AF400657BE7 /* ProgressViewInspector.nib in Resources */,
+				252AAF5E04D73AF400657BE7 /* ProgressViewPalette.nib in Resources */,
+				252AAF5F04D73AF400657BE7 /* palette.table in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		252AAF6804D73AF400657BE7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		252AAF6004D73AF400657BE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252AAF6104D73AF400657BE7 /* ProgressView.m in Sources */,
+				252AAF6204D73AF400657BE7 /* ProgressViewInspector.m in Sources */,
+				252AAF6304D73AF400657BE7 /* ProgressViewPalette.m in Sources */,
+				252AAF6404D73AF400657BE7 /* ProgressCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0259C57EFE90428111CA0C5A /* ProgressViewInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0259C57FFE90428111CA0C5A /* English */,
+			);
+			name = ProgressViewInspector.nib;
+			sourceTree = "<group>";
+		};
+		0259C580FE90428111CA0C5A /* ProgressViewPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0259C581FE90428111CA0C5A /* English */,
+			);
+			name = ProgressViewPalette.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C017330308A95E49009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				PRODUCT_NAME = ProgressViewPalette;
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C017330408A95E49009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				PRODUCT_NAME = ProgressViewPalette;
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Release;
+		};
+		C017330708A95E49009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C017330808A95E49009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C017330208A95E49009534D0 /* Build configuration list for PBXNativeTarget "ProgressViewPalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017330308A95E49009534D0 /* Debug */,
+				C017330408A95E49009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017330608A95E49009534D0 /* Build configuration list for PBXProject "ProgressViewPalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017330708A95E49009534D0 /* Debug */,
+				C017330808A95E49009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

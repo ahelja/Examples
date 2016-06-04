@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Structs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1>
+<br><hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIValueMap;  name=MIDIValueMap --><a name="//apple_ref/c/tag/MIDIValueMap"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIValueMap">MIDIValueMap</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIValueMap" logicalPath="//apple_ref/c/cl/MIDIValueMap //apple_ref/c/cl/MIDIValueMap //apple_ref/c/tdef/MIDIValueMap //apple_ref/c/tag/MIDIValueMap" target="_top"><font class="type">MIDIValueMap</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/cl/value //apple_ref/c/cl/value //apple_ref/c/tdef/value //apple_ref/c/tag/value //apple_ref/c/econst/value //apple_ref/c/struct/value //apple_ref/c/clconst/value" --><font class="type">value</font><!-- /a -->[<font class="number">128</font>]; 
+}; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A custom mapping function to transform MIDI 7-bit values,
+as contained in note numbers, velocities, control values,
+etc.  y = value[x], where x is the input MIDI value, y the
+output.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDITransform;  name=MIDITransform --><a name="//apple_ref/c/tag/MIDITransform"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDITransform">MIDITransform</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Describes how a single type of MIDI event is transformed.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> { 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDITransformType" logicalPath="//apple_ref/c/cl/MIDITransformType //apple_ref/c/cl/MIDITransformType //apple_ref/c/tdef/MIDITransformType //apple_ref/c/tag/MIDITransformType" target="_top"><font class="type">MIDITransformType</font></a> <font class="var">transform</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt16 //apple_ref/c/cl/SInt16 //apple_ref/c/tdef/SInt16 //apple_ref/c/tag/SInt16 //apple_ref/c/econst/SInt16 //apple_ref/c/struct/SInt16 //apple_ref/c/clconst/SInt16" --><font class="type">SInt16</font><!-- /a --> <font class="var">param</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>transform</code></dt>
+<dd>The type of transformation to be applied to the event values.</dd>
+<dt><code>param</code></dt>
+<dd>An argument to the transformation method (see description of MIDITransformType).</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This structure controls the transformation of various MIDI events other than control changes.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIControlTransform;  name=MIDIControlTransform --><a name="//apple_ref/c/tag/MIDIControlTransform"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIControlTransform">MIDIControlTransform</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Describes a transformation of MIDI control change events.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIControlTransform" logicalPath="//apple_ref/c/cl/MIDIControlTransform //apple_ref/c/cl/MIDIControlTransform //apple_ref/c/tdef/MIDIControlTransform //apple_ref/c/tag/MIDIControlTransform" target="_top"><font class="type">MIDIControlTransform</font></a> { 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDITransformControlType" logicalPath="//apple_ref/c/cl/MIDITransformControlType //apple_ref/c/cl/MIDITransformControlType //apple_ref/c/tdef/MIDITransformControlType //apple_ref/c/tag/MIDITransformControlType" target="_top"><font class="type">MIDITransformControlType</font></a> <font class="var">controlType</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDITransformControlType" logicalPath="//apple_ref/c/cl/MIDITransformControlType //apple_ref/c/cl/MIDITransformControlType //apple_ref/c/tdef/MIDITransformControlType //apple_ref/c/tag/MIDITransformControlType" target="_top"><font class="type">MIDITransformControlType</font></a> <font class="var">remappedControlType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">controlNumber</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDITransformType" logicalPath="//apple_ref/c/cl/MIDITransformType //apple_ref/c/cl/MIDITransformType //apple_ref/c/tdef/MIDITransformType //apple_ref/c/tag/MIDITransformType" target="_top"><font class="type">MIDITransformType</font></a> <font class="var">transform</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt16 //apple_ref/c/cl/SInt16 //apple_ref/c/tdef/SInt16 //apple_ref/c/tag/SInt16 //apple_ref/c/econst/SInt16 //apple_ref/c/struct/SInt16 //apple_ref/c/clconst/SInt16" --><font class="type">SInt16</font><!-- /a --> <font class="var">param</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>controlType</code></dt>
+<dd>The type of control specified by controlNumber</dd>
+<dt><code>remappedControlType</code></dt>
+<dd>If transform is kMIDITransform_MapControl, the output control type</dd>
+<dt><code>controlNumber</code></dt>
+<dd>The control number to be affected.</dd>
+<dt><code>transform</code></dt>
+<dd>The type of transformation to be applied to the event values.</dd>
+<dt><code>param</code></dt>
+<dd>An argument to the transformation method (see description of MIDITransformType).</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A single MIDIThruConnectionParams may describe any number of transformations to control
+events. It is important that multiple transformations are ordered correctly: filter out,
+remap, then alter values.
+<br><br>
+All transformations are done internally using 14-bit values, so for example, when doing
+an add/min/max transform on a 7-bit control value, the parameter must be a 14-bit value.
+For example, to add 10 to a control value, param must be (10 
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIThruConnectionEndpoint;  name=MIDIThruConnectionEndpoint --><a name="//apple_ref/c/tag/MIDIThruConnectionEndpoint"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIThruConnectionEndpoint">MIDIThruConnectionEndpoint</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Describes a source or destination in a MIDIThruConnection.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIThruConnectionEndpoint" logicalPath="//apple_ref/c/cl/MIDIThruConnectionEndpoint //apple_ref/c/cl/MIDIThruConnectionEndpoint //apple_ref/c/tdef/MIDIThruConnectionEndpoint //apple_ref/c/tag/MIDIThruConnectionEndpoint" target="_top"><font class="type">MIDIThruConnectionEndpoint</font></a> { 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="var">endpointRef</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIUniqueID" logicalPath="//apple_ref/c/cl/MIDIUniqueID //apple_ref/c/cl/MIDIUniqueID //apple_ref/c/tdef/MIDIUniqueID" target="_top"><font class="type">MIDIUniqueID</font></a> <font class="var">uniqueID</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>endpointRef</code></dt>
+<dd>The endpoint specified as a MIDIEndpointRef.</dd>
+<dt><code>uniqueID</code></dt>
+<dd>The endpoint specified by its uniqueID.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>When creating one of these, you can leave uniqueID 0 if the endpoint exists and you are passing
+its MIDIEndpointRef.
+<br><br>
+When obtaining one of these from CoreMIDI, endpointRef may be NULL if it doesn't exist, but the
+uniqueID will always be non-zero.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIThruConnectionParams;  name=MIDIThruConnectionParams --><a name="//apple_ref/c/tag/MIDIThruConnectionParams"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIThruConnectionParams">MIDIThruConnectionParams</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Describes a set of MIDI routings and transformations.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIThruConnectionParams" logicalPath="//apple_ref/c/cl/MIDIThruConnectionParams //apple_ref/c/cl/MIDIThruConnectionParams //apple_ref/c/tdef/MIDIThruConnectionParams //apple_ref/c/tag/MIDIThruConnectionParams" target="_top"><font class="type">MIDIThruConnectionParams</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">version</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">numSources</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIThruConnectionEndpoint" logicalPath="//apple_ref/c/cl/MIDIThruConnectionEndpoint //apple_ref/c/cl/MIDIThruConnectionEndpoint //apple_ref/c/tdef/MIDIThruConnectionEndpoint //apple_ref/c/tag/MIDIThruConnectionEndpoint" target="_top"><font class="type">MIDIThruConnectionEndpoint</font></a> <!-- a logicalPath="//apple_ref/c/cl/sources //apple_ref/c/cl/sources //apple_ref/c/tdef/sources //apple_ref/c/tag/sources //apple_ref/c/econst/sources //apple_ref/c/struct/sources //apple_ref/c/clconst/sources" --><font class="type">sources</font><!-- /a -->[
+            <!-- a logicalPath="//apple_ref/c/cl/kMIDIThruConnection_MaxEndpoints //apple_ref/c/cl/kMIDIThruConnection_MaxEndpoints //apple_ref/c/tdef/kMIDIThruConnection_MaxEndpoints //apple_ref/c/tag/kMIDIThruConnection_MaxEndpoints //apple_ref/c/econst/kMIDIThruConnection_MaxEndpoints //apple_ref/c/struct/kMIDIThruConnection_MaxEndpoints //apple_ref/c/clconst/kMIDIThruConnection_MaxEndpoints" --><font class="type">kMIDIThruConnection_MaxEndpoints</font><!-- /a -->]; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">numDestinations</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIThruConnectionEndpoint" logicalPath="//apple_ref/c/cl/MIDIThruConnectionEndpoint //apple_ref/c/cl/MIDIThruConnectionEndpoint //apple_ref/c/tdef/MIDIThruConnectionEndpoint //apple_ref/c/tag/MIDIThruConnectionEndpoint" target="_top"><font class="type">MIDIThruConnectionEndpoint</font></a> <!-- a logicalPath="//apple_ref/c/cl/destinations //apple_ref/c/cl/destinations //apple_ref/c/tdef/destinations //apple_ref/c/tag/destinations //apple_ref/c/econst/destinations //apple_ref/c/struct/destinations //apple_ref/c/clconst/destinations" --><font class="type">destinations</font><!-- /a -->[
+            <!-- a logicalPath="//apple_ref/c/cl/kMIDIThruConnection_MaxEndpoints //apple_ref/c/cl/kMIDIThruConnection_MaxEndpoints //apple_ref/c/tdef/kMIDIThruConnection_MaxEndpoints //apple_ref/c/tag/kMIDIThruConnection_MaxEndpoints //apple_ref/c/econst/kMIDIThruConnection_MaxEndpoints //apple_ref/c/struct/kMIDIThruConnection_MaxEndpoints //apple_ref/c/clconst/kMIDIThruConnection_MaxEndpoints" --><font class="type">kMIDIThruConnection_MaxEndpoints</font><!-- /a -->];  
+    <font class="comment">//</font> 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/cl/channelMap //apple_ref/c/cl/channelMap //apple_ref/c/tdef/channelMap //apple_ref/c/tag/channelMap //apple_ref/c/econst/channelMap //apple_ref/c/struct/channelMap //apple_ref/c/clconst/channelMap" --><font class="type">channelMap</font><!-- /a -->[<font class="number">16</font>]; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">lowVelocity</font>, <font class="var">highVelocity</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">lowNote</font>, <font class="var">highNote</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> <font class="var">noteNumber</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> <font class="var">velocity</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> <font class="var">keyPressure</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> <font class="var">channelPressure</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> <font class="var">programChange</font>; 
+    <a href="../../../CoreMIDI/MIDIThruConnection/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDITransform" logicalPath="//apple_ref/c/cl/MIDITransform //apple_ref/c/cl/MIDITransform //apple_ref/c/tdef/MIDITransform //apple_ref/c/tag/MIDITransform" target="_top"><font class="type">MIDITransform</font></a> <font class="var">pitchBend</font>;  
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">filterOutSysEx</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">filterOutMTC</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">filterOutBeatClock</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">filterOutTuneRequest</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/cl/reserved2 //apple_ref/c/cl/reserved2 //apple_ref/c/tdef/reserved2 //apple_ref/c/tag/reserved2 //apple_ref/c/econst/reserved2 //apple_ref/c/struct/reserved2 //apple_ref/c/clconst/reserved2" --><font class="type">reserved2</font><!-- /a -->[<font class="number">3</font>]; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">filterOutAllControls</font>;  
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">numControlTransforms</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">numMaps</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/cl/reserved3 //apple_ref/c/cl/reserved3 //apple_ref/c/tdef/reserved3 //apple_ref/c/tag/reserved3 //apple_ref/c/econst/reserved3 //apple_ref/c/struct/reserved3 //apple_ref/c/clconst/reserved3" --><font class="type">reserved3</font><!-- /a -->[<font class="number">4</font>];  
+    <font class="comment">// remainder of structure is variable-length:</font> 
+    <font class="comment">// MIDIControlTransform controls[;]</font> 
+    <font class="comment">// MIDIValueMap maps[;]</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>version</code></dt>
+<dd>Version of this structure; must be 0.</dd>
+<dt><code>numSources</code></dt>
+<dd>The number of valid sources in the following array.</dd>
+<dt><code>sources</code></dt>
+<dd>All MIDI generated by these sources is routed into this connection for processing
+and distribution to destinations.</dd>
+<dt><code>numDestinations</code></dt>
+<dd>The number of valid destinations in the following array.</dd>
+<dt><code>destinations</code></dt>
+<dd>All MIDI output from the connection is routed to these destinations.</dd>
+<dt><code>channelMap</code></dt>
+<dd>Maps each of the source 16 MIDI channels to channel 0-15 (1-16) or 0xFF when
+MIDI from a channel is to be filtered out.</dd>
+<dt><code>lowVelocity</code></dt>
+<dd>Note events with a velocity less than this value are filtered out.</dd>
+<dt><code>highVelocity</code></dt>
+<dd>Note events with a velocity greater than this, if it is not 0, are filtered out.</dd>
+<dt><code>lowNote</code></dt>
+<dd>See highNote.</dd>
+<dt><code>highNote</code></dt>
+<dd>If highNote &gt;= lowNote, then notes outside this range are filtered out.
+If lowNote &gt; highNote, then notes <i>inside</i> this range are filtered out.
+This applies to note and polyphonic key pressure events.
+These fields are ignored if a there is a MIDIValueMap applying to noteNumber.</dd>
+<dt><code>noteNumber</code></dt>
+<dd>Specifies how MIDI note numbers are transformed.</dd>
+<dt><code>velocity</code></dt>
+<dd>Specifies how MIDI note velocities are transformed.</dd>
+<dt><code>keyPressure</code></dt>
+<dd>Specifies how MIDI polyphonic key pressure events are transformed.</dd>
+<dt><code>channelPressure</code></dt>
+<dd>Specifies how MIDI monophonic (channel) pressure events are transformed.</dd>
+<dt><code>programChange</code></dt>
+<dd>Specifies how MIDI program change events are transformed.</dd>
+<dt><code>pitchBend</code></dt>
+<dd>Specifies how MIDI pitch bend events are transformed.</dd>
+<dt><code>filterOutSysEx</code></dt>
+<dd>If 1, specifies that system-exclusive messages are to be filtered out.</dd>
+<dt><code>filterOutMTC</code></dt>
+<dd>If 1, specifies that MIDI Time Code messages are to be filtered out.</dd>
+<dt><code>filterOutBeatClock</code></dt>
+<dd>If 1, specifies the MIDI clock, play, stop, and resume messages are to
+be filtered out.</dd>
+<dt><code>filterOutTuneRequest</code></dt>
+<dd>If 1, specifies that MIDI Tune Request messages are to be filtered out.</dd>
+<dt><code>reserved2</code></dt>
+<dd>Must be 0.</dd>
+<dt><code>filterOutAllControls</code></dt>
+<dd>If 1, specifies that all MIDI continuous control messages are to be filtered out.</dd>
+<dt><code>numControlTransforms</code></dt>
+<dd>The number of control transformations in the variable-length portion of the struct.</dd>
+<dt><code>numMaps</code></dt>
+<dd>The number of MIDIValueMaps in the variable-length portion of the struct.</dd>
+<dt><code>reserved3</code></dt>
+<dd>Must be 0.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The remainder of the structure is variably-sized. It contains numControlTransform instances of 
+MIDIControlTransform, followed by numMaps instances of MIDIValueMap.
+</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

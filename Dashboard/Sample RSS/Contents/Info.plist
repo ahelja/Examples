@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowNetworkAccess</key>
+	<true/>
+	<key>BackwardsCompatibleClassLookup</key>
+	<true/>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.widget.samplerss</string>
+	<key>CFBundleName</key>
+	<string>Sample RSS</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0</string>
+	<key>CFBundleVersion</key>
+	<string>200</string>
+	<key>CloseBoxInsetX</key>
+	<integer>8</integer>
+	<key>CloseBoxInsetY</key>
+	<integer>7</integer>
+	<key>MainHTML</key>
+	<string>SampleRSS.html</string>
+</dict>
+</plist>

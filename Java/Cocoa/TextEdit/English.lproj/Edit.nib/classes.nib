@@ -1,0 +1,64 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {createNew = id; open = id; saveAll = id; }; 
+            CLASS = Controller; 
+            LANGUAGE = Java; 
+            SUPERCLASS = java.lang.Object; 
+        }, 
+        {
+            ACTIONS = {
+                alignJustified = id; 
+                close = id; 
+                enterSelection = id; 
+                findNext = id; 
+                findPrevious = id; 
+                jumpToSelection = id; 
+                orderFrontFindPanel = id; 
+                performZoom = id; 
+                printDocument = id; 
+                redo = id; 
+                revert = id; 
+                save = id; 
+                saveAs = id; 
+                saveTo = id; 
+                toggleHyphenation = id; 
+                togglePageBreaks = id; 
+                toggleRich = id; 
+                undo = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {hideOtherApplications = id; unhideOtherApplications = id; }; 
+            CLASS = NSApplication; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {
+            ACTIONS = {showPanel = id; }; 
+            CLASS = Preferences; 
+            LANGUAGE = Java; 
+            SUPERCLASS = java.lang.Object; 
+        }, 
+        {
+            ACTIONS = {
+                findNext = id; 
+                findNextAndOrderFindPanelOut = id; 
+                findPrevious = id; 
+                jumpToSelection = id; 
+                orderFrontFindPanel = id; 
+                replace = id; 
+                replaceAll = id; 
+                replaceAndFind = id; 
+                takeFindStringFromSelection = id; 
+            }; 
+            CLASS = TextFinder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

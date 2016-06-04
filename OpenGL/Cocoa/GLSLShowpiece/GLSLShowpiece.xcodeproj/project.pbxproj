@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		9703DA2D079F2FD10043D21B /* Mandelbrot.h in Headers */ = {isa = PBXBuildFile; fileRef = 9703DA2B079F2FD10043D21B /* Mandelbrot.h */; };
+		9703DA2E079F2FD10043D21B /* Mandlebrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9703DA2C079F2FD10043D21B /* Mandlebrot.m */; };
+		9703DA32079F30110043D21B /* Mandelbrot.fragment in Resources */ = {isa = PBXBuildFile; fileRef = 9703DA30079F30110043D21B /* Mandelbrot.fragment */; };
+		9703DA33079F30110043D21B /* Mandelbrot.vertex in Resources */ = {isa = PBXBuildFile; fileRef = 9703DA31079F30110043D21B /* Mandelbrot.vertex */; };
+		9703DA66079F352D0043D21B /* Podium.h in Headers */ = {isa = PBXBuildFile; fileRef = 9703DA64079F352D0043D21B /* Podium.h */; };
+		9703DA67079F352D0043D21B /* Podium.m in Sources */ = {isa = PBXBuildFile; fileRef = 9703DA65079F352D0043D21B /* Podium.m */; };
+		9703DA77079F353E0043D21B /* Podium.fragment in Resources */ = {isa = PBXBuildFile; fileRef = 9703DA75079F353E0043D21B /* Podium.fragment */; };
+		9703DA78079F353E0043D21B /* Podium.vertex in Resources */ = {isa = PBXBuildFile; fileRef = 9703DA76079F353E0043D21B /* Podium.vertex */; };
+		9703DADB079F45B20043D21B /* UIController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9703DAD9079F45B20043D21B /* UIController.h */; };
+		9703DADC079F45B20043D21B /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9703DADA079F45B20043D21B /* UIController.m */; };
+		9703DB67079F56840043D21B /* WoodShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9703DB65079F56840043D21B /* WoodShader.h */; };
+		9703DB68079F56840043D21B /* WoodShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9703DB66079F56840043D21B /* WoodShader.m */; };
+		9703DB78079F56990043D21B /* WoodShader.fragment in Resources */ = {isa = PBXBuildFile; fileRef = 9703DB76079F56990043D21B /* WoodShader.fragment */; };
+		9703DB79079F56990043D21B /* WoodShader.vertex in Resources */ = {isa = PBXBuildFile; fileRef = 9703DB77079F56990043D21B /* WoodShader.vertex */; };
+		97142EE407A1DB840050F3F0 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 97142EE307A1DB840050F3F0 /* Icon.icns */; };
+		975E388507A0F2C0006CDB9B /* Marble.fragment in Resources */ = {isa = PBXBuildFile; fileRef = 975E388307A0F2C0006CDB9B /* Marble.fragment */; };
+		975E388607A0F2C0006CDB9B /* Marble.vertex in Resources */ = {isa = PBXBuildFile; fileRef = 975E388407A0F2C0006CDB9B /* Marble.vertex */; };
+		975E388907A0F2F1006CDB9B /* Marble.h in Headers */ = {isa = PBXBuildFile; fileRef = 975E388707A0F2F1006CDB9B /* Marble.h */; };
+		975E388A07A0F2F1006CDB9B /* Marble.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E388807A0F2F1006CDB9B /* Marble.m */; };
+		975E389807A0FF3A006CDB9B /* WoodShader.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 975E389707A0FF3A006CDB9B /* WoodShader.rtf */; };
+		975E389A07A0FF44006CDB9B /* Marble.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 975E389907A0FF44006CDB9B /* Marble.rtf */; };
+		975E38D907A101CF006CDB9B /* Mandelbrot.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 975E38D807A101CF006CDB9B /* Mandelbrot.rtf */; };
+		975E38DB07A101DA006CDB9B /* BrickShader.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 975E38DA07A101DA006CDB9B /* BrickShader.rtf */; };
+		9770A67A079EFA820018DDE4 /* OpenGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9770A678079EFA820018DDE4 /* OpenGLView.h */; };
+		9770A67B079EFA820018DDE4 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9770A679079EFA820018DDE4 /* OpenGLView.m */; };
+		9770A687079EFBE90018DDE4 /* Granite.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 9770A686079EFBE90018DDE4 /* Granite.bmp */; };
+		97B7F0E1079EFF2E0075552F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B7F0E0079EFF2E0075552F /* OpenGL.framework */; };
+		97B7F140079F08900075552F /* Exhibit.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B7F13E079F08900075552F /* Exhibit.h */; };
+		97B7F141079F08900075552F /* Exhibit.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B7F13F079F08900075552F /* Exhibit.m */; };
+		97B7F633079F0F110075552F /* BrickShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B7F631079F0F110075552F /* BrickShader.h */; };
+		97B7F634079F0F110075552F /* BrickShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B7F632079F0F110075552F /* BrickShader.m */; };
+		97B7F637079F0F230075552F /* BrickShader.fragment in Resources */ = {isa = PBXBuildFile; fileRef = 97B7F635079F0F230075552F /* BrickShader.fragment */; };
+		97B7F638079F0F230075552F /* BrickShader.vertex in Resources */ = {isa = PBXBuildFile; fileRef = 97B7F636079F0F230075552F /* BrickShader.vertex */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107320486CEB800E47090 /* GLSLShowpiece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSLShowpiece.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9703DA2B079F2FD10043D21B /* Mandelbrot.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Mandelbrot.h; path = Exhibits/Mandelbrot/Mandelbrot.h; sourceTree = "<group>"; };
+		9703DA2C079F2FD10043D21B /* Mandlebrot.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = Mandlebrot.m; path = Exhibits/Mandelbrot/Mandlebrot.m; sourceTree = "<group>"; };
+		9703DA30079F30110043D21B /* Mandelbrot.fragment */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Mandelbrot.fragment; path = Exhibits/Mandelbrot/Mandelbrot.fragment; sourceTree = "<group>"; };
+		9703DA31079F30110043D21B /* Mandelbrot.vertex */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Mandelbrot.vertex; path = Exhibits/Mandelbrot/Mandelbrot.vertex; sourceTree = "<group>"; };
+		9703DA64079F352D0043D21B /* Podium.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Podium.h; path = Exhibits/Podium/Podium.h; sourceTree = "<group>"; };
+		9703DA65079F352D0043D21B /* Podium.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = Podium.m; path = Exhibits/Podium/Podium.m; sourceTree = "<group>"; };
+		9703DA75079F353E0043D21B /* Podium.fragment */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Podium.fragment; path = Exhibits/Podium/Podium.fragment; sourceTree = "<group>"; };
+		9703DA76079F353E0043D21B /* Podium.vertex */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Podium.vertex; path = Exhibits/Podium/Podium.vertex; sourceTree = "<group>"; };
+		9703DAD9079F45B20043D21B /* UIController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = UIController.h; sourceTree = "<group>"; };
+		9703DADA079F45B20043D21B /* UIController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = UIController.m; sourceTree = "<group>"; };
+		9703DB65079F56840043D21B /* WoodShader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = WoodShader.h; path = Exhibits/WoodShader/WoodShader.h; sourceTree = "<group>"; };
+		9703DB66079F56840043D21B /* WoodShader.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = WoodShader.m; path = Exhibits/WoodShader/WoodShader.m; sourceTree = "<group>"; };
+		9703DB76079F56990043D21B /* WoodShader.fragment */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = WoodShader.fragment; path = Exhibits/WoodShader/WoodShader.fragment; sourceTree = "<group>"; };
+		9703DB77079F56990043D21B /* WoodShader.vertex */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = WoodShader.vertex; path = Exhibits/WoodShader/WoodShader.vertex; sourceTree = "<group>"; };
+		97142EE307A1DB840050F3F0 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		975E388307A0F2C0006CDB9B /* Marble.fragment */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Marble.fragment; path = Exhibits/Marble/Marble.fragment; sourceTree = "<group>"; };
+		975E388407A0F2C0006CDB9B /* Marble.vertex */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Marble.vertex; path = Exhibits/Marble/Marble.vertex; sourceTree = "<group>"; };
+		975E388707A0F2F1006CDB9B /* Marble.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Marble.h; path = Exhibits/Marble/Marble.h; sourceTree = "<group>"; };
+		975E388807A0F2F1006CDB9B /* Marble.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = Marble.m; path = Exhibits/Marble/Marble.m; sourceTree = "<group>"; };
+		975E389707A0FF3A006CDB9B /* WoodShader.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = WoodShader.rtf; path = Exhibits/WoodShader/WoodShader.rtf; sourceTree = "<group>"; };
+		975E389907A0FF44006CDB9B /* Marble.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Marble.rtf; path = Exhibits/Marble/Marble.rtf; sourceTree = "<group>"; };
+		975E38D807A101CF006CDB9B /* Mandelbrot.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Mandelbrot.rtf; path = Exhibits/Mandelbrot/Mandelbrot.rtf; sourceTree = "<group>"; };
+		975E38DA07A101DA006CDB9B /* BrickShader.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = BrickShader.rtf; path = Exhibits/BrickShader/BrickShader.rtf; sourceTree = "<group>"; };
+		9770A678079EFA820018DDE4 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		9770A679079EFA820018DDE4 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		9770A686079EFBE90018DDE4 /* Granite.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Granite.bmp; path = Textures/Granite.bmp; sourceTree = "<group>"; };
+		97B7F0E0079EFF2E0075552F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		97B7F13E079F08900075552F /* Exhibit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Exhibit.h; sourceTree = "<group>"; };
+		97B7F13F079F08900075552F /* Exhibit.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Exhibit.m; sourceTree = "<group>"; };
+		97B7F631079F0F110075552F /* BrickShader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BrickShader.h; path = Exhibits/BrickShader/BrickShader.h; sourceTree = "<group>"; };
+		97B7F632079F0F110075552F /* BrickShader.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = BrickShader.m; path = Exhibits/BrickShader/BrickShader.m; sourceTree = "<group>"; };
+		97B7F635079F0F230075552F /* BrickShader.fragment */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = BrickShader.fragment; path = Exhibits/BrickShader/BrickShader.fragment; sourceTree = "<group>"; };
+		97B7F636079F0F230075552F /* BrickShader.vertex */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = BrickShader.vertex; path = Exhibits/BrickShader/BrickShader.vertex; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				97B7F0E1079EFF2E0075552F /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* MainClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9703DAD9079F45B20043D21B /* UIController.h */,
+				9703DADA079F45B20043D21B /* UIController.m */,
+				9703DA64079F352D0043D21B /* Podium.h */,
+				9703DA65079F352D0043D21B /* Podium.m */,
+				97B7F13E079F08900075552F /* Exhibit.h */,
+				97B7F13F079F08900075552F /* Exhibit.m */,
+				9770A678079EFA820018DDE4 /* OpenGLView.h */,
+				9770A679079EFA820018DDE4 /* OpenGLView.m */,
+			);
+			name = MainClasses;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* GLSLShowpiece.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GLSLShowpiece */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				97B7F139079F07FC0075552F /* Exhibits */,
+				080E96DDFE201D6D7F000001 /* MainClasses */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = GLSLShowpiece;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97142EE307A1DB840050F3F0 /* Icon.icns */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				9706B44A07A03D4B00E60B1A /* Descriptions */,
+				97B7F611079F0A760075552F /* Shaders */,
+				9770A685079EFB990018DDE4 /* Textures */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97B7F0E0079EFF2E0075552F /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9703DA2F079F2FE00043D21B /* Mandelbrot */ = {
+			isa = PBXGroup;
+			children = (
+				9703DA30079F30110043D21B /* Mandelbrot.fragment */,
+				9703DA31079F30110043D21B /* Mandelbrot.vertex */,
+			);
+			name = Mandelbrot;
+			sourceTree = "<group>";
+		};
+		9703DA54079F34570043D21B /* Podium */ = {
+			isa = PBXGroup;
+			children = (
+				9703DA75079F353E0043D21B /* Podium.fragment */,
+				9703DA76079F353E0043D21B /* Podium.vertex */,
+			);
+			name = Podium;
+			sourceTree = "<group>";
+		};
+		9703DB75079F568A0043D21B /* WoodShader */ = {
+			isa = PBXGroup;
+			children = (
+				9703DB76079F56990043D21B /* WoodShader.fragment */,
+				9703DB77079F56990043D21B /* WoodShader.vertex */,
+			);
+			name = WoodShader;
+			sourceTree = "<group>";
+		};
+		9706B44A07A03D4B00E60B1A /* Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				975E38DA07A101DA006CDB9B /* BrickShader.rtf */,
+				975E38D807A101CF006CDB9B /* Mandelbrot.rtf */,
+				975E389907A0FF44006CDB9B /* Marble.rtf */,
+				975E389707A0FF3A006CDB9B /* WoodShader.rtf */,
+			);
+			name = Descriptions;
+			sourceTree = "<group>";
+		};
+		975E388207A0F2AE006CDB9B /* Marble */ = {
+			isa = PBXGroup;
+			children = (
+				975E388307A0F2C0006CDB9B /* Marble.fragment */,
+				975E388407A0F2C0006CDB9B /* Marble.vertex */,
+			);
+			name = Marble;
+			sourceTree = "<group>";
+		};
+		9770A685079EFB990018DDE4 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				9770A686079EFBE90018DDE4 /* Granite.bmp */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+		97B7F139079F07FC0075552F /* Exhibits */ = {
+			isa = PBXGroup;
+			children = (
+				975E388707A0F2F1006CDB9B /* Marble.h */,
+				975E388807A0F2F1006CDB9B /* Marble.m */,
+				9703DB65079F56840043D21B /* WoodShader.h */,
+				9703DB66079F56840043D21B /* WoodShader.m */,
+				9703DA2B079F2FD10043D21B /* Mandelbrot.h */,
+				9703DA2C079F2FD10043D21B /* Mandlebrot.m */,
+				97B7F631079F0F110075552F /* BrickShader.h */,
+				97B7F632079F0F110075552F /* BrickShader.m */,
+			);
+			name = Exhibits;
+			sourceTree = "<group>";
+		};
+		97B7F611079F0A760075552F /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				975E388207A0F2AE006CDB9B /* Marble */,
+				9703DB75079F568A0043D21B /* WoodShader */,
+				9703DA54079F34570043D21B /* Podium */,
+				9703DA2F079F2FE00043D21B /* Mandelbrot */,
+				97B7F612079F0A820075552F /* BrickShader */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		97B7F612079F0A820075552F /* BrickShader */ = {
+			isa = PBXGroup;
+			children = (
+				97B7F635079F0F230075552F /* BrickShader.fragment */,
+				97B7F636079F0F230075552F /* BrickShader.vertex */,
+			);
+			name = BrickShader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9770A67A079EFA820018DDE4 /* OpenGLView.h in Headers */,
+				97B7F140079F08900075552F /* Exhibit.h in Headers */,
+				97B7F633079F0F110075552F /* BrickShader.h in Headers */,
+				9703DA2D079F2FD10043D21B /* Mandelbrot.h in Headers */,
+				9703DA66079F352D0043D21B /* Podium.h in Headers */,
+				9703DADB079F45B20043D21B /* UIController.h in Headers */,
+				9703DB67079F56840043D21B /* WoodShader.h in Headers */,
+				975E388907A0F2F1006CDB9B /* Marble.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* GLSLShowpiece */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC256D08BBC88C006E9215 /* Build configuration list for PBXNativeTarget "GLSLShowpiece" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = GLSLShowpiece;
+				SECTORDER_FLAGS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = GLSLShowpiece;
+			productInstallPath = "$(HOME)/Applications";
+			productName = GLSLShowpiece;
+			productReference = 8D1107320486CEB800E47090 /* GLSLShowpiece.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F0EC257108BBC88C006E9215 /* Build configuration list for PBXProject "GLSLShowpiece" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GLSLShowpiece */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* GLSLShowpiece */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				9770A687079EFBE90018DDE4 /* Granite.bmp in Resources */,
+				97B7F637079F0F230075552F /* BrickShader.fragment in Resources */,
+				97B7F638079F0F230075552F /* BrickShader.vertex in Resources */,
+				9703DA32079F30110043D21B /* Mandelbrot.fragment in Resources */,
+				9703DA33079F30110043D21B /* Mandelbrot.vertex in Resources */,
+				9703DA77079F353E0043D21B /* Podium.fragment in Resources */,
+				9703DA78079F353E0043D21B /* Podium.vertex in Resources */,
+				9703DB78079F56990043D21B /* WoodShader.fragment in Resources */,
+				9703DB79079F56990043D21B /* WoodShader.vertex in Resources */,
+				975E388507A0F2C0006CDB9B /* Marble.fragment in Resources */,
+				975E388607A0F2C0006CDB9B /* Marble.vertex in Resources */,
+				975E389807A0FF3A006CDB9B /* WoodShader.rtf in Resources */,
+				975E389A07A0FF44006CDB9B /* Marble.rtf in Resources */,
+				975E38D907A101CF006CDB9B /* Mandelbrot.rtf in Resources */,
+				975E38DB07A101DA006CDB9B /* BrickShader.rtf in Resources */,
+				97142EE407A1DB840050F3F0 /* Icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				9770A67B079EFA820018DDE4 /* OpenGLView.m in Sources */,
+				97B7F141079F08900075552F /* Exhibit.m in Sources */,
+				97B7F634079F0F110075552F /* BrickShader.m in Sources */,
+				9703DA2E079F2FD10043D21B /* Mandlebrot.m in Sources */,
+				9703DA67079F352D0043D21B /* Podium.m in Sources */,
+				9703DADC079F45B20043D21B /* UIController.m in Sources */,
+				9703DB68079F56840043D21B /* WoodShader.m in Sources */,
+				975E388A07A0F2F1006CDB9B /* Marble.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0EC256E08BBC88C006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GLSLShowpiece;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC256F08BBC88C006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GLSLShowpiece;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F0EC257208BBC88C006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC257308BBC88C006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0EC256D08BBC88C006E9215 /* Build configuration list for PBXNativeTarget "GLSLShowpiece" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC256E08BBC88C006E9215 /* Debug */,
+				F0EC256F08BBC88C006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC257108BBC88C006E9215 /* Build configuration list for PBXProject "GLSLShowpiece" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC257208BBC88C006E9215 /* Debug */,
+				F0EC257308BBC88C006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B86001BDB6411CA292A /* ImageMap.java in Sources */ = {isa = PBXBuildFile; fileRef = 00E68290FEC88D7311DB9C8B /* ImageMap.java */; };
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+		F52772CB038348940198521B /* AniArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772BB038348930198521B /* AniArea.java */; };
+		F52772CC038348940198521B /* ButtonFilter.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772BC038348930198521B /* ButtonFilter.java */; };
+		F52772CD038348940198521B /* ClickArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772BD038348930198521B /* ClickArea.java */; };
+		F52772CE038348940198521B /* DelayedSoundArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772BE038348930198521B /* DelayedSoundArea.java */; };
+		F52772CF038348940198521B /* HighlightArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772BF038348930198521B /* HighlightArea.java */; };
+		F52772D0038348940198521B /* HighlightFilter.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C0038348930198521B /* HighlightFilter.java */; };
+		F52772D1038348940198521B /* HrefButtonArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C1038348930198521B /* HrefButtonArea.java */; };
+		F52772D2038348940198521B /* ImageMapArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C2038348930198521B /* ImageMapArea.java */; };
+		F52772D4038348940198521B /* LinkArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C4038348930198521B /* LinkArea.java */; };
+		F52772D5038348940198521B /* NameArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C5038348930198521B /* NameArea.java */; };
+		F52772D6038348940198521B /* RoundButtonFilter.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C6038348930198521B /* RoundButtonFilter.java */; };
+		F52772D7038348940198521B /* RoundHrefButtonArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C7038348930198521B /* RoundHrefButtonArea.java */; };
+		F52772D8038348940198521B /* SoundArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772C8038348930198521B /* SoundArea.java */; };
+		F52772DA038348940198521B /* TickerArea.java in Sources */ = {isa = PBXBuildFile; fileRef = F52772CA038348930198521B /* TickerArea.java */; };
+		F52772EA038348E70198521B /* imagemapcheat.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F52772C3038348930198521B /* imagemapcheat.html */; };
+		F52772EB038348E70198521B /* sources.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F52772C9038348930198521B /* sources.html */; };
+		F52772ED038349120198521B /* chirp1.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F52772B4038348600198521B /* chirp1.au */; };
+		F52772EE038349120198521B /* hi.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F52772B5038348600198521B /* hi.au */; };
+		F52772F0038349280198521B /* jim.graham.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F52772B9038348670198521B /* jim.graham.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ImageMap;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+				F52772EA038348E70198521B /* imagemapcheat.html in CopyFiles */,
+				F52772EB038348E70198521B /* sources.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52772EC038348F70198521B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ImageMap/audio;
+			dstSubfolderSpec = 16;
+			files = (
+				F52772ED038349120198521B /* chirp1.au in CopyFiles */,
+				F52772EE038349120198521B /* hi.au in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52772EF038349160198521B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ImageMap/images;
+			dstSubfolderSpec = 16;
+			files = (
+				F52772F0038349280198521B /* jim.graham.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68290FEC88D7311DB9C8B /* ImageMap.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ImageMap.java; sourceTree = "<group>"; };
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F52772B4038348600198521B /* chirp1.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = chirp1.au; sourceTree = "<group>"; };
+		F52772B5038348600198521B /* hi.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = hi.au; sourceTree = "<group>"; };
+		F52772B9038348670198521B /* jim.graham.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jim.graham.gif; sourceTree = "<group>"; };
+		F52772BB038348930198521B /* AniArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = AniArea.java; sourceTree = "<group>"; };
+		F52772BC038348930198521B /* ButtonFilter.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ButtonFilter.java; sourceTree = "<group>"; };
+		F52772BD038348930198521B /* ClickArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ClickArea.java; sourceTree = "<group>"; };
+		F52772BE038348930198521B /* DelayedSoundArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = DelayedSoundArea.java; sourceTree = "<group>"; };
+		F52772BF038348930198521B /* HighlightArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = HighlightArea.java; sourceTree = "<group>"; };
+		F52772C0038348930198521B /* HighlightFilter.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = HighlightFilter.java; sourceTree = "<group>"; };
+		F52772C1038348930198521B /* HrefButtonArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = HrefButtonArea.java; sourceTree = "<group>"; };
+		F52772C2038348930198521B /* ImageMapArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ImageMapArea.java; sourceTree = "<group>"; };
+		F52772C3038348930198521B /* imagemapcheat.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = imagemapcheat.html; sourceTree = "<group>"; };
+		F52772C4038348930198521B /* LinkArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = LinkArea.java; sourceTree = "<group>"; };
+		F52772C5038348930198521B /* NameArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = NameArea.java; sourceTree = "<group>"; };
+		F52772C6038348930198521B /* RoundButtonFilter.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = RoundButtonFilter.java; sourceTree = "<group>"; };
+		F52772C7038348930198521B /* RoundHrefButtonArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = RoundHrefButtonArea.java; sourceTree = "<group>"; };
+		F52772C8038348930198521B /* SoundArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = SoundArea.java; sourceTree = "<group>"; };
+		F52772C9038348930198521B /* sources.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = sources.html; sourceTree = "<group>"; };
+		F52772CA038348930198521B /* TickerArea.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TickerArea.java; sourceTree = "<group>"; };
+		F52772FA038349640198521B /* ImageMap */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = ImageMap; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				F52772BB038348930198521B /* AniArea.java */,
+				F52772BC038348930198521B /* ButtonFilter.java */,
+				F52772BD038348930198521B /* ClickArea.java */,
+				F52772BE038348930198521B /* DelayedSoundArea.java */,
+				F52772BF038348930198521B /* HighlightArea.java */,
+				F52772C0038348930198521B /* HighlightFilter.java */,
+				F52772C1038348930198521B /* HrefButtonArea.java */,
+				00E68290FEC88D7311DB9C8B /* ImageMap.java */,
+				F52772C2038348930198521B /* ImageMapArea.java */,
+				F52772C4038348930198521B /* LinkArea.java */,
+				F52772C5038348930198521B /* NameArea.java */,
+				F52772C6038348930198521B /* RoundButtonFilter.java */,
+				F52772C7038348930198521B /* RoundHrefButtonArea.java */,
+				F52772C8038348930198521B /* SoundArea.java */,
+				F52772CA038348930198521B /* TickerArea.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				F52772C3038348930198521B /* imagemapcheat.html */,
+				F52772C9038348930198521B /* sources.html */,
+				F52772B3038348600198521B /* audio */,
+				F52772B8038348670198521B /* images */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F52772FA038349640198521B /* ImageMap */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F52772B3038348600198521B /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				F52772B4038348600198521B /* chirp1.au */,
+				F52772B5038348600198521B /* hi.au */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		F52772B8038348670198521B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F52772B9038348670198521B /* jim.graham.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2342C808DF2E92008B0BD4 /* Build configuration list for PBXProject "ImageMap" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* ImageMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52772CB038348940198521B /* AniArea.java in Sources */,
+				F52772CC038348940198521B /* ButtonFilter.java in Sources */,
+				F52772CD038348940198521B /* ClickArea.java in Sources */,
+				F52772CE038348940198521B /* DelayedSoundArea.java in Sources */,
+				F52772CF038348940198521B /* HighlightArea.java in Sources */,
+				F52772D0038348940198521B /* HighlightFilter.java in Sources */,
+				F52772D1038348940198521B /* HrefButtonArea.java in Sources */,
+				130F8B86001BDB6411CA292A /* ImageMap.java in Sources */,
+				F52772D2038348940198521B /* ImageMapArea.java in Sources */,
+				F52772D4038348940198521B /* LinkArea.java in Sources */,
+				F52772D5038348940198521B /* NameArea.java in Sources */,
+				F52772D6038348940198521B /* RoundButtonFilter.java in Sources */,
+				F52772D7038348940198521B /* RoundHrefButtonArea.java in Sources */,
+				F52772D8038348940198521B /* SoundArea.java in Sources */,
+				F52772DA038348940198521B /* TickerArea.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* ImageMap */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2342C408DF2E92008B0BD4 /* Build configuration list for PBXToolTarget "ImageMap" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F52772EC038348F70198521B /* CopyFiles */,
+				F52772EF038349160198521B /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = ImageMap;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = ImageMap;
+			productInstallPath = /Developer/Examples/Java/Applets;
+			productName = JavaAWTApplet;
+			productReference = F52772FA038349640198521B /* ImageMap */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2342C508DF2E92008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = ImageMap;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2342C608DF2E92008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = ImageMap;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2342C908DF2E92008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2342CA08DF2E92008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2342C408DF2E92008B0BD4 /* Build configuration list for PBXToolTarget "ImageMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342C508DF2E92008B0BD4 /* Debug */,
+				4C2342C608DF2E92008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2342C808DF2E92008B0BD4 /* Build configuration list for PBXProject "ImageMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342C908DF2E92008B0BD4 /* Debug */,
+				4C2342CA08DF2E92008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

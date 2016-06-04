@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                authenticationNeededSheetCancel = id; 
+                authenticationNeededSheetOK = id; 
+                backImage = id; 
+                connectSheetCancel = id; 
+                connectSheetOK = id; 
+                showImage = id; 
+                toggleAutomaticTour = id; 
+            }; 
+            CLASS = GMMainWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_authenticationNeededSheet" = NSWindow; 
+                "_connectSheet" = NSWindow; 
+                "_imageView" = RectangleDraggerView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = GMRectangleDraggerView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }
+    ); 
+    IBVersion = 1; 
+}

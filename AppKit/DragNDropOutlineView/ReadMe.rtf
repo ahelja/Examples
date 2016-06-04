@@ -1,0 +1,115 @@
+{\rtf1\mac\ansicpg10000\cocoartf823
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs36 \cf0 DragNDropOutlineView\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+\
+DragNDropOutlineView is a little application which show how to implement drag and drop in a NSOutlineView.  The application presents some heirarchical data with some fabricated icons.  Users are allowed to edit cells, add groups and leafs, and can drag any of the rows around to reorder elements of the outline view.  This sample code demonstrates:\
+\
+	\'a5 Drag and drop in an NSOutlineView, including drop on and between items.\
+	\'a5 How to re-target the location of a drop in an outline view.\
+	\'a5 Display and editing of custom and standard cells in an outline view.\
+	\'a5 How to reload parts of an outline view when the data source's model changes.\
+	\'a5 Other simple outline view features (eg. cell editing, handling single click actions, etc...)\
+\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs28 \cf0 Major source files and what's interesting about them:\
+\
+AppController.m\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f1\b0\fs24 \cf0 The AppController object acts as the outline view's delegate and data source.  It maintains a tree like structure as its model which, is initially loaded from an input file.  The nodes of the this structure are SimpleTreeNodes, each having a pointer to some SimpleTreeData.  Items in the 
+\f0\b outlineView
+\f1\b0  are SimpleTreeNode objects.  Given a particular SimpleTreeNode, the AppController can access the data part and determine is the item is expandable, a leaf, etc.   \
+\
+In order to be the recipient of drags, the AppController registers the 
+\f0\b outlineView
+\f1\b0  for a few simple drag types, including a custom drag type used to identify which rows are being dragged.  When a drag with appropriate paste board types hovers over the outline view, the AppController will be sent the method 
+\f0\b outlineView:validateDrop:proposedItem:proposedChildIndex:
+\f1\b0 .  In this method, the AppController determines if the proposed drop location (determined by parent, and child index) is valid.  To demonstrate retargeting, the AppController simply retargets the drop to the entire outline view when the "Only Allowed To Drop On Root" check is set.\
+\
+To allow drags to be initiated from the outline view, the AppController must do some additional work.  When a user clicks and drags horizontally (or vertically if 
+\f0\b setVerticalMotionCanBeginDrag:YES
+\f1\b0  has been sent to 
+\f0\b outlineView
+\f1\b0 ), it is sent the delegate method 
+\f0\b outlineView:writeItems:toPasteboard:
+\f1\b0 .  In this method, the AppController writes 
+\f0\b NSStringPboardType 
+\f1\b0 data (for fun), and 
+\f0\b DragDropSimplePboardType 
+\f1\b0 to support drag re-ordering.  This is enough to allow 
+\f0\b outlineView
+\f1\b0  to be a drag source.\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b \cf0 \
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\fs28 \cf0 NSOutlineView_Extensions.m\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f1\b0\fs24 \cf0 Implements some convenience methods in a category.
+\f0\b\fs28 \
+\
+ImageAndTextCell.m\
+\
+
+\f1\b0\fs24 The cell class used for display in our outline view.  ImageAndTextCell is a subclass of NSTextFieldCell that can display images and text at the same time.  The implementation is pretty simple, and mostly involves accounting for the size of the image when displaying (in 
+\f0\b drawWithFrame:inView:
+\f1\b0 )
+\f0\b  
+\f1\b0 and editing the cell (in 
+\f0\b editWithFrame:inView:editor:delegate:event:
+\f1\b0 ).\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs28 \cf0 TreeNode.m, and SimpleTreeNode.m\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f1\b0\fs24 \cf0 Files relating to the tree implementation can safely be ignored if desired.  Basically, the tree data structure helps hide complexity and defines the model the AppController maintains. \
+\
+TreeNode is a node in a doubly linked tree data structure.  TreeNode's have weak references to their parent (to avoid retain cycles, anyway the parents retain their children).  Each node has 0 or more children and a reference to a piece of 
+\f0\b TreeNodeData
+\f1\b0  data.   The TreeNode provides method to manipulate and extract structural information about a tree.  For instance, TreeNode implements: 
+\f0\b insertChild:atIndex:
+\f1\b0 , 
+\f0\b removeChild:, isDescendantOfNode:
+\f1\b0 , and other useful operations on tree nodes.
+\f0\b\fs28 \
+\
+
+\f1\b0\fs24 The applications AppController, acting as the 
+\f0\b outlineView's
+\f1\b0  data source, supplies SimpleTreeNode objects as items.  \
+\
+This source file Implements SimpleTreeNode and 
+\f0\b SimpleNodeData
+\f1\b0 .  Each SimpleTreeNode maintains a reference to some 
+\f0\b SimpleNodeData
+\f1\b0 , and provides 
+\f0\b treeFromDictionary:
+\f1\b0  as a convenience method for creating a tree from an input dictionary.  The 
+\f0\b SimpleNodeData
+\f1\b0  is the main data structure in the model maintained by the applications AppController object.  This data object responds to queries including: 
+\f0\b isLeaf
+\f1\b0  (to determine if the outline view item has children), 
+\f0\b iconRep 
+\f1\b0 (determines the icon to display for a particular row), 
+\f0\b name 
+\f1\b0 (the string displayed for a particular row)
+\f0\b , isExpandable
+\f1\b0  (a flag that determines wether or now a user is allowed to reveal the children of this node).\
+\
+}

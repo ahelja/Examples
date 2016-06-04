@@ -1,0 +1,1 @@
+ const unsigned char SketchVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Sketch  PROJECT:Sketch-45  DEVELOPER:lumen  BUILT:" __DATE__  " " __TIME__ "" "\n"; const double SketchVersionNumber __attribute__ ((used)) = (double)45.;

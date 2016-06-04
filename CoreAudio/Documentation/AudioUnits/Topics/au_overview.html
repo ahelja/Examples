@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_overview?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitOverview"></a>
+<h1>Audio Unit Overview</h1>
+
+	<p>Audio Units are used for a variety of purposes; to generate, process, receive, or otherwise manipulate streams of audio. They are building blocks that may be used singly or connected together to form an audio signal graph.</p>
+
+	<p>Whilst they can be thought of generally as Audio Plug-Ins, or Software Synthesizers, they can also perform other roles, such as interfacing a graph of audio units to an audio device or writing out a file with the results of a processing graph.</p>
+
+	<p>They are presented on the system as a Component, and like all components they are identified by 4 char codes that describe the component's type, sub-type and manufacturerID.</p>
+
+	<p>Components allow for any application to dynamically load code that will conform to a particular set of C functions that are defined, typically by Apple, to be the set of API that a component should support. This allows for applications to expect a particular set of behaviours from particular component types, and for developers of Components to expect that their code will be exercised in particular and well understood ways.</p>
+
+	<p>The contract that is expressed by the Audio Unit API will therefore embody a considerable degree of expected behaviours. As such, a collection of C++ base classes is used to implement the Audio Units that are provided with any particular release of Mac OS X. In order to facilitate the deployment of Audio Units from other developers, Apple also provides these base classes in the SDK. Developers are strongly encouraged to utilise these classes for their own audio units to ensure a consistency of behaviour across a broad spectrum of audio units. Furthermore, much of the management of the state of an audio unit is managed by these base classes, thus making the task of implementing an audio unit considerably easier. Separate documentation is provided for those classes in the SDK as well.</p>
+
+<a name="AudioUnitFeatures"></a>
+<h2>Audio Unit Features</h2>
+
+<dl>
+<dt>General State</dt>
+<dt>Property Management</dt>
+	<dd>which can be seen as managing specific states of an Audio Unit and establishing listeners to changes in those properties. This embodies a considerable degree of both the subtlety and general utility of an audio unit, so the documentation for this area is quite extensive.</dd>
+<dt>Rendering process</dt>
+	<dd>connections to other units</dd>
+	<dd>input callbacks</dd>
+	<dd>providing control information, such as note on events</dd>
+<dt>Real-time Parameter control</dt>
+</dl>
+
+	<p>This document describes the API of Audio Units, with additional documentation to describe the C++ implementation available. The implementation document presumes an understanding of the basic operational parameters of an Audio Unit, which is described herein.</p>
+
+<a name="AudioUnitUtilities"></a>
+<h2>Audio Unit Utilities</h2>
+
+	<p>There are also a number of other API services that directly use and support Audio Units. There are some utility calls in the <code>AudioToolbox.framework</code> that allow external client establish listeners to receive notifications when parameter values change. There is also an <code>AUMIDIController</code> API that provides a simple interface to map incoming MIDI messages from a designated MIDI Source to an Audio Unit's parameters. Finally, there is also an <code><a href="au_view.html#AudioUnitCarbonView">AudioUnitCarbonView</a></code> component (that is declared in the <code>AudioUnit.framework</code> that provides a component interface to allow Audio Units to provide a UI. Apple also ships a GenericAUView component, which is a version of this component, that can be used to display a generic view of an Audio Unit's parameters. These topics are discussed here as well.</p>
+
+	<p>Finally, the <code>AudioToolbox.framework</code> provides a number of API services that are use Audio Units or are used by Audio Units. The AUGraph provides services to construct a processing graph of Audio Units.  The MusicSequence and MusicPlayer objects provide an ability to schedule events, and these events can be delivered to the nodes of an AUGraph (which are in turn Audio Units). The AudioConverter is used by both the AUConverter unit and the AudioDevice Output units, in order to allow these units to perform simple conversions of audio data such as int->float or sample rate conversions. The AudioConverter provides additional functionality that is not directly relevant to Audio Units (such as the use of Audio Codecs for encoding and decoding non-PCM based audio data).</p>
+
+</body>
+</html>

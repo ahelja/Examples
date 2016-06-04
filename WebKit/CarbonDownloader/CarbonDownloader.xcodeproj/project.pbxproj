@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		834B1CA3079610BD00E4BF6C /* CarbonURLDownload.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834B1C99079610BD00E4BF6C /* CarbonURLDownload.mm */; };
+		834B1CA4079610BD00E4BF6C /* DownloadWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B1C9A079610BD00E4BF6C /* DownloadWindow.cpp */; };
+		834B1CA5079610BD00E4BF6C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834B1C9C079610BD00E4BF6C /* main.mm */; };
+		834B1CA6079610BD00E4BF6C /* RefCounted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B1C9D079610BD00E4BF6C /* RefCounted.cpp */; };
+		834B1CA7079610BD00E4BF6C /* UCarbonEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B1C9F079610BD00E4BF6C /* UCarbonEvent.cpp */; };
+		834B1CA8079610BD00E4BF6C /* URLRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834B1CA2079610BD00E4BF6C /* URLRequest.mm */; };
+		834B1CAB0796115500E4BF6C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834B1CAA0796115500E4BF6C /* Cocoa.framework */; };
+		834B1CAD0796116300E4BF6C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834B1CAC0796116300E4BF6C /* WebKit.framework */; };
+		8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		8D0C4E8E0486CD37000505A6 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		32DBCF6D0370B57F00C91783 /* CarbonDownloader_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonDownloader_Prefix.pch; sourceTree = "<group>"; };
+		834B1C98079610BD00E4BF6C /* CarbonURLDownload.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CarbonURLDownload.h; sourceTree = "<group>"; };
+		834B1C99079610BD00E4BF6C /* CarbonURLDownload.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = CarbonURLDownload.mm; sourceTree = "<group>"; };
+		834B1C9A079610BD00E4BF6C /* DownloadWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = DownloadWindow.cpp; sourceTree = "<group>"; };
+		834B1C9B079610BD00E4BF6C /* DownloadWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DownloadWindow.h; sourceTree = "<group>"; };
+		834B1C9C079610BD00E4BF6C /* main.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		834B1C9D079610BD00E4BF6C /* RefCounted.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RefCounted.cpp; sourceTree = "<group>"; };
+		834B1C9E079610BD00E4BF6C /* RefCounted.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RefCounted.h; sourceTree = "<group>"; };
+		834B1C9F079610BD00E4BF6C /* UCarbonEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = UCarbonEvent.cpp; sourceTree = "<group>"; };
+		834B1CA0079610BD00E4BF6C /* UCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = UCarbonEvent.h; sourceTree = "<group>"; };
+		834B1CA1079610BD00E4BF6C /* URLRequest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = URLRequest.h; sourceTree = "<group>"; };
+		834B1CA2079610BD00E4BF6C /* URLRequest.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = URLRequest.mm; sourceTree = "<group>"; };
+		834B1CAA0796115500E4BF6C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		834B1CAC0796116300E4BF6C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D0C4E970486CD37000505A6 /* CarbonDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D0C4E910486CD37000505A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */,
+				834B1CAB0796115500E4BF6C /* Cocoa.framework in Frameworks */,
+				834B1CAD0796116300E4BF6C /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E970486CD37000505A6 /* CarbonDownloader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* CarbonDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = CarbonDownloader;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				834B1C98079610BD00E4BF6C /* CarbonURLDownload.h */,
+				834B1C99079610BD00E4BF6C /* CarbonURLDownload.mm */,
+				834B1C9A079610BD00E4BF6C /* DownloadWindow.cpp */,
+				834B1C9B079610BD00E4BF6C /* DownloadWindow.h */,
+				834B1C9C079610BD00E4BF6C /* main.mm */,
+				834B1C9D079610BD00E4BF6C /* RefCounted.cpp */,
+				834B1C9E079610BD00E4BF6C /* RefCounted.h */,
+				834B1C9F079610BD00E4BF6C /* UCarbonEvent.cpp */,
+				834B1CA0079610BD00E4BF6C /* UCarbonEvent.h */,
+				834B1CA1079610BD00E4BF6C /* URLRequest.h */,
+				834B1CA2079610BD00E4BF6C /* URLRequest.mm */,
+				32DBCF6D0370B57F00C91783 /* CarbonDownloader_Prefix.pch */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E960486CD37000505A6 /* Info.plist */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				834B1CAA0796115500E4BF6C /* Cocoa.framework */,
+				834B1CAC0796116300E4BF6C /* WebKit.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D0C4E890486CD37000505A6 /* CarbonDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 149C293D08902C52008A9EFC /* Build configuration list for PBXNativeTarget "CarbonDownloader" */;
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6 /* Resources */,
+				8D0C4E8F0486CD37000505A6 /* Sources */,
+				8D0C4E910486CD37000505A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CarbonDownloader_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = CarbonDownloader;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = CarbonDownloader;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CarbonDownloader;
+			productReference = 8D0C4E970486CD37000505A6 /* CarbonDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 149C294108902C52008A9EFC /* Build configuration list for PBXProject "CarbonDownloader" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* CarbonDownloader */;
+			projectDirPath = "";
+			targets = (
+				8D0C4E890486CD37000505A6 /* CarbonDownloader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D0C4E8C0486CD37000505A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */,
+				8D0C4E8E0486CD37000505A6 /* main.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D0C4E8F0486CD37000505A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834B1CA3079610BD00E4BF6C /* CarbonURLDownload.mm in Sources */,
+				834B1CA4079610BD00E4BF6C /* DownloadWindow.cpp in Sources */,
+				834B1CA5079610BD00E4BF6C /* main.mm in Sources */,
+				834B1CA6079610BD00E4BF6C /* RefCounted.cpp in Sources */,
+				834B1CA7079610BD00E4BF6C /* UCarbonEvent.cpp in Sources */,
+				834B1CA8079610BD00E4BF6C /* URLRequest.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		149C293E08902C52008A9EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CarbonDownloader_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = CarbonDownloader;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		149C293F08902C52008A9EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CarbonDownloader_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = CarbonDownloader;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		149C294208902C52008A9EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		149C294308902C52008A9EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		149C293D08902C52008A9EFC /* Build configuration list for PBXNativeTarget "CarbonDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149C293E08902C52008A9EFC /* Debug */,
+				149C293F08902C52008A9EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		149C294108902C52008A9EFC /* Build configuration list for PBXProject "CarbonDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149C294208902C52008A9EFC /* Debug */,
+				149C294308902C52008A9EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

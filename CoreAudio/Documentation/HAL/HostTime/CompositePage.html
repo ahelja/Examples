@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>HostTime</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">HostTime</font></h1><br>
+<h2>Discussion</h2>
+This collection of functions provides access to the host's time base. It also provides
+discriptive information about the time base and translations to and from nanoseconds.
+<hr><br><h2>Functions</h2>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioConvertHostTimeToNanos">AudioConvertHostTimeToNanos</a></h2>
+</td></tr></table><hr>Convert the given host time into a time in nanoseconds.
+
+<blockquote><pre><tt>extern UInt64 AudioConvertHostTimeToNanos (
+&nbsp;&nbsp;&nbsp;&nbsp;UInt64 inHostTime
+)                                                      AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inHostTime</em></tt></dt><dd>A UInt64 containing the host time to convert.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>A UInt64 containining the converted host time.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioConvertNanosToHostTime">AudioConvertNanosToHostTime</a></h2>
+</td></tr></table><hr>Convert the given nanosecond time into a host time.
+
+<blockquote><pre><tt>extern UInt64 AudioConvertNanosToHostTime (
+&nbsp;&nbsp;&nbsp;&nbsp;UInt64 inNanos
+)                                                         AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inNanos</em></tt></dt><dd>A UInt64 containing the nanosecond time to convert.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>A UInt64 containining the converted nanosecond time.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioGetCurrentHostTime">AudioGetCurrentHostTime</a></h2>
+</td></tr></table><hr>Gets the current host time.
+
+<blockquote><pre><tt>extern UInt64 AudioGetCurrentHostTime (void)                                                                           AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<dl><dt><i>function result</i></dt><dd>A UInt64 containing the current host time.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioGetHostClockFrequency">AudioGetHostClockFrequency</a></h2>
+</td></tr></table><hr>Gets the number of ticks per second in the host time base.
+
+<blockquote><pre><tt>extern Float64 AudioGetHostClockFrequency (void)                                                                        AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<dl><dt><i>function result</i></dt><dd>A Float64 containing the number of ticks per second in the host time base.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioGetHostClockMinimumTimeDelta">AudioGetHostClockMinimumTimeDelta</a></h2>
+</td></tr></table><hr>Gets the smallest number of ticks that two succeeding values will ever differ.
+by.
+
+<blockquote><pre><tt>extern UInt32 AudioGetHostClockMinimumTimeDelta (void)                                                                 AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<dl><dt><i>function result</i></dt><dd>A UInt32 containing the smallest number of ticks that two succeeding values will
+ever differ.
+</dd></dl>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

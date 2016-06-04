@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D15AC290486D014006FF6A4 /* Blot_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* Blot_Prefix.pch */; };
+		8D15AC2A0486D014006FF6A4 /* BlotDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A37F4AEFDCFA73011CA2CEA /* BlotDocument.h */; };
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		8D15AC2E0486D014006FF6A4 /* BlotDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* BlotDocument.nib */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC310486D014006FF6A4 /* BlotDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* BlotDocument.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		BE1A40D906CAC4E7005B28CF /* blot.icns in Resources */ = {isa = PBXBuildFile; fileRef = BE1A40D806CAC4E7005B28CF /* blot.icns */; };
+		BE487B9C05C86218002A6089 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE487B9B05C86218002A6089 /* WebKit.framework */; };
+		BE838B2F072F4FD600933F69 /* BlotPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = BE838B2D072F4FD600933F69 /* BlotPreferences.h */; };
+		BE838B30072F4FD600933F69 /* BlotPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BE838B2E072F4FD600933F69 /* BlotPreferences.m */; };
+		BE838B33072F4FE900933F69 /* BlotPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = BE838B31072F4FE900933F69 /* BlotPreferences.nib */; };
+		BE9E088E05B31811009CBB83 /* WebViewExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BE9E088C05B31811009CBB83 /* WebViewExtras.h */; };
+		BE9E088F05B31811009CBB83 /* WebViewExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E088D05B31811009CBB83 /* WebViewExtras.m */; };
+		BE9E08F105B31B2C009CBB83 /* default.html in Resources */ = {isa = PBXBuildFile; fileRef = BE9E08F005B31B2C009CBB83 /* default.html */; };
+		ED7E2BB905BC63D700C5E5D8 /* BlotApp.h in Headers */ = {isa = PBXBuildFile; fileRef = ED7E2BB705BC63D700C5E5D8 /* BlotApp.h */; };
+		ED7E2BBA05BC63D700C5E5D8 /* BlotApp.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E2BB805BC63D700C5E5D8 /* BlotApp.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504D0FFE6A4CB11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504D1FFE6A4CB11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* BlotDocument.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BlotDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* BlotDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BlotDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BlotDocument.nib; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		32DBCF750370BD2300C91783 /* Blot_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blot_Prefix.pch; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* Blot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1A40D806CAC4E7005B28CF /* blot.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = blot.icns; sourceTree = "<group>"; };
+		BE487B9B05C86218002A6089 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		BE838B2D072F4FD600933F69 /* BlotPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BlotPreferences.h; sourceTree = "<group>"; };
+		BE838B2E072F4FD600933F69 /* BlotPreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BlotPreferences.m; sourceTree = "<group>"; };
+		BE838B32072F4FE900933F69 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BlotPreferences.nib; sourceTree = "<group>"; };
+		BE9E088C05B31811009CBB83 /* WebViewExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewExtras.h; sourceTree = "<group>"; };
+		BE9E088D05B31811009CBB83 /* WebViewExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewExtras.m; sourceTree = "<group>"; };
+		BE9E08F005B31B2C009CBB83 /* default.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; name = default.html; path = Resources/default.html; sourceTree = "<group>"; };
+		ED7E2BB705BC63D700C5E5D8 /* BlotApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlotApp.h; sourceTree = "<group>"; };
+		ED7E2BB805BC63D700C5E5D8 /* BlotApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlotApp.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				BE487B9C05C86218002A6089 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* Blot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* Blot */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = Blot;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E2BB705BC63D700C5E5D8 /* BlotApp.h */,
+				ED7E2BB805BC63D700C5E5D8 /* BlotApp.m */,
+				2A37F4AEFDCFA73011CA2CEA /* BlotDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* BlotDocument.m */,
+				BE838B2D072F4FD600933F69 /* BlotPreferences.h */,
+				BE838B2E072F4FD600933F69 /* BlotPreferences.m */,
+				BE9E088C05B31811009CBB83 /* WebViewExtras.h */,
+				BE9E088D05B31811009CBB83 /* WebViewExtras.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* Blot_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE1A40D806CAC4E7005B28CF /* blot.icns */,
+				BE9E08F005B31B2C009CBB83 /* default.html */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				2A37F4B4FDCFA73011CA2CEA /* BlotDocument.nib */,
+				BE838B31072F4FE900933F69 /* BlotPreferences.nib */,
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				BE487B9B05C86218002A6089 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D15AC280486D014006FF6A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC290486D014006FF6A4 /* Blot_Prefix.pch in Headers */,
+				8D15AC2A0486D014006FF6A4 /* BlotDocument.h in Headers */,
+				BE9E088E05B31811009CBB83 /* WebViewExtras.h in Headers */,
+				ED7E2BB905BC63D700C5E5D8 /* BlotApp.h in Headers */,
+				BE838B2F072F4FD600933F69 /* BlotPreferences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* Blot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 149C293308902C52008A9EFC /* Build configuration list for PBXNativeTarget "Blot" */;
+			buildPhases = (
+				8D15AC280486D014006FF6A4 /* Headers */,
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(SYMROOTS)";
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Blot_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Blot;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-W",
+					"-Wcast-align",
+					"-Wchar-subscripts",
+					"-Wformat-security",
+					"-Wmissing-format-attribute",
+					"-Wmissing-prototypes",
+					"-Wpointer-arith",
+					"-Wwrite-strings",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = Blot;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Blot;
+			productReference = 8D15AC370486D014006FF6A4 /* Blot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 149C293708902C52008A9EFC /* Build configuration list for PBXProject "Blot" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504D0FFE6A4CB11CA0CBA /* Development */,
+				4A9504D1FFE6A4CB11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Blot */;
+			projectDirPath = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* Blot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
+				8D15AC2E0486D014006FF6A4 /* BlotDocument.nib in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				BE9E08F105B31B2C009CBB83 /* default.html in Resources */,
+				BE1A40D906CAC4E7005B28CF /* blot.icns in Resources */,
+				BE838B33072F4FE900933F69 /* BlotPreferences.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* BlotDocument.m in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				BE9E088F05B31811009CBB83 /* WebViewExtras.m in Sources */,
+				ED7E2BBA05BC63D700C5E5D8 /* BlotApp.m in Sources */,
+				BE838B30072F4FD600933F69 /* BlotPreferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* BlotDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = BlotDocument.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BE838B31072F4FE900933F69 /* BlotPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE838B32072F4FE900933F69 /* English */,
+			);
+			name = BlotPreferences.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		149C293508902C52008A9EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "$(SYMROOTS)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Blot_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Blot;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-W",
+					"-Wcast-align",
+					"-Wchar-subscripts",
+					"-Wformat-security",
+					"-Wmissing-format-attribute",
+					"-Wpointer-arith",
+					"-Wwrite-strings",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		149C293908902C52008A9EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		D0AA528A09006E5300E9E10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SYMROOTS)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Blot_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Blot;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-W",
+					"-Wcast-align",
+					"-Wchar-subscripts",
+					"-Wformat-security",
+					"-Wmissing-format-attribute",
+					"-Wpointer-arith",
+					"-Wwrite-strings",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		D0AA528B09006E5300E9E10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		149C293308902C52008A9EFC /* Build configuration list for PBXNativeTarget "Blot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA528A09006E5300E9E10B /* Debug */,
+				149C293508902C52008A9EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		149C293708902C52008A9EFC /* Build configuration list for PBXProject "Blot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA528B09006E5300E9E10B /* Debug */,
+				149C293908902C52008A9EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

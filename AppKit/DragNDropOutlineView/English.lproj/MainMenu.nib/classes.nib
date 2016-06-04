@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addGroup = id; 
+                addLeaf = id; 
+                deleteSelections = id; 
+                outlineViewAction = id; 
+                sortData = id; 
+                toggleVerticalBeginsDrag = id; 
+            }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                allowBetweenDropCheck = id; 
+                allowOnDropOnGroupCheck = id; 
+                allowOnDropOnLeafCheck = id; 
+                autoSortCheck = id; 
+                cleanUpAutoExpansionCheck = id; 
+                onlyAcceptDropOnRoot = id; 
+                outlineView = id; 
+                selectionOutput = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = CustomTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Structs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1>
+<br><hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFile_SMPTE_Time;  name=AudioFile_SMPTE_Time --><a name="//apple_ref/c/tag/AudioFile_SMPTE_Time"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_SMPTE_Time">AudioFile_SMPTE_Time</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A struct for describing a SMPTE time.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFile_SMPTE_Time" logicalPath="//apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/tdef/AudioFile_SMPTE_Time //apple_ref/c/tag/AudioFile_SMPTE_Time" target="_top"><font class="type">AudioFile_SMPTE_Time</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt8 //apple_ref/c/cl/SInt8 //apple_ref/c/tdef/SInt8 //apple_ref/c/tag/SInt8 //apple_ref/c/econst/SInt8 //apple_ref/c/struct/SInt8 //apple_ref/c/clconst/SInt8" --><font class="type">SInt8</font><!-- /a --> <font class="var">mHours</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">mMinutes</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">mSeconds</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">mFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mSubFrameSampleOffset</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mHours</code></dt>
+<dd>The hours.</dd>
+<dt><code>mMinutes</code></dt>
+<dd>The minutes.</dd>
+<dt><code>mSeconds</code></dt>
+<dd>The seconds.</dd>
+<dt><code>mFrames</code></dt>
+<dd>The frames.</dd>
+<dt><code>mSubFrameSampleOffset</code></dt>
+<dd>The sample offset within a frame.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFileMarker;  name=AudioFileMarker --><a name="//apple_ref/c/tag/AudioFileMarker"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileMarker">AudioFileMarker</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A marker annotates a position in an audio file with additional information.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarker" logicalPath="//apple_ref/c/cl/AudioFileMarker //apple_ref/c/cl/AudioFileMarker //apple_ref/c/tdef/AudioFileMarker //apple_ref/c/tag/AudioFileMarker" target="_top"><font class="type">AudioFileMarker</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/Float64 //apple_ref/c/cl/Float64 //apple_ref/c/tdef/Float64 //apple_ref/c/tag/Float64 //apple_ref/c/econst/Float64 //apple_ref/c/struct/Float64 //apple_ref/c/clconst/Float64" --><font class="type">Float64</font><!-- /a --> <font class="var">mFramePosition</font>;  
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">mName</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">mMarkerID</font>;  
+    <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFile_SMPTE_Time" logicalPath="//apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/tdef/AudioFile_SMPTE_Time //apple_ref/c/tag/AudioFile_SMPTE_Time" target="_top"><font class="type">AudioFile_SMPTE_Time</font></a> <font class="var">mSMPTETime</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">mReserved</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">mChannel</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mFramePosition</code></dt>
+<dd>The frame in the file counting from the start of the audio data.</dd>
+<dt><code>mName</code></dt>
+<dd>The name of this marker.</dd>
+<dt><code>mMarkerID</code></dt>
+<dd>A unique ID for this marker.</dd>
+<dt><code>mSMPTETime</code></dt>
+<dd>The SMPTE time for this marker.</dd>
+<dt><code>mType</code></dt>
+<dd>The marker type.</dd>
+<dt><code>mReserved</code></dt>
+<dd>A reserved field. Set to zero.</dd>
+<dt><code>mChannel</code></dt>
+<dd>The channel number that the marker refers to. Set to zero if marker applies to all channels.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(description)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFileMarkerList;  name=AudioFileMarkerList --><a name="//apple_ref/c/tag/AudioFileMarkerList"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileMarkerList">AudioFileMarkerList</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>(description)
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarkerList" logicalPath="//apple_ref/c/cl/AudioFileMarkerList //apple_ref/c/cl/AudioFileMarkerList //apple_ref/c/tdef/AudioFileMarkerList //apple_ref/c/tag/AudioFileMarkerList" target="_top"><font class="type">AudioFileMarkerList</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mSMPTE_TimeType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mNumberMarkers</font>; 
+    <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarker" logicalPath="//apple_ref/c/cl/AudioFileMarker //apple_ref/c/cl/AudioFileMarker //apple_ref/c/tdef/AudioFileMarker //apple_ref/c/tag/AudioFileMarker" target="_top"><font class="type">AudioFileMarker</font></a> <!-- a logicalPath="//apple_ref/c/cl/mMarkers //apple_ref/c/cl/mMarkers //apple_ref/c/tdef/mMarkers //apple_ref/c/tag/mMarkers //apple_ref/c/econst/mMarkers //apple_ref/c/struct/mMarkers //apple_ref/c/clconst/mMarkers" --><font class="type">mMarkers</font><!-- /a -->[<!-- a logicalPath="//apple_ref/c/cl/kVariableLengthArray //apple_ref/c/cl/kVariableLengthArray //apple_ref/c/tdef/kVariableLengthArray //apple_ref/c/tag/kVariableLengthArray //apple_ref/c/econst/kVariableLengthArray //apple_ref/c/struct/kVariableLengthArray //apple_ref/c/clconst/kVariableLengthArray" --><font class="type">kVariableLengthArray</font><!-- /a -->]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code></code></dt>
+<dd>(name) (description)</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(description)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFileRegion;  name=AudioFileRegion --><a name="//apple_ref/c/tag/AudioFileRegion"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileRegion">AudioFileRegion</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An AudioFileRegion specifies a segment of audio data.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegion" logicalPath="//apple_ref/c/cl/AudioFileRegion //apple_ref/c/cl/AudioFileRegion //apple_ref/c/tdef/AudioFileRegion //apple_ref/c/tag/AudioFileRegion" target="_top"><font class="type">AudioFileRegion</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mRegionID</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">mName</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mFlags</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mNumberMarkers</font>; 
+    <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarker" logicalPath="//apple_ref/c/cl/AudioFileMarker //apple_ref/c/cl/AudioFileMarker //apple_ref/c/tdef/AudioFileMarker //apple_ref/c/tag/AudioFileMarker" target="_top"><font class="type">AudioFileMarker</font></a> <!-- a logicalPath="//apple_ref/c/cl/mMarkers //apple_ref/c/cl/mMarkers //apple_ref/c/tdef/mMarkers //apple_ref/c/tag/mMarkers //apple_ref/c/econst/mMarkers //apple_ref/c/struct/mMarkers //apple_ref/c/clconst/mMarkers" --><font class="type">mMarkers</font><!-- /a -->[<!-- a logicalPath="//apple_ref/c/cl/kVariableLengthArray //apple_ref/c/cl/kVariableLengthArray //apple_ref/c/tdef/kVariableLengthArray //apple_ref/c/tag/kVariableLengthArray //apple_ref/c/econst/kVariableLengthArray //apple_ref/c/struct/kVariableLengthArray //apple_ref/c/clconst/kVariableLengthArray" --><font class="type">kVariableLengthArray</font><!-- /a -->]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mRegionID</code></dt>
+<dd>each region must have a unique ID.</dd>
+<dt><code>mName</code></dt>
+<dd>The name of the region.</dd>
+<dt><code>mFlags</code></dt>
+<dd>AudioFileRegionFlags.</dd>
+<dt><code>mNumberMarkers</code></dt>
+<dd>The number of markers in the mMarkers array.</dd>
+<dt><code>mMarkers</code></dt>
+<dd>A variable length array of AudioFileMarkers.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Generally a region consists of at least two markers marking the beginning and end of the segment.
+There may also be other markers defining other meta information such as sync point.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFileRegionList;  name=AudioFileRegionList --><a name="//apple_ref/c/tag/AudioFileRegionList"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileRegionList">AudioFileRegionList</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A list of the AudioFileRegions in a file.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegionList" logicalPath="//apple_ref/c/cl/AudioFileRegionList //apple_ref/c/cl/AudioFileRegionList //apple_ref/c/tdef/AudioFileRegionList //apple_ref/c/tag/AudioFileRegionList" target="_top"><font class="type">AudioFileRegionList</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mSMPTE_TimeType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mNumberRegions</font>; 
+    <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegion" logicalPath="//apple_ref/c/cl/AudioFileRegion //apple_ref/c/cl/AudioFileRegion //apple_ref/c/tdef/AudioFileRegion //apple_ref/c/tag/AudioFileRegion" target="_top"><font class="type">AudioFileRegion</font></a> <!-- a logicalPath="//apple_ref/c/cl/mRegions //apple_ref/c/cl/mRegions //apple_ref/c/tdef/mRegions //apple_ref/c/tag/mRegions //apple_ref/c/econst/mRegions //apple_ref/c/struct/mRegions //apple_ref/c/clconst/mRegions" --><font class="type">mRegions</font><!-- /a -->[<!-- a logicalPath="//apple_ref/c/cl/kVariableLengthArray //apple_ref/c/cl/kVariableLengthArray //apple_ref/c/tdef/kVariableLengthArray //apple_ref/c/tag/kVariableLengthArray //apple_ref/c/econst/kVariableLengthArray //apple_ref/c/struct/kVariableLengthArray //apple_ref/c/clconst/kVariableLengthArray" --><font class="type">kVariableLengthArray</font><!-- /a -->]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mSMPTE_TimeType</code></dt>
+<dd>This defines the SMPTE timing scheme used in the file. See CAFFile.h for the values used here.</dd>
+<dt><code>mNumberRegions</code></dt>
+<dd>The number of regions in the mRegions list.</dd>
+<dt><code>mRegions</code></dt>
+<dd>A list of AudioFileRegions. Note that AudioFileMarkers are variable length, so this list cannot 
+be accessed as an array. Use the NextAudioFileRegion macro for traversing the list instead.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This is the struct used by the kAudioFilePropertyRegionList property.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFramePacketTranslation;  name=AudioFramePacketTranslation --><a name="//apple_ref/c/tag/AudioFramePacketTranslation"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFramePacketTranslation">AudioFramePacketTranslation</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>used for properties kAudioFilePropertyPacketToFrame and kAudioFilePropertyFrameToPacket
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFramePacketTranslation" logicalPath="//apple_ref/c/cl/AudioFramePacketTranslation //apple_ref/c/cl/AudioFramePacketTranslation //apple_ref/c/tdef/AudioFramePacketTranslation //apple_ref/c/tag/AudioFramePacketTranslation" target="_top"><font class="type">AudioFramePacketTranslation</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="var">mFrame</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="var">mPacket</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mFrameOffsetInPacket</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mFrame</code></dt>
+<dd>a frame number.</dd>
+<dt><code>mPacket</code></dt>
+<dd>a packet number.</dd>
+<dt><code>mFrameOffsetInPacket</code></dt>
+<dd>a frame offset in a packet.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>See description of kAudioFilePropertyPacketToFrame and kAudioFilePropertyFrameToPacket
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFilePacketTableInfo;  name=AudioFilePacketTableInfo --><a name="//apple_ref/c/tag/AudioFilePacketTableInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFilePacketTableInfo">AudioFilePacketTableInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>This contains information about the number of valid frames in a file and where they begin and end.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFilePacketTableInfo" logicalPath="//apple_ref/c/cl/AudioFilePacketTableInfo //apple_ref/c/cl/AudioFilePacketTableInfo //apple_ref/c/tdef/AudioFilePacketTableInfo //apple_ref/c/tag/AudioFilePacketTableInfo" target="_top"><font class="type">AudioFilePacketTableInfo</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="var">mNumberValidFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">mPrimingFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">mRemainderFrames</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mNumberValidFrames</code></dt>
+<dd>the number of valid frames in the file.</dd>
+<dt><code>mPrimingFrames</code></dt>
+<dd>the number of invalid frames at the beginning of the file.</dd>
+<dt><code>mRemainderFrames</code></dt>
+<dd>the number of invalid frames at the end of the file.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Some data formats may have packets whose contents are not completely valid, but represent priming or remainder 
+frames that are not meant to be played. For example a file with 100 packets of AAC is nominally 1024 * 100 = 102400 frames
+of data. However the first 2112 frames of that may be priming frames and there may be some 
+number of remainder frames added to pad out to a full packet of 1024 frames. The priming and remainder frames should be 
+discarded. The total number of packets in the file times the frames per packet (or counting each packet's frames 
+individually for a variable frames per packet format) minus mPrimingFrames, minus mRemainderFrames, should 
+equal mNumberValidFrames.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioFileTypeAndFormatID;  name=AudioFileTypeAndFormatID --><a name="//apple_ref/c/tag/AudioFileTypeAndFormatID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileTypeAndFormatID">AudioFileTypeAndFormatID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>This is used as a specifier for kAudioFileGlobalInfo_AvailableStreamDescriptions
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileTypeAndFormatID" logicalPath="//apple_ref/c/cl/AudioFileTypeAndFormatID //apple_ref/c/cl/AudioFileTypeAndFormatID //apple_ref/c/tdef/AudioFileTypeAndFormatID //apple_ref/c/tag/AudioFileTypeAndFormatID" target="_top"><font class="type">AudioFileTypeAndFormatID</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="var">mFileType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mFormatID</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mFileType</code></dt>
+<dd>a four char code for the file type such as kAudioFileAIFFType, kAudioFileCAFType, etc.</dd>
+<dt><code>mFormatID</code></dt>
+<dd>a four char code for the format ID such as kAudioFormatLinearPCM, kAudioFormatMPEG4AAC, etc.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This struct is used to specify a desired audio file type and data format ID  so
+that a list of stream descriptions of available formats can be obtained.
+</p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

@@ -1,0 +1,372 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww19040\viewh16200\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs28 \cf0 Introduction\
+
+\f1\b0\fs24 \
+
+\f0\b\fs28 Usage of the Group and Part scopes\
+
+\f1\b0\fs24 \
+This document covers 2 main areas. The definition of how GroupScope should be used to both enable a distinction to be made between run-time modifications of a parameter's affect in the render process and a change that may be stored in the preset state of the AU, as well as the ability to present a scope and element in which multiple parts of a mutli-timbral synth can be assigned. \
+\
+A note on terminology - we use the term instrument and voice to describe essentially the same concept - a unique sound (or in the case of drum kits for example, a collection of "single-shot" sounds) that can be played with one or more notes on a given group (or MIDI Channel). Thus we call refer to synths that are mono-timbral as synths that are only capable of producing one voice or instrument sound at a time, and mulit-timbral synths as those capable of producing more than one simulataneous voice or instrument "sound".\
+\
+This proposal also introduces a new scope called Part Scope. It describes, given that definition, of how this can be used to implement multi-timbral synthesisers (including the ability to layer and split parts accross the same "control group" - MIDI Channel) The state of each part is expressed by its parameters (ie where the state of a voice or instrument is kept on an element in the part scope). It is necessary to establish at least a minimal relationship between parts and groups for these synths to work.\
+\
+The document concludes with a discussion of the Host responsibilities to deal correctly with Music Devices.\
+\
+\
+\
+
+\f0\b\fs28 Summary of main points:\
+
+\f1\b0\fs24 \
+
+\f0\b\fs28 Group Scope:\
+
+\f1\b0\fs24 	generally equivalent to the control semantics associated with MIDI Channels\
+	represents runtime modifications that are made during rendering\
+	is used to both start and stop notes\
+	is not persisted in the state of the AU\
+	elements can be sparsely populated (Implementation note: so the normal usage of IOElement classes in AUBase cannot be used)\
+	allows the distinction to be made between rendering time (ie. non-persistent) changes and changes potentially stored in the AU's state\
+	Further comments on group scope below	\
+	\
+
+\f0\b\fs28 Music Devices:\
+
+\fs24 	Mono-timbral\
+
+\f1\b0 		- uses a global AUPreset to store its state.\
+
+\f0\b 	Multi-timbral\
+
+\f1\b0 		2 approaches\
+		(1) Instrument\
+			eg. DLS Synth, where its state is not kept using AU Parameter (Preset) state\
+			supports the concept of MIDI Bank and Patch changes (as these are inherant in its data format for its instrument definitions)\
+			maps parameters in the group scope to run-time modification of a note's rendering\
+			Is required to support at least the nominal concept of groups\
+		(2) Part based\
+			uses a new scope kAudioUnitScope_Part to distinguish the parameters available to describe its voices\
+			The "Class Info" (AUPreset):\
+				AUPart is like AUPreset but it only applies to a single part (and is saved/restored on the part scope)\
+					- extension .aupart\
+					- defines an additional key in the CFDictionary "part", where the value is left unspecified (implementation specific)\
+				AUPreset is still applied on the Global scope and saves the entire state of the AU\
+					- (does NOT contain a first level "part" key)\
+			Is required to support at least the nominal concept of groups\
+			Parts are associated to a groupID that controls the runtime behaviour of each part				\
+				A Part can only be a member of one group\
+				A Group Scope element (groupID) can exerices control over multiple parts\
+\
+Aside from the definition of the new Part Scope, an additional property need sto be defined:\
+\
+kMusicDeviceProperty_PartGroup		 	value: AudioUnitElement\
+	The group that a particular part is assigned too.\
+	\
+	PropertyID: kMusicDeviceProperty_PartGroup,\
+	Scope: kAudioUnitScope_Part,\
+	Element: partID\
+	Value: AudioUnitElement that is the groupID (The Group Scope's Element) the part is (or should be) assigned to.\
+\
+This property has potentially some special usage considerations (that are similar to the way in which formats are set):\
+Firstly... a default mapping between part and groupID's will be provided by an implemenation (or by a particular Global Preset state).\
+(For instance a reasonable default would default partID's to the same groupID (thus part 0-group 0, part 1-group 1, etc...)\
+The Property is both read and write, but a full validation of it my require Initialization (ie. an AU may not know if it can satisfy a particular set of mapping between part and group ID's until all of these have been set... In this case, setting this property may not be possible with some AU's when they are initialized (so they return kAudioUnitErr_Initialized)...\
+\
+In that case, a typical scenario might be:\
+Uninitialize\
+Assign Parts to Groups\
+Initialize\
+\
+If the association of parts to groups is not valid, the AU will fail to initialize and the client should reset the relationships...\
+\
+This association may fail because the AU cannot assign more than one part to a group (ie. cannot do layering of parts to groups).\
+\
+One further thing to bare in mind is that the AU should not require particular groupIDs (Thus in the case above, the AU should not insist that the parts are associated with an equivalent groupID, but rather that each part is associated with an unique groupID).. Thus - the default might be (4 parts):\
+Part 0 - Group 0\
+Part 1 - Group 1\
+Part 2 - Group 2\
+Part 3 - Group 3\
+\
+But the following association would also be valid:\
+Part 0 - Group 0\
+Part 1 - Group 10\
+Part 2 - Group 5\
+Part 3 - Group 8\
+\
+\
+To allow the expression of the creation of Parts, the AU uses the kAudioUniProperty_ElementCount (same property ID as kAudioUnitProperty_BusCount). Thus, to determine how many individual parts an AU can support, this property is used. This property maybe writable or not, depending on the constraints of a particular implmentation.\
+\
+\
+\
+
+\f0\b\fs28 Group Scope Details\
+
+\f1\b0\fs24 \
+Using kAudioUntiScope_Group and Parameters\
+\
+Arguments passed to thes API calls are as follows\
+	AudioUnitScope				kAudioUnitScope_Group\
+	AudioUnitElement 			theGroupID (see below)\
+	AudioUnitParameter 			parameter ID\
+	Float32						value of the parameter to either get or set\
+\
+A typical usage for the Group Scope is to represent the "abstraction" of the controllers used in MIDI, where those controllers are somewhat loosely defined, and their usage is often customised on a synth by synth (or even patch by patch) basis. As such, the ID's within the group scope from 0 to 511 (ie the first 512 IDs) are reserved, and are expected to conform to the usage table (at the end of this document), based on the MIDI specification. The AudioUnitElement (theGroupID) above is equivalent in concept to a MIDI Channel. Thus, it is used to describe the particular group that the parameter value should be applied to. Additional, non-MIDI based parameters can be defined and published for usage by an AU where those parameter ID's are numbered from 512 and above.\
+\
+There will be published a list of minimal MIDI Controller support that is recommended for all AU's to support.\
+\
+An AU should publish the Parameter ID's (and ranges) that it responds to in the Group scope (as with any other parameters in other scopes)... With the mapping of group scoped parameters to MIDI controllers, etc, the host can use this list to determine what group-based parameters an AU can be sent directly.\
+\
+The MusicDeviceMIDIEvent API abstracts the parsing of MIDI messages to support both the group scope parameters, and the Start and Stop note API of the MusicDevice component.\
+\
+As described below, the MIDI Control messages are translated to AudioUnit Get/Set Parameter:\
+				AudioUnitParameterID		midiControllerID,\
+				AudioUnitScope				kAudioUnitScope_Group,\
+				AudioUnitElement			theGroupID,\
+				Float32						value,\
+				\
+Where:\
+inID is a translation of the MIDI message (inc. control, aftertouch, pitchbend, poly-pressure) as described in the table below\
+inElement is the MIDI Channel Number\
+inValue is a translation of the value associated with that particular MIDI message as described below\
+\
+Thus, for example, taking apart a MIDI Pitch Bend message would result in the following call(s) to an AU's parameter calls:\
+AudioUnitSetParameter (myAU, kPitchBendID, kAudioUnitScope_Group, myMIDIChannel, myNewPitchBendValue, bufferOffset);\
+\
+
+\f0\b Note On and Note Off MIDI messages\
+
+\f1\b0 \
+The functionality of generating notes is not supported for MusicEffects, only for MusicDevice types of AUs. \
+	- Note On - MIDI Commands 0x90-9F with non-zero velocity\
+	- Note Off - 0x90-9F status with a velocity of zero, or MIDI status 0x80-8F\
+\
+However, the note messages of MIDI (and their translation into Group Scope parameters), can be used in a number of different ways. For instance, some AU's in the market today use the MIDI note messages (and perhaps pitch bend) to:\
+(a) adjust the divisor parameter.  That parameter will then be changed to the value that makes the sound stutter at the rate of the note's pitch.\
+(b) dynamically adjust the "rate of playback" of audio that is being processed, so that its rate coincides with the pitch that would coincide with that MIDI note number (or its modification through pitch bend).\
+(c) A filter where the cut-off frequency is controlled by a MIDI note number\
+\
+For MusicDevices the note MIDI messages map:\
+MusicDeviceStartNote... Its argument list is:\
+			MusicDeviceInstrumentID			inInstrument,\
+			MusicDeviceGroupID 				inGroupID,				\
+			NoteInstanceID 					*outNoteInstanceID,			\
+			UInt32							inOffsetSampleFrame,\
+			const MusicDeviceNoteParams		*inParams\
+\
+Where:\
+inInstrument is set to the constant kMusicNoteEvent_UseGroupInstrument\
+	(in MIDI usage the Bank and Patch MIDI message establish the active or current patch on a MIDI Channel)\
+inGroupID is the channel number of the MIDI status\
+outNoteInstanceID is NULL (for noteID's that are integral, the Note Number is used to uniquely identify a note belonging to a group (see stop note)\
+inOffsetSampleFrame (is passed as specified in MusicDeviceMIDIEvent)\
+inParams - contains (in this order) 2 arguments:\
+	mPitch - the MIDI Note number\
+	mVelocity - the velocity associated with the MIDI Note On message\
+\
+The Note Off message maps to MusicDeviceStopNote... Its argument list is:\
+			MusicDeviceGroupID 			inGroupID,\
+			NoteInstanceID 				inNoteInstanceID,\
+			UInt32						inOffsetSampleFrame\
+\
+Where:\
+inGroupID is the MIDI channel number\
+inNoteInstanceID is the MIDI Note number\
+inOffsetSampleFrame (is passed as specified in MusicDeviceMIDIEvent)\
+\
+Internally, the Note Off message can be represented to also take a note-off velocity (so in the API MusicDeviceStopNote, the note-off velocity would have a default value of zero)\
+\
+
+\f0\b Persistence\
+
+\f1\b0 \
+The GroupID scope parameter values (and start and stop note states) are not persisted in the state of the AudioUnit in alignment with the semantics of the MIDI specification. As such, (and the groupID itself is just a UInt32), there is no requirement that groupID's be contiguous (as is true of all other elements within other scopes within an AU). It should be seen as a key to a map, where the value of the key is a paired list of the parameter ID and its value. The kAudioUnitScope_ElementCount (kAudioUnitScope_BusCount), is not expected to be supported or required for group scope (as group scope does not require a contiguous collection of elements as other scopes do).\
+\
+\
+
+\f0\b\fs28 Multitimbral MusicDevices and kAudioUnitScope_Part\
+
+\f1\b0\fs24 \
+MusicDevices are an AudioUnit that essentially adds the concept of notes that can be both started and stopped. Notes are controlled through the application of controllers in traditional MIDI synths...\
+\
+With software based synthesis, this concept has become more flexible... So, firstly, we should describe different approaches that are currently used to implement software synthesis within an AU context.\
+\
+\
+
+\f0\b "Mono-Timbral" Synths\
+
+\f1\b0 \
+Many AU's use the global preset state to completely express the voice or sound that notes will use - as such, these synth units do not support the production of notes using different instruments or voices at the same time.\
+\
+To express this characteristic, these synths return an instrument count of zero for kMusicDeviceProperty_InstrumentCount\
+\
+They will only provide support for an AUPreset in the global scope.\
+\
+These types of synths can still provide Group scope support for parameters that can alter the rendering (but not "preset") state of the synth. However, because they are mono-timbral, these synths would just ignore the groupID (they only are capable of producing one voice or instrument at a time)...\
+\
+\
+
+\f0\b "Multi-Timbral" Synths\
+
+\f1\b0 \
+There are two general types or implementations of multi-timbral synths.\
+\
+
+\f0\b (1) Instrument Based:\
+
+\f1\b0 The DLS Synth uses the concepts of instruments. Its state is not defined using the parameter mechanism of the AU, but is rather defined by the data contained with its current bank. These banks present an array of patches that are located using the bank-patch mechanism used by MIDI synths. Thus, when a sound bank is loaded into the DLS Synth, it can publish:\
+	(a) The number of instruments that it now has available\
+	(b) The names of those instruments\
+	(c) Each instruments instrumentID - where an instrument ID encodes both the MSB and LSB of the MIDI bank location, as well as the Patch numbers assigned to that instrument within that bank.\
+\
+This is a very natural way for the DLS Synth to publish its capabilities, and also for its use. It can be controlled through the full API of the MusicDevice (both with the MIDI event API or the group based parameter assignments). Thus, for all intents and purposes it can be used as any hardware MIDI synth is.\
+\
+The DLS Synth (and any other synth that uses this model) should report an instrument count > 0, based on the number of instruments it currently has at its disposal.. Then the host can retrieve the instrument numbers, to know what instruments are available at any given time. An instrument can thus be thought of as equivalent to a patch in a MIDI Synthesiser\
+\
+The AUPreset (global scope) still applies to these kinds of synths, as that can save both the current sound bank in use by the DLS Synth for example, as well as any parameter values (such as tuning or volume) that affect the entire rendering opertions of the synth.\
+\
+\
+
+\f0\b (2) Part Based:\
+
+\f1\b0 To extend the concept of the AUPreset mechanism that is used to implement the mono-timbral synth, we are proposing a new scope (Part scope), as well as an extended "part" based preset format.\
+\
+(a) kAudioUnitScope_Part\
+This is used to describe the particular state of a "voice" that is defined with parameter values. The element count expresses the total number of parts, or independent voices, that a synth is able to deal with at any given time.\
+\
+(b) AUPart Preset\
+The global state of an AU is saved using the CFDictionary semantics, with a set of known and required fields, as well as custom fields. These presets  can be saved as files, and furthermore saved in known locations on a user's disk, so that presets for a given AU can be seen across multiple host applications. The extension used for this is .aupreset\
+\
+The part scope of a synth represents essentially a complete parameter state, but that state is only applicable to the particular part element it is assigned too. Thus, there will be an extension to the general concept of the AUPreset to discriminate between the existing preset that describes the global state of an AU and a preset that describes the state of a particular part. All of the properties that deal with presets (factory or user) can also be applied to the part scope and the individual elements that exist with each part. The extension that is to be used by this kind of preset is .aupart\
+\
+For a part preset the CFDictionary will contain a key value pair, where the key is "part". The value is undefined, and can be used by the implementation to distinguish different types of parts\
+\
+A host can therefore both save and restore individual voices to the part scope's elements. Users can pass around their definitions of these voices to each other, and so forth.\
+\
+(c) Parameters\
+Part-Scope\
+A Part based AU will publish parameters on the part scope that are applicable to the way that it produces voices. It is expected that the different parts parameters are the same, and that all that distinguishes one "part" from another are the values of its parameters.\
+\
+Global-Scope\
+The global AUPreset of this kind of synth is expected to contain all of its current state in the global scope (including of course any parameters that are truly global to the AU), as well as the state of each of its current part. Thus, the meaning of the global AUPreset hasn't changed, it still describes the complete state of an AU that can be used to both save and restore that state.\
+\
+Group-Scope\
+These values are not persisted in either the AUPart or AUPreset dictionaries.\
+\
+(d) Relationship of Group and Part scopes.\
+Whether using a MIDI Note On message or the MusicDeviceStartNote API, an AU Part-based synth still needs to know which channel is going to use which voice when a note is started (regardless of whether the concept of group scoped parameter (or direct MIDI) control are supported or not). Thus, a simple mechanism is described for associating a part with a group which that part will essentially play on (see the PartGroup property).\
+\
+A Multi-timbral MIDI synth will generally present the user with a complex and desirable UI to allow for both the layering and splitting of different voices across the keyboard (in some cases this layering can also be done on velocity ranges as well), but still have those different voices triggered and controlled with the same MIDI channel. Thus, a Middle C note on, channel 1, can end up using two or three distinct / layered voices for a rich sound.\
+\
+This global or performance state of a multi-timbral synth is (as you would expect) controlled and specified through the GlobalScope. The AU (as some hardware synths do) may present a way to map particular group scoped parameters to affect the global state of the AU. As this "performance" (which can include other facets like output bus assignement for parts, etc) style of configuration can be potentially very complex and synth-dependent, the specification of these configurations are left to the individual AU.\
+\
+\
+
+\f0\b\fs28 How does this work with existing host apps?\
+
+\f1\b0\fs24 \
+I don't believe that host apps need to change a single line of code for this to work as is today - with a few provisos.\
+\
+Firstly, the UI of a Multitimbral synth, should present some means to associate its different parts to the groups that they will live in, within a given preset configuration. Once this relationship is made, the AU then knows how to parse the channel information in the MIDI Event API to the different parts. Whilst a host could certainly present some kind of "generic UI" for this (as the property is public), I think that is less ideal.\
+\
+The discussion about group scope is really a discussion I think, that should underly the main implementation semantics of an AU; in the way that the AU treats the group scope parameters. For us, this was implicit in the design and implementation of the DLS Synth, and we've had to examine those assumptions and formulate them for this discussion; overall a good thing I think.\
+\
+The provision of the MusicDeviceMIDIEvent provides an API that requires the AU to support the notion of being controlled, etc, through the MIDI protocol. As many host apps are based around MIDI, and thus talk to AU's using MIDI, the underlying mechanism between host and AU already exists.\
+\
+If the host app does *NOT* want to use MIDI at all, then the combination (which is actually more natural for the AU I think), of the Start/Stop note APIs and the group scope parameters should work. In fact it presents a more powerful and flexible means to do these "run-time" modifications as AU's can of course use the full parameter mechanism to publish parameters in the group scope beyond the MIDI range.\
+\
+I think the only problem, as Urs alluded to, is whether the hosts will actually send more than one MIDI channel (one groupID element) to an AU. For those hosts that currently do not do this, the decision about whether they should do this is straightforward (though the UI may not be!), and is probably worth alluding to here again:\
+\
+if kMusicDeviceProperty_InstrumentCount > 0\
+	you have a multi-timbral device\
+if kAudioUnitProperty_PartGroup is implemented\
+	AND kAudioUnitProprety_ElementCount for PartScope is implemented\
+		you have a multi-timbral device\
+else\
+	you have a mono-timbral device\
+\
+(The subtle implication here is that mono-timbral synths should NOT implement their synths on part scope or implement the PartScope property, but should continue to do what they do today - implement their synth state in the global scope)\
+\
+A mono-timbral synth (or any MusicEffect for that matter) can of course provide (and arguably should) some handling of MIDI controllers, and publish that capability of course through group scope based parameters.\
+\
+\
+\
+
+\f0\b\fs28 Appendix A\
+
+\f1\b0\fs24 \
+Group Parameter ID's to MIDI Translation table:\
+\
+First here is the translation table for the MIDI messages to group scope:\
+	(There will be list published of the recommended MIDI controllers that should be supported)\
+\
+ParameterIDs: 0 -127\
+	These map to the first Data Byte of a MIDI Control Change message, where that data byte is used to signifiy the controller ID.\
+	For those controllers that are divided into MSB and LSB MIDI controllers (control range MSB 1-31), the value range can include non-integer values where the LSB is encoded in the fractional part of the number. The LSB controller 33-63 should also be supported as an LSB value of range 0-127\
+	When retrieving a parameter value using these MSB ID's the full value (including the LSB fractional part) should be returned.\
+	Bank select (MSB - 0, LSB 32), should be treated as two separate parameter IDs\
+\
+ParameterIDs 128-159 (0x80-0x9F)\
+	Reserved - not used\
+		This is the status byte for MIDI Note off and on messages\
+\
+ParameterID: 160 (0xA0)\
+		IDs 0xA1-AF are redundant\
+	Publish this to say you support polyphonic key pressure\
+	Poly Key pressure represents 2 controller values - (1) the key value, (2) the value of the control for that key\
+	The Key values pairs actualy values are to be get or set in the following parameter range\
+		ParameterID: 256-383\
+		Thus to set/get the value of Poly Key pressure add 256 to the MIDI key value - this becomes the parameter ID\
+		Value is 0-127\
+\
+ParameterID: 176-191 (0xB0-0xBF)\
+	Reserved - not used\
+		This is the status byte for MIDI Control Channel messages\
+\
+ParameterID: 192 (0xC0)\
+	This is the patch change control. IDs 0xC1-CF are redundant\
+	The value range is 0-127 - with bank select can tie into the instrument model of some MusicDevices\
+\
+ParameterID: 208 (0xD0)\
+	This is the after-touch (or MIDI ChannelPressure) control.. IDs 0xD1-0xDF are redundant\
+	The value range is 0-127\
+\
+ParameterID: 224 (0xE0)\
+	This is the pitch bend control. IDs 0xE1-EF are redundant\
+	The value range is -8192-8191, where zero means no pitch bend.\
+\
+ParameterID: 240-255 (0xF0-FF)\
+	Reserved - not used\
+		This is the status byte for MIDI System messages\
+\
+\
+
+\f0\b\fs28 Appendix B\
+
+\f1\b0\fs24 \
+The following MIDI controllers represent a recommended list of controllers that are in common use, and support for each of these should be considered by both MusicDevice (in particular) as well as Music Effect AU's.\
+\
+Volume\
+Sustain\
+AllNotesOff\
+Mod Wheel\
+Pitch Bend\
+\
+AllSoundOff\
+ResetAllControllers\
+Pan\
+\
+Foot Controller\
+After Touch\
+Polyphonic Pressure\
+\
+Expression\
+Data Entry\
+\
+The RPN and NRPN support for setting pitch bend range and tuning is also highly desirable (thus the inclusion of the Data Entry controller)}

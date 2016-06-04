@@ -1,0 +1,38 @@
+{
+    IBClasses = (
+        {
+            CLASS = CanvasDoc; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {canvas = CanvasView; objectController = NSArrayController; }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {
+            CLASS = CanvasDocBorderView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {scrollView = CanvasZoomingScrollView; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = CanvasToolbarController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {canvas = CanvasView; window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {addNewObject = id; }; 
+            CLASS = CanvasView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {document = CanvasDoc; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = CanvasZoomingScrollView; LANGUAGE = ObjC; SUPERCLASS = NSScrollView; }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+    ); 
+    IBVersion = 1; 
+}

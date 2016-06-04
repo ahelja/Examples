@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Structs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1>
+<br><hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIPacket;  name=MIDIPacket --><a name="//apple_ref/c/tag/MIDIPacket"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPacket">MIDIPacket</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A collection of simultaneous MIDI events.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> { 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDITimeStamp" logicalPath="//apple_ref/c/cl/MIDITimeStamp //apple_ref/c/cl/MIDITimeStamp //apple_ref/c/tdef/MIDITimeStamp" target="_top"><font class="type">MIDITimeStamp</font></a> <font class="var">timeStamp</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">length</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/Byte //apple_ref/c/cl/Byte //apple_ref/c/tdef/Byte //apple_ref/c/tag/Byte //apple_ref/c/econst/Byte //apple_ref/c/struct/Byte //apple_ref/c/clconst/Byte" --><font class="type">Byte</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/cl/data //apple_ref/c/cl/data //apple_ref/c/tdef/data //apple_ref/c/tag/data //apple_ref/c/econst/data //apple_ref/c/struct/data //apple_ref/c/clconst/data" --><font class="type">data</font><!-- /a -->[<font class="number">256</font>]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>timeStamp</code></dt>
+<dd>The time at which the events occurred, if receiving MIDI,
+or, if sending MIDI, the time at which the events are to
+be played.  Zero means "now."  The time stamp applies
+to the first MIDI byte in the packet.</dd>
+<dt><code>length</code></dt>
+<dd>The number of valid MIDI bytes which follow, in data. (It
+may be larger than 256 bytes if the packet is dynamically
+allocated.)</dd>
+<dt><code>data</code></dt>
+<dd>A variable-length stream of MIDI messages.  Running status
+is not allowed.  In the case of system-exclusive
+messages, a packet may only contain a single message, or
+portion of one, with no other MIDI events.
+<br><br>
+The MIDI messages in the packet must always be complete,
+except for system-exclusive.
+<br><br>
+(This is declared to be 256 bytes in length so clients
+don't have to create custom data structures in simple
+situations.)</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIPacketList;  name=MIDIPacketList --><a name="//apple_ref/c/tag/MIDIPacketList"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPacketList">MIDIPacketList</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A list of MIDI events being received from, or being sent to,
+one endpoint.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">numPackets</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> <!-- a logicalPath="//apple_ref/c/cl/packet //apple_ref/c/cl/packet //apple_ref/c/tdef/packet //apple_ref/c/tag/packet //apple_ref/c/econst/packet //apple_ref/c/struct/packet //apple_ref/c/clconst/packet" --><font class="type">packet</font><!-- /a -->[<font class="number">1</font>]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>numPackets</code></dt>
+<dd>The number of MIDIPackets in the list.</dd>
+<dt><code>packet</code></dt>
+<dd>An open-ended array of variable-length MIDIPackets.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The timestamps in the packet list must be in ascending order.
+<br><br>
+Note that the packets in the list, while defined as an array, may not be
+accessed as an array, since they are variable-length.  To iterate through
+the packets in a packet list, use a loop such as:
+</p>
+<pre>
+MIDIPacket *packet = &amp;packetList-&gt;packet[0];
+  for (int i = 0; i &lt; packetList-&gt;numPackets; ++i) {
+    ...
+    packet = MIDIPacketNext(packet);
+  }<br></pre>
+<br><br>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDISysexSendRequest;  name=MIDISysexSendRequest --><a name="//apple_ref/c/tag/MIDISysexSendRequest"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISysexSendRequest">MIDISysexSendRequest</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A request to transmit a system-exclusive event.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDISysexSendRequest" logicalPath="//apple_ref/c/cl/MIDISysexSendRequest //apple_ref/c/cl/MIDISysexSendRequest //apple_ref/c/tdef/MIDISysexSendRequest //apple_ref/c/tag/MIDISysexSendRequest" target="_top"><font class="type">MIDISysexSendRequest</font></a> { 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="var">destination</font>; 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/Byte //apple_ref/c/cl/Byte //apple_ref/c/tdef/Byte //apple_ref/c/tag/Byte //apple_ref/c/econst/Byte //apple_ref/c/struct/Byte //apple_ref/c/clconst/Byte" --><font class="type">Byte</font><!-- /a --> *<font class="var">data</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">bytesToSend</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="var">complete</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/Byte //apple_ref/c/cl/Byte //apple_ref/c/tdef/Byte //apple_ref/c/tag/Byte //apple_ref/c/econst/Byte //apple_ref/c/struct/Byte //apple_ref/c/clconst/Byte" --><font class="type">Byte</font><!-- /a --> <!-- a logicalPath="//apple_ref/c/cl/reserved //apple_ref/c/cl/reserved //apple_ref/c/tdef/reserved //apple_ref/c/tag/reserved //apple_ref/c/econst/reserved //apple_ref/c/struct/reserved //apple_ref/c/clconst/reserved" --><font class="type">reserved</font><!-- /a -->[<font class="number">3</font>]; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDICompletionProc" logicalPath="//apple_ref/c/cl/MIDICompletionProc //apple_ref/c/cl/MIDICompletionProc //apple_ref/c/tdef/MIDICompletionProc" target="_top"><font class="type">MIDICompletionProc</font></a> <font class="var">completionProc</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="var">completionRefCon</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>destination</code></dt>
+<dd>The endpoint to which the event is to be sent.</dd>
+<dt><code>data</code></dt>
+<dd>Initially, a pointer to the sys-ex event to be sent.
+MIDISendSysex will advance this pointer as bytes are
+sent.</dd>
+<dt><code>bytesToSend</code></dt>
+<dd>Initially, the number of bytes to be sent.  MIDISendSysex
+will decrement this counter as bytes are sent.</dd>
+<dt><code>complete</code></dt>
+<dd>The client may set this to true at any time to abort
+transmission.  The implementation sets this to true when
+all bytes have been sent.</dd>
+<dt><code>completionProc</code></dt>
+<dd>Called when all bytes have been sent, or after the client
+has set complete to true.</dd>
+<dt><code>completionRefCon</code></dt>
+<dd>Passed as a refCon to completionProc.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This represents a request to send a single system-exclusive MIDI event to
+a MIDI destination asynchronously.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDINotification;  name=MIDINotification --><a name="//apple_ref/c/tag/MIDINotification"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDINotification">MIDINotification</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A message describing a system state change.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDINotification" logicalPath="//apple_ref/c/cl/MIDINotification //apple_ref/c/cl/MIDINotification //apple_ref/c/tdef/MIDINotification //apple_ref/c/tag/MIDINotification" target="_top"><font class="type">MIDINotification</font></a> { 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDINotificationMessageID" logicalPath="//apple_ref/c/cl/MIDINotificationMessageID //apple_ref/c/cl/MIDINotificationMessageID //apple_ref/c/tdef/MIDINotificationMessageID //apple_ref/c/tag/MIDINotificationMessageID" target="_top"><font class="type">MIDINotificationMessageID</font></a> <font class="var">messageID</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="var">messageSize</font>; 
+    <font class="comment">// additional data may follow, depending on messageID</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>messageID</code></dt>
+<dd>type of message</dd>
+<dt><code>messageSize</code></dt>
+<dd>size of the entire message, including messageID and
+messageSize</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A MIDINotification is a structure passed to a MIDINotifyProc, when CoreMIDI wishes to
+inform a client of a change in the state of the system.
+<br><br></p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIObjectAddRemoveNotification;  name=MIDIObjectAddRemoveNotification --><a name="//apple_ref/c/tag/MIDIObjectAddRemoveNotification"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectAddRemoveNotification">MIDIObjectAddRemoveNotification</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A message describing the addition or removal of an object.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIObjectAddRemoveNotification" logicalPath="//apple_ref/c/cl/MIDIObjectAddRemoveNotification //apple_ref/c/cl/MIDIObjectAddRemoveNotification //apple_ref/c/tdef/MIDIObjectAddRemoveNotification //apple_ref/c/tag/MIDIObjectAddRemoveNotification" target="_top"><font class="type">MIDIObjectAddRemoveNotification</font></a> { 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDINotificationMessageID" logicalPath="//apple_ref/c/cl/MIDINotificationMessageID //apple_ref/c/cl/MIDINotificationMessageID //apple_ref/c/tdef/MIDINotificationMessageID //apple_ref/c/tag/MIDINotificationMessageID" target="_top"><font class="type">MIDINotificationMessageID</font></a> <font class="var">messageID</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="var">messageSize</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="var">parent</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDIObjectType" logicalPath="//apple_ref/c/cl/MIDIObjectType //apple_ref/c/cl/MIDIObjectType //apple_ref/c/tdef/MIDIObjectType //apple_ref/c/tag/MIDIObjectType" target="_top"><font class="type">MIDIObjectType</font></a> <font class="var">parentType</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="var">child</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDIObjectType" logicalPath="//apple_ref/c/cl/MIDIObjectType //apple_ref/c/cl/MIDIObjectType //apple_ref/c/tdef/MIDIObjectType //apple_ref/c/tag/MIDIObjectType" target="_top"><font class="type">MIDIObjectType</font></a> <font class="var">childType</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>messageID</code></dt>
+<dd>type of message</dd>
+<dt><code>messageSize</code></dt>
+<dd>size of the entire message, including messageID and messageSize</dd>
+<dt><code>parent</code></dt>
+<dd>the parent of the added or removed object (possibly NULL)</dd>
+<dt><code>parentType</code></dt>
+<dd>the type of the parent object (undefined if parent is NULL)</dd>
+<dt><code>child</code></dt>
+<dd>the added or removed object</dd>
+<dt><code>childType</code></dt>
+<dd>the type of the added or removed object</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/MIDIObjectPropertyChangeNotification;  name=MIDIObjectPropertyChangeNotification --><a name="//apple_ref/c/tag/MIDIObjectPropertyChangeNotification"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectPropertyChangeNotification">MIDIObjectPropertyChangeNotification</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A message describing the addition or removal of an object.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIObjectPropertyChangeNotification" logicalPath="//apple_ref/c/cl/MIDIObjectPropertyChangeNotification //apple_ref/c/cl/MIDIObjectPropertyChangeNotification //apple_ref/c/tdef/MIDIObjectPropertyChangeNotification //apple_ref/c/tag/MIDIObjectPropertyChangeNotification" target="_top"><font class="type">MIDIObjectPropertyChangeNotification</font></a> { 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDINotificationMessageID" logicalPath="//apple_ref/c/cl/MIDINotificationMessageID //apple_ref/c/cl/MIDINotificationMessageID //apple_ref/c/tdef/MIDINotificationMessageID //apple_ref/c/tag/MIDINotificationMessageID" target="_top"><font class="type">MIDINotificationMessageID</font></a> <font class="var">messageID</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="var">messageSize</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="var">object</font>; 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDIObjectType" logicalPath="//apple_ref/c/cl/MIDIObjectType //apple_ref/c/cl/MIDIObjectType //apple_ref/c/tdef/MIDIObjectType //apple_ref/c/tag/MIDIObjectType" target="_top"><font class="type">MIDIObjectType</font></a> <font class="var">objectType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">propertyName</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>messageID</code></dt>
+<dd>type of message</dd>
+<dt><code>messageSize</code></dt>
+<dd>size of the entire message, including messageID and messageSize</dd>
+<dt><code>object</code></dt>
+<dd>the object whose property has changed</dd>
+<dt><code>objectType</code></dt>
+<dd>the type of the object whose property has changed</dd>
+<dt><code>propertyName</code></dt>
+<dd>the name of the changed property</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

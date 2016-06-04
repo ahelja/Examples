@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F94EED907B3091200AE9F13 /* HITestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6057981302F080390BCA0CB8 /* HITestView.h */; };
+		4F94EEDA07B3091200AE9F13 /* TTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6001B38E02F743010BCA0CB8 /* TTestView.h */; };
+		4F94EEDB07B3091200AE9F13 /* TCarbonEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 60B8C02302F9E9330BCA0CB8 /* TCarbonEvent.h */; };
+		4F94EEDC07B3091200AE9F13 /* TView.h in Headers */ = {isa = PBXBuildFile; fileRef = 60B8C02502F9E9330BCA0CB8 /* TView.h */; };
+		4F94EEDD07B3091200AE9F13 /* TRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 6022E119030632A10B6E4D1F /* TRect.h */; };
+		4F94EEDE07B3091200AE9F13 /* TObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6029BEC403F9CF420BFF4F4D /* TObject.h */; };
+		4F94EEDF07B3091200AE9F13 /* HIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 332477AD0690C83200AAEC61 /* HIFramework.h */; };
+		4F94EEE007B3091200AE9F13 /* TEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 332477AF0690C83200AAEC61 /* TEventHandler.h */; };
+		4F94EEE207B3091200AE9F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		4F94EEE307B3091200AE9F13 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 60338D3A034E58CA0BCA0CB8 /* README.rtf */; };
+		4F94EEE407B3091200AE9F13 /* menubar.nib in Resources */ = {isa = PBXBuildFile; fileRef = 93E122CF04CF25D1003F0342 /* menubar.nib */; };
+		4F94EEE507B3091200AE9F13 /* window.nib in Resources */ = {isa = PBXBuildFile; fileRef = 93E122D104CF25D1003F0342 /* window.nib */; };
+		4F94EEE707B3091200AE9F13 /* HITestView.c in Sources */ = {isa = PBXBuildFile; fileRef = 6057981402F080390BCA0CB8 /* HITestView.c */; };
+		4F94EEE807B3091200AE9F13 /* TTestView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6001B38C02F742E80BCA0CB8 /* TTestView.cp */; };
+		4F94EEE907B3091200AE9F13 /* main.cp in Sources */ = {isa = PBXBuildFile; fileRef = 608F71A302F7582E0BCA0CB8 /* main.cp */; };
+		4F94EEEA07B3091200AE9F13 /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = 60B8C02202F9E9330BCA0CB8 /* TCarbonEvent.cp */; };
+		4F94EEEB07B3091200AE9F13 /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 60B8C02402F9E9330BCA0CB8 /* TView.cp */; };
+		4F94EEEC07B3091200AE9F13 /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6022E118030632A10B6E4D1F /* TRect.cp */; };
+		4F94EEED07B3091200AE9F13 /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6029BEC303F9CF420BFF4F4D /* TObject.cp */; };
+		4F94EEEE07B3091200AE9F13 /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 332477AE0690C83200AAEC61 /* TEventHandler.cp */; };
+		4F94EEF007B3091200AE9F13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DDEBUG";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		332477AD0690C83200AAEC61 /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HIFramework.h; path = ../HIFramework/HIFramework.h; sourceTree = SOURCE_ROOT; };
+		332477AE0690C83200AAEC61 /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TEventHandler.cp; path = ../HIFramework/TEventHandler.cp; sourceTree = SOURCE_ROOT; };
+		332477AF0690C83200AAEC61 /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TEventHandler.h; path = ../HIFramework/TEventHandler.h; sourceTree = SOURCE_ROOT; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4F94EEF207B3091200AE9F13 /* Info-HIViewTest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-HIViewTest.plist"; sourceTree = "<group>"; };
+		4F94EEF307B3091200AE9F13 /* HIViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6001B38C02F742E80BCA0CB8 /* TTestView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TTestView.cp; sourceTree = "<group>"; };
+		6001B38E02F743010BCA0CB8 /* TTestView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TTestView.h; sourceTree = "<group>"; };
+		6022E118030632A10B6E4D1F /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TRect.cp; path = ../HIFramework/TRect.cp; sourceTree = SOURCE_ROOT; };
+		6022E119030632A10B6E4D1F /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TRect.h; path = ../HIFramework/TRect.h; sourceTree = SOURCE_ROOT; };
+		6029BEC303F9CF420BFF4F4D /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TObject.cp; path = ../HIFramework/TObject.cp; sourceTree = SOURCE_ROOT; };
+		6029BEC403F9CF420BFF4F4D /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TObject.h; path = ../HIFramework/TObject.h; sourceTree = SOURCE_ROOT; };
+		60338D3A034E58CA0BCA0CB8 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		6057981302F080390BCA0CB8 /* HITestView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HITestView.h; sourceTree = "<group>"; };
+		6057981402F080390BCA0CB8 /* HITestView.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HITestView.c; sourceTree = "<group>"; };
+		608F71A302F7582E0BCA0CB8 /* main.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cp; sourceTree = "<group>"; };
+		60B8C02202F9E9330BCA0CB8 /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCarbonEvent.cp; path = ../HIFramework/TCarbonEvent.cp; sourceTree = SOURCE_ROOT; };
+		60B8C02302F9E9330BCA0CB8 /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCarbonEvent.h; path = ../HIFramework/TCarbonEvent.h; sourceTree = SOURCE_ROOT; };
+		60B8C02402F9E9330BCA0CB8 /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TView.cp; path = ../HIFramework/TView.cp; sourceTree = SOURCE_ROOT; };
+		60B8C02502F9E9330BCA0CB8 /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TView.h; path = ../HIFramework/TView.h; sourceTree = SOURCE_ROOT; };
+		93E122D004CF25D1003F0342 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/menubar.nib; sourceTree = "<group>"; };
+		93E122D204CF25D1003F0342 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/window.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F94EEEF07B3091200AE9F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEF007B3091200AE9F13 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F94EEF307B3091200AE9F13 /* HIViewTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* HIViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				60338D3A034E58CA0BCA0CB8 /* README.rtf */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+				60876CDA0301D24D0BCA0CB8 /* HIFramework */,
+				4F94EEF207B3091200AE9F13 /* Info-HIViewTest.plist */,
+			);
+			name = HIViewTest;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				608F71A302F7582E0BCA0CB8 /* main.cp */,
+				6057981402F080390BCA0CB8 /* HITestView.c */,
+				6001B38C02F742E80BCA0CB8 /* TTestView.cp */,
+				6001B38702F741C10BCA0CB8 /* Headers */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93E122CF04CF25D1003F0342 /* menubar.nib */,
+				93E122D104CF25D1003F0342 /* window.nib */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		6001B38702F741C10BCA0CB8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6057981302F080390BCA0CB8 /* HITestView.h */,
+				6001B38E02F743010BCA0CB8 /* TTestView.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		60876CDA0301D24D0BCA0CB8 /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				332477AD0690C83200AAEC61 /* HIFramework.h */,
+				60B8C02202F9E9330BCA0CB8 /* TCarbonEvent.cp */,
+				60B8C02302F9E9330BCA0CB8 /* TCarbonEvent.h */,
+				332477AE0690C83200AAEC61 /* TEventHandler.cp */,
+				332477AF0690C83200AAEC61 /* TEventHandler.h */,
+				6029BEC303F9CF420BFF4F4D /* TObject.cp */,
+				6029BEC403F9CF420BFF4F4D /* TObject.h */,
+				6022E118030632A10B6E4D1F /* TRect.cp */,
+				6022E119030632A10B6E4D1F /* TRect.h */,
+				60B8C02402F9E9330BCA0CB8 /* TView.cp */,
+				60B8C02502F9E9330BCA0CB8 /* TView.h */,
+			);
+			name = HIFramework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F94EED807B3091200AE9F13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EED907B3091200AE9F13 /* HITestView.h in Headers */,
+				4F94EEDA07B3091200AE9F13 /* TTestView.h in Headers */,
+				4F94EEDB07B3091200AE9F13 /* TCarbonEvent.h in Headers */,
+				4F94EEDC07B3091200AE9F13 /* TView.h in Headers */,
+				4F94EEDD07B3091200AE9F13 /* TRect.h in Headers */,
+				4F94EEDE07B3091200AE9F13 /* TObject.h in Headers */,
+				4F94EEDF07B3091200AE9F13 /* HIFramework.h in Headers */,
+				4F94EEE007B3091200AE9F13 /* TEventHandler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F94EED707B3091200AE9F13 /* HIViewTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F2B04F908A0271B0055E173 /* Build configuration list for PBXNativeTarget "HIViewTest" */;
+			buildPhases = (
+				4F94EED807B3091200AE9F13 /* Headers */,
+				4F94EEE107B3091200AE9F13 /* Resources */,
+				4F94EEE607B3091200AE9F13 /* Sources */,
+				4F94EEEF07B3091200AE9F13 /* Frameworks */,
+				4F94EEF107B3091200AE9F13 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-HIViewTest.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = HIViewTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = HIViewTest;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = HIViewTest;
+			productReference = 4F94EEF307B3091200AE9F13 /* HIViewTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F2B04FD08A0271B0055E173 /* Build configuration list for PBXProject "HIViewTest" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* HIViewTest */;
+			projectDirPath = "";
+			targets = (
+				4F94EED707B3091200AE9F13 /* HIViewTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F94EEE107B3091200AE9F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEE207B3091200AE9F13 /* InfoPlist.strings in Resources */,
+				4F94EEE307B3091200AE9F13 /* README.rtf in Resources */,
+				4F94EEE407B3091200AE9F13 /* menubar.nib in Resources */,
+				4F94EEE507B3091200AE9F13 /* window.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4F94EEF107B3091200AE9F13 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F94EEE607B3091200AE9F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEE707B3091200AE9F13 /* HITestView.c in Sources */,
+				4F94EEE807B3091200AE9F13 /* TTestView.cp in Sources */,
+				4F94EEE907B3091200AE9F13 /* main.cp in Sources */,
+				4F94EEEA07B3091200AE9F13 /* TCarbonEvent.cp in Sources */,
+				4F94EEEB07B3091200AE9F13 /* TView.cp in Sources */,
+				4F94EEEC07B3091200AE9F13 /* TRect.cp in Sources */,
+				4F94EEED07B3091200AE9F13 /* TObject.cp in Sources */,
+				4F94EEEE07B3091200AE9F13 /* TEventHandler.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93E122CF04CF25D1003F0342 /* menubar.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93E122D004CF25D1003F0342 /* English */,
+			);
+			name = menubar.nib;
+			sourceTree = "<group>";
+		};
+		93E122D104CF25D1003F0342 /* window.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93E122D204CF25D1003F0342 /* English */,
+			);
+			name = window.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F2B04FA08A0271B0055E173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-HIViewTest.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = HIViewTest;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F2B04FB08A0271B0055E173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-HIViewTest.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = HIViewTest;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F2B04FE08A0271B0055E173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F2B04FF08A0271B0055E173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F2B04F908A0271B0055E173 /* Build configuration list for PBXNativeTarget "HIViewTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F2B04FA08A0271B0055E173 /* Debug */,
+				4F2B04FB08A0271B0055E173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F2B04FD08A0271B0055E173 /* Build configuration list for PBXProject "HIViewTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F2B04FE08A0271B0055E173 /* Debug */,
+				4F2B04FF08A0271B0055E173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

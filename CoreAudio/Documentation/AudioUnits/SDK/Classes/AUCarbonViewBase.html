@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUCarbonViewBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUCarbonViewBase</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "ComponentBase_fs.html" target="_top">ComponentBase</a>, <a href = "CarbonEventHandler_fs.html" target="_top">CarbonEventHandler</a><br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUCarbonViewBase<br>
+<br><pre>class AUCarbonViewBase : public ComponentBase, public CarbonEventHandler </pre>
+<p></p><hr>
+<h2>Methods</h2>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUCarbonViewBase">~AUCarbonViewBase</a></h4>
+</td><td width="50%">
+<h4>public virtual destructor</h4>
+</td></tr></table>
+<br><pre> virtual ~AUCarbonViewBase();</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUCarbonViewBase">AUCarbonViewBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUCarbonViewBase (
+          AudioUnitCarbonView             inInstance,
+          Float32 inNotificationInterval=kDefaultNotificationInterval /* in seconds* /
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AddCarbonControl">AddCarbonControl</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void AddCarbonControl (
+          AUCarbonViewControl::ControlType type,
+          const CAAUParameter&            param,
+          ControlRef                      control
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AddControl">AddControl</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void AddControl (AUCarbonViewControl *control);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ClearControls">ClearControls</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void ClearControls ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ComponentEntryDispatch">ComponentEntryDispatch</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static ComponentResult ComponentEntryDispatch (
+          ComponentParameters*            params,
+          AUCarbonViewBase*               This
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CreateCarbonView">CreateCarbonView</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult CreateCarbonView (
+          AudioUnit                       inAudioUnit,
+          WindowRef                       inWindow,
+          ControlRef                      inParentControl,
+          const Float32Point&             inLocation,
+          const Float32Point&             inSize,
+          ControlRef&                     outParentControl
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CreateUI">CreateUI</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus CreateUI (
+          Float32                         inXOffset,
+          Float32                         inYOffset
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="EmbedControl">EmbedControl</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> OSStatus EmbedControl (ControlRef ctl);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetCarbonPane">GetCarbonPane</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ControlRef GetCarbonPane ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetCarbonWindow">GetCarbonWindow</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> WindowRef GetCarbonWindow ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetEditAudioUnit">GetEditAudioUnit</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> const AudioUnit GetEditAudioUnit () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetXOffset">GetXOffset</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> Float32 GetXOffset ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetYOffset">GetYOffset</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> Float32 GetYOffset ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleEvent">HandleEvent</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool HandleEvent (EventRef event);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsCompositWindow">IsCompositWindow</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool IsCompositWindow () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ParameterListener">ParameterListener</a></h4>
+</td><td width="50%">
+<h4>protected static method</h4>
+</td></tr></table>
+<br><pre> static void ParameterListener (
+          void*                           inRefCon,
+          void*                           inObject,
+          const AudioUnitParameter*       inParameter,
+          Float32                         inValue
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RemoveControl">RemoveControl</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void RemoveControl (AUCarbonViewControl *control);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetEventListener">SetEventListener</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetEventListener (
+          AudioUnitCarbonViewEventListener listener,
+          void*                           userData
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="TellListener">TellListener</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void TellListener (
+          const CAAUParameter&            auvp,
+          AudioUnitCarbonViewEventID      event,
+          void*                           evpar
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Update">Update</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Update (bool inUIThread);</pre>
+<p></p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mBottomRight">mBottomRight</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> Point mBottomRight;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mCarbonPane">mCarbonPane</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> ControlRef mCarbonPane;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mCarbonWindow">mCarbonWindow</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> WindowRef mCarbonWindow;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mCompositWindow">mCompositWindow</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> bool mCompositWindow;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mControlList">mControlList</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> ControlList mControlList;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mCurrentScrollPoint">mCurrentScrollPoint</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> HIPoint mCurrentScrollPoint;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mEditAudioUnit">mEditAudioUnit</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AudioUnit mEditAudioUnit;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mEventListener">mEventListener</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AudioUnitCarbonViewEventListener mEventListener;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mEventListenerUserData">mEventListenerUserData</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> void* mEventListenerUserData;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParameterListener">mParameterListener</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AUParameterListenerRef mParameterListener;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mXOffset">mXOffset</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> Float32 mXOffset;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mYOffset">mYOffset</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> Float32 mYOffset;</pre>
+<p></p><br>
+<hr>
+</body></html>

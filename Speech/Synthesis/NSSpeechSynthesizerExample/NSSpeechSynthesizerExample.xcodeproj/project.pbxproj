@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEA0298C07C2C66C0061E044 /* ExampleWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = F52A38C50162B42201CA1585 /* ExampleWindow.h */; };
+		EEA0298D07C2C66C0061E044 /* SpeakingCharacterView.h in Headers */ = {isa = PBXBuildFile; fileRef = CF6FA690047D43CE0007AD73 /* SpeakingCharacterView.h */; };
+		EEA0298F07C2C66C0061E044 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = F52A38CA0162B42201CA1585 /* MainMenu.nib */; };
+		EEA0299007C2C66C0061E044 /* Buster.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA694047D44270007AD73 /* Buster.plist */; };
+		EEA0299107C2C66C0061E044 /* BusterClosed.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA695047D44270007AD73 /* BusterClosed.tif */; };
+		EEA0299207C2C66C0061E044 /* BusterIdle1.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA696047D44270007AD73 /* BusterIdle1.tif */; };
+		EEA0299307C2C66C0061E044 /* BusterIdle2.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA697047D44270007AD73 /* BusterIdle2.tif */; };
+		EEA0299407C2C66C0061E044 /* BusterIdle3.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA698047D44270007AD73 /* BusterIdle3.tif */; };
+		EEA0299507C2C66C0061E044 /* BusterIdle4.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA699047D44270007AD73 /* BusterIdle4.tif */; };
+		EEA0299607C2C66C0061E044 /* BusterOpen.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA69A047D44270007AD73 /* BusterOpen.tif */; };
+		EEA0299707C2C66C0061E044 /* BusterSleep.tif in Resources */ = {isa = PBXBuildFile; fileRef = CF6FA69B047D44270007AD73 /* BusterSleep.tif */; };
+		EEA0299807C2C66C0061E044 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 900B7725071C9E710078901D /* Localizable.strings */; };
+		EEA0299A07C2C66C0061E044 /* ExampleWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A38C60162B42201CA1585 /* ExampleWindow.m */; };
+		EEA0299B07C2C66C0061E044 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A38C70162B42201CA1585 /* main.m */; };
+		EEA0299C07C2C66C0061E044 /* SpeakingCharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6FA691047D43CE0007AD73 /* SpeakingCharacterView.m */; };
+		EEA0299E07C2C66C0061E044 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52A38D80162B5E601CA1585 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA440018CDF011CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA450018CDF011CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		900B7726071C9E710078901D /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CF6FA690047D43CE0007AD73 /* SpeakingCharacterView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SpeakingCharacterView.h; path = Sources/SpeakingCharacterView.h; sourceTree = "<group>"; };
+		CF6FA691047D43CE0007AD73 /* SpeakingCharacterView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = SpeakingCharacterView.m; path = Sources/SpeakingCharacterView.m; sourceTree = "<group>"; };
+		CF6FA694047D44270007AD73 /* Buster.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist; name = Buster.plist; path = Resources/Characters/Buster/Buster.plist; sourceTree = "<group>"; };
+		CF6FA695047D44270007AD73 /* BusterClosed.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterClosed.tif; path = Resources/Characters/Buster/BusterClosed.tif; sourceTree = "<group>"; };
+		CF6FA696047D44270007AD73 /* BusterIdle1.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle1.tif; path = Resources/Characters/Buster/BusterIdle1.tif; sourceTree = "<group>"; };
+		CF6FA697047D44270007AD73 /* BusterIdle2.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle2.tif; path = Resources/Characters/Buster/BusterIdle2.tif; sourceTree = "<group>"; };
+		CF6FA698047D44270007AD73 /* BusterIdle3.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle3.tif; path = Resources/Characters/Buster/BusterIdle3.tif; sourceTree = "<group>"; };
+		CF6FA699047D44270007AD73 /* BusterIdle4.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle4.tif; path = Resources/Characters/Buster/BusterIdle4.tif; sourceTree = "<group>"; };
+		CF6FA69A047D44270007AD73 /* BusterOpen.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterOpen.tif; path = Resources/Characters/Buster/BusterOpen.tif; sourceTree = "<group>"; };
+		CF6FA69B047D44270007AD73 /* BusterSleep.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterSleep.tif; path = Resources/Characters/Buster/BusterSleep.tif; sourceTree = "<group>"; };
+		EEA029A107C2C66C0061E044 /* Info-NSSpeechSynthesizerExample__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-NSSpeechSynthesizerExample__Upgraded_.plist"; sourceTree = "<group>"; };
+		EEA029A207C2C66C0061E044 /* NSSpeechSynthesizerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSpeechSynthesizerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52A38C50162B42201CA1585 /* ExampleWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ExampleWindow.h; path = Sources/ExampleWindow.h; sourceTree = "<group>"; };
+		F52A38C60162B42201CA1585 /* ExampleWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = ExampleWindow.m; path = Sources/ExampleWindow.m; sourceTree = "<group>"; };
+		F52A38C70162B42201CA1585 /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sources/main.m; sourceTree = "<group>"; };
+		F52A38CB0162B42201CA1585 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Resources/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		F52A38D80162B5E601CA1585 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEA0299D07C2C66C0061E044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0299E07C2C66C0061E044 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEA029A207C2C66C0061E044 /* NSSpeechSynthesizerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* NSSpeechRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				F52A38BC0162B39101CA1585 /* Sources */,
+				CFD0B760047ED83C00905FC9 /* Resources */,
+				CFD0B761047ED84300905FC9 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				EEA029A107C2C66C0061E044 /* Info-NSSpeechSynthesizerExample__Upgraded_.plist */,
+			);
+			name = NSSpeechRecognition;
+			sourceTree = "<group>";
+		};
+		CF6FA6A4047D442C0007AD73 /* Buster */ = {
+			isa = PBXGroup;
+			children = (
+				CF6FA694047D44270007AD73 /* Buster.plist */,
+				CF6FA695047D44270007AD73 /* BusterClosed.tif */,
+				CF6FA696047D44270007AD73 /* BusterIdle1.tif */,
+				CF6FA697047D44270007AD73 /* BusterIdle2.tif */,
+				CF6FA698047D44270007AD73 /* BusterIdle3.tif */,
+				CF6FA699047D44270007AD73 /* BusterIdle4.tif */,
+				CF6FA69A047D44270007AD73 /* BusterOpen.tif */,
+				CF6FA69B047D44270007AD73 /* BusterSleep.tif */,
+			);
+			name = Buster;
+			sourceTree = "<group>";
+		};
+		CFD0B760047ED83C00905FC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				900B7725071C9E710078901D /* Localizable.strings */,
+				CF6FA6A4047D442C0007AD73 /* Buster */,
+				F52A38CA0162B42201CA1585 /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CFD0B761047ED84300905FC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F52A38D80162B5E601CA1585 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F52A38BC0162B39101CA1585 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F52A38C50162B42201CA1585 /* ExampleWindow.h */,
+				F52A38C60162B42201CA1585 /* ExampleWindow.m */,
+				F52A38C70162B42201CA1585 /* main.m */,
+				CF6FA690047D43CE0007AD73 /* SpeakingCharacterView.h */,
+				CF6FA691047D43CE0007AD73 /* SpeakingCharacterView.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EEA0298B07C2C66C0061E044 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0298C07C2C66C0061E044 /* ExampleWindow.h in Headers */,
+				EEA0298D07C2C66C0061E044 /* SpeakingCharacterView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EEA0298A07C2C66C0061E044 /* NSSpeechSynthesizerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30E4208F73F2700D0B768 /* Build configuration list for PBXNativeTarget "NSSpeechSynthesizerExample" */;
+			buildPhases = (
+				EEA0298B07C2C66C0061E044 /* Headers */,
+				EEA0298E07C2C66C0061E044 /* Resources */,
+				EEA0299907C2C66C0061E044 /* Sources */,
+				EEA0299D07C2C66C0061E044 /* Frameworks */,
+				EEA0299F07C2C66C0061E044 /* Rez */,
+				EEA029A007C2C66C0061E044 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-NSSpeechSynthesizerExample__Upgraded_.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = NSSpeechSynthesizerExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = NSSpeechSynthesizerExample;
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = TestShell;
+			productReference = EEA029A207C2C66C0061E044 /* NSSpeechSynthesizerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 48C30E4608F73F2700D0B768 /* Build configuration list for PBXProject "NSSpeechSynthesizerExample" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA440018CDF011CA2923 /* Development */,
+				014CEA450018CDF011CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* NSSpeechRecognition */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				EEA0298A07C2C66C0061E044 /* NSSpeechSynthesizerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEA0298E07C2C66C0061E044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0298F07C2C66C0061E044 /* MainMenu.nib in Resources */,
+				EEA0299007C2C66C0061E044 /* Buster.plist in Resources */,
+				EEA0299107C2C66C0061E044 /* BusterClosed.tif in Resources */,
+				EEA0299207C2C66C0061E044 /* BusterIdle1.tif in Resources */,
+				EEA0299307C2C66C0061E044 /* BusterIdle2.tif in Resources */,
+				EEA0299407C2C66C0061E044 /* BusterIdle3.tif in Resources */,
+				EEA0299507C2C66C0061E044 /* BusterIdle4.tif in Resources */,
+				EEA0299607C2C66C0061E044 /* BusterOpen.tif in Resources */,
+				EEA0299707C2C66C0061E044 /* BusterSleep.tif in Resources */,
+				EEA0299807C2C66C0061E044 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		EEA0299F07C2C66C0061E044 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEA029A007C2C66C0061E044 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#\n# Premultiply all \"*.tif\" files in the Resources directory\n#\nresourceDirPath=\"$TARGET_BUILD_DIR/NSSpeechSynthesizerExample.app/Contents/Resources/\"\nfor fileToPremulitply in \"$resourceDirPath\"*.tif\n{\n\tbaseFileName=\"${fileToPremulitply%.tif}\"\n\ttiffutil -cat \"$baseFileName\"\".tif\" -out \"$baseFileName\"\".out.tiff\"\n\tmv -f \"$baseFileName\"\".out.tiff\" \"$baseFileName\"\".tif\"\n}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEA0299907C2C66C0061E044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0299A07C2C66C0061E044 /* ExampleWindow.m in Sources */,
+				EEA0299B07C2C66C0061E044 /* main.m in Sources */,
+				EEA0299C07C2C66C0061E044 /* SpeakingCharacterView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		900B7725071C9E710078901D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				900B7726071C9E710078901D /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F52A38CA0162B42201CA1585 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F52A38CB0162B42201CA1585 /* MainMenu.nib */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C30E4308F73F2700D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-NSSpeechSynthesizerExample__Upgraded_.plist";
+				PRODUCT_NAME = NSSpeechSynthesizerExample;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		48C30E4408F73F2700D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-NSSpeechSynthesizerExample__Upgraded_.plist";
+				PRODUCT_NAME = NSSpeechSynthesizerExample;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48C30E4708F73F2700D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		48C30E4808F73F2700D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C30E4208F73F2700D0B768 /* Build configuration list for PBXNativeTarget "NSSpeechSynthesizerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30E4308F73F2700D0B768 /* Debug */,
+				48C30E4408F73F2700D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30E4608F73F2700D0B768 /* Build configuration list for PBXProject "NSSpeechSynthesizerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30E4708F73F2700D0B768 /* Debug */,
+				48C30E4808F73F2700D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

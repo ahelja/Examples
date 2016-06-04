@@ -1,0 +1,911 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Functions</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1><br>
+<hr><a name="//apple_ref/c/func/AudioDeviceAddIOProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceAddIOProc">AudioDeviceAddIOProc</a></h2>
+</td></tr></table><hr>Registers the given AudioDeviceIOProc with the AudioDevice.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceAddIOProc (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceIOProc inProc,
+&nbsp;&nbsp;&nbsp;&nbsp;void* inClientData
+)                                           AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>A client may have multiple IOProcs for a given device, but the device is free to
+only accept as many as it can handle. Note that it is not recommended for
+clients to have more than a single IOProc registered at a time as this can be
+wasteful of system resources. Rather, it is recommended that the client do any
+necessary mixing itself so that only one IOProc is necessary.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to register the IOProc with.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>The AudioDeviceIOProc to register.</dd>
+<dt><tt><em>inClientData</em></tt></dt><dd>A pointer to client data that is passed back to the IOProc when it is
+called.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceAddPropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceAddPropertyListener">AudioDeviceAddPropertyListener</a></h2>
+</td></tr></table><hr>Registers the given AudioDevicePropertyListenerProc to receive notifications
+when the given property changes.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceAddPropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyListenerProc inProc,
+&nbsp;&nbsp;&nbsp;&nbsp;void* inClientData
+)                       AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by AudioObjectAddPropertyListener
+in conjunction with AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice with whom to register the listener.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to listen to.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to listen to.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to listen to.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>AudioDevicePropertyListenerProc to call.</dd>
+<dt><tt><em>inClientData</em></tt></dt><dd>A pointer to client data that is passed to the listener when it is called.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceGetCurrentTime"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceGetCurrentTime">AudioDeviceGetCurrentTime</a></h2>
+</td></tr></table><hr>Retrieves the current time from an AudioDevice. Note that the device has to be
+running.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceGetCurrentTime (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioTimeStamp* outTime
+)                                                AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to from which to get the time.</dd>
+<dt><tt><em>outTime</em></tt></dt><dd>An AudioTimeStamp into which the current time is put.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. kAudioHardwareNotRunningError will be
+returned if the AudioDevice isn't running.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceGetNearestStartTime"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceGetNearestStartTime">AudioDeviceGetNearestStartTime</a></h2>
+</td></tr></table><hr>Query an AudioDevice to get a time equal to or later than the given time that is
+the best time to start IO.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceGetNearestStartTime (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioTimeStamp* ioRequestedStartTime,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inFlags
+)                                            AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The time that is returned is dictated by the constraints of the device and the
+system. For instance, the driver of a device that provides both audio and video
+data may only allow start times that coincide with the edge of a video frame.
+Also, if the device already has one or more active IOProcs, the start time will
+be shifted to the beginning of the next IO cycle so as not to cause
+discontinuities in the existing IOProcs. Another reason the start time may shift
+is to allow for aligning the buffer accesses in an optimal fashion. Note that
+the device must be running to use this function.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to query.</dd>
+<dt><tt><em>ioRequestedStartTime</em></tt></dt><dd>A pointer to an AudioTimeStamp that, on entry, is the requested start time.
+On exit, it will have the a time equal to or later than the requested time,
+as dictated by the device's constraints.</dd>
+<dt><tt><em>inFlags</em></tt></dt><dd>A UInt32 containing flags that modify how this function behaves.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. kAudioHardwareNotRunningError will be
+returned if the AudioDevice isn't running.
+kAudioHardwareUnsupportedOperationError will be returned if the AudioDevice does
+not support starting at a specific time.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceGetProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceGetProperty">AudioDeviceGetProperty</a></h2>
+</td></tr></table><hr>Queries an the AudioDevice object to get the data of the given property and
+places it in the provided buffer.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceGetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* ioPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;void* outPropertyData
+)                                    AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by the function
+AudioObjectGetPropertyData().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to query.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>ioPropertyDataSize</em></tt></dt><dd>A UInt32 which on entry indicates the size of the buffer pointed to by
+outData and on exit indicates how much of the buffer was used.</dd>
+<dt><tt><em>outPropertyData</em></tt></dt><dd>The buffer into which the object will put the data for the given property.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceGetPropertyInfo"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceGetPropertyInfo">AudioDeviceGetPropertyInfo</a></h2>
+</td></tr></table><hr>Retrieve information about the given property of an AudioDevice.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceGetPropertyInfo (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* outSize,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean* outWritable
+)                                    AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by the functions
+AudioObjectHasProperty(), AudioObjectIsPropertySettable(), and
+AudioObjectGetPropertyDataSize().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to query.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>outSize</em></tt></dt><dd>A pointer to a UInt32 that receives the size of the property data in bytes
+on exit. This can be NULL if the size information is not being requested.</dd>
+<dt><tt><em>outWritable</em></tt></dt><dd>A pointer to a Boolean that receives indication of whether or not the given
+property can be set. This can be NULL if the writability is not being
+requested.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceRead"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceRead">AudioDeviceRead</a></h2>
+</td></tr></table><hr>Read some data from an AudioDevice starting at the given time.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceRead (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp* inStartTime,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioBufferList* outData
+)                                                AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>With the advent of aggregate devices, the need for AudioDeviceRead has gone
+away. Consequently, this function is a good candidate for deprecation some day.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to read from.</dd>
+<dt><tt><em>inStartTime</em></tt></dt><dd>An AudioTimeStamp indicating the time from which to read the data. In
+general, the valid range of time (in frames) is from the current time minus
+the maximum IO buffer size to the current time minus the safety offset.</dd>
+<dt><tt><em>outData</em></tt></dt><dd>An AudioBufferList that must be the same size and shape as that returned by
+kAudioDevicePropertyStreamConfiguration. Further, the AudioBufferList must
+have been previously registered with the device via
+kAudioDevicePropertyRegisterBufferList. On exit, the mDataSize fields will
+be updated with the amount of data read.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+kAudioHardwareUnsupportedOperationError will be returned if the AudioDevice does
+not support direct reading.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceRemoveIOProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceRemoveIOProc">AudioDeviceRemoveIOProc</a></h2>
+</td></tr></table><hr>Unregisters the given AudioDeviceIOProc from the AudioDevice.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceRemoveIOProc (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceIOProc inProc
+)                                             AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to unregister the IOProc from.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>The AudioDeviceIOProc to unregister.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceRemovePropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceRemovePropertyListener">AudioDeviceRemovePropertyListener</a></h2>
+</td></tr></table><hr>Unregisters the given AudioDevicePropertyListenerProc from receiving
+notifications when the given property changes.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceRemovePropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyListenerProc inProc
+)                         AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by
+AudioObjectRemovePropertyListener in conjunction with
+AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice with whom to unregister the listener.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to unregister from.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to unregister from.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to stop listening to.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>AudioDevicePropertyListenerProc to unregister.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceSetProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceSetProperty">AudioDeviceSetProperty</a></h2>
+</td></tr></table><hr>Tells the AudioDevice object to change the value of the given property using the
+provided data.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceSetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp* inWhen,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inPropertyData
+)                                     AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the value of the property should not be considered changed until the
+HAL has called the listeners as many properties values are changed
+asynchronously. Also note that the same functionality is provided by the
+function AudioObjectGetPropertyData().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to change.</dd>
+<dt><tt><em>inWhen</em></tt></dt><dd>A pointer to an AudioTimeStamp that says when to change the property's value
+relative to the device's time base. NULL means execute the change
+immediately.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to change where 0 is the master channel.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to change.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to change.</dd>
+<dt><tt><em>inPropertyDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inData.</dd>
+<dt><tt><em>inPropertyData</em></tt></dt><dd>The buffer containing the data to be used to change the property's value.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceStart"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceStart">AudioDeviceStart</a></h2>
+</td></tr></table><hr>Starts IO for the given AudioDeviceIOProc.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceStart (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceIOProc inProc
+)                                                     AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to start the IOProc on.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>The AudioDeviceIOProc to start. Note that this can be NULL, which starts the
+hardware regardless of whether or not there are any IOProcs registered. This
+is necessary if any of the AudioDevice's timing services are to be used. A
+balancing call to AudioDeviceStop with a NULL IOProc is required to stop the
+hardware.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceStartAtTime"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceStartAtTime">AudioDeviceStartAtTime</a></h2>
+</td></tr></table><hr>Starts IO for the given AudioDeviceIOProc and aligns the IO cycle of the
+AudioDevice with the given time.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceStartAtTime (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceIOProc inProc,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioTimeStamp* ioRequestedStartTime,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inFlags
+)                                                AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to start the IOProc on.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>The AudioDeviceIOProc to start. Note that this can be NULL, which starts the
+hardware regardless of whether or not there are any IOProcs registered.</dd>
+<dt><tt><em>ioRequestedStartTime</em></tt></dt><dd>A pointer to an AudioTimeStamp that, on entry, is the requested time to
+start the IOProc. On exit, it will be the actual time the IOProc will start.</dd>
+<dt><tt><em>inFlags</em></tt></dt><dd>A UInt32 containing flags that modify how this function behaves.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+kAudioHardwareUnsupportedOperationError will be returned if the AudioDevice does
+not support starting at a specific time and inProc and ioRequestedStartTime are
+not NULL.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceStop"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceStop">AudioDeviceStop</a></h2>
+</td></tr></table><hr>Stops IO for the given AudioDeviceIOProc.
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceStop (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceIOProc inProc
+)                                                     AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to stop the IOProc on.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>The AudioDeviceIOProc to stop.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioDeviceTranslateTime"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceTranslateTime">AudioDeviceTranslateTime</a></h2>
+</td></tr></table><hr>Translates the time in the AudioDevice's time base from one representation to
+another. Note that the device has to be running
+
+<blockquote><pre><tt>extern OSStatus AudioDeviceTranslateTime (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp* inTime,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioTimeStamp* outTime
+)                                        AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice whose time base governs the translation.</dd>
+<dt><tt><em>inTime</em></tt></dt><dd>An AudioTimeStamp containing the time to be translated.</dd>
+<dt><tt><em>outTime</em></tt></dt><dd>An AudioTimeStamp into which the translated time is put. On entry, the
+mFlags field specifies which representations to translate the input time
+into. Because not every device supports all time representations, on exit,
+the mFlags field will indicate which translations were actually done.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. kAudioHardwareNotRunningError will be
+returned if the AudioDevice isn't running.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareAddPropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareAddPropertyListener">AudioHardwareAddPropertyListener</a></h2>
+</td></tr></table><hr>Registers the given AudioHardwarePropertyListenerProc to receive notifications
+when the given property changes.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareAddPropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyListenerProc inProc,
+&nbsp;&nbsp;&nbsp;&nbsp;void* inClientData
+)               AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by AudioObjectAddPropertyListener
+in conjunction with AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioHardwarePropertyID of the property to listen to.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>AudioHardwarePropertyListenerProc to call.</dd>
+<dt><tt><em>inClientData</em></tt></dt><dd>A pointer to client data that is passed to the listener when it is called.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareAddRunLoopSource"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareAddRunLoopSource">AudioHardwareAddRunLoopSource</a></h2>
+</td></tr></table><hr>Add the given CFRunLoopSource to the the HAL's notification CFRunLoop.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareAddRunLoopSource (
+&nbsp;&nbsp;&nbsp;&nbsp;CFRunLoopSourceRef inRunLoopSource
+)                                   AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The CFRunLoop the HAL uses for notifications is specified by
+kAudioHardwarePropertyRunLoop. If kAudioHardwarePropertyRunLoop changes,
+CFRunLoopSources added with this function will automatically be transferred to
+the new CFRunLoop.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inRunLoopSource</em></tt></dt><dd>The CFRunLoopSource to add.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareGetProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareGetProperty">AudioHardwareGetProperty</a></h2>
+</td></tr></table><hr>Queries an the AudioSystemObject to get the data of the given property and
+places it in the provided buffer.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareGetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* ioPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;void* outPropertyData
+)                                AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by the function
+AudioObjectGetPropertyData().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioHardwarePropertyID of the property to query.</dd>
+<dt><tt><em>ioDataSize</em></tt></dt><dd>A UInt32 which on entry indicates the size of the buffer pointed to by
+outData and on exit indicates how much of the buffer was used.</dd>
+<dt><tt><em>outData</em></tt></dt><dd>The buffer into which the AudioSystemObject will put the data for the given
+property.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareGetPropertyInfo"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareGetPropertyInfo">AudioHardwareGetPropertyInfo</a></h2>
+</td></tr></table><hr>Retrieve information about the given property.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareGetPropertyInfo (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* outSize,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean* outWritable
+)                                AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by the functions
+AudioObjectHasProperty(), AudioObjectIsPropertySettable(), and
+AudioObjectGetPropertyDataSize().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioHardwarePropertyID of the property to query.</dd>
+<dt><tt><em>outSize</em></tt></dt><dd>A pointer to a UInt32 that receives the size of the property data in bytes
+on exit. This can be NULL if the size information is not being requested.</dd>
+<dt><tt><em>outWritable</em></tt></dt><dd>A pointer to a Boolean that receives indication of whether or not the given
+property can be set. This can be NULL if the writability is not being
+requested.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareRemovePropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareRemovePropertyListener">AudioHardwareRemovePropertyListener</a></h2>
+</td></tr></table><hr>Unregisters the given AudioHardwarePropertyListenerProc from receive
+notifications when the given property changes.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareRemovePropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyListenerProc inProc
+)                 AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by
+AudioObjectRemovePropertyListener in conjunction with
+AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioHardwarePropertyID of the property to stop listening to.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>AudioHardwarePropertyListenerProc to unregister.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareRemoveRunLoopSource"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareRemoveRunLoopSource">AudioHardwareRemoveRunLoopSource</a></h2>
+</td></tr></table><hr>Remove the given CFRunLoopSource from the the HAL's notification CFRunLoop.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareRemoveRunLoopSource (
+&nbsp;&nbsp;&nbsp;&nbsp;CFRunLoopSourceRef inRunLoopSource
+)                                AVAILABLE_MAC_OS_X_VERSION_10_3_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The CFRunLoop the HAL uses for notifications is specified by
+kAudioHardwarePropertyRunLoop.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inRunLoopSource</em></tt></dt><dd>The CFRunLoopSource to remove.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareSetProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareSetProperty">AudioHardwareSetProperty</a></h2>
+</td></tr></table><hr>Tells the AudioSystemObject to change the value of the given property using the
+provided data.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareSetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inPropertyData
+)                                 AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the value of the property should not be considered changed until the
+HAL has called the listeners as many properties values are changed
+asynchronously. Also note that the same functionality is provided by the
+function AudioObjectGetPropertyData().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioHardwarePropertyID of the property to change.</dd>
+<dt><tt><em>inDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inData.</dd>
+<dt><tt><em>inData</em></tt></dt><dd>The buffer containing the data to be used to change the property's value.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioHardwareUnload"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwareUnload">AudioHardwareUnload</a></h2>
+</td></tr></table><hr>When this routine is called, all IO on all devices within a process will be
+terminated and all resources capable of being released will be released. This
+routine essentially returns the HAL to it's uninitialized state.
+
+<blockquote><pre><tt>extern OSStatus AudioHardwareUnload (void)                                                                               AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectAddPropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectAddPropertyListener">AudioObjectAddPropertyListener</a></h2>
+</td></tr></table><hr>Registers the given AudioObjectPropertyListenerProc to receive notifications
+when the given properties change.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectAddPropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectPropertyListenerProc inListener,
+&nbsp;&nbsp;&nbsp;&nbsp;void* inClientData
+)                   AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to register the listener with.</dd>
+<dt><tt><em>inAddress</em></tt></dt><dd>The AudioObjectPropertyAddresses indicating which property the listener
+should be notified about.</dd>
+<dt><tt><em>inListener</em></tt></dt><dd>The AudioObjectPropertyListenerProc to call.</dd>
+<dt><tt><em>inClientData</em></tt></dt><dd>A pointer to client data that is passed to the listener when it is called.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectGetPropertyData"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectGetPropertyData">AudioObjectGetPropertyData</a></h2>
+</td></tr></table><hr>Queries an AudioObject to get the data of the given property and places it in
+the provided buffer.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectGetPropertyData (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inQualifierDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inQualifierData,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* ioDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;void* outData
+)                            AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to query.</dd>
+<dt><tt><em>inAddress</em></tt></dt><dd>An AudioObjectPropertyAddress indicating which property is being queried.</dd>
+<dt><tt><em>inQualifierDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inQualifierData.
+Note that not all properties require qualification, in which case this
+value will be 0.</dd>
+<dt><tt><em>inQualifierData,</em></tt></dt><dd>A buffer of data to be used in determining the data of the property being
+queried. Note that not all properties require qualification, in which case
+this value will be NULL.</dd>
+<dt><tt><em>ioDataSize</em></tt></dt><dd>A UInt32 which on entry indicates the size of the buffer pointed to by
+outData and on exit indicates how much of the buffer was used.</dd>
+<dt><tt><em>outData</em></tt></dt><dd>The buffer into which the AudioObject will put the data for the given
+property.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectGetPropertyDataSize"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectGetPropertyDataSize">AudioObjectGetPropertyDataSize</a></h2>
+</td></tr></table><hr>Queries an AudioObject to find the size of the data for the given property.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectGetPropertyDataSize (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inQualifierDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inQualifierData,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* outDataSize
+)                    AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to query.</dd>
+<dt><tt><em>inAddress</em></tt></dt><dd>An AudioObjectPropertyAddress indicating which property is being queried.</dd>
+<dt><tt><em>inQualifierDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inQualifierData.
+Note that not all properties require qualification, in which case this
+value will be 0.</dd>
+<dt><tt><em>inQualifierData,</em></tt></dt><dd>A buffer of data to be used in determining the data of the property being
+queried. Note that not all properties require qualification, in which case
+this value will be NULL.</dd>
+<dt><tt><em>outDataSize</em></tt></dt><dd>A UInt32 indicating how many bytes the data for the given property occupies.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectHasProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectHasProperty">AudioObjectHasProperty</a></h2>
+</td></tr></table><hr>Queries an AudioObject about whether or not it has the given property.
+
+<blockquote><pre><tt>extern Boolean AudioObjectHasProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress
+)                              AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to query.</dd>
+<dt><tt><em>inAddress</em></tt></dt><dd>An AudioObjectPropertyAddress indicating which property is being queried.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>A Boolean indicating whether or not the AudioObject has the given property.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectIsPropertySettable"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectIsPropertySettable">AudioObjectIsPropertySettable</a></h2>
+</td></tr></table><hr>Queries an AudioObject about whether or not the given property can be set using
+AudioObjectSetPropertyData.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectIsPropertySettable (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean* outIsSettable
+)                  AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to query.</dd>
+<dt><tt><em>inAddress</em></tt></dt><dd>An AudioObjectPropertyAddress indicating which property is being queried.</dd>
+<dt><tt><em>outIsSettable</em></tt></dt><dd>A Boolean indicating whether or not the property can be set.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectRemovePropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectRemovePropertyListener">AudioObjectRemovePropertyListener</a></h2>
+</td></tr></table><hr>Unregisters the given AudioObjectPropertyListenerProc from receiving
+notifications when the given properties change.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectRemovePropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectPropertyListenerProc inListener,
+&nbsp;&nbsp;&nbsp;&nbsp;void* inClientData
+)               AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to unregister the listener from.</dd>
+<dt><tt><em>inNumberAddresses</em></tt></dt><dd>The number of elements in the inAddresses array.</dd>
+<dt><tt><em>inAddresses</em></tt></dt><dd>The AudioObjectPropertyAddress indicating which property the listener should
+be removed from.</dd>
+<dt><tt><em>inListener</em></tt></dt><dd>The AudioObjectPropertyListenerProc being removed.</dd>
+<dt><tt><em>inClientData</em></tt></dt><dd>A pointer to client data that is passed to the listener when it is called.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectSetPropertyData"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectSetPropertyData">AudioObjectSetPropertyData</a></h2>
+</td></tr></table><hr>Tells an AudioObject to change the value of the given property using the
+provided data.
+
+<blockquote><pre><tt>extern OSStatus AudioObjectSetPropertyData (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress* inAddress,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inQualifierDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inQualifierData,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inData
+)                             AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the value of the property should not be considered changed until the
+HAL has called the listeners as many properties values are changed
+asynchronously.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to change.</dd>
+<dt><tt><em>inAddress</em></tt></dt><dd>An AudioObjectPropertyAddress indicating which property is being changed.</dd>
+<dt><tt><em>inQualifierDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inQualifierData.
+Note that not all properties require qualification, in which case this
+value will be 0.</dd>
+<dt><tt><em>inQualifierData,</em></tt></dt><dd>A buffer of data to be used in determining the data of the property being
+queried. Note that not all properties require qualification, in which case
+this value will be NULL.</dd>
+<dt><tt><em>inDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inData.</dd>
+<dt><tt><em>inData</em></tt></dt><dd>The buffer containing the data to be used to change the property's value.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioObjectShow"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectShow">AudioObjectShow</a></h2>
+</td></tr></table><hr>Prints to standard out a textural description of the AudioObject.
+
+<blockquote><pre><tt>extern void AudioObjectShow (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID inObjectID
+)                                                     AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inObjectID</em></tt></dt><dd>The AudioObject to show.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/func/AudioStreamAddPropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamAddPropertyListener">AudioStreamAddPropertyListener</a></h2>
+</td></tr></table><hr>Registers the given AudioStreamPropertyListenerProc to receive notifications
+when the given property changes.
+
+<blockquote><pre><tt>extern OSStatus AudioStreamAddPropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID inStream,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamPropertyListenerProc inProc,
+&nbsp;&nbsp;&nbsp;&nbsp;void* inClientData
+)                       AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by AudioObjectAddPropertyListener
+in conjunction with AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inStream</em></tt></dt><dd>The AudioStream with whom to register the listener.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to listen to.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to listen to.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>AudioStreamPropertyListenerProc to call.</dd>
+<dt><tt><em>inClientData</em></tt></dt><dd>A pointer to client data that is passed to the listener when it is called.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioStreamGetProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamGetProperty">AudioStreamGetProperty</a></h2>
+</td></tr></table><hr>Queries an the AudioStream object to get the data of the given property and
+places it in the provided buffer.
+
+<blockquote><pre><tt>extern OSStatus AudioStreamGetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID inStream,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* ioPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;void* outPropertyData
+)                                    AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by the function
+AudioObjectGetPropertyData().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inStream</em></tt></dt><dd>The AudioStream to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>ioPropertyDataSize</em></tt></dt><dd>A UInt32 which on entry indicates the size of the buffer pointed to by
+outData and on exit indicates how much of the buffer was used.</dd>
+<dt><tt><em>outPropertyData</em></tt></dt><dd>The buffer into which the object will put the data for the given property.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioStreamGetPropertyInfo"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamGetPropertyInfo">AudioStreamGetPropertyInfo</a></h2>
+</td></tr></table><hr>Retrieve information about the given property of an AudioStream.
+
+<blockquote><pre><tt>extern OSStatus AudioStreamGetPropertyInfo (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID inStream,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* outSize,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean* outWritable
+)                                    AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inStream</em></tt></dt><dd>The AudioStream to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>outSize</em></tt></dt><dd>A pointer to a UInt32 that receives the size of the property data in bytes
+on exit. This can be NULL if the size information is not being requested.</dd>
+<dt><tt><em>outWritable</em></tt></dt><dd>A pointer to a Boolean that receives indication of whether or not the given
+property can be set. This can be NULL if the writability is not being
+requested.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioStreamRemovePropertyListener"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamRemovePropertyListener">AudioStreamRemovePropertyListener</a></h2>
+</td></tr></table><hr>Unregisters the given AudioStreamPropertyListenerProc from receiving
+notifications when the given property changes.
+
+<blockquote><pre><tt>extern OSStatus AudioStreamRemovePropertyListener (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID inStream,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamPropertyListenerProc inProc
+)                         AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by
+AudioObjectRemovePropertyListener in conjunction with
+AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inStream</em></tt></dt><dd>The AudioStream with whom to unregister the listener.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to unregister from.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to stop listening to.</dd>
+<dt><tt><em>inProc</em></tt></dt><dd>AudioStreamPropertyListenerProc to unregister.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/AudioStreamSetProperty"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamSetProperty">AudioStreamSetProperty</a></h2>
+</td></tr></table><hr>Tells the AudioStream object to change the value of the given property using the
+provided data.
+
+<blockquote><pre><tt>extern OSStatus AudioStreamSetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID inStream,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp* inWhen,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inPropertyData
+)                                     AVAILABLE_MAC_OS_X_VERSION_10_1_AND_LATER;</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the value of the property should not be considered changed until the
+HAL has called the listeners as many properties values are changed
+asynchronously. Also note that the same functionality is provided by the
+function AudioObjectGetPropertyData().
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inStream</em></tt></dt><dd>The AudioStream to change.</dd>
+<dt><tt><em>inWhen</em></tt></dt><dd>A pointer to an AudioTimeStamp that says when to change the property's value
+relative to the device's time base. NULL means execute the change
+immediately.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to change where 0 is the master channel.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to change.</dd>
+<dt><tt><em>inPropertyDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inData.</dd>
+<dt><tt><em>inPropertyData</em></tt></dt><dd>The buffer containing the data to be used to change the property's value.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

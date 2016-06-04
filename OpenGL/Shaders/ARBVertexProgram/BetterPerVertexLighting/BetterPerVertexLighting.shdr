@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>creatorShortVersionString</key>
+	<string>1.2.2</string>
+	<key>primitive</key>
+	<string>0</string>
+	<key>programTabViewIndex</key>
+	<string>0</string>
+	<key>renderingPassList</key>
+	<dict>
+		<key>Default Rendering Pass</key>
+		<dict>
+			<key>baseColor</key>
+			<string>[0.785971, 0.564701, 0.756930, 1.000000]</string>
+			<key>fragmentProgramExecuter</key>
+			<dict>
+				<key>language</key>
+				<integer>34820</integer>
+				<key>programString</key>
+				<string></string>
+				<key>symbolTable</key>
+				<dict/>
+			</dict>
+			<key>multiTextureList</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33984, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33985, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33986, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33987, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33988, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33989, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33990, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33991, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+			</dict>
+			<key>opacity</key>
+			<string>1.000000</string>
+			<key>vertexProgramExecuter</key>
+			<dict>
+				<key>language</key>
+				<integer>34336</integer>
+				<key>programString</key>
+				<string>!!ARBvp1.0
+
+# Better Per-Vertex Lighting by James A. McCombe, Tue Jun 17 2003
+#
+# Implements a basic lighting model where the shadow/highlights are determined 
+# based on the dot product of a light direction vector and the vertex normal.
+# After that, some simple math is done to accent the highlight based on a set of 
+# parameters.  Finally, its modulated with the vertex color.
+#
+# Parameters:
+#   program.env[0].xyz - Light position
+#   program.env[1].x   - Light softness
+#   program.env[1].y   - Highlight size
+#   program.env[1].z   - Highlight intensity
+
+ATTRIB vertexPosition  = vertex.position;
+ATTRIB vertexNormal    = vertex.normal;
+
+PARAM  lightDirection   = program.env[0];
+PARAM  lightParameters = program.env[1];
+PARAM  zero = { 0.0, 0.0, 0.0, 0.0 };
+
+TEMP temp1, temp2, transPosition;
+
+# Transform the vertex position
+DP4 transPosition.x, state.matrix.mvp.row[0], vertexPosition;
+DP4 transPosition.y, state.matrix.mvp.row[1], vertexPosition;
+DP4 transPosition.z, state.matrix.mvp.row[2], vertexPosition;
+DP4 transPosition.w, state.matrix.mvp.row[3], vertexPosition;
+
+# Transform the vertex normal into eye space
+DP3 temp1.x, state.matrix.modelview.invtrans.row[0], vertexNormal;
+DP3 temp1.y, state.matrix.modelview.invtrans.row[1], vertexNormal;
+DP3 temp1.z, state.matrix.modelview.invtrans.row[2], vertexNormal;
+
+DP3 temp1, lightDirection, temp1;
+
+MAX temp1, zero, temp1;
+POW temp1, temp1.x, lightParameters.x;
+
+ADD temp2, temp1, -lightParameters.y;
+MAX temp2, zero, temp2;
+MUL temp2, temp2, lightParameters.z;
+
+MUL temp1, temp1, vertex.color;
+ADD temp1, temp1, temp2;
+
+MOV result.position, transPosition;
+SWZ result.color, temp1, x,y,z,1;
+
+END</string>
+				<key>symbolTable</key>
+				<dict>
+					<key>lightDirection</key>
+					<dict>
+						<key>data</key>
+						<string>[0.21, 0.46, 0.87, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>lightParameters</key>
+					<dict>
+						<key>data</key>
+						<string>[1.58, 0.95, 10.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[8.00, 1.00, 10.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[0.00, 0.00, 0.00, -1.00]</string>
+					</dict>
+					<key>temp1</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>temp2</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>transPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vertexNormal</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vertexPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>zero</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>windowFrame</key>
+	<string>{{513, 92}, {948, 727}}</string>
+</dict>
+</plist>

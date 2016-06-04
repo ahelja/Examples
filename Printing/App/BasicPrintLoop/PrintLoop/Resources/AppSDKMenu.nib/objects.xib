@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="yes"?>
+<object class="NSIBObjectData">
+  <string name="targetFramework">IBCarbonFramework</string>
+  <object name="rootObject" class="NSCustomObject" id="1">
+    <string name="customClass">NSApplication</string>
+  </object>
+  <array count="7" name="allObjects">
+    <object class="IBCarbonMenu" id="29">
+      <string name="title">AppSDKMenu</string>
+      <array count="2" name="items">
+        <object class="IBCarbonMenuItem" id="182">
+          <string name="title">AppSDK</string>
+          <object name="submenu" class="IBCarbonMenu" id="181">
+            <string name="title">AppSDK</string>
+            <array count="1" name="items">
+              <object class="IBCarbonMenuItem" id="183">
+                <string name="title">About PrintLoop</string>
+                <int name="keyEquivalentModifier">0</int>
+                <ostype name="command">abou</ostype>
+              </object>
+            </array>
+            <string name="name">_NSAppleMenu</string>
+          </object>
+        </object>
+        <object class="IBCarbonMenuItem" id="127">
+          <string name="title">File</string>
+          <object name="submenu" class="IBCarbonMenu" id="131">
+            <string name="title">File</string>
+            <array count="1" name="items">
+              <object class="IBCarbonMenuItem" id="194">
+                <string name="title">PrintSample</string>
+              </object>
+            </array>
+          </object>
+        </object>
+      </array>
+      <string name="name">_NSMainMenu</string>
+    </object>
+    <reference idRef="127"/>
+    <reference idRef="131"/>
+    <reference idRef="181"/>
+    <reference idRef="182"/>
+    <reference idRef="183"/>
+    <reference idRef="194"/>
+  </array>
+  <array count="7" name="allParents">
+    <reference idRef="1"/>
+    <reference idRef="29"/>
+    <reference idRef="127"/>
+    <reference idRef="182"/>
+    <reference idRef="29"/>
+    <reference idRef="181"/>
+    <reference idRef="131"/>
+  </array>
+  <dictionary count="2" name="nameTable">
+    <string>Files Owner</string>
+    <reference idRef="1"/>
+    <string>MenuBar</string>
+    <reference idRef="29"/>
+  </dictionary>
+  <unsigned_int name="nextObjectID">195</unsigned_int>
+</object>

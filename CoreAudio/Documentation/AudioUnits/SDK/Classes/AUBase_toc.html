@@ -1,0 +1,167 @@
+<html><head>
+<title>AUBase</title>
+</head><body bgcolor="#E0E0E0">
+<basefont face="optima" size="2">
+<h4><a href="index.html" target="_top">Back to Overview</a></h4>
+<h4><a href="AUBase.html#top" target="main">AUBase</b></a></h4>
+<h4>Methods : </h4><br>
+<big><b>Methods : </b></big><br>
+<ul><li><b>Connections : </b><ul>
+<li><a href="AUBase.html#HasInput" target="main">HasInput</a></li>
+<li><a href="AUBase.html#SetConnection" target="main">SetConnection</a></li>
+<li><a href="AUBase.html#SetInputCallback" target="main">SetInputCallback</a></li>
+</ul></li>
+<li><b>Constructor : </b><ul>
+<li><a href="AUBase.html#AUBase" target="main">AUBase</a></li>
+</ul></li>
+<li><b>Destructor : </b><ul>
+<li><a href="AUBase.html#~AUBase" target="main">~AUBase</a></li>
+</ul></li>
+<li><b>Elements : </b><ul>
+<li><a href="AUBase.html#CreateElement" target="main">CreateElement</a></li>
+<li><a href="AUBase.html#CreateElements" target="main">CreateElements</a></li>
+<li><a href="AUBase.html#GetElement" target="main">GetElement</a></li>
+<li><a href="AUBase.html#GetGroup" target="main">GetGroup</a></li>
+<li><a href="AUBase.html#GetInput" target="main">GetInput</a></li>
+<li><a href="AUBase.html#GetOutput" target="main">GetOutput</a></li>
+<li><a href="AUBase.html#GetScope" target="main">GetScope</a></li>
+<li><a href="AUBase.html#GlobalScope" target="main">GlobalScope</a></li>
+<li><a href="AUBase.html#Globals" target="main">Globals</a></li>
+<li><a href="AUBase.html#Groups" target="main">Groups</a></li>
+<li><a href="AUBase.html#Inputs" target="main">Inputs</a></li>
+<li><a href="AUBase.html#Outputs" target="main">Outputs</a></li>
+<li><a href="AUBase.html#SafeGetElement" target="main">SafeGetElement</a></li>
+<li><a href="AUBase.html#SetNumberOfElements" target="main">SetNumberOfElements</a></li>
+</ul></li>
+<li><b>Format : </b><ul>
+<li><a href="AUBase.html#ChangeStreamFormat" target="main">ChangeStreamFormat</a></li>
+<li><a href="AUBase.html#FormatIsCanonical" target="main">FormatIsCanonical</a></li>
+<li><a href="AUBase.html#GetStreamFormat" target="main">GetStreamFormat</a></li>
+<li><a href="AUBase.html#IsStreamFormatWritable" target="main">IsStreamFormatWritable</a></li>
+<li><a href="AUBase.html#MakeCanonicalFormat" target="main">MakeCanonicalFormat</a></li>
+<li><a href="AUBase.html#StreamFormatWritable" target="main">StreamFormatWritable</a></li>
+<li><a href="AUBase.html#ValidFormat" target="main">ValidFormat</a></li>
+</ul></li>
+<li><b>Initialization : </b><ul>
+<li><a href="AUBase.html#Cleanup" target="main">Cleanup</a></li>
+<li><a href="AUBase.html#DoCleanup" target="main">DoCleanup</a></li>
+<li><a href="AUBase.html#DoInitialize" target="main">DoInitialize</a></li>
+<li><a href="AUBase.html#Initialize" target="main">Initialize</a></li>
+<li><a href="AUBase.html#IsInitialized" target="main">IsInitialized</a></li>
+<li><a href="AUBase.html#PostConstructor" target="main">PostConstructor</a></li>
+<li><a href="AUBase.html#ReallocateBuffers" target="main">ReallocateBuffers</a></li>
+</ul></li>
+<li><b>Other : </b><ul>
+<li><a href="AUBase.html#AudioUnitAPIVersion" target="main">AudioUnitAPIVersion</a></li>
+<li><a href="AUBase.html#BusCountWritable" target="main">BusCountWritable</a></li>
+<li><a href="AUBase.html#CallHostBeatAndTempo" target="main">CallHostBeatAndTempo</a></li>
+<li><a href="AUBase.html#CallHostMusicalTimeLocation" target="main">CallHostMusicalTimeLocation</a></li>
+<li><a href="AUBase.html#CallHostTransportState" target="main">CallHostTransportState</a></li>
+<li><a href="AUBase.html#CanSetMaxFrames" target="main">CanSetMaxFrames</a></li>
+<li><a href="AUBase.html#ClearPropertyUsage" target="main">ClearPropertyUsage</a></li>
+<li><a href="AUBase.html#ComponentEntryDispatch" target="main">ComponentEntryDispatch</a></li>
+<li><a href="AUBase.html#GetAudioChannelLayout" target="main">GetAudioChannelLayout</a></li>
+<li><a href="AUBase.html#GetGroupParameter" target="main">GetGroupParameter</a></li>
+<li><a href="AUBase.html#GetIOElement" target="main">GetIOElement</a></li>
+<li><a href="AUBase.html#GetIconLocation" target="main">GetIconLocation</a></li>
+<li><a href="AUBase.html#GetNumCustomUIComponents" target="main">GetNumCustomUIComponents</a></li>
+<li><a href="AUBase.html#GetUIComponentDescs" target="main">GetUIComponentDescs</a></li>
+<li><a href="AUBase.html#GetVectorUnitType" target="main">GetVectorUnitType</a></li>
+<li><a href="AUBase.html#HasAltivec" target="main">HasAltivec</a></li>
+<li><a href="AUBase.html#HasIcon" target="main">HasIcon</a></li>
+<li><a href="AUBase.html#HasSSE2" target="main">HasSSE2</a></li>
+<li><a href="AUBase.html#HasSSE3" target="main">HasSSE3</a></li>
+<li><a href="AUBase.html#HasVectorUnit" target="main">HasVectorUnit</a></li>
+<li><a href="AUBase.html#IsRenderThread" target="main">IsRenderThread</a></li>
+<li><a href="AUBase.html#PreDestructor" target="main">PreDestructor</a></li>
+<li><a href="AUBase.html#RemoveAudioChannelLayout" target="main">RemoveAudioChannelLayout</a></li>
+<li><a href="AUBase.html#SetAudioChannelLayout" target="main">SetAudioChannelLayout</a></li>
+<li><a href="AUBase.html#SetGroupParameter" target="main">SetGroupParameter</a></li>
+<li><a href="AUBase.html#SetWantsRenderThreadID" target="main">SetWantsRenderThreadID</a></li>
+<li><a href="AUBase.html#SupportedNumChannels" target="main">SupportedNumChannels</a></li>
+<li><a href="AUBase.html#WantsRenderThreadID" target="main">WantsRenderThreadID</a></li>
+</ul></li>
+<li><b>Parameters : </b><ul>
+<li><a href="AUBase.html#FillInParameterName" target="main">FillInParameterName</a></li>
+<li><a href="AUBase.html#GetParameter" target="main">GetParameter</a></li>
+<li><a href="AUBase.html#GetParameterInfo" target="main">GetParameterInfo</a></li>
+<li><a href="AUBase.html#GetParameterList" target="main">GetParameterList</a></li>
+<li><a href="AUBase.html#GetParameterValueStrings" target="main">GetParameterValueStrings</a></li>
+<li><a href="AUBase.html#RestoreState" target="main">RestoreState</a></li>
+<li><a href="AUBase.html#SaveState" target="main">SaveState</a></li>
+<li><a href="AUBase.html#ScheduleParameter" target="main">ScheduleParameter</a></li>
+<li><a href="AUBase.html#SetParameter" target="main">SetParameter</a></li>
+</ul></li>
+<li><b>Presets : </b><ul>
+<li><a href="AUBase.html#GetPresets" target="main">GetPresets</a></li>
+<li><a href="AUBase.html#NewFactoryPresetSet" target="main">NewFactoryPresetSet</a></li>
+<li><a href="AUBase.html#SetAFactoryPresetAsCurrent" target="main">SetAFactoryPresetAsCurrent</a></li>
+</ul></li>
+<li><b>Properties : </b><ul>
+<li><a href="AUBase.html#AddPropertyListener" target="main">AddPropertyListener</a></li>
+<li><a href="AUBase.html#DispatchGetProperty" target="main">DispatchGetProperty</a></li>
+<li><a href="AUBase.html#DispatchGetPropertyInfo" target="main">DispatchGetPropertyInfo</a></li>
+<li><a href="AUBase.html#DispatchSetProperty" target="main">DispatchSetProperty</a></li>
+<li><a href="AUBase.html#GetLatency" target="main">GetLatency</a></li>
+<li><a href="AUBase.html#GetProperty" target="main">GetProperty</a></li>
+<li><a href="AUBase.html#GetPropertyInfo" target="main">GetPropertyInfo</a></li>
+<li><a href="AUBase.html#GetTailTime" target="main">GetTailTime</a></li>
+<li><a href="AUBase.html#PropertyChanged" target="main">PropertyChanged</a></li>
+<li><a href="AUBase.html#RemovePropertyListener" target="main">RemovePropertyListener</a></li>
+<li><a href="AUBase.html#SetProperty" target="main">SetProperty</a></li>
+<li><a href="AUBase.html#SupportsRampAndTail" target="main">SupportsRampAndTail</a></li>
+</ul></li>
+<li><b>Rendering : </b><ul>
+<li><a href="AUBase.html#DoRender" target="main">DoRender</a></li>
+<li><a href="AUBase.html#DoRenderBus" target="main">DoRenderBus</a></li>
+<li><a href="AUBase.html#DoRenderSlice" target="main">DoRenderSlice</a></li>
+<li><a href="AUBase.html#GetMaxFramesPerSlice" target="main">GetMaxFramesPerSlice</a></li>
+<li><a href="AUBase.html#NeedsToRender" target="main">NeedsToRender</a></li>
+<li><a href="AUBase.html#PullInput" target="main">PullInput</a></li>
+<li><a href="AUBase.html#RemoveRenderNotification" target="main">RemoveRenderNotification</a></li>
+<li><a href="AUBase.html#Render" target="main">Render</a></li>
+<li><a href="AUBase.html#RenderBus" target="main">RenderBus</a></li>
+<li><a href="AUBase.html#Reset" target="main">Reset</a></li>
+<li><a href="AUBase.html#SetMaxFramesPerSlice" target="main">SetMaxFramesPerSlice</a></li>
+<li><a href="AUBase.html#SetRenderNotification" target="main">SetRenderNotification</a></li>
+</ul></li>
+</ul>
+<big><b>Data : </b></big><br>
+<ul><li><b>Elements : </b><ul>
+<li><a href="AUBase.html#mScopes" target="main">mScopes</a></li>
+</ul></li>
+<li><b>Initialization : </b><ul>
+<li><a href="AUBase.html#mBuffersAllocated" target="main">mBuffersAllocated</a></li>
+<li><a href="AUBase.html#mElementsCreated" target="main">mElementsCreated</a></li>
+<li><a href="AUBase.html#mInitialized" target="main">mInitialized</a></li>
+</ul></li>
+<li><b>Other : </b><ul>
+<li><a href="AUBase.html#mAudioUnitAPIVersion" target="main">mAudioUnitAPIVersion</a></li>
+<li><a href="AUBase.html#mContextInfo" target="main">mContextInfo</a></li>
+<li><a href="AUBase.html#mHostCallbackInfo" target="main">mHostCallbackInfo</a></li>
+<li><a href="AUBase.html#mInitNumGroupEls" target="main">mInitNumGroupEls</a></li>
+<li><a href="AUBase.html#mInitNumInputEls" target="main">mInitNumInputEls</a></li>
+<li><a href="AUBase.html#mInitNumOutputEls" target="main">mInitNumOutputEls</a></li>
+<li><a href="AUBase.html#mInitNumPartEls" target="main">mInitNumPartEls</a></li>
+<li><a href="AUBase.html#mRenderThreadID" target="main">mRenderThreadID</a></li>
+<li><a href="AUBase.html#mWantsRenderThreadID" target="main">mWantsRenderThreadID</a></li>
+<li><a href="AUBase.html#sVectorUnitType" target="main">sVectorUnitType</a></li>
+</ul></li>
+<li><b>Parameters : </b><ul>
+<li><a href="AUBase.html#mParamList" target="main">mParamList</a></li>
+</ul></li>
+<li><b>Presets : </b><ul>
+<li><a href="AUBase.html#mCurrentPreset" target="main">mCurrentPreset</a></li>
+</ul></li>
+<li><b>Properties : </b><ul>
+<li><a href="AUBase.html#mPropertyListeners" target="main">mPropertyListeners</a></li>
+</ul></li>
+<li><b>Rendering : </b><ul>
+<li><a href="AUBase.html#mLastRenderError" target="main">mLastRenderError</a></li>
+<li><a href="AUBase.html#mLastRenderedSampleTime" target="main">mLastRenderedSampleTime</a></li>
+<li><a href="AUBase.html#mMaxFramesPerSlice" target="main">mMaxFramesPerSlice</a></li>
+<li><a href="AUBase.html#mRenderCallbacks" target="main">mRenderCallbacks</a></li>
+</ul></li>
+</ul>
+</li></ul>
+</body></html>

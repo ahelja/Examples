@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5239A4B607BA98D5005D1E0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5239A4B507BA98D5005D1E0F /* Info.plist */; };
+		EEDFF09A07B3FD3200097355 /* MyCarbonPrinting.h in Headers */ = {isa = PBXBuildFile; fileRef = F546BF710184788B01A879F5 /* MyCarbonPrinting.h */; };
+		EEDFF09B07B3FD3200097355 /* AppDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = F546BF720184788B01A879F5 /* AppDrawing.h */; };
+		EEDFF09C07B3FD3200097355 /* NavServicesHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4E379E0190CEBB0ACA224A /* NavServicesHandling.h */; };
+		EEDFF09D07B3FD3200097355 /* UIHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4E37A30190D8F60ACA224A /* UIHandling.h */; };
+		EEDFF09F07B3FD3200097355 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		EEDFF0A007B3FD3200097355 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		EEDFF0A107B3FD3200097355 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B4E37990190C94B0ACA224A /* Localizable.strings */; };
+		EEDFF0A307B3FD3200097355 /* MyCarbonPrinting.c in Sources */ = {isa = PBXBuildFile; fileRef = F546BF75018478DC01A879F5 /* MyCarbonPrinting.c */; };
+		EEDFF0A407B3FD3200097355 /* AppDrawing.c in Sources */ = {isa = PBXBuildFile; fileRef = F546BF76018478DC01A879F5 /* AppDrawing.c */; };
+		EEDFF0A507B3FD3200097355 /* UIHandling.c in Sources */ = {isa = PBXBuildFile; fileRef = F546BF78018478DC01A879F5 /* UIHandling.c */; };
+		EEDFF0A607B3FD3200097355 /* NavServicesHandling.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E379C0190CCF40ACA224A /* NavServicesHandling.c */; };
+		EEDFF0A807B3FD3200097355 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		3B1ADCAF01CFF0020ACA224A /* AppUsingSheets README */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AppUsingSheets README"; sourceTree = "<group>"; };
+		3B1ADCB101D004CA0ACA224A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B1ADCB201D004CA0ACA224A /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/main.nib; sourceTree = "<group>"; };
+		3B1ADCB301D004CA0ACA224A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B4E379C0190CCF40ACA224A /* NavServicesHandling.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = NavServicesHandling.c; path = Source/NavServicesHandling.c; sourceTree = "<group>"; };
+		3B4E379E0190CEBB0ACA224A /* NavServicesHandling.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NavServicesHandling.h; path = Headers/NavServicesHandling.h; sourceTree = "<group>"; };
+		3B4E37A30190D8F60ACA224A /* UIHandling.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = UIHandling.h; path = Headers/UIHandling.h; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		5239A4B507BA98D5005D1E0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEDFF0AB07B3FD3200097355 /* SamplePrintApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplePrintApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F546BF710184788B01A879F5 /* MyCarbonPrinting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MyCarbonPrinting.h; path = Headers/MyCarbonPrinting.h; sourceTree = "<group>"; };
+		F546BF720184788B01A879F5 /* AppDrawing.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AppDrawing.h; path = Headers/AppDrawing.h; sourceTree = "<group>"; };
+		F546BF75018478DC01A879F5 /* MyCarbonPrinting.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = MyCarbonPrinting.c; path = Source/MyCarbonPrinting.c; sourceTree = "<group>"; };
+		F546BF76018478DC01A879F5 /* AppDrawing.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = AppDrawing.c; path = Source/AppDrawing.c; sourceTree = "<group>"; };
+		F546BF78018478DC01A879F5 /* UIHandling.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = UIHandling.c; path = Source/UIHandling.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEDFF0A707B3FD3200097355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDFF0A807B3FD3200097355 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEDFF0AB07B3FD3200097355 /* SamplePrintApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* NibBased */ = {
+			isa = PBXGroup;
+			children = (
+				5239A4B507BA98D5005D1E0F /* Info.plist */,
+				3B1ADCAF01CFF0020ACA224A /* AppUsingSheets README */,
+				F53B16910180CBBC01A879F5 /* Headers */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = NibBased;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F546BF75018478DC01A879F5 /* MyCarbonPrinting.c */,
+				F546BF76018478DC01A879F5 /* AppDrawing.c */,
+				3B4E379C0190CCF40ACA224A /* NavServicesHandling.c */,
+				F546BF78018478DC01A879F5 /* UIHandling.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+				3B4E37990190C94B0ACA224A /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		F53B16910180CBBC01A879F5 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F546BF710184788B01A879F5 /* MyCarbonPrinting.h */,
+				F546BF720184788B01A879F5 /* AppDrawing.h */,
+				3B4E379E0190CEBB0ACA224A /* NavServicesHandling.h */,
+				3B4E37A30190D8F60ACA224A /* UIHandling.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EEDFF09907B3FD3200097355 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDFF09A07B3FD3200097355 /* MyCarbonPrinting.h in Headers */,
+				EEDFF09B07B3FD3200097355 /* AppDrawing.h in Headers */,
+				EEDFF09C07B3FD3200097355 /* NavServicesHandling.h in Headers */,
+				EEDFF09D07B3FD3200097355 /* UIHandling.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EEDFF09807B3FD3200097355 /* SamplePrintApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8098FE608FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "SamplePrintApp" */;
+			buildPhases = (
+				EEDFF09907B3FD3200097355 /* Headers */,
+				EEDFF09E07B3FD3200097355 /* Resources */,
+				EEDFF0A207B3FD3200097355 /* Sources */,
+				EEDFF0A707B3FD3200097355 /* Frameworks */,
+				EEDFF0A907B3FD3200097355 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = SamplePrintApp;
+				SECTORDER_FLAGS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = SamplePrintApp;
+			productName = NibBased;
+			productReference = EEDFF0AB07B3FD3200097355 /* SamplePrintApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A8098FEA08FC1E7000BF8803 /* Build configuration list for PBXProject "AppUsingSheets" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 20286C29FDCF999611CA2CEA /* NibBased */;
+			projectDirPath = "";
+			targets = (
+				EEDFF09807B3FD3200097355 /* SamplePrintApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEDFF09E07B3FD3200097355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDFF09F07B3FD3200097355 /* InfoPlist.strings in Resources */,
+				EEDFF0A007B3FD3200097355 /* main.nib in Resources */,
+				EEDFF0A107B3FD3200097355 /* Localizable.strings in Resources */,
+				5239A4B607BA98D5005D1E0F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		EEDFF0A907B3FD3200097355 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEDFF0A207B3FD3200097355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDFF0A307B3FD3200097355 /* MyCarbonPrinting.c in Sources */,
+				EEDFF0A407B3FD3200097355 /* AppDrawing.c in Sources */,
+				EEDFF0A507B3FD3200097355 /* UIHandling.c in Sources */,
+				EEDFF0A607B3FD3200097355 /* NavServicesHandling.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1ADCB201D004CA0ACA224A /* en */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1ADCB101D004CA0ACA224A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B4E37990190C94B0ACA224A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1ADCB301D004CA0ACA224A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8098FE708FC1E7000BF8803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = SamplePrintApp;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		A8098FE808FC1E7000BF8803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = SamplePrintApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A8098FEB08FC1E7000BF8803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		A8098FEC08FC1E7000BF8803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8098FE608FC1E7000BF8803 /* Build configuration list for PBXNativeTarget "SamplePrintApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8098FE708FC1E7000BF8803 /* Debug */,
+				A8098FE808FC1E7000BF8803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8098FEA08FC1E7000BF8803 /* Build configuration list for PBXProject "AppUsingSheets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8098FEB08FC1E7000BF8803 /* Debug */,
+				A8098FEC08FC1E7000BF8803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

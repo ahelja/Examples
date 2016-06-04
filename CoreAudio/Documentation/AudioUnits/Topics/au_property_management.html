@@ -1,0 +1,502 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_property_management?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<a name="AudioUnitProperties"></a>
+<h1>Audio Unit Properties</h1>
+
+<p>This section will describe the different properties that apply to Audio Units.
+These will be dealt with in functional groups as listed below. The propertyID is
+listed with the struct or type that represents the property's value. These
+values are declared in <code>AudioUnit/AudioUnitProperties.h</code>.
+<br></br><b>Important</b> - these property values are always passed by reference to
+both the Get and Set property calls (i.e. you pass a pointer to the type
+specified).</p>
+
+<a name="ConnectionManagement"></a>
+<h2>Connection Management</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_MakeConnection -
+(AudioUnitConnection)</code></li></ul>
+		Use this property with <a href="au_properties.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> to establish a connection
+between the destination unit (which is the Audio Unit that you make the call on)
+and the source unit that is specified in the provided AudioUnitConnection
+struct. In <a href="au_properties.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> you specify kAudioUnitScope_Input for the
+AudioUnitScope parameter. The elementID is the input number upon which the
+connection will be made (this is also redundantly stored in the
+AudioUnitConnection)</p>
+
+	<p><ul><li><code>kAudioUnitProperty_BusCount - (UInt32)</code></li></ul>
+		 The scope is either kAudioUnitScope_Input or kAudioUnitScope_Output to
+both get and set the number of input or output busses. By default many
+Audio Units will create a single input or output bus (elementID), so this call is
+generally used to create additional busses. A typical example would be the
+interleaver or deinterleaver units where their behaviour is determined by the
+number of in or out busses respectively. Other units, such as Mixer units, may
+have already allocated the necessary state to accept a number of inputs, so this
+call can be used to determine that limit.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_SetRenderCallback -
+(AURenderCallbackStruct)</code></li></ul>
+		This is used with a <a href="au_properties.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> call on a V2 Audio Unit (i.e.
+where the Component's type is <b>not</b> kAudioUnitComponentType). This (and the
+corresponding <code>kAudioUnitProperty_SetInputCallback</code> for the V1
+Audio Unit) are used to register a callback with an Audio Unit to provide audio
+data on the specified elementID (bus) of the input scope. When the Audio Unit
+calls the render callback (or input callback for V1), it will provide a buffer
+that the input callback should fill with data. When this property is set the
+caller should also set the stream format property for that elementID (bus) of
+the input scope to tell the Audio Unit what format the data is in that it will be
+providing (see <code>kAudioUnitProperty_StreamFormat</code>).</p>
+<p><ul><li><code>kAudioUnitProperty_SetInputCallback -
+(AudioUnitInputCallback)</code></li></ul>
+		 This is used with a <a href="au_properties.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> call on a V1 Audio Unit (i.e.
+where the Component's type is kAudioUnitComponentType).</p>
+
+<a name="FormatNegotiation"></a>
+<h2>Format Negotiation</h2>
+
+<p><ul><li><code>kAudioUnitProperty_StreamFormat -
+(AudioStreamBasicDescription)</code></li></ul>
+	Typically kAudioUnitScope_Input or kAudioUnitScope_Output are passed in for
+the AudioUnitScope and the bus number (zero based) is specified in the
+elementID. This completely specifies the format that exists on the specified
+scope. Some units can take this property on the kAudioUnitScope_Global, which
+will generally mean either (the common case) that the formats are the same on
+both input and output, or that the audio unit can internally process data in a
+different format than its in and out formats (less typical, but possible). See
+<code>kAudioUnitProperty_SpeakerConfiguration</code> for more complex rendering
+processes involving audio spatialization.</p>
+
+<p><ul><li><code>kAudioUnitProperty_SampleRate - Float64</code></li></ul>
+		 This is a convenience property of the complete
+<code>kAudioUnitProperty_StreamFormat</code> above. However, it is particularly
+useful in those cases where an application wishes to track the sample rate of an
+Audio Unit, for example, in the case of an AudioDeviceID unit where the user may
+change its sample rate independently of the application. This can also be used
+of course to set the sample rate of an input or output element.</p>
+
+<p><ul><li><code>kAudioUnitProperty_SupportedNumChannels -
+(AUChannelInfo)</code></li></ul>
+	If <b>not</b> implemented, the Audio Unit is agnostic about the number of
+channels and only a format setting can validate whether the channels are
+accepted. Generally, this will mean (particularly with Effect Units) that any
+number of channels are usable as long as there is the same number of channels on
+both the input and output scopes. Other units can accept a mismatch in the
+channelisation of their busses, thus this property is provide to allow those
+units to publish the allowable channel configurations that can be accepted on
+input and output.</p>
+
+<p>Returns pairs of num channels (e.g. 1in, 1out, 1in2 out, 2in 2out,
+etc...) If a value of -1 is seen, then this can be interpretted as "any" num
+channels for that scope.</p>
+
+<a name="Parameters"></a>
+<h2>Parameters</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_ParameterList -
+(AudioUnitParameterID)</code></li></ul>
+		The caller specifies the AudioUnitScope to be queried for its
+parameters. Most effect units will define parameters in the global scope (as the
+unit itself applies the parameters to the work it does). A mixer unit will
+typically define parameters in both the input (apply different volumes to each
+input) and output scopes (the overall volume of the mix). The call will return a
+list of AudioUnitParameterIDs, which can then be used with
+<code>kAudioUnitProperty_ParameterInfo</code> to obtain information about the
+parameter.</p>
+
+	<p>Some parameters range may change depending on characteristics of
+the formats the Audio Unit is operating in. For instance, a common case is a Hz
+parameter in an effect, where the real limitation (max value) of this parameter
+will vary based on the sample rate that the unit is operating at. In this case,
+if the sample rate of an audio unit is changed, a notification can be sent for
+this property change and the application can then re-present the new max value
+of the Hz parameter at this new sample rate.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_ParameterInfo -
+(AudioUnitParameterInfo)</code></li></ul>
+		 The caller passes in the desired AudioUnitScope, AudioUnitElement for
+the AudioUnitParameterID in the <a href="au_properties.html#AudioUnitGetProperty"><tt>AudioUnitGetProperty</tt></a> call to obtain information
+about a particular parameter.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_ParameterValueStrings -
+(CFArrayRef)</code></li></ul>
+		The caller passes in the desired AudioUnitScope, AudioUnitElement for
+the AudioUnitParameterID and receives an array of CFString's corresponding to
+the discrete integral values of the parameter. Only valid for parameters which
+have a unit of <code>kAudioUnitParameterUnit_Indexed</code>. Caller is
+responsible for releasing the array, which will in turn release the contained
+CFStrings.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_MIDIControlMapping -
+(AudioUnitMIDIControlMapping)</code></li></ul>
+		The caller passes in global scope, the elementID ignored. It returns an
+array of AudioUnitMIDIControlMapping's, specifying a default mapping of MIDI
+controls and/or NRPN's to Audio Unit scopes/elements/parameters.</p>
+<p>For more detailed information on these properties see the section on <a i.e.="au_params.html#param_info_au" target="content_pane">Parameter Types and
+Information</a>.</p>
+
+<a name="BufferManagement"></a>
+<h2>Buffer Management</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_MaximumFramesPerSlice -
+(UInt32)</code></li></ul>
+		 This call should be used if an Audio Unit is going to be asked a
+particularly large buffer. This then allows the unit to pre-allocate enough
+memory for any computations and output that it may have to have buffers for
+(including the buffer that it can pass to a RenderCallback). This avoids
+allocation in the render process, or a failure in the render process, because
+the unit is asked to produce more data than it is able to at any given time.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_SetExternalBuffer -
+(AudioUnitExternalBuffer)</code></li></ul>
+		 A new property for the V2 Audio Unit, and should be set on a global
+scope. Sophisticated hosting of audio units can use this property to better
+manage the memory usage and performance of a graph of audio units, for instance
+allowing for the reuse of buffers in a chain.</p>
+
+<p>Basically, the behaviour of this is, if set, an Audio Unit can and
+should use this buffer to pull its inputs (as a v2 AU MUST provide a buffer when
+calling the RenderCallback on its inputs. It would use this instead of an
+internally created buffer.</p>
+
+<a name="RenderingProperties"></a>
+<h2>Rendering Properties</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_Latency - (Float64)</code></li></ul>
+		The input to output latency in seconds.  Audio Units which use delay or
+reverb or similar should report zero latency since the delay is part of the
+desired effect (presuming of course that they do not have any start up
+latency!). Look-ahead compressors/limiters, pitch-shifters, phase-vocoders,
+buffering Audio Units, etc. may have an in to out latency on the samples that
+they process, and should report this. Applications can use this to account for
+this latency.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_RampUpTime - (Float64)</code></li></ul>
+		Most Audio Units will report 0.0 for this value.  The value represents
+the amount of time (in seconds) for the internal DSP code to reach steady state
+as soon as an input signal is applied - for example, the amount of time a
+compressor takes to react to its input signal and scale its gain.  This value
+does not have to be exact - it could be a conservative estimate (greater than
+the actual value).</p>
+
+	<p><ul><li><code>kAudioUnitProperty_TailTime - (Float64)</code></li></ul>
+		Many Audio Units will report 0.0 for this value.  This value represents
+the amount of time for the output signal to die down to nothing (defined here as
+less than -120dB of full scale). For example, a reverb effect having a tail
+would take a certain amount of time (say 2 seconds) for its output to go to
+silence after its input signal goes to silence. This value does not have to be
+exact. It could be a conservative estimate (greater than the actual value).</p>
+
+	<p><ul><li><code>kAudioUnitProperty_BypassEffect - (UInt32)</code></li></ul>
+		Can be used to have an effect unit not apply its processing on its
+input, but just pass it through to the output without processing it.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_LastRenderError -
+(OSStatus)</code></li></ul>
+		This is a read only property that returns the last error code returned
+by RenderSlice, and clears it. Rather than polling this property, it's best that
+interested clients install a property listener on it.</p>
+
+	
+<a name="PerformanceProperties"></a>
+<h2>Performance Properties</h2>
+	<p><ul><li><code>kAudioUnitProperty_FastDispatch - (Function
+Pointer)</code></li></ul>
+		The inElement value is the component selector that describes to the unit
+what the function pointer corresponds to. Dispatching through the Component API
+calls has some overhead that can and should be avoided in the rendering and
+parameter setting calls where a real-time context is normally required.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_CPULoad - (Float32)</code></li></ul>
+		Is used to specify to the Audio Unit the desired load that it should
+limit its rendering times to that limit. The property is specified with a range
+of 0 to 1. A value of zero means no limitation - and represents a way to turn
+this limitation off, desirable for instance when doing off-line rendering.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_RenderQuality -
+(UInt32)</code></li></ul>
+		Provides a quality range (0->0x7F) that an audio unit can use to decide
+how high a quality it uses when doing its rendering (which generally trades off
+the amount of CPU that is consumed). Currently both the DLS Synth and the Reverb
+use this to scale back the quality of their rendering. Generally the
+kRenderQuality enum settings should be used, however some units may respond to
+intermediate values. In those that don't, the quality is rounded to the nearest
+value as represented by this enum.</p>
+
+
+<a name="AudioUnitViewandHostProperties"></a>
+<h2>Audio Unit View and Host Properties</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_GetUIComponentList -
+(ComponentDescription)</code></li></ul>
+		Returns an array of ComponentDescriptions specifying AudioUnitCarbonView
+components designed to present user interfaces for editing this Audio Unit.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_ContextName -
+(CFStringRef)</code></li></ul>
+		Allows an application to provide a name that can be presented to the
+user that specifies the context of a specific unit. For instance, I can have 3
+instances of the same reverb unit, 1 on channel 4, the second on channel 5. This
+allows the host to present to the user "Channel 4:AUMatrixReverb".</p>
+
+	<p>The host can either specify any name for the Audio Unit and then
+sets this property to tell the unit the name that is being used to display to
+the unit. Thus, if unit is putting up some UI, it can use this name to be
+consistent. No default name is expected to be provided - in that case the
+ComponentInfo call could be used to provide the name to the user.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_HostCallbacks -
+(HostCallbackInfo)</code></li></ul>
+		Used by the host to provide callbacks that an Audio Unit can use to
+obtain runtime information from the host that it otherwise cannot find out
+about.</p>
+
+	<p>Currently the struct passed in provides a single function pointer
+that is used to determine both the current beat and tempo. This will generally
+be defined to return that information for the particular buffer of audio the
+unit has been asked to render. This is useful for those units that are able to
+match their DSP to a beat based value.. (For instance, a delay time, that is one
+delay per beat, where this changes based on the tempo).</p>
+
+	<p>If the property is supported and a host is using beats (e.g.
+MusicSequence) to schedule events, then the scheduler should query any of its
+units and be prepared to provide that information when asked. When this property
+is set the host may pass in a value for hostUserData. The Audio Unit MUST provide
+this in the inHostUserData argument when calling out to the host.</p>
+
+	
+<a name="AudioUnitPresetsandPersistence"></a>
+<h2>Audio Unit Presets and Persistence</h2>
+
+
+	<p><ul><li><code>kAudioUnitProperty_ClassInfo - (CFPropertyListRef,
+dictionary)</code></li></ul>
+		CFPropertyListRef dictionary is a constrained subset of a CFDictionary
+that uses CFStrings as keys, and whose values can only be CFPropertyListRefs
+(which includes CFStrings, CFNumbers, CFData, or arrays/dictionaries whose
+values and keys are constrained in this same way).</p>
+	<p>The dictionary contains several key/value pairs:
+		<dl><dt>name</dt>
+				<dd>a CFString that is the name associated with the current
+preset</dd>
+			<dt>version</dt>
+				<dd>a CFNumber that represents the version of the class
+data</dd>
+			<dt>type</dt>
+				<dd>a CFNumber that represents the componentType of the
+Audio Unit as defined by its ComponentDescription</dd>
+			<dt>subtype</dt>
+				<dd>a CFNumber that represents the componentSubType of the
+Audio Unit as defined by its ComponentDescription</dd>
+			<dt>manufacturer</dt>
+				<dd>a CFNumber that represents the componentManufacturerID of
+the Audio Unit as defined by its ComponentDescription</dd>
+			<dt>data</dt>
+				<dd>Audio Unit-specific internal state, contained in a CFDataRef
+- currently this is the value of each of the parameters, on each element of each
+scope.</dd></dl></p>
+	<p>On exit from GetProperty, the client owns a reference to the
+CFPropertyListRef. SetProperty does not consume (release) a reference to the
+CFPropertyListRef.</p>
+	<p>The name field is filled in by finding the last preset that was
+currently set on the unit (whether factory or ClassInfo). The name will be
+"Untitled" if the unit has no presets, and the ClassInfo has never been set.</p>
+	<p>The dictionary can be parsed using the appropriate CoreFoundation
+calls. The class data contains enough information to establish a
+ComponentDescription that can then be used to find and open the appropriate
+Audio Unit, open it, and then re-establish the state as saved in the dictionary.
+As this currently only contains the parameter values (for Apple's Audio Units as
+shipped in 10.2) this may not be complete for some units. For example, the name of
+the SoundBank for the DLSMusicDevice is not currently saved in the class data.
+It is anticipated that properties that are needed to reestablish the complete
+state of an Audio Unit will be saved in future release (and consequently, the
+version number of the class data will be revised).</p>
+
+
+	<p><ul><li><code>kAudioUnitProperty_CurrentPreset -
+(AUPreset)</code></li></ul>
+	 	<b>Read:</b><br></br>
+		This can be used by the caller to identify the current preset of the
+unit. This behaves differently for handling both Factory Presets and User states
+(ClassInfo). If the last state set is a factory preset (i.e. no call to set
+ClassInfo has been made), then the AUPreset contains both a valid number
+(greater than or equal to zero) and name (the number and name of the appropriate
+factory preset). If the unit has factory presets, then the first time this
+property is queried, it returns the default preset.</p>	
+
+<p>If a set
+ClassInfo property was the last call made, then the AUPreset will contain a
+number of -1 (signifying User preset), and the name contained within the class
+info. If the name has not been set, you get a default name, such as
+"Untitled".</p>
+	<p><b>Write:</b><br></br>
+		The number in AUPreset is used to select the preset.</p>
+		<p>If presetNumber is equal to or greater than zero (factory preset):<br></br>
+		Set the state of the unit to one of the factory presets. The caller
+provides an AUPreset (from kAudioUnitProperty_FactoryPresets), and this becomes
+the current state of the unit. kAudioUnitErr_InvalidPropertyValue is returned if
+the preset number is not recognised by the Audio Unit.</p>
+		<p>If presetNumber is less than zero: (signifying a user preset)<br></br>
+		Sets the current preset for the unit (including the name supplied in
+presetName). This name will then be saved into the unit's data when getting the
+current state of the ClassInfo property. This allows the name of a state to be
+saved along with the state so it can be shown to the user when that state is
+re-established.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_FactoryPresets -
+(CFArray)</code></li></ul>
+		Returns an array of AUPreset that contain a number and name for each of
+the presets. The number of each preset must be greater (or equal to) zero, and
+the numbers need not be ordered or contiguous. The name of each preset can be
+presented to the user as a means of identifying each preset. The CFArray should
+be released by the caller.</p>
+	
+<a name="InternalAlgorithmConfiguration"></a>
+<h2>Internal Algorithm Configuration</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_ReverbRoomType -
+(UInt32)</code></li></ul>
+		The caller should pass in one of the kReverbRoomType enum values. This
+property is supported by those units that implement the
+<code>kAudioUnitProperty_UsesInternalReverb</code> (DLSMusicDevice, 3DMixer) as
+well as the MatrixReverb unit.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_UsesInternalReverb -
+(UInt32)</code></li></ul>
+		 Some audio units can use an internal reverb. The 3DMixer and the
+DLSMusicDevice both have this property on by default (value==1). To turn this
+off, set the value of this property to zero.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_SRCAlgorithm - (UInt32)</code></li></ul>
+		 The value is an identifier for the sample rate converter algorithm to
+use. This is currently supported by the AUConverter unit and the OutputDevice
+units.</p>
+
+
+<a name="MusicDeviceProperties"></a>
+<h2>MusicDevice Properties</h2>
+
+	<p><ul><li><code>kMusicDeviceProperty_InstrumentCount -
+(UInt32)</code></li></ul>
+		 This returns the number of instruments that are able to be used by a
+MusicDevice Audio Unit. In the DLSMusicDevice this returns the number of
+instruments that are in the DLS or SoundFont collection that is currently set on
+this unit.</p>
+
+	<p><ul><li><code>kMusicDeviceProperty_InstrumentName -
+(char)</code></li></ul>
+		 The MusicDeviceInstrumentID is passed in for the inElement argument,
+and the call returns the name for that instrumentID.</p>
+
+	<p><ul><li><code>kMusicDeviceProperty_InstrumentNumber</code></li></ul>
+		The caller passes in the instrument "index" in the inElement argument.
+This "index" is zero-based and must be less than the number of instruments
+(determined using the kMusicDeviceProperty_InstrumentCount property).</p>
+	<p>The value passed back will be a MusicDeviceInstrumentID. This
+MusicDeviceInstrumentID may then be used with the
+kMusicDeviceProperty_InstrumentName property, or in any of the MusicDevice calls
+which take a MusicDeviceInstrumentID argument.</p>
+	<p>This value is further expected to be formatted in a particular
+manner relating to the bank and patch number values of MIDI. The number is
+formatted as 0xMMLLPP, where the lowest byte is the patch number of the
+instrument, the second byte the LSB of the instrument's bank select, and the 3rd
+byte, the MSB of the instrument's bank select.</p>
+
+	<p><ul><li><code>kMusicDeviceProperty_SoundBankFSSpec -
+(FSSpec)</code></li></ul>
+		 This property is used with a MusicDevice that requires sample data to
+be used as a source for its rendering. The DLSMusicDevice will accept both
+DownLoadable Sound files and Sound Fonts as the sample data for its
+intruments.</p>
+
+	<p><ul><li><code>kMusicDeviceProperty_BankName -
+(CFStringRef)</code></li></ul>
+		 Returns the name of the currently loaded sound bank of the
+DLSMusicDevice. The CFStringRef should be released by the caller.</p>
+
+	<p><ul><li><code>kMusicDeviceProperty_GroupOutputBus -
+(UInt32)</code></li></ul>
+		The caller passes in MusicDeviceGroupID for the AudioUnitElement and
+kAudioUnitScope_Group for the AudioUnitScope. The caller should pre-assign the
+number of busses that are going to be assigned using this call. Then, when this
+property is set, any notes that are produced on a particular group (which can be
+considered as equivalent to a MIDI Channel for the moment) will be produced on
+this assigned bus. This property is implemented by the DLSMusicDevice.</p>
+
+	<p><ul><li><code>kMusicDeviceProperty_MIDIXMLNames -
+(CFURLRef)</code></li></ul>
+		 Returns a URL to a MIDINameDocument describing the MusicDevice's patch,
+note and control names.</p>
+
+
+<a name="AudioDeviceIDProperties"></a>
+<h2>AudioDeviceID Properties</h2>
+
+	<p><ul><li><code>kAudioOutputUnitProperty_CurrentDevice -
+(AudioDeviceID)</code></li></ul>
+		 Will return the AudioDeviceID of any Audio Unit that is set (or will
+track) and AudioDevice. The property can be set on some Audio Units, but not on
+others.</p>
+
+	
+
+<a name="OutputUnitProperties"></a>
+<h2>OutputUnit Properties</h2>
+
+	<p><ul><li><code>kAudioOutputUnitProperty_IsRunning -
+(UInt32)</code></li></ul>
+		 This value is initially set to 0 (false). When <a href="au_state.html#AudioOutputUnitStart"><tt>AudioOutputUnitStart</tt></a> is
+called the value of this property is 1 (true), and when <a href="au_state.html#AudioOutputUnitStop"><tt>AudioOutputUnitStop</tt></a> is
+consequently called the value is again zero. Audio Units do not count the number
+of times that their start or stop methods are called.</p>
+
+
+<a name="3DandSpatializationProperties"></a>
+<h2>3D and Spatialization Properties</h2>
+
+	<p><ul><li><code>kAudioUnitProperty_SpeakerConfiguration -
+(UInt32)</code></li></ul>
+		 This is a property that is typically supported by Audio Units that
+generate content that corresponds to common multi-channel formats. Currently the
+following values are defined for this property. When this property is supported
+it should be used over the <code>kAudioUnitProperty_StreamFormat</code> as the
+stream format doesn't describe sufficient information to the renderer when
+applying spatialization techniques.
+		<dl><dt><code>kSpeakerConfiguration_HeadPhones</code></dt>
+			<dd>Used to signify that the rendering should be based on the user
+listening with headphones</dd>
+		<dt><code>kSpeakerConfiguration_Stereo</code></dt>
+			<dd>Used to signify that stereo speakers will be used. The channel
+ordering is Left/Right. Stereo speakers are generally expected to be 30 degrees
+to the left and right respectively of the listener</dd>
+		<dt><code>kSpeakerConfiguration_Quad</code></dt>
+			<dd>Used to signify that quad speakers will be used. The channel
+ordering is Left/Right/Rear Left/Rear Right. Generally these speakers are place
+in a square around the listener, where the listener is located in the center of
+the square.</dd>
+		<dt><code>kSpeakerConfiguration_5_1</code></dt>
+			<dd>Used to signify a 5.1 speaker configuration. The channel
+ordering is Left/Right/Rear Left/Rear Right/Center/Sub. Often, an Audio Unit
+generating content for this configuration will olny generate 5 channels of data
+(not 6). This channel ordering is expected to be observed for this value (even
+though there are other channel orderings for 5.1 content that are also in common
+usage.</dd></dl></p>
+
+	<p><ul><li><code>kAudioUnitProperty_SpatializationAlgorithm -
+(UInt32)</code></li></ul>
+		 The caller passes in one of the kSpatializationAlgorithm enum values to
+specify which particular algorithm should be applied on the specified scope
+(input for the 3DMixer) and elementID (bus number). This allows different inputs
+to the 3DMixer to have different spatialization algorithms applied to each
+input.</p>
+
+	<p><ul><li><code>kAudioUnitProperty_DopplerShift - (UInt32)</code></li></ul>
+		 A value of 1 will enable the application of DopplerShift to a moving
+source in the 3DMixer unit.</p></body>
+</html>

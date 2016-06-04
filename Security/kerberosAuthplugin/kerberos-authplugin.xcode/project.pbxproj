@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		014CEA420018CDE011CA2923 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		014CEA430018CDE011CA2923 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//010
+//011
+//012
+//013
+//014
+//080
+//081
+//082
+//083
+//084
+		089C1669FE841209C02AAC07 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA420018CDE011CA2923,
+				014CEA430018CDE011CA2923,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 089C166AFE841209C02AAC07;
+			projectDirPath = "";
+			targets = (
+				8D5B49AC048680CD000E48DA,
+				408FC06A084CE38400BFA89E,
+			);
+		};
+		089C166AFE841209C02AAC07 = {
+			children = (
+				407A33D508689C4E00488135,
+				408FC124084D257100BFA89E,
+				408FC06D084CE39200BFA89E,
+				408FC143084E2D2500BFA89E,
+				19C28FB8FE9D52D311CA2CBB,
+			);
+			isa = PBXGroup;
+			name = "kerberos-authplugin";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		08FB77B6FE84183AC02AAC07 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = authplugin.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//190
+//191
+//192
+//193
+//194
+		19C28FB8FE9D52D311CA2CBB = {
+			children = (
+				8D5B49B6048680CD000E48DA,
+				408FC06B084CE38400BFA89E,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//400
+//401
+//402
+//403
+//404
+		400BD588086202FD007AB715 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = "krb5-auth.h";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		400BD589086202FD007AB715 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = "krb5-auth.c";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		400BD58A086202FD007AB715 = {
+			fileRef = 400BD589086202FD007AB715;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		400BD5B90862048D007AB715 = {
+			fileRef = 400BD589086202FD007AB715;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		40416FF808465967001EB4D9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Kerberos.framework;
+			path = /System/Library/Frameworks/Kerberos.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		40416FF908465967001EB4D9 = {
+			fileRef = 40416FF808465967001EB4D9;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4041703108468390001EB4D9 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = dir_svc_client.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4041703208468390001EB4D9 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = dir_svc_client.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4041703308468390001EB4D9 = {
+			fileRef = 4041703108468390001EB4D9;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		407A33D508689C4E00488135 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = README;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		408FC068084CE38400BFA89E = {
+			buildActionMask = 2147483647;
+			files = (
+				408FC07C084D0A2500BFA89E,
+				408FC06F084CE3A300BFA89E,
+				400BD58A086202FD007AB715,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408FC069084CE38400BFA89E = {
+			buildActionMask = 2147483647;
+			files = (
+				408FC0A3084D0CCF00BFA89E,
+				408FC0A4084D0CCF00BFA89E,
+				408FC0A5084D0CCF00BFA89E,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408FC06A084CE38400BFA89E = {
+			buildPhases = (
+				408FC068084CE38400BFA89E,
+				408FC069084CE38400BFA89E,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = test;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = test;
+			productName = test;
+			productReference = 408FC06B084CE38400BFA89E;
+			productType = "com.apple.product-type.tool";
+		};
+		408FC06B084CE38400BFA89E = {
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = test;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		408FC06D084CE39200BFA89E = {
+			children = (
+				408FC06E084CE3A300BFA89E,
+			);
+			isa = PBXGroup;
+			name = test;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		408FC06E084CE3A300BFA89E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			path = test.c;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		408FC06F084CE3A300BFA89E = {
+			fileRef = 408FC06E084CE3A300BFA89E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		408FC07C084D0A2500BFA89E = {
+			fileRef = 4041703108468390001EB4D9;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		408FC0A3084D0CCF00BFA89E = {
+			fileRef = 79FEEC6F0847EEBD0001621B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		408FC0A4084D0CCF00BFA89E = {
+			fileRef = 79FEEC760847EEC60001621B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		408FC0A5084D0CCF00BFA89E = {
+			fileRef = 40416FF808465967001EB4D9;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		408FC124084D257100BFA89E = {
+			children = (
+				4041703208468390001EB4D9,
+				4041703108468390001EB4D9,
+				400BD588086202FD007AB715,
+				400BD589086202FD007AB715,
+				08FB77B6FE84183AC02AAC07,
+				8D5B49B7048680CD000E48DA,
+			);
+			isa = PBXGroup;
+			name = src;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		408FC143084E2D2500BFA89E = {
+			children = (
+				79FEEC6F0847EEBD0001621B,
+				79FEEC760847EEC60001621B,
+				40416FF808465967001EB4D9,
+			);
+			isa = PBXGroup;
+			name = lib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//400
+//401
+//402
+//403
+//404
+//790
+//791
+//792
+//793
+//794
+		79FEEC6F0847EEBD0001621B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreFoundation.framework;
+			path = /System/Library/Frameworks/CoreFoundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		79FEEC700847EEBD0001621B = {
+			fileRef = 79FEEC6F0847EEBD0001621B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		79FEEC760847EEC60001621B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = DirectoryService.framework;
+			path = /System/Library/Frameworks/DirectoryService.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		79FEEC770847EEC60001621B = {
+			fileRef = 79FEEC760847EEC60001621B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//790
+//791
+//792
+//793
+//794
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D5B49AC048680CD000E48DA = {
+			buildPhases = (
+				8D5B49B1048680CD000E48DA,
+				8D5B49B3048680CD000E48DA,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_CORE_SERVICES_DIR)/SecurityAgentPlugins";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = kerberos;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = bundle;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = kerberos;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "kerberos-authplugin";
+			productReference = 8D5B49B6048680CD000E48DA;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D5B49B1048680CD000E48DA = {
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B2048680CD000E48DA,
+				400BD5B90862048D007AB715,
+				4041703308468390001EB4D9,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B2048680CD000E48DA = {
+			fileRef = 08FB77B6FE84183AC02AAC07;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		8D5B49B3048680CD000E48DA = {
+			buildActionMask = 2147483647;
+			files = (
+				40416FF908465967001EB4D9,
+				79FEEC700847EEBD0001621B,
+				79FEEC770847EEC60001621B,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B6048680CD000E48DA = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = kerberos.bundle;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8D5B49B7048680CD000E48DA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 089C1669FE841209C02AAC07;
+}

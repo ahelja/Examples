@@ -1,0 +1,292 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fnil\fcharset77 HelveticaNeue-Bold;\f1\fnil\fcharset77 HelveticaNeue;\f2\fnil\fcharset77 Monaco;
+\f3\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red228\green31\blue34;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\f0\b\fs48 \cf0 AUValidation\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\b0 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs28 \cf0 What
+\f1\b0 :	AUValidation is a command-line tool to test the conformance of a specified AudioUnit to the expected behaviour as expressed by the AudioUnit API.\
+\
+Whilst this tool will test the operational correctness and semantics of the AudioUnit API, it cannot make quality-based assessments of an individual unit's implementation. The tool does not test the UI component(s) of an Audio Unit.\
+\
+It is installed in /usr/bin, so it is automatically available to be executed on the system.\
+\
+
+\f0\b How
+\f1\b0 :		AUValidation can be run on the command line with the syntax\
+		\
+		"auval -v TYPE SUBT MNFR" \
+			to validate a particular unit.  \
+		\
+		To see all units of a particular type, use the syntax\
+		"auval -s TYPE". \
+		\
+		To see all the options (including development options) available \
+		"auval -h"\
+\
+The tool will indicate results with 2 failure modes and a success mode:\
+ERROR: ...\
+	indicates a condition that must be fixed\
+WARNING: ...\
+	indicates a condition that should be fixed\
+\
+The testing is done in several phases and each phase is given a:\
+* * PASS\
+or\
+* * FAIL\
+\
+Pass is given if that phase generated no Errors.\
+\
+After running the tool you can look for these strings in the printout of the tool. In the following examples:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2\fs22 \cf0 [~] % \
+
+\f1\fs28 Represents the terminal prompt\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 The AUVal tool also has the ability to take the component types as hexadecimal numbers. So instead of doing:\
+
+\f2\fs22 [~] % auval -v aufx bpas appl\
+
+\f1\fs28 \
+You can also do:\
+
+\f2\fs22 [~] % auval -v 61756678 62706173 6170706C\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs30 \cf0 Validation Process
+\f1\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\fs28 \cf0 \
+[A] 
+\f3\fs20 \cf2 \CocoaLigature0 VALIDATING AUDIO UNIT
+\f1\fs28 \cf0 \CocoaLigature1 \
+	[1] Component type matches one of Apple's published types for an AudioUnit\
+	[2] Component manufacturer must have at least one capital letter.\
+\
+[B] 
+\f3\fs20 \cf2 \CocoaLigature0 TESTING OPEN TIMES
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Tests both the cold and warm time to open the unit. Open times should be kept to a minimum as these affect the launch and usability times of host applications\
+\
+[C] 
+\f3\fs20 \cf2 \CocoaLigature0 VERIFYING DEFAULT SCOPE FORMATS
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Verifies the published formats of "busses" on input and output scopes. Default format should have a sample rate of 44100Hz and report a channel configuration that the unit supports\
+\
+[D] 
+\f3\fs20 \cf2 \CocoaLigature0 VERIFYING REQUIRED PROPERTIES
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Verifies that the Unit implements the required properties - you'll see these displayed (as these can vary with different AU types, though some properties are required for ALL AUs)\
+\
+[E] 
+\f3\fs20 \cf2 \CocoaLigature0 VERIFYING RECOMMENDED PROPERTIES
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Warns if the Unit does not implement a property that is recommended for that type of unit\
+\
+[F] 
+\f3\fs20 \cf2 \CocoaLigature0 VERIFYING OPTIONAL PROPERTIES
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Verifies the other "official" properties of an AudioUnit and runs standard checks that they are implemented correctly. Reports only those properties that are implemented\
+\
+[G] 
+\f3\fs20 \cf2 \CocoaLigature0 VERIFYING SPECIAL PROPERTIES
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Verifies both the Class Info - that the AU publishes a correct data format for persistence if it supports this\
+	Verifies if the AU publishes a AU View - if so that that view can be found and opened.\
+		Does NOT display UI or do any UI verification\
+	Verifies that factory presets, if implemented, are handled and reported correctly\
+\
+[H] 
+\f3\fs20 \cf2 \CocoaLigature0 PUBLISHED PARAMETER INFO
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Verifies any parameter information that is published by an AudioUnit.\
+\
+[I] 
+\f3\fs20 \cf2 \CocoaLigature0 FORMAT TESTS
+\f1\fs28 \cf0 \CocoaLigature1 \
+	Verifies that the AU is able to be correctly set to the formats (channel information) that it publishes\
+	Verifies that the AU is NOT able to be incorrectly set to channel valences it does NOT support\
+\
+[J] 
+\f3\fs20 \cf2 \CocoaLigature0 RENDER TESTS
+\f1\fs28 \cf0 \CocoaLigature1 \
+	If the format test is passed, it will perform a render tests at different numbers of max frames.\
+	It uses the MaxFramesPerSlice property between these calls to reset the audio unit to verify that the AU is able to correctly respond to these settings.\
+	It will also test the AudioUnitReset call, and the connection semantics\
+	\
+	As the format tests test the configurational characteristics, the render tests do not exhaustively test all possible configurations. Instead, it renders at the default format, and if the unit can, it will also test a mono to mono render as well.\
+\
+	Finally, it will test the setting of both atomic and ramped parameters during rendering.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs30 \cf0 Debugging Options\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\b0\fs28 \cf0 \
+There are two steps that we recommend being done when you are testing your AU with the validation tool. These steps will test the memory usage of your AU, both in the area of memory leaks, and potential memory smashers. They require the definition of environment variables. This can be done either directly in your terminal, or XCode provides an option to define env vars with which your executable is launched.\
+\
+
+\f0\b Testing for Leaks\
+
+\f1\b0 (1) You need to define the following three environment variables:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 	MallocStackLogging=1\
+	MallocScribble=1\
+	MallocGuardEdges=1\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+(2) Execute auval - you'll see something like the following:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 [~] % auval -v aufx bpas appl -w -q\
+malloc[13425]: protecting edges\
+malloc[13425]: recording stacks using standard recorder\
+malloc[13425]: enabling scribbling to detect mods to free blocks\
+\
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+         AU Validation Tool\
+         Version: 1.1.0b9 \
+         Copyright 2003-4, Apple Computer, Inc.\
+\
+         Specify -h (-help) for command options\
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+\
+--------------------------------------------------\
+VALIDATING AUDIO UNIT: 'aufx' - 'bpas' - 'appl'\
+--------------------------------------------------\
+AU VALIDATION SUCCEEDED.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+(3) With the -w command, auval does not terminate. In another shell, you can then execute leaks (using the pid of the current auval process you which to process - in this case its pid== 13425). (The -q option suppresses print out from auval).\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 [~] % leaks 13425\
+Process 13425: 3537 nodes malloced for 477 KB\
+Process 13425: 0 leaks for 0 total leaked bytes.\
+[~] % \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+(4) If your AU has memory leaks, then leaks will give you a collection of stack logs for each leak it detects. The objective here is to produce the 0 leaks result of course.\
+\
+
+\f0\b Testing for Memory Smashers\
+
+\f1\b0 (1) You need to define the following three environment variables\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 	DYLD_FORCE_FLAT_NAMESPACE=1\
+	DYLD_INSERT_LIBRARIES=/usr/lib/libgmalloc.dylib\
+	MALLOC_ALTIVEC_SIZE=1\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+(2) Execute auval - you'll see something like the following:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 [~] % auval -v aufx bpas appl -q\
+Allocations will be placed on 16 byte boundaries.\
+ - Some buffer overruns may not be noticed.\
+ - Applications using AltiVec instructions will work.\
+GuardMalloc-4\
+\
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+         AU Validation Tool\
+         Version: 1.1.0b9 \
+         Copyright 2003-4, Apple Computer, Inc.\
+\
+         Specify -h (-help) for command options\
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+\
+--------------------------------------------------\
+VALIDATING AUDIO UNIT: 'aufx' - 'bpas' - 'appl'\
+--------------------------------------------------\
+AU VALIDATION SUCCEEDED.\
+[~] %\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+Note, that in this case we don't need to specify the -w option (and we're also using the -q option to suppress auval printing)\
+\
+(3) If you're AU has potential memory smashers it WILL crash. The stack trace of the crash will be located to the position where the the problem exists. The objective here of course is not to crash! \
+\
+Often running auval without these malloc debug options enabled, your AU will pass without any detected problems. By adding these additional checks, you ensure that your AU both does not leak memory, or read or write to memory that is not its own.\
+\
+
+\f0\b Tips\
+
+\f1\b0 (1) It can be good to define these two sets of options as an alias in your shell scrips. The following is for the standard bash shell (and is defined in the .profile file that lives in your home directory to initialise each shell instance).\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 alias 	memsmasher="export DYLD_FORCE_FLAT_NAMESPACE=1; export DYLD_INSERT_LIBRARIES=/usr/lib/libgmalloc.dylib; export MALLOC_ALTIVEC_SIZE=1;"\
+alias 	memrecorder="export MallocStackLogging=1; export MallocScribble=1; export MallocGuardEdges=1;"\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+This defines two command aliases (memsmasher and memrecorder) than can be executed in the shell:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 [~] % memsmasher\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\fs28 \cf0 \
+Once executed, that instance of the shell has these options enabled. Anything that is consequently executed in that shell is executed with these options enabled. \
+\
+(2) These can be used in gdb (and defined in a gdb session). Its not recommended that you define these in the shell before you lauch gdb - but rather launch gdb. Then before executing, in the gdb command line define these env variables using the gdb set env command. For instance:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2\fs22 \cf0 (gdb) set env MallocScribble 1\
+(gdb) r  \
+Starting program: /usr/bin/auval \
+malloc[13448]: enabling scribbling to detect mods to free blocks\
+Reading symbols for shared libraries +............... done\
+malloc[13448]: enabling scribbling to detect mods to free blocks\
+\
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+         AU Validation Tool\
+         Version: 1.1.0b9 \
+         Copyright 2003-4, Apple Computer, Inc.\
+\
+         Specify -h (-help) for command options\
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+\
+\
+Program exited normally.\
+(gdb)
+\f1\fs28 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs30 \cf0 Change History\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f1\b0\fs28 \cf0 1.1\
+	Add -vers option to retrieve version\
+	Add Strict options to enable temporary disabling of validation features - see help for details of specific strict options\
+	Change name of executable from AUValidation to auval (and install location to /usr/bin)\
+	\
+1.0.1\
+- fix parameter validation. (1.0 release would not fail an AU for validation errors with some parameter failures)}

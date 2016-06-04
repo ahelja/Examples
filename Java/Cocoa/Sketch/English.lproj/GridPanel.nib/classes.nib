@@ -1,0 +1,37 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                gridColorWellAction = id; 
+                gridSpacingSliderAction = id; 
+                showsGridCheckboxAction = id; 
+                snapsToGridCheckboxAction = id; 
+            }; 
+            CLASS = SKTGridPanelController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                gridColor = id; 
+                gridColorWell = id; 
+                gridSpacing = id; 
+                gridSpacingSlider = id; 
+                gridView = id; 
+                mainWindow = id; 
+                sharedGridPanelController = id; 
+                showsGrid = id; 
+                showsGridCheckbox = id; 
+                snapsToGrid = id; 
+                snapsToGridCheckbox = id; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            CLASS = SKTGridView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; isFlipped = id; isOpaque = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = java.lang.Object; LANGUAGE = Java; }
+    ); 
+    IBVersion = 1; 
+}

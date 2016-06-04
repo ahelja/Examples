@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>MusicDeviceBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">MusicDeviceBase</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "AUBase_fs.html" target="_top">AUBase</a>, <a href = "AUMIDIBase_fs.html" target="_top">AUMIDIBase</a><br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>MusicDeviceBase<br>
+<br><pre>class MusicDeviceBase : public AUBase, public AUMIDIBase </pre>
+<p>This is the base class for audio units which act like synthesizers, having instruments and creating notes.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="MusicDeviceBase">MusicDeviceBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> MusicDeviceBase(
+          ComponentInstance               inInstance,
+          UInt32                          numInputs,
+          UInt32                          numOutputs,
+          UInt32                          numGroups = 0,
+          UInt32                          numParts = 0
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ComponentEntryDispatch">ComponentEntryDispatch</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static ComponentResult ComponentEntryDispatch(
+          ComponentParameters*            params,
+          MusicDeviceBase*                This
+    );</pre>
+<p>Internal. Overridden to support music device selectors such as kMusicDeviceStartNoteSelect</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetInstrumentCount">GetInstrumentCount</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus GetInstrumentCount (UInt32 &outInstCount) const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleNoteOff">HandleNoteOff</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleNoteOff(
+          int                             inChannel,
+          UInt8                           inNoteNumber,
+          UInt8                           inVelocity,
+          long                            inStartFrame
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PrepareInstrument">PrepareInstrument</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult PrepareInstrument(MusicDeviceInstrumentID inInstrument);</pre>
+<p>Pure virtual method.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ReleaseInstrument">ReleaseInstrument</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult ReleaseInstrument(MusicDeviceInstrumentID inInstrument);</pre>
+<p>Pure virtual method.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetProperty">SetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const void*                     inData,
+          UInt32                          inDataSize
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="StartNote">StartNote</a></h4>
+</td><td width="50%">
+<h4>public pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult StartNote(
+          MusicDeviceInstrumentID         inInstrument,
+          MusicDeviceGroupID              inGroupID,
+          NoteInstanceID&                 outNoteInstanceID,
+          UInt32                          inOffsetSampleFrame,
+          const MusicDeviceNoteParams&    inParams
+    ) = 0;</pre>
+<p>Pure virtual method.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="StopNote">StopNote</a></h4>
+</td><td width="50%">
+<h4>public pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult StopNote(
+          MusicDeviceGroupID              inGroupID,
+          NoteInstanceID                  inNoteInstanceID,
+          UInt32                          inOffsetSampleFrame
+    ) = 0;</pre>
+<p>Pure virtual method.</p><br>
+<hr>
+<h3><u>Properties</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetProperty">GetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          void*                           outData
+    );</pre>
+<p>Overridden to dispatch to both superclasses.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetPropertyInfo">GetPropertyInfo</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetPropertyInfo(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          UInt32&                         outDataSize,
+          Boolean&                        outWritable
+    );</pre>
+<p>Overridden to dispatch to both superclasses.</p><br>
+<hr>
+</body></html>

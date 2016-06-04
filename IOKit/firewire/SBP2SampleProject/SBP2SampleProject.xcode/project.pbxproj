@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4D776DED05ED2F13008F1CBB /* all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 14B9BCED08FF3519007C57BF /* Build configuration list for PBXAggregateTarget "all" */;
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = all;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+				4D776E3005ED2F14008F1CBB /* PBXTargetDependency */,
+				4D776E3205ED2F14008F1CBB /* PBXTargetDependency */,
+				4D776E3405ED2F14008F1CBB /* PBXTargetDependency */,
+			);
+			name = all;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4D776DF305ED2F14008F1CBB /* FWDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 10106243FFD746707F000001 /* FWDebugging.h */; };
+		4D776DF405ED2F14008F1CBB /* SBP2SampleDriverInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 0102EDDCFFD790FA7F000001 /* SBP2SampleDriverInterface.h */; };
+		4D776DF505ED2F14008F1CBB /* SBP2SampleDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 013553AB0019092B11CE233C /* SBP2SampleDriver.h */; };
+		4D776DF605ED2F14008F1CBB /* SBP2SampleDriverPlugInGlue.h in Headers */ = {isa = PBXBuildFile; fileRef = 013553AD0019092B11CE233C /* SBP2SampleDriverPlugInGlue.h */; };
+		4D776DF705ED2F14008F1CBB /* SBP2SampleLoginController.h in Headers */ = {isa = PBXBuildFile; fileRef = 013553AF0019092B11CE233C /* SBP2SampleLoginController.h */; };
+		4D776DF805ED2F14008F1CBB /* SBP2SampleORB.h in Headers */ = {isa = PBXBuildFile; fileRef = 013553B10019092B11CE233C /* SBP2SampleORB.h */; };
+		4D776DF905ED2F14008F1CBB /* SBP2SampleORBTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 013553B30019092B11CE233C /* SBP2SampleORBTransport.h */; };
+		4D776DFA05ED2F14008F1CBB /* SBP2SampleSBP2LibGlue.h in Headers */ = {isa = PBXBuildFile; fileRef = 013553B50019092B11CE233C /* SBP2SampleSBP2LibGlue.h */; };
+		4D776DFD05ED2F14008F1CBB /* SBP2SampleDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013553AA0019092B11CE233C /* SBP2SampleDriver.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D776DFE05ED2F14008F1CBB /* SBP2SampleDriverPlugInGlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013553AC0019092B11CE233C /* SBP2SampleDriverPlugInGlue.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D776DFF05ED2F14008F1CBB /* SBP2SampleLoginController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013553AE0019092B11CE233C /* SBP2SampleLoginController.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D776E0005ED2F14008F1CBB /* SBP2SampleORB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013553B00019092B11CE233C /* SBP2SampleORB.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D776E0105ED2F14008F1CBB /* SBP2SampleORBTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013553B20019092B11CE233C /* SBP2SampleORBTransport.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D776E0205ED2F14008F1CBB /* SBP2SampleSBP2LibGlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 013553B40019092B11CE233C /* SBP2SampleSBP2LibGlue.cpp */; settings = {ATTRIBUTES = (); }; };
+		4D776E0405ED2F14008F1CBB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7767967D017E4A7E06CE233C /* CoreFoundation.framework */; };
+		4D776E0505ED2F14008F1CBB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7767967E017E4A7E06CE233C /* IOKit.framework */; };
+		4D776E0C05ED2F14008F1CBB /* LUNController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1010622FFFD745617F000001 /* LUNController.h */; };
+		4D776E0D05ED2F14008F1CBB /* SelectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1010622DFFD745617F000001 /* SelectorController.h */; };
+		4D776E0E05ED2F14008F1CBB /* FWDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 10106243FFD746707F000001 /* FWDebugging.h */; };
+		4D776E0F05ED2F14008F1CBB /* SBP2SampleDriverInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 0102EDDCFFD790FA7F000001 /* SBP2SampleDriverInterface.h */; };
+		4D776E1105ED2F14008F1CBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10106247FFD746707F000001 /* InfoPlist.strings */; };
+		4D776E1205ED2F14008F1CBB /* LUNWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 10106249FFD746707F000001 /* LUNWindow.nib */; };
+		4D776E1305ED2F14008F1CBB /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1010624BFFD746707F000001 /* MainMenu.nib */; };
+		4D776E1405ED2F14008F1CBB /* cancel.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1445D35E04E1CDB80096746D /* cancel.icns */; };
+		4D776E1605ED2F14008F1CBB /* LUNController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10106230FFD745617F000001 /* LUNController.m */; settings = {ATTRIBUTES = (); }; };
+		4D776E1705ED2F14008F1CBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010622CFFD745617F000001 /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4D776E1805ED2F14008F1CBB /* SelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1010622EFFD745617F000001 /* SelectorController.m */; settings = {ATTRIBUTES = (); }; };
+		4D776E1A05ED2F14008F1CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1010625AFFD7481B7F000001 /* Cocoa.framework */; };
+		4D776E1B05ED2F14008F1CBB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7767967D017E4A7E06CE233C /* CoreFoundation.framework */; };
+		4D776E1C05ED2F14008F1CBB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7767967E017E4A7E06CE233C /* IOKit.framework */; };
+		4D776E2605ED2F14008F1CBB /* placeholder.c in Sources */ = {isa = PBXBuildFile; fileRef = 01CBC17000217E0B11CE233E /* placeholder.c */; };
+		4D776E3505ED2F14008F1CBB /* SBP2SampleDriver.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D776E0905ED2F14008F1CBB /* SBP2SampleDriver.plugin */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		074C206B001D77A311CE233C /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.1.1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				VERSIONING_SYSTEM = "apple-generic";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		074C206C001D77A311CE233C /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		4D776E2F05ED2F14008F1CBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10106215FFD741897F000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D776DF105ED2F14008F1CBB;
+			remoteInfo = "SBP2SampleDriver (Upgraded)";
+		};
+		4D776E3105ED2F14008F1CBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10106215FFD741897F000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D776E2205ED2F14008F1CBB;
+			remoteInfo = "SBP2SampleDriver.kext (Upgraded)";
+		};
+		4D776E3305ED2F14008F1CBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10106215FFD741897F000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D776E0A05ED2F14008F1CBB;
+			remoteInfo = "SBP2SampleApp (Upgraded)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D776E2A05ED2F14008F1CBB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4D776E3505ED2F14008F1CBB /* SBP2SampleDriver.plugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0102EDDCFFD790FA7F000001 /* SBP2SampleDriverInterface.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleDriverInterface.h; path = Common/SBP2SampleDriverInterface.h; sourceTree = "<group>"; };
+		013553AA0019092B11CE233C /* SBP2SampleDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = SBP2SampleDriver.cpp; path = SBP2SampleDriver/SBP2SampleDriver.cpp; sourceTree = "<group>"; };
+		013553AB0019092B11CE233C /* SBP2SampleDriver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleDriver.h; path = SBP2SampleDriver/SBP2SampleDriver.h; sourceTree = "<group>"; };
+		013553AC0019092B11CE233C /* SBP2SampleDriverPlugInGlue.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = SBP2SampleDriverPlugInGlue.cpp; path = SBP2SampleDriver/SBP2SampleDriverPlugInGlue.cpp; sourceTree = "<group>"; };
+		013553AD0019092B11CE233C /* SBP2SampleDriverPlugInGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleDriverPlugInGlue.h; path = SBP2SampleDriver/SBP2SampleDriverPlugInGlue.h; sourceTree = "<group>"; };
+		013553AE0019092B11CE233C /* SBP2SampleLoginController.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = SBP2SampleLoginController.cpp; path = SBP2SampleDriver/SBP2SampleLoginController.cpp; sourceTree = "<group>"; };
+		013553AF0019092B11CE233C /* SBP2SampleLoginController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleLoginController.h; path = SBP2SampleDriver/SBP2SampleLoginController.h; sourceTree = "<group>"; };
+		013553B00019092B11CE233C /* SBP2SampleORB.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = SBP2SampleORB.cpp; path = SBP2SampleDriver/SBP2SampleORB.cpp; sourceTree = "<group>"; };
+		013553B10019092B11CE233C /* SBP2SampleORB.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleORB.h; path = SBP2SampleDriver/SBP2SampleORB.h; sourceTree = "<group>"; };
+		013553B20019092B11CE233C /* SBP2SampleORBTransport.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = SBP2SampleORBTransport.cpp; path = SBP2SampleDriver/SBP2SampleORBTransport.cpp; sourceTree = "<group>"; };
+		013553B30019092B11CE233C /* SBP2SampleORBTransport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleORBTransport.h; path = SBP2SampleDriver/SBP2SampleORBTransport.h; sourceTree = "<group>"; };
+		013553B40019092B11CE233C /* SBP2SampleSBP2LibGlue.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = SBP2SampleSBP2LibGlue.cpp; path = SBP2SampleDriver/SBP2SampleSBP2LibGlue.cpp; sourceTree = "<group>"; };
+		013553B50019092B11CE233C /* SBP2SampleSBP2LibGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SBP2SampleSBP2LibGlue.h; path = SBP2SampleDriver/SBP2SampleSBP2LibGlue.h; sourceTree = "<group>"; };
+		01CBC17000217E0B11CE233E /* placeholder.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = placeholder.c; sourceTree = "<group>"; };
+		1010622CFFD745617F000001 /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SBP2SampleApp/main.m; sourceTree = "<group>"; };
+		1010622DFFD745617F000001 /* SelectorController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SelectorController.h; path = SBP2SampleApp/SelectorController.h; sourceTree = "<group>"; };
+		1010622EFFD745617F000001 /* SelectorController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = SelectorController.m; path = SBP2SampleApp/SelectorController.m; sourceTree = "<group>"; };
+		1010622FFFD745617F000001 /* LUNController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LUNController.h; path = SBP2SampleApp/LUNController.h; sourceTree = "<group>"; };
+		10106230FFD745617F000001 /* LUNController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = LUNController.m; path = SBP2SampleApp/LUNController.m; sourceTree = "<group>"; };
+		10106243FFD746707F000001 /* FWDebugging.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FWDebugging.h; path = Common/FWDebugging.h; sourceTree = "<group>"; };
+		10106248FFD746707F000001 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = SBP2SampleApp/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1010624AFFD746707F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = SBP2SampleApp/English.lproj/LUNWindow.nib; sourceTree = "<group>"; };
+		1010624CFFD746707F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = SBP2SampleApp/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		1010625AFFD7481B7F000001 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1445D35F04E1CDB80096746D /* English */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = English; path = SBP2SampleApp/English.lproj/cancel.icns; sourceTree = "<group>"; };
+		14D5B72909002EB5008C9402 /* Info-SBP2SampleApp.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Info-SBP2SampleApp.plist"; sourceTree = "<group>"; };
+		14D5B72A09002EB5008C9402 /* Info-SBP2SampleDriver_kext.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Info-SBP2SampleDriver_kext.plist"; sourceTree = "<group>"; };
+		14D5B72B09002EB5008C9402 /* Info-SBP2SampleDriver.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Info-SBP2SampleDriver.plist"; sourceTree = "<group>"; };
+		4D776E0905ED2F14008F1CBB /* SBP2SampleDriver.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBP2SampleDriver.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D776E2005ED2F14008F1CBB /* SBP2SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBP2SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D776E2E05ED2F14008F1CBB /* SBP2SampleDriver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBP2SampleDriver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA2ED1F037C70D700CE20D6 /* About SBP2SampleProject.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About SBP2SampleProject.rtf"; sourceTree = "<group>"; };
+		7767967D017E4A7E06CE233C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		7767967E017E4A7E06CE233C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D776E0305ED2F14008F1CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776E0405ED2F14008F1CBB /* CoreFoundation.framework in Frameworks */,
+				4D776E0505ED2F14008F1CBB /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E1905ED2F14008F1CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776E1A05ED2F14008F1CBB /* Cocoa.framework in Frameworks */,
+				4D776E1B05ED2F14008F1CBB /* CoreFoundation.framework in Frameworks */,
+				4D776E1C05ED2F14008F1CBB /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E2805ED2F14008F1CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00EF92FC00218CB711CE233E /* SBP2SampleDriver.kext */ = {
+			isa = PBXGroup;
+			children = (
+				01CBC17000217E0B11CE233E /* placeholder.c */,
+			);
+			name = SBP2SampleDriver.kext;
+			sourceTree = "<group>";
+		};
+		10106216FFD741897F000001 = {
+			isa = PBXGroup;
+			children = (
+				4DA2ED1F037C70D700CE20D6 /* About SBP2SampleProject.rtf */,
+				14D5B72909002EB5008C9402 /* Info-SBP2SampleApp.plist */,
+				14D5B72A09002EB5008C9402 /* Info-SBP2SampleDriver_kext.plist */,
+				14D5B72B09002EB5008C9402 /* Info-SBP2SampleDriver.plist */,
+				10106242FFD746707F000001 /* Common */,
+				10106217FFD742397F000001 /* SBP2SampleDriver */,
+				00EF92FC00218CB711CE233E /* SBP2SampleDriver.kext */,
+				10106218FFD742397F000001 /* SBP2SampleApp */,
+				10106219FFD742397F000001 /* Products */,
+				7767967D017E4A7E06CE233C /* CoreFoundation.framework */,
+				7767967E017E4A7E06CE233C /* IOKit.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		10106217FFD742397F000001 /* SBP2SampleDriver */ = {
+			isa = PBXGroup;
+			children = (
+				013553B50019092B11CE233C /* SBP2SampleSBP2LibGlue.h */,
+				013553B40019092B11CE233C /* SBP2SampleSBP2LibGlue.cpp */,
+				013553AF0019092B11CE233C /* SBP2SampleLoginController.h */,
+				013553AE0019092B11CE233C /* SBP2SampleLoginController.cpp */,
+				013553B30019092B11CE233C /* SBP2SampleORBTransport.h */,
+				013553B20019092B11CE233C /* SBP2SampleORBTransport.cpp */,
+				013553B10019092B11CE233C /* SBP2SampleORB.h */,
+				013553B00019092B11CE233C /* SBP2SampleORB.cpp */,
+				013553AA0019092B11CE233C /* SBP2SampleDriver.cpp */,
+				013553AB0019092B11CE233C /* SBP2SampleDriver.h */,
+				013553AC0019092B11CE233C /* SBP2SampleDriverPlugInGlue.cpp */,
+				013553AD0019092B11CE233C /* SBP2SampleDriverPlugInGlue.h */,
+			);
+			name = SBP2SampleDriver;
+			sourceTree = "<group>";
+		};
+		10106218FFD742397F000001 /* SBP2SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				1010622CFFD745617F000001 /* main.m */,
+				1010622DFFD745617F000001 /* SelectorController.h */,
+				1010622EFFD745617F000001 /* SelectorController.m */,
+				1010622FFFD745617F000001 /* LUNController.h */,
+				10106230FFD745617F000001 /* LUNController.m */,
+				10106246FFD746707F000001 /* Resources */,
+				1010625AFFD7481B7F000001 /* Cocoa.framework */,
+			);
+			name = SBP2SampleApp;
+			sourceTree = "<group>";
+		};
+		10106219FFD742397F000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D776E0905ED2F14008F1CBB /* SBP2SampleDriver.plugin */,
+				4D776E2005ED2F14008F1CBB /* SBP2SampleApp.app */,
+				4D776E2E05ED2F14008F1CBB /* SBP2SampleDriver.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10106242FFD746707F000001 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				10106243FFD746707F000001 /* FWDebugging.h */,
+				0102EDDCFFD790FA7F000001 /* SBP2SampleDriverInterface.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		10106246FFD746707F000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10106247FFD746707F000001 /* InfoPlist.strings */,
+				10106249FFD746707F000001 /* LUNWindow.nib */,
+				1010624BFFD746707F000001 /* MainMenu.nib */,
+				1445D35E04E1CDB80096746D /* cancel.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D776DF205ED2F14008F1CBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776DF305ED2F14008F1CBB /* FWDebugging.h in Headers */,
+				4D776DF405ED2F14008F1CBB /* SBP2SampleDriverInterface.h in Headers */,
+				4D776DF505ED2F14008F1CBB /* SBP2SampleDriver.h in Headers */,
+				4D776DF605ED2F14008F1CBB /* SBP2SampleDriverPlugInGlue.h in Headers */,
+				4D776DF705ED2F14008F1CBB /* SBP2SampleLoginController.h in Headers */,
+				4D776DF805ED2F14008F1CBB /* SBP2SampleORB.h in Headers */,
+				4D776DF905ED2F14008F1CBB /* SBP2SampleORBTransport.h in Headers */,
+				4D776DFA05ED2F14008F1CBB /* SBP2SampleSBP2LibGlue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E0B05ED2F14008F1CBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776E0C05ED2F14008F1CBB /* LUNController.h in Headers */,
+				4D776E0D05ED2F14008F1CBB /* SelectorController.h in Headers */,
+				4D776E0E05ED2F14008F1CBB /* FWDebugging.h in Headers */,
+				4D776E0F05ED2F14008F1CBB /* SBP2SampleDriverInterface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E2405ED2F14008F1CBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D776DF105ED2F14008F1CBB /* SBP2SampleDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B9BCE108FF3519007C57BF /* Build configuration list for PBXNativeTarget "SBP2SampleDriver" */;
+			buildPhases = (
+				4D776DF205ED2F14008F1CBB /* Headers */,
+				4D776DFB05ED2F14008F1CBB /* Resources */,
+				4D776DFC05ED2F14008F1CBB /* Sources */,
+				4D776E0305ED2F14008F1CBB /* Frameworks */,
+				4D776E0605ED2F14008F1CBB /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				INFOPLIST_FILE = "Info-SBP2SampleDriver__Upgraded_.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-bundle",
+					"-undefined",
+					error,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SBP2SampleDriver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = plugin;
+			};
+			dependencies = (
+			);
+			name = SBP2SampleDriver;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = SBP2SampleDriver;
+			productReference = 4D776E0905ED2F14008F1CBB /* SBP2SampleDriver.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		4D776E0A05ED2F14008F1CBB /* SBP2SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B9BCE908FF3519007C57BF /* Build configuration list for PBXNativeTarget "SBP2SampleApp" */;
+			buildPhases = (
+				4D776E0B05ED2F14008F1CBB /* Headers */,
+				4D776E1005ED2F14008F1CBB /* Resources */,
+				4D776E1505ED2F14008F1CBB /* Sources */,
+				4D776E1905ED2F14008F1CBB /* Frameworks */,
+				4D776E1D05ED2F14008F1CBB /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				INFOPLIST_FILE = "Info-SBP2SampleApp__Upgraded_.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SBP2SampleApp;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = SBP2SampleApp;
+			productInstallPath = /Developer/Applications/FireWire;
+			productName = SBP2SampleApp;
+			productReference = 4D776E2005ED2F14008F1CBB /* SBP2SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D776E2205ED2F14008F1CBB /* SBP2SampleDriver.kext */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B9BCE508FF3519007C57BF /* Build configuration list for PBXNativeTarget "SBP2SampleDriver.kext" */;
+			buildPhases = (
+				4D776E2305ED2F14008F1CBB /* ShellScript */,
+				4D776E2405ED2F14008F1CBB /* Headers */,
+				4D776E2505ED2F14008F1CBB /* Sources */,
+				4D776E2705ED2F14008F1CBB /* Resources */,
+				4D776E2805ED2F14008F1CBB /* Frameworks */,
+				4D776E2905ED2F14008F1CBB /* ShellScript */,
+				4D776E2A05ED2F14008F1CBB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SBP2SampleDriver_kext__Upgraded_.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				KERNEL_MODULE = YES;
+				LIBRARY_SEARCH_PATHS = "";
+				MODULE_IOKIT = YES;
+				MODULE_NAME = com.apple.driver.SBP2SampleDriver;
+				MODULE_VERSION = 1.1.1;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SBP2SampleDriver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = kext;
+			};
+			dependencies = (
+			);
+			name = SBP2SampleDriver.kext;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = SBP2SampleDriver.kext;
+			productReference = 4D776E2E05ED2F14008F1CBB /* SBP2SampleDriver.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10106215FFD741897F000001 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 14B9BCF108FF3519007C57BF /* Build configuration list for PBXProject "SBP2SampleProject" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				074C206B001D77A311CE233C /* Development */,
+				074C206C001D77A311CE233C /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 10106216FFD741897F000001;
+			productRefGroup = 10106219FFD742397F000001 /* Products */;
+			projectDirPath = "";
+			targets = (
+				4D776DED05ED2F13008F1CBB /* all */,
+				4D776DF105ED2F14008F1CBB /* SBP2SampleDriver */,
+				4D776E0A05ED2F14008F1CBB /* SBP2SampleApp */,
+				4D776E2205ED2F14008F1CBB /* SBP2SampleDriver.kext */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D776DFB05ED2F14008F1CBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E1005ED2F14008F1CBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776E1105ED2F14008F1CBB /* InfoPlist.strings in Resources */,
+				4D776E1205ED2F14008F1CBB /* LUNWindow.nib in Resources */,
+				4D776E1305ED2F14008F1CBB /* MainMenu.nib in Resources */,
+				4D776E1405ED2F14008F1CBB /* cancel.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E2705ED2F14008F1CBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4D776E0605ED2F14008F1CBB /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E1D05ED2F14008F1CBB /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D776E2305ED2F14008F1CBB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "script=\"${SYSTEM_DEVELOPER_DIR}/ProjectBuilder Extras/Kernel Extension Support/KEXTPreprocess\";\nif [ -x \"$script\" ]; then\n    . \"$script\"\nfi";
+		};
+		4D776E2905ED2F14008F1CBB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "script=\"${SYSTEM_DEVELOPER_DIR}/ProjectBuilder Extras/Kernel Extension Support/KEXTPostprocess\";\nif [ -x \"$script\" ]; then\n    . \"$script\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D776DFC05ED2F14008F1CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776DFD05ED2F14008F1CBB /* SBP2SampleDriver.cpp in Sources */,
+				4D776DFE05ED2F14008F1CBB /* SBP2SampleDriverPlugInGlue.cpp in Sources */,
+				4D776DFF05ED2F14008F1CBB /* SBP2SampleLoginController.cpp in Sources */,
+				4D776E0005ED2F14008F1CBB /* SBP2SampleORB.cpp in Sources */,
+				4D776E0105ED2F14008F1CBB /* SBP2SampleORBTransport.cpp in Sources */,
+				4D776E0205ED2F14008F1CBB /* SBP2SampleSBP2LibGlue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E1505ED2F14008F1CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776E1605ED2F14008F1CBB /* LUNController.m in Sources */,
+				4D776E1705ED2F14008F1CBB /* main.m in Sources */,
+				4D776E1805ED2F14008F1CBB /* SelectorController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D776E2505ED2F14008F1CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D776E2605ED2F14008F1CBB /* placeholder.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D776E3005ED2F14008F1CBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D776DF105ED2F14008F1CBB /* SBP2SampleDriver */;
+			targetProxy = 4D776E2F05ED2F14008F1CBB /* PBXContainerItemProxy */;
+		};
+		4D776E3205ED2F14008F1CBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D776E2205ED2F14008F1CBB /* SBP2SampleDriver.kext */;
+			targetProxy = 4D776E3105ED2F14008F1CBB /* PBXContainerItemProxy */;
+		};
+		4D776E3405ED2F14008F1CBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D776E0A05ED2F14008F1CBB /* SBP2SampleApp */;
+			targetProxy = 4D776E3305ED2F14008F1CBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10106247FFD746707F000001 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10106248FFD746707F000001 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		10106249FFD746707F000001 /* LUNWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1010624AFFD746707F000001 /* English */,
+			);
+			name = LUNWindow.nib;
+			sourceTree = "<group>";
+		};
+		1010624BFFD746707F000001 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1010624CFFD746707F000001 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		1445D35E04E1CDB80096746D /* cancel.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1445D35F04E1CDB80096746D /* English */,
+			);
+			name = cancel.icns;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14B9BCE208FF3519007C57BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-SBP2SampleDriver.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				PRODUCT_NAME = SBP2SampleDriver;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		14B9BCE308FF3519007C57BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-SBP2SampleDriver.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				PRODUCT_NAME = SBP2SampleDriver;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+		14B9BCE608FF3519007C57BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-SBP2SampleDriver_kext.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.apple.driver.SBP2SampleDriver;
+				MODULE_VERSION = 1.1.1;
+				PRODUCT_NAME = SBP2SampleDriver;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		14B9BCE708FF3519007C57BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-SBP2SampleDriver_kext.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.apple.driver.SBP2SampleDriver;
+				MODULE_VERSION = 1.1.1;
+				PRODUCT_NAME = SBP2SampleDriver;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		14B9BCEA08FF3519007C57BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-SBP2SampleApp.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				PRODUCT_NAME = SBP2SampleApp;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		14B9BCEB08FF3519007C57BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-SBP2SampleApp.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				PRODUCT_NAME = SBP2SampleApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		14B9BCEE08FF3519007C57BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.1.1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = all;
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		14B9BCEF08FF3519007C57BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = all;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		14B9BCF208FF3519007C57BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		14B9BCF308FF3519007C57BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14B9BCE108FF3519007C57BF /* Build configuration list for PBXNativeTarget "SBP2SampleDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B9BCE208FF3519007C57BF /* Debug */,
+				14B9BCE308FF3519007C57BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14B9BCE508FF3519007C57BF /* Build configuration list for PBXNativeTarget "SBP2SampleDriver.kext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B9BCE608FF3519007C57BF /* Debug */,
+				14B9BCE708FF3519007C57BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14B9BCE908FF3519007C57BF /* Build configuration list for PBXNativeTarget "SBP2SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B9BCEA08FF3519007C57BF /* Debug */,
+				14B9BCEB08FF3519007C57BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14B9BCED08FF3519007C57BF /* Build configuration list for PBXAggregateTarget "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B9BCEE08FF3519007C57BF /* Debug */,
+				14B9BCEF08FF3519007C57BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14B9BCF108FF3519007C57BF /* Build configuration list for PBXProject "SBP2SampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B9BCF208FF3519007C57BF /* Debug */,
+				14B9BCF308FF3519007C57BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10106215FFD741897F000001 /* Project object */;
+}

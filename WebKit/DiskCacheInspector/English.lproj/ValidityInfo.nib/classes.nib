@@ -1,0 +1,27 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = UtilityWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            CLASS = ValidityInfoController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                ageLabel = id; 
+                createdLabel = id; 
+                expiresLabel = id; 
+                freshnessDeterminantLabel = id; 
+                freshnessLifetimeLabel = id; 
+                hasExpiredLabel = id; 
+                lastModifiedLabel = id; 
+                maxAgeLabel = id; 
+                mustRevalidateLabel = id; 
+            }; 
+            SUPERCLASS = UtilityWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

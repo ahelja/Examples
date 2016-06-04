@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {saveAction = id; showSolution = id; shuffle = id; }; 
+            CLASS = TilePuzzleAppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = TilesView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

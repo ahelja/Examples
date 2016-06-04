@@ -1,0 +1,42 @@
+{\rtf1\mac\ansicpg10000{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs36 \cf0 BlastApp\
+
+\f1\b0\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\ql\qnatural
+\cf0 BlastApp is a simple, "blast-everything-in-sight" type of game. The goal of the game is to fly your helicopter through twenty levels of deadly enemy bases, mines, and ships.\
+\
+BlastApp is written in Java, using the Cocoa frameworks. With 80+ java files, BlastApp looks like a large program; it's actually not. Most of the java files are little classes that implement behavior of the various pieces in the game. There are only a few large or important classes:\
+\
+
+\f0\b Game.java
+\f1\b0 : Implements the central game logic, drawing, and event handling. A better design would have split the game logic from the view.\
+
+\f0\b RemainingHelicopters.java
+\f1\b0 : View that displays the number of helicopters remaining.\
+
+\f0\b AwardView.java
+\f1\b0 : View used to print an award certificate upon completion of the game.\
+
+\f0\b BlastAppController.java
+\f1\b0 : Central controller for the app; doesn't do much.\
+
+\f0\b InputIndicator.java
+\f1\b0 : View that displays the current command being executed.\
+
+\f0\b GamePiece.java
+\f1\b0 : Superclass of all game pieces. Manages piece movement, drawing, animation, explosion, collision detection, etc. Some of these behaviors are overridden by the more sophisticated subclasses.\
+
+\f0\b Helicopter.java
+\f1\b0 : Subclass of GamePiece; implements helicopter behavior.\
+
+\f0\b AutoPilotHelicopter.java
+\f1\b0 : Subclass of Helicopter; implements demo helicopter.\
+
+\f0\b Background.java
+\f1\b0 : Subclass of GamePiece; implements the background. The background is read from a file in the app wrapper, or an external file (specified by a default).\
+\
+There are many subclasses of GamePiece, each responsible for implementing the behavior of a given game piece. The organization of the whole hierarchy isn't as well designed as it could be (as the game grew over time to include many additional types of enemy).\
+}

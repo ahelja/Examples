@@ -1,0 +1,42 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                PlugInfoCommand = id; 
+                SubunitInfoCommand = id; 
+                UnitInfoCommand = id; 
+                breakInputPlugConnection = id; 
+                breakOutputPlugConnection = id; 
+                clearLog = id; 
+                getEIA775Info = id; 
+                inputPlugSigFmtCommand = id; 
+                makeInputPlugConnection = id; 
+                makeOutputPlugConnection = id; 
+                outputPlugSigFmtCommand = id; 
+                rereadPlugs = id; 
+                sendAVCCommandBytes = id; 
+            }; 
+            CLASS = PlugBrowserController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_inPlugCount" = id; 
+                "_inPlugList" = id; 
+                "_outPlugCount" = id; 
+                "_outPlugList" = id; 
+                avcCommandBytes = NSTextField; 
+                avcLog = NSTextView; 
+                deviceControllerWindow = NSWindow; 
+                eia775Info = NSButton; 
+                inputPlugChannel = NSPopUpButton; 
+                inputPlugSigFmtPlugNum = NSTextField; 
+                outputPlugChannel = NSPopUpButton; 
+                outputPlugRate = NSPopUpButton; 
+                outputPlugSigFmtPlugNum = NSTextField; 
+                subunitInfoPage = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

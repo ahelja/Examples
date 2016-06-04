@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_type?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_type.html#AUInstruments">AU Instruments</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_type.html#AUEffects">AU Effects</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_type.html#BusLayout">Bus Layout</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_type.html#Sidechainsoralternatebusses">Side chains or alternate busses</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_type.html#FormatConverterUnits">Format Converter Units</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_type.html#ThirdPartyDefinitionofComponentFields">Third Party Definition of Component Fields</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_type.html#MixerUnits">Mixer Units</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="2"><a href="au_type.html#OutputUnits">Output Units</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_type.html#ComponentManufacturer">Component Manufacturer</a></td></tr>
+<tr><td width="32">&nbsp;</td><td width="32">&nbsp;</td><td colspan="1"><a href="au_type.html#ComponentSub-Type">Component Sub-Type</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+<a name="TypesofAudioUnits-ComponentTypes"></a>
+<h1>Types of Audio Units - Component Types</h1>
+
+<p>	There are several types of Audio Units that are associated with different Component types and subTypes.</p> 
+
+<p>	One of the differences between version 1 and 2 Audio Units is the difference in the manner that the Component Manager fields are used.</p>
+
+<p>A version 1 unit always has the component type of <tt>kAudioUnitType</tt> The ComponentDescription's subType was used to describe the general category of Audio Unit - which may or may not have involved additional API for that type of Audio Unit. The manufacturer field was used to specialize the specific type of the Audio Unit. These constants are defined in <tt>AudioUnit/AUNTComponent.h</tt></p>
+
+<p>A version 2 unit is described by several component types. These correspond to a specialization of potentially both functionality and API. The subType field is used to describe the particular functionality of the specified type. The manufacturer field is then used to specify the manufacturer.</p>
+
+<p>Generally, an Audio Unit will do its work singly and this will typically involve a single bus on at least one, if not both, of either the input and output scopes. Thus, an effect unit will have one input and one output bus - though some manufacturers may provide a side chain on the input scope for control or other extra information to the unit. A Stereo Mixer has one output bus, which is the mix, and one to N input busses which are the source data that is mixed. The Output units, even when dealing with a device that has multiple Audio Streams, will coalesce those streams into a single bus, which is then presented to the connection that is made on its input bus. A converter unit should only do a single conversion, from its input bus to its output bus.</p>
+
+<p>The basic assumption here is that a single Audio Unit represents a single process that is being applied to audio data. Even though it is conceivable that, with the multiple busses of Audio Units, a unit can support multiple versions of the same process, we prefer this to be represented as different Audio Units that are configured similarly.</p>
+
+<p>That said, there will be notable exceptions to this general guideline. For instance, one could imagine a unit that does buffering between input and output - allowing the same soure material to be processed by a different chain of effects - this is known as fanouts - a type of connection that is not allowed with a V2 Audio Unit.</p>
+
+<p>A fan out graph that might process in parallel a source signal could look like the following, with a mixer at the end of this to mix the two signals:
+
+<pre>
+                        Source Unit
+                             |
+                        Buffer Unit
+                        |         |
+                    Effects 1     Effects 2
+                        |         |
+                       M  I  X  E  R
+                             |
+</pre></p>
+
+
+<dl>
+	<a name="AUInstruments"></a>
+<h2>AU Instruments</h2>
+		<p>This component type is designed to publish the capabilities of a Software Synthesizer - where the basic concept is to generate notes and provide some means to control them. This component type defines additional API, both an API for MIDI control, as well as an extended API for more flexible control semantics.</p>
+		<b>Component Types</b>
+		<ul>
+			<li>kAudioUnitType_MusicDevice</li>
+		</ul>
+		
+	<a name="AUEffects"></a>
+<h2>AU Effects</h2>
+		<p>An effect unit is the basic component for an Audio Plugin. Generally it corresponds to code that applies some kind of DSP to an audio signal. For example, a reverb or delay unit.</p>
+
+		<b>Component Types</b>
+		<ul>
+			<li>kAudioUnitType_Effect</li>
+			<li>kAudioUnitType_MusicEffect</li>
+			<li>kAudioUnitType_Panner</li>
+			<li>kAudioUnitType_OfflineEffect</li>
+		</ul>
+
+		<p>There are additional specializations of a generic effect unit:</p>
+		<ul>
+		<li><tt>kAudioUnitType_MusicEffect</tt>. This is intended to be used in a similar fashion to an effect unit, but the unit itself can respond to MIDI control messages. As such, this component type shares the MIDI selectors from the MusicDevice Component. It is not intended that this type be used for software synthesizers, but that the MusicDevice component be used for this functionality.</li>
+		<li><tt>kAudioUnitType_Panner</tt>. This is intended to be used for panning types of operations, and as thus contains a requirement of functionality and behaviour that is common amongst all AU's of this type. Futher details can be found in the separate AU Panner document.</li>
+		<li><tt>kAudioUnitType_OfflineEffect</tt>. This AU is expected to be only used in an offline context. For eg, an AU that reverses the samples in a file. The SDK contains an example implementation of a Reverse AU, and additional notes on the particular behaviours and properties of an offline AU.</li>
+		</ul>
+				
+		<a name="BusLayout"></a>
+<h3>Bus Layout</h3>
+		
+		<p>An effect unit will generally have a single bus, represented in the audio unit as a single input element where <tt>elementID</tt> is equal to zero, and a single output element where <tt>elementID</tt> is equal to zero. This is considered to be the main input and output bus of any effect. This capability of any audio unit is published through the <a href="au_properties.html#kAudioUnitProperty_BusCount"><tt>kAudioUnitProperty_BusCount</tt></a> property.</p>
+	
+		<p>A bus in an audio unit can contain n-channels of audio data, and these n-channels are deinterleaved, mono channels. A bus of audio data is represented by the AudioBufferList structure, a structure that contains a collection of AudioBuffers. Thus, each of these buffers will generally contain a single channel of audio data. In the following example we're representing a 4-channel bus with 512 sample frames.
+
+<pre>
+	myAudioBufferList.mNumberBuffers = 4;
+        
+        //set up each of the buffers for each of the channels
+    for (int i = 0; i < 4; ++i) {
+        myAudioBufferList.mBuffers[i].mNumberChannels = 1;
+        myAudioBufferList.mBuffers[i].mDataByteSize = 512 * sizeof(Float32);
+	}
+	// myAudioBufferList.mBuffers[0...3].mData = //this is where the actual audio data will be
+</pre></p>
+	
+	<p>By default, an effect unit is expected to only be able to process audio data that has the same number of channels on input and output, where this number of channels can be <b>any</b> number of channels at the discretion of the host (and the user). If an effect unit has either a restriction (say it can only process stereo input to stereo output), or has some flexibility (say it can process 1 channel of input, but can output 2, 4 or N - where N is any - channels of output), then the audio unit must publish this capability through supporting the <a href="au_properties.html#kAudioUnitProperty_SupportedNumChannels"><tt>kAudioUnitProperty_SupportedNumChannels</tt></a> property.</p>
+
+	<a name="Sidechainsoralternatebusses"></a>
+<h3>Side chains or alternate busses</h3>
+	
+	<p>Any additional input or output busses that an effect publishes can be viewed by the host as side-chains or alternate busses. For instance, some effects can accept an input that will modulate the output, a filter may output partial mixes of its processing on alternate outputs, and so forth.</p>
+
+	<p>There is no formal mechanism in place to tag these I/O busses, nor do we believe that one is required, provided that audio effect-based units adhere to the convention that bus zero is the main in and out bus. However, there is one thing missing that will be addressed in a revision, and that is the ability for an audio unit to publish the name of any of its busses. This would then allow a host to present to the user a means whereby the user can know what kind of input (or output) a given bus will deal with.</p>
+
+	<p>For example, lets say we have an effect that has a side chain that modulates its processing. It could name the first bus (bus zero) as "Main Input", and its second bus (bus one) as "Modulation Input".</p>
+				
+	<a name="FormatConverterUnits"></a>
+<h2>Format Converter Units</h2>
+		<p>Typically, Audio Units deal with PCM data in Float32. However, several format conversions may be desirable within a processing chain, such as the source of a chain that supplies data from a file, sample rate conversion, interleaving and deinterleaving of multiple channels.</p>
+		<b>Component Types</b>
+		<ul>
+			<li>kAudioUnitType_FormatConverter</li>
+		</ul>
+		
+<a name="ThirdPartyDefinitionofComponentFields"></a>
+<h2>Third Party Definition of Component Fields</h2>
+	<p>The above constants define the <tt>componentType</tt> field of the Component Description that is provided with an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>. This leaves a further two fields <tt>componentSubType</tt> and <tt>componentManufacturer</tt> that need to be specified by an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>. These three fields (type, subType and manufacturer ID) must when taken together represent an unique identifier for an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> to be correctly registered by the Component Manager.</p>
+
+	<a name="MixerUnits"></a>
+<h2>Mixer Units</h2>
+		<p>This type is expected to be able to take multiple inputs and to apply a mixing process to generate the output. A common implementation of this will provide just a single output, that will represent the mix of all inputs, though more complex mixers may have multiple outputs and send busses of course.</p>
+		<b>Component Types</b>
+		<ul>
+			<li>kAudioUnitType_Mixer</li>
+		</ul>
+		
+	<a name="OutputUnits"></a>
+<h2>Output Units</h2>
+		<p>Output units have an additional semantic of providing a running state to a generic unit, thus have start and stop functions. There are a number of units that attach to the output streams of an AudioDevice, and file writer units could also implement this API.</p>
+		<b>Component Types</b>
+		<ul>
+			<li>kAudioUnitType_Output</li>
+		</ul>
+
+<a name="ComponentManufacturer"></a>
+<h3>Component Manufacturer</h3>
+	<p>This field should be unique for each company that provides AudioUnits. Apple maintains a registry of id values that are reserved for use with a particular company (for instance, Apple uses the 'appl' ID as its manufacturer ID). In order to ensure the uniqueness of a particular ID, 3rd party companies should register a manufacturerID with Apple. Details can be found at the following URL: <a href="http://developer.apple.com/datatype/creatorcode.html">http://developer.apple.com/datatype/creatorcode.html</a>.</p>
+
+<a name="ComponentSub-Type"></a>
+<h3>Component Sub-Type</h3>
+	<p>This field can be used in any way that a developer sees fit as there is no required sub-type IDs for an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>. There is no reason to restrict usage of this field in any way, nor to apply any heuristics to the values of this field. Thus, this field can be specified using any value that is appropriate for the developer usage. Of course, this is the field that is used to provide uniqueness within the name space that is defined by the type and manuID's. So, for a developer that has a number of effects (for eg. of type 'aufx' and manuID of 'Acme'), this field must specify for each AU an unique value.</p>
+
+	<p>We understand the need to provide richer information to a host application (for eg. provide some way for a host to present all of the reverb like AudioUnits (that are effects units already) to a user). However, we do not believe that the subType field can be used to adaquately reperesent this, and will be looking at alternative means to supply this additional meta-data.</p>
+
+</dl>
+
+<hr></hr>
+
+<a name="//apple_ref/c/tag/Audio Unit Component Type Constants"></a>
+<h3><a name="AudioUnitComponentTypeConstants">Audio Unit Component Type Constants</a></h3>
+
+<pre>enum {
+  kAudioUnitType_Effect              = FOUR_CHAR_CODE('aufx'),
+  kAudioUnitType_MusicEffect         = FOUR_CHAR_CODE('aumf'),
+  kAudioUnitType_MusicDevice         = FOUR_CHAR_CODE('aumu'),
+  kAudioUnitType_Panner              = FOUR_CHAR_CODE('aupn'),
+  kAudioUnitType_OfflineEffect       = FOUR_CHAR_CODE('auol'),
+  kAudioUnitType_Output              = FOUR_CHAR_CODE('auou'),
+  kAudioUnitType_FormatConverter     = FOUR_CHAR_CODE('aufc'),
+  kAudioUnitType_Mixer               = FOUR_CHAR_CODE('aumx'),
+  kAudioUnitManufacturer_Apple       = FOUR_CHAR_CODE('appl')
+};</pre>
+
+<h4>Constants</h4>
+<dl>
+</dl>
+
+
+
+</body>
+</html>

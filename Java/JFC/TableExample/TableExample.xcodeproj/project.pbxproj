@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B92001BDF0A11CA292A /* TableExample.java in Sources */ = {isa = PBXBuildFile; fileRef = 010341B7FEEF030011DB9C8B /* TableExample.java */; };
+		F5E119490340E2D60158D420 /* JDBCAdapter.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119410340E2D60158D420 /* JDBCAdapter.java */; };
+		F5E1194A0340E2D60158D420 /* OldJTable.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119420340E2D60158D420 /* OldJTable.java */; };
+		F5E1194C0340E2D60158D420 /* TableExample2.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119440340E2D60158D420 /* TableExample2.java */; };
+		F5E1194D0340E2D60158D420 /* TableExample3.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119450340E2D60158D420 /* TableExample3.java */; };
+		F5E1194E0340E2D60158D420 /* TableExample4.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119460340E2D60158D420 /* TableExample4.java */; };
+		F5E1194F0340E2D60158D420 /* TableMap.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119470340E2D60158D420 /* TableMap.java */; };
+		F5E119500340E2D60158D420 /* TableSorter.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119480340E2D60158D420 /* TableSorter.java */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B95001BDF0A11CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B96001BDF0A11CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		010341B7FEEF030011DB9C8B /* TableExample.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TableExample.java; sourceTree = "<group>"; };
+		6A8008AE02C7B68F0CC91562 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		6A9ED92C02B0286D0CC91562 /* TableExample.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = TableExample.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E119410340E2D60158D420 /* JDBCAdapter.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = JDBCAdapter.java; sourceTree = "<group>"; };
+		F5E119420340E2D60158D420 /* OldJTable.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = OldJTable.java; sourceTree = "<group>"; };
+		F5E119430340E2D60158D420 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F5E119440340E2D60158D420 /* TableExample2.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TableExample2.java; sourceTree = "<group>"; };
+		F5E119450340E2D60158D420 /* TableExample3.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TableExample3.java; sourceTree = "<group>"; };
+		F5E119460340E2D60158D420 /* TableExample4.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TableExample4.java; sourceTree = "<group>"; };
+		F5E119470340E2D60158D420 /* TableMap.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TableMap.java; sourceTree = "<group>"; };
+		F5E119480340E2D60158D420 /* TableSorter.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = TableSorter.java; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B94001BDF0A11CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				010341B7FEEF030011DB9C8B /* TableExample.java */,
+				F5E119410340E2D60158D420 /* JDBCAdapter.java */,
+				F5E119420340E2D60158D420 /* OldJTable.java */,
+				F5E119440340E2D60158D420 /* TableExample2.java */,
+				F5E119450340E2D60158D420 /* TableExample3.java */,
+				F5E119460340E2D60158D420 /* TableExample4.java */,
+				F5E119470340E2D60158D420 /* TableMap.java */,
+				F5E119480340E2D60158D420 /* TableSorter.java */,
+				F5E119430340E2D60158D420 /* README.txt */,
+				6A8008AE02C7B68F0CC91562 /* Manifest */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A9ED92C02B0286D0CC91562 /* TableExample.jar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B93001BDF0A11CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2343D508DF2E9D008B0BD4 /* Build configuration list for PBXProject "TableExample" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B95001BDF0A11CA292A /* Development */,
+				130F8B96001BDF0A11CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B90001BDF0A11CA292A /* TableExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B91001BDF0A11CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B92001BDF0A11CA292A /* TableExample.java in Sources */,
+				F5E119490340E2D60158D420 /* JDBCAdapter.java in Sources */,
+				F5E1194A0340E2D60158D420 /* OldJTable.java in Sources */,
+				F5E1194C0340E2D60158D420 /* TableExample2.java in Sources */,
+				F5E1194D0340E2D60158D420 /* TableExample3.java in Sources */,
+				F5E1194E0340E2D60158D420 /* TableExample4.java in Sources */,
+				F5E1194F0340E2D60158D420 /* TableMap.java in Sources */,
+				F5E119500340E2D60158D420 /* TableSorter.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B90001BDF0A11CA292A /* TableExample */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2343D108DF2E9D008B0BD4 /* Build configuration list for PBXToolTarget "TableExample" */;
+			buildPhases = (
+				130F8B91001BDF0A11CA292A /* Sources */,
+				130F8B93001BDF0A11CA292A /* JavaArchive */,
+				130F8B94001BDF0A11CA292A /* Frameworks */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = "";
+				INSTALL_PATH = /Developer/Examples/Java/JFC/TableExample;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = TableExample;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = TableExample;
+			productInstallPath = /Developer/Examples/Java/JFC/TableExample;
+			productName = TableExample;
+			productReference = 6A9ED92C02B0286D0CC91562 /* TableExample.jar */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2343D208DF2E9D008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/TableExample;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = TableExample;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2343D308DF2E9D008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/TableExample;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = TableExample;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2343D608DF2E9D008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2343D708DF2E9D008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2343D108DF2E9D008B0BD4 /* Build configuration list for PBXToolTarget "TableExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2343D208DF2E9D008B0BD4 /* Debug */,
+				4C2343D308DF2E9D008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2343D508DF2E9D008B0BD4 /* Build configuration list for PBXProject "TableExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2343D608DF2E9D008B0BD4 /* Debug */,
+				4C2343D708DF2E9D008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

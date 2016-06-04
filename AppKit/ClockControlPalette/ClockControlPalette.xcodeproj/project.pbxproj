@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41DA6CA407B1A98400958F0E /* ClockControlInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = F558FB03027CADAB01CA0E35 /* ClockControlInspector.h */; };
+		41DA6CA507B1A98400958F0E /* ClockControlPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = F558FB05027CADAB01CA0E35 /* ClockControlPalette.h */; };
+		41DA6CA607B1A98400958F0E /* ClockControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C9A38504FAB44100B3D677 /* ClockControl.h */; };
+		41DA6CA807B1A98400958F0E /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = F558FB0C027CADD601CA0E35 /* palette.table */; };
+		41DA6CA907B1A98400958F0E /* ClockControlInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = F558FB0E027CADE201CA0E35 /* ClockControlInspector.nib */; };
+		41DA6CAA07B1A98400958F0E /* ClockControlPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = F558FB10027CADE201CA0E35 /* ClockControlPalette.nib */; };
+		41DA6CAB07B1A98400958F0E /* ClockFace.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 313045D80288746D06CA0E35 /* ClockFace.tiff */; };
+		41DA6CAD07B1A98400958F0E /* ClockControlInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = F558FB04027CADAB01CA0E35 /* ClockControlInspector.m */; };
+		41DA6CAE07B1A98400958F0E /* ClockControlPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = F558FB06027CADAB01CA0E35 /* ClockControlPalette.m */; };
+		41DA6CAF07B1A98400958F0E /* ClockControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C9A38604FAB44100B3D677 /* ClockControl.m */; };
+		41DA6CB107B1A98400958F0E /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */; };
+		41DA6CB207B1A98400958F0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O1";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
+		313045D80288746D06CA0E35 /* ClockFace.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ClockFace.tiff; path = ../ClockControl/ClockFace.tiff; sourceTree = SOURCE_ROOT; };
+		41C9A38504FAB44100B3D677 /* ClockControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClockControl.h; path = ../ClockControl/ClockControl.h; sourceTree = SOURCE_ROOT; };
+		41C9A38604FAB44100B3D677 /* ClockControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockControl.m; path = ../ClockControl/ClockControl.m; sourceTree = SOURCE_ROOT; };
+		41C9A38904FAB46300B3D677 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = SOURCE_ROOT; };
+		41DA6CB407B1A98400958F0E /* Info-ClockControlPalette.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-ClockControlPalette.plist"; sourceTree = "<group>"; };
+		41DA6CB507B1A98400958F0E /* ClockControl.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockControl.palette; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		F558FB03027CADAB01CA0E35 /* ClockControlInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockControlInspector.h; sourceTree = "<group>"; };
+		F558FB04027CADAB01CA0E35 /* ClockControlInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockControlInspector.m; sourceTree = "<group>"; };
+		F558FB05027CADAB01CA0E35 /* ClockControlPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockControlPalette.h; sourceTree = "<group>"; };
+		F558FB06027CADAB01CA0E35 /* ClockControlPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockControlPalette.m; sourceTree = "<group>"; };
+		F558FB0C027CADD601CA0E35 /* palette.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = palette.table; sourceTree = "<group>"; };
+		F558FB0F027CADE201CA0E35 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ClockControlInspector.nib; sourceTree = "<group>"; };
+		F558FB11027CADE201CA0E35 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ClockControlPalette.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41DA6CB007B1A98400958F0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DA6CB107B1A98400958F0E /* InterfaceBuilder.framework in Frameworks */,
+				41DA6CB207B1A98400958F0E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* ClockControl */ = {
+			isa = PBXGroup;
+			children = (
+				41C9A38904FAB46300B3D677 /* README.rtf */,
+				41E0EB1D04FA8D6A00B239E4 /* ReferencedClasses */,
+				F558FB0B027CADAE01CA0E35 /* Classes */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				41DA6CB407B1A98400958F0E /* Info-ClockControlPalette.plist */,
+			);
+			name = ClockControl;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F558FB0E027CADE201CA0E35 /* ClockControlInspector.nib */,
+				F558FB10027CADE201CA0E35 /* ClockControlPalette.nib */,
+				F558FB0C027CADD601CA0E35 /* palette.table */,
+				313045D80288746D06CA0E35 /* ClockFace.tiff */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41DA6CB507B1A98400958F0E /* ClockControl.palette */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41E0EB1D04FA8D6A00B239E4 /* ReferencedClasses */ = {
+			isa = PBXGroup;
+			children = (
+				41C9A38504FAB44100B3D677 /* ClockControl.h */,
+				41C9A38604FAB44100B3D677 /* ClockControl.m */,
+			);
+			name = ReferencedClasses;
+			sourceTree = "<group>";
+		};
+		F558FB0B027CADAE01CA0E35 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F558FB03027CADAB01CA0E35 /* ClockControlInspector.h */,
+				F558FB04027CADAB01CA0E35 /* ClockControlInspector.m */,
+				F558FB05027CADAB01CA0E35 /* ClockControlPalette.h */,
+				F558FB06027CADAB01CA0E35 /* ClockControlPalette.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41DA6CA307B1A98400958F0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DA6CA407B1A98400958F0E /* ClockControlInspector.h in Headers */,
+				41DA6CA507B1A98400958F0E /* ClockControlPalette.h in Headers */,
+				41DA6CA607B1A98400958F0E /* ClockControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		41DA6CA207B1A98400958F0E /* ClockControlPalette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDCC108A2DDEF008AC9B5 /* Build configuration list for PBXNativeTarget "ClockControlPalette" */;
+			buildPhases = (
+				41DA6CA307B1A98400958F0E /* Headers */,
+				41DA6CA707B1A98400958F0E /* Resources */,
+				41DA6CAC07B1A98400958F0E /* Sources */,
+				41DA6CB007B1A98400958F0E /* Frameworks */,
+				41DA6CB307B1A98400958F0E /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_OPTIMIZATION_LEVEL = 1;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-ClockControlPalette.plist";
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bundle";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ClockControl;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = palette;
+			};
+			dependencies = (
+			);
+			name = ClockControlPalette;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = ClockControl;
+			productReference = 41DA6CB507B1A98400958F0E /* ClockControl.palette */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDCC508A2DDEF008AC9B5 /* Build configuration list for PBXProject "ClockControlPalette" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* ClockControl */;
+			projectDirPath = "";
+			targets = (
+				41DA6CA207B1A98400958F0E /* ClockControlPalette */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41DA6CA707B1A98400958F0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DA6CA807B1A98400958F0E /* palette.table in Resources */,
+				41DA6CA907B1A98400958F0E /* ClockControlInspector.nib in Resources */,
+				41DA6CAA07B1A98400958F0E /* ClockControlPalette.nib in Resources */,
+				41DA6CAB07B1A98400958F0E /* ClockFace.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		41DA6CB307B1A98400958F0E /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41DA6CAC07B1A98400958F0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41DA6CAD07B1A98400958F0E /* ClockControlInspector.m in Sources */,
+				41DA6CAE07B1A98400958F0E /* ClockControlPalette.m in Sources */,
+				41DA6CAF07B1A98400958F0E /* ClockControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F558FB0E027CADE201CA0E35 /* ClockControlInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F558FB0F027CADE201CA0E35 /* English */,
+			);
+			name = ClockControlInspector.nib;
+			sourceTree = "<group>";
+		};
+		F558FB10027CADE201CA0E35 /* ClockControlPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F558FB11027CADE201CA0E35 /* English */,
+			);
+			name = ClockControlPalette.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDCC208A2DDEF008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-ClockControlPalette.plist";
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O1";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bundle";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ClockControl;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDCC308A2DDEF008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-ClockControlPalette.plist";
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bundle";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ClockControl;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDCC408A2DDEF008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_OPTIMIZATION_LEVEL = 1;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-ClockControlPalette.plist";
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bundle";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ClockControl;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Default;
+		};
+		B69BDCC608A2DDEF008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		B69BDCC708A2DDEF008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		B69BDCC808A2DDEF008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDCC108A2DDEF008AC9B5 /* Build configuration list for PBXNativeTarget "ClockControlPalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDCC208A2DDEF008AC9B5 /* Development */,
+				B69BDCC308A2DDEF008AC9B5 /* Deployment */,
+				B69BDCC408A2DDEF008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDCC508A2DDEF008AC9B5 /* Build configuration list for PBXProject "ClockControlPalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDCC608A2DDEF008AC9B5 /* Development */,
+				B69BDCC708A2DDEF008AC9B5 /* Deployment */,
+				B69BDCC808A2DDEF008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

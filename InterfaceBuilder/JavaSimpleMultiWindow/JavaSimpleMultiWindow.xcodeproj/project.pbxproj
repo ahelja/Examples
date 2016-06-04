@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* JavaSimpleMultiWindow */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = C01732D708A95E49009534D0 /* Build configuration list for PBXApplicationTarget "JavaSimpleMultiWindow" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+				043355C9FE30361CC02AAC07 /* JavaArchive */,
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = JavaSimpleMultiWindow;
+			productInstallPath = "$(HOME)/Applications";
+			productName = JavaSimpleMultiWindow;
+			productReference = 17587328FF379C6511CA2CBB /* JavaSimpleMultiWindow.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>JavaSimpleMultiWindow</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.InterfaceBuilder.JavaSimpleMultiWindow</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	<key>NSJavaNeeded</key>
+	<string>YES</string>
+	<key>NSJavaPath</key>
+	<array>
+		<string>JavaSimpleMultiWindow.jar</string>
+	</array>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		29B9732CFDCFA39411CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		3F05CE1A01493AD50CCA0D55 /* answerFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F05CE1801493AD50CCA0D55 /* answerFile.plist */; };
+		3F429CE8014586AF0CCA0D55 /* SMW.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F429CE6014586AF0CCA0D55 /* SMW.strings */; };
+		F51DA07400F53F0B01CA0CD5 /* SMWAppDelegate.java in Sources */ = {isa = PBXBuildFile; fileRef = F51DA07300F53F0B01CA0CD5 /* SMWAppDelegate.java */; };
+		F560408300D032A401CA0CD7 /* SMWSecondWindowController.java in Sources */ = {isa = PBXBuildFile; fileRef = F560408200D032A401CA0CD7 /* SMWSecondWindowController.java */; };
+		F560408800D1382701CA0CD7 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = F560408400D1382701CA0CD7 /* MainMenu.nib */; };
+		F560408900D1382701CA0CD7 /* SecondWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = F560408600D1382701CA0CD7 /* SecondWindow.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504D3FFE6A4CB11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		4A9504D4FFE6A4CB11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17587328FF379C6511CA2CBB /* JavaSimpleMultiWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = JavaSimpleMultiWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3F05CE1901493AD50CCA0D55 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = English; path = English.lproj/answerFile.plist; sourceTree = "<group>"; };
+		3F429CE7014586AF0CCA0D55 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/SMW.strings; sourceTree = "<group>"; };
+		F51DA07300F53F0B01CA0CD5 /* SMWAppDelegate.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = SMWAppDelegate.java; sourceTree = "<group>"; };
+		F544191900F6205501CA0CD5 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		F560408200D032A401CA0CD7 /* SMWSecondWindowController.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = SMWSecondWindowController.java; sourceTree = "<group>"; };
+		F560408500D1382701CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		F560408700D1382701CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/SecondWindow.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F560408200D032A401CA0CD7 /* SMWSecondWindowController.java */,
+				F51DA07300F53F0B01CA0CD5 /* SMWAppDelegate.java */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* JavaSimpleMultiWindow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* JavaSimpleMultiWindow */ = {
+			isa = PBXGroup;
+			children = (
+				F544191900F6205501CA0CD5 /* README.rtf */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = JavaSimpleMultiWindow;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F05CE1801493AD50CCA0D55 /* answerFile.plist */,
+				3F429CE6014586AF0CCA0D55 /* SMW.strings */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				F560408400D1382701CA0CD7 /* MainMenu.nib */,
+				F560408600D1382701CA0CD7 /* SecondWindow.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		043355C9FE30361CC02AAC07 /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01732DB08A95E49009534D0 /* Build configuration list for PBXProject "JavaSimpleMultiWindow" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504D3FFE6A4CB11CA0CBA /* Development */,
+				4A9504D4FFE6A4CB11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* JavaSimpleMultiWindow */;
+			projectDirPath = "";
+			targets = (
+				29B97326FDCFA39411CA2CEA /* JavaSimpleMultiWindow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				F560408800D1382701CA0CD7 /* MainMenu.nib in Resources */,
+				F560408900D1382701CA0CD7 /* SecondWindow.nib in Resources */,
+				3F429CE8014586AF0CCA0D55 /* SMW.strings in Resources */,
+				3F05CE1A01493AD50CCA0D55 /* answerFile.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
+				F560408300D032A401CA0CD7 /* SMWSecondWindowController.java in Sources */,
+				F51DA07400F53F0B01CA0CD5 /* SMWAppDelegate.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3F05CE1801493AD50CCA0D55 /* answerFile.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F05CE1901493AD50CCA0D55 /* English */,
+			);
+			name = answerFile.plist;
+			sourceTree = "<group>";
+		};
+		3F429CE6014586AF0CCA0D55 /* SMW.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F429CE7014586AF0CCA0D55 /* English */,
+			);
+			name = SMW.strings;
+			sourceTree = "<group>";
+		};
+		F560408400D1382701CA0CD7 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F560408500D1382701CA0CD7 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		F560408600D1382701CA0CD7 /* SecondWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F560408700D1382701CA0CD7 /* English */,
+			);
+			name = SecondWindow.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01732D808A95E49009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/Applications";
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JavaSimpleMultiWindow;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01732D908A95E49009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/Applications";
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JavaSimpleMultiWindow;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01732DC08A95E49009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01732DD08A95E49009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01732D708A95E49009534D0 /* Build configuration list for PBXApplicationTarget "JavaSimpleMultiWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01732D808A95E49009534D0 /* Debug */,
+				C01732D908A95E49009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01732DB08A95E49009534D0 /* Build configuration list for PBXProject "JavaSimpleMultiWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01732DC08A95E49009534D0 /* Debug */,
+				C01732DD08A95E49009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

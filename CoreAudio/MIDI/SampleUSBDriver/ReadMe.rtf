@@ -1,0 +1,86 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fswiss\fcharset77 Helvetica-Oblique;\f2\fswiss\fcharset77 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10440\viewh12220\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\fs36 \cf0 AppleMIDIUSBDriver and SampleUSBMIDIDriver Release Notes\
+
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 Below are recent bug fixes to the SampleUSBDriver.  Some of these apply to all MIDI drivers, not just USB.  We strongly encourage you to incorporate the fixes in this sample code into any drivers you may have created based on earlier versions of this code.\
+\
+\ul 11 June 2002\ulnone \
+
+\f1\i Non-USB-specific
+\f0\i0 \
+\
+- MIDIDriver's destructor was incorrectly releasing the factory UUID.  This may have contributed to random crashes at MIDIServer shutdown.\
+\
+- Many minor fixes for gcc3 compatibility (most notably, use of std namespace and change in vtable layout revealed a bug in MIDIDriver.cpp).  It is *not* necessary to recompile with gcc3 for binary compatibility, but these changes are required if you wish to use gcc3.\
+\
+- The host time utilities in MIDIDriverUtils.cpp were initializing themselves repeatedly instead of only once.\
+\
+
+\f1\i USB-specific\
+
+\f0\i0 \
+- Fixed a crash in not detecting a failure to open a USBInterface's plugin interface.  (Only affects drivers that communicate using USBInterface instead of USBDevice; all vendor-specific drivers we're aware of use USBDevice).\
+\
+* We now work around a race condition when opening a USBDevice or USBInterface plugin interface.  This was causing hot-plug events to fail to reach the handlers that would add new devices to the MIDI setup.\
+\
+* In USB service termination notifications, the code was incorrectly matching against the previously-present devices using an io_service_t instead of the device's locationID.  This would generally cause hot-unplugging a device to fail to generate the correct call to the driver to close its connection to the device and mark it offline.  Unpredictable failures could follow.  (This was fixed on 19 Nov 2001 but I see that some developers have not incorporated this fix and it's important.)\
+\
+* Added a hook to USBMIDIDeviceManager and USBMIDIDriverBase so that when previously-present devices are identified and matched, the driver now has an overridable method (PreExistingDeviceFound) in which to check for changes to the device's state.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2\b \cf0 \
+\
+DECEMBER 2001 DEVELOPER RELEASE\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ul 20 Nov 2001\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ulnone - Added missing important entry in this log -- second item in 21 Oct entry.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ul 19 Nov 2001\ulnone \
+- (USBMIDIDeviceManager.cpp) In ServiceTerminated, the io_service_t being passed does not match the one sent in ServicePublished, so we were not correctly detecting device disconnection.\
+- Bracket inclusion of Mach headers with extern "C" for compatibility with -cpp-precomp flag.\
+- (USBDevice.cpp) Fix capitalization of CFPlugIn.h - was causing compile error on UFS volumes.\
+\
+\ul 12 Nov 2001\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ulnone - In USBMIDIDriverBase::USBMIDIHandleInput, append sysex to a packet in progress rather than creating a new one (optimization).  Added extensive debug code to verify incoming sysex.\
+- In USBMIDIDriverBase::USBMIDIPrepareOutput, fix bug with sending an unparsed 4-byte USB-MIDI packet -- wasn't advancing dest pointer.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ul 5 Nov 2001 (1.2a1)\ulnone \
+- IOBuffers now have owners\
+- in USBMIDIDevice, reads are now double-buffered for performance\
+- fix to USBMIDIDriverBase::USBMIDIHandleInput that probably only adds robustness to the class spec driver, but fixes a bug (most easily witnessed with sysex) for some Roland vendor-specific devices.\
+\
+\ul 21 Oct 2001\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ulnone - Moved information specific to driver development to SampleUSBDriver/DriverDevelopmentNotes.rtf.\
+- Fixed hang in assembling of outgoing sysex messages in USB class spec format.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ul 19 Oct 2001\ulnone \
+- (USBDevice.cpp) When a USB device is disconnected, we now properly set its associated endpoint refcons to NULL so that we won't crash when trying to send to an endpoint of a disposed device.\
+\
+\ul 16 Oct 2001\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \ulnone SampleUSBMIDIDriver\
+- major rewrite using new class hierarchy, for clearer code and better expandability and code reuse.  Uses new Mac OS 10.1 driver model for proper plug-and-play support.\
+- some performance enhancements\
+- fix USB class spec encoding of transmitted sysex messages; was causing hangs/crashes in the server\
+- install into /Library/Audio/MIDI Drivers instead of /System/Library/Extensions (now recommended for Apple-supplied drivers only)\
+\
+AppleMIDIUSBDriver\
+- rewritten using above-mentioned new class hierarchy, incorporating associated bugfixes\
+- tested and works with a few compliant devices\
+}

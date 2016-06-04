@@ -1,0 +1,1519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Enumerations</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Enumerations</font></h1><br>
+<hr><a name="//apple_ref/c/tag/AudioAggregateDevice"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioAggregateDevice">AudioAggregateDevice</a></h2>
+</td></tr></table><hr>Various constants related to AudioAggregateDevices.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioAggregateDeviceClassID            = 'aagg',
+    kAudioDeviceTransportTypeAggregate      = 'grup',
+    kAudioDeviceTransportTypeAutoAggregate  = 'fgrp'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioAggregateDeviceClassID"><tt>kAudioAggregateDeviceClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioAggregateDevice class.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceTransportTypeAggregate"><tt>kAudioDeviceTransportTypeAggregate</tt></a></dt><dd>The transport type ID (see kAudioDevicePropertyTransportType) for aggregate
+devices.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceTransportTypeAutoAggregate"><tt>kAudioDeviceTransportTypeAutoAggregate</tt></a></dt><dd>The transport type ID (see kAudioDevicePropertyTransportType) for
+automatically generated aggregate devices.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioAggregateDevice Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioAggregateDevice Properties">AudioAggregateDevice Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioAggregateDevices.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioAggregateDevicePropertyFullSubDeviceList      = 'grup',
+    kAudioAggregateDevicePropertyActiveSubDeviceList    = 'agrp',
+    kAudioAggregateDevicePropertyComposition            = 'acom'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioAggregateDevice is a subclass of AudioDevice.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioAggregateDevicePropertyFullSubDeviceList"><tt>kAudioAggregateDevicePropertyFullSubDeviceList</tt></a></dt><dd>A CFArray of CFStrings that contain the UIDs of all the devices, active or
+inactive, contained in the AudioAggregateDevice. The order of the items in
+the array is significant and is used to determine the order of the streams
+of the AudioAggregateDevice. The caller is responsible for releasing the
+returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioAggregateDevicePropertyActiveSubDeviceList"><tt>kAudioAggregateDevicePropertyActiveSubDeviceList</tt></a></dt><dd>An array of AudioObjectIDs for all the active sub-devices in the aggregate
+device.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioAggregateDevicePropertyComposition"><tt>kAudioAggregateDevicePropertyComposition</tt></a></dt><dd>A CFDictionary that describes the composition of the AudioAggregateDevice.
+The keys for this CFDicitionary are defined in the AudioAggregateDevice
+Constants section.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioAggregateDevice Properties Implemented via AudioControl objects"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioAggregateDevice Properties Implemented via AudioControl objects">AudioAggregateDevice Properties Implemented via AudioControl objects</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values for AudioAggregateDevice properties that are
+implemented by AudioControl objects.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioAggregateDevicePropertyMasterSubDevice    = 'amst'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These properties are also accessible by locating the AudioControl object
+attached to the AudioAggregateDevice and using that object to access the
+properties of the control.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioAggregateDevicePropertyMasterSubDevice"><tt>kAudioAggregateDevicePropertyMasterSubDevice</tt></a></dt><dd>A CFString that contains the UID for the AudioDevice that is currently
+serving as the master time base of the aggregate device. This property is
+also implemented by the AudioClockSourceControl on the master element of the
+global scope of the AudioAggregateDevice.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioBooleanControl"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioBooleanControl">AudioBooleanControl</a></h2>
+</td></tr></table><hr>The four char codes that identify the various standard subclasses of
+AudioBooleanControl.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioMuteControlClassID        = 'mute',
+    kAudioSoloControlClassID        = 'solo',
+    kAudioJackControlClassID        = 'jack',
+    kAudioLFEMuteControlClassID     = 'subm',
+    kAudioISubOwnerControlClassID   = 'atch'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Subclass IDs
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioMuteControlClassID"><tt>kAudioMuteControlClassID</tt></a></dt><dd>An AudioBooleanControl where a true value means that mute is enabled making
+that element inaudible.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioSoloControlClassID"><tt>kAudioSoloControlClassID</tt></a></dt><dd>An AudioBooleanControl where a true value means that solo is enabled making
+just that element audible and the other elements inaudible.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioJackControlClassID"><tt>kAudioJackControlClassID</tt></a></dt><dd>An AudioBooleanControl where a true value means something is plugged into
+that element.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLFEMuteControlClassID"><tt>kAudioLFEMuteControlClassID</tt></a></dt><dd>An AudioBooleanControl where true means that mute is enabled make that LFE
+element inaudible. This control is for LFE channels that result from bass
+management such as the iSub. Note that LFE channels that are represented as
+normal audio channels (in other words, real data is being fed them in an
+IOProc) will use kAudioVolumeControlClassID to manipulate mute.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioISubOwnerClassID"><tt>kAudioISubOwnerClassID</tt></a></dt><dd>An AudioBooleanControl where true means that the AudioDevice that
+ultimately owns the control also owns any iSub attached to the CPU.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioBooleanControl Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioBooleanControl Properties">AudioBooleanControl Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioBooleanControls.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioBooleanControlPropertyValue   = 'bcvl'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioBooleanControl is a subclass of AudioControl and has only the single scope,
+kAudioObjectPropertyScopeGlobal, and only a master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioBooleanControlPropertyValue"><tt>kAudioBooleanControlPropertyValue</tt></a></dt><dd>A UInt32 where 0 means false and 1 means true.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioClockSourceControl Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioClockSourceControl Properties">AudioClockSourceControl Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply only to AudioClockSourceControls.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioClockSourceControlPropertyItemKind     = 'clkk'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These properties supplement the regular AudioSelectorControl Properties.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioClockSourceControlPropertyItemKind"><tt>kAudioClockSourceControlPropertyItemKind</tt></a></dt><dd>This property returns a UInt32 that identifies the kind of clock source
+the item ID refers to. The qualifier contains the ID of the item. Values for
+this property are defined in <IOAudio/audio/IOAudioTypes.h>.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioControl"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioControl">AudioControl</a></h2>
+</td></tr></table><hr>The AudioClassIDs that identify the various AudioControl base classes.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioControlClassID            = 'actl',
+    kAudioLevelControlClassID       = 'levl',
+    kAudioBooleanControlClassID     = 'togl',
+    kAudioSelectorControlClassID    = 'slct',
+    kAudioStereoPanControlClassID   = 'span'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Base Class IDs
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioControlClassID"><tt>kAudioControlClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioControl class.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLevelControlClassID"><tt>kAudioLevelControlClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioLevelControl class which is a
+subclass of AudioControl. AudioLevelControls manipulate gain/attenuation
+stages in the hardware.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioBooleanControlClassID"><tt>kAudioBooleanControlClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioBooleanControl class which is a
+subclass of AudioControl. AudioBooleanControls manipulate on/off switches
+in the hardware.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioSelectorControlClassID"><tt>kAudioSelectorControlClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioSelectorControl class which is a
+subclass of AudioControl. AudioSelectorControls manipulate controls that
+have multiple, but discreet values.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStereoPanControlClassID"><tt>kAudioStereoPanControlClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioStereoPanControl class which is
+a subclass of AudioControl. AudioStereoPanControls manipulate the pot for
+panning a mono signal between a left/right pair of outputs.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioControl Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioControl Properties">AudioControl Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioControls.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioControlPropertyScope      = 'cscp',
+    kAudioControlPropertyElement    = 'celm',
+    kAudioControlPropertyVariant    = 'cvar'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioControl is a subclass of AudioObject and has only the single scope,
+kAudioObjectPropertyScopeGlobal, and only a master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioControlPropertyScope"><tt>kAudioControlPropertyScope</tt></a></dt><dd>The AudioObjectPropertyScope in the owning AudioObject that contains the
+AudioControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioControlPropertyElement"><tt>kAudioControlPropertyElement</tt></a></dt><dd>The AudioObjectPropertyElement in the owning AudioObject that contains the
+AudioControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioControlPropertyVariant"><tt>kAudioControlPropertyVariant</tt></a></dt><dd>A UInt32 that identifies the specific variant of an AudioControl. This
+allows the owning AudioObject to support controls that are of the same basic
+class (that is, the values of  kAudioObjectPropertyClass are the same) but
+may control a part of the object for which the standard controls do not
+control.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioDevice"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDevice">AudioDevice</a></h2>
+</td></tr></table><hr>Various constants related to AudioDevices.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioDevicePropertyScopeInput          = 'inpt',
+    kAudioDevicePropertyScopeOutput         = 'outp',
+    kAudioDevicePropertyScopePlayThrough    = 'ptru',
+    kAudioDeviceClassID                     = 'adev',
+    kAudioDeviceUnknown                     = kAudioObjectUnknown
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyScopeInput"><tt>kAudioDevicePropertyScopeInput</tt></a></dt><dd>The AudioObjectPropertyScope for properties that apply to the input signal
+paths of the AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyScopeOutput"><tt>kAudioDevicePropertyScopeOutput</tt></a></dt><dd>The AudioObjectPropertyScope for properties that apply to the output signal
+paths of the AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyScopePlayThrough"><tt>kAudioDevicePropertyScopePlayThrough</tt></a></dt><dd>The AudioObjectPropertyScope for properties that apply to the play through
+signal paths of the AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceClassID"><tt>kAudioDeviceClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioDevice class.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceUnknown"><tt>kAudioDeviceUnknown</tt></a></dt><dd>The AudioObjectID for a nonexistent AudioObject.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioDevice Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDevice Properties">AudioDevice Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to AudioDevice objects.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioDevicePropertyPlugIn                          = 'plug',
+    kAudioDevicePropertyConfigurationApplication        = 'capp',
+    kAudioDevicePropertyDeviceUID                       = 'uid ',
+    kAudioDevicePropertyModelUID                        = 'muid',
+    kAudioDevicePropertyTransportType                   = 'tran',
+    kAudioDevicePropertyRelatedDevices                  = 'akin',
+    kAudioDevicePropertyClockDomain                     = 'clkd',
+    kAudioDevicePropertyDeviceIsAlive                   = 'livn',
+    kAudioDevicePropertyDeviceHasChanged                = 'diff',
+    kAudioDevicePropertyDeviceIsRunning                 = 'goin',
+    kAudioDevicePropertyDeviceIsRunningSomewhere        = 'gone',
+    kAudioDevicePropertyDeviceCanBeDefaultDevice        = 'dflt',
+    kAudioDevicePropertyDeviceCanBeDefaultSystemDevice  = 'sflt',
+    kAudioDeviceProcessorOverload                       = 'over',
+    kAudioDevicePropertyHogMode                         = 'oink',
+    kAudioDevicePropertyLatency                         = 'ltnc',
+    kAudioDevicePropertyBufferFrameSize                 = 'fsiz',
+    kAudioDevicePropertyBufferFrameSizeRange            = 'fsz#',
+    kAudioDevicePropertyUsesVariableBufferFrameSizes    = 'vfsz',
+    kAudioDevicePropertyStreams                         = 'stm#',
+    kAudioDevicePropertySafetyOffset                    = 'saft',
+    kAudioDevicePropertyIOCycleUsage                    = 'ncyc',
+    kAudioDevicePropertyStreamConfiguration             = 'slay',
+    kAudioDevicePropertyIOProcStreamUsage               = 'suse',
+    kAudioDevicePropertyPreferredChannelsForStereo      = 'dch2',
+    kAudioDevicePropertyPreferredChannelLayout          = 'srnd',
+    kAudioDevicePropertyNominalSampleRate               = 'nsrt',
+    kAudioDevicePropertyAvailableNominalSampleRates     = 'nsr#',
+    kAudioDevicePropertyActualSampleRate                = 'asrt'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioDevices have four scopes: kAudioDevicePropertyScopeGlobal,
+kAudioDevicePropertyScopeInput, kAudioDevicePropertyScopeOutput, and
+kAudioDevicePropertyScopePlayThrough. They have a master element and an element
+for each channel in each stream numbered according to the starting channel
+number of each stream.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlugIn"><tt>kAudioDevicePropertyPlugIn</tt></a></dt><dd>An OSStatus that contains any error codes generated by loading the IOAudio
+driver plug-in for the AudioDevice or kAudioHardwareNoError if the plug-in
+loaded successfully. This property only exists for IOAudio-based
+AudioDevices whose driver has specified a plug-in to load.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyConfigurationApplication"><tt>kAudioDevicePropertyConfigurationApplication</tt></a></dt><dd>A CFString that contains the bundle ID for an application that provides a
+GUI for configuring the AudioDevice. By default, the value of this property
+is the bundle ID for Audio MIDI Setup. The caller is responsible for
+releasing the returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceUID"><tt>kAudioDevicePropertyDeviceUID</tt></a></dt><dd>A CFString that contains a persistent identifier for the AudioDevice. An
+AudioDevice's UID is persistent across boots. The content of the UID string
+is a black box and may contain information that is unique to a particular
+instance of an AudioDevice's hardware or unique to the CPU. Therefore they
+are not suitable for passing between CPUs or for identifying similar models
+of hardware.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyModelUID"><tt>kAudioDevicePropertyModelUID</tt></a></dt><dd>A CFString that contains a persistent identifier for the model of an
+AudioDevice. The identifier is unique such that the identifier from two
+AudioDevices are equal if and only if the two AudioDevices are the exact
+same model from the same manufacturer. Further, the identifier has to be the
+same no matter on what machine the AudioDevice appears.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyTransportType"><tt>kAudioDevicePropertyTransportType</tt></a></dt><dd>A UInt32 whose value indicates how the AudioDevice is connected to the CPU.
+Constants for some of the values for this property can be found in
+<IOKit/audio/IOAudioTypes.h>.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyRelatedDevices"><tt>kAudioDevicePropertyRelatedDevices</tt></a></dt><dd>An array of AudioDeviceIDs for devices related to the AudioDevice. For
+IOAudio-based devices, a AudioDevices are related if they share the same
+IOAudioDevice object.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyClockDomain"><tt>kAudioDevicePropertyClockDomain</tt></a></dt><dd>A UInt32 whose value indicates the clock domain to which this AudioDevice
+belongs. AudioDevices that have the same value for this property are able to
+be synchronized in hardware. However, a value of 0 indicates that the clock
+domain for the device is unspecified and should be assumed to be separate
+from every other device's clock domain, even if they have the value of 0 as
+their clock domain as well.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceIsAlive"><tt>kAudioDevicePropertyDeviceIsAlive</tt></a></dt><dd>A UInt32 where a value of 1 means the device is ready and available and 0
+means the device is usable and will most likely go away shortly.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceHasChanged"><tt>kAudioDevicePropertyDeviceHasChanged</tt></a></dt><dd>The type of this property is a UInt32, but it's value has no meaning. This
+property exists so that clients can listen to it and be told when the
+configuration of the AudioDevice has changed in ways that cannot otherwise
+be conveyed through other notifications. In response to this notification,
+clients should re-evaluate everything they need to know about the device,
+particularly the layout and values of the controls.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceIsRunning"><tt>kAudioDevicePropertyDeviceIsRunning</tt></a></dt><dd>A UInt32 where a value of 0 means the AudioDevice is not performing IO and
+a value of 1 means that it is. Note that the device can be running even if
+there are no active IOProcs such as by calling AudioDeviceStart() and
+passing a NULL IOProc. Note that the notification for this property is
+usually sent from the AudioDevice's IO thread.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceIsRunningSomewhere"><tt>kAudioDevicePropertyDeviceIsRunningSomewhere</tt></a></dt><dd>A UInt32 where 1 means that the AudioDevice is running in at least one
+process on the system and 0 means that it isn't running at all.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceCanBeDefaultDevice"><tt>kAudioDevicePropertyDeviceCanBeDefaultDevice</tt></a></dt><dd>A UInt32 where 1 means that the AudioDevice is a possible selection for
+kAudioHardwarePropertyDefaultInputDevice or
+kAudioHardwarePropertyDefaultOutputDevice depending on the scope.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceCanBeDefaultSystemDevice"><tt>kAudioDevicePropertyDeviceCanBeDefaultSystemDevice</tt></a></dt><dd>A UInt32 where 1 means that the AudioDevice is a possible selection for
+kAudioHardwarePropertyDefaultSystemOutputDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceProcessorOverload"><tt>kAudioDeviceProcessorOverload</tt></a></dt><dd>A UInt32 where the value has no meaning. This property exists so that
+clients can be notified when the AudioDevice detects that an IO cycle has
+run past it's deadline. Note that the notification for this property is
+usually sent from the AudioDevice's IO thread.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyHogMode"><tt>kAudioDevicePropertyHogMode</tt></a></dt><dd>A pid_t indicating the process that currently owns exclusive access to the
+AudioDevice or a value of -1 indicating that the device is currently
+available to all processes. If the AudioDevice is in a non-mixable mode,
+the HAL will automatically take hog mode on behalf of the first process to
+start an IOProc.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyLatency"><tt>kAudioDevicePropertyLatency</tt></a></dt><dd>A UInt32 containing the number of frames of latency in the AudioDevice. Note
+that input and output latency may differ. Further, the AudioDevice's
+AudioStreams may have additional latency so they should be queried as well.
+If both the device and the stream say they have latency, then the total
+latency for the stream is the device latency summed with the stream latency.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyBufferFrameSize"><tt>kAudioDevicePropertyBufferFrameSize</tt></a></dt><dd>A UInt32 whose value indicates the number of frames in the IO buffers.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyBufferFrameSizeRange"><tt>kAudioDevicePropertyBufferFrameSizeRange</tt></a></dt><dd>An AudioValueRange indicating the minimum and maximum values, inclusive, for
+kAudioDevicePropertyBufferFrameSize.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyUsesVariableBufferFrameSizes"><tt>kAudioDevicePropertyUsesVariableBufferFrameSizes</tt></a></dt><dd>A UInt32 that, if implemented by a device, indicates that the sizes of the
+buffers passed to an IOProc will vary by a small amount. The value of this
+property will indicate the largest buffer that will be passed and
+kAudioDevicePropertyBufferFrameSize will indicate the smallest buffer that
+will get passed to the IOProc. The usage of this property is narrowed to
+only allow for devices whose buffer sizes vary by small amounts greater than
+kAudioDevicePropertyBufferFrameSize. It is not intended to be a license for
+devices to be able to send buffers however they please. Rather, it is
+intended to allow for hardware whose natural rhythms lead to this necessity.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStreams"><tt>kAudioDevicePropertyStreams</tt></a></dt><dd>An array of AudioStreamIDs that represent the AudioStreams of the
+AudioDevice. Note that if a notification is received for this property, any
+cached AudioStreamIDs for the device become invalid and need to be
+re-fetched.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySafetyOffset"><tt>kAudioDevicePropertySafetyOffset</tt></a></dt><dd>A UInt32 whose value indicates the number for frames in ahead (for output)
+or behind (for input the current hardware position that is safe to do IO.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyIOCycleUsage"><tt>kAudioDevicePropertyIOCycleUsage</tt></a></dt><dd>A Float32 whose range is from 0 to 1. This value indicates how much of the
+client portion of the IO cycle the process will use. The client portion of
+the IO cycle is the portion of the cycle in which the device calls the
+IOProcs so this property does not the apply to the duration of the entire
+cycle.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStreamConfiguration"><tt>kAudioDevicePropertyStreamConfiguration</tt></a></dt><dd>This property returns the stream configuration of the device in an
+AudioBufferList (with the buffer pointers set to NULL) which describes the
+list of streams and the number of channels in each stream. This corresponds
+to what will be passed into the IOProc.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyIOProcStreamUsage"><tt>kAudioDevicePropertyIOProcStreamUsage</tt></a></dt><dd>An AudioHardwareIOProcStreamUsage structure which details the stream usage
+of a given IO proc. If a stream is marked as not being used, the given
+IOProc will see a corresponding NULL buffer pointer in the AudioBufferList
+passed to it's IO proc. Note that the number of streams detailed in the
+AudioHardwareIOProcStreamUsage must include all the streams of that
+direction on the device. Also, when getting the value of the property, one
+must fill out the mIOProc field of the AudioHardwareIOProcStreamUsage with
+the address of the of the IOProc whose stream usage is to be retrieved.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPreferredChannelsForStereo"><tt>kAudioDevicePropertyPreferredChannelsForStereo</tt></a></dt><dd>An array of two UInt32s, the first for the left channel, the second for the
+right channel, that indicate the channel numbers to use for stereo IO on the
+device. The value of this property can be different for input and output and
+there are no restrictions on the channel numbers that can be used.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPreferredChannelLayout"><tt>kAudioDevicePropertyPreferredChannelLayout</tt></a></dt><dd>An AudioChannelLayout that indicates how each channel of the AudioDevice
+should be used.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyNominalSampleRate"><tt>kAudioDevicePropertyNominalSampleRate</tt></a></dt><dd>A Float64 that indicates the current nominal sample rate of the AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyAvailableNominalSampleRates"><tt>kAudioDevicePropertyAvailableNominalSampleRates</tt></a></dt><dd>An array of AudioValueRange structs that indicates the valid ranges for the
+nominal sample rate of the AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyActualSampleRate"><tt>kAudioDevicePropertyActualSampleRate</tt></a></dt><dd>A Float64 that indicates the current actual sample rate of the AudioDevice
+as measured by it's time stamps.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioDevice Properties Implemented via AudioControl objects"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDevice Properties Implemented via AudioControl objects">AudioDevice Properties Implemented via AudioControl objects</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values for AudioDevice properties that are
+implemented by AudioControl objects.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioDevicePropertyJackIsConnected                             = 'jack',
+    kAudioDevicePropertyVolumeScalar                                = 'volm',
+    kAudioDevicePropertyVolumeDecibels                              = 'vold',
+    kAudioDevicePropertyVolumeRangeDecibels                         = 'vdb#',
+    kAudioDevicePropertyVolumeScalarToDecibels                      = 'v2db',
+    kAudioDevicePropertyVolumeDecibelsToScalar                      = 'db2v',
+    kAudioDevicePropertyStereoPan                                   = 'span',
+    kAudioDevicePropertyStereoPanChannels                           = 'spn#',
+    kAudioDevicePropertyMute                                        = 'mute',
+    kAudioDevicePropertySolo                                        = 'solo',
+    kAudioDevicePropertyDataSource                                  = 'ssrc',
+    kAudioDevicePropertyDataSources                                 = 'ssc#',
+    kAudioDevicePropertyDataSourceNameForIDCFString                 = 'lscn',
+    kAudioDevicePropertyClockSource                                 = 'csrc',
+    kAudioDevicePropertyClockSources                                = 'csc#',
+    kAudioDevicePropertyClockSourceNameForIDCFString                = 'lcsn',
+    kAudioDevicePropertyClockSourceKindForID                        = 'csck',
+    kAudioDevicePropertyPlayThru                                    = 'thru',
+    kAudioDevicePropertyPlayThruSolo                                = 'thrs',
+    kAudioDevicePropertyPlayThruVolumeScalar                        = 'mvsc',
+    kAudioDevicePropertyPlayThruVolumeDecibels                      = 'mvdb',
+    kAudioDevicePropertyPlayThruVolumeRangeDecibels                 = 'mvd#',
+    kAudioDevicePropertyPlayThruVolumeScalarToDecibels              = 'mv2d',
+    kAudioDevicePropertyPlayThruVolumeDecibelsToScalar              = 'mv2s',
+    kAudioDevicePropertyPlayThruStereoPan                           = 'mspn',
+    kAudioDevicePropertyPlayThruStereoPanChannels                   = 'msp#',
+    kAudioDevicePropertyPlayThruDestination                         = 'mdds',
+    kAudioDevicePropertyPlayThruDestinations                        = 'mdd#',
+    kAudioDevicePropertyPlayThruDestinationNameForIDCFString        = 'mddc',
+    kAudioDevicePropertyChannelNominalLineLevel                     = 'nlvl',
+    kAudioDevicePropertyChannelNominalLineLevels                    = 'nlv#',
+    kAudioDevicePropertyChannelNominalLineLevelNameForIDCFString    = 'lcnl',
+    kAudioDevicePropertyDriverShouldOwniSub                         = 'isub',
+    kAudioDevicePropertySubVolumeScalar                             = 'svlm',
+    kAudioDevicePropertySubVolumeDecibels                           = 'svld',
+    kAudioDevicePropertySubVolumeRangeDecibels                      = 'svd#',
+    kAudioDevicePropertySubVolumeScalarToDecibels                   = 'sv2d',
+    kAudioDevicePropertySubVolumeDecibelsToScalar                   = 'sd2v',
+    kAudioDevicePropertySubMute                                     = 'smut'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These properties are also accessible by locating the AudioControl object
+attached to the AudioDevice and using that object to access the properties of
+the control.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyJackIsConnected"><tt>kAudioDevicePropertyJackIsConnected</tt></a></dt><dd>A UInt32 where a value of 0 means that there isn't anything plugged into the
+jack associated withe given element and scope. This property is implemented
+by an AudioJackControl, a subclass of AudioBooleanControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyVolumeScalar"><tt>kAudioDevicePropertyVolumeScalar</tt></a></dt><dd>A Float32 that represents the value of the volume control. The range is
+between 0.0 and 1.0 (inclusive). This property is implemented by an
+AudioControl object that is a subclass of AudioVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyVolumeDecibels"><tt>kAudioDevicePropertyVolumeDecibels</tt></a></dt><dd>A Float32 that represents the value of the volume control in dB. This
+property is implemented by an AudioControl object that is a subclass of
+AudioVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyVolumeRangeDecibels"><tt>kAudioDevicePropertyVolumeRangeDecibels</tt></a></dt><dd>An AudioValueRange that contains the minimum and maximum dB values the
+control can have. This property is implemented by an AudioControl object
+that is a subclass of AudioVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyVolumeScalarToDecibels"><tt>kAudioDevicePropertyVolumeScalarToDecibels</tt></a></dt><dd>A Float32 that on input contains a scalar volume value for the and on exit
+contains the equivalent dB value. This property is implemented by an
+AudioControl object that is a subclass of AudioVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyVolumeDecibelsToScalar"><tt>kAudioDevicePropertyVolumeDecibelsToScalar</tt></a></dt><dd>A Float32 that on input contains a dB volume value for the and on exit
+contains the equivalent scalar value. This property is implemented by an
+AudioControl object that is a subclass of AudioVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStereoPan"><tt>kAudioDevicePropertyStereoPan</tt></a></dt><dd>A Float32 where 0.0 is full left, 1.0 is full right, and 0.5 is center. This
+property is implemented by an AudioControl object that is a subclass of
+AudioStereoPanControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStereoPanChannels"><tt>kAudioDevicePropertyStereoPanChannels</tt></a></dt><dd>An array of two UInt32s that indicate which elements of the owning object
+the signal is being panned between. This property is implemented by an
+AudioControl object that is a subclass of AudioStereoPanControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyMute"><tt>kAudioDevicePropertyMute</tt></a></dt><dd>A UInt32 where a value of 1 means that mute is enabled making that element
+inaudible. The property is implemented by an AudioControl object that is a
+subclass of AudioMuteControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySolo"><tt>kAudioDevicePropertySolo</tt></a></dt><dd>A UInt32 where a value of 1 means that just that element is audible and the
+other elements are inaudible. The property is implemented by an AudioControl
+object that is a subclass of AudioSoloControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDataSource"><tt>kAudioDevicePropertyDataSource</tt></a></dt><dd>A UInt32 whose value is the item ID for the currently selected data source.
+This property is implemented by an AudioControl object that is a subclass of
+AudioDataSourceControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDataSources"><tt>kAudioDevicePropertyDataSources</tt></a></dt><dd>An array of UInt32s that are represent all the IDs of all the data sources
+currently available. This property is implemented by an AudioControl object
+that is a subclass of AudioDataSourceControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDataSourceNameForIDCFString"><tt>kAudioDevicePropertyDataSourceNameForIDCFString</tt></a></dt><dd>This property translates the given data source item ID into a human readable
+name using an AudioValueTranslation structure. The input data is the UInt32
+containing the item ID to translated and the output data is a CFString. The
+caller is responsible for releasing the returned CFObject. This property is
+implemented by an AudioControl object that is a subclass of
+AudioDataSourceControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyClockSource"><tt>kAudioDevicePropertyClockSource</tt></a></dt><dd>A UInt32 whose value is the item ID for the currently selected clock source.
+This property is implemented by an AudioControl object that is a subclass of
+AudioClockControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyClockSources"><tt>kAudioDevicePropertyClockSources</tt></a></dt><dd>An array of UInt32s that are represent all the IDs of all the clock sources
+currently available. This property is implemented by an AudioControl object
+that is a subclass of AudioClockControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyClockSourceNameForIDCFString"><tt>kAudioDevicePropertyClockSourceNameForIDCFString</tt></a></dt><dd>This property translates the given clock source item ID into a human
+readable name using an AudioValueTranslation structure. The input data is
+the UInt32 containing the item ID to translated and the output data is a
+CFString. The caller is responsible for releasing the returned CFObject.
+This property is implemented by an AudioControl object that is a subclass of
+AudioClockControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyClockSourceKindForID"><tt>kAudioDevicePropertyClockSourceKindForID</tt></a></dt><dd>This property returns a UInt32 that identifies the kind of clock source
+the item ID refers to using an AudioValueTranslation structure. The input
+data is the UInt32 containing the item ID and the output data is the UInt32.
+Values for this property are defined in <IOAudio/audio/IOAudioTypes.h>.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThru"><tt>kAudioDevicePropertyPlayThru</tt></a></dt><dd>A UInt32 where a value of 0 means that play through is off and a value of 1
+means that it is on. This property is implemented by an AudioControl object
+that is a subclass of AudioMuteControl. Further, the control that implements
+this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruSolo"><tt>kAudioDevicePropertyPlayThruSolo</tt></a></dt><dd>A UInt32 where a value of 1 means that just that play through element is
+audible and the other elements are inaudible. The property is implemented by
+an AudioControl object that is a subclass of AudioSoloControl. Further, the
+control that implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruVolumeScalar"><tt>kAudioDevicePropertyPlayThruVolumeScalar</tt></a></dt><dd>A Float32 that represents the value of the volume control. The range is
+between 0.0 and 1.0 (inclusive). This property is implemented by an
+AudioControl object that is a subclass of AudioVolumeControl.Further, the
+control that implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruVolumeDecibels"><tt>kAudioDevicePropertyPlayThruVolumeDecibels</tt></a></dt><dd>A Float32 that represents the value of the volume control in dB. This
+property is implemented by an AudioControl object that is a subclass of
+AudioVolumeControl. Further, the control that implements this property is
+only available through kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruVolumeRangeDecibels"><tt>kAudioDevicePropertyPlayThruVolumeRangeDecibels</tt></a></dt><dd>An AudioValueRange that contains the minimum and maximum dB values the
+control can have. This property is implemented by an AudioControl object
+that is a subclass of AudioVolumeControl. Further, the control that
+implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruVolumeScalarToDecibels"><tt>kAudioDevicePropertyPlayThruVolumeScalarToDecibels</tt></a></dt><dd>A Float32 that on input contains a scalar volume value for the and on exit
+contains the equivalent dB value. This property is implemented by an
+AudioControl object that is a subclass of AudioVolumeControl. Further, the
+control that implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruVolumeDecibelsToScalar"><tt>kAudioDevicePropertyPlayThruVolumeDecibelsToScalar</tt></a></dt><dd>A Float32 that on input contains a dB volume value for the and on exit
+contains the equivalent scalar value. This property is implemented by an
+AudioControl object that is a subclass of AudioVolumeControl. Further, the
+control that implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruStereoPan"><tt>kAudioDevicePropertyPlayThruStereoPan</tt></a></dt><dd>A Float32 where 0.0 is full left, 1.0 is full right, and 0.5 is center. This
+property is implemented by an AudioControl object that is a subclass of
+AudioStereoPanControl. Further, the control that implements this property is
+only available through kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruStereoPanChannels"><tt>kAudioDevicePropertyPlayThruStereoPanChannels</tt></a></dt><dd>An array of two UInt32s that indicate which elements of the owning object
+the signal is being panned between. This property is implemented by an
+AudioControl object that is a subclass of AudioStereoPanControl. Further,
+the control that implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruDestination"><tt>kAudioDevicePropertyPlayThruDestination</tt></a></dt><dd>A UInt32 whose value is the item ID for the currently selected play through
+data destination. This property is implemented by an AudioControl object
+that is a subclass of AudioDataDestinationControl. Further, the control that
+implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruDestinations"><tt>kAudioDevicePropertyPlayThruDestinations</tt></a></dt><dd>An array of UInt32s that are represent all the IDs of all the play through
+data destinations currently available. This property is implemented by an
+AudioControl object that is a subclass of AudioDataDestinationControl.
+Further, the control that implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruDestinationNameForIDCFString"><tt>kAudioDevicePropertyPlayThruDestinationNameForIDCFString</tt></a></dt><dd>This property translates the given play through data destination item ID
+into a human readable name using an AudioValueTranslation structure. The
+input data is the UInt32 containing the item ID to translated and the output
+data is a CFString. The caller is responsible for releasing the returned
+CFObject. This property is implemented by an AudioControl object that is a
+subclass of AudioDataDestinationControl. Further, the control that
+implements this property is only available through
+kAudioDevicePropertyScopePlayThrough.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNominalLineLevel"><tt>kAudioDevicePropertyChannelNominalLineLevel</tt></a></dt><dd>A UInt32 whose value is the item ID for the currently selected nominal line
+level. This property is implemented by an AudioControl object that is a
+subclass of AudioLineLevelControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNominalLineLevels"><tt>kAudioDevicePropertyChannelNominalLineLevels</tt></a></dt><dd>An array of UInt32s that represent all the IDs of all the nominal line
+levels currently available. This property is implemented by an AudioControl
+object that is a subclass of AudioLineLevelControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNominalLineLevelNameForIDCFString"><tt>kAudioDevicePropertyChannelNominalLineLevelNameForIDCFString</tt></a></dt><dd>This property translates the given nominal line level item ID into a human
+readable name using an AudioValueTranslation structure. The input data is
+the UInt32 containing the item ID to be translated and the output data is a
+CFString. The caller is responsible for releasing the returned CFObject.
+This property is implemented by an AudioCOntrol object that is a subclass of
+AudioLineLevelControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDriverShouldOwniSub"><tt>kAudioDevicePropertyDriverShouldOwniSub</tt></a></dt><dd>A UInt32 where a value of 0 means that the AudioDevice should not claim
+ownership of any attached iSub and a value of 1 means that it should. Note
+that this property is only available for built-in devices and for USB Audio
+devices that use the standard class compliant driver. This property is
+implemented by an AudioControl object that is a subclass of
+AudioISubOwnerControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySubVolumeScalar"><tt>kAudioDevicePropertySubVolumeScalar</tt></a></dt><dd>A Float32 that represents the value of the LFE volume control. The range is
+between 0.0 and 1.0 (inclusive). This property is implemented by an
+AudioControl object that is a subclass of AudioLFEVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySubVolumeDecibels"><tt>kAudioDevicePropertySubVolumeDecibels</tt></a></dt><dd>A Float32 that represents the value of the LFE volume control in dB. This
+property is implemented by an AudioControl object that is a subclass of
+AudioLFE VolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySubVolumeRangeDecibels"><tt>kAudioDevicePropertySubVolumeRangeDecibels</tt></a></dt><dd>An AudioValueRange that contains the minimum and maximum dB values the
+control can have. This property is implemented by an AudioControl object
+that is a subclass of AudioLFEVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySubVolumeScalarToDecibels"><tt>kAudioDevicePropertySubVolumeScalarToDecibels</tt></a></dt><dd>A Float32 that on input contains a scalar volume value for the and on exit
+contains the equivalent dB value. This property is implemented by an
+AudioControl object that is a subclass of AudioLFEVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySubVolumeDecibelsToScalar"><tt>kAudioDevicePropertySubVolumeDecibelsToScalar</tt></a></dt><dd>A Float32 that on input contains a dB volume value for the and on exit
+contains the equivalent scalar value. This property is implemented by an
+AudioControl object that is a subclass of AudioLFEVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySubMute"><tt>kAudioDevicePropertySubMute</tt></a></dt><dd>A UInt32 where a value of 1 means that mute is enabled making the LFE on
+that element inaudible. The property is implemented by an AudioControl
+object that is a subclass of AudioLFEMuteControl.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioDevice Properties That Ought To Some Day Be Deprecated"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDevice Properties That Ought To Some Day Be Deprecated">AudioDevice Properties That Ought To Some Day Be Deprecated</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values whose functionality is better provided by
+other selectors.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioDevicePropertyDeviceName                          = 'name',
+    kAudioDevicePropertyDeviceNameCFString                  = kAudioObjectPropertyName,
+    kAudioDevicePropertyDeviceManufacturer                  = 'makr',
+    kAudioDevicePropertyDeviceManufacturerCFString          = kAudioObjectPropertyManufacturer,
+    kAudioDevicePropertyRegisterBufferList                  = 'rbuf',
+    kAudioDevicePropertyBufferSize                          = 'bsiz',
+    kAudioDevicePropertyBufferSizeRange                     = 'bsz#',
+    kAudioDevicePropertyChannelName                         = 'chnm',
+    kAudioDevicePropertyChannelNameCFString                 = kAudioObjectPropertyElementName,
+    kAudioDevicePropertyChannelCategoryName                 = 'ccnm',
+    kAudioDevicePropertyChannelCategoryNameCFString         = kAudioObjectPropertyElementCategoryName,
+    kAudioDevicePropertyChannelNumberName                   = 'cnnm',
+    kAudioDevicePropertyChannelNumberNameCFString           = kAudioObjectPropertyElementNumberName,
+    kAudioDevicePropertySupportsMixing                      = 'mix?',
+    kAudioDevicePropertyStreamFormat                        = 'sfmt',
+    kAudioDevicePropertyStreamFormats                       = 'sfm#',
+    kAudioDevicePropertyStreamFormatSupported               = 'sfm?',
+    kAudioDevicePropertyStreamFormatMatch                   = 'sfmm',
+    kAudioDevicePropertyDataSourceNameForID                 = 'sscn',
+    kAudioDevicePropertyClockSourceNameForID                = 'cscn',
+    kAudioDevicePropertyPlayThruDestinationNameForID        = 'mddn',
+    kAudioDevicePropertyChannelNominalLineLevelNameForID    = 'cnlv'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These selectors are still provided for backward compatibility. The description
+of the property will indicate in parentheses the better selectors to use and
+why.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceName"><tt>kAudioDevicePropertyDeviceName</tt></a></dt><dd>A C-string that contains the human readable name of the AudioDevice.
+(kAudioObjectPropertyName: CFStrings are better for localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceNameCFString"><tt>kAudioDevicePropertyDeviceNameCFString</tt></a></dt><dd>A CFStringRef that contains the human readable name of the AudioDevice. The
+caller is responsible for releasing the returned CFObject.
+(kAudioObjectPropertyName: This is just another name for the inherited
+selector.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceManufacturer"><tt>kAudioDevicePropertyDeviceManufacturer</tt></a></dt><dd>A C-string that contains the human readable name of the manufacturer of the
+AudioDevice.
+(kAudioObjectPropertyManufacturer: CFStrings are better for localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDeviceManufacturerCFString"><tt>kAudioDevicePropertyDeviceManufacturerCFString</tt></a></dt><dd>A CFString that contains the human readable name of the manufacturer of the
+AudioDevice. The caller is responsible for releasing the returned CFObject.
+(kAudioObjectPropertyManufacturer: This is just another name for the
+inherited selector.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyRegisterBufferList"><tt>kAudioDevicePropertyRegisterBufferList</tt></a></dt><dd>This property allows clients to register a fully populated AudioBufferList
+that matches the topology described by
+kAudioDevicePropertyStreamConfiguration for doing input using
+AudioDeviceRead(). The AudioBufferList will be registered with the call the
+AudioDeviceSetProperty() and will be unregistered with the call to
+AudioDeviceGetProperty(). If this property isn't implemented by the
+AudioDevice, it implies that the AudioDevice also doesn't support
+AudioDeviceRead().
+(Aggregate devices make AudioDeviceRead() obsolete for the most part.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyBufferSize"><tt>kAudioDevicePropertyBufferSize</tt></a></dt><dd>A UInt32 containing the size in bytes of the IO buffer for the AudioStream
+containing the element.
+(kAudioDevicePropertyBufferFrameSize: with multiple AudioStreams and the
+requirement that all streams' buffers represent the same amount of time, it
+doesn't make sense to set the buffer size in bytes since it will be
+different for each stream.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyBufferSizeRange"><tt>kAudioDevicePropertyBufferSizeRange</tt></a></dt><dd>An AudioValueRange specifying the minimum and maximum bytes size for the
+IO buffer for the AudioStream containing the given element.
+(kAudioDevicePropertyBufferFrameSizeRange: see
+kAudioDevicePropertyBufferSize.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelName"><tt>kAudioDevicePropertyChannelName</tt></a></dt><dd>A CFString that contains a human readable name for the given element in the
+given scope. The caller is responsible for releasing the returned CFObject.
+(kAudioObjectPropertyElementName: CFStrings are better for
+localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNameCFString"><tt>kAudioDevicePropertyChannelNameCFString</tt></a></dt><dd>A CFString that contains a human readable name for the given element in the
+given scope. The caller is responsible for releasing the returned CFObject.
+(kAudioObjectPropertyElementName: This is just another name for the
+inherited selector.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelCategoryName"><tt>kAudioDevicePropertyChannelCategoryName</tt></a></dt><dd>A CFString that contains a human readable name for the category of the given
+element in the given scope. The caller is responsible for releasing the
+returned CFObject.
+(kAudioObjectPropertyElementCategoryName: CFStrings are better for
+localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelCategoryNameCFString"><tt>kAudioDevicePropertyChannelCategoryNameCFString</tt></a></dt><dd>A CFString that contains a human readable name for the category of the given
+element in the given scope. The caller is responsible for releasing the
+returned CFObject.
+(kAudioObjectPropertyElementCategoryName: This is just another name for the
+inherited selector.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNumberName"><tt>kAudioDevicePropertyChannelNumberName</tt></a></dt><dd>A CFString that contains a human readable name for the number of the given
+element in the given scope. The caller is responsible for releasing the
+returned CFObject.
+(kAudioObjectPropertyElementNumberName: CFStrings are better for
+localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNumberNameCFString"><tt>kAudioDevicePropertyChannelNumberNameCFString</tt></a></dt><dd>A CFString that contains a human readable name for the number of the given
+element in the given scope. The caller is responsible for releasing the
+returned CFObject.
+(kAudioObjectPropertyElementNumberName: This is just another name for the
+inherited selector.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertySupportsMixing"><tt>kAudioDevicePropertySupportsMixing</tt></a></dt><dd>A UInt32 where a value of 1 means the AudioDevice supports mixing and a
+value of 0 means that it doesn't and that all IO is performed in each
+AudioStream's current physical format. This property is changed indirectly
+by changing to a format that doesn't support mixing, such as AC-3. (The HAL
+now vends it's format information with a flag indicating the mixability in
+order to better support devices with streams that are both mixable and non-
+mixable.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStreamFormat"><tt>kAudioDevicePropertyStreamFormat</tt></a></dt><dd>An AudioStreamBasicDescription that describes the current data format for
+the AudioStream that contains the channel referred to by the element number.
+(kAudioStreamPropertyVirtualFormat: Managing format information is
+inherently an operation on AudioStreams, rather than AudioDevices. It is
+confusing for the client to work with formats at the AudioDevice level and
+has been shown to lead to programming mistakes by clients when working with
+devices that have multiple streams.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStreamFormats"><tt>kAudioDevicePropertyStreamFormats</tt></a></dt><dd>An array of AudioStreamBasicDescriptions that describe the available data
+formats for the AudioStream that contains the channel referred to by the
+element number.
+(kAudioStreamPropertyAvailableVirtualFormats: Managing format information is
+inherently an operation on AudioStreams, rather than AudioDevices. It is
+confusing for the client to work with formats at the AudioDevice level and
+has been shown to lead to programming mistakes by clients when working with
+devices that have multiple streams.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStreamFormatSupported"><tt>kAudioDevicePropertyStreamFormatSupported</tt></a></dt><dd>An AudioStreamBasicDescription is passed in to query whether or not the
+format is supported. A kAudioDeviceUnsupportedFormatError will be returned
+if the format is not supported and kAudioHardwareNoError will be returned if
+it is supported. AudioStreamBasicDescription fields set to 0 will be ignored
+in the query, but otherwise values must match exactly.
+(kAudioStreamPropertyAvailableVirtualFormats: The proper and most robust way
+to find a format that the AudioStream can support is to get the list of
+available formats and look through that rather than using this property.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyStreamFormatMatch"><tt>kAudioDevicePropertyStreamFormatMatch</tt></a></dt><dd>An AudioStreamBasicDescription is passed in and the AudioStream will modify
+it to describe the best match, in the AudioDevice's opinion, for the given
+format.
+(kAudioStreamPropertyAvailableVirtualFormats: The proper and most robust way
+to find a format that the AudioStream can support is to get the list of
+available formats and look through that rather than using this property.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyDataSourceNameForID"><tt>kAudioDevicePropertyDataSourceNameForID</tt></a></dt><dd>This property translates the given data source item ID into a human readable
+name using an AudioValueTranslation structure. The input data is the UInt32
+holding the item ID to be translated and the output data is a buffer to hold
+the name as a null terminated c-string.
+(kAudioDevicePropertyDataSourceNameForIDCFString: CFStrings are better for
+localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyClockSourceNameForID"><tt>kAudioDevicePropertyClockSourceNameForID</tt></a></dt><dd>This property translates the given clock source item ID into a human
+readable name using an AudioValueTranslation structure. The input data is
+the UInt32 holding the item ID to be translated and the output data is a
+buffer to hold the name as a null terminated c-string.
+(kAudioDevicePropertyClockSourceNameForIDCFString: CFStrings are better for
+localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyPlayThruDestinationNameForID"><tt>kAudioDevicePropertyPlayThruDestinationNameForID</tt></a></dt><dd>This property translates the given play through destination item ID into a
+human readable name using an AudioValueTranslation structure. The input data
+is the UInt32 holding the item ID to be translated and the output data is a
+buffer to hold the name as a null terminated c-string.
+(kAudioDevicePropertyPlayThruDestinationNameForIDCFString: CFStrings are
+better for localization.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePropertyChannelNominalLineLevelNameForID"><tt>kAudioDevicePropertyChannelNominalLineLevelNameForID</tt></a></dt><dd>This property translates the given nominal line level item ID into a human
+readable name using an AudioValueTranslation structure. The input data is
+the UInt32 holding the item ID to be translated and the output data is a
+buffer to hold the name as a null terminated c-string.
+(kAudioDevicePropertyChannelNominalLineLevelNameForIDCFString: CFStrings are
+better for localization.)</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioLevelControl"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioLevelControl">AudioLevelControl</a></h2>
+</td></tr></table><hr>The four char codes that identify the various standard subclasses of
+AudioLevelControl.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioVolumeControlClassID          = 'vlme',
+    kAudioLFEVolumeControlClassID       = 'subv',
+    kAudioBootChimeVolumeControlClassID = 'pram'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Subclass IDs
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioVolumeControlClassID"><tt>kAudioVolumeControlClassID</tt></a></dt><dd>An AudioLevelControl for a general gain/attenuation stage.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLFEVolumeControlClassID"><tt>kAudioLFEVolumeControlClassID</tt></a></dt><dd>An AudioLevelControl for an LFE channel that results from bass management
+such as the iSub. Note that LFE channels that are represented as normal
+audio channels (in other words, real data is being fed them in an IOProc)
+will use kAudioVolumeControlClassID to manipulate the level.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioBootChimeVolumeControlClassID"><tt>kAudioBootChimeVolumeControlClassID</tt></a></dt><dd>An AudioLevelControl for the boot chime of the CPU.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioLevelControl Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioLevelControl Properties">AudioLevelControl Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioLevelControls.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioLevelControlPropertyScalarValue               = 'lcsv',
+    kAudioLevelControlPropertyDecibelValue              = 'lcdv',
+    kAudioLevelControlPropertyDecibelRange              = 'lcdr',
+    kAudioLevelControlPropertyConvertScalarToDecibels   = 'lcsd',
+    kAudioLevelControlPropertyConvertDecibelsToScalar   = 'lcds'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioLevelControl is a subclass of AudioControl and has only the single scope,
+kAudioObjectPropertyScopeGlobal, and only a master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioLevelControlPropertyScalarValue"><tt>kAudioLevelControlPropertyScalarValue</tt></a></dt><dd>A Float32 that represents the value of the boot chime volume control. The
+range is between 0.0 and 1.0 (inclusive).</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLevelControlPropertyDecibelValue"><tt>kAudioLevelControlPropertyDecibelValue</tt></a></dt><dd>A Float32 that represents the value of the boot chime volume control in dB.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLevelControlPropertyDecibelRange"><tt>kAudioLevelControlPropertyDecibelRange</tt></a></dt><dd>An AudioValueRange that contains the minimum and maximum dB values the
+boot chime control can have.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLevelControlPropertyConvertScalarToDecibels"><tt>kAudioLevelControlPropertyConvertScalarToDecibels</tt></a></dt><dd>A Float32 that on input contains a scalar volume value for the boot chime
+and on exit contains the equivalent dB value.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLevelControlPropertyConvertDecibelsToScalar"><tt>kAudioLevelControlPropertyConvertDecibelsToScalar</tt></a></dt><dd>A Float32 that on input contains a dB volume value for the boot chime and on
+exit contains the equivalent scalar value.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioObject"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObject">AudioObject</a></h2>
+</td></tr></table><hr>Various constants related to AudioObjects.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioObjectPropertyScopeGlobal     = 'glob',
+    kAudioObjectPropertyElementMaster   = 0UL,
+    kAudioObjectClassID                 = 'aobj',
+    kAudioObjectClassIDWildcard         = '****',
+    kAudioObjectUnknown                 = 0UL
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyScopeGlobal"><tt>kAudioObjectPropertyScopeGlobal</tt></a></dt><dd>The AudioObjectPropertyScope for properties that apply to the object as a
+whole. All AudioObjects have a global scope and for some it is their only
+scope.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyElementMaster"><tt>kAudioObjectPropertyElementMaster</tt></a></dt><dd>The AudioObjectPropertyElement value for properties that apply to the master
+element or to the entire scope.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectClassID"><tt>kAudioObjectClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioObject class.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectClassIDWildcard"><tt>kAudioObjectClassIDWildcard</tt></a></dt><dd>The wildcard value for AudioClassIDs.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectUnknown"><tt>kAudioObjectUnknown</tt></a></dt><dd>The AudioObjectID for a non-existant AudioObject.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioObject"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObject">AudioObject</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioObjects.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioObjectPropertyClass               = 'clas',
+    kAudioObjectPropertyOwner               = 'stdv',
+    kAudioObjectPropertyCreator             = 'oplg',
+    kAudioObjectPropertyName                = 'lnam',
+    kAudioObjectPropertyManufacturer        = 'lmak',
+    kAudioObjectPropertyElementName         = 'lchn',
+    kAudioObjectPropertyElementCategoryName = 'lccn',
+    kAudioObjectPropertyElementNumberName   = 'lcnn',
+    kAudioObjectPropertyOwnedObjects        = 'ownd',
+    kAudioObjectPropertyListenerAdded       = 'lisa',
+    kAudioObjectPropertyListenerRemoved     = 'lisr'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Property Selectors
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyClass"><tt>kAudioObjectPropertyClass</tt></a></dt><dd>An AudioClassID that identifies the class of the AudioObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyOwner"><tt>kAudioObjectPropertyOwner</tt></a></dt><dd>An AudioObjectID that identifies the the AudioObject that owns the given
+AudioObject. Note that all AudioObjects are owned by some other AudioObject.
+The only exception is the AudioSystemObject, for which the value of this
+property is kAudioObjectUnknown.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyCreator"><tt>kAudioObjectPropertyCreator</tt></a></dt><dd>A CFString that contains the bundle ID of the plug-in that instantiated the
+object.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyObjectName"><tt>kAudioObjectPropertyObjectName</tt></a></dt><dd>A CFString that contains the human readable name of the object. The caller
+is responsible for releasing the returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyManufacturer"><tt>kAudioObjectPropertyManufacturer</tt></a></dt><dd>A CFString that contains the human readable name of the manufacturer of the
+hardware the AudioObject is a part of. The caller is responsible for
+releasing the returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyElementName"><tt>kAudioObjectPropertyElementName</tt></a></dt><dd>A CFString that contains a human readable name for the given element in the
+given scope. The caller is responsible for releasing the returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyElementCategoryName"><tt>kAudioObjectPropertyElementCategoryName</tt></a></dt><dd>A CFString that contains a human readable name for the category of the given
+element in the given scope. The caller is responsible for releasing the
+returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyElementNumberName"><tt>kAudioObjectPropertyElementNumberName</tt></a></dt><dd>A CFString that contains a human readable name for the number of the given
+element in the given scope. The caller is responsible for releasing the
+returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyOwnedObjects"><tt>kAudioObjectPropertyOwnedObjects</tt></a></dt><dd>An array of AudioObjectIDs that represent all the AudioObjects owned by the
+given object. The qualifier is an array of AudioClassIDs. If it is
+non-empty, the returned array of AudioObjectIDs will only refer to objects
+whose class is in the qualifier array or whose is a subclass of one in the
+qualifier array.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyListenerAdded"><tt>kAudioObjectPropertyListenerAdded</tt></a></dt><dd>An AudioObjectPropertyAddress indicating the address to which a new listener
+was added. Note that this property is not for applications to use. Rather,
+this property is for the HAL shell to notify AudioObjects implemented by an
+AudioPlugIn when a listener is added.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyListenerRemoved"><tt>kAudioObjectPropertyListenerRemoved</tt></a></dt><dd>An AudioObjectPropertyAddress indicating the address to which a listener was
+removed. Note that this property is not for applications to use. Rather,
+this property is for the HAL shell to notify AudioObjects implemented by an
+AudioPlugIn when a listener is removed.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioPlugIn"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioPlugIn">AudioPlugIn</a></h2>
+</td></tr></table><hr>Various constants related to AudioPlugIns.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioPlugInClassID     = 'aplg'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioPlugInClassID"><tt>kAudioPlugInClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioPlugIn class.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioPlugIn Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioPlugIn Properties">AudioPlugIn Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to AudioPlugIns.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioPlugInPropertyBundleID        = 'piid',
+    kAudioPlugInCreateAggregateDevice   = 'cagg',
+    kAudioPlugInDestroyAggregateDevice  = 'dagg'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioPlugIn is a subclass of AudioObject that represents a plug-in loaded by the
+HAL that conforms to the API in <CoreAudio/AudioHardwarePlugIn.h>. AudioPlugIns
+have one scope, kAudioObjectPropertyScopeGlobal, and only a master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioPlugInPropertyBundleID"><tt>kAudioPlugInPropertyBundleID</tt></a></dt><dd>A CFString that contains the bundle identifier for the AudioPlugIn. The
+caller is responsible for releasing the returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioPlugInCreateAggregateDevice"><tt>kAudioPlugInCreateAggregateDevice</tt></a></dt><dd>This property is used to tell a plug-in to create a new
+AudioAggregateDevice. It's value is only read. The qualifier data for this
+property is a CFDictionary containing a description of the
+AudioAggregateDevice to create. The keys for the CFDictionary are defined in
+the AudioAggregateDevice Constants section. The value of the property that
+gets returned is the AudioObjectID of the newly created device.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioPlugInDestroyAggregateDevice"><tt>kAudioPlugInDestroyAggregateDevice</tt></a></dt><dd>This property is used to tell a plug-in to destroy an AudioAggregateDevice.
+Like kAudioPlugInCreateAggregateDevice, this property is read only. The
+value of the property is the AudioObjectID of the AudioAggregateDevice to
+destroy.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSelectorControl"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSelectorControl">AudioSelectorControl</a></h2>
+</td></tr></table><hr>The four char codes that identify the various standard subclasses of
+AudioSelectorControl.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioDataSourceControlClassID      = 'dsrc',
+    kAudioDataDestinationControlClassID = 'dest',
+    kAudioClockSourceControlClassID     = 'clck',
+    kAudioLineLevelControlClassID       = 'nlvl'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Subclass IDs
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioDataSourceControlClassID"><tt>kAudioDataSourceControlClassID</tt></a></dt><dd>An AudioSelectorControl that identifies where the data for the element is
+coming from.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDataDestinationControlClassID"><tt>kAudioDataDestinationControlClassID</tt></a></dt><dd>An AudioSelectorControl that identifies where the data for the element is
+going.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioClockSourceControlClassID"><tt>kAudioClockSourceControlClassID</tt></a></dt><dd>An AudioSelectorControl that identifies where the timing info for the object
+is coming from.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioLineLevelControlClassID"><tt>kAudioLineLevelControlClassID</tt></a></dt><dd>An AudioSelectorControl that identifies the nominal line level for the
+element. Note that this is not a gain stage but rather indicating the
+voltage standard (if any) used for the element, such as +4dBu, -10dBV,
+instrument, etc.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSelectorControl Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSelectorControl Properties">AudioSelectorControl Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioSelectorControls.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioSelectorControlPropertyCurrentItem    = 'scci',
+    kAudioSelectorControlPropertyAvailableItems = 'scai',
+    kAudioSelectorControlPropertyItemName       = 'scin'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioSelectorControl is a subclass of AudioControl and has only the single
+scope, kAudioObjectPropertyScopeGlobal, and only a master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioSelectorControlPropertyCurrentItem"><tt>kAudioSelectorControlPropertyCurrentItem</tt></a></dt><dd>A UInt32 that is the ID of the item currently selected.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioSelectorControlPropertyAvailableItems"><tt>kAudioSelectorControlPropertyAvailableItems</tt></a></dt><dd>An array of UInt32s that represent the IDs of all the items available.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioSelectorControlPropertyItemName"><tt>kAudioSelectorControlPropertyItemName</tt></a></dt><dd>This property translates the given item ID into a human readable name. The
+qualifier contains the ID of the item to be translated and name is returned
+as a CFString as the property data. The caller is responsible for releasing
+the returned CFObject.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioStereoPanControl Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStereoPanControl Properties">AudioStereoPanControl Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioStereoPanControls.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioStereoPanControlPropertyValue             = 'spcv',
+    kAudioStereoPanControlPropertyPanningChannels   = 'spcc'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioStereoPanControl is a subclass of AudioControl and has only the single
+scope, kAudioObjectPropertyScopeGlobal, and only a master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioStereoPanControlPropertyValue"><tt>kAudioStereoPanControlPropertyValue</tt></a></dt><dd>A Float32 where 0.0 is full left, 1.0 is full right, and 0.5 is center.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStereoPanControlPropertyPanningChannels"><tt>kAudioStereoPanControlPropertyPanningChannels</tt></a></dt><dd>An array of two UInt32s that indicate which elements of the owning object
+the signal is being panned between.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioStream"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStream">AudioStream</a></h2>
+</td></tr></table><hr>Various constants related to AudioStreams.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioStreamClassID = 'astr',
+    kAudioStreamUnknown = kAudioObjectUnknown
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioStreamClassID"><tt>kAudioStreamClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioStream class.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamUnknown"><tt>kAudioStreamUnknown</tt></a></dt><dd>The AudioObjectID for a nonexistent AudioObject.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioStream Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStream Properties">AudioStream Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioStreams.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioStreamPropertyDirection                   = 'sdir',
+    kAudioStreamPropertyTerminalType                = 'term',
+    kAudioStreamPropertyStartingChannel             = 'schn',
+    kAudioStreamPropertyLatency                     = kAudioDevicePropertyLatency,
+    kAudioStreamPropertyVirtualFormat               = 'sfmt',
+    kAudioStreamPropertyAvailableVirtualFormats     = 'sfma',
+    kAudioStreamPropertyPhysicalFormat              = 'pft ',
+    kAudioStreamPropertyAvailablePhysicalFormats    = 'pfta'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioStream is a subclass of AudioObject and has only the single scope,
+kAudioObjectPropertyScopeGlobal. They have a master element and an element for
+each channel in the stream numbered upward from 1. Note that AudioStream objects
+share AudioControl objects with their owning AudioDevice. Consequently, all the
+standard AudioControl related property selectors implemented by AudioDevices are
+also implemented by AudioStreams. The same constants are to be used for such
+properties.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyDirection"><tt>kAudioStreamPropertyDirection</tt></a></dt><dd>A UInt32 where a value of 0 means that this AudioStream is an output stream
+and a value of 1 means that it is an input stream.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyTerminalType"><tt>kAudioStreamPropertyTerminalType</tt></a></dt><dd>A UInt32 whose value describes the general kind of functionality attached
+to the AudioStream. Constants that describe some of the values of this
+property are defined in <IOKit/audio/IOAudioTypes.h></dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyStartingChannel"><tt>kAudioStreamPropertyStartingChannel</tt></a></dt><dd>A UInt32 that specifies the first element in the owning device that
+corresponds to element one of this stream.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyLatency"><tt>kAudioStreamPropertyLatency</tt></a></dt><dd>A UInt32 containing the number of frames of latency in the AudioStream. Note
+that the owning AudioDevice may have additional latency so it should be
+queried as well. If both the device and the stream say they have latency,
+then the total latency for the stream is the device latency summed with the
+stream latency.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyVirtualFormat"><tt>kAudioStreamPropertyVirtualFormat</tt></a></dt><dd>An AudioStreamBasicDescription that describes the current data format for
+the AudioStream. The virtual format refers to the data format in which all
+IOProcs for the owning AudioDevice will perform IO transactions.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyAvailableVirtualFormats"><tt>kAudioStreamPropertyAvailableVirtualFormats</tt></a></dt><dd>An array of AudioStreamRangedDescriptions that describe the available data
+formats for the AudioStream. The virtual format refers to the data format in
+which all IOProcs for the owning AudioDevice will perform IO transactions.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyPhysicalFormat"><tt>kAudioStreamPropertyPhysicalFormat</tt></a></dt><dd>An AudioStreamBasicDescription that describes the current data format for
+the AudioStream. The physical format refers to the data format in which the
+hardware for the owning AudioDevice performs it's IO transactions.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyAvailablePhysicalFormats"><tt>kAudioStreamPropertyAvailablePhysicalFormats</tt></a></dt><dd>An array of AudioStreamRangedDescriptions that describe the available data
+formats for the AudioStream. The physical format refers to the data format
+in which the hardware for the owning AudioDevice performs it's IO
+transactions.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioStream Properties That Ought To Some Day Be Deprecated"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStream Properties That Ought To Some Day Be Deprecated">AudioStream Properties That Ought To Some Day Be Deprecated</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values whose functionality is better provided by
+other selectors.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioStreamPropertyOwningDevice                = kAudioObjectPropertyOwner,
+    kAudioStreamPropertyPhysicalFormats             = 'pft#',
+    kAudioStreamPropertyPhysicalFormatSupported     = 'pft?',
+    kAudioStreamPropertyPhysicalFormatMatch         = 'pftm'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These selectors are still provided for backward compatibility. The description
+of the property will indicate in parentheses the better selectors to use and
+why.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyOwningDevice"><tt>kAudioStreamPropertyOwningDevice</tt></a></dt><dd>The AudioObjectID of the AudioDevice of which this AudioStream is a part.
+(kAudioObjectPropertyOwner: This is just another name for the inherited
+selector.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyPhysicalFormats"><tt>kAudioStreamPropertyPhysicalFormats</tt></a></dt><dd>An array of AudioStreamBasicDescriptions that describe the available data
+formats for the AudioStream. The physical format refers to the data format
+in which the hardware for the owning AudioDevice performs it's IO
+transactions.
+(kAudioStreamPropertyAvailablePhysicalFormats: The new name for this
+property is much clearer for readers of the API to see what is meant and the
+AudioStreamRangedDescription structure provides better information.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyPhysicalFormatSupported"><tt>kAudioStreamPropertyPhysicalFormatSupported</tt></a></dt><dd>An AudioStreamBasicDescription is passed in to query whether or not the
+format is supported. A kAudioDeviceUnsupportedFormatError will be returned
+if the format is not supported and kAudioHardwareNoError will be returned if
+it is supported. AudioStreamBasicDescription fields set to 0 will be ignored
+in the query, but otherwise values must match exactly. The physical format
+refers to the data format in which the hardware for the owning AudioDevice
+performs it's IO transactions.
+(kAudioStreamPropertyAvailablePhysicalFormats: The proper and most robust
+way to find a format that the AudioStream can support is to get the list of
+available formats and look through that rather than using this property.)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioStreamPropertyPhysicalFormatMatch"><tt>kAudioStreamPropertyPhysicalFormatMatch</tt></a></dt><dd>An AudioStreamBasicDescription is passed in and the AudioStream will modify
+it to describe the best match, in the AudioDevice's opinion, for the given
+format. The physical format refers to the data format in which the hardware
+for the owning AudioDevice performs it's IO transactions.
+(kAudioStreamPropertyAvailablePhysicalFormats: The proper and most robust
+way to find a format that the AudioStream can support is to get the list of
+available formats and look through that rather than using this property.)</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSubDevice"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSubDevice">AudioSubDevice</a></h2>
+</td></tr></table><hr>Various constants related to AudioSubDevices.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioSubDeviceClassID     = 'asub'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioSubDeviceClassID"><tt>kAudioSubDeviceClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioSubDevice class.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSubDevice"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSubDevice">AudioSubDevice</a></h2>
+</td></tr></table><hr>Constants that describe the range of values the property
+kAudioSubDevicePropertyDriftCompensation. It is a continuous range from
+kAudioSubDeviceDriftCompensationMinQuality to
+kAudioSubDeviceDriftCompensationMaxQuality, with some commonly used settings
+called out.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioSubDeviceDriftCompensationMinQuality      = 0,
+    kAudioSubDeviceDriftCompensationLowQuality      = 0x20,
+    kAudioSubDeviceDriftCompensationMediumQuality   = 0x40,
+    kAudioSubDeviceDriftCompensationHighQuality     = 0x60,
+    kAudioSubDeviceDriftCompensationMaxQuality      = 0x7F
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Clock Drift Compensation Methods
+</p>
+<hr><a name="//apple_ref/c/tag/AudioSubDevice Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSubDevice Properties">AudioSubDevice Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to all AudioSubDevices.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioSubDevicePropertyExtraLatency             = 'xltc',
+    kAudioSubDevicePropertyDriftCompensation        = 'drft',
+    kAudioSubDevicePropertyDriftCompensationQuality = 'drfq'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioSubDevice is a subclass of AudioDevice that is collected together with
+other sub-devices in an AudioAggregateDevice. AudioSubDevice objects do not
+implement an IO path nor any AudioDevice properties associated with the IO path.
+They also don't have any streams.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioSubDevicePropertyExtraLatency"><tt>kAudioSubDevicePropertyExtraLatency</tt></a></dt><dd>A Float64 indicating the number of sample frames to add to or subtract from
+the latency compensation used for this AudioSubDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioSubDevicePropertyDriftCompensation"><tt>kAudioSubDevicePropertyDriftCompensation</tt></a></dt><dd>A UInt32 where a value of 0 indicates that no drift compensation should be
+done for this AudioSubDevice and a value of 1 means that it should.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioSubDevicePropertyDriftCompensationQuality"><tt>kAudioSubDevicePropertyDriftCompensationQuality</tt></a></dt><dd>A UInt32 that controls the trade-off between quality and CPU load in the
+drift compensation. The range of values is from 0 to 128, where the lower
+the number, the worse the quality but also the less CPU is used to do the
+compensation.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSystemObject"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSystemObject">AudioSystemObject</a></h2>
+</td></tr></table><hr>Various constants related to the AudioSystemObject.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioSystemObjectClassID   = 'asys',
+    kAudioObjectSystemObject    = 1UL
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Class Constants
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioSystemObjectClassID"><tt>kAudioSystemObjectClassID</tt></a></dt><dd>The AudioClassID that identifies the AudioSystemObject class.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectSystemObject"><tt>kAudioObjectSystemObject</tt></a></dt><dd>The AudioObjectID that always refers to the one and only instance of the
+AudioSystemObject.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSystemObject Properties"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSystemObject Properties">AudioSystemObject Properties</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values that apply to the AudioSystemObject.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioHardwarePropertyProcessIsMaster                   = 'mast',
+    kAudioHardwarePropertyIsInitingOrExiting                = 'inot',
+    kAudioHardwarePropertyDevices                           = 'dev#',
+    kAudioHardwarePropertyDefaultInputDevice                = 'dIn ',
+    kAudioHardwarePropertyDefaultOutputDevice               = 'dOut',
+    kAudioHardwarePropertyDefaultSystemOutputDevice         = 'sOut',
+    kAudioHardwarePropertyDeviceForUID                      = 'duid',
+    kAudioHardwarePropertySleepingIsAllowed                 = 'slep',
+    kAudioHardwarePropertyUnloadingIsAllowed                = 'unld',
+    kAudioHardwarePropertyHogModeIsAllowed                  = 'hogr',
+    kAudioHardwarePropertyRunLoop                           = 'rnlp',
+    kAudioHardwarePropertyPlugInForBundleID                 = 'pibi'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The AudioSystemObject has one scope, kAudioObjectPropertyScopeGlobal, and only a
+master element.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyProcessIsMaster"><tt>kAudioHardwarePropertyProcessIsMaster</tt></a></dt><dd>A UInt32 where 1 means that the current process contains the master instance
+of the HAL. The master instance of the HAL is the only instance in which
+plug-ins should save/restore their devices' settings.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyIsInitingOrExiting"><tt>kAudioHardwarePropertyIsInitingOrExiting</tt></a></dt><dd>A UInt32 whose value will be non-zero if the HAL is either in the midst of
+initializing or in the midst of exiting the process.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyDevices"><tt>kAudioHardwarePropertyDevices</tt></a></dt><dd>An array of the AudioDeviceIDs that represent all the devices currently
+available to the system.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyDefaultInputDevice"><tt>kAudioHardwarePropertyDefaultInputDevice</tt></a></dt><dd>The AudioDeviceID of the default input AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyDefaultOutputDevice"><tt>kAudioHardwarePropertyDefaultOutputDevice</tt></a></dt><dd>The AudioDeviceID of the default output AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyDefaultOutputDevice"><tt>kAudioHardwarePropertyDefaultOutputDevice</tt></a></dt><dd>The AudioDeviceID of the output AudioDevice to use for system related sound
+from the alert sound to digital call progress.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyDeviceForUID"><tt>kAudioHardwarePropertyDeviceForUID</tt></a></dt><dd>Using an AudioValueTranslation structure, this property translates the input
+CFStringRef containing a UID into the AudioDeviceID that refers to the
+AudioDevice with that UID. This property will return kAudioDeviceUnknown if
+the given UID does not match any currently available AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertySleepingIsAllowed"><tt>kAudioHardwarePropertySleepingIsAllowed</tt></a></dt><dd>A UInt32 where 1 means that the process will allow the CPU to idle sleep
+even if there is audio IO in progress. A 0 means that the CPU will not be
+allowed to idle sleep. Note that this property won't affect when the CPU is
+forced to sleep.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyUnloadingIsAllowed"><tt>kAudioHardwarePropertyUnloadingIsAllowed</tt></a></dt><dd>A UInt32 where 1 means that this process wants the HAL to unload itself
+after a period of inactivity where there are no IOProcs and no listeners
+registered with any AudioObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyHogModeIsAllowed"><tt>kAudioHardwarePropertyHogModeIsAllowed</tt></a></dt><dd>A UInt32 where 1 means that this process wants the HAL to automatically take
+hog mode and 0 means that the HAL should not automatically take hog mode on
+behalf of the process. Processes that only ever use the default device are
+the sort of that should set this property's value to 0.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyRunLoop"><tt>kAudioHardwarePropertyRunLoop</tt></a></dt><dd>The CFRunLoopRef the HAL is currently attaching all of it's system
+notification handlers to. By default, the HAL will create and manage it's
+own thread for this job. Clients can set this property to tell the HAL to
+use a thread of the client's choosing. The caller is responsible for
+releasing the returned CFObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyPlugInForBundleID"><tt>kAudioHardwarePropertyPlugInForBundleID</tt></a></dt><dd>Using an AudioValueTranslation structure, this property translates the input
+CFString containing a bundle ID into the AudioObjectID of the AudioPlugIn
+that corresponds to it. This property will return kAudioObjectUnkown if the
+given bundle ID doesn't match any AudioPlugIns.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioSystemObject Properties Implemented via AudioControl objects"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioSystemObject Properties Implemented via AudioControl objects">AudioSystemObject Properties Implemented via AudioControl objects</a></h2>
+</td></tr></table><hr>AudioObjectPropertySelector values for AudioSystemObject properties that are
+implemented by AudioControl objects.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioHardwarePropertyBootChimeVolumeScalar             = 'bbvs',
+    kAudioHardwarePropertyBootChimeVolumeDecibels           = 'bbvd',
+    kAudioHardwarePropertyBootChimeVolumeRangeDecibels      = 'bbd#',
+    kAudioHardwarePropertyBootChimeVolumeScalarToDecibels   = 'bv2d',
+    kAudioHardwarePropertyBootChimeVolumeDecibelsToScalar   = 'bd2v'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These properties are also accessible by locating the AudioControl object
+attached to the AudioSystemObject and using that object to access the properties
+of the control.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyBootChimeVolumeScalar"><tt>kAudioHardwarePropertyBootChimeVolumeScalar</tt></a></dt><dd>A Float32 that represents the value of the boot chime volume control. The
+range is between 0.0 and 1.0 (inclusive). This property is implemented by an
+AudioControl object that is a subclass of AudioBootChimeVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyBootChimeVolumeDecibels"><tt>kAudioHardwarePropertyBootChimeVolumeDecibels</tt></a></dt><dd>A Float32 that represents the value of the boot chime volume control in dB.
+This property is implemented by an AudioControl object that is a subclass
+of AudioBootChimeVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyBootChimeVolumeRangeDecibels"><tt>kAudioHardwarePropertyBootChimeVolumeRangeDecibels</tt></a></dt><dd>An AudioValueRange that contains the minimum and maximum dB values the
+boot chime control can have. This property is implemented by an AudioControl
+object that is a subclass of AudioBootChimeVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyBootChimeVolumeScalarToDecibels"><tt>kAudioHardwarePropertyBootChimeVolumeScalarToDecibels</tt></a></dt><dd>A Float32 that on input contains a scalar volume value for the boot chime
+and on exit contains the equivalent dB value. This property is implemented
+by an AudioControl object that is a subclass of AudioBootChimeVolumeControl.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwarePropertyBootChimeVolumeDecibelsToScalar"><tt>kAudioHardwarePropertyBootChimeVolumeDecibelsToScalar</tt></a></dt><dd>A Float32 that on input contains a dB volume value for the boot chime and on
+exit contains the equivalent scalar value. This property is implemented by
+an AudioControl object that is a subclass of AudioBootChimeVolumeControl.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/Error Constants"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="Error Constants">Error Constants</a></h2>
+</td></tr></table><hr>The error constants unique to the HAL.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioHardwareNoError                       = 0,
+    kAudioHardwareNotRunningError               = 'stop',
+    kAudioHardwareUnspecifiedError              = 'what',
+    kAudioHardwareUnknownPropertyError          = 'who?',
+    kAudioHardwareBadPropertySizeError          = '!siz',
+    kAudioHardwareIllegalOperationError         = 'nope',
+    kAudioHardwareBadObjectError                = '!obj',
+    kAudioHardwareBadDeviceError                = '!dev',
+    kAudioHardwareBadStreamError                = '!str',
+    kAudioHardwareUnsupportedOperationError     = 'unop',
+    kAudioDeviceUnsupportedFormatError          = '!dat',
+    kAudioDevicePermissionsError                = '!hog'
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>These are the error constants that are unique to the HAL. Note that the HAL's
+functions can and will return other codes that are not listed here. While these
+constants give a general idea of what might have gone wrong during the execution
+of an API call, if an API call returns anything other than kAudioHardwareNoError
+it is to be viewed as the same failure regardless of what constant is actually
+returned.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareNoError"><tt>kAudioHardwareNoError</tt></a></dt><dd>The function call completed successfully.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareNotRunningError"><tt>kAudioHardwareNotRunningError</tt></a></dt><dd>The function call requires that the hardware be running but it isn't.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareUnspecifiedError"><tt>kAudioHardwareUnspecifiedError</tt></a></dt><dd>The function call failed while doing something that doesn't provide any
+error messages.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareUnknownPropertyError"><tt>kAudioHardwareUnknownPropertyError</tt></a></dt><dd>The AudioObject doesn't know about the property at the given address.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareBadPropertySizeError"><tt>kAudioHardwareBadPropertySizeError</tt></a></dt><dd>An improperly sized buffer was provided when accessing the data of a
+property.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareIllegalOperationError"><tt>kAudioHardwareIllegalOperationError</tt></a></dt><dd>The requested operation couldn't be completed.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareBadObjectError"><tt>kAudioHardwareBadObjectError</tt></a></dt><dd>The AudioObjectID passed to the function doesn't map to a valid AudioObject.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareBadDeviceError"><tt>kAudioHardwareBadDeviceError</tt></a></dt><dd>The AudioDeviceID passed to the function doesn't map to a valid AudioDevice.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareBadStreamError"><tt>kAudioHardwareBadStreamError</tt></a></dt><dd>The AudioStreamID passed to the function doesn't map to a valid AudioStream.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioHardwareUnsupportedOperationError"><tt>kAudioHardwareUnsupportedOperationError</tt></a></dt><dd>The AudioObject doesn't support the requested operation.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceUnsupportedFormatError"><tt>kAudioDeviceUnsupportedFormatError</tt></a></dt><dd>The AudioStream doesn't support the requested format.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDevicePermissionsError"><tt>kAudioDevicePermissionsError</tt></a></dt><dd>The requested operation can't be completed because the process doesn't have
+permission.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/Property Wildcard Constants"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="Property Wildcard Constants">Property Wildcard Constants</a></h2>
+</td></tr></table><hr>Constants that are used as wildcards in an AudioObjectPropertyAddress.
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioObjectPropertySelectorWildcard    = '****',
+    kAudioObjectPropertyScopeWildcard       = '****',
+    kAudioObjectPropertyElementWildcard     = 0xFFFFFFFFUL,
+  kAudioPropertyWildcardPropertyID    = kAudioObjectPropertySelectorWildcard,
+  kAudioPropertyWildcardSection      = 0xFF,
+  kAudioPropertyWildcardChannel      = kAudioObjectPropertyElementWildcard
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Wildcards match any and all values for there associated type. They are
+especially useful for registering listener procs to receive notifications and
+for querying an AudioObject's list of AudioControls.
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertySelectorWildcard"><tt>kAudioObjectPropertySelectorWildcard</tt></a></dt><dd>The wildcard value for AudioObjectPropertySelectors.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyScopeWildcard"><tt>kAudioObjectPropertyScopeWildcard</tt></a></dt><dd>The wildcard value for AudioObjectPropertyScopes.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioObjectPropertyElementWildcard"><tt>kAudioObjectPropertyElementWildcard</tt></a></dt><dd>The wildcard value for AudioObjectPropertyElements.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioPropertyWildcardPropertyID"><tt>kAudioPropertyWildcardPropertyID</tt></a></dt><dd>A synonym for kAudioObjectPropertySelectorWildcard.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioPropertyWildcardSection"><tt>kAudioPropertyWildcardSection</tt></a></dt><dd>The wildcard value for the isInput argument of AudioDeviceGetPropertyInfo(),
+AudioDeviceGetProperty(), and AudioDeviceSetProperty().</dd>
+<dt><a name="//apple_ref/c/econst/kAudioPropertyWildcardChannel"><tt>kAudioPropertyWildcardChannel</tt></a></dt><dd>A synonym for kAudioObjectPropertyElementWildcard.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/StartAtTime/GetNearestStartTime"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="StartAtTime/GetNearestStartTime">StartAtTime/GetNearestStartTime</a></h2>
+</td></tr></table><hr>The flags that can be passed to control the behavior of AudioDeviceStartAtTime()
+andAudioDeviceGetNearestStartTime().
+<br>
+<blockquote><pre>
+enum
+{
+    kAudioDeviceStartTimeIsInputFlag            = (1L &lt;&lt; 0),
+    kAudioDeviceStartTimeDontConsultDeviceFlag  = (1L &lt;&lt; 1),
+    kAudioDeviceStartTimeDontConsultHALFlag     = (1L &lt;&lt; 2)
+};
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Flags
+</p>
+<h4>Constants</h4>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceStartTimeIsInputFlag"><tt>kAudioDeviceStartTimeIsInputFlag</tt></a></dt><dd>Set to indicate that the requested time refers to an input time. Clear to
+indicate that it is an output time.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceStartTimeDontConsultDeviceFlag"><tt>kAudioDeviceStartTimeDontConsultDeviceFlag</tt></a></dt><dd>Set to indicate that the device should not be consulted when determining the
+start time. Clear to indicate that the device should be consulted. This flag
+cannot be set if kAudioDeviceStartTimeDontConsultHALFlag is set.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioDeviceStartTimeDontConsultHALFlag"><tt>kAudioDeviceStartTimeDontConsultHALFlag</tt></a></dt><dd>Set to indicate that the HAL should not be consulted when determining the
+start time. Clear to indicate that the HAL should be consulted. This flag
+cannot be set if kAudioDeviceStartTimeDontConsultDeviceFlag is set.</dd>
+</dl>
+</blockquote>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

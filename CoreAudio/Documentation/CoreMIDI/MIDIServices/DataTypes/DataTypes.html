@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIObjectRef;  name=MIDIObjectRef --><a name="//apple_ref/c/tdef/MIDIObjectRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectRef">MIDIObjectRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>The base class of many CoreMIDI objects.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> <font class="type">*</font> <font class="var">MIDIObjectRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>MIDIObject is the base class for many of the objects in CoreMIDI.  They have properties,
+and often an "owner" object, from which they inherit any properties they do not
+themselves have.
+<br><br>
+Developers may add their own private properties, whose names must begin with their
+company's inverted domain name, as in Java package names, but with underscores instead
+of dots, e.g.: com_apple_APrivateAppleProperty
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIClientRef;  name=MIDIClientRef --><a name="//apple_ref/c/tdef/MIDIClientRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIClientRef">MIDIClientRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An object maintaining per-client state.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDIClient //apple_ref/c/cl/OpaqueMIDIClient //apple_ref/c/tdef/OpaqueMIDIClient //apple_ref/c/tag/OpaqueMIDIClient //apple_ref/c/econst/OpaqueMIDIClient //apple_ref/c/struct/OpaqueMIDIClient //apple_ref/c/clconst/OpaqueMIDIClient" --><font class="type">OpaqueMIDIClient</font><!-- /a --> <font class="type">*</font> <font class="var">MIDIClientRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Derives from MIDIObjectRef, does not have an owner object.
+<br><br>
+To use CoreMIDI, an application creates a MIDIClientRef, to which it can add
+MIDIPortRef's, through which it can send and receive MIDI.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIPortRef;  name=MIDIPortRef --><a name="//apple_ref/c/tdef/MIDIPortRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPortRef">MIDIPortRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A MIDI connection port owned by a client.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDIPort //apple_ref/c/cl/OpaqueMIDIPort //apple_ref/c/tdef/OpaqueMIDIPort //apple_ref/c/tag/OpaqueMIDIPort //apple_ref/c/econst/OpaqueMIDIPort //apple_ref/c/struct/OpaqueMIDIPort //apple_ref/c/clconst/OpaqueMIDIPort" --><font class="type">OpaqueMIDIPort</font><!-- /a --> <font class="type">*</font> <font class="var">MIDIPortRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Derives from MIDIObjectRef, owned by a MIDIClientRef.
+<br><br>
+A MIDIPortRef, which may be an input port or output port, is an object through which a
+client may communicate with any number of MIDI sources or destinations.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIDeviceRef;  name=MIDIDeviceRef --><a name="//apple_ref/c/tdef/MIDIDeviceRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDeviceRef">MIDIDeviceRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A MIDI device or external device, containing entities.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDIDevice //apple_ref/c/cl/OpaqueMIDIDevice //apple_ref/c/tdef/OpaqueMIDIDevice //apple_ref/c/tag/OpaqueMIDIDevice //apple_ref/c/econst/OpaqueMIDIDevice //apple_ref/c/struct/OpaqueMIDIDevice //apple_ref/c/clconst/OpaqueMIDIDevice" --><font class="type">OpaqueMIDIDevice</font><!-- /a --> <font class="type">*</font> <font class="var">MIDIDeviceRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Derives from MIDIObjectRef, does not have an owner object.
+<br><br>
+A MIDI device, which either attaches directly to the computer and is controlled by a
+MIDI driver, or which is "external," meaning that it is connected to a driver-controlled
+device via a standard MIDI cable.
+<br><br>
+A MIDIDeviceRef has properties and contains MIDIEntityRef's.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIEntityRef;  name=MIDIEntityRef --><a name="//apple_ref/c/tdef/MIDIEntityRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityRef">MIDIEntityRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A MIDI entity, owned by a device, containing endpoints.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDIEntity //apple_ref/c/cl/OpaqueMIDIEntity //apple_ref/c/tdef/OpaqueMIDIEntity //apple_ref/c/tag/OpaqueMIDIEntity //apple_ref/c/econst/OpaqueMIDIEntity //apple_ref/c/struct/OpaqueMIDIEntity //apple_ref/c/clconst/OpaqueMIDIEntity" --><font class="type">OpaqueMIDIEntity</font><!-- /a --> <font class="type">*</font> <font class="var">MIDIEntityRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Derives from MIDIObjectRef, owned by a MIDIDeviceRef.
+<br><br>
+Devices may have multiple logically distinct sub-components, e.g. a MIDI synthesizer and
+a pair of MIDI ports, both addressable via a USB port.
+<br><br>
+By grouping a device's endpoints into entities, the system has enough information for an
+application to make reasonable assumptions about how to communicate in a bi-directional
+manner with each entity, as is desirable in MIDI librarian applications.
+<br><br>
+These sub-components are MIDIEntityRef's.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIEndpointRef;  name=MIDIEndpointRef --><a name="//apple_ref/c/tdef/MIDIEndpointRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEndpointRef">MIDIEndpointRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A MIDI source or destination, owned by an entity.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDIEndpoint //apple_ref/c/cl/OpaqueMIDIEndpoint //apple_ref/c/tdef/OpaqueMIDIEndpoint //apple_ref/c/tag/OpaqueMIDIEndpoint //apple_ref/c/econst/OpaqueMIDIEndpoint //apple_ref/c/struct/OpaqueMIDIEndpoint //apple_ref/c/clconst/OpaqueMIDIEndpoint" --><font class="type">OpaqueMIDIEndpoint</font><!-- /a --> <font class="type">*</font> <font class="var">MIDIEndpointRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Derives from MIDIObjectRef, owned by a MIDIEntityRef, unless it is a virtual endpoint,
+in which case there is no owning entity.
+<br><br>
+Entities have any number of MIDIEndpointRef's, sources and destinations of 16-channel
+MIDI streams.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDITimeStamp;  name=MIDITimeStamp --><a name="//apple_ref/c/tdef/MIDITimeStamp"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDITimeStamp">MIDITimeStamp</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A host clock time.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/UInt64 //apple_ref/c/cl/UInt64 //apple_ref/c/tdef/UInt64 //apple_ref/c/tag/UInt64 //apple_ref/c/econst/UInt64 //apple_ref/c/struct/UInt64 //apple_ref/c/clconst/UInt64" --><font class="type">UInt64</font><!-- /a --> <font class="var">MIDITimeStamp</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A host clock time representing the time of an event, as returned by
+mach_absolute_time() or UpTime().
+<br><br>
+Since MIDI applications will tend to do a fair amount of math with the times of events,
+it's more convenient to use a UInt64 than an AbsoluteTime.
+<br><br>
+See CoreAudio/HostTime.h.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIUniqueID;  name=MIDIUniqueID --><a name="//apple_ref/c/tdef/MIDIUniqueID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIUniqueID">MIDIUniqueID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A unique identifier for a MIDIObjectRef.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">MIDIUniqueID</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>An integer which uniquely identifies a MIDIObjectRef.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDINotifyProc;  name=MIDINotifyProc --><a name="//apple_ref/c/tdef/MIDINotifyProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDINotifyProc">MIDINotifyProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback function for notifying clients of state changes.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/MIDINotifyProc //apple_ref/c/clm/MIDINotifyProc //apple_ref/c/intfcm/MIDINotifyProc //apple_ref/c/func/MIDINotifyProc //apple_ref/c/ftmplt/MIDINotifyProc //apple_ref/c/defn/MIDINotifyProc //apple_ref/c/macro/MIDINotifyProc" --><font class="function">MIDINotifyProc</font><!-- /a -->)(
+    <font class="keyword">const</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDINotification" logicalPath="//apple_ref/c/cl/MIDINotification //apple_ref/c/cl/MIDINotification //apple_ref/c/tdef/MIDINotification //apple_ref/c/tag/MIDINotification" target="_top"><font class="type">MIDINotification</font></a> *<font class="param">message</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">refCon</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>message</code></dt>
+<dd>A structure containing information about what changed.</dd>
+<dt><code>refCon</code></dt>
+<dd>The client's refCon passed to MIDIClientCreate.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This callback function is called when some aspect of the current MIDI setup changes. It
+is called on the runloop (thread) on which MIDIClientCreate was first called.
+<br><br></p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIReadProc;  name=MIDIReadProc --><a name="//apple_ref/c/tdef/MIDIReadProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIReadProc">MIDIReadProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A function receiving MIDI input.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/MIDIReadProc //apple_ref/c/clm/MIDIReadProc //apple_ref/c/intfcm/MIDIReadProc //apple_ref/c/func/MIDIReadProc //apple_ref/c/ftmplt/MIDIReadProc //apple_ref/c/defn/MIDIReadProc //apple_ref/c/macro/MIDIReadProc" --><font class="function">MIDIReadProc</font><!-- /a -->)(
+    <font class="keyword">const</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">readProcRefCon</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">srcConnRefCon</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>pktlist</code></dt>
+<dd>The incoming MIDI message(s).</dd>
+<dt><code>readProcRefCon</code></dt>
+<dd>The refCon you passed to MIDIInputPortCreate or
+MIDIDestinationCreate</dd>
+<dt><code>srcConnRefCon</code></dt>
+<dd>A refCon you passed to MIDIPortConnectSource, which
+identifies the source of the data.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This is a callback function through which a client receives incoming MIDI messages.
+<br><br>
+A MIDIReadProc function pointer is passed to the MIDIInputPortCreate and
+MIDIDestinationCreate functions.  The CoreMIDI framework will create a high-priority
+receive thread on your client's behalf, and from that thread, your MIDIReadProc will be
+called when incoming MIDI messages arrive. Because this function is called from a
+separate thread, be aware of the synchronization issues when accessing data in this
+callback.
+<br><br></p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDICompletionProc;  name=MIDICompletionProc --><a name="//apple_ref/c/tdef/MIDICompletionProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDICompletionProc">MIDICompletionProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A function called when a system-exclusive event has been completely sent.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/MIDICompletionProc //apple_ref/c/clm/MIDICompletionProc //apple_ref/c/intfcm/MIDICompletionProc //apple_ref/c/func/MIDICompletionProc //apple_ref/c/ftmplt/MIDICompletionProc //apple_ref/c/defn/MIDICompletionProc //apple_ref/c/macro/MIDICompletionProc" --><font class="function">MIDICompletionProc</font><!-- /a -->)(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDISysexSendRequest" logicalPath="//apple_ref/c/cl/MIDISysexSendRequest //apple_ref/c/cl/MIDISysexSendRequest //apple_ref/c/tdef/MIDISysexSendRequest //apple_ref/c/tag/MIDISysexSendRequest" target="_top"><font class="type">MIDISysexSendRequest</font></a> *<font class="param">request</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>request</code></dt>
+<dd>The MIDISysexSendRequest which has completed, or been
+aborted.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Callback function to notify the client of the completion of a call to MIDISendSysex.
+<br><br></p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {addPara = id; replaceText = id; restore = id; }; 
+            CLASS = WebManipulationController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                isBold = NSButton; 
+                isItalic = NSButton; 
+                myWebView = WebView; 
+                paraCount = NSTextField; 
+                paraText = NSTextField; 
+                sourceCodeView = NSTextView; 
+                welcomeText = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	0A3ECED7FE888A39C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Development;
+		activeBuildStyle = 0E226A11FF8418F311CA2CEA /* Development */;
+		activeExecutable = 6B45949CC5B0395200F6887E /* Sketch */;
+		activeTarget = 38D54A3507D51A2A00514CB8 /* Sketch */;
+		codeSenseManager = 6B4594B6C5B0396700F6887E /* Code sense */;
+		executables = (
+			6B45949CC5B0395200F6887E /* Sketch */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48.1626,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = "-978306734";
+			PBXWorkspaceStateSaveDate = "-978306734";
+		};
+		sourceControlManager = 6B4594B5C5B0396700F6887E /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	38D54A3507D51A2A00514CB8 /* Sketch */ = {
+		activeExec = 0;
+		executables = (
+			6B45949CC5B0395200F6887E /* Sketch */,
+		);
+	};
+	6B45949CC5B0395200F6887E /* Sketch */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Sketch;
+		sourceDirectories = (
+		);
+	};
+	6B4594B5C5B0396700F6887E /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	6B4594B6C5B0396700F6887E /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

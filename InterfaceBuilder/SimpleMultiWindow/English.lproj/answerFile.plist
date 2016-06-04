@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<array>
+	<string>That's a good question</string>
+	<string>Im not sure.</string>
+	<string>I'll look that up.</string>
+	<string>Ask me again, later.</string>
+</array>
+</plist>

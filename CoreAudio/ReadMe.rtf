@@ -1,0 +1,405 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf110
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red255\green128\blue13;\red0\green129\blue6;\red27\green126\blue24;
+}
+\margl1440\margr1440\vieww19920\viewh19520\viewkind0
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs48 \cf2 Core Audio Examples
+\f1\b0\fs60 \cf0 \
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\sl240\ql\qnatural
+
+\fs28 \cf0 /Developer/Examples/CoreAudio
+\fs36 \
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\fs28 \cf0 Examples that use the Mac OS X Core Audio API Set
+\fs24 \
+\
+
+\f0\b This is CoreAudioSDK \cf3 v1.4.3\cf0 .\
+\
+This SDK requires Mac OS X Tiger (v10.4) or later.
+\f1\b0 \
+\
+\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs36 \cf0 Documentation
+\f1\b0\fs24 \
++ Documentation is available at:\
+	
+\f0\b /Developer/Examples/CoreAudio/Documentation/index.html\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f1\b0 \cf0 		HAL: 
+\f0\b /Developer/Examples/CoreAudio/Documentation/HAL/index.html\
+
+\f1\b0 		MIDI: 
+\f0\b /Developer/Examples/CoreAudio/Documentation/MIDI/index.html\
+
+\f1\b0 		AudioUnits: 
+\f0\b /Developer/Examples/CoreAudio/Documentation/AudioUnits/index.html
+\f1\b0 \
+		AULab: 
+\f0\b /Developer/Applications/Audio/AU Lab Documentation/AULabDocs.html
+\f1\b0 \
+		auval: 
+\f0\b /Developer/Examples/CoreAudio/Documentation/AudioUnits/AUValidationReadMe.rtf
+\f1\b0 \
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs36 \cf0 \
+References and Resources
+\f1\b0\fs24 \
+The SDK (Software Developer Kit) contents, both examples and documents, are updated periodically.  You can always find the most current version of the SDK on the Apple developer web site:\
+	
+\f0\b http://developer.apple.com/audio/
+\f1\b0 \
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f0\b \cf0 \
+
+\f1\b0 Core Audio and MIDI developer mailing list:\
+	
+\f0\b http://lists.apple.com/mailman/listinfo/coreaudio-api
+\f1\b0 /\
+\
+
+\f0\b AU Lab\
+
+\f1\b0 	Found in /Developer/Applications/Audio, it is an application for hosting Audio Units. It can take Audio Input, AU Instruments or AU Generators (AUNetReceive for example) and then use effects and converter Audio Units to process these. It also provides capabilities to use MIDI Thru filters and other features provided by the CoreAudio API\
+\
+
+\f0\b AU Validation Tool\
+
+\f1\b0 	a command line tool installed in Tiger (/usr/bin/auval). The tool will take any AU through a comprehensive series of tests to ensure that it is in compliance with the current AU Specification. At the command line type "auval -h" to get a full list of options and how to use this tool.\
+\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs36 \cf0 Manifest\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f1\b0\fs24 \cf0 Examples are in C/C++ and Objective-C/C++.\
+           
+\f0\b AudioCodecs\
+
+\f1\b0 		
+\f0\b AudioCodec SDK
+\f1\b0 : SDK for developers to write their own AudioCodecs.  Includes sample source for IMA4 codec.\
+\
+           
+\f0\b AudioFile
+\f1\b0 \
+		
+\f0\b AFPublic
+\f1\b0 : New in CASDK v1.4.0.  Base classes used by the RawAudioFileComponent sample.\
+		
+\f0\b RawAudioFileComponent
+\f1\b0 : New in CASDK v1.4.0.  Creates a sample AudioFileComponent.\
+\
+           
+\f0\b AudioUnits
+\f1\b0 \
+		
+\f0\b AUPublic
+\f1\b0 :
+\f0\b  
+\f1\b0 This directory contains an extensive C++ framework for building AudioUnit and AudioUnitCarbonView components.  \
+			Documentation for this framework is in /Developer/Examples/CoreAudio/Documentation/AudioUnits/SDK.\
+		
+\f0\b CarbonGenericView
+\f1\b0 : source code for Apple's generic Carbon AudioUnitCarbonView.\
+		
+\f0\b DiagnosticAUs
+\f1\b0 : Various AU's for troubleshooting and analysis.\
+		
+\f0\b FilterDemo
+\f1\b0 : a simple Audio filter AU with a Cocoa view - demonstrated at WWDC 2005\
+		
+\f0\b MultitapDelayAU
+\f1\b0 :
+\f0\b  
+\f1\b0 A sample audio unit for a multitap delay with a custom AudioUnitCarbonView.\
+		
+\f0\b SinSynth
+\f1\b0 : a demonstration synth using the AUInstrument base classes and MIDIMap facilities\
+		
+\f0\b SampleAUs
+\f1\b0 : Provides code for a sample effect unit, a reverse Offline unit \
+\
+
+\f0\b            HAL 
+\f1\b0 (Hardware Abstraction Layer)\
+	+ examples using the lowest level of the audio system. Primarily the CoreAudio/AudioHardware.h APIs.\
+		
+\f0\b AudioReflectorDriver
+\f1\b0 : Example IOAudioFamily driver with optimal blitters (int-float-int)\
+		
+\f0\b HALLab
+\f1\b0 : New in CASDK v1.3.0.  Application with extensive UI and code to interact with the global state of the audio system, its properties, notifications and the properties of individual devices.\
+		
+\f0\b Million Monkeys
+\f1\b0 : Application that runs an audio production thread that feeds a HAL IOProc.  You can vary the thread's priority and the work done in the thread, take CPU execution traces, etc.\
+
+\f0\b \
+           MIDI 
+\f1\b0 (Musical Instrument Digital Interface)\
+	+ examples that use the MIDI APIs.\
+		
+\f0\b SampleTools
+\f1\b0 : simple application interaction with the CoreMIDI APIs.\
+		
+\f0\b SampleUSBDriver
+\f1\b0 : contains code for a USB MIDI driver. \
+
+\f0\b \
+           PublicUtility
+\f1\b0 \
+	+ various C++/Obj-C code used by some of the examples (and the CA frameworks themselves!)\
+\
+
+\f0\b            Services
+\f1\b0 \
+	+ examples that use the AudioToolbox and AudioUnit APIs\
+		
+\f0\b AudioFileTools
+\f1\b0 : A collection of tools to convert, play, record, au-process audio files.\
+		
+\f0\b AudioUnitHosting
+\f1\b0 : Simple AU Host app for effects (default), instruments or converter AUs - Carbon. 
+\f0\b CocoaAUHost 
+\f1\b0 is the cocoa version of this app. We recommend AU Lab (/Developer/Applications/Audio) as the preferred development app for AU development and testing.\
+		
+\f0\b AUMixer3DTest
+\f1\b0 : Application using 3D Mixer with a basic user-interface to allow user to drag sounds around in a field, changing their position.		
+\f0\b AUViewTest
+\f1\b0 : Creates an AUGraph [DLS Synth-->Delay-->Output] and allows user to open the AUView for the delay unit, adjusting parameters in real-time.  For source audio, the MusicPlayer API plays a MusicSequence through the DLS Synth.\
+		
+\f0\b MatrixMixerTest
+\f1\b0 : New in CASDK v1.3.0.  Application showcasing the MatrixMixer AudioUnit.\
+		
+\f0\b OpenALExample
+\f1\b0 : New in CASDK 1.4.2. Shows usage of the OpenAL API, including some of the Apple Extensions\
+\
+	
+\f0\b SimpleSDK
+\f1\b0 \
+		
+\f0\b ConvertFile
+\f1\b0  an introduction to both the AudioConverter and AudioFile APIs (one example) or the ExtendedAudioFile API (the other). Takes a linear PCM audio file and converts it to any file format, any data format supported by CoreAudio APIs.  \
+		
+\f0\b DefaultOutputUnit
+\f1\b0 : This example uses the DefaultOutputUnit to output a sine wave.\
+		
+\f0\b PlayFile
+\f1\b0  an introduction to the AUFilePlayer; an AudioUnit that is used to play files. Also uses the AUGraph API.\
+		
+\f0\b PlaySoftMIDI
+\f1\b0 : makes an AUGraph with a DLSSynth and Output unit and sends some simple MIDI note commands to be played by the synth.\
+		
+\f0\b PlaySequence
+\f1\b0 : an introduction to the MusicSequence, MusicPlayer and AUGraph APIs to read in a MIDI file and play it.\
+\
+
+\f0\b 	\
+	XFramework
+\f1\b0 \
+	+ a small C++ framework for creating Carbon Event-based applications, used by some of the examples\
+\
+
+\f0\b 	"Extras" \
+
+\f1\b0 	+ these are binaries that can be used for your edification and enjoyment\
+		
+\f0\b AULooper
+\f1\b0 : A pre-built performance looper Audio Unit with Cocoa View.\
+		To install it: Copy the 'AULooper.component' file \
+			- from /Developer/Extras/CoreAudio/AudioUnits/' \
+			- to either '/Library/Audio/Plug-Ins/Components/' or '~/Library/Audio/Plug-Ins/Components/' in Finder.\
+\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs36 \cf0 Release Notes\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+
+\f1\b0\fs24 \cf0 + 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.4.3\cf0 .\cf3 \
+
+\f1\b0 \cf0 + Address usage of previous OS SDKs\
+	- Fix build problems with AU SDK\
+	- AudioReflector, AudioCodec, AudioFileComponents notes\
+	- Add document to describe this in more detail\
++ Updated document included to explain usage of Carbon windows in Cocoa apps\
++ Denormals handling added to AUBase::Render\
++ Universal Builds tip:\
+	The AudioUnit, AudioFileComponent and AudioCodec components all use a similar approach now when building\
+		- All projects use AUResources.h to build the required resources\
+		- This file looks for the definitions of ppc_YES and i386_YES to determine which architectures are being built\
+		- These symbols are defined by adding the following to OTHER_REZ_FLAGS in your project:\
+			-d ppc_$ppc -d i386_$i386\
+		- The actual value of these symbols are then set with the normal architecture check box in your XCode project\
+	This means that once established like this, the resource files will automatically generate appropriate resources for whichever architecture you build for.\
+\
++ 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.4.2\cf0 .\cf3 \
+
+\f1\b0 \cf0 + There has been some re-organisation in the SDK:\
+	- A new "SimpleSDK" contains some easy example code to get started\
+		- see ReadME in that directory\
+	- An example AudioDriver - AudioReflector has been provided\
+		- this is a re-write of the previously released PhantomAudioDriver\
+	- the AUFilter that was demonstrated at WWDC 2005 is included\
+	- an example Sin Wave Synth (SinSynth) is included\
+		- uses the new AUInstrumentBase classes\
+		- uses the MIDIMap classes in Public Utility \
+			- provides an automatic mapping of MIDI messages to parameter values \
+			- look at this in AU Lab's MIDI Inspector\
+\pard\tx860\tx1720\tx2560\tx3520\tx4440\ql\qnatural
+\cf0 	- addition of example to show usage of OpenAL API\
+	- all projects are updated to XCode 2.1 projects\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+\cf0 \
++ Temporary changes in 1.4.1 SDK\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 	-  fixed for Universal binaries\
+		- Services/AUMixer3DTest\
+		- Services/MatrixMixerTest\
+		- AULooper (installed in /Developer/Extras/CoreAudio has been temporarily removed)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	- Removed from SDK - still available in 1.3.x versions of SDK\
+		- Services/DiskWriterAUGraph\
+		- HAL/AudioThru\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+\cf0 \
++ The Resource Manager problems for Universal AU builds have been fixed\
+	- you will need to define ppc_YES and i386_YES variables in your AU Projects \
+		- any of the AU Example projects in this SDK use this (Rez define in Target Settings)
+\f0\b \cf3 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 + 
+\f0\b CoreAudioSDK \cf3 v1.4.1\cf0 .
+\f1\b0 \
++ This is a first release of an SDK for both PPC and i386.\
++ AudioUnit Changes:\
+    - AUPublic/AUBase/AUResource.r has been fixed so it builds component resources for both PPC and i386\
+    	
+\f0\b This was the only change needed for all of the AU's in the SDK for them to work on PPC and i386
+\f1\b0 \
++ The AudioCodec and AudioFileComponent .r files have been re-done to use the .r file as used by Audio Units (AUPublic/AUBase/AUResource.r)\
++ The following files had changes for i386:\
+    - DefaultOutputUnit's RenderSin has to use NativeFloat32 (it was previously big-endian)\
+    - CATink now has code for both ppc and i386\
+    - The XXXVersion.h for AU's now just have a single vers number (they aren't using the #if DEBUG semantic they were previously)\
+        - just a sanitisation/cleanup step (the change wasn't strictly needed for i386)\
++ The following examples have been temporarily removed from the SDK:\
+    - Services/AUMixer3DTest\
+    - Services/DiskWriterAUGraph\
+    - Services/MatrixMixerTest\
+    - HAL/AudioThru\
+    - AULooper (installed in /Developer/Extras/CoreAudio has been temporarily removed)
+\f0\b \cf3 \
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+\cf3 \
+
+\f1\b0 \cf0 + 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.4.0.
+\f1\b0 \cf0 \
++ CoreAudio-HAL documentation\
++ AULooper, a pre-built performance looper Audio Unit with Cocoa View.\
++ CocoaAUHost has been rewritten.  It supports generator units' UI as well as the new CoreAudioKit framework for creating Cocoa generic AU views.\
++ RawAudioFileComponent is a new example that builds a sample AudioFileComponent.\
+\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural\pardirnatural
+\cf0 + 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf4 v1.3.4
+\f1\b0 \cf0 .\
++ Fixed AudioFileTools project that was inadvertently broken in SDKs v1.3.2 and v1.3.3.\
+\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+\cf0 + 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.3.3
+\f1\b0 \cf0 .\
++ This SDK release includes changes to AUEffectBase.cpp that fix bugs when scheduling parameter changes. These bugs are flagged in the auval tool using the -strict_SP flag (which with previous versions of the SDK will print a "Strict Warning" for these problems).\
+\
++ 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.3.2
+\f1\b0 \cf0 .\
++ AudioUnits/DiagnosticAUs has been added\
++ Documentation has been moved from /Developer/Documentation to /Developer/Examples/CoreAudio/Documentation\
++ With the release of QuickTime 6.5.1, you no longer need to include AUPropertiesPostPantherAdditions.h, so we've removed its inclusion from files.  It's still installed in Documentation/AudioUnits for developers working on systems with QT < v6.5.1.\
+\
++ 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.3.1
+\f1\b0 \cf0 .\
++ There have been updates to the CocoaAUView samples: CocoaAUHost, SampleEffectUnit's CocoaUI, and the WritingCocoaAUUI.pdf documentation.\
+\
++ You will need to include the "/Developer/Documentation/CoreAudio/AudioUnits/AUPropertiesPostPantherAdditions.h" header file in projects: MultitapDelayAU, SampleEffect, and AUMixer3DTest in order for those projects to compile.\
+\
+\pard\tx860\tx1720\tx2560\tx5760\tx7200\ql\qnatural
+\cf0 \ul \ulc0 + SampleEffectUnit diffs:\
+\ulnone 	[a] File referencing changed: Note that 
+\f0\b PublicUtility
+\f1\b0  and 
+\f0\b AUPublic
+\f1\b0  directories are \ul referenced with absolute paths\ulnone .  If you want to package your source, we recommend you change these reference styles to group or project reference before packaging.\
+	[b] revision of the Reverse Off-line AU\
+\
+\ul + CarbonView diffs:
+\f0\b \ulnone \
+
+\f1\b0 	[a] Support the host context name property in displaying the AU's names in the generic view.\
+	[b] Some additional changes needed for localization.\
+	[c] Some tweaking of display positioning of widgets.\
+	[d] GenericView - fixing the re-instantiation of the view's widgets if the parameter list changes.\
+\
+\ul + AUPublic diffs:\ulnone \
+	[a] Debug dispatcher prints more information on API calls.\
+\
+\ul + PublicUtility diffs:\ulnone \
+	[a] General re-write to migrate from the view based AUVParameter to CAAUParameter (that can be used in AU's, hosting code as well as views)\
+	[b] Refactoring of CAGuard into two classes:\
+		CAMutex for mutex operations (new base class)\
+		CAGuard now adds wait/notify semantics (semaphore)\
+	[c] Classes for dealing with AU Presets (thanks to Marc Poirier for some ideas here) (CAAUPresetFile.h/.cpp)\
+	[d] Classes for adding a kernel trace facility to an AU's execution cycle for both overload tracing and spike usage tracing (AUTracer.h/.cpp)\
+	[e] A collection of classes (AudioFile-new) for dealing with files, reading data to and from files using the AudioConverter (see the read me in that directory for more info) There is also some new tool executables for playing/recording and converting/processing files. This is a work in progress (more to come) - (see also Services/AudioFileTools)\
+	[f] Revisions to CAAudioUnit to handle:\
+		[i] Fast dispatch\
+		[ii] Supported Number-of-channels for Dynamic I/O Configuration (see docs for info (IOChannelConfigurations.rtf))\
+	[g] The .cp files have all been removed and replaced with .cpp files for consistency\
+	[h] Fixes to CAReferenceCounted - use of atomic operations for thread-safe usage\
+	[i] Addition of classes for use with AU - CAAUProcessor, AUOutputBL (comments in header files)\
+\
+\ul + SDK Example diffs:\ulnone \
+	[a] HALLab: fixed bug in file playback.\
+	[b] AudioUnitHosting:\
+		[i] Changes needed to listen to and respond to change in the root control of the AU's view (the new code changes the size of the window to accomodate the new view's display size.)\
+		[ii] fixes to filename handling.\
+\
++ 
+\f0\b CoreAudioSDK
+\f1\b0  
+\f0\b \cf3 v1.3.0
+\f1\b0 \cf0 .\
++ A significant number of new examples have been provided in this package.\
++ CoreAudioJava has been open-sourced, and is included in this SDK.\
++ The SampleEffect AudioUnit now includes a sample Cocoa UI, and there is source for a CocoaAUView Host.\
+\
+}

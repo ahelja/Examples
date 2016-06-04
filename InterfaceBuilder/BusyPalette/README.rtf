@@ -1,0 +1,90 @@
+{\rtf1\mac\ansicpg10000\cocoartf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fswiss\fcharset77 Helvetica-BoldOblique;
+\f3\fswiss\fcharset77 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red255\green23\blue67;}
+\vieww9120\viewh11940\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs36 \cf0 BusyPalette
+\f1\b0\fs24 \
+\
+Last Updated: Thu May 31\
+\
+
+\f2\i\b\fs26 \cf2 Be sure to install the BusyPaletteFramework and the BusyPalette before trying to use this palette in Interface Builder.\
+
+\f1\i0\b0\fs24 \cf0 \
+BusyPalette contains example code for a more complicated Interface Builder palette.\
+\
+This example shows you how to:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li1320\fi-240\ri-2580\ql\qnatural
+\cf0 \'a5 Split your code into two parts the Palette, (Interface Builder specific) and a Framework (Non-Interface Builder specific). You would link your resulting application with the Framework.\
+\'a5 Make a palette that allows the user to undo their actions\
+\'a5 Add another Inspector Mode. (add another pane on the Info panel)\
+\'a5 Make a palette from non-view objects.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li1180\fi-100\ri-2580\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 The project is divided into two parts Palette and Framework. \
+\
+The 
+\f0\b Palette
+\f1\b0  is subdivided into 3 main parts, the Palette itself, the Inspector and Undo support files for Interface Builder.\
+\
+The 
+\f0\b Framework
+\f1\b0  contains all of the actual code that will do the work in your application, with none of the code needed to make a palette (No Interface Builder code).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Description of BusyPaletteFramework
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\fs24 \cf0 \
+The BusyPaletteFramework contains only three classes; ExpressionEvaluator, ExpressionFormatter and NiftyMenuItem.\
+\
+ExpressionEvaluator takes a mathematical expression like 1+2*4 and returns 9. Expressions are evaluated correctly ( () then * / then + - ).\
+\
+ExpressionFormatter is a subclass of NSNumberFormatter and allows the ExpressionEvaluator to be connected to NSTextFields and NSTableViewColumns. ExpressionFormatter takes a mathematical expression and returns a formatted number. [This is the same Formatter that is used in Interface Builder for TextFields in the Info panel that accept numeric input)\
+\
+NiftyMenuItem is a subclass of NSMenuItem that adds instance variable to NSMenuItem called randomString. Its main goal is to show how to make menu item palettes and how to add an Inspector Mode to your palette.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Why would you want to make a Interface Builder palette?
+\f1\b0\fs24 \
+\
+After you have written that cool widget, converting it into a palette allows you to use it in your programs without having to write setup and initialize code. Having your objects in a palette also gives non-programmers in your group the ability to easily re-configure your program (like change the background color of a textfield, or change the format of a text field) without having to write or modify any code.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f3\i \cf0 Note: in order to manipulate custom widgets within Interface Builder you don't have to create a palette.  The Custom View object can be mapped to any subclass of NSView an you can also subclass any built-in widget (like MyButton being a subclass of NSButton). The advantage of those two methods is that no programming is necessary. The drawbacks are that you can see what your UI will look like but you can't set custom properties on your object. \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\i0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Main Steps required in making a palette in Interface Builder.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+The first step in making a palette in Interface Builder is to write your widget so it works outside of Interface Builder. In the BusyPalette example the ExpressionEvaulator, ExpressionFormatter and the NiftyMenuItem were written outside of IB and placed in the BusyPaletteFramework. By placing you widgets in their own framework you will allow many programs to re-use the widgets you have written by simply linking against your framework.\
+\
+The main requirement Interface Builder has of a widget is that it implements the NSCoding protocol (initWithCoder: and encodeWithCoder). In the case of ExpressionFormatter and ExpressionEvaluator archiving was not necessary because: \
+	\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li1320\fi-240\ri-2580\ql\qnatural
+\cf0 \'a5 ExpressionEvaluator has no state and thus doesn't need to archive anything. \
+\'a5 ExpressionFormatter simply passes the input object though the ExpressionEvaluator to its superclass (NSNumberFormatter) and thus has no state.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+The second thing that is needed to make a palette in Interface Builder, is some way of allowing the user to drag an instance of your widget from the palette into the user's document. In the case of a View (see ProgressView palette example), the palette simply contains views which can be dragged off directly. In the case of a Formatter and a MenuItem, some sort of visual representation has to be provided on screen for the user to select, so an image of the object is provided which is then associated with the real object (an image of a formatter is associated with the ExpressionFormatter). This association between a visual representation of an object and the object is done in the finishInstanciate method in the BusyPalette class.\
+\
+Finally some mechanism needs to be provided to allow the user to manipulate the object, this manipulation is provided by the inspectors. When a widget is selected, Interface Builder asks the widget for the name of its Inspector Class. The name of the inspector class is then looked up in the runtime and instanciated. This inspector instance is now responsible for manipulating the widget on screen. The category ExpressionFormatterPaletteInspector, and the "Alternate Attributes" inspector mode placed on the NiftyMenuItem object allow the user to modify the attributes of the ExpresisonFormatter and the NiftyMenuItem.\
+\
+We just added API to allow you to register custom dragging types in IB. The BusyPalette Object is registered with  registerViewResourceDraggingDelegate: to be called whenever dragging occurs in IB, when the user drags an object from the palette that is of the Pasteboard type returned by the method viewResourcePasteboardTypes, the delegate method - depositViewResourceFromPasteboard:onObject:atPoint: when the user drops the dragged object. In the BusyPalette example the code allows a swich cell to be dropped onto a NSTableColumn and sets the Data Cell of that column to a NSButtonCell.\
+\
+An Alternate Inspector mode has been added to NSTableColumns to allow the dropped data cell to be detached from the table column that the user dropped the cell on.\
+\
+}

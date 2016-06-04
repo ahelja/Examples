@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                savetButtonSelected = id; 
+                speakTextButtonSelected = id; 
+                startStopSimpleCommandButtonSelected = id; 
+            }; 
+            CLASS = NSSpeechExampleWindow; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_characterView" = SpeakingCharacterView; 
+                "_saveButton" = NSButton; 
+                "_textToSpeechExampleSpeakButton" = NSButton; 
+                "_textToSpeechExampleTextView" = NSTextView; 
+                "_voicePop" = NSPopUpButton; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = SpeakingCharacterView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

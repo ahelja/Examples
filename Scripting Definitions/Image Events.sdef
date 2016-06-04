@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary>
+	<documentation>
+		<html>This is a stripped-down version of the Image Events dictionary
+		for example purposes.  For the real deal, open Image Events in
+		Script Editor.</html>
+	</documentation>
+
+	<suite name="Image Suite" code="imgs" description="Terms and Events for controlling Images">
+		<class name="application" code="capp" description="The Image Events application">
+			<element type="image"/>
+			<element type="profile"/>
+		</class>
+
+		<enumeration name="connection space" code="pPCS">
+			<enumerator name="Lab" code="Lab "/>
+			<enumerator name="XYZ" code="XYZ "/>
+		</enumeration>
+
+		<enumeration name="rendering intent" code="pRdr" inline="0">
+			<!-- this enumeration will be shown out-of-line, thanks to the "inline" attribute.  This can be useful for very long or often-repeated enumerations. -->
+			<enumerator name="absolute colorimetric intent" code="Rdr3"/>
+			<enumerator name="perceptual intent" code="Rdr0"/>
+			<enumerator name="saturation intent" code="Rdr2"/>
+			<enumerator name="relative colorimetric intent" code="Rdr1"/>
+		</enumeration>
+
+		<class name="profile" plural="profiles" code="prof" description="A ColorSync ICC profile.">
+			<cocoa class="Profile"/>
+			<property name="name" code="pnam" type="text" access="r"/>
+			<property name="preferred CMM" code="pcmm" type="text" access="r"/>
+			<property name="rendering intent" code="pRdr" type="rendering intent" access="r"/>
+			<property name="creation date" code="ascd" type="date" access="r"/>
+			<property name="connection space" code="pPCS" type="connection space" access="r"/>
+		</class>
+
+		<class name="image" plural="images" code="imag" description="An image contained in a file">
+			<cocoa class="Image"/>
+			<property name="resolution" code="reso" access="r" description="the pixel density of the image, in dots per inch, as a pair of integers">
+				<type type="integer" list="yes"/>
+			</property>
+			<property name="dimensions" code="dmns" access="r" description="the width and height of the image, respectively, in pixels, as a pair of integers">
+				<type type="integer" list="yes"/>
+			</property>
+			<property name="embedded profile" type="profile" code="eprf" access="r" description="the profile, if any, embedded in the image"/>
+			<element type="metadata tag">
+				<cocoa key="tags"/>
+			</element>
+			<element type="profile"/>
+		</class>
+
+		<class name="metadata tag" code="tag " description="A metadata tag: EXIF, IPDC, etc.">
+			<cocoa class="Tag"/>
+			<property name="name" code="pnam" type="text" access="r" description="the name of the tag"/>
+			<property name="description" code="dscr" type="text" access="r" description="the description of the tag's function"/>
+			<property name="value" code="valL" type="any" access="r" description="the current setting of the tag"/>
+		</class>
+
+
+		<command name="crop" code="imgscrop" description="Crop an image">
+			<direct-parameter type="image"/>
+			<parameter name="to dimensions" code="Dmns" description="the width and height of the new image, respectively, in pixels, as a pair of integers">
+				<cocoa key="toDimensions"/>
+				<type type="integer" list="yes"/>
+			</parameter>
+		</command>
+
+		<command name="embed" code="synccsEI" description="Embed an image with an ICC profile">
+			<direct-parameter type="image"/>
+			<parameter type="profile" name="with source" code="ePrf" description="the profile to embed in the image">
+				<cocoa key="withSource"/>
+			</parameter>
+		</command>
+
+		<command name="flip" code="imgsflip" description="Flip an image">
+			<direct-parameter type="image"/>
+			<parameter type="boolean" name="horizontal" code="hori" optional="yes" description="flip horizontally"/>
+			<parameter type="boolean" name="vertical" code="vert" optional="yes" description="flip vertically"/>
+		</command>
+	</suite>
+</dictionary>

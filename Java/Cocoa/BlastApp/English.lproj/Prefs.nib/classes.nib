@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                go = id; 
+                setStartingLevel = id; 
+                startGame = id; 
+                stop = id; 
+                togglePause = id; 
+                toggleSound = id; 
+            }; 
+            CLASS = GameArea; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                highscoreField = id; 
+                inputIndicator = id; 
+                levelField = id; 
+                levelMatrix = id; 
+                levelPrefsIndicator = id; 
+                levelSlider = id; 
+                livesField = id; 
+                pauseButton = id; 
+                scoreField = id; 
+                soundPrefItem = id; 
+                statusField = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

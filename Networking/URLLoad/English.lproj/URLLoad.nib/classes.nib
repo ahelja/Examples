@@ -1,0 +1,49 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {addHeader = id; removeHeader = id; setPayloadFile = id; }; 
+            CLASS = MessageController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                headerTable = id; 
+                httpVersionMatrix = id; 
+                payloadPathTextField = id; 
+                requestTextField = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = ProxyController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                hostField = NSTextField; 
+                passwordField = NSTextField; 
+                portField = NSTextField; 
+                proxyRadio = NSMatrix; 
+                userField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {clear = id; go = id; save = id; }; 
+            CLASS = URLController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cacheCheckbox = NSButton; 
+                msgController = MessageController; 
+                proxyController = ProxyController; 
+                sourceRadio = NSMatrix; 
+                statusTextView = NSTextField; 
+                urlTextField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

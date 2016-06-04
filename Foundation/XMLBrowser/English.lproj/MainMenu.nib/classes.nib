@@ -1,0 +1,53 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addAttributeToCurrent = id; 
+                addChildToCurrent = id; 
+                addNamespaceToCurrent = id; 
+                applyNSXML = id; 
+                applyXQuery = id; 
+                fetchAndDisplayURL = id; 
+                openFile = id; 
+                reloadPreview = id; 
+                saveFile = id; 
+                saveFileAs = id; 
+                setCurrentToSelectedChildren = id; 
+                setCurrentToSelectedParent = id; 
+                setFidelity = id; 
+                setSelectedTab = id; 
+            }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                attributeTableView = NSTableView; 
+                attributes = NSArrayController; 
+                children = NSArrayController; 
+                childrenTableView = NSTableView; 
+                dtdNodes = NSArrayController; 
+                fidelityMatrix = NSMatrix; 
+                mainTabView = NSTabView; 
+                mainWindow = NSWindow; 
+                namespaceTableView = NSTableView; 
+                namespaces = NSArrayController; 
+                nodeTextView = NSTextView; 
+                resultTextView = NSTextView; 
+                sourceTextView = NSTextView; 
+                urlTextField = NSTextField; 
+                xqueryResultTextView = NSTextView; 
+                xquerySourceTextView = NSTextView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {selectTabViewItemAtIndex = id; }; 
+            CLASS = NSTabView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = NSXMLDocument; LANGUAGE = ObjC; SUPERCLASS = NSXMLNode; }, 
+        {CLASS = NSXMLNode; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

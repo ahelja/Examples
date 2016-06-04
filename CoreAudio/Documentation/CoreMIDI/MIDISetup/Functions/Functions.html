@@ -1,0 +1,660 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1>
+<br><a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupCreate" target="doc">MIDISetupCreate</a></tt></dt>
+<dd>Interrogates drivers, to discover what hardware is present.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupDispose" target="doc">MIDISetupDispose</a></tt></dt>
+<dd>Dispose a MIDISetup object.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupInstall" target="doc">MIDISetupInstall</a></tt></dt>
+<dd>Install a MIDISetup as the system's current state.
+<br><br>
+A client can create a MIDISetup object using
+MIDISetupCreate, or MIDISetupFromData.  This function will
+install this state as the current state of the system,
+possibly changing the devices visible to clients.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupGetCurrent" target="doc">MIDISetupGetCurrent</a></tt></dt>
+<dd>Return the system's current MIDISetup.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupToData" target="doc">MIDISetupToData</a></tt></dt>
+<dd>Create an XML representation of a MIDISetup object.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupFromData" target="doc">MIDISetupFromData</a></tt></dt>
+<dd>Create a MIDISetup object from an XML stream.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIDeviceAddEntity" target="doc">MIDIDeviceAddEntity</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIDeviceRemoveEntity" target="doc">MIDIDeviceRemoveEntity</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEntityAddOrRemoveEndpoints" target="doc">MIDIEntityAddOrRemoveEndpoints</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupAddDevice" target="doc">MIDISetupAddDevice</a></tt></dt>
+<dd>Adds a driver-owner MIDI device to the current MIDISetup</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupRemoveDevice" target="doc">MIDISetupRemoveDevice</a></tt></dt>
+<dd>Removes a driver-owned MIDI device from the current MIDISetup</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupAddExternalDevice" target="doc">MIDISetupAddExternalDevice</a></tt></dt>
+<dd>Adds an external MIDI device to the current MIDISetup</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetupRemoveExternalDevice" target="doc">MIDISetupRemoveExternalDevice</a></tt></dt>
+<dd>Removes an external MIDI device from the current MIDISetup</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetSerialPortOwner" target="doc">MIDIGetSerialPortOwner</a></tt></dt>
+<dd>Returns the MIDI driver that owns a serial port.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISetSerialPortOwner" target="doc">MIDISetSerialPortOwner</a></tt></dt>
+<dd>Specifies the MIDI driver that owns a serial port.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetSerialPortDrivers" target="doc">MIDIGetSerialPortDrivers</a></tt></dt>
+<dd>Returns a list of installed MIDI drivers for serial port
+MIDI devices.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIExternalDeviceCreate" target="doc">MIDIExternalDeviceCreate</a></tt></dt>
+<dd>Create a new external MIDI device.</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupCreate;  name=MIDISetupCreate --><a name="//apple_ref/c/func/MIDISetupCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupCreate">MIDISetupCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Interrogates drivers, to discover what hardware is present.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupCreate" logicalPath="//apple_ref/c/instm/MIDISetupCreate //apple_ref/c/clm/MIDISetupCreate //apple_ref/c/intfcm/MIDISetupCreate //apple_ref/c/func/MIDISetupCreate" target="_top"><font class="function">MIDISetupCreate</font></a>(
+    <a href="../../../CoreMIDI/MIDISetup/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDISetupRef" logicalPath="//apple_ref/c/cl/MIDISetupRef //apple_ref/c/cl/MIDISetupRef //apple_ref/c/tdef/MIDISetupRef" target="_top"><font class="type">MIDISetupRef</font></a> *<font class="param">outSetup</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>outSetup</i></code></dt>
+<dd>On successful return, points to a newly-created MIDISetup
+object.  The caller is responsible for disposing it,
+or transferring ownership of the object back to the
+system, with MIDISetupInstall.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupDispose;  name=MIDISetupDispose --><a name="//apple_ref/c/func/MIDISetupDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupDispose">MIDISetupDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Dispose a MIDISetup object.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupDispose" logicalPath="//apple_ref/c/instm/MIDISetupDispose //apple_ref/c/clm/MIDISetupDispose //apple_ref/c/intfcm/MIDISetupDispose //apple_ref/c/func/MIDISetupDispose" target="_top"><font class="function">MIDISetupDispose</font></a>(
+    <a href="../../../CoreMIDI/MIDISetup/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDISetupRef" logicalPath="//apple_ref/c/cl/MIDISetupRef //apple_ref/c/cl/MIDISetupRef //apple_ref/c/tdef/MIDISetupRef" target="_top"><font class="type">MIDISetupRef</font></a> <font class="param">setup</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>setup</i></code></dt>
+<dd>The MIDISetup to be disposed.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupInstall;  name=MIDISetupInstall --><a name="//apple_ref/c/func/MIDISetupInstall"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupInstall">MIDISetupInstall</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Install a MIDISetup as the system's current state.
+<br><br>
+A client can create a MIDISetup object using
+MIDISetupCreate, or MIDISetupFromData.  This function will
+install this state as the current state of the system,
+possibly changing the devices visible to clients.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupInstall" logicalPath="//apple_ref/c/instm/MIDISetupInstall //apple_ref/c/clm/MIDISetupInstall //apple_ref/c/intfcm/MIDISetupInstall //apple_ref/c/func/MIDISetupInstall" target="_top"><font class="function">MIDISetupInstall</font></a>(
+    <a href="../../../CoreMIDI/MIDISetup/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDISetupRef" logicalPath="//apple_ref/c/cl/MIDISetupRef //apple_ref/c/cl/MIDISetupRef //apple_ref/c/tdef/MIDISetupRef" target="_top"><font class="type">MIDISetupRef</font></a> <font class="param">setup</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>setup</i></code></dt>
+<dd>The MIDISetup object to install.  Ownership of this
+object is transferred from the client to the system; the
+client must <b>not</b> dispose of this MIDISetup.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupGetCurrent;  name=MIDISetupGetCurrent --><a name="//apple_ref/c/func/MIDISetupGetCurrent"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupGetCurrent">MIDISetupGetCurrent</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Return the system's current MIDISetup.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupGetCurrent" logicalPath="//apple_ref/c/instm/MIDISetupGetCurrent //apple_ref/c/clm/MIDISetupGetCurrent //apple_ref/c/intfcm/MIDISetupGetCurrent //apple_ref/c/func/MIDISetupGetCurrent" target="_top"><font class="function">MIDISetupGetCurrent</font></a>(
+    <a href="../../../CoreMIDI/MIDISetup/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDISetupRef" logicalPath="//apple_ref/c/cl/MIDISetupRef //apple_ref/c/cl/MIDISetupRef //apple_ref/c/tdef/MIDISetupRef" target="_top"><font class="type">MIDISetupRef</font></a> *<font class="param">outSetup</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>outSetup</i></code></dt>
+<dd>On successful return, points to the system's most
+recently installed MIDISetup.  The system retains
+ownership of the object; the client must <b>not</b>
+dispose of this MIDISetup.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupToData;  name=MIDISetupToData --><a name="//apple_ref/c/func/MIDISetupToData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupToData">MIDISetupToData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create an XML representation of a MIDISetup object.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupToData" logicalPath="//apple_ref/c/instm/MIDISetupToData //apple_ref/c/clm/MIDISetupToData //apple_ref/c/intfcm/MIDISetupToData //apple_ref/c/func/MIDISetupToData" target="_top"><font class="function">MIDISetupToData</font></a>(
+    <a href="../../../CoreMIDI/MIDISetup/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDISetupRef" logicalPath="//apple_ref/c/cl/MIDISetupRef //apple_ref/c/cl/MIDISetupRef //apple_ref/c/tdef/MIDISetupRef" target="_top"><font class="type">MIDISetupRef</font></a> <font class="param">setup</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFDataRef //apple_ref/c/cl/CFDataRef //apple_ref/c/tdef/CFDataRef //apple_ref/c/tag/CFDataRef //apple_ref/c/econst/CFDataRef //apple_ref/c/struct/CFDataRef //apple_ref/c/clconst/CFDataRef" --><font class="type">CFDataRef</font><!-- /a --> *<font class="param">outData</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>setup</i></code></dt>
+<dd>The MIDISetup object whose XML representation is to be
+returned.</dd>
+<dt><code><i>outData</i></code></dt>
+<dd>On successful return, points to a newly-created CFDataRef
+containing the XML text.  The client is responsible for
+releasing this CFData object when done with it.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupFromData;  name=MIDISetupFromData --><a name="//apple_ref/c/func/MIDISetupFromData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupFromData">MIDISetupFromData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create a MIDISetup object from an XML stream.
+<br><br>
+As of CoreMIDI 1.1, it is usually not necessary to call
+this function, as CoreMIDI manages a single persistent
+MIDISetup itself.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupFromData" logicalPath="//apple_ref/c/instm/MIDISetupFromData //apple_ref/c/clm/MIDISetupFromData //apple_ref/c/intfcm/MIDISetupFromData //apple_ref/c/func/MIDISetupFromData" target="_top"><font class="function">MIDISetupFromData</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFDataRef //apple_ref/c/cl/CFDataRef //apple_ref/c/tdef/CFDataRef //apple_ref/c/tag/CFDataRef //apple_ref/c/econst/CFDataRef //apple_ref/c/struct/CFDataRef //apple_ref/c/clconst/CFDataRef" --><font class="type">CFDataRef</font><!-- /a --> <font class="param">data</font>, 
+    <a href="../../../CoreMIDI/MIDISetup/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDISetupRef" logicalPath="//apple_ref/c/cl/MIDISetupRef //apple_ref/c/cl/MIDISetupRef //apple_ref/c/tdef/MIDISetupRef" target="_top"><font class="type">MIDISetupRef</font></a> *<font class="param">outSetup</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>data</i></code></dt>
+<dd>The XML text from which a MIDISetup object is to be built.</dd>
+<dt><code><i>outSetup</i></code></dt>
+<dd>On successful return, points to a newly-created MIDISetup
+object.  The caller is responsible for disposing it, or
+transferring ownership of the object back to the system,
+with MIDISetupInstall.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIDeviceAddEntity;  name=MIDIDeviceAddEntity --><a name="//apple_ref/c/func/MIDIDeviceAddEntity"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDeviceAddEntity">MIDIDeviceAddEntity</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIDeviceAddEntity" logicalPath="//apple_ref/c/instm/MIDIDeviceAddEntity //apple_ref/c/clm/MIDIDeviceAddEntity //apple_ref/c/intfcm/MIDIDeviceAddEntity //apple_ref/c/func/MIDIDeviceAddEntity" target="_top"><font class="function">MIDIDeviceAddEntity</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">name</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">embedded</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">numSourceEndpoints</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">numDestinationEndpoints</font>,
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> *<font class="param">newEntity</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device to which an entity is to be added.</dd>
+<dt><code><i>name</i></code></dt>
+<dd>The name of the new entity.</dd>
+<dt><code><i>embedded</i></code></dt>
+<dd>True if this entity is inside the device, false if the
+entity simply consists of external connectors to which
+other devices can be attached.</dd>
+<dt><code><i>numSourceEndpoints</i></code></dt>
+<dd>The number of source endpoints the entity has.</dd>
+<dt><code><i>numDestinationEndpoints</i></code></dt>
+<dd>The number of destination endpoints the entity has.</dd>
+<dt><code><i>newEntity</i></code></dt>
+<dd>On successful return, points to the newly-created entity.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Drivers call this function to specify one of the entities that 
+comprise a device.
+<br><br>
+Non-drivers may call this function as of CoreMIDI 1.1, to
+add entities to external devices.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIDeviceRemoveEntity;  name=MIDIDeviceRemoveEntity --><a name="//apple_ref/c/func/MIDIDeviceRemoveEntity"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDeviceRemoveEntity">MIDIDeviceRemoveEntity</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIDeviceRemoveEntity" logicalPath="//apple_ref/c/instm/MIDIDeviceRemoveEntity //apple_ref/c/clm/MIDIDeviceRemoveEntity //apple_ref/c/intfcm/MIDIDeviceRemoveEntity //apple_ref/c/func/MIDIDeviceRemoveEntity" target="_top"><font class="function">MIDIDeviceRemoveEntity</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font>,
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">entity</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device from which an entity is to be removed.</dd>
+<dt><code><i>entity</i></code></dt>
+<dd>The entity to be removed.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Drivers may call this function to remove one of a device's
+entities.
+<br><br>
+New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEntityAddOrRemoveEndpoints;  name=MIDIEntityAddOrRemoveEndpoints --><a name="//apple_ref/c/func/MIDIEntityAddOrRemoveEndpoints"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityAddOrRemoveEndpoints">MIDIEntityAddOrRemoveEndpoints</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEntityAddOrRemoveEndpoints" logicalPath="//apple_ref/c/instm/MIDIEntityAddOrRemoveEndpoints //apple_ref/c/clm/MIDIEntityAddOrRemoveEndpoints //apple_ref/c/intfcm/MIDIEntityAddOrRemoveEndpoints //apple_ref/c/func/MIDIEntityAddOrRemoveEndpoints" target="_top"><font class="function">MIDIEntityAddOrRemoveEndpoints</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">entity</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">numSourceEndpoints</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">numDestinationEndpoints</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>entity</i></code></dt>
+<dd>The entity whose endpoints are to be manipulated.</dd>
+<dt><code><i>numSourceEndpoints</i></code></dt>
+<dd>The desired new number of source endpoints.</dd>
+<dt><code><i>numDestinationEndpoints</i></code></dt>
+<dd>The desired new number of destination endpoints.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Drivers and configuration editors may call this function to add to 
+or remove an entity's endpoints.
+<br><br>
+New for CoreMIDI 1.3.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupAddDevice;  name=MIDISetupAddDevice --><a name="//apple_ref/c/func/MIDISetupAddDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupAddDevice">MIDISetupAddDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Adds a driver-owner MIDI device to the current MIDISetup</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupAddDevice" logicalPath="//apple_ref/c/instm/MIDISetupAddDevice //apple_ref/c/clm/MIDISetupAddDevice //apple_ref/c/intfcm/MIDISetupAddDevice //apple_ref/c/func/MIDISetupAddDevice" target="_top"><font class="function">MIDISetupAddDevice</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device to be added.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Only MIDI drivers may make this call; it is in this header
+file only for consistency with MIDISetupRemoveDevice.
+<br><br>
+New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupRemoveDevice;  name=MIDISetupRemoveDevice --><a name="//apple_ref/c/func/MIDISetupRemoveDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupRemoveDevice">MIDISetupRemoveDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Removes a driver-owned MIDI device from the current MIDISetup</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupRemoveDevice" logicalPath="//apple_ref/c/instm/MIDISetupRemoveDevice //apple_ref/c/clm/MIDISetupRemoveDevice //apple_ref/c/intfcm/MIDISetupRemoveDevice //apple_ref/c/func/MIDISetupRemoveDevice" target="_top"><font class="function">MIDISetupRemoveDevice</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device to be added.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Generally this should only be called from a studio configuration
+editor, to remove a device which is offline and which the user
+has specified as being permanently missing.
+<br><br>
+Instead of removing devices from the setup, drivers should
+set the device's kMIDIPropertyOffline to 1 so that if the
+device reappears later, none of its properties are lost.
+<br><br>
+New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupAddExternalDevice;  name=MIDISetupAddExternalDevice --><a name="//apple_ref/c/func/MIDISetupAddExternalDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupAddExternalDevice">MIDISetupAddExternalDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Adds an external MIDI device to the current MIDISetup</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupAddExternalDevice" logicalPath="//apple_ref/c/instm/MIDISetupAddExternalDevice //apple_ref/c/clm/MIDISetupAddExternalDevice //apple_ref/c/intfcm/MIDISetupAddExternalDevice //apple_ref/c/func/MIDISetupAddExternalDevice" target="_top"><font class="function">MIDISetupAddExternalDevice</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device to be added.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Useful for a studio configuration editor.  New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetupRemoveExternalDevice;  name=MIDISetupRemoveExternalDevice --><a name="//apple_ref/c/func/MIDISetupRemoveExternalDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupRemoveExternalDevice">MIDISetupRemoveExternalDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Removes an external MIDI device from the current MIDISetup</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetupRemoveExternalDevice" logicalPath="//apple_ref/c/instm/MIDISetupRemoveExternalDevice //apple_ref/c/clm/MIDISetupRemoveExternalDevice //apple_ref/c/intfcm/MIDISetupRemoveExternalDevice //apple_ref/c/func/MIDISetupRemoveExternalDevice" target="_top"><font class="function">MIDISetupRemoveExternalDevice</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device to be removed.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Useful for a studio configuration editor.  New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetSerialPortOwner;  name=MIDIGetSerialPortOwner --><a name="//apple_ref/c/func/MIDIGetSerialPortOwner"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetSerialPortOwner">MIDIGetSerialPortOwner</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the MIDI driver that owns a serial port.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetSerialPortOwner" logicalPath="//apple_ref/c/instm/MIDIGetSerialPortOwner //apple_ref/c/clm/MIDIGetSerialPortOwner //apple_ref/c/intfcm/MIDIGetSerialPortOwner //apple_ref/c/func/MIDIGetSerialPortOwner" target="_top"><font class="function">MIDIGetSerialPortOwner</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">portName</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> *<font class="param">outDriverName</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>portName</i></code></dt>
+<dd>The name of a serial port.</dd>
+<dt><code><i>outDriverName</i></code></dt>
+<dd>On exit, the name of the driver owning the port,
+or NULL if no driver owns it.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.	
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The current MIDISetup tracks ownership of serial ports
+to one of the MIDI drivers installed in the system.
+<br><br>
+Serial ports can be enumerated using IOServiceMatching(
+kIOSerialBSDServiceValue).  The port's unique name is
+the IOService's kIOTTYDeviceKey property. 
+<br><br>
+New for CoreMIDI 1.1.
+<br><br>
+A previous version of this documentation specified an incorrect
+key for obtaining the port's unique name (IOTTYBaseName).
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISetSerialPortOwner;  name=MIDISetSerialPortOwner --><a name="//apple_ref/c/func/MIDISetSerialPortOwner"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetSerialPortOwner">MIDISetSerialPortOwner</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Specifies the MIDI driver that owns a serial port.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISetSerialPortOwner" logicalPath="//apple_ref/c/instm/MIDISetSerialPortOwner //apple_ref/c/clm/MIDISetSerialPortOwner //apple_ref/c/intfcm/MIDISetSerialPortOwner //apple_ref/c/func/MIDISetSerialPortOwner" target="_top"><font class="function">MIDISetSerialPortOwner</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">portName</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">driverName</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>portName</i></code></dt>
+<dd>The name of a serial port.</dd>
+<dt><code><i>driverName</i></code></dt>
+<dd>The name of the driver that owns the serial port,
+or NULL to specify that no driver owns it.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.	
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Use this to assign ownership of a serial port
+to one of the MIDI drivers installed in the system.
+<br><br>
+New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetSerialPortDrivers;  name=MIDIGetSerialPortDrivers --><a name="//apple_ref/c/func/MIDIGetSerialPortDrivers"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetSerialPortDrivers">MIDIGetSerialPortDrivers</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns a list of installed MIDI drivers for serial port
+MIDI devices.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetSerialPortDrivers" logicalPath="//apple_ref/c/instm/MIDIGetSerialPortDrivers //apple_ref/c/clm/MIDIGetSerialPortDrivers //apple_ref/c/intfcm/MIDIGetSerialPortDrivers //apple_ref/c/func/MIDIGetSerialPortDrivers" target="_top"><font class="function">MIDIGetSerialPortDrivers</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFArrayRef //apple_ref/c/cl/CFArrayRef //apple_ref/c/tdef/CFArrayRef //apple_ref/c/tag/CFArrayRef //apple_ref/c/econst/CFArrayRef //apple_ref/c/struct/CFArrayRef //apple_ref/c/clconst/CFArrayRef" --><font class="type">CFArrayRef</font><!-- /a --> *<font class="param">outDriverNames</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>outDriverNames</i></code></dt>
+<dd>On exit, a CFArrayRef containing a list of CFStringRef's
+which are the names of the serial port MIDI drivers.
+The array should be released by the caller.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.	
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Use this to determine which of the installed MIDI drivers
+are for devices which may attach to serial ports.
+<br><br>
+New for CoreMIDI 1.1.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIExternalDeviceCreate;  name=MIDIExternalDeviceCreate --><a name="//apple_ref/c/func/MIDIExternalDeviceCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIExternalDeviceCreate">MIDIExternalDeviceCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create a new external MIDI device.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDISetup/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIExternalDeviceCreate" logicalPath="//apple_ref/c/instm/MIDIExternalDeviceCreate //apple_ref/c/clm/MIDIExternalDeviceCreate //apple_ref/c/intfcm/MIDIExternalDeviceCreate //apple_ref/c/func/MIDIExternalDeviceCreate" target="_top"><font class="function">MIDIExternalDeviceCreate</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">name</font>,
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">manufacturer</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">model</font>,
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> *<font class="param">outDevice</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>name</i></code></dt>
+<dd>The name of the new device.</dd>
+<dt><code><i>manufacturer</i></code></dt>
+<dd>The name of the device's manufacturer.</dd>
+<dt><code><i>model</i></code></dt>
+<dd>The device's model name.</dd>
+<dt><code><i>outDevice</i></code></dt>
+<dd>On successful return, points to the newly-created device.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Non-drivers may call this function as of CoreMIDI 1.1, to
+create external devices.
+<br><br>
+The new device is not added to the current MIDISetupRef;
+to do this, use MIDISetupAddExternalDevice.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

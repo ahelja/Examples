@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                AllowIdleSleepCheckBoxAction = id; 
+                BootChimeVolumeSliderAction = id; 
+                DefaultDevicePopUpAction = id; 
+                PlayAlertSoundButtonAction = id; 
+                ShowDeviceInfoButtonAction = id; 
+                SystemTableViewAction = id; 
+                SystemTableViewDoubleClickAction = id; 
+            }; 
+            CLASS = HLSystemWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAllowIdleSleepCheckBox = NSButton; 
+                mBootChimeVolumeCurrentText = NSTextField; 
+                mBootChimeVolumeMaximumText = NSTextField; 
+                mBootChimeVolumeMinimumText = NSTextField; 
+                mBootChimeVolumeSlider = NSSlider; 
+                mDefaultInputDevicePopUp = NSPopUpButton; 
+                mDefaultOutputDevicePopUp = NSPopUpButton; 
+                mDefaultSystemOutputDevicePopUp = NSPopUpButton; 
+                mDeviceListTableView = NSTableView; 
+                mNotificationTextView = NSTextView; 
+                mShowDeviceInfoButton = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,12 @@
+{
+    CFBundleDevelopmentRegion = English; 
+    CFBundleDocumentTypes = (); 
+    CFBundleExecutable = ScrollView; 
+    CFBundleIdentifier = "com.apple.scrollview"; 
+    CFBundleInfoDictionaryVersion = "6.0"; 
+    CFBundleName = ScrollView; 
+    CFBundlePackageType = APPL; 
+    CFBundleShortVersionString = "1.0.1"; 
+    CFBundleSignature = "????"; 
+    CFBundleVersion = "1.0.1"; 
+}

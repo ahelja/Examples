@@ -1,0 +1,72 @@
+<?xml version="1.0" standalone="yes"?>
+<object class="NSIBObjectData">
+  <string name="targetFramework">IBCarbonFramework</string>
+  <object name="rootObject" class="NSCustomObject" id="1">
+    <string name="customClass">NSApplication</string>
+  </object>
+  <array count="7" name="allObjects">
+    <object class="IBCarbonWindow" id="166">
+      <string name="windowRect">352 302 475 754 </string>
+      <string name="title"></string>
+      <object name="rootControl" class="IBCarbonRootControl" id="167">
+        <string name="bounds">0 0 123 452 </string>
+        <array count="5" name="subviews">
+          <object class="IBCarbonStaticText" id="188">
+            <string name="bounds">20 89 38 432 </string>
+            <string name="title">Are you sure you want to use a modal window in your</string>
+          </object>
+          <object class="IBCarbonStaticText" id="189">
+            <string name="bounds">37 89 53 165 </string>
+            <string name="title">application?</string>
+          </object>
+          <object class="IBCarbonIcon" id="190">
+            <string name="bounds">21 13 85 77 </string>
+            <int name="contentResID">1667331444</int>
+            <int name="contentType">132</int>
+          </object>
+          <object class="IBCarbonButton" id="191">
+            <string name="bounds">83 280 103 350 </string>
+            <ostype name="controlSignature">DEMO</ostype>
+            <int name="controlID">129</int>
+            <string name="title">Cancel</string>
+            <ostype name="command">NO  </ostype>
+            <int name="buttonType">2</int>
+          </object>
+          <object class="IBCarbonButton" id="192">
+            <string name="bounds">83 362 103 432 </string>
+            <ostype name="controlSignature">DEMO</ostype>
+            <int name="controlID">130</int>
+            <string name="title">OK</string>
+            <ostype name="command">YES </ostype>
+            <int name="buttonType">1</int>
+          </object>
+        </array>
+      </object>
+      <boolean name="isResizable">FALSE</boolean>
+      <int name="carbonWindowClass">4</int>
+      <int name="windowPosition">7</int>
+    </object>
+    <reference idRef="167"/>
+    <reference idRef="188"/>
+    <reference idRef="189"/>
+    <reference idRef="190"/>
+    <reference idRef="191"/>
+    <reference idRef="192"/>
+  </array>
+  <array count="7" name="allParents">
+    <reference idRef="1"/>
+    <reference idRef="166"/>
+    <reference idRef="167"/>
+    <reference idRef="167"/>
+    <reference idRef="167"/>
+    <reference idRef="167"/>
+    <reference idRef="167"/>
+  </array>
+  <dictionary count="2" name="nameTable">
+    <string>Files Owner</string>
+    <reference idRef="1"/>
+    <string>dialog</string>
+    <reference idRef="166"/>
+  </dictionary>
+  <unsigned_int name="nextObjectID">193</unsigned_int>
+</object>

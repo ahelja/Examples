@@ -1,0 +1,47 @@
+{\rtf1\mac\ansicpg10000\cocoartf809
+{\fonttbl\f0\froman\fcharset77 Times-Bold;\f1\froman\fcharset77 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+{\info}\vieww9000\viewh8400\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs36 \cf0 Read Me - About HexInputServer
+\f1\b0\fs28 \
+\
+HexInputServer allows users to input arbitrary Unicode characters by typing their corresponding hexadecimal values.  You could write a more complete and complex input server by modifying this example.  This sample demonstrates the basic usage of the AppKit Text Input API features including:\
+\
+- core text input interaction of insertText: & setMarkedText: methods\
+- multiple input client context management\
+- various client state (i.e. active/inactive) notification handling\
+- status item/menu management\
+- auxiliary window management\
+- keyboard command handling via doCommandBySelector: method\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs36 \cf0 Building the Code\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs28 \cf0 \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+\cf0 0. Copy the HexInputServer sample code folder into your home directory.\
+1. Launch Terminal by double clicking /Applications/Utilities/Terminal.\
+2. Change the current directory to the copied HexInputServer folder.\
+3. Type "xcodebuild install" to build and install the sample application.\
+4. Make sure HexInputServer is installed at ~/Library/InputManagers.\
+\
+HexInputServer is now available as a Cocoa input server.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs36 \cf0 Suggestion for Running HexInputManager\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f1\b0\fs28 \cf0 1. Launch TextEdit.\
+2. Select "Edit/Input/Hexadecimal Input" menu item.  The input mode palette window should be displayed (note: Cmd+Ctrl+Space will toggle between Cocoa input system & the native input system).\
+3. Select "H" button in the palette (note: Ctrl-X will toggle between the Alphabet Input and Hexidecimal input items).\
+A hexadecimal input box will appear. \
+4. Use Ctrl-F (forward) or Ctrl-B (backward) to increment or decrement the hexidecimal input, or simply type in a hexidecimal number. The HexInputServer will display the corresponding unicode character in your document.\
+\
+}

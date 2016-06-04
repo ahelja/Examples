@@ -1,0 +1,95 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf110
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fmodern\fcharset77 Courier;
+\f3\fnil\fcharset77 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww16220\viewh16820\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs30 \cf0 The CoreAudio Examples on Older OS Versions.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\b0\fs24 \cf0 \
+Mac OS X's developer tools provide SDKs for different OS releases to enable developers to target a different OS release for their products.\
+\
+There are two build settings in XCode that interact with these facilities:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f2\fs26 \cf0 	SDKROOT\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\fs24 \cf0 		- this is set in the "General" tab of the project settings. It sets the default location that is used to find system headers. For instance, XCode 2.1 installs 3 SDKs - 10.2.8, 10.3.9 and 10.4u. These are installed in /Developer/SDKs/\
+\
+		- this setting primarily resets header files and link libraries back to the targeted OS release.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f2\fs26 \cf0 	MACOSX_DEPLOYMENT_TARGET\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\fs24 \cf0 		- this is set in a  target's build settings. Please see the XCode Build Settings Notes for the effect of this flag.\
+\
+In general a CoreAudio SDK release is only targeted to work (both to build as well as to run) on the current version of Mac OS X. However, CoreAudio APIs include three components that dynamically loaded by applications and may have to work on older OS systems: Audio Units, Audio Codecs and Audio File Components. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs28 \cf0 SDK ROOTS and C++\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\b0\fs24 \cf0 \
+All of these SDKs use C++, and there was a significant change in Tiger (that was supported also on 10.3.9) and that was to provide a dynamic library for the standard C++ libraries. On 10.2.8, this was a static library that was linked in to every project. This is one of the changes that the SDK ROOT variable will affect. \
+\
+If you build against a current (Tiger of better), or 10.3.9, target, then your code is expecting a dynamic C++ library on the user's system. Thus, an AU, AudioCodec or AudioFileComponent that is targeted in this manner will not load on a pre 10.3.9 system. If you build against the 10.2.8 SDK ROOT, then you have compatibility from 10.2.8 going forward.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs28 \cf0 Code Dependencies\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\b0\fs24 \cf0 \
+The AudioUnit, AudioCodec and AudioFileComponent SDKs have no linkage dependencies past 10.2.8. However, they can have build dependencies for certain features. This is described below.\
+\
+These have all been built and tested with gcc 3.3 for pre 10.4 SDKs and gcc 4 for 10.4 or later SDKs. Previous SDK targeted builds have only been verified with the PowerPC architecture setting. Because 10.3.9 has the same dynamic C++ library as 10.4, it is generally possible to build any of these components against the 10.4 or later install (with gcc 4, and even as a universal binary) and still have these components work on a 10.3.9 release.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b \cf0 (i) Audio Unit\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 - With the 1.4.3 SDK, the AU SDK and examples will all build against a 10.2.8 or better Mac OS X SDK.\
+\
+Qualifications:\
+	- With XCode 2.1 there seems to be a linkage problem with the 10.2.8 SDK target (it is fine for 10.3.9). Using the xocdebuild command line tool however, will build the example projects and link them just fine. From the directory containing the project.pbxproj file:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f3\fs22 \cf0 % xcodebuild MACOSX_DEPLOYMENT_TARGET=10.2 SDKROOT=/Developer/SDKs/MacOSX10.2.8.sdk ARCHS="ppc"
+\f1\fs24 \
+\
+You can of course specify (and should) other command line options (like the Target of the project, Build Configuration, etc)\
+\
+	- The SinSynth example as shipped will not build against a pre-10.4 target. It defines a compile flag CA_AUTO_MIDI_MAP that enables the automatic mapping of MIDI message to parameter value changes. This feature relies on a struct that is not defined in pre-Tiger SDKs (it is defined in Tiger's AudioUnit/AudioUnitProperties.h file). You can get this to build against a pre-10.4 header set by turning off this feature by:\
+	(a) setting that define to 0\
+		 - This is defined as -DCA_AUTO_MIDI_MAP=1 in the target settings - just remove that defin\
+	(b) you will need to remove the following files from the SinSynth project\
+		- CAAUMIDIMap.h and .cpp, CAAUMIDIMapManager.h and .cpp\
+\
+
+\f0\b (ii) Audio Codec and Audio File Components\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 These depend on defines that are not present in earlier SDK headers. As with the SinSynth above, this is 
+\f0\b only
+\f1\b0  a header dependency of a struct, enumerated constant, etc... So there are possible workarounds:\
+	(i) define these dependencies in those SDK headers\
+		- this changes headers you build against\
+	(ii) Have a TEMP_ declaration of these dependencies for use in your code\
+		- this changes sources in the CA SDK\
+\
+Whilst these practises are not recommended or supported, they do present possible workarounds for these builds if 10.2.8 targets are required. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b \cf0 (iii) Audio Drivers\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 See the ReadMe for the AudioReflector driver\
+}

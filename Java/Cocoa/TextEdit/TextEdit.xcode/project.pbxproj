@@ -1,0 +1,963 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		015AB829FFFABBAE11CA0C5D = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		015AB82AFFFABBAE11CA0C5D = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//010
+//011
+//012
+//013
+//014
+//050
+//051
+//052
+//053
+//054
+		05ADF627FFFACCFF11CA0C5D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		05ADF628FFFACCFF11CA0C5D = {
+			children = (
+				6FE209B2FE93DAFA11CA2CEA,
+				6FE209B1FE93DAFA11CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Referenced frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05ADF629FFFACCFF11CA0C5D = {
+			fileRef = 05ADF627FFFACCFF11CA0C5D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//050
+//051
+//052
+//053
+//054
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+		1A5E22D9FF27AA3B11CA0F60 = {
+			explicitFileType = wrapper.application;
+			isa = PBXFileReference;
+			path = TextEdit.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+//1F0
+//1F1
+//1F2
+//1F3
+//1F4
+		1F8C4B63FE94396711CA2CEA = {
+			children = (
+				1A5E22D9FF27AA3B11CA0F60,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1F0
+//1F1
+//1F2
+//1F3
+//1F4
+//240
+//241
+//242
+//243
+//244
+		246C3CB4FE9441D911CA2CEA = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		246C3CB6FE9442B811CA2CEA = {
+			children = (
+				246C3CB4FE9441D911CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		246C3CB7FE9442B811CA2CEA = {
+			fileRef = 246C3CB6FE9442B811CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//240
+//241
+//242
+//243
+//244
+//6F0
+//6F1
+//6F2
+//6F3
+//6F4
+		6FE2096FFE93DAFA11CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				015AB829FFFABBAE11CA0C5D,
+				015AB82AFFFABBAE11CA0C5D,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 6FE20970FE93DAFA11CA2CEA;
+			projectDirPath = "";
+			targets = (
+				6FE209B4FE93DAFA11CA2CEA,
+			);
+		};
+		6FE20970FE93DAFA11CA2CEA = {
+			children = (
+				6FE209ABFE93DAFA11CA2CEA,
+				6FE20972FE93DAFA11CA2CEA,
+				6FE20973FE93DAFA11CA2CEA,
+				6FE20975FE93DAFA11CA2CEA,
+				6FE20976FE93DAFA11CA2CEA,
+				6FE20977FE93DAFA11CA2CEA,
+				6FE20974FE93DAFA11CA2CEA,
+				6FE2097AFE93DAFA11CA2CEA,
+				6FE20978FE93DAFA11CA2CEA,
+				6FE2097CFE93DAFA11CA2CEA,
+				6FE2097DFE93DAFA11CA2CEA,
+				6FE20989FE93DAFA11CA2CEA,
+				6FE2098EFE93DAFA11CA2CEA,
+				6FE2099EFE93DAFA11CA2CEA,
+				6FE209AFFE93DAFA11CA2CEA,
+				1F8C4B63FE94396711CA2CEA,
+			);
+			isa = PBXGroup;
+			name = TextEdit;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20972FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Controller.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20973FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Document.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20974FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = TextReadWrite.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20975FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = ScalingScrollView.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20976FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = MultiplePageView.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20977FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Preferences.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20978FE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = TextFinder.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2097AFE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = TextFinder.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2097CFE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = TextEdit_main.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2097DFE93DAFA11CA2CEA = {
+			children = (
+				6FE20981FE93DAFA11CA2CEA,
+				6FE20982FE93DAFA11CA2CEA,
+				6FE20985FE93DAFA11CA2CEA,
+				6FE2097EFE93DAFA11CA2CEA,
+				6FE20987FE93DAFA11CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Interfaces;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2097EFE93DAFA11CA2CEA = {
+			children = (
+				6FE2097FFE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Preferences.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2097FFE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/Preferences.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20981FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			path = Document.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20982FE93DAFA11CA2CEA = {
+			children = (
+				6FE20983FE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Edit.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20983FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/Edit.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20985FE93DAFA11CA2CEA = {
+			children = (
+				6FE20986FE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = FindPanel.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20986FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/FindPanel.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20987FE93DAFA11CA2CEA = {
+			children = (
+				6FE20988FE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = EncodingAccessory.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20988FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/EncodingAccessory.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20989FE93DAFA11CA2CEA = {
+			children = (
+				6FE20997FE93DAFA11CA2CEA,
+				6FE2098FFE93DAFA11CA2CEA,
+				6FE2099DFE93DAFA11CA2CEA,
+				6FE20990FE93DAFA11CA2CEA,
+				6FE20996FE93DAFA11CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Images;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2098EFE93DAFA11CA2CEA = {
+			children = (
+				6FE20998FE93DAFA11CA2CEA,
+				246C3CB6FE9442B811CA2CEA,
+				6FE20994FE93DAFA11CA2CEA,
+				6FE2099BFE93DAFA11CA2CEA,
+				6FE20993FE93DAFA11CA2CEA,
+				6FE20991FE93DAFA11CA2CEA,
+				6FE2099AFE93DAFA11CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2098FFE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = txt.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20990FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = rtfd.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20991FE93DAFA11CA2CEA = {
+			children = (
+				6FE20992FE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = TextEdit.scriptTerminology;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20992FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.scriptTerminology;
+			name = English;
+			path = English.lproj/TextEdit.scriptTerminology;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20993FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.scriptSuite;
+			path = TextEdit.scriptSuite;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20994FE93DAFA11CA2CEA = {
+			children = (
+				6FE20995FE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Localizable.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20995FE93DAFA11CA2CEA = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/Localizable.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20996FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = html.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20997FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = Edit.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20998FE93DAFA11CA2CEA = {
+			children = (
+				6FE20999FE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Credits.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE20999FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			name = English;
+			path = English.lproj/Credits.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2099AFE93DAFA11CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = DefaultEncodings.txt;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2099BFE93DAFA11CA2CEA = {
+			children = (
+				6FE2099CFE93DAFA11CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = FindPanel.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2099CFE93DAFA11CA2CEA = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/FindPanel.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2099DFE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = rtf.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE2099EFE93DAFA11CA2CEA = {
+			children = (
+			);
+			isa = PBXGroup;
+			name = "Supporting Files";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE209ABFE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			path = README.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE209AFFE93DAFA11CA2CEA = {
+			children = (
+				05ADF627FFFACCFF11CA0C5D,
+				05ADF628FFFACCFF11CA0C5D,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6FE209B1FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		6FE209B2FE93DAFA11CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		6FE209B4FE93DAFA11CA2CEA = {
+			buildPhases = (
+				6FE209B5FE93DAFA11CA2CEA,
+				6FE209B7FE93DAFA11CA2CEA,
+				6FE209CCFE93DAFA11CA2CEA,
+				6FE209D5FE93DAFA11CA2CEA,
+				6FE209DAFE93DAFA11CA2CEA,
+				7184D0D2FE93DDD411CA2CEA,
+			);
+			buildSettings = {
+				BUILD_PHASING = YES;
+				CURRENT_PROJECT_VERSION = 129.6;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = TextEdit;
+				RC_PROJECT_NAME = TextEditJava;
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			comments = "This is the main target that builds the TextEdit application.  Because we do not ship the binary for the Java version of TextEdit as a built application, the Install Location for this target has been set to \"None\".";
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = TextEdit;
+			productName = TextEdit;
+			productReference = 1A5E22D9FF27AA3B11CA0F60;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>rtf</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<array>
+				<string>rtf.icns</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>NSRTFPboardType</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>rtfd</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<array>
+				<string>rtfd.icns</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>NSRTFDPboardType</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>*</string>
+				<string>txt</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<array>
+				<string>txt.icns</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>NSStringPboardType</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>html</string>
+				<string>htm</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<array>
+				<string>html.icns</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Apple HTML type</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>TextEdit</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string>Edit.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.TextEditJava</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TextEditJava</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string></string>
+	<key>CFBundleVersion</key>
+	<string>129.6</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>YES</string>
+	<key>NSJavaNeeded</key>
+	<string>YES</string>
+	<key>NSJavaPath</key>
+	<array>
+		<string>TextEdit.jar</string>
+	</array>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+	<key>NSMainNibFile</key>
+	<string>Edit</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>TextEdit/Open File</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>servicesOpenFile</string>
+			<key>NSPortName</key>
+			<string>TextEdit</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>TextEdit/Open Selection</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>servicesOpenSelection</string>
+			<key>NSPortName</key>
+			<string>TextEdit</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSRTFDPboardType</string>
+				<string>NSRTFPboardType</string>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
+";
+		};
+		6FE209B5FE93DAFA11CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				6FE209B6FE93DAFA11CA2CEA,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FE209B6FE93DAFA11CA2CEA = {
+			fileRef = 6FE2097AFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209B7FE93DAFA11CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				6FE209B8FE93DAFA11CA2CEA,
+				F57A7191010654E401CA0CA4,
+				6FE209BAFE93DAFA11CA2CEA,
+				6FE209BBFE93DAFA11CA2CEA,
+				6FE209BCFE93DAFA11CA2CEA,
+				6FE209C1FE93DAFA11CA2CEA,
+				6FE209C2FE93DAFA11CA2CEA,
+				6FE209C3FE93DAFA11CA2CEA,
+				6FE209C4FE93DAFA11CA2CEA,
+				6FE209C5FE93DAFA11CA2CEA,
+				6FE209C6FE93DAFA11CA2CEA,
+				6FE209C7FE93DAFA11CA2CEA,
+				6FE209C8FE93DAFA11CA2CEA,
+				6FE209C9FE93DAFA11CA2CEA,
+				6FE209CAFE93DAFA11CA2CEA,
+				6FE209CBFE93DAFA11CA2CEA,
+				246C3CB7FE9442B811CA2CEA,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FE209B8FE93DAFA11CA2CEA = {
+			fileRef = 6FE2097EFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209BAFE93DAFA11CA2CEA = {
+			fileRef = 6FE20982FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209BBFE93DAFA11CA2CEA = {
+			fileRef = 6FE20985FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209BCFE93DAFA11CA2CEA = {
+			fileRef = 6FE20987FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C1FE93DAFA11CA2CEA = {
+			fileRef = 6FE2098FFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C2FE93DAFA11CA2CEA = {
+			fileRef = 6FE20990FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C3FE93DAFA11CA2CEA = {
+			fileRef = 6FE20991FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C4FE93DAFA11CA2CEA = {
+			fileRef = 6FE20993FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C5FE93DAFA11CA2CEA = {
+			fileRef = 6FE20994FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C6FE93DAFA11CA2CEA = {
+			fileRef = 6FE20996FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C7FE93DAFA11CA2CEA = {
+			fileRef = 6FE20997FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C8FE93DAFA11CA2CEA = {
+			fileRef = 6FE20998FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209C9FE93DAFA11CA2CEA = {
+			fileRef = 6FE2099AFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209CAFE93DAFA11CA2CEA = {
+			fileRef = 6FE2099BFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209CBFE93DAFA11CA2CEA = {
+			fileRef = 6FE2099DFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6FE209CCFE93DAFA11CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				6FE209CDFE93DAFA11CA2CEA,
+				6FE209CEFE93DAFA11CA2CEA,
+				6FE209CFFE93DAFA11CA2CEA,
+				6FE209D0FE93DAFA11CA2CEA,
+				6FE209D1FE93DAFA11CA2CEA,
+				6FE209D2FE93DAFA11CA2CEA,
+				6FE209D3FE93DAFA11CA2CEA,
+				6FE209D4FE93DAFA11CA2CEA,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FE209CDFE93DAFA11CA2CEA = {
+			fileRef = 6FE20972FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209CEFE93DAFA11CA2CEA = {
+			fileRef = 6FE20973FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209CFFE93DAFA11CA2CEA = {
+			fileRef = 6FE20974FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209D0FE93DAFA11CA2CEA = {
+			fileRef = 6FE20975FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209D1FE93DAFA11CA2CEA = {
+			fileRef = 6FE20976FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209D2FE93DAFA11CA2CEA = {
+			fileRef = 6FE20977FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209D3FE93DAFA11CA2CEA = {
+			fileRef = 6FE20978FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209D4FE93DAFA11CA2CEA = {
+			fileRef = 6FE2097CFE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		6FE209D5FE93DAFA11CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				05ADF629FFFACCFF11CA0C5D,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FE209DAFE93DAFA11CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+//6F0
+//6F1
+//6F2
+//6F3
+//6F4
+//710
+//711
+//712
+//713
+//714
+		7184D0D2FE93DDD411CA2CEA = {
+			buildActionMask = 8;
+			files = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# This shell-script build phase happens only when installing and causes the \n# project sources (which are shipped as an example) to be installed.\n\nEXAMPLESDIR=${SYSTEM_DEVELOPER_DIR}/Examples/Java/Cocoa\n\n# install the source\nxcodebuild installsrc \"SYMROOT=${SYMROOT}\" \"OBJROOT=${OBJROOT}\" \"DSTROOT=${DSTROOT}\" \"SRCROOT=${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}\"\n\n# strip out garbage\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*~\" -exec rm -rf {} \\; -prune ; \nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -type d -name \"CVS\" -exec rm -rf {} \\; -prune ;\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*.pbxuser\" -exec rm -rf {} \\; ;\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*.perspective\" -exec rm -rf {} \\; ;\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*.mode[123456789]\" -exec rm -rf {} \\; ;\nrm -rf ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}/build\n\n# set permissions\nchmod -R u+rwX,go+rX,go-w ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}\n\nif [ z\"WINDOWS\" != z\"${OS}\" ] ; then\n    chown -R ${INSTALL_OWNER}.${INSTALL_GROUP} ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}\nfi\n";
+		};
+//710
+//711
+//712
+//713
+//714
+//F50
+//F51
+//F52
+//F53
+//F54
+		F57A7191010654E401CA0CA4 = {
+			fileRef = 6FE20981FE93DAFA11CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 6FE2096FFE93DAFA11CA2CEA;
+}

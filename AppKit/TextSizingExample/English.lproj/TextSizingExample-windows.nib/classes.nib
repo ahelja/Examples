@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {aspectPopUpAction = id; infoAction = id; loadDocumentAction = id; }; 
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {aspectPopUpButton = id; infoPanel = id; swapView = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {orderFrontStandardAboutPanel = id; }; 
+            CLASS = NSApplication; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }
+    ); 
+    IBVersion = 1; 
+}

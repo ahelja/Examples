@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEF4E64607C2C201004C62C7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AE6CC1AFEEDC07111CA1586 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		EEF4E64807C2C201004C62C7 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE6CC22FEEDC07111CA1586 /* Carbon.framework */; };
+		EEF4E64A07C2C201004C62C7 /* main.r in Rez */ = {isa = PBXBuildFile; fileRef = 0AE6CC1CFEEDC07111CA1586 /* main.r */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		075F80ACFFD4656611CA14D0 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		075F80ADFFD4656611CA14D0 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0AE6CC1AFEEDC07111CA1586 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		0AE6CC1CFEEDC07111CA1586 /* main.r */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.rez; path = main.r; sourceTree = "<group>"; };
+		0AE6CC22FEEDC07111CA1586 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		EEF4E64C07C2C201004C62C7 /* Info-SimpleSRExample__Application___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-SimpleSRExample__Application___Upgraded_.plist"; sourceTree = "<group>"; };
+		EEF4E64D07C2C201004C62C7 /* SimpleSpeechRecExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSpeechRecExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEF4E64707C2C201004C62C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEF4E64807C2C201004C62C7 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AE6CC16FEEDC07111CA1586 /* SimpleSRExample */ = {
+			isa = PBXGroup;
+			children = (
+				0AE6CC19FEEDC07111CA1586 /* Sources */,
+				0AE6CC1BFEEDC07111CA1586 /* Resources */,
+				0AE6CC21FEEDC07111CA1586 /* External Frameworks and Libraries */,
+				0AE6CC17FEEDC07111CA1586 /* Products */,
+				EEF4E64C07C2C201004C62C7 /* Info-SimpleSRExample__Application___Upgraded_.plist */,
+			);
+			name = SimpleSRExample;
+			sourceTree = "<group>";
+		};
+		0AE6CC17FEEDC07111CA1586 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4E64D07C2C201004C62C7 /* SimpleSpeechRecExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AE6CC19FEEDC07111CA1586 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0AE6CC1AFEEDC07111CA1586 /* main.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		0AE6CC1BFEEDC07111CA1586 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AE6CC1CFEEDC07111CA1586 /* main.r */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0AE6CC21FEEDC07111CA1586 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0AE6CC22FEEDC07111CA1586 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EEF4E64307C2C201004C62C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EEF4E64207C2C201004C62C7 /* SimpleSRExample (Application) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30DE208F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "SimpleSRExample (Application)" */;
+			buildPhases = (
+				EEF4E64307C2C201004C62C7 /* Headers */,
+				EEF4E64407C2C201004C62C7 /* Resources */,
+				EEF4E64507C2C201004C62C7 /* Sources */,
+				EEF4E64707C2C201004C62C7 /* Frameworks */,
+				EEF4E64907C2C201004C62C7 /* Rez */,
+				EEF4E64B07C2C201004C62C7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				BUILD_PHASING = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_CARBON=1";
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-SimpleSRExample__Application___Upgraded_.plist";
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechRecognitionExamples/SimpleSpeechRecExample/";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleSpeechRecExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "SimpleSRExample (Application)";
+			productInstallPath = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechRecognitionExamples/SimpleSpeechRecExample/";
+			productName = SimpleSpeechRecExample;
+			productReference = EEF4E64D07C2C201004C62C7 /* SimpleSpeechRecExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AE6CC15FEEDC07111CA1586 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 48C30DE608F73EEE00D0B768 /* Build configuration list for PBXProject "SimpleSpeechRecExample" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				075F80ACFFD4656611CA14D0 /* Development */,
+				075F80ADFFD4656611CA14D0 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0AE6CC16FEEDC07111CA1586 /* SimpleSRExample */;
+			productRefGroup = 0AE6CC17FEEDC07111CA1586 /* Products */;
+			projectDirPath = "";
+			targets = (
+				EEF4E64207C2C201004C62C7 /* SimpleSRExample (Application) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEF4E64407C2C201004C62C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		EEF4E64907C2C201004C62C7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEF4E64A07C2C201004C62C7 /* main.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEF4E64B07C2C201004C62C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/tcsh;
+			shellScript = "pbxbuild installsrc SRCROOT=$DSTROOT/$INSTALL_PATH/Sources\n/bin/rm -rf $DSTROOT/$INSTALL_PATH/Sources/build/\n/bin/rm -rf $DSTROOT/$INSTALL_PATH/Sources/CVS/\n/bin/rm -rf $DSTROOT/$INSTALL_PATH/Sources/SimeSpeechRecExample.pbproj/CVS/\n/usr/sbin/chown root:wheel $DSTROOT/$INSTALL_PATH/Sources/*\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEF4E64507C2C201004C62C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEF4E64607C2C201004C62C7 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		48C30DE308F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_PHASING = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_CARBON=1";
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-SimpleSRExample__Application___Upgraded_.plist";
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechRecognitionExamples/SimpleSpeechRecExample/";
+				PRODUCT_NAME = SimpleSpeechRecExample;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		48C30DE408F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				BUILD_PHASING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_CARBON=1";
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Libraries/CIncludes\"";
+				INFOPLIST_FILE = "Info-SimpleSRExample__Application___Upgraded_.plist";
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechRecognitionExamples/SimpleSpeechRecExample/";
+				PRODUCT_NAME = SimpleSpeechRecExample;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48C30DE708F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		48C30DE808F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C30DE208F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "SimpleSRExample (Application)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DE308F73EEE00D0B768 /* Debug */,
+				48C30DE408F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30DE608F73EEE00D0B768 /* Build configuration list for PBXProject "SimpleSpeechRecExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DE708F73EEE00D0B768 /* Debug */,
+				48C30DE808F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AE6CC15FEEDC07111CA1586 /* Project object */;
+}

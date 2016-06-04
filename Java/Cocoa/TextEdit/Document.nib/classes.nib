@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            CLASS = Document; 
+            LANGUAGE = Java; 
+            OUTLETS = {scrollView = id; }; 
+            SUPERCLASS = java.lang.Object; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = ScalingScrollView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

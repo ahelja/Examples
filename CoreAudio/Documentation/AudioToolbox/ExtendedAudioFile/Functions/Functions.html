@@ -1,0 +1,488 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1>
+<br><a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileOpen" target="doc">ExtAudioFileOpen</a></tt></dt>
+<dd>Opens an audio file.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileWrapAudioFileID" target="doc">ExtAudioFileWrapAudioFileID</a></tt></dt>
+<dd>Wrap an AudioFileID in an ExtAudioFileRef.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileCreateNew" target="doc">ExtAudioFileCreateNew</a></tt></dt>
+<dd>Create a new audio file.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileDispose" target="doc">ExtAudioFileDispose</a></tt></dt>
+<dd>Close the file and dispose the object.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileRead" target="doc">ExtAudioFileRead</a></tt></dt>
+<dd>Perform a synchronous sequential read.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileWrite" target="doc">ExtAudioFileWrite</a></tt></dt>
+<dd>Perform a synchronous sequential write.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileWriteAsync" target="doc">ExtAudioFileWriteAsync</a></tt></dt>
+<dd>Perform an asynchronous sequential write.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileSeek" target="doc">ExtAudioFileSeek</a></tt></dt>
+<dd>Seek to a specific frame position.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileTell" target="doc">ExtAudioFileTell</a></tt></dt>
+<dd>Return the file's read/write position.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileGetPropertyInfo" target="doc">ExtAudioFileGetPropertyInfo</a></tt></dt>
+<dd>Get information about a property</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileGetProperty" target="doc">ExtAudioFileGetProperty</a></tt></dt>
+<dd>Get a property value.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/ExtAudioFileSetProperty" target="doc">ExtAudioFileSetProperty</a></tt></dt>
+<dd>Set a property value.</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileOpen;  name=ExtAudioFileOpen --><a name="//apple_ref/c/func/ExtAudioFileOpen"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileOpen">ExtAudioFileOpen</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Opens an audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileOpen" logicalPath="//apple_ref/c/instm/ExtAudioFileOpen //apple_ref/c/clm/ExtAudioFileOpen //apple_ref/c/intfcm/ExtAudioFileOpen //apple_ref/c/func/ExtAudioFileOpen" target="_top"><font class="function">ExtAudioFileOpen</font></a>(
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/FSRef //apple_ref/c/cl/FSRef //apple_ref/c/tdef/FSRef //apple_ref/c/tag/FSRef //apple_ref/c/econst/FSRef //apple_ref/c/struct/FSRef //apple_ref/c/clconst/FSRef" --><font class="type">FSRef</font><!-- /a --> *<font class="param">inFSRef</font>, 
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> *<font class="param">outExtAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inFSRef</i></code></dt>
+<dd>The audio file to read.</dd>
+<dt><code><i>outExtAudioFile</i></code></dt>
+<dd>On exit, a newly-allocated ExtAudioAudioFileRef.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Allocates a new ExtAudioFileRef, for reading an existing audio file.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileWrapAudioFileID;  name=ExtAudioFileWrapAudioFileID --><a name="//apple_ref/c/func/ExtAudioFileWrapAudioFileID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileWrapAudioFileID">ExtAudioFileWrapAudioFileID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Wrap an AudioFileID in an ExtAudioFileRef.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileWrapAudioFileID" logicalPath="//apple_ref/c/instm/ExtAudioFileWrapAudioFileID //apple_ref/c/clm/ExtAudioFileWrapAudioFileID //apple_ref/c/intfcm/ExtAudioFileWrapAudioFileID //apple_ref/c/func/ExtAudioFileWrapAudioFileID" target="_top"><font class="function">ExtAudioFileWrapAudioFileID</font></a>(
+    <a href="../../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inFileID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">inForWriting</font>, 
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> *<font class="param">outExtAudioFile</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inFileID</i></code></dt>
+<dd>The AudioFileID to wrap.</dd>
+<dt><code><i>inForWriting</i></code></dt>
+<dd>True if the AudioFileID is a new file opened for writing.</dd>
+<dt><code><i>outExtAudioFile</i></code></dt>
+<dd>On exit, a newly-allocated ExtAudioAudioFileRef.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Allocates a new ExtAudioFileRef which wraps an existing AudioFileID. The
+client is responsible for keeping the AudioFileID open until the
+ExtAudioFileRef is disposed.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileCreateNew;  name=ExtAudioFileCreateNew --><a name="//apple_ref/c/func/ExtAudioFileCreateNew"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileCreateNew">ExtAudioFileCreateNew</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create a new audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileCreateNew" logicalPath="//apple_ref/c/instm/ExtAudioFileCreateNew //apple_ref/c/clm/ExtAudioFileCreateNew //apple_ref/c/intfcm/ExtAudioFileCreateNew //apple_ref/c/func/ExtAudioFileCreateNew" target="_top"><font class="function">ExtAudioFileCreateNew</font></a>(
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/FSRef //apple_ref/c/cl/FSRef //apple_ref/c/tdef/FSRef //apple_ref/c/tag/FSRef //apple_ref/c/econst/FSRef //apple_ref/c/struct/FSRef //apple_ref/c/clconst/FSRef" --><font class="type">FSRef</font><!-- /a --> *<font class="param">inParentDir</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inFileName</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="param">inFileType</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a --> *<font class="param">inStreamDesc</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioChannelLayout //apple_ref/c/cl/AudioChannelLayout //apple_ref/c/tdef/AudioChannelLayout //apple_ref/c/tag/AudioChannelLayout //apple_ref/c/econst/AudioChannelLayout //apple_ref/c/struct/AudioChannelLayout //apple_ref/c/clconst/AudioChannelLayout" --><font class="type">AudioChannelLayout</font><!-- /a --> *<font class="param">inChannelLayout</font>, 
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> *<font class="param">outExtAudioFile</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inParentDir</i></code></dt>
+<dd>The directory in which to create the new file.</dd>
+<dt><code><i>inFileName</i></code></dt>
+<dd>The name of the new file.</dd>
+<dt><code><i>inFileType</i></code></dt>
+<dd>The type of file to create. This is a constant from AudioToolbox/AudioFile.h, e.g.
+kAudioFileAIFFType. Note that this is not an HFSTypeCode.</dd>
+<dt><code><i>inStreamDesc</i></code></dt>
+<dd>The format of the audio data to be written to the file.</dd>
+<dt><code><i>inChannelLayout</i></code></dt>
+<dd>The channel layout of the audio data. If non-null, this must be consistent
+with the number of channels specified by inStreamDesc.</dd>
+<dt><code><i>outExtAudioFile</i></code></dt>
+<dd>On exit, a newly-allocated ExtAudioAudioFileRef.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Creates a new audio file.
+<br><br>
+If the file to be created is in an encoded format, it is permissible for the
+sample rate in inStreamDesc to be 0, since in all cases, the file's encoding
+AudioConverter may produce audio at a different sample rate than the source. The
+file will be created with the audio format actually produced by the encoder.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileDispose;  name=ExtAudioFileDispose --><a name="//apple_ref/c/func/ExtAudioFileDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileDispose">ExtAudioFileDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Close the file and dispose the object.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileDispose" logicalPath="//apple_ref/c/instm/ExtAudioFileDispose //apple_ref/c/clm/ExtAudioFileDispose //apple_ref/c/intfcm/ExtAudioFileDispose //apple_ref/c/func/ExtAudioFileDispose" target="_top"><font class="function">ExtAudioFileDispose</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Closes the file and deletes the object. If no frames were written to an
+ExtAudioFile allocated by ExtAudioFileCreateNew, the output file is deleted.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileRead;  name=ExtAudioFileRead --><a name="//apple_ref/c/func/ExtAudioFileRead"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileRead">ExtAudioFileRead</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Perform a synchronous sequential read.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileRead" logicalPath="//apple_ref/c/instm/ExtAudioFileRead //apple_ref/c/clm/ExtAudioFileRead //apple_ref/c/intfcm/ExtAudioFileRead //apple_ref/c/func/ExtAudioFileRead" target="_top"><font class="function">ExtAudioFileRead</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioNumberFrames</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioBufferList //apple_ref/c/cl/AudioBufferList //apple_ref/c/tdef/AudioBufferList //apple_ref/c/tag/AudioBufferList //apple_ref/c/econst/AudioBufferList //apple_ref/c/struct/AudioBufferList //apple_ref/c/clconst/AudioBufferList" --><font class="type">AudioBufferList</font><!-- /a --> *<font class="param">ioData</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>ioNumberFrames</i></code></dt>
+<dd>On entry, ioNumberFrames is the number of frames to be read from the file.
+On exit, it is the number of frames actually read. A number of factors may
+cause a fewer number of frames to be read, including the supplied buffers
+not being large enough, and internal optimizations. If 0 frames are
+returned, however, this indicates that end-of-file was reached.</dd>
+<dt><code><i>ioData</i></code></dt>
+<dd>Buffer(s) into which the audio data is read.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>If the file has a client data format, then the audio data from the file is
+translated from the file data format to the client format, via the
+ExtAudioFile's internal AudioConverter.
+<br><br>
+(Note that the use of sequential reads/writes means that an ExtAudioFile must
+not be read on multiple threads; clients wishing to do this should use the
+lower-level AudioFile API set).
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileWrite;  name=ExtAudioFileWrite --><a name="//apple_ref/c/func/ExtAudioFileWrite"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileWrite">ExtAudioFileWrite</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Perform a synchronous sequential write.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileWrite" logicalPath="//apple_ref/c/instm/ExtAudioFileWrite //apple_ref/c/clm/ExtAudioFileWrite //apple_ref/c/intfcm/ExtAudioFileWrite //apple_ref/c/func/ExtAudioFileWrite" target="_top"><font class="function">ExtAudioFileWrite</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inNumberFrames</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioBufferList //apple_ref/c/cl/AudioBufferList //apple_ref/c/tdef/AudioBufferList //apple_ref/c/tag/AudioBufferList //apple_ref/c/econst/AudioBufferList //apple_ref/c/struct/AudioBufferList //apple_ref/c/clconst/AudioBufferList" --><font class="type">AudioBufferList</font><!-- /a --> *<font class="param">ioData</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>inNumberFrames</i></code></dt>
+<dd>The number of frames to write.</dd>
+<dt><code><i>ioData</i></code></dt>
+<dd>The buffer(s) from which audio data is written to the file.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>If the file has a client data format, then the audio data in ioData is
+translated from the client format to the file data format, via the
+ExtAudioFile's internal AudioConverter.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileWriteAsync;  name=ExtAudioFileWriteAsync --><a name="//apple_ref/c/func/ExtAudioFileWriteAsync"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileWriteAsync">ExtAudioFileWriteAsync</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Perform an asynchronous sequential write.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileWriteAsync" logicalPath="//apple_ref/c/instm/ExtAudioFileWriteAsync //apple_ref/c/clm/ExtAudioFileWriteAsync //apple_ref/c/intfcm/ExtAudioFileWriteAsync //apple_ref/c/func/ExtAudioFileWriteAsync" target="_top"><font class="function">ExtAudioFileWriteAsync</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inNumberFrames</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioBufferList //apple_ref/c/cl/AudioBufferList //apple_ref/c/tdef/AudioBufferList //apple_ref/c/tag/AudioBufferList //apple_ref/c/econst/AudioBufferList //apple_ref/c/struct/AudioBufferList //apple_ref/c/clconst/AudioBufferList" --><font class="type">AudioBufferList</font><!-- /a --> *<font class="param">ioData</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>inNumberFrames</i></code></dt>
+<dd>The number of frames to write.</dd>
+<dt><code><i>ioData</i></code></dt>
+<dd>The buffer(s) from which audio data is written to the file.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Writes the provided buffer list to an internal ring buffer and notifies an
+internal thread to perform the write at a later time. The first time this is
+called, allocations may be performed. You can call this with 0 frames and null
+buffer in a non-time-critical context to initialize the asynchronous mechanism.
+Once initialized, subsequent calls are very efficient and do not take locks;
+thus this may be used to write to a file from a realtime thread.
+<br><br>
+The client must not mix synchronous and asynchronous writes to the same file.
+<br><br>
+Pending writes are not guaranteed to be flushed to disk until
+ExtAudioFileDispose is called.
+<br><br>
+N.B. Errors may occur after this call has returned. Such errors may be returned
+from subsequent calls to this function.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileSeek;  name=ExtAudioFileSeek --><a name="//apple_ref/c/func/ExtAudioFileSeek"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileSeek">ExtAudioFileSeek</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Seek to a specific frame position.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileSeek" logicalPath="//apple_ref/c/instm/ExtAudioFileSeek //apple_ref/c/clm/ExtAudioFileSeek //apple_ref/c/intfcm/ExtAudioFileSeek //apple_ref/c/func/ExtAudioFileSeek" target="_top"><font class="function">ExtAudioFileSeek</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inFrameOffset</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>inFrameOffset</i></code></dt>
+<dd>The desired seek position, in sample frames, relative to the beginning of
+the file.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Sets the file's read position to the specified sample frame number. The next call
+to ExtAudioFileRead will return samples from precisely this location, even if it
+is located in the middle of a packet.
+<br><br>
+This function's behavior with files open for writing is currently undefined.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileTell;  name=ExtAudioFileTell --><a name="//apple_ref/c/func/ExtAudioFileTell"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileTell">ExtAudioFileTell</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Return the file's read/write position.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileTell" logicalPath="//apple_ref/c/instm/ExtAudioFileTell //apple_ref/c/clm/ExtAudioFileTell //apple_ref/c/intfcm/ExtAudioFileTell //apple_ref/c/func/ExtAudioFileTell" target="_top"><font class="function">ExtAudioFileTell</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> *<font class="param">outFrameOffset</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>outFrameOffset</i></code></dt>
+<dd>On exit, the file's current read/write position in sample frames.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileGetPropertyInfo;  name=ExtAudioFileGetPropertyInfo --><a name="//apple_ref/c/func/ExtAudioFileGetPropertyInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileGetPropertyInfo">ExtAudioFileGetPropertyInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get information about a property</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileGetPropertyInfo" logicalPath="//apple_ref/c/instm/ExtAudioFileGetPropertyInfo //apple_ref/c/clm/ExtAudioFileGetPropertyInfo //apple_ref/c/intfcm/ExtAudioFileGetPropertyInfo //apple_ref/c/func/ExtAudioFileGetPropertyInfo" target="_top"><font class="function">ExtAudioFileGetPropertyInfo</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Enums/Enums.html#//apple_ref/c/tag/ExtAudioFilePropertyID" logicalPath="//apple_ref/c/cl/ExtAudioFilePropertyID //apple_ref/c/cl/ExtAudioFilePropertyID //apple_ref/c/tdef/ExtAudioFilePropertyID //apple_ref/c/tag/ExtAudioFilePropertyID" target="_top"><font class="type">ExtAudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> *<font class="param">outWritable</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property being queried.</dd>
+<dt><code><i>outSize</i></code></dt>
+<dd>If non-null, on exit, this is set to the size of the property's value.</dd>
+<dt><code><i>outWritable</i></code></dt>
+<dd>If non-null, on exit, this indicates whether the property value is settable.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileGetProperty;  name=ExtAudioFileGetProperty --><a name="//apple_ref/c/func/ExtAudioFileGetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileGetProperty">ExtAudioFileGetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get a property value.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileGetProperty" logicalPath="//apple_ref/c/instm/ExtAudioFileGetProperty //apple_ref/c/clm/ExtAudioFileGetProperty //apple_ref/c/intfcm/ExtAudioFileGetProperty //apple_ref/c/func/ExtAudioFileGetProperty" target="_top"><font class="function">ExtAudioFileGetProperty</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Enums/Enums.html#//apple_ref/c/tag/ExtAudioFilePropertyID" logicalPath="//apple_ref/c/cl/ExtAudioFilePropertyID //apple_ref/c/cl/ExtAudioFilePropertyID //apple_ref/c/tdef/ExtAudioFilePropertyID //apple_ref/c/tag/ExtAudioFilePropertyID" target="_top"><font class="type">ExtAudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioPropertyDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outPropertyData</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property being fetched.</dd>
+<dt><code><i>ioPropertyDataSize</i></code></dt>
+<dd>On entry, the size (in bytes) of the memory pointed to by outPropertyData.
+On exit, the actual size of the property data returned.</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>The value of the property is copied to the memory this points to.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/ExtAudioFileSetProperty;  name=ExtAudioFileSetProperty --><a name="//apple_ref/c/func/ExtAudioFileSetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="ExtAudioFileSetProperty">ExtAudioFileSetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Set a property value.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/ExtAudioFileSetProperty" logicalPath="//apple_ref/c/instm/ExtAudioFileSetProperty //apple_ref/c/clm/ExtAudioFileSetProperty //apple_ref/c/intfcm/ExtAudioFileSetProperty //apple_ref/c/func/ExtAudioFileSetProperty" target="_top"><font class="function">ExtAudioFileSetProperty</font></a>(
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/ExtAudioFileRef" logicalPath="//apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/cl/ExtAudioFileRef //apple_ref/c/tdef/ExtAudioFileRef" target="_top"><font class="type">ExtAudioFileRef</font></a> <font class="param">inExtAudioFile</font>, 
+    <a href="../../../AudioToolbox/ExtendedAudioFile/index.html?Enums/Enums.html#//apple_ref/c/tag/ExtAudioFilePropertyID" logicalPath="//apple_ref/c/cl/ExtAudioFilePropertyID //apple_ref/c/cl/ExtAudioFilePropertyID //apple_ref/c/tdef/ExtAudioFilePropertyID //apple_ref/c/tag/ExtAudioFilePropertyID" target="_top"><font class="type">ExtAudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inPropertyDataSize</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inPropertyData</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inExtAudioFile</i></code></dt>
+<dd>The extended audio file object.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property being set.</dd>
+<dt><code><i>inPropertyDataSize</i></code></dt>
+<dd>The size of the property data, in bytes.</dd>
+<dt><code><i>inPropertyData</i></code></dt>
+<dd>Points to the property's new value.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

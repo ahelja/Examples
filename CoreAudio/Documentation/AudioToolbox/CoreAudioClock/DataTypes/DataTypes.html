@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/CAClockSMPTEFormat;  name=CAClockSMPTEFormat --><a name="//apple_ref/c/tdef/CAClockSMPTEFormat"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSMPTEFormat">CAClockSMPTEFormat</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A SMPTE format, specifying the frames per second (fps) and
+whether it is drop frame.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">CAClockSMPTEFormat</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The possible values of a CAClockSMPTEFormat are found in
+<code>&lt;CoreAudio/CoreAudioTypes.h&gt;</code>. Values include
+kSMPTETimeType30, kSMPTETimeType30Drop, etc. Note that formats with more
+than 30 fps are not usable with MIDI Time Code.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/CAClockRef;  name=CAClockRef --><a name="//apple_ref/c/tdef/CAClockRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockRef">CAClockRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A reference to a Core Audio Clock object.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueCAClock //apple_ref/c/cl/OpaqueCAClock //apple_ref/c/tdef/OpaqueCAClock //apple_ref/c/tag/OpaqueCAClock //apple_ref/c/econst/OpaqueCAClock //apple_ref/c/struct/OpaqueCAClock //apple_ref/c/clconst/OpaqueCAClock" --><font class="type">OpaqueCAClock</font><!-- /a --> <font class="type">*</font> <font class="var">CAClockRef</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/CAClockBeats;  name=CAClockBeats --><a name="//apple_ref/c/tdef/CAClockBeats"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockBeats">CAClockBeats</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>MIDI quarter notes (see MIDI specs)
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/Float64 //apple_ref/c/cl/Float64 //apple_ref/c/tdef/Float64 //apple_ref/c/tag/Float64 //apple_ref/c/econst/Float64 //apple_ref/c/struct/Float64 //apple_ref/c/clconst/Float64" --><font class="type">Float64</font><!-- /a --> <font class="var">CAClockBeats</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/CAClockTempo;  name=CAClockTempo --><a name="//apple_ref/c/tdef/CAClockTempo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockTempo">CAClockTempo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A musical tempo in beats per minute.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/Float64 //apple_ref/c/cl/Float64 //apple_ref/c/tdef/Float64 //apple_ref/c/tag/Float64 //apple_ref/c/econst/Float64 //apple_ref/c/struct/Float64 //apple_ref/c/clconst/Float64" --><font class="type">Float64</font><!-- /a --> <font class="var">CAClockTempo</font>; <font class="comment">// beats per minute</font> </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/CAClockListenerProc;  name=CAClockListenerProc --><a name="//apple_ref/c/tdef/CAClockListenerProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockListenerProc">CAClockListenerProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A client-supplied function called when the clock's state changes.</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/CAClockListenerProc //apple_ref/c/clm/CAClockListenerProc //apple_ref/c/intfcm/CAClockListenerProc //apple_ref/c/func/CAClockListenerProc //apple_ref/c/ftmplt/CAClockListenerProc //apple_ref/c/defn/CAClockListenerProc //apple_ref/c/macro/CAClockListenerProc" --><font class="function">CAClockListenerProc</font><!-- /a -->)(
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">userData</font>,
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockMessage" logicalPath="//apple_ref/c/cl/CAClockMessage //apple_ref/c/cl/CAClockMessage //apple_ref/c/tdef/CAClockMessage //apple_ref/c/tag/CAClockMessage" target="_top"><font class="type">CAClockMessage</font></a> <font class="param">message</font>,
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">param</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>userData</code></dt>
+<dd>The value passed to CAClockAddListener when the callback function
+was installed.</dd>
+<dt><code>message</code></dt>
+<dd>Signifies the kind of event which occurred.</dd>
+<dt><code>param</code></dt>
+<dd>This value is specific to the message (currently no messages have values).</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

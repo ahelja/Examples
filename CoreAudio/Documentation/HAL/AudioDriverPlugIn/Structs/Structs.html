@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Structs</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1><br>
+<hr><a name="//apple_ref/c/tag/AudioDriverPlugInHostInfo"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInHostInfo">AudioDriverPlugInHostInfo</a></h2>
+</td></tr></table><hr>This structure provides the plug-in with all the info it needs with respect to
+communicating with the HAL.
+
+<blockquote><pre>
+struct AudioDriverPlugInHostInfo {
+    AudioDeviceID                               mDeviceID;
+    io_object_t                                 mIOAudioDevice;
+    io_object_t                                 mIOAudioEngine;
+    AudioDriverPlugInDevicePropertyChangedProc  mDevicePropertyChangedProc;
+    AudioDriverPlugInStreamPropertyChangedProc  mStreamPropertyChangedProc;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mDeviceID</tt></dt><dd>The AudioDeviceID of the audio device.</dd>
+<dt><tt>mIOAudioDevice</tt></dt><dd>The io_object_t that points to the IOAudioDevice object for the device in
+the driver.</dd>
+<dt><tt>mIOAudioEngine</tt></dt><dd>The io_object_t that points to the IOAudioEngine object for the device in
+the driver.</dd>
+<dt><tt>mDevicePropertyChangedProc</tt></dt><dd>The AudioDriverPlugInDevicePropertyChangedProc the plug-in should call when
+a device property changes.</dd>
+<dt><tt>mStreamPropertyChangedProc</tt></dt><dd>The AudioDriverPlugInStreamPropertyChangedProc the plug-in should call when
+a stream property changes.</dd>
+</dl>
+</blockquote>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

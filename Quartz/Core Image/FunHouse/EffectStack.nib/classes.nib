@@ -1,0 +1,41 @@
+{
+    IBClasses = (
+        {CLASS = EffectStackBox; LANGUAGE = ObjC; SUPERCLASS = NSBox; }, 
+        {
+            ACTIONS = {
+                filterCancelButtonAction = id; 
+                filterImageButtonAction = id; 
+                filterOKButtonAction = id; 
+                minusButtonAction = id; 
+                playButtonAction = id; 
+                plusButtonAction = id; 
+                presetPopUpButtonAction = id; 
+                resetButtonAction = id; 
+                tableViewDoubleClick = id; 
+                topPlusButtonAction = id; 
+            }; 
+            CLASS = EffectStackController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                categoryTableView = NSTableView; 
+                filterCancelButton = NSButton; 
+                filterOKButton = NSButton; 
+                filterPalette = NSWindow; 
+                filterTableView = NSTableView; 
+                playButton = NSButton; 
+                presetPopUpButton = NSPopUpButton; 
+                resetButton = NSButton; 
+                topPlusButton = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = FunHouseDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {effectStackPanel = NSPanel; resetButton = NSButton; }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}

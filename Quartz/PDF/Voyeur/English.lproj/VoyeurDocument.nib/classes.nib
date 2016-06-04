@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = VoyeurDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                authorField = NSTextField; 
+                createdField = NSTextField; 
+                creatorField = NSTextField; 
+                encryptedField = NSTextField; 
+                keywordsField = NSTextField; 
+                modifiedField = NSTextField; 
+                outlineView = NSOutlineView; 
+                pagesField = NSTextField; 
+                producerField = NSTextField; 
+                subjectField = NSTextField; 
+                titleField = NSTextField; 
+                versionField = NSTextField; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}

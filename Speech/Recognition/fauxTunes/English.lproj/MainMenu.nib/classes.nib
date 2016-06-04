@@ -1,0 +1,81 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                advancedMenuConvertID3Tags = id; 
+                advancedMenuConvertToMP3 = id; 
+                advancedMenuExportSongList = id; 
+                advancedMenuGetCDTrackNames = id; 
+                advancedMenuOpenStream = id; 
+                advancedMenuSubmitCDTrackNames = id; 
+                controlsMenuEjectCD = id; 
+                controlsMenuMute = id; 
+                controlsMenuNextSong = id; 
+                controlsMenuPlayOrStopSong = id; 
+                controlsMenuPreviousSong = id; 
+                controlsMenuRepeatAll = id; 
+                controlsMenuRepeatOff = id; 
+                controlsMenuRepeatOne = id; 
+                controlsMenuShuffle = id; 
+                controlsMenuVolumeDown = id; 
+                controlsMenuVolumeUp = id; 
+                editMenuClear = id; 
+                editMenuCopy = id; 
+                editMenuCut = id; 
+                editMenuNone = id; 
+                editMenuPaste = id; 
+                editMenuSelectAll = id; 
+                editMenuSelectNone = id; 
+                editMenuShowCurrentSong = id; 
+                editMenuUndo = id; 
+                editMenuViewOptions = id; 
+                fileMenuAddToLibrary = id; 
+                fileMenuCloseWindow = id; 
+                fileMenuGetInfo = id; 
+                fileMenuHideOrShowWindow = id; 
+                fileMenuNewPlaylist = id; 
+                fileMenuNewPlaylistFromSelection = id; 
+                fileMenuShopForProducts = id; 
+                fileMenuShowSongFile = id; 
+                forwardButtonWasClicked = id; 
+                helpMenuGetHelp = id; 
+                reverseButtonWasClicked = id; 
+                visualsMenuFullScreen = id; 
+                visualsMenuLarge = id; 
+                visualsMenuMedium = id; 
+                visualsMenuSmall = id; 
+                visualsMenuToggleVisuals = id; 
+                volumeSliderWasMoved = id; 
+            }; 
+            CLASS = FauxTunes; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                _ejectButton = id; 
+                _forwardButton = id; 
+                _infoTextField = id; 
+                _newPlaylistButton = id; 
+                _playOrStopButton = id; 
+                _playlistTableView = id; 
+                _repeatButton = id; 
+                _reverseButton = id; 
+                _shuffleButton = id; 
+                _songTableView = id; 
+                _visualsButton = id; 
+                _volumeSlider = id; 
+                _window = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = KeySucker; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = SongTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {applicationWillTerminate = id; }; 
+            CLASS = SpeechEnabledAppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {_fauxTunes = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

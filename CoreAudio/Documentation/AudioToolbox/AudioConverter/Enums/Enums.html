@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Enumerations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Enumerations</font></h1>
+<br><hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioConverterPropertyID;  name=AudioConverterPropertyID --><a name="//apple_ref/c/tag/AudioConverterPropertyID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterPropertyID">AudioConverterPropertyID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>The properties of an AudioConverter, accessible via AudioConverterGetProperty()
+and AudioConverterSetProperty().</p>
+<blockquote><pre><font class="keyword">enum</font> <font class="comment">// typedef UInt32 AudioConverterPropertyID</font> 
+{ 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyMinimumInputBufferSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyMinimumInputBufferSize //apple_ref/c/cl/kAudioConverterPropertyMinimumInputBufferSize //apple_ref/c/tdef/kAudioConverterPropertyMinimumInputBufferSize //apple_ref/c/tag/kAudioConverterPropertyMinimumInputBufferSize //apple_ref/c/econst/kAudioConverterPropertyMinimumInputBufferSize" target="_top"><font class="type">kAudioConverterPropertyMinimumInputBufferSize</font></a> = '<font class="char">mibs</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyMinimumOutputBufferSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyMinimumOutputBufferSize //apple_ref/c/cl/kAudioConverterPropertyMinimumOutputBufferSize //apple_ref/c/tdef/kAudioConverterPropertyMinimumOutputBufferSize //apple_ref/c/tag/kAudioConverterPropertyMinimumOutputBufferSize //apple_ref/c/econst/kAudioConverterPropertyMinimumOutputBufferSize" target="_top"><font class="type">kAudioConverterPropertyMinimumOutputBufferSize</font></a> = '<font class="char">mobs</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyMaximumInputBufferSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyMaximumInputBufferSize //apple_ref/c/cl/kAudioConverterPropertyMaximumInputBufferSize //apple_ref/c/tdef/kAudioConverterPropertyMaximumInputBufferSize //apple_ref/c/tag/kAudioConverterPropertyMaximumInputBufferSize //apple_ref/c/econst/kAudioConverterPropertyMaximumInputBufferSize" target="_top"><font class="type">kAudioConverterPropertyMaximumInputBufferSize</font></a> = '<font class="char">xibs</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyMaximumInputPacketSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyMaximumInputPacketSize //apple_ref/c/cl/kAudioConverterPropertyMaximumInputPacketSize //apple_ref/c/tdef/kAudioConverterPropertyMaximumInputPacketSize //apple_ref/c/tag/kAudioConverterPropertyMaximumInputPacketSize //apple_ref/c/econst/kAudioConverterPropertyMaximumInputPacketSize" target="_top"><font class="type">kAudioConverterPropertyMaximumInputPacketSize</font></a> = '<font class="char">xips</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyMaximumOutputPacketSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyMaximumOutputPacketSize //apple_ref/c/cl/kAudioConverterPropertyMaximumOutputPacketSize //apple_ref/c/tdef/kAudioConverterPropertyMaximumOutputPacketSize //apple_ref/c/tag/kAudioConverterPropertyMaximumOutputPacketSize //apple_ref/c/econst/kAudioConverterPropertyMaximumOutputPacketSize" target="_top"><font class="type">kAudioConverterPropertyMaximumOutputPacketSize</font></a> = '<font class="char">xops</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyCalculateInputBufferSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyCalculateInputBufferSize //apple_ref/c/cl/kAudioConverterPropertyCalculateInputBufferSize //apple_ref/c/tdef/kAudioConverterPropertyCalculateInputBufferSize //apple_ref/c/tag/kAudioConverterPropertyCalculateInputBufferSize //apple_ref/c/econst/kAudioConverterPropertyCalculateInputBufferSize" target="_top"><font class="type">kAudioConverterPropertyCalculateInputBufferSize</font></a> = '<font class="char">cibs</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyCalculateOutputBufferSize" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyCalculateOutputBufferSize //apple_ref/c/cl/kAudioConverterPropertyCalculateOutputBufferSize //apple_ref/c/tdef/kAudioConverterPropertyCalculateOutputBufferSize //apple_ref/c/tag/kAudioConverterPropertyCalculateOutputBufferSize //apple_ref/c/econst/kAudioConverterPropertyCalculateOutputBufferSize" target="_top"><font class="type">kAudioConverterPropertyCalculateOutputBufferSize</font></a> = '<font class="char">cobs</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyInputCodecParameters" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyInputCodecParameters //apple_ref/c/cl/kAudioConverterPropertyInputCodecParameters //apple_ref/c/tdef/kAudioConverterPropertyInputCodecParameters //apple_ref/c/tag/kAudioConverterPropertyInputCodecParameters //apple_ref/c/econst/kAudioConverterPropertyInputCodecParameters" target="_top"><font class="type">kAudioConverterPropertyInputCodecParameters</font></a> = '<font class="char">icdp</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyOutputCodecParameters" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyOutputCodecParameters //apple_ref/c/cl/kAudioConverterPropertyOutputCodecParameters //apple_ref/c/tdef/kAudioConverterPropertyOutputCodecParameters //apple_ref/c/tag/kAudioConverterPropertyOutputCodecParameters //apple_ref/c/econst/kAudioConverterPropertyOutputCodecParameters" target="_top"><font class="type">kAudioConverterPropertyOutputCodecParameters</font></a> = '<font class="char">ocdp</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterSampleRateConverterAlgorithm" logicalPath="//apple_ref/c/cl/kAudioConverterSampleRateConverterAlgorithm //apple_ref/c/cl/kAudioConverterSampleRateConverterAlgorithm //apple_ref/c/tdef/kAudioConverterSampleRateConverterAlgorithm //apple_ref/c/tag/kAudioConverterSampleRateConverterAlgorithm //apple_ref/c/econst/kAudioConverterSampleRateConverterAlgorithm" target="_top"><font class="type">kAudioConverterSampleRateConverterAlgorithm</font></a> = '<font class="char">srci</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterSampleRateConverterQuality" logicalPath="//apple_ref/c/cl/kAudioConverterSampleRateConverterQuality //apple_ref/c/cl/kAudioConverterSampleRateConverterQuality //apple_ref/c/tdef/kAudioConverterSampleRateConverterQuality //apple_ref/c/tag/kAudioConverterSampleRateConverterQuality //apple_ref/c/econst/kAudioConverterSampleRateConverterQuality" target="_top"><font class="type">kAudioConverterSampleRateConverterQuality</font></a> = '<font class="char">srcq</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterCodecQuality" logicalPath="//apple_ref/c/cl/kAudioConverterCodecQuality //apple_ref/c/cl/kAudioConverterCodecQuality //apple_ref/c/tdef/kAudioConverterCodecQuality //apple_ref/c/tag/kAudioConverterCodecQuality //apple_ref/c/econst/kAudioConverterCodecQuality" target="_top"><font class="type">kAudioConverterCodecQuality</font></a> = '<font class="char">cdqu</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPrimeMethod" logicalPath="//apple_ref/c/cl/kAudioConverterPrimeMethod //apple_ref/c/cl/kAudioConverterPrimeMethod //apple_ref/c/tdef/kAudioConverterPrimeMethod //apple_ref/c/tag/kAudioConverterPrimeMethod //apple_ref/c/econst/kAudioConverterPrimeMethod" target="_top"><font class="type">kAudioConverterPrimeMethod</font></a> = '<font class="char">prmm</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPrimeInfo" logicalPath="//apple_ref/c/cl/kAudioConverterPrimeInfo //apple_ref/c/cl/kAudioConverterPrimeInfo //apple_ref/c/tdef/kAudioConverterPrimeInfo //apple_ref/c/tag/kAudioConverterPrimeInfo //apple_ref/c/econst/kAudioConverterPrimeInfo" target="_top"><font class="type">kAudioConverterPrimeInfo</font></a> = '<font class="char">prim</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterChannelMap" logicalPath="//apple_ref/c/cl/kAudioConverterChannelMap //apple_ref/c/cl/kAudioConverterChannelMap //apple_ref/c/tdef/kAudioConverterChannelMap //apple_ref/c/tag/kAudioConverterChannelMap //apple_ref/c/econst/kAudioConverterChannelMap" target="_top"><font class="type">kAudioConverterChannelMap</font></a> = '<font class="char">chmp</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterDecompressionMagicCookie" logicalPath="//apple_ref/c/cl/kAudioConverterDecompressionMagicCookie //apple_ref/c/cl/kAudioConverterDecompressionMagicCookie //apple_ref/c/tdef/kAudioConverterDecompressionMagicCookie //apple_ref/c/tag/kAudioConverterDecompressionMagicCookie //apple_ref/c/econst/kAudioConverterDecompressionMagicCookie" target="_top"><font class="type">kAudioConverterDecompressionMagicCookie</font></a> = '<font class="char">dmgc</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterCompressionMagicCookie" logicalPath="//apple_ref/c/cl/kAudioConverterCompressionMagicCookie //apple_ref/c/cl/kAudioConverterCompressionMagicCookie //apple_ref/c/tdef/kAudioConverterCompressionMagicCookie //apple_ref/c/tag/kAudioConverterCompressionMagicCookie //apple_ref/c/econst/kAudioConverterCompressionMagicCookie" target="_top"><font class="type">kAudioConverterCompressionMagicCookie</font></a> = '<font class="char">cmgc</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterEncodeBitRate" logicalPath="//apple_ref/c/cl/kAudioConverterEncodeBitRate //apple_ref/c/cl/kAudioConverterEncodeBitRate //apple_ref/c/tdef/kAudioConverterEncodeBitRate //apple_ref/c/tag/kAudioConverterEncodeBitRate //apple_ref/c/econst/kAudioConverterEncodeBitRate" target="_top"><font class="type">kAudioConverterEncodeBitRate</font></a> = '<font class="char">brat</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterEncodeAdjustableSampleRate" logicalPath="//apple_ref/c/cl/kAudioConverterEncodeAdjustableSampleRate //apple_ref/c/cl/kAudioConverterEncodeAdjustableSampleRate //apple_ref/c/tdef/kAudioConverterEncodeAdjustableSampleRate //apple_ref/c/tag/kAudioConverterEncodeAdjustableSampleRate //apple_ref/c/econst/kAudioConverterEncodeAdjustableSampleRate" target="_top"><font class="type">kAudioConverterEncodeAdjustableSampleRate</font></a> = '<font class="char">ajsr</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterInputChannelLayout" logicalPath="//apple_ref/c/cl/kAudioConverterInputChannelLayout //apple_ref/c/cl/kAudioConverterInputChannelLayout //apple_ref/c/tdef/kAudioConverterInputChannelLayout //apple_ref/c/tag/kAudioConverterInputChannelLayout //apple_ref/c/econst/kAudioConverterInputChannelLayout" target="_top"><font class="type">kAudioConverterInputChannelLayout</font></a> = '<font class="char">icl</font> ', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterOutputChannelLayout" logicalPath="//apple_ref/c/cl/kAudioConverterOutputChannelLayout //apple_ref/c/cl/kAudioConverterOutputChannelLayout //apple_ref/c/tdef/kAudioConverterOutputChannelLayout //apple_ref/c/tag/kAudioConverterOutputChannelLayout //apple_ref/c/econst/kAudioConverterOutputChannelLayout" target="_top"><font class="type">kAudioConverterOutputChannelLayout</font></a> = '<font class="char">ocl</font> ', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterApplicableEncodeBitRates" logicalPath="//apple_ref/c/cl/kAudioConverterApplicableEncodeBitRates //apple_ref/c/cl/kAudioConverterApplicableEncodeBitRates //apple_ref/c/tdef/kAudioConverterApplicableEncodeBitRates //apple_ref/c/tag/kAudioConverterApplicableEncodeBitRates //apple_ref/c/econst/kAudioConverterApplicableEncodeBitRates" target="_top"><font class="type">kAudioConverterApplicableEncodeBitRates</font></a> = '<font class="char">aebr</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterAvailableEncodeBitRates" logicalPath="//apple_ref/c/cl/kAudioConverterAvailableEncodeBitRates //apple_ref/c/cl/kAudioConverterAvailableEncodeBitRates //apple_ref/c/tdef/kAudioConverterAvailableEncodeBitRates //apple_ref/c/tag/kAudioConverterAvailableEncodeBitRates //apple_ref/c/econst/kAudioConverterAvailableEncodeBitRates" target="_top"><font class="type">kAudioConverterAvailableEncodeBitRates</font></a> = '<font class="char">vebr</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterApplicableEncodeSampleRates" logicalPath="//apple_ref/c/cl/kAudioConverterApplicableEncodeSampleRates //apple_ref/c/cl/kAudioConverterApplicableEncodeSampleRates //apple_ref/c/tdef/kAudioConverterApplicableEncodeSampleRates //apple_ref/c/tag/kAudioConverterApplicableEncodeSampleRates //apple_ref/c/econst/kAudioConverterApplicableEncodeSampleRates" target="_top"><font class="type">kAudioConverterApplicableEncodeSampleRates</font></a> = '<font class="char">aesr</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterAvailableEncodeSampleRates" logicalPath="//apple_ref/c/cl/kAudioConverterAvailableEncodeSampleRates //apple_ref/c/cl/kAudioConverterAvailableEncodeSampleRates //apple_ref/c/tdef/kAudioConverterAvailableEncodeSampleRates //apple_ref/c/tag/kAudioConverterAvailableEncodeSampleRates //apple_ref/c/econst/kAudioConverterAvailableEncodeSampleRates" target="_top"><font class="type">kAudioConverterAvailableEncodeSampleRates</font></a> = '<font class="char">vesr</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterAvailableEncodeChannelLayoutTags" logicalPath="//apple_ref/c/cl/kAudioConverterAvailableEncodeChannelLayoutTags //apple_ref/c/cl/kAudioConverterAvailableEncodeChannelLayoutTags //apple_ref/c/tdef/kAudioConverterAvailableEncodeChannelLayoutTags //apple_ref/c/tag/kAudioConverterAvailableEncodeChannelLayoutTags //apple_ref/c/econst/kAudioConverterAvailableEncodeChannelLayoutTags" target="_top"><font class="type">kAudioConverterAvailableEncodeChannelLayoutTags</font></a> = '<font class="char">aecl</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterCurrentOutputStreamDescription" logicalPath="//apple_ref/c/cl/kAudioConverterCurrentOutputStreamDescription //apple_ref/c/cl/kAudioConverterCurrentOutputStreamDescription //apple_ref/c/tdef/kAudioConverterCurrentOutputStreamDescription //apple_ref/c/tag/kAudioConverterCurrentOutputStreamDescription //apple_ref/c/econst/kAudioConverterCurrentOutputStreamDescription" target="_top"><font class="type">kAudioConverterCurrentOutputStreamDescription</font></a> = '<font class="char">acod</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterCurrentInputStreamDescription" logicalPath="//apple_ref/c/cl/kAudioConverterCurrentInputStreamDescription //apple_ref/c/cl/kAudioConverterCurrentInputStreamDescription //apple_ref/c/tdef/kAudioConverterCurrentInputStreamDescription //apple_ref/c/tag/kAudioConverterCurrentInputStreamDescription //apple_ref/c/econst/kAudioConverterCurrentInputStreamDescription" target="_top"><font class="type">kAudioConverterCurrentInputStreamDescription</font></a> = '<font class="char">acid</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertySettings" logicalPath="//apple_ref/c/cl/kAudioConverterPropertySettings //apple_ref/c/cl/kAudioConverterPropertySettings //apple_ref/c/tdef/kAudioConverterPropertySettings //apple_ref/c/tag/kAudioConverterPropertySettings //apple_ref/c/econst/kAudioConverterPropertySettings" target="_top"><font class="type">kAudioConverterPropertySettings</font></a> = '<font class="char">acps</font>', 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterPropertyBitDepthHint" logicalPath="//apple_ref/c/cl/kAudioConverterPropertyBitDepthHint //apple_ref/c/cl/kAudioConverterPropertyBitDepthHint //apple_ref/c/tdef/kAudioConverterPropertyBitDepthHint //apple_ref/c/tag/kAudioConverterPropertyBitDepthHint //apple_ref/c/econst/kAudioConverterPropertyBitDepthHint" target="_top"><font class="type">kAudioConverterPropertyBitDepthHint</font></a> = '<font class="char">acbd</font>' 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyMinimumInputBufferSize"><code>kAudioConverterPropertyMinimumInputBufferSize</code></a></dt>
+<dd>a UInt32 that indicates the size in bytes of the smallest buffer of input
+data that can be supplied via the AudioConverterInputProc or as the input to
+AudioConverterConvertBuffer</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyMinimumOutputBufferSize"><code>kAudioConverterPropertyMinimumOutputBufferSize</code></a></dt>
+<dd>a UInt32 that indicates the size in bytes of the smallest buffer of output
+data that can be supplied to AudioConverterFillBuffer or as the output to
+AudioConverterConvertBuffer</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyMaximumInputBufferSize"><code>kAudioConverterPropertyMaximumInputBufferSize</code></a></dt>
+<dd>a UInt32 that indicates the size in bytes of the largest buffer of input
+data that will be requested from the AudioConverterInputProc. This is mostly
+useful for variable bit rate compressed data. This will be equal to
+0xFFFFFFFF if the maximum value depends on what is requested from the
+output, which is usually the case for constant bit rate formats.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyMaximumInputPacketSize"><code>kAudioConverterPropertyMaximumInputPacketSize</code></a></dt>
+<dd>a UInt32 that indicates the size in bytes of the largest single packet of
+data in the input format. This is mostly useful for variable bit rate
+compressed data (decoders).</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyMaximumOutputPacketSize"><code>kAudioConverterPropertyMaximumOutputPacketSize</code></a></dt>
+<dd>a UInt32 that indicates the size in bytes of the largest single packet of
+data in the output format. This is mostly useful for variable bit rate
+compressed data (encoders).</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyCalculateInputBufferSize"><code>kAudioConverterPropertyCalculateInputBufferSize</code></a></dt>
+<dd>a UInt32 that on input holds a size in bytes that is desired for the output
+data. On output, it will hold the size in bytes of the input buffer required
+to generate that much output data. Note that some converters cannot do this
+calculation.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyCalculateOutputBufferSize"><code>kAudioConverterPropertyCalculateOutputBufferSize</code></a></dt>
+<dd>a UInt32 that on input holds a size in bytes that is desired for the input
+data. On output, it will hold the size in bytes of the output buffer
+required to hold the output data that will be generated. Note that some
+converters cannot do this calculation.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyInputCodecParameters"><code>kAudioConverterPropertyInputCodecParameters</code></a></dt>
+<dd>The value of this property varies from format to format and is considered
+private to the format. It is treated as a buffer of untyped data.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyOutputCodecParameters"><code>kAudioConverterPropertyOutputCodecParameters</code></a></dt>
+<dd>The value of this property varies from format to format and is considered
+private to the format. It is treated as a buffer of untyped data.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterSampleRateConverterAlgorithm"><code>kAudioConverterSampleRateConverterAlgorithm</code></a></dt>
+<dd>DEPRECATED: please use kAudioConverterSampleRateConverterQuality instead
+<br><br>
+An OSType that specifies the sample rate converter to use (as defined in
+AudioUnit/AudioUnitProperties.h -- for now only Apple SRC's can be used)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterSampleRateConverterQuality"><code>kAudioConverterSampleRateConverterQuality</code></a></dt>
+<dd>A UInt32 that specifies rendering quality of the sample rate converter (see
+enum constants below)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterCodecQuality"><code>kAudioConverterCodecQuality</code></a></dt>
+<dd>A UInt32 that specifies rendering quality of a codec (see enum constants
+below)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPrimeMethod"><code>kAudioConverterPrimeMethod</code></a></dt>
+<dd>a UInt32 specifying priming method (usually for sample-rate converter) see
+explanation for struct AudioConverterPrimeInfo below along with enum
+constants</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPrimeInfo"><code>kAudioConverterPrimeInfo</code></a></dt>
+<dd>A pointer to AudioConverterPrimeInfo (see explanation for struct
+AudioConverterPrimeInfo below)</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterChannelMap"><code>kAudioConverterChannelMap</code></a></dt>
+<dd>An array of SInt32's.  The size of the array is the number of output
+channels, and each element specifies which input channel's data is routed to
+that output channel (using a 0-based index of the input channels), or -1 if
+no input channel is to be routed to that output channel.  The default
+behavior is as follows. I = number of input channels, O = number of output
+channels. When I &gt; O, the first O inputs are routed to the first O outputs,
+and the remaining puts discarded.  When O &gt; I, the first I inputs are routed
+to the first O outputs, and the remaining outputs are zeroed.
+<br><br>
+A simple example for splitting mono input to stereo output (instead of routing
+the input to only the first output channel):
+<br><br><pre>
+   // this should be as large as the number of output channels:
+  SInt32 channelMap[2] = { 0, 0 };
+  AudioConverterSetProperty(theConverter, kAudioConverterChannelMap, 
+    sizeof(channelMap), channelMap);
+</pre>
+</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterDecompressionMagicCookie"><code>kAudioConverterDecompressionMagicCookie</code></a></dt>
+<dd>A void * pointing to memory set up by the caller. Required by some formats
+in order to decompress the input data.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterCompressionMagicCookie"><code>kAudioConverterCompressionMagicCookie</code></a></dt>
+<dd>A void * pointing to memory set up by the caller. Returned by the converter
+so that it may be stored along with the output data. It can then be passed
+back to the converter for decompression at a later time.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterEncodeBitRate"><code>kAudioConverterEncodeBitRate</code></a></dt>
+<dd>A UInt32 containing the number of bits per second to aim for when encoding
+data. This property is only relevant to encoders.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterEncodeAdjustableSampleRate"><code>kAudioConverterEncodeAdjustableSampleRate</code></a></dt>
+<dd>For encoders where the AudioConverter was created with an output sample rate
+of zero, and the codec can do rate conversion on its input, this provides a
+way to set the output sample rate. The property value is a Float64.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterInputChannelLayout"><code>kAudioConverterInputChannelLayout</code></a></dt>
+<dd>The property value is an AudioChannelLayout.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterOutputChannelLayout"><code>kAudioConverterOutputChannelLayout</code></a></dt>
+<dd>The property value is an AudioChannelLayout.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterApplicableEncodeBitRates"><code>kAudioConverterApplicableEncodeBitRates</code></a></dt>
+<dd>The property value is an array of AudioValueRange describing applicable bit
+rates based on current settings.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterAvailableEncodeBitRates"><code>kAudioConverterAvailableEncodeBitRates</code></a></dt>
+<dd>The property value is an array of AudioValueRange describing available bit
+rates based on the input format. You can get all available bit rates from
+the AudioFormat API.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterApplicableEncodeSampleRates"><code>kAudioConverterApplicableEncodeSampleRates</code></a></dt>
+<dd>The property value is an array of AudioValueRange describing applicable
+sample rates based on current settings.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterAvailableEncodeSampleRates"><code>kAudioConverterAvailableEncodeSampleRates</code></a></dt>
+<dd>The property value is an array of AudioValueRange describing available
+sample rates based on the input format. You can get all available sample
+rates from the AudioFormat API.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterAvailableEncodeChannelLayoutTags"><code>kAudioConverterAvailableEncodeChannelLayoutTags</code></a></dt>
+<dd>The property value is an array of AudioChannelLayoutTags for the format and
+number of channels specified in the input format going to the encoder.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterCurrentOutputStreamDescription"><code>kAudioConverterCurrentOutputStreamDescription</code></a></dt>
+<dd>Returns the current completely specified output AudioStreamBasicDescription.
+For example when encoding to AAC, your original output stream description
+will not have been completely filled out.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterCurrentInputStreamDescription"><code>kAudioConverterCurrentInputStreamDescription</code></a></dt>
+<dd>Returns the current completely specified input AudioStreamBasicDescription.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertySettings"><code>kAudioConverterPropertySettings</code></a></dt>
+<dd>Returns the a CFArray of property settings for converters.</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterPropertyBitDepthHint"><code>kAudioConverterPropertyBitDepthHint</code></a></dt>
+<dd>A UInt32 of the source bit depth to preserve. This is a hint to some
+encoders like lossless about how many bits to preserve in the input. The
+converter usually tries to preserve as many as possible, but a lossless
+encoder will do poorly if more bits are supplied than are desired in the
+output.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/Quality%32constants;  name=Qualityconstants --><a name="//apple_ref/c/tag/Quality%32constants"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="Quality%32constants">Quality constants</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Constants to be used with kAudioConverterSampleRateConverterQuality.</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterQuality_Max" logicalPath="//apple_ref/c/cl/kAudioConverterQuality_Max //apple_ref/c/cl/kAudioConverterQuality_Max //apple_ref/c/tdef/kAudioConverterQuality_Max //apple_ref/c/tag/kAudioConverterQuality_Max //apple_ref/c/econst/kAudioConverterQuality_Max" target="_top"><font class="type">kAudioConverterQuality_Max</font></a> = <font class="var">0x7F</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterQuality_High" logicalPath="//apple_ref/c/cl/kAudioConverterQuality_High //apple_ref/c/cl/kAudioConverterQuality_High //apple_ref/c/tdef/kAudioConverterQuality_High //apple_ref/c/tag/kAudioConverterQuality_High //apple_ref/c/econst/kAudioConverterQuality_High" target="_top"><font class="type">kAudioConverterQuality_High</font></a> = <font class="number">0x60</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterQuality_Medium" logicalPath="//apple_ref/c/cl/kAudioConverterQuality_Medium //apple_ref/c/cl/kAudioConverterQuality_Medium //apple_ref/c/tdef/kAudioConverterQuality_Medium //apple_ref/c/tag/kAudioConverterQuality_Medium //apple_ref/c/econst/kAudioConverterQuality_Medium" target="_top"><font class="type">kAudioConverterQuality_Medium</font></a> = <font class="number">0x40</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterQuality_Low" logicalPath="//apple_ref/c/cl/kAudioConverterQuality_Low //apple_ref/c/cl/kAudioConverterQuality_Low //apple_ref/c/tdef/kAudioConverterQuality_Low //apple_ref/c/tag/kAudioConverterQuality_Low //apple_ref/c/econst/kAudioConverterQuality_Low" target="_top"><font class="type">kAudioConverterQuality_Low</font></a> = <font class="number">0x20</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioConverterQuality_Min" logicalPath="//apple_ref/c/cl/kAudioConverterQuality_Min //apple_ref/c/cl/kAudioConverterQuality_Min //apple_ref/c/tdef/kAudioConverterQuality_Min //apple_ref/c/tag/kAudioConverterQuality_Min //apple_ref/c/econst/kAudioConverterQuality_Min" target="_top"><font class="type">kAudioConverterQuality_Min</font></a> = <font class="number">0</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioConverterQuality_Max"><code>kAudioConverterQuality_Max</code></a></dt>
+<dd>maximum quality</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterQuality_High"><code>kAudioConverterQuality_High</code></a></dt>
+<dd>high quality</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterQuality_Medium"><code>kAudioConverterQuality_Medium</code></a></dt>
+<dd>medium quality</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterQuality_Low"><code>kAudioConverterQuality_Low</code></a></dt>
+<dd>low quality</dd>
+<dt><a name="//apple_ref/c/econst/kAudioConverterQuality_Min"><code>kAudioConverterQuality_Min</code></a></dt>
+<dd>minimum quality</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/Prime%32method%32constants;  name=Primemethodconstants --><a name="//apple_ref/c/tag/Prime%32method%32constants"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="Prime%32method%32constants">Prime method constants</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Constants to be used with kAudioConverterPrimeMethod.</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kConverterPrimeMethod_Pre" logicalPath="//apple_ref/c/cl/kConverterPrimeMethod_Pre //apple_ref/c/cl/kConverterPrimeMethod_Pre //apple_ref/c/tdef/kConverterPrimeMethod_Pre //apple_ref/c/tag/kConverterPrimeMethod_Pre //apple_ref/c/econst/kConverterPrimeMethod_Pre" target="_top"><font class="type">kConverterPrimeMethod_Pre</font></a> = <font class="number">0</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kConverterPrimeMethod_Normal" logicalPath="//apple_ref/c/cl/kConverterPrimeMethod_Normal //apple_ref/c/cl/kConverterPrimeMethod_Normal //apple_ref/c/tdef/kConverterPrimeMethod_Normal //apple_ref/c/tag/kConverterPrimeMethod_Normal //apple_ref/c/econst/kConverterPrimeMethod_Normal" target="_top"><font class="type">kConverterPrimeMethod_Normal</font></a> = <font class="number">1</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/econst/kConverterPrimeMethod_None" logicalPath="//apple_ref/c/cl/kConverterPrimeMethod_None //apple_ref/c/cl/kConverterPrimeMethod_None //apple_ref/c/tdef/kConverterPrimeMethod_None //apple_ref/c/tag/kConverterPrimeMethod_None //apple_ref/c/econst/kConverterPrimeMethod_None" target="_top"><font class="type">kConverterPrimeMethod_None</font></a> = <font class="number">2</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><a name="//apple_ref/c/econst/kConverterPrimeMethod_Pre"><code>kConverterPrimeMethod_Pre</code></a></dt>
+<dd>Primes with leading + trailing input frames.</dd>
+<dt><a name="//apple_ref/c/econst/kConverterPrimeMethod_Normal"><code>kConverterPrimeMethod_Normal</code></a></dt>
+<dd>Only primes with trailing (zero latency). Leading frames are assumed to be
+silence.</dd>
+<dt><a name="//apple_ref/c/econst/kConverterPrimeMethod_None"><code>kConverterPrimeMethod_None</code></a></dt>
+<dd>Acts in "latency" mode. Both leading and trailing frames assumed to be
+silence.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

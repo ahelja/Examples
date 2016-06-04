@@ -1,0 +1,22 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                agreementAccepted = id; 
+                changeTransparency = id; 
+                hideWarningWindow = id; 
+                okClicked = id; 
+                showWarningWindow = id; 
+            }; 
+            CLASS = BannerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {messageText = NSTextView; okButton = NSButton; warningWindow = NSWindow; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = BannerCustomView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = BannerCustomWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = TransparentView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

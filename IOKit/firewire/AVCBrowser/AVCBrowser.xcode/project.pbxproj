@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D8045EB05E6BCE5000E0A54 /* DevicesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C847FDB0163A53F04CE206D /* DevicesController.h */; };
+		4D8045EC05E6BCE5000E0A54 /* AVCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7798A30163AFE904CE206D /* AVCDevice.h */; };
+		4D8045ED05E6BCE5000E0A54 /* PlugBrowserController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7798B10163EDB604CE206D /* PlugBrowserController.h */; };
+		4D8045EE05E6BCE5000E0A54 /* Plug.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7798B70163F4EE04CE206D /* Plug.h */; };
+		4D8045EF05E6BCE5000E0A54 /* AVCBrowserGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2FF6E801A1B99904CE206E /* AVCBrowserGlobals.h */; };
+		4D8045F105E6BCE5000E0A54 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97319FDCFA39411CA2CEA /* MainMenu.nib */; };
+		4D8045F205E6BCE5000E0A54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165DFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		4D8045F305E6BCE5000E0A54 /* PlugBrowser.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7798B50163EF6804CE206D /* PlugBrowser.nib */; };
+		4D8045F405E6BCE5000E0A54 /* About AVCBrowser.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2ED65037C744700CE20D6 /* About AVCBrowser.rtf */; };
+		4D8045F605E6BCE5000E0A54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4D8045F705E6BCE5000E0A54 /* DevicesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C847FDC0163A53F04CE206D /* DevicesController.mm */; };
+		4D8045F805E6BCE5000E0A54 /* AVCDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C7798A40163AFE904CE206D /* AVCDevice.mm */; };
+		4D8045F905E6BCE5000E0A54 /* PlugBrowserController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C7798B20163EDB604CE206D /* PlugBrowserController.mm */; };
+		4D8045FA05E6BCE5000E0A54 /* Plug.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C7798B80163F4EE04CE206D /* Plug.mm */; };
+		4D8045FC05E6BCE5000E0A54 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4D8045FD05E6BCE5000E0A54 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7798AA0163B22F04CE206D /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.3;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				VERSIONING_SYSTEM = "apple-generic";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4D8045FF05E6BCE5000E0A54 /* Info-AVCBrowser.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-AVCBrowser.plist"; sourceTree = "<group>"; };
+		4D80460005E6BCE5000E0A54 /* AVCBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA2ED65037C744700CE20D6 /* About AVCBrowser.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About AVCBrowser.rtf"; sourceTree = "<group>"; };
+		8C2FF6E801A1B99904CE206E /* AVCBrowserGlobals.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AVCBrowserGlobals.h; sourceTree = "<group>"; };
+		8C7798A30163AFE904CE206D /* AVCDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AVCDevice.h; sourceTree = "<group>"; };
+		8C7798A40163AFE904CE206D /* AVCDevice.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCDevice.mm; sourceTree = "<group>"; };
+		8C7798AA0163B22F04CE206D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		8C7798B10163EDB604CE206D /* PlugBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PlugBrowserController.h; sourceTree = "<group>"; };
+		8C7798B20163EDB604CE206D /* PlugBrowserController.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = PlugBrowserController.mm; sourceTree = "<group>"; };
+		8C7798B50163EF6804CE206D /* PlugBrowser.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PlugBrowser.nib; sourceTree = "<group>"; };
+		8C7798B70163F4EE04CE206D /* Plug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Plug.h; sourceTree = "<group>"; };
+		8C7798B80163F4EE04CE206D /* Plug.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = Plug.mm; sourceTree = "<group>"; };
+		8C847FDB0163A53F04CE206D /* DevicesController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DevicesController.h; sourceTree = "<group>"; };
+		8C847FDC0163A53F04CE206D /* DevicesController.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = DevicesController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D8045FB05E6BCE5000E0A54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8045FC05E6BCE5000E0A54 /* Cocoa.framework in Frameworks */,
+				4D8045FD05E6BCE5000E0A54 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C847FDB0163A53F04CE206D /* DevicesController.h */,
+				8C847FDC0163A53F04CE206D /* DevicesController.mm */,
+				8C7798A30163AFE904CE206D /* AVCDevice.h */,
+				8C7798A40163AFE904CE206D /* AVCDevice.mm */,
+				8C7798B10163EDB604CE206D /* PlugBrowserController.h */,
+				8C7798B20163EDB604CE206D /* PlugBrowserController.mm */,
+				8C7798B70163F4EE04CE206D /* Plug.h */,
+				8C7798B80163F4EE04CE206D /* Plug.mm */,
+				8C2FF6E801A1B99904CE206E /* AVCBrowserGlobals.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C7798AA0163B22F04CE206D /* IOKit.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D80460005E6BCE5000E0A54 /* AVCBrowser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AVCBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				4DA2ED65037C744700CE20D6 /* About AVCBrowser.rtf */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4D8045FF05E6BCE5000E0A54 /* Info-AVCBrowser.plist */,
+			);
+			name = AVCBrowser;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C7798B50163EF6804CE206D /* PlugBrowser.nib */,
+				29B97319FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165DFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D8045EA05E6BCE5000E0A54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8045EB05E6BCE5000E0A54 /* DevicesController.h in Headers */,
+				4D8045EC05E6BCE5000E0A54 /* AVCDevice.h in Headers */,
+				4D8045ED05E6BCE5000E0A54 /* PlugBrowserController.h in Headers */,
+				4D8045EE05E6BCE5000E0A54 /* Plug.h in Headers */,
+				4D8045EF05E6BCE5000E0A54 /* AVCBrowserGlobals.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D8045E905E6BCE5000E0A54 /* AVCBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A174B65708FC288800259717 /* Build configuration list for PBXNativeTarget "AVCBrowser" */;
+			buildPhases = (
+				4D8045EA05E6BCE5000E0A54 /* Headers */,
+				4D8045F005E6BCE5000E0A54 /* Resources */,
+				4D8045F505E6BCE5000E0A54 /* Sources */,
+				4D8045FB05E6BCE5000E0A54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-AVCBrowser.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire/;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = AVCBrowser;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = AVCBrowser;
+			productInstallPath = /Developer/Applications/FireWire/;
+			productName = AVCBrowser;
+			productReference = 4D80460005E6BCE5000E0A54 /* AVCBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A174B65B08FC288800259717 /* Build configuration list for PBXProject "AVCBrowser" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AVCBrowser */;
+			projectDirPath = "";
+			targets = (
+				4D8045E905E6BCE5000E0A54 /* AVCBrowser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D8045F005E6BCE5000E0A54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8045F105E6BCE5000E0A54 /* MainMenu.nib in Resources */,
+				4D8045F205E6BCE5000E0A54 /* InfoPlist.strings in Resources */,
+				4D8045F305E6BCE5000E0A54 /* PlugBrowser.nib in Resources */,
+				4D8045F405E6BCE5000E0A54 /* About AVCBrowser.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D8045F505E6BCE5000E0A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8045F605E6BCE5000E0A54 /* main.m in Sources */,
+				4D8045F705E6BCE5000E0A54 /* DevicesController.mm in Sources */,
+				4D8045F805E6BCE5000E0A54 /* AVCDevice.mm in Sources */,
+				4D8045F905E6BCE5000E0A54 /* PlugBrowserController.mm in Sources */,
+				4D8045FA05E6BCE5000E0A54 /* Plug.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A174B65808FC288800259717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-AVCBrowser.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire/;
+				PRODUCT_NAME = AVCBrowser;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		A174B65908FC288800259717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-AVCBrowser.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire/;
+				PRODUCT_NAME = AVCBrowser;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A174B65C08FC288800259717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		A174B65D08FC288800259717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A174B65708FC288800259717 /* Build configuration list for PBXNativeTarget "AVCBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A174B65808FC288800259717 /* Debug */,
+				A174B65908FC288800259717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A174B65B08FC288800259717 /* Build configuration list for PBXProject "AVCBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A174B65C08FC288800259717 /* Debug */,
+				A174B65D08FC288800259717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

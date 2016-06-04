@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3304D2580801EB4000C65116 /* TArray.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D23F0801EB4000C65116 /* TArray.cp */; };
+		3304D2590801EB4000C65116 /* TBag.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2410801EB4000C65116 /* TBag.cp */; };
+		3304D25B0801EB4000C65116 /* TCFType.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2460801EB4000C65116 /* TCFType.cp */; };
+		3304D25C0801EB4000C65116 /* TData.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2480801EB4000C65116 /* TData.cp */; };
+		3304D25D0801EB4000C65116 /* TDictionary.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D24A0801EB4000C65116 /* TDictionary.cp */; };
+		3304D25E0801EB4000C65116 /* TNumber.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D24C0801EB4000C65116 /* TNumber.cp */; };
+		3304D2600801EB4000C65116 /* TSet.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2500801EB4000C65116 /* TSet.cp */; };
+		3304D2620801EB4000C65116 /* TString.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2540801EB4000C65116 /* TString.cp */; };
+		3304D2630801EB4000C65116 /* TType.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2560801EB4000C65116 /* TType.cp */; };
+		3304D2760801EBB800C65116 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3304D26B0801EBB800C65116 /* README.rtf */; };
+		3304D2770801EBB800C65116 /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D26C0801EBB800C65116 /* TCarbonEvent.cp */; };
+		3304D2780801EBB800C65116 /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D26E0801EBB800C65116 /* TEventHandler.cp */; };
+		3304D2790801EBB800C65116 /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2700801EBB800C65116 /* TObject.cp */; };
+		3304D27A0801EBB800C65116 /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2720801EBB800C65116 /* TRect.cp */; };
+		3304D27B0801EBB800C65116 /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3304D2740801EBB800C65116 /* TView.cp */; };
+		33402D5D08045ED80055AB5B /* TURL.cp in Sources */ = {isa = PBXBuildFile; fileRef = 33402D5B08045ED80055AB5B /* TURL.cp */; };
+		8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		8D0C4E8E0486CD37000505A6 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		8D0C4E900486CD37000505A6 /* main.cp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* main.cp */; settings = {ATTRIBUTES = (); }; };
+		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* main.cp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cp; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		32DBCF6D0370B57F00C91783 /* HIFrameworkTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFrameworkTest_Prefix.pch; sourceTree = "<group>"; };
+		3304D2360801EB1D00C65116 /* CFArrayMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFArrayMethods.h; path = ../Methods/CFArrayMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D2370801EB1D00C65116 /* CFBagMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFBagMethods.h; path = ../Methods/CFBagMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D2380801EB1D00C65116 /* CFDataMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFDataMethods.h; path = ../Methods/CFDataMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D2390801EB1D00C65116 /* CFDictionaryMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFDictionaryMethods.h; path = ../Methods/CFDictionaryMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D23A0801EB1D00C65116 /* CFNumberMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFNumberMethods.h; path = ../Methods/CFNumberMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D23B0801EB1D00C65116 /* CFSetMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFSetMethods.h; path = ../Methods/CFSetMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D23C0801EB1D00C65116 /* CFStringMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFStringMethods.h; path = ../Methods/CFStringMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D23D0801EB1D00C65116 /* CFTypeMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CFTypeMethods.h; path = ../Methods/CFTypeMethods.h; sourceTree = SOURCE_ROOT; };
+		3304D23F0801EB4000C65116 /* TArray.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TArray.cp; path = ../Foundation/TArray.cp; sourceTree = SOURCE_ROOT; };
+		3304D2400801EB4000C65116 /* TArray.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TArray.h; path = ../Foundation/TArray.h; sourceTree = SOURCE_ROOT; };
+		3304D2410801EB4000C65116 /* TBag.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TBag.cp; path = ../Foundation/TBag.cp; sourceTree = SOURCE_ROOT; };
+		3304D2420801EB4000C65116 /* TBag.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TBag.h; path = ../Foundation/TBag.h; sourceTree = SOURCE_ROOT; };
+		3304D2430801EB4000C65116 /* TBase.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TBase.h; path = ../Foundation/TBase.h; sourceTree = SOURCE_ROOT; };
+		3304D2460801EB4000C65116 /* TCFType.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCFType.cp; path = ../Foundation/TCFType.cp; sourceTree = SOURCE_ROOT; };
+		3304D2470801EB4000C65116 /* TCFType.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCFType.h; path = ../Foundation/TCFType.h; sourceTree = SOURCE_ROOT; };
+		3304D2480801EB4000C65116 /* TData.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TData.cp; path = ../Foundation/TData.cp; sourceTree = SOURCE_ROOT; };
+		3304D2490801EB4000C65116 /* TData.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TData.h; path = ../Foundation/TData.h; sourceTree = SOURCE_ROOT; };
+		3304D24A0801EB4000C65116 /* TDictionary.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TDictionary.cp; path = ../Foundation/TDictionary.cp; sourceTree = SOURCE_ROOT; };
+		3304D24B0801EB4000C65116 /* TDictionary.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TDictionary.h; path = ../Foundation/TDictionary.h; sourceTree = SOURCE_ROOT; };
+		3304D24C0801EB4000C65116 /* TNumber.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TNumber.cp; path = ../Foundation/TNumber.cp; sourceTree = SOURCE_ROOT; };
+		3304D24D0801EB4000C65116 /* TNumber.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TNumber.h; path = ../Foundation/TNumber.h; sourceTree = SOURCE_ROOT; };
+		3304D2500801EB4000C65116 /* TSet.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TSet.cp; path = ../Foundation/TSet.cp; sourceTree = SOURCE_ROOT; };
+		3304D2510801EB4000C65116 /* TSet.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TSet.h; path = ../Foundation/TSet.h; sourceTree = SOURCE_ROOT; };
+		3304D2540801EB4000C65116 /* TString.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TString.cp; path = ../Foundation/TString.cp; sourceTree = SOURCE_ROOT; };
+		3304D2550801EB4000C65116 /* TString.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TString.h; path = ../Foundation/TString.h; sourceTree = SOURCE_ROOT; };
+		3304D2560801EB4000C65116 /* TType.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TType.cp; path = ../Foundation/TType.cp; sourceTree = SOURCE_ROOT; };
+		3304D2570801EB4000C65116 /* TType.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TType.h; path = ../Foundation/TType.h; sourceTree = SOURCE_ROOT; };
+		3304D26A0801EBB800C65116 /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HIFramework.h; path = ../HIFramework.h; sourceTree = SOURCE_ROOT; };
+		3304D26B0801EBB800C65116 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = README.rtf; path = ../README.rtf; sourceTree = SOURCE_ROOT; };
+		3304D26C0801EBB800C65116 /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCarbonEvent.cp; path = ../TCarbonEvent.cp; sourceTree = SOURCE_ROOT; };
+		3304D26D0801EBB800C65116 /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCarbonEvent.h; path = ../TCarbonEvent.h; sourceTree = SOURCE_ROOT; };
+		3304D26E0801EBB800C65116 /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TEventHandler.cp; path = ../TEventHandler.cp; sourceTree = SOURCE_ROOT; };
+		3304D26F0801EBB800C65116 /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TEventHandler.h; path = ../TEventHandler.h; sourceTree = SOURCE_ROOT; };
+		3304D2700801EBB800C65116 /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TObject.cp; path = ../TObject.cp; sourceTree = SOURCE_ROOT; };
+		3304D2710801EBB800C65116 /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TObject.h; path = ../TObject.h; sourceTree = SOURCE_ROOT; };
+		3304D2720801EBB800C65116 /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TRect.cp; path = ../TRect.cp; sourceTree = SOURCE_ROOT; };
+		3304D2730801EBB800C65116 /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TRect.h; path = ../TRect.h; sourceTree = SOURCE_ROOT; };
+		3304D2740801EBB800C65116 /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TView.cp; path = ../TView.cp; sourceTree = SOURCE_ROOT; };
+		3304D2750801EBB800C65116 /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TView.h; path = ../TView.h; sourceTree = SOURCE_ROOT; };
+		33402D5A08045EC80055AB5B /* CFURLMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CFURLMethods.h; sourceTree = "<group>"; };
+		33402D5B08045ED80055AB5B /* TURL.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TURL.cp; sourceTree = "<group>"; };
+		33402D5C08045ED80055AB5B /* TURL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TURL.h; sourceTree = "<group>"; };
+		33402D77080460040055AB5B /* CFMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CFMethods.h; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D0C4E970486CD37000505A6 /* HIFrameworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIFrameworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D0C4E910486CD37000505A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E970486CD37000505A6 /* HIFrameworkTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* HIFrameworkTest */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = HIFrameworkTest;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF6D0370B57F00C91783 /* HIFrameworkTest_Prefix.pch */,
+				20286C2BFDCF999611CA2CEA /* main.cp */,
+				3304D2690801EB8700C65116 /* HIFramework */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E960486CD37000505A6 /* Info.plist */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		3304D2350801EB1D00C65116 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				33402D77080460040055AB5B /* CFMethods.h */,
+				3304D2360801EB1D00C65116 /* CFArrayMethods.h */,
+				3304D2370801EB1D00C65116 /* CFBagMethods.h */,
+				3304D2380801EB1D00C65116 /* CFDataMethods.h */,
+				3304D2390801EB1D00C65116 /* CFDictionaryMethods.h */,
+				3304D23A0801EB1D00C65116 /* CFNumberMethods.h */,
+				3304D23B0801EB1D00C65116 /* CFSetMethods.h */,
+				3304D23C0801EB1D00C65116 /* CFStringMethods.h */,
+				3304D23D0801EB1D00C65116 /* CFTypeMethods.h */,
+				33402D5A08045EC80055AB5B /* CFURLMethods.h */,
+			);
+			name = Methods;
+			path = ../Methods;
+			sourceTree = SOURCE_ROOT;
+		};
+		3304D23E0801EB4000C65116 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				3304D23F0801EB4000C65116 /* TArray.cp */,
+				3304D2400801EB4000C65116 /* TArray.h */,
+				3304D2410801EB4000C65116 /* TBag.cp */,
+				3304D2420801EB4000C65116 /* TBag.h */,
+				3304D2430801EB4000C65116 /* TBase.h */,
+				3304D2460801EB4000C65116 /* TCFType.cp */,
+				3304D2470801EB4000C65116 /* TCFType.h */,
+				3304D2480801EB4000C65116 /* TData.cp */,
+				3304D2490801EB4000C65116 /* TData.h */,
+				3304D24A0801EB4000C65116 /* TDictionary.cp */,
+				3304D24B0801EB4000C65116 /* TDictionary.h */,
+				3304D24C0801EB4000C65116 /* TNumber.cp */,
+				3304D24D0801EB4000C65116 /* TNumber.h */,
+				3304D2500801EB4000C65116 /* TSet.cp */,
+				3304D2510801EB4000C65116 /* TSet.h */,
+				3304D2540801EB4000C65116 /* TString.cp */,
+				3304D2550801EB4000C65116 /* TString.h */,
+				3304D2560801EB4000C65116 /* TType.cp */,
+				3304D2570801EB4000C65116 /* TType.h */,
+				33402D5B08045ED80055AB5B /* TURL.cp */,
+				33402D5C08045ED80055AB5B /* TURL.h */,
+			);
+			name = Foundation;
+			path = ../Foundation;
+			sourceTree = SOURCE_ROOT;
+		};
+		3304D2690801EB8700C65116 /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				3304D26B0801EBB800C65116 /* README.rtf */,
+				3304D26A0801EBB800C65116 /* HIFramework.h */,
+				3304D26C0801EBB800C65116 /* TCarbonEvent.cp */,
+				3304D26D0801EBB800C65116 /* TCarbonEvent.h */,
+				3304D26E0801EBB800C65116 /* TEventHandler.cp */,
+				3304D26F0801EBB800C65116 /* TEventHandler.h */,
+				3304D2700801EBB800C65116 /* TObject.cp */,
+				3304D2710801EBB800C65116 /* TObject.h */,
+				3304D2720801EBB800C65116 /* TRect.cp */,
+				3304D2730801EBB800C65116 /* TRect.h */,
+				3304D2740801EBB800C65116 /* TView.cp */,
+				3304D2750801EBB800C65116 /* TView.h */,
+				3304D23E0801EB4000C65116 /* Foundation */,
+				3304D2350801EB1D00C65116 /* Methods */,
+			);
+			name = HIFramework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D0C4E890486CD37000505A6 /* HIFrameworkTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F979DED08A956A70048B06E /* Build configuration list for PBXNativeTarget "HIFrameworkTest" */;
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6 /* Resources */,
+				8D0C4E8F0486CD37000505A6 /* Sources */,
+				8D0C4E910486CD37000505A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HIFrameworkTest_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = HIFrameworkTest;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = HIFrameworkTest;
+			productInstallPath = "$(HOME)/Applications";
+			productName = HIFrameworkTest;
+			productReference = 8D0C4E970486CD37000505A6 /* HIFrameworkTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F979DF108A956A70048B06E /* Build configuration list for PBXProject "HIFrameworkTest" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* HIFrameworkTest */;
+			projectDirPath = "";
+			targets = (
+				8D0C4E890486CD37000505A6 /* HIFrameworkTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D0C4E8C0486CD37000505A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */,
+				8D0C4E8E0486CD37000505A6 /* main.nib in Resources */,
+				3304D2760801EBB800C65116 /* README.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D0C4E8F0486CD37000505A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E900486CD37000505A6 /* main.cp in Sources */,
+				3304D2580801EB4000C65116 /* TArray.cp in Sources */,
+				3304D2590801EB4000C65116 /* TBag.cp in Sources */,
+				3304D25B0801EB4000C65116 /* TCFType.cp in Sources */,
+				3304D25C0801EB4000C65116 /* TData.cp in Sources */,
+				3304D25D0801EB4000C65116 /* TDictionary.cp in Sources */,
+				3304D25E0801EB4000C65116 /* TNumber.cp in Sources */,
+				3304D2600801EB4000C65116 /* TSet.cp in Sources */,
+				3304D2620801EB4000C65116 /* TString.cp in Sources */,
+				3304D2630801EB4000C65116 /* TType.cp in Sources */,
+				3304D2770801EBB800C65116 /* TCarbonEvent.cp in Sources */,
+				3304D2780801EBB800C65116 /* TEventHandler.cp in Sources */,
+				3304D2790801EBB800C65116 /* TObject.cp in Sources */,
+				3304D27A0801EBB800C65116 /* TRect.cp in Sources */,
+				3304D27B0801EBB800C65116 /* TView.cp in Sources */,
+				33402D5D08045ED80055AB5B /* TURL.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F979DEE08A956A70048B06E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HIFrameworkTest_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = HIFrameworkTest;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F979DEF08A956A70048B06E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HIFrameworkTest_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = HIFrameworkTest;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F979DF208A956A70048B06E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F979DF308A956A70048B06E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F979DED08A956A70048B06E /* Build configuration list for PBXNativeTarget "HIFrameworkTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F979DEE08A956A70048B06E /* Debug */,
+				4F979DEF08A956A70048B06E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F979DF108A956A70048B06E /* Build configuration list for PBXProject "HIFrameworkTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F979DF208A956A70048B06E /* Debug */,
+				4F979DF308A956A70048B06E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {goBack = id; goForward = id; outlineViewItemClicked = id; }; 
+            CLASS = Document; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                backButton = id; 
+                fileDataSource = id; 
+                forwardButton = id; 
+                outlineView = id; 
+                progressIndicator = id; 
+                statusText = id; 
+                webView = id; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }, 
+        {CLASS = WebView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

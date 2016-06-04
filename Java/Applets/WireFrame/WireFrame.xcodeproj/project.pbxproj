@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5277285038346BC0198521B /* Matrix3D.java in Sources */ = {isa = PBXBuildFile; fileRef = F527727F038346BC0198521B /* Matrix3D.java */; };
+		F5277286038346BC0198521B /* ThreeD.java in Sources */ = {isa = PBXBuildFile; fileRef = F5277280038346BC0198521B /* ThreeD.java */; };
+		F5277295038347250198521B /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5277288038346D60198521B /* example1.html */; };
+		F5277296038347250198521B /* example2.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527727C038346BC0198521B /* example2.html */; };
+		F5277297038347250198521B /* example3.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527727D038346BC0198521B /* example3.html */; };
+		F5277298038347250198521B /* example4.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527727E038346BC0198521B /* example4.html */; };
+		F527729A038347400198521B /* cube.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527728B038346E30198521B /* cube.obj */; };
+		F527729B038347400198521B /* dinasaur.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527728C038346E30198521B /* dinasaur.obj */; };
+		F527729C038347400198521B /* hughes_500.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527728D038346E30198521B /* hughes_500.obj */; };
+		F527729D038347400198521B /* knoxS.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = F527728E038346E30198521B /* knoxS.obj */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = WireFrame;
+			dstSubfolderSpec = 16;
+			files = (
+				F5277295038347250198521B /* example1.html in CopyFiles */,
+				F5277296038347250198521B /* example2.html in CopyFiles */,
+				F5277297038347250198521B /* example3.html in CopyFiles */,
+				F5277298038347250198521B /* example4.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52772990383472D0198521B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = WireFrame/models;
+			dstSubfolderSpec = 16;
+			files = (
+				F527729A038347400198521B /* cube.obj in CopyFiles */,
+				F527729B038347400198521B /* dinasaur.obj in CopyFiles */,
+				F527729C038347400198521B /* hughes_500.obj in CopyFiles */,
+				F527729D038347400198521B /* knoxS.obj in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F527727C038346BC0198521B /* example2.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example2.html; sourceTree = "<group>"; };
+		F527727D038346BC0198521B /* example3.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example3.html; sourceTree = "<group>"; };
+		F527727E038346BC0198521B /* example4.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example4.html; sourceTree = "<group>"; };
+		F527727F038346BC0198521B /* Matrix3D.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Matrix3D.java; sourceTree = "<group>"; };
+		F5277280038346BC0198521B /* ThreeD.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ThreeD.java; sourceTree = "<group>"; };
+		F5277288038346D60198521B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F527728B038346E30198521B /* cube.obj */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
+		F527728C038346E30198521B /* dinasaur.obj */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinasaur.obj; sourceTree = "<group>"; };
+		F527728D038346E30198521B /* hughes_500.obj */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = hughes_500.obj; sourceTree = "<group>"; };
+		F527728E038346E30198521B /* knoxS.obj */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = knoxS.obj; sourceTree = "<group>"; };
+		F52772AF038347B00198521B /* WireFrame */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = WireFrame; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				F527727F038346BC0198521B /* Matrix3D.java */,
+				F5277280038346BC0198521B /* ThreeD.java */,
+				F5277288038346D60198521B /* example1.html */,
+				F527727C038346BC0198521B /* example2.html */,
+				F527727D038346BC0198521B /* example3.html */,
+				F527727E038346BC0198521B /* example4.html */,
+				F527728A038346E30198521B /* models */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F52772AF038347B00198521B /* WireFrame */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F527728A038346E30198521B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F527728B038346E30198521B /* cube.obj */,
+				F527728C038346E30198521B /* dinasaur.obj */,
+				F527728D038346E30198521B /* hughes_500.obj */,
+				F527728E038346E30198521B /* knoxS.obj */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23434608DF2E97008B0BD4 /* Build configuration list for PBXProject "WireFrame" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* WireFrame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5277285038346BC0198521B /* Matrix3D.java in Sources */,
+				F5277286038346BC0198521B /* ThreeD.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* WireFrame */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23434208DF2E97008B0BD4 /* Build configuration list for PBXToolTarget "WireFrame" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F52772990383472D0198521B /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = WireFrame;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = WireFrame;
+			productInstallPath = /Developer/Examples/Java/Applets;
+			productName = JavaAWTApplet;
+			productReference = F52772AF038347B00198521B /* WireFrame */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23434308DF2E97008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = WireFrame;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23434408DF2E97008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = WireFrame;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23434708DF2E97008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23434808DF2E97008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23434208DF2E97008B0BD4 /* Build configuration list for PBXToolTarget "WireFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23434308DF2E97008B0BD4 /* Debug */,
+				4C23434408DF2E97008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23434608DF2E97008B0BD4 /* Build configuration list for PBXProject "WireFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23434708DF2E97008B0BD4 /* Debug */,
+				4C23434808DF2E97008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

@@ -1,0 +1,1560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1>
+<br><a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIClientCreate" target="doc">MIDIClientCreate</a></tt></dt>
+<dd>Creates a MIDIClient object.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIClientDispose" target="doc">MIDIClientDispose</a></tt></dt>
+<dd>Disposes a MIDIClient object.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIInputPortCreate" target="doc">MIDIInputPortCreate</a></tt></dt>
+<dd>Creates an input port through which the client may receive
+incoming MIDI messages from any MIDI source.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIOutputPortCreate" target="doc">MIDIOutputPortCreate</a></tt></dt>
+<dd>Creates an output port through which the client may send
+outgoing MIDI messages to any MIDI destination.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIPortDispose" target="doc">MIDIPortDispose</a></tt></dt>
+<dd>Disposes a MIDIPort object.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIPortConnectSource" target="doc">MIDIPortConnectSource</a></tt></dt>
+<dd>Establishes a connection from a source to a client's input port.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIPortDisconnectSource" target="doc">MIDIPortDisconnectSource</a></tt></dt>
+<dd>Closes a previously-established source-to-input port 
+connection.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetNumberOfDevices" target="doc">MIDIGetNumberOfDevices</a></tt></dt>
+<dd>Returns the number of devices in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetDevice" target="doc">MIDIGetDevice</a></tt></dt>
+<dd>Returns one of the devices in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIDeviceGetNumberOfEntities" target="doc">MIDIDeviceGetNumberOfEntities</a></tt></dt>
+<dd>Returns the number of entities in a given device.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIDeviceGetEntity" target="doc">MIDIDeviceGetEntity</a></tt></dt>
+<dd>Returns one of a given device's entities.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEntityGetNumberOfSources" target="doc">MIDIEntityGetNumberOfSources</a></tt></dt>
+<dd>Returns the number of sources in a given entity.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEntityGetSource" target="doc">MIDIEntityGetSource</a></tt></dt>
+<dd>Returns one of a given entity's sources.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEntityGetNumberOfDestinations" target="doc">MIDIEntityGetNumberOfDestinations</a></tt></dt>
+<dd>Returns the number of destinations in a given entity.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEntityGetDestination" target="doc">MIDIEntityGetDestination</a></tt></dt>
+<dd>Returns one of a given entity's destinations.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEntityGetDevice" target="doc">MIDIEntityGetDevice</a></tt></dt>
+<dd>Returns an entity's device.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetNumberOfSources" target="doc">MIDIGetNumberOfSources</a></tt></dt>
+<dd>Returns the number of sources in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetSource" target="doc">MIDIGetSource</a></tt></dt>
+<dd>Returns one of the sources in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetNumberOfDestinations" target="doc">MIDIGetNumberOfDestinations</a></tt></dt>
+<dd>Returns the number of destinations in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetDestination" target="doc">MIDIGetDestination</a></tt></dt>
+<dd>Returns one of the destinations in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEndpointGetEntity" target="doc">MIDIEndpointGetEntity</a></tt></dt>
+<dd>Returns an endpoint's entity.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIDestinationCreate" target="doc">MIDIDestinationCreate</a></tt></dt>
+<dd>Creates a virtual destination in a client.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISourceCreate" target="doc">MIDISourceCreate</a></tt></dt>
+<dd>Creates a virtual source in a client.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIEndpointDispose" target="doc">MIDIEndpointDispose</a></tt></dt>
+<dd>Disposes a virtual source or destination your client created.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetNumberOfExternalDevices" target="doc">MIDIGetNumberOfExternalDevices</a></tt></dt>
+<dd>Returns the number of external MIDI devices in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIGetExternalDevice" target="doc">MIDIGetExternalDevice</a></tt></dt>
+<dd>Returns one of the external devices in the system.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectGetIntegerProperty" target="doc">MIDIObjectGetIntegerProperty</a></tt></dt>
+<dd>Gets an object's integer-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectSetIntegerProperty" target="doc">MIDIObjectSetIntegerProperty</a></tt></dt>
+<dd>Sets an object's integer-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectGetStringProperty" target="doc">MIDIObjectGetStringProperty</a></tt></dt>
+<dd>Gets an object's string-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectSetStringProperty" target="doc">MIDIObjectSetStringProperty</a></tt></dt>
+<dd>Sets an object's string-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectGetDataProperty" target="doc">MIDIObjectGetDataProperty</a></tt></dt>
+<dd>Gets an object's data-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectSetDataProperty" target="doc">MIDIObjectSetDataProperty</a></tt></dt>
+<dd>Sets an object's data-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectGetDictionaryProperty" target="doc">MIDIObjectGetDictionaryProperty</a></tt></dt>
+<dd>Gets an object's dictionary-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectSetDictionaryProperty" target="doc">MIDIObjectSetDictionaryProperty</a></tt></dt>
+<dd>Sets an object's dictionary-type property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectGetProperties" target="doc">MIDIObjectGetProperties</a></tt></dt>
+<dd>Gets all of an object's properties.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectRemoveProperty" target="doc">MIDIObjectRemoveProperty</a></tt></dt>
+<dd>Removes an object's property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIObjectFindByUniqueID" target="doc">MIDIObjectFindByUniqueID</a></tt></dt>
+<dd>Locates a device, external device, entity, or endpoint
+by its uniqueID.
+</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISend" target="doc">MIDISend</a></tt></dt>
+<dd>Sends MIDI to a destination.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDISendSysex" target="doc">MIDISendSysex</a></tt></dt>
+<dd>Sends a single system-exclusive event, asynchronously.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIReceived" target="doc">MIDIReceived</a></tt></dt>
+<dd>Distributes incoming MIDI from a source to the client input ports
+which are connected to that source.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIFlushOutput" target="doc">MIDIFlushOutput</a></tt></dt>
+<dd>Unschedules previously-sent packets.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIRestart" target="doc">MIDIRestart</a></tt></dt>
+<dd>Stops and restarts MIDI I/O.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIPacketNext" target="doc">MIDIPacketNext</a></tt></dt>
+<dd>Advances a MIDIPacket pointer to the MIDIPacket which immediately follows it 
+in memory if it is part of a MIDIPacketList.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIPacketListInit" target="doc">MIDIPacketListInit</a></tt></dt>
+<dd>Prepares a MIDIPacketList to be built up dynamically.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/MIDIPacketListAdd" target="doc">MIDIPacketListAdd</a></tt></dt>
+<dd>Adds a MIDI event to a MIDIPacketList.</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIClientCreate;  name=MIDIClientCreate --><a name="//apple_ref/c/func/MIDIClientCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIClientCreate">MIDIClientCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Creates a MIDIClient object.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIClientCreate" logicalPath="//apple_ref/c/instm/MIDIClientCreate //apple_ref/c/clm/MIDIClientCreate //apple_ref/c/intfcm/MIDIClientCreate //apple_ref/c/func/MIDIClientCreate" target="_top"><font class="function">MIDIClientCreate</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">name</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDINotifyProc" logicalPath="//apple_ref/c/cl/MIDINotifyProc //apple_ref/c/cl/MIDINotifyProc //apple_ref/c/tdef/MIDINotifyProc" target="_top"><font class="type">MIDINotifyProc</font></a> <font class="param">notifyProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">notifyRefCon</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIClientRef" logicalPath="//apple_ref/c/cl/MIDIClientRef //apple_ref/c/cl/MIDIClientRef //apple_ref/c/tdef/MIDIClientRef" target="_top"><font class="type">MIDIClientRef</font></a> *<font class="param">outClient</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>name</i></code></dt>
+<dd>The client's name.</dd>
+<dt><code><i>notifyProc</i></code></dt>
+<dd>An optional (may be NULL) callback function through which the client
+will receive notifications of changes to the system.</dd>
+<dt><code><i>notifyRefCon</i></code></dt>
+<dd>A refCon passed back to notifyRefCon</dd>
+<dt><code><i>outClient</i></code></dt>
+<dd>On successful return, points to the newly-created MIDIClientRef.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Note that notifyProc will always be called on the run loop which was current when
+MIDIClientCreate was first called.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIClientDispose;  name=MIDIClientDispose --><a name="//apple_ref/c/func/MIDIClientDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIClientDispose">MIDIClientDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Disposes a MIDIClient object.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIClientDispose" logicalPath="//apple_ref/c/instm/MIDIClientDispose //apple_ref/c/clm/MIDIClientDispose //apple_ref/c/intfcm/MIDIClientDispose //apple_ref/c/func/MIDIClientDispose" target="_top"><font class="function">MIDIClientDispose</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIClientRef" logicalPath="//apple_ref/c/cl/MIDIClientRef //apple_ref/c/cl/MIDIClientRef //apple_ref/c/tdef/MIDIClientRef" target="_top"><font class="type">MIDIClientRef</font></a> <font class="param">client</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>client</i></code></dt>
+<dd>The client to dispose.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>It is not essential to call this function; the CoreMIDI framework will automatically
+dispose all MIDIClients when an application terminates.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIInputPortCreate;  name=MIDIInputPortCreate --><a name="//apple_ref/c/func/MIDIInputPortCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIInputPortCreate">MIDIInputPortCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Creates an input port through which the client may receive
+incoming MIDI messages from any MIDI source.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIInputPortCreate" logicalPath="//apple_ref/c/instm/MIDIInputPortCreate //apple_ref/c/clm/MIDIInputPortCreate //apple_ref/c/intfcm/MIDIInputPortCreate //apple_ref/c/func/MIDIInputPortCreate" target="_top"><font class="function">MIDIInputPortCreate</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIClientRef" logicalPath="//apple_ref/c/cl/MIDIClientRef //apple_ref/c/cl/MIDIClientRef //apple_ref/c/tdef/MIDIClientRef" target="_top"><font class="type">MIDIClientRef</font></a> <font class="param">client</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">portName</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIReadProc" logicalPath="//apple_ref/c/cl/MIDIReadProc //apple_ref/c/cl/MIDIReadProc //apple_ref/c/tdef/MIDIReadProc" target="_top"><font class="type">MIDIReadProc</font></a> <font class="param">readProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">refCon</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIPortRef" logicalPath="//apple_ref/c/cl/MIDIPortRef //apple_ref/c/cl/MIDIPortRef //apple_ref/c/tdef/MIDIPortRef" target="_top"><font class="type">MIDIPortRef</font></a> *<font class="param">outPort</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>client</i></code></dt>
+<dd>The client to own the newly-created port.</dd>
+<dt><code><i>portName</i></code></dt>
+<dd>The name of the port.</dd>
+<dt><code><i>readProc</i></code></dt>
+<dd>The MIDIReadProc which will be called with incoming MIDI,
+from sources connected to this port.</dd>
+<dt><code><i>refCon</i></code></dt>
+<dd>The refCon passed to readHook.</dd>
+<dt><code><i>outPort</i></code></dt>
+<dd>On successful return, points to the newly-created
+MIDIPort.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>After creating a port, use MIDIPortConnectSource to establish an input connection from
+any number of sources to your port.
+<br><br>
+readProc will be called on a separate high-priority thread owned by CoreMIDI.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIOutputPortCreate;  name=MIDIOutputPortCreate --><a name="//apple_ref/c/func/MIDIOutputPortCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIOutputPortCreate">MIDIOutputPortCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Creates an output port through which the client may send
+outgoing MIDI messages to any MIDI destination.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIOutputPortCreate" logicalPath="//apple_ref/c/instm/MIDIOutputPortCreate //apple_ref/c/clm/MIDIOutputPortCreate //apple_ref/c/intfcm/MIDIOutputPortCreate //apple_ref/c/func/MIDIOutputPortCreate" target="_top"><font class="function">MIDIOutputPortCreate</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIClientRef" logicalPath="//apple_ref/c/cl/MIDIClientRef //apple_ref/c/cl/MIDIClientRef //apple_ref/c/tdef/MIDIClientRef" target="_top"><font class="type">MIDIClientRef</font></a> <font class="param">client</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">portName</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIPortRef" logicalPath="//apple_ref/c/cl/MIDIPortRef //apple_ref/c/cl/MIDIPortRef //apple_ref/c/tdef/MIDIPortRef" target="_top"><font class="type">MIDIPortRef</font></a> *<font class="param">outPort</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>client</i></code></dt>
+<dd>The client to own the newly-created port</dd>
+<dt><code><i>portName</i></code></dt>
+<dd>The name of the port.</dd>
+<dt><code><i>outPort</i></code></dt>
+<dd>On successful return, points to the newly-created
+MIDIPort.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Output ports provide a mechanism for MIDI merging.  CoreMIDI assumes that each output
+port will be responsible for sending only a single MIDI stream to each destination,
+although a single port may address all of the destinations in the system.
+<br><br>
+Multiple output ports are only necessary when an application is capable of directing
+multiple simultaneous MIDI streams to the same destination.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIPortDispose;  name=MIDIPortDispose --><a name="//apple_ref/c/func/MIDIPortDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPortDispose">MIDIPortDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Disposes a MIDIPort object.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIPortDispose" logicalPath="//apple_ref/c/instm/MIDIPortDispose //apple_ref/c/clm/MIDIPortDispose //apple_ref/c/intfcm/MIDIPortDispose //apple_ref/c/func/MIDIPortDispose" target="_top"><font class="function">MIDIPortDispose</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIPortRef" logicalPath="//apple_ref/c/cl/MIDIPortRef //apple_ref/c/cl/MIDIPortRef //apple_ref/c/tdef/MIDIPortRef" target="_top"><font class="type">MIDIPortRef</font></a> <font class="param">port</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>port</i></code></dt>
+<dd>The port to dispose.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>It is not usually necessary to call this function; when an application's MIDIClient's
+are automatically disposed at termination, or explicitly, via MIDIClientDispose, the
+client's ports are automatically disposed at that time.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIPortConnectSource;  name=MIDIPortConnectSource --><a name="//apple_ref/c/func/MIDIPortConnectSource"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPortConnectSource">MIDIPortConnectSource</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Establishes a connection from a source to a client's input port.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIPortConnectSource" logicalPath="//apple_ref/c/instm/MIDIPortConnectSource //apple_ref/c/clm/MIDIPortConnectSource //apple_ref/c/intfcm/MIDIPortConnectSource //apple_ref/c/func/MIDIPortConnectSource" target="_top"><font class="function">MIDIPortConnectSource</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIPortRef" logicalPath="//apple_ref/c/cl/MIDIPortRef //apple_ref/c/cl/MIDIPortRef //apple_ref/c/tdef/MIDIPortRef" target="_top"><font class="type">MIDIPortRef</font></a> <font class="param">port</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">source</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">connRefCon</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>port</i></code></dt>
+<dd>The port to which to create the connection.  This port's
+readProc is called with incoming MIDI from the source.</dd>
+<dt><code><i>source</i></code></dt>
+<dd>The source from which to create the connection.</dd>
+<dt><code><i>connRefCon</i></code></dt>
+<dd>This refCon is passed to the MIDIReadProc, as a way to
+identify the source.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIPortDisconnectSource;  name=MIDIPortDisconnectSource --><a name="//apple_ref/c/func/MIDIPortDisconnectSource"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPortDisconnectSource">MIDIPortDisconnectSource</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Closes a previously-established source-to-input port 
+connection.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIPortDisconnectSource" logicalPath="//apple_ref/c/instm/MIDIPortDisconnectSource //apple_ref/c/clm/MIDIPortDisconnectSource //apple_ref/c/intfcm/MIDIPortDisconnectSource //apple_ref/c/func/MIDIPortDisconnectSource" target="_top"><font class="function">MIDIPortDisconnectSource</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIPortRef" logicalPath="//apple_ref/c/cl/MIDIPortRef //apple_ref/c/cl/MIDIPortRef //apple_ref/c/tdef/MIDIPortRef" target="_top"><font class="type">MIDIPortRef</font></a> <font class="param">port</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">source</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>port</i></code></dt>
+<dd>The port whose connection is being closed.</dd>
+<dt><code><i>source</i></code></dt>
+<dd>The source from which to close a connection to the
+specified port.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetNumberOfDevices;  name=MIDIGetNumberOfDevices --><a name="//apple_ref/c/func/MIDIGetNumberOfDevices"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetNumberOfDevices">MIDIGetNumberOfDevices</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of devices in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetNumberOfDevices" logicalPath="//apple_ref/c/instm/MIDIGetNumberOfDevices //apple_ref/c/clm/MIDIGetNumberOfDevices //apple_ref/c/intfcm/MIDIGetNumberOfDevices //apple_ref/c/func/MIDIGetNumberOfDevices" target="_top"><font class="function">MIDIGetNumberOfDevices</font></a>(); </pre></blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of devices in the system, or 0 if an error 
+occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetDevice;  name=MIDIGetDevice --><a name="//apple_ref/c/func/MIDIGetDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetDevice">MIDIGetDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of the devices in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetDevice" logicalPath="//apple_ref/c/instm/MIDIGetDevice //apple_ref/c/clm/MIDIGetDevice //apple_ref/c/intfcm/MIDIGetDevice //apple_ref/c/func/MIDIGetDevice" target="_top"><font class="function">MIDIGetDevice</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">deviceIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>deviceIndex0</i></code></dt>
+<dd>The index (0...MIDIGetNumberOfDevices()-1) of the device
+to return.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to a device, or NULL if an error occurred.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Use this to enumerate the devices in the system.
+<br><br>
+To enumerate the entities in the system, you can walk through the devices, then walk
+through the devices' entities.
+<br><br>
+Note: If a client iterates through the devices and entities in the system, it will not
+ever visit any virtual sources and destinations created by other clients.  Also, a
+device iteration will return devices which are "offline" (were present in the past but
+are not currently present), while iterations through the system's sources and
+destinations will not include the endpoints of offline devices.
+<br><br>
+Thus clients should usually use MIDIGetNumberOfSources, MIDIGetSource,
+MIDIGetNumberOfDestinations and MIDIGetDestination, rather iterating through devices and
+entities to locate endpoints.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIDeviceGetNumberOfEntities;  name=MIDIDeviceGetNumberOfEntities --><a name="//apple_ref/c/func/MIDIDeviceGetNumberOfEntities"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDeviceGetNumberOfEntities">MIDIDeviceGetNumberOfEntities</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of entities in a given device.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIDeviceGetNumberOfEntities" logicalPath="//apple_ref/c/instm/MIDIDeviceGetNumberOfEntities //apple_ref/c/clm/MIDIDeviceGetNumberOfEntities //apple_ref/c/intfcm/MIDIDeviceGetNumberOfEntities //apple_ref/c/func/MIDIDeviceGetNumberOfEntities" target="_top"><font class="function">MIDIDeviceGetNumberOfEntities</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device being queried.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of entities the device contains, or 0 if an
+error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIDeviceGetEntity;  name=MIDIDeviceGetEntity --><a name="//apple_ref/c/func/MIDIDeviceGetEntity"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDeviceGetEntity">MIDIDeviceGetEntity</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of a given device's entities.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIDeviceGetEntity" logicalPath="//apple_ref/c/instm/MIDIDeviceGetEntity //apple_ref/c/clm/MIDIDeviceGetEntity //apple_ref/c/intfcm/MIDIDeviceGetEntity //apple_ref/c/func/MIDIDeviceGetEntity" target="_top"><font class="function">MIDIDeviceGetEntity</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <font class="param">device</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">entityIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>device</i></code></dt>
+<dd>The device being queried.</dd>
+<dt><code><i>entityIndex0</i></code></dt>
+<dd>The index (0...MIDIDeviceGetNumberOfEntities(device)-1)
+of the entity to return
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to an entity, or NULL if an error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEntityGetNumberOfSources;  name=MIDIEntityGetNumberOfSources --><a name="//apple_ref/c/func/MIDIEntityGetNumberOfSources"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityGetNumberOfSources">MIDIEntityGetNumberOfSources</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of sources in a given entity.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEntityGetNumberOfSources" logicalPath="//apple_ref/c/instm/MIDIEntityGetNumberOfSources //apple_ref/c/clm/MIDIEntityGetNumberOfSources //apple_ref/c/intfcm/MIDIEntityGetNumberOfSources //apple_ref/c/func/MIDIEntityGetNumberOfSources" target="_top"><font class="function">MIDIEntityGetNumberOfSources</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">entity</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>entity</i></code></dt>
+<dd>The entity being queried
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of sources the entity contains, or 0 if an
+error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEntityGetSource;  name=MIDIEntityGetSource --><a name="//apple_ref/c/func/MIDIEntityGetSource"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityGetSource">MIDIEntityGetSource</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of a given entity's sources.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEntityGetSource" logicalPath="//apple_ref/c/instm/MIDIEntityGetSource //apple_ref/c/clm/MIDIEntityGetSource //apple_ref/c/intfcm/MIDIEntityGetSource //apple_ref/c/func/MIDIEntityGetSource" target="_top"><font class="function">MIDIEntityGetSource</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">entity</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">sourceIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>entity</i></code></dt>
+<dd>The entity being queried.</dd>
+<dt><code><i>sourceIndex0</i></code></dt>
+<dd>The index (0...MIDIEntityGetNumberOfSources(entity)-1) of
+the source to return
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to a source, or NULL if an error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEntityGetNumberOfDestinations;  name=MIDIEntityGetNumberOfDestinations --><a name="//apple_ref/c/func/MIDIEntityGetNumberOfDestinations"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityGetNumberOfDestinations">MIDIEntityGetNumberOfDestinations</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of destinations in a given entity.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEntityGetNumberOfDestinations" logicalPath="//apple_ref/c/instm/MIDIEntityGetNumberOfDestinations //apple_ref/c/clm/MIDIEntityGetNumberOfDestinations //apple_ref/c/intfcm/MIDIEntityGetNumberOfDestinations //apple_ref/c/func/MIDIEntityGetNumberOfDestinations" target="_top"><font class="function">MIDIEntityGetNumberOfDestinations</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">entity</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>entity</i></code></dt>
+<dd>The entity being queried
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of destinations the entity contains, or 0
+if an error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEntityGetDestination;  name=MIDIEntityGetDestination --><a name="//apple_ref/c/func/MIDIEntityGetDestination"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityGetDestination">MIDIEntityGetDestination</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of a given entity's destinations.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEntityGetDestination" logicalPath="//apple_ref/c/instm/MIDIEntityGetDestination //apple_ref/c/clm/MIDIEntityGetDestination //apple_ref/c/intfcm/MIDIEntityGetDestination //apple_ref/c/func/MIDIEntityGetDestination" target="_top"><font class="function">MIDIEntityGetDestination</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">entity</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">destIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>entity</i></code></dt>
+<dd>The entity being queried.</dd>
+<dt><code><i>destIndex0</i></code></dt>
+<dd>The index (0...MIDIEntityGetNumberOfDestinations(entity)
+- 1) of the destination to return
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to a destination, or NULL if an error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEntityGetDevice;  name=MIDIEntityGetDevice --><a name="//apple_ref/c/func/MIDIEntityGetDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEntityGetDevice">MIDIEntityGetDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns an entity's device.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEntityGetDevice" logicalPath="//apple_ref/c/instm/MIDIEntityGetDevice //apple_ref/c/clm/MIDIEntityGetDevice //apple_ref/c/intfcm/MIDIEntityGetDevice //apple_ref/c/func/MIDIEntityGetDevice" target="_top"><font class="function">MIDIEntityGetDevice</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> <font class="param">inEntity</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> *<font class="param">outDevice</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inEntity</i></code></dt>
+<dd>The entity being queried.</dd>
+<dt><code><i>outDevice</i></code></dt>
+<dd>On successful return, the entity's owning device.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetNumberOfSources;  name=MIDIGetNumberOfSources --><a name="//apple_ref/c/func/MIDIGetNumberOfSources"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetNumberOfSources">MIDIGetNumberOfSources</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of sources in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetNumberOfSources" logicalPath="//apple_ref/c/instm/MIDIGetNumberOfSources //apple_ref/c/clm/MIDIGetNumberOfSources //apple_ref/c/intfcm/MIDIGetNumberOfSources //apple_ref/c/func/MIDIGetNumberOfSources" target="_top"><font class="function">MIDIGetNumberOfSources</font></a>(); </pre></blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of sources in the system, or 0 if an error
+occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetSource;  name=MIDIGetSource --><a name="//apple_ref/c/func/MIDIGetSource"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetSource">MIDIGetSource</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of the sources in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetSource" logicalPath="//apple_ref/c/instm/MIDIGetSource //apple_ref/c/clm/MIDIGetSource //apple_ref/c/intfcm/MIDIGetSource //apple_ref/c/func/MIDIGetSource" target="_top"><font class="function">MIDIGetSource</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">sourceIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>sourceIndex0</i></code></dt>
+<dd>The index (0...MIDIGetNumberOfSources()-1) of the source
+to return</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to a source, or NULL if an error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetNumberOfDestinations;  name=MIDIGetNumberOfDestinations --><a name="//apple_ref/c/func/MIDIGetNumberOfDestinations"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetNumberOfDestinations">MIDIGetNumberOfDestinations</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of destinations in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetNumberOfDestinations" logicalPath="//apple_ref/c/instm/MIDIGetNumberOfDestinations //apple_ref/c/clm/MIDIGetNumberOfDestinations //apple_ref/c/intfcm/MIDIGetNumberOfDestinations //apple_ref/c/func/MIDIGetNumberOfDestinations" target="_top"><font class="function">MIDIGetNumberOfDestinations</font></a>(); </pre></blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of destinations in the system, or 0 if an error 
+occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetDestination;  name=MIDIGetDestination --><a name="//apple_ref/c/func/MIDIGetDestination"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetDestination">MIDIGetDestination</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of the destinations in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetDestination" logicalPath="//apple_ref/c/instm/MIDIGetDestination //apple_ref/c/clm/MIDIGetDestination //apple_ref/c/intfcm/MIDIGetDestination //apple_ref/c/func/MIDIGetDestination" target="_top"><font class="function">MIDIGetDestination</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">destIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>destIndex0</i></code></dt>
+<dd>The index (0...MIDIGetNumberOfDestinations()-1) of the
+destination to return</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to a destination, or NULL if an error occurred.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEndpointGetEntity;  name=MIDIEndpointGetEntity --><a name="//apple_ref/c/func/MIDIEndpointGetEntity"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEndpointGetEntity">MIDIEndpointGetEntity</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns an endpoint's entity.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEndpointGetEntity" logicalPath="//apple_ref/c/instm/MIDIEndpointGetEntity //apple_ref/c/clm/MIDIEndpointGetEntity //apple_ref/c/intfcm/MIDIEndpointGetEntity //apple_ref/c/func/MIDIEndpointGetEntity" target="_top"><font class="function">MIDIEndpointGetEntity</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">inEndpoint</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEntityRef" logicalPath="//apple_ref/c/cl/MIDIEntityRef //apple_ref/c/cl/MIDIEntityRef //apple_ref/c/tdef/MIDIEntityRef" target="_top"><font class="type">MIDIEntityRef</font></a> *<font class="param">outEntity</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inEndpoint</i></code></dt>
+<dd>The endpoint being queried.</dd>
+<dt><code><i>outEntity</i></code></dt>
+<dd>On exit, the endpoint's owning entity, or NULL if none.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Virtual sources and destinations don't have entities.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIDestinationCreate;  name=MIDIDestinationCreate --><a name="//apple_ref/c/func/MIDIDestinationCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDestinationCreate">MIDIDestinationCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Creates a virtual destination in a client.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIDestinationCreate" logicalPath="//apple_ref/c/instm/MIDIDestinationCreate //apple_ref/c/clm/MIDIDestinationCreate //apple_ref/c/intfcm/MIDIDestinationCreate //apple_ref/c/func/MIDIDestinationCreate" target="_top"><font class="function">MIDIDestinationCreate</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIClientRef" logicalPath="//apple_ref/c/cl/MIDIClientRef //apple_ref/c/cl/MIDIClientRef //apple_ref/c/tdef/MIDIClientRef" target="_top"><font class="type">MIDIClientRef</font></a> <font class="param">client</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">name</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIReadProc" logicalPath="//apple_ref/c/cl/MIDIReadProc //apple_ref/c/cl/MIDIReadProc //apple_ref/c/tdef/MIDIReadProc" target="_top"><font class="type">MIDIReadProc</font></a> <font class="param">readProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">refCon</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> *<font class="param">outDest</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>client</i></code></dt>
+<dd>The client owning the virtual destination.</dd>
+<dt><code><i>name</i></code></dt>
+<dd>The name of the virtual destination.</dd>
+<dt><code><i>readProc</i></code></dt>
+<dd>The MIDIReadProc to be called when a client sends MIDI to
+the virtual destination.</dd>
+<dt><code><i>refCon</i></code></dt>
+<dd>The refCon to be passed to the readProc.</dd>
+<dt><code><i>outDest</i></code></dt>
+<dd>On successful return, a pointer to the newly-created
+destination.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The specified readProc gets called when clients send MIDI to your virtual destination.
+<br><br>
+Drivers need not call this; when they create devices and entities, sources and
+destinations are created at that time.
+<br><br>
+After creating a virtual destination, it's a good idea to assign it the same unique ID
+it had the last time your application created it. (Although you should be prepared for
+this to fail in the unlikely event of a collision.) This will permit other clients
+to retain persistent references to your virtual destination more easily.
+<br><br>
+See the discussion of kMIDIPropertyAdvanceScheduleTimeMuSec for notes about the
+relationship between when a sender sends MIDI to the destination and when it is
+received.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISourceCreate;  name=MIDISourceCreate --><a name="//apple_ref/c/func/MIDISourceCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISourceCreate">MIDISourceCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Creates a virtual source in a client.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISourceCreate" logicalPath="//apple_ref/c/instm/MIDISourceCreate //apple_ref/c/clm/MIDISourceCreate //apple_ref/c/intfcm/MIDISourceCreate //apple_ref/c/func/MIDISourceCreate" target="_top"><font class="function">MIDISourceCreate</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIClientRef" logicalPath="//apple_ref/c/cl/MIDIClientRef //apple_ref/c/cl/MIDIClientRef //apple_ref/c/tdef/MIDIClientRef" target="_top"><font class="type">MIDIClientRef</font></a> <font class="param">client</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">name</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> *<font class="param">outSrc</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>client</i></code></dt>
+<dd>The client owning the virtual source.</dd>
+<dt><code><i>name</i></code></dt>
+<dd>The name of the virtual source.</dd>
+<dt><code><i>outSrc</i></code></dt>
+<dd>On successful return, a pointer to the newly-created
+source.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Drivers need not call this; when they create devices and entities, sources and
+destinations are created at that time.
+<br><br>
+After creating a virtual source, use MIDIReceived to transmit MIDI messages from your
+virtual source to any clients connected to the virtual source.
+<br><br>
+After creating a virtual source, it's a good idea to assign it the same unique ID it had
+the last time your application created it. (Although you should be prepared for this to
+fail in the unlikely event of a collision.) This will permit other clients to retain
+persistent references to your virtual source more easily.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIEndpointDispose;  name=MIDIEndpointDispose --><a name="//apple_ref/c/func/MIDIEndpointDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIEndpointDispose">MIDIEndpointDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Disposes a virtual source or destination your client created.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIEndpointDispose" logicalPath="//apple_ref/c/instm/MIDIEndpointDispose //apple_ref/c/clm/MIDIEndpointDispose //apple_ref/c/intfcm/MIDIEndpointDispose //apple_ref/c/func/MIDIEndpointDispose" target="_top"><font class="function">MIDIEndpointDispose</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">endpt</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>endpt</i></code></dt>
+<dd>The endpoint to be disposed.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetNumberOfExternalDevices;  name=MIDIGetNumberOfExternalDevices --><a name="//apple_ref/c/func/MIDIGetNumberOfExternalDevices"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetNumberOfExternalDevices">MIDIGetNumberOfExternalDevices</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the number of external MIDI devices in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetNumberOfExternalDevices" logicalPath="//apple_ref/c/instm/MIDIGetNumberOfExternalDevices //apple_ref/c/clm/MIDIGetNumberOfExternalDevices //apple_ref/c/intfcm/MIDIGetNumberOfExternalDevices //apple_ref/c/func/MIDIGetNumberOfExternalDevices" target="_top"><font class="function">MIDIGetNumberOfExternalDevices</font></a>(); </pre></blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The number of external devices in the system, or 0 if an error 
+occurred.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>External MIDI devices are MIDI devices connected to driver endpoints via a standard MIDI
+cable. Their presence is completely optional, only when a UI (such as Audio MIDI Setup)
+adds them.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIGetExternalDevice;  name=MIDIGetExternalDevice --><a name="//apple_ref/c/func/MIDIGetExternalDevice"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIGetExternalDevice">MIDIGetExternalDevice</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns one of the external devices in the system.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIDeviceRef" logicalPath="//apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/cl/MIDIDeviceRef //apple_ref/c/tdef/MIDIDeviceRef" target="_top"><font class="type">MIDIDeviceRef</font></a> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIGetExternalDevice" logicalPath="//apple_ref/c/instm/MIDIGetExternalDevice //apple_ref/c/clm/MIDIGetExternalDevice //apple_ref/c/intfcm/MIDIGetExternalDevice //apple_ref/c/func/MIDIGetExternalDevice" target="_top"><font class="function">MIDIGetExternalDevice</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/ItemCount //apple_ref/c/cl/ItemCount //apple_ref/c/tdef/ItemCount //apple_ref/c/tag/ItemCount //apple_ref/c/econst/ItemCount //apple_ref/c/struct/ItemCount //apple_ref/c/clconst/ItemCount" --><font class="type">ItemCount</font><!-- /a --> <font class="param">deviceIndex0</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>deviceIndex0</i></code></dt>
+<dd>The index (0...MIDIGetNumberOfDevices()-1) of the device
+to return.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A reference to a device, or NULL if an error occurred.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Use this to enumerate the external devices in the system.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectGetIntegerProperty;  name=MIDIObjectGetIntegerProperty --><a name="//apple_ref/c/func/MIDIObjectGetIntegerProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectGetIntegerProperty">MIDIObjectGetIntegerProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets an object's integer-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectGetIntegerProperty" logicalPath="//apple_ref/c/instm/MIDIObjectGetIntegerProperty //apple_ref/c/clm/MIDIObjectGetIntegerProperty //apple_ref/c/intfcm/MIDIObjectGetIntegerProperty //apple_ref/c/func/MIDIObjectGetIntegerProperty" target="_top"><font class="function">MIDIObjectGetIntegerProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> *<font class="param">outValue</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be returned.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to return.</dd>
+<dt><code><i>outValue</i></code></dt>
+<dd>On successful return, the value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectSetIntegerProperty;  name=MIDIObjectSetIntegerProperty --><a name="//apple_ref/c/func/MIDIObjectSetIntegerProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectSetIntegerProperty">MIDIObjectSetIntegerProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets an object's integer-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectSetIntegerProperty" logicalPath="//apple_ref/c/instm/MIDIObjectSetIntegerProperty //apple_ref/c/clm/MIDIObjectSetIntegerProperty //apple_ref/c/intfcm/MIDIObjectSetIntegerProperty //apple_ref/c/func/MIDIObjectSetIntegerProperty" target="_top"><font class="function">MIDIObjectSetIntegerProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="param">value</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be altered.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to set.</dd>
+<dt><code><i>value</i></code></dt>
+<dd>New value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectGetStringProperty;  name=MIDIObjectGetStringProperty --><a name="//apple_ref/c/func/MIDIObjectGetStringProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectGetStringProperty">MIDIObjectGetStringProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets an object's string-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectGetStringProperty" logicalPath="//apple_ref/c/instm/MIDIObjectGetStringProperty //apple_ref/c/clm/MIDIObjectGetStringProperty //apple_ref/c/intfcm/MIDIObjectGetStringProperty //apple_ref/c/func/MIDIObjectGetStringProperty" target="_top"><font class="function">MIDIObjectGetStringProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> *<font class="param">str</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be returned.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to return.</dd>
+<dt><code><i>str</i></code></dt>
+<dd>On successful return, the value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectSetStringProperty;  name=MIDIObjectSetStringProperty --><a name="//apple_ref/c/func/MIDIObjectSetStringProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectSetStringProperty">MIDIObjectSetStringProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets an object's string-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectSetStringProperty" logicalPath="//apple_ref/c/instm/MIDIObjectSetStringProperty //apple_ref/c/clm/MIDIObjectSetStringProperty //apple_ref/c/intfcm/MIDIObjectSetStringProperty //apple_ref/c/func/MIDIObjectSetStringProperty" target="_top"><font class="function">MIDIObjectSetStringProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">str</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be altered.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to set.</dd>
+<dt><code><i>str</i></code></dt>
+<dd>New value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectGetDataProperty;  name=MIDIObjectGetDataProperty --><a name="//apple_ref/c/func/MIDIObjectGetDataProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectGetDataProperty">MIDIObjectGetDataProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets an object's data-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectGetDataProperty" logicalPath="//apple_ref/c/instm/MIDIObjectGetDataProperty //apple_ref/c/clm/MIDIObjectGetDataProperty //apple_ref/c/intfcm/MIDIObjectGetDataProperty //apple_ref/c/func/MIDIObjectGetDataProperty" target="_top"><font class="function">MIDIObjectGetDataProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFDataRef //apple_ref/c/cl/CFDataRef //apple_ref/c/tdef/CFDataRef //apple_ref/c/tag/CFDataRef //apple_ref/c/econst/CFDataRef //apple_ref/c/struct/CFDataRef //apple_ref/c/clconst/CFDataRef" --><font class="type">CFDataRef</font><!-- /a --> *<font class="param">outData</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be returned.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to return.</dd>
+<dt><code><i>outData</i></code></dt>
+<dd>On successful return, the value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information
+about properties.)
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectSetDataProperty;  name=MIDIObjectSetDataProperty --><a name="//apple_ref/c/func/MIDIObjectSetDataProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectSetDataProperty">MIDIObjectSetDataProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets an object's data-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectSetDataProperty" logicalPath="//apple_ref/c/instm/MIDIObjectSetDataProperty //apple_ref/c/clm/MIDIObjectSetDataProperty //apple_ref/c/intfcm/MIDIObjectSetDataProperty //apple_ref/c/func/MIDIObjectSetDataProperty" target="_top"><font class="function">MIDIObjectSetDataProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFDataRef //apple_ref/c/cl/CFDataRef //apple_ref/c/tdef/CFDataRef //apple_ref/c/tag/CFDataRef //apple_ref/c/econst/CFDataRef //apple_ref/c/struct/CFDataRef //apple_ref/c/clconst/CFDataRef" --><font class="type">CFDataRef</font><!-- /a --> <font class="param">data</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be altered.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to set.</dd>
+<dt><code><i>data</i></code></dt>
+<dd>New value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectGetDictionaryProperty;  name=MIDIObjectGetDictionaryProperty --><a name="//apple_ref/c/func/MIDIObjectGetDictionaryProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectGetDictionaryProperty">MIDIObjectGetDictionaryProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets an object's dictionary-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectGetDictionaryProperty" logicalPath="//apple_ref/c/instm/MIDIObjectGetDictionaryProperty //apple_ref/c/clm/MIDIObjectGetDictionaryProperty //apple_ref/c/intfcm/MIDIObjectGetDictionaryProperty //apple_ref/c/func/MIDIObjectGetDictionaryProperty" target="_top"><font class="function">MIDIObjectGetDictionaryProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFDictionaryRef //apple_ref/c/cl/CFDictionaryRef //apple_ref/c/tdef/CFDictionaryRef //apple_ref/c/tag/CFDictionaryRef //apple_ref/c/econst/CFDictionaryRef //apple_ref/c/struct/CFDictionaryRef //apple_ref/c/clconst/CFDictionaryRef" --><font class="type">CFDictionaryRef</font><!-- /a --> *<font class="param">outDict</font> ) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be returned.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to return.</dd>
+<dt><code><i>outDict</i></code></dt>
+<dd>On successful return, the value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectSetDictionaryProperty;  name=MIDIObjectSetDictionaryProperty --><a name="//apple_ref/c/func/MIDIObjectSetDictionaryProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectSetDictionaryProperty">MIDIObjectSetDictionaryProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets an object's dictionary-type property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectSetDictionaryProperty" logicalPath="//apple_ref/c/instm/MIDIObjectSetDictionaryProperty //apple_ref/c/clm/MIDIObjectSetDictionaryProperty //apple_ref/c/intfcm/MIDIObjectSetDictionaryProperty //apple_ref/c/func/MIDIObjectSetDictionaryProperty" target="_top"><font class="function">MIDIObjectSetDictionaryProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFDictionaryRef //apple_ref/c/cl/CFDictionaryRef //apple_ref/c/tdef/CFDictionaryRef //apple_ref/c/tag/CFDictionaryRef //apple_ref/c/econst/CFDictionaryRef //apple_ref/c/struct/CFDictionaryRef //apple_ref/c/clconst/CFDictionaryRef" --><font class="type">CFDictionaryRef</font><!-- /a --> <font class="param">data</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be altered.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>Name of the property to set.</dd>
+<dt><code><i>dict</i></code></dt>
+<dd>New value of the property.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(See the MIDIObjectRef documentation for information about properties.)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectGetProperties;  name=MIDIObjectGetProperties --><a name="//apple_ref/c/func/MIDIObjectGetProperties"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectGetProperties">MIDIObjectGetProperties</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets all of an object's properties.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectGetProperties" logicalPath="//apple_ref/c/instm/MIDIObjectGetProperties //apple_ref/c/clm/MIDIObjectGetProperties //apple_ref/c/intfcm/MIDIObjectGetProperties //apple_ref/c/func/MIDIObjectGetProperties" target="_top"><font class="function">MIDIObjectGetProperties</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFPropertyListRef //apple_ref/c/cl/CFPropertyListRef //apple_ref/c/tdef/CFPropertyListRef //apple_ref/c/tag/CFPropertyListRef //apple_ref/c/econst/CFPropertyListRef //apple_ref/c/struct/CFPropertyListRef //apple_ref/c/clconst/CFPropertyListRef" --><font class="type">CFPropertyListRef</font><!-- /a --> *<font class="param">outProperties</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">deep</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose properties are to be returned.</dd>
+<dt><code><i>outProperties</i></code></dt>
+<dd>On successful return, the object's properties.</dd>
+<dt><code><i>deep</i></code></dt>
+<dd>true if the object's child objects are to be included
+(e.g. a device's entities, or an entity's endpoints).</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Returns a CFPropertyList of all of an object's properties. The property list may be a
+dictionary or an array. Dictionaries map property names (CFString) to values, which may
+be CFNumber, CFString, or CFData.  Arrays are arrays of such values.
+<br><br>
+Properties which an object inherits from its owning object (if any) are not included.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectRemoveProperty;  name=MIDIObjectRemoveProperty --><a name="//apple_ref/c/func/MIDIObjectRemoveProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectRemoveProperty">MIDIObjectRemoveProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Removes an object's property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectRemoveProperty" logicalPath="//apple_ref/c/instm/MIDIObjectRemoveProperty //apple_ref/c/clm/MIDIObjectRemoveProperty //apple_ref/c/intfcm/MIDIObjectRemoveProperty //apple_ref/c/func/MIDIObjectRemoveProperty" target="_top"><font class="function">MIDIObjectRemoveProperty</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> <font class="param">obj</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">propertyID</font> ) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>obj</i></code></dt>
+<dd>The object whose property is to be removed.</dd>
+<dt><code><i>propertyID</i></code></dt>
+<dd>The property to be removed.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIObjectFindByUniqueID;  name=MIDIObjectFindByUniqueID --><a name="//apple_ref/c/func/MIDIObjectFindByUniqueID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIObjectFindByUniqueID">MIDIObjectFindByUniqueID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Locates a device, external device, entity, or endpoint
+by its uniqueID.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIObjectFindByUniqueID" logicalPath="//apple_ref/c/instm/MIDIObjectFindByUniqueID //apple_ref/c/clm/MIDIObjectFindByUniqueID //apple_ref/c/intfcm/MIDIObjectFindByUniqueID //apple_ref/c/func/MIDIObjectFindByUniqueID" target="_top"><font class="function">MIDIObjectFindByUniqueID</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIUniqueID" logicalPath="//apple_ref/c/cl/MIDIUniqueID //apple_ref/c/cl/MIDIUniqueID //apple_ref/c/tdef/MIDIUniqueID" target="_top"><font class="type">MIDIUniqueID</font></a> <font class="param">inUniqueID</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIObjectRef" logicalPath="//apple_ref/c/cl/MIDIObjectRef //apple_ref/c/cl/MIDIObjectRef //apple_ref/c/tdef/MIDIObjectRef" target="_top"><font class="type">MIDIObjectRef</font></a> *<font class="param">outObject</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Enums/Enums.html#//apple_ref/c/tag/MIDIObjectType" logicalPath="//apple_ref/c/cl/MIDIObjectType //apple_ref/c/cl/MIDIObjectType //apple_ref/c/tdef/MIDIObjectType //apple_ref/c/tag/MIDIObjectType" target="_top"><font class="type">MIDIObjectType</font></a> *<font class="param">outObjectType</font>)  ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inUniqueID</i></code></dt>
+<dd>The uniqueID of the object to search for.  (This should
+be the result of an earlier call to MIDIObjectGetIntegerProperty
+for the property kMIDIPropertyUniqueID).</dd>
+<dt><code><i>outObject</i></code></dt>
+<dd>The returned object, or NULL if the object was not found or
+an error occurred.  This should be cast to the appropriate
+type (MIDIDeviceRef, MIDIEntityRef, MIDIEndpointRef),
+according to *outObjectType.</dd>
+<dt><code><i>outObjectType</i></code></dt>
+<dd>On exit, the type of object which was found; undefined
+if none found.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code, including kMIDIObjectNotFound if there
+is no object with the specified uniqueID.
+<br><br>
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISend;  name=MIDISend --><a name="//apple_ref/c/func/MIDISend"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISend">MIDISend</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sends MIDI to a destination.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISend" logicalPath="//apple_ref/c/instm/MIDISend //apple_ref/c/clm/MIDISend //apple_ref/c/intfcm/MIDISend //apple_ref/c/func/MIDISend" target="_top"><font class="function">MIDISend</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIPortRef" logicalPath="//apple_ref/c/cl/MIDIPortRef //apple_ref/c/cl/MIDIPortRef //apple_ref/c/tdef/MIDIPortRef" target="_top"><font class="type">MIDIPortRef</font></a> <font class="param">port</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">dest</font>, 
+    <font class="keyword">const</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>port</i></code></dt>
+<dd>The output port through which the MIDI is to be sent.</dd>
+<dt><code><i>dest</i></code></dt>
+<dd>The destination to receive the events.</dd>
+<dt><code><i>pktlist</i></code></dt>
+<dd>The MIDI events to be sent.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Events with future timestamps are scheduled for future delivery.  CoreMIDI performs
+any needed MIDI merging.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDISendSysex;  name=MIDISendSysex --><a name="//apple_ref/c/func/MIDISendSysex"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISendSysex">MIDISendSysex</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sends a single system-exclusive event, asynchronously.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDISendSysex" logicalPath="//apple_ref/c/instm/MIDISendSysex //apple_ref/c/clm/MIDISendSysex //apple_ref/c/intfcm/MIDISendSysex //apple_ref/c/func/MIDISendSysex" target="_top"><font class="function">MIDISendSysex</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDISysexSendRequest" logicalPath="//apple_ref/c/cl/MIDISysexSendRequest //apple_ref/c/cl/MIDISysexSendRequest //apple_ref/c/tdef/MIDISysexSendRequest //apple_ref/c/tag/MIDISysexSendRequest" target="_top"><font class="type">MIDISysexSendRequest</font></a> *<font class="param">request</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>request</i></code></dt>
+<dd>Contains the destination, and a pointer to the MIDI data to be sent.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>request-&gt;data must point to a single MIDI system-exclusive message, or portion thereof.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIReceived;  name=MIDIReceived --><a name="//apple_ref/c/func/MIDIReceived"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIReceived">MIDIReceived</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Distributes incoming MIDI from a source to the client input ports
+which are connected to that source.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIReceived" logicalPath="//apple_ref/c/instm/MIDIReceived //apple_ref/c/clm/MIDIReceived //apple_ref/c/intfcm/MIDIReceived //apple_ref/c/func/MIDIReceived" target="_top"><font class="function">MIDIReceived</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">src</font>, 
+    <font class="keyword">const</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>src</i></code></dt>
+<dd>The source which is transmitting MIDI.</dd>
+<dt><code><i>pktlist</i></code></dt>
+<dd>The MIDI events to be transmitted.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Drivers should call this function when receiving MIDI from a source.
+<br><br>
+Clients which have created virtual sources, using MIDISourceCreate, should call this
+function when the source is generating MIDI.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIFlushOutput;  name=MIDIFlushOutput --><a name="//apple_ref/c/func/MIDIFlushOutput"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIFlushOutput">MIDIFlushOutput</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Unschedules previously-sent packets.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIFlushOutput" logicalPath="//apple_ref/c/instm/MIDIFlushOutput //apple_ref/c/clm/MIDIFlushOutput //apple_ref/c/intfcm/MIDIFlushOutput //apple_ref/c/func/MIDIFlushOutput" target="_top"><font class="function">MIDIFlushOutput</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDIEndpointRef" logicalPath="//apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/cl/MIDIEndpointRef //apple_ref/c/tdef/MIDIEndpointRef" target="_top"><font class="type">MIDIEndpointRef</font></a> <font class="param">dest</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>dest</i></code></dt>
+<dd>All pending events scheduled to be sent to this destination
+are unscheduled.  If NULL, the operation applies to
+all destinations.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Clients may use MIDIFlushOutput to cancel the sending of packets that were previously
+scheduled for future delivery.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIRestart;  name=MIDIRestart --><a name="//apple_ref/c/func/MIDIRestart"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIRestart">MIDIRestart</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Stops and restarts MIDI I/O.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIRestart" logicalPath="//apple_ref/c/instm/MIDIRestart //apple_ref/c/clm/MIDIRestart //apple_ref/c/intfcm/MIDIRestart //apple_ref/c/func/MIDIRestart" target="_top"><font class="function">MIDIRestart</font></a>(); </pre></blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This is useful for forcing CoreMIDI to ask its drivers to rescan for hardware.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIPacketNext;  name=MIDIPacketNext --><a name="//apple_ref/c/func/MIDIPacketNext"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPacketNext">MIDIPacketNext</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Advances a MIDIPacket pointer to the MIDIPacket which immediately follows it 
+in memory if it is part of a MIDIPacketList.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> <font class="type">*</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIPacketNext" logicalPath="//apple_ref/c/instm/MIDIPacketNext //apple_ref/c/clm/MIDIPacketNext //apple_ref/c/intfcm/MIDIPacketNext //apple_ref/c/func/MIDIPacketNext" target="_top"><font class="function">MIDIPacketNext</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> *<font class="param">pkt</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>pkt</i></code></dt>
+<dd>A pointer to a MIDIPacket in a MIDIPacketList.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>The subsequent packet in the MIDIPacketList.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This is implemented as a macro for efficiency and to avoid const problems.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIPacketListInit;  name=MIDIPacketListInit --><a name="//apple_ref/c/func/MIDIPacketListInit"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPacketListInit">MIDIPacketListInit</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Prepares a MIDIPacketList to be built up dynamically.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> <font class="type">*</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIPacketListInit" logicalPath="//apple_ref/c/instm/MIDIPacketListInit //apple_ref/c/clm/MIDIPacketListInit //apple_ref/c/intfcm/MIDIPacketListInit //apple_ref/c/func/MIDIPacketListInit" target="_top"><font class="function">MIDIPacketListInit</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font> ); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>pktlist</i></code></dt>
+<dd>The packet list to be initialized.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>A pointer to the first MIDIPacket in the packet list.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/MIDIPacketListAdd;  name=MIDIPacketListAdd --><a name="//apple_ref/c/func/MIDIPacketListAdd"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIPacketListAdd">MIDIPacketListAdd</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Adds a MIDI event to a MIDIPacketList.</p>
+<blockquote><pre><font class="keyword">extern</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> <font class="type">*</font> <a href="../../../CoreMIDI/MIDIServices/index.html?Functions/Functions.html#//apple_ref/c/func/MIDIPacketListAdd" logicalPath="//apple_ref/c/instm/MIDIPacketListAdd //apple_ref/c/clm/MIDIPacketListAdd //apple_ref/c/intfcm/MIDIPacketListAdd //apple_ref/c/func/MIDIPacketListAdd" target="_top"><font class="function">MIDIPacketListAdd</font></a>(
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacketList" logicalPath="//apple_ref/c/cl/MIDIPacketList //apple_ref/c/cl/MIDIPacketList //apple_ref/c/tdef/MIDIPacketList //apple_ref/c/tag/MIDIPacketList" target="_top"><font class="type">MIDIPacketList</font></a> *<font class="param">pktlist</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="param">listSize</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?Structs/Structs.html#//apple_ref/c/tag/MIDIPacket" logicalPath="//apple_ref/c/cl/MIDIPacket //apple_ref/c/cl/MIDIPacket //apple_ref/c/tdef/MIDIPacket //apple_ref/c/tag/MIDIPacket" target="_top"><font class="type">MIDIPacket</font></a> *<font class="param">curPacket</font>, 
+    <a href="../../../CoreMIDI/MIDIServices/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/MIDITimeStamp" logicalPath="//apple_ref/c/cl/MIDITimeStamp //apple_ref/c/cl/MIDITimeStamp //apple_ref/c/tdef/MIDITimeStamp" target="_top"><font class="type">MIDITimeStamp</font></a> <font class="param">time</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="param">nData</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/Byte //apple_ref/c/cl/Byte //apple_ref/c/tdef/Byte //apple_ref/c/tag/Byte //apple_ref/c/econst/Byte //apple_ref/c/struct/Byte //apple_ref/c/clconst/Byte" --><font class="type">Byte</font><!-- /a --> *<font class="param">data</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>pktlist</i></code></dt>
+<dd>The packet list to which the event is to be added.</dd>
+<dt><code><i>listSize</i></code></dt>
+<dd>The size, in bytes, of the packet list.</dd>
+<dt><code><i>curPacket</i></code></dt>
+<dd>A packet pointer returned by a previous call to
+MIDIPacketListInit or MIDIPacketListAdd for this packet
+list.</dd>
+<dt><code><i>time</i></code></dt>
+<dd>The new event's time.</dd>
+<dt><code><i>nData</i></code></dt>
+<dd>The length of the new event, in bytes.</dd>
+<dt><code><i>data</i></code></dt>
+<dd>The new event.  May be a single MIDI event, or a partial
+sys-ex event.  Running status is <b>not</b> permitted.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>Returns null if there was not room in the packet for the
+event; otherwise returns a packet pointer which should be
+passed as curPacket in a subsequent call to this function.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>The maximum size of a packet list is 65536 bytes. Large sysex messages must be sent in
+smaller packet lists.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.0.
+</dd>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

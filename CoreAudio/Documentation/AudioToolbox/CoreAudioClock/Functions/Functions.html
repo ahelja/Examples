@@ -1,0 +1,965 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1>
+<br><a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockNew" target="doc">CAClockNew</a></tt></dt>
+<dd>Create a new clock object.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockDispose" target="doc">CAClockDispose</a></tt></dt>
+<dd>Dispose a clock object.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockGetPropertyInfo" target="doc">CAClockGetPropertyInfo</a></tt></dt>
+<dd>Gets information about a clock's property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockGetProperty" target="doc">CAClockGetProperty</a></tt></dt>
+<dd>Gets the current value of a clock's property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockSetProperty" target="doc">CAClockSetProperty</a></tt></dt>
+<dd>Changes the value of a clock's property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockAddListener" target="doc">CAClockAddListener</a></tt></dt>
+<dd>Adds a callback function to receive notifications of changes to the clock's
+state.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockRemoveListener" target="doc">CAClockRemoveListener</a></tt></dt>
+<dd>Removes a listener callback function.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockSetCurrentTime" target="doc">CAClockSetCurrentTime</a></tt></dt>
+<dd>Sets the clock's current position on the media timeline.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockGetCurrentTime" target="doc">CAClockGetCurrentTime</a></tt></dt>
+<dd>Obtain the clock's current position on the media timeline.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockGetStartTime" target="doc">CAClockGetStartTime</a></tt></dt>
+<dd>Obtain the position on the media timeline where playback will start,
+or has already started.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockTranslateTime" target="doc">CAClockTranslateTime</a></tt></dt>
+<dd>Convert between time units.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockStart" target="doc">CAClockStart</a></tt></dt>
+<dd>Begin advancing the clock on its media timeline.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockStop" target="doc">CAClockStop</a></tt></dt>
+<dd>Stop advancing the clock on its media timeline.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockArm" target="doc">CAClockArm</a></tt></dt>
+<dd>Allow received sync messages to start the clock.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockDisarm" target="doc">CAClockDisarm</a></tt></dt>
+<dd>Disallow received sync messages from starting the clock.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockSetPlayRate" target="doc">CAClockSetPlayRate</a></tt></dt>
+<dd>Alter the clock's playback rate.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockGetPlayRate" target="doc">CAClockGetPlayRate</a></tt></dt>
+<dd>Obtain the clock's playback rate.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockGetCurrentTempo" target="doc">CAClockGetCurrentTempo</a></tt></dt>
+<dd>Obtain the clock's current musical tempo.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockSetCurrentTempo" target="doc">CAClockSetCurrentTempo</a></tt></dt>
+<dd>Manually override the clock's musical tempo during playback.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockSecondsToSMPTETime" target="doc">CAClockSecondsToSMPTETime</a></tt></dt>
+<dd>Converts seconds to a SMPTE time representation.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockSMPTETimeToSeconds" target="doc">CAClockSMPTETimeToSeconds</a></tt></dt>
+<dd>Converts a SMPTE time representation to seconds.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockBeatsToBarBeatTime" target="doc">CAClockBeatsToBarBeatTime</a></tt></dt>
+<dd>Converts a number of beats to a CABarBeatTime structure.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/CAClockBarBeatTimeToBeats" target="doc">CAClockBarBeatTimeToBeats</a></tt></dt>
+<dd>Converts a CABarBeatTime structure to a number of beats.</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockNew;  name=CAClockNew --><a name="//apple_ref/c/func/CAClockNew"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockNew">CAClockNew</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create a new clock object.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockNew" logicalPath="//apple_ref/c/instm/CAClockNew //apple_ref/c/clm/CAClockNew //apple_ref/c/intfcm/CAClockNew //apple_ref/c/func/CAClockNew" target="_top"><font class="function">CAClockNew</font></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inReservedFlags</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> *<font class="param">outCAClock</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inReservedFlags</i></code></dt>
+<dd>Must be 0.
+<br><br>
+</dd>
+<dt><code><i>outCAClock</i></code></dt>
+<dd>Must be non-null. On successful return, the new clock object.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockDispose;  name=CAClockDispose --><a name="//apple_ref/c/func/CAClockDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockDispose">CAClockDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Dispose a clock object.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockDispose" logicalPath="//apple_ref/c/instm/CAClockDispose //apple_ref/c/clm/CAClockDispose //apple_ref/c/intfcm/CAClockDispose //apple_ref/c/func/CAClockDispose" target="_top"><font class="function">CAClockDispose</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object to be disposed.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockGetPropertyInfo;  name=CAClockGetPropertyInfo --><a name="//apple_ref/c/func/CAClockGetPropertyInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockGetPropertyInfo">CAClockGetPropertyInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets information about a clock's property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockGetPropertyInfo" logicalPath="//apple_ref/c/instm/CAClockGetPropertyInfo //apple_ref/c/clm/CAClockGetPropertyInfo //apple_ref/c/intfcm/CAClockGetPropertyInfo //apple_ref/c/func/CAClockGetPropertyInfo" target="_top"><font class="function">CAClockGetPropertyInfo</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockPropertyID" logicalPath="//apple_ref/c/cl/CAClockPropertyID //apple_ref/c/cl/CAClockPropertyID //apple_ref/c/tdef/CAClockPropertyID //apple_ref/c/tag/CAClockPropertyID" target="_top"><font class="type">CAClockPropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> *<font class="param">outWritable</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property being queried.
+<br><br>
+</dd>
+<dt><code><i>outSize</i></code></dt>
+<dd>If non-null, on exit, this is set to the size of the
+property's value.
+<br><br>
+</dd>
+<dt><code><i>outWritable</i></code></dt>
+<dd>If non-null, on exit, this indicates whether the
+property value is settable.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockGetProperty;  name=CAClockGetProperty --><a name="//apple_ref/c/func/CAClockGetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockGetProperty">CAClockGetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Gets the current value of a clock's property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockGetProperty" logicalPath="//apple_ref/c/instm/CAClockGetProperty //apple_ref/c/clm/CAClockGetProperty //apple_ref/c/intfcm/CAClockGetProperty //apple_ref/c/func/CAClockGetProperty" target="_top"><font class="function">CAClockGetProperty</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockPropertyID" logicalPath="//apple_ref/c/cl/CAClockPropertyID //apple_ref/c/cl/CAClockPropertyID //apple_ref/c/tdef/CAClockPropertyID //apple_ref/c/tag/CAClockPropertyID" target="_top"><font class="type">CAClockPropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioPropertyDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property being fetched.
+<br><br>
+</dd>
+<dt><code><i>ioPropertyDataSize</i></code></dt>
+<dd>On entry, the size (in bytes) of the memory pointed to
+by outPropertyData. On exit, the actual size of the
+property data returned.
+<br><br>
+</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>The value of the property is copied to the memory
+this points to.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockSetProperty;  name=CAClockSetProperty --><a name="//apple_ref/c/func/CAClockSetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSetProperty">CAClockSetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Changes the value of a clock's property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockSetProperty" logicalPath="//apple_ref/c/instm/CAClockSetProperty //apple_ref/c/clm/CAClockSetProperty //apple_ref/c/intfcm/CAClockSetProperty //apple_ref/c/func/CAClockSetProperty" target="_top"><font class="function">CAClockSetProperty</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockPropertyID" logicalPath="//apple_ref/c/cl/CAClockPropertyID //apple_ref/c/cl/CAClockPropertyID //apple_ref/c/tdef/CAClockPropertyID //apple_ref/c/tag/CAClockPropertyID" target="_top"><font class="type">CAClockPropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inPropertyDataSize</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property being set.
+<br><br>
+</dd>
+<dt><code><i>inPropertyDataSize</i></code></dt>
+<dd>The size of the property data, in bytes.
+<br><br>
+</dd>
+<dt><code><i>inPropertyData</i></code></dt>
+<dd>Points to the property's new value.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockAddListener;  name=CAClockAddListener --><a name="//apple_ref/c/func/CAClockAddListener"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockAddListener">CAClockAddListener</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Adds a callback function to receive notifications of changes to the clock's
+state.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockAddListener" logicalPath="//apple_ref/c/instm/CAClockAddListener //apple_ref/c/clm/CAClockAddListener //apple_ref/c/intfcm/CAClockAddListener //apple_ref/c/func/CAClockAddListener" target="_top"><font class="function">CAClockAddListener</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockListenerProc" logicalPath="//apple_ref/c/cl/CAClockListenerProc //apple_ref/c/cl/CAClockListenerProc //apple_ref/c/tdef/CAClockListenerProc" target="_top"><font class="type">CAClockListenerProc</font></a> <font class="param">inListenerProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inUserData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inListenerProc</i></code></dt>
+<dd>The callback function.
+<br><br>
+</dd>
+<dt><code><i>inUserData</i></code></dt>
+<dd>This value is passed to the callback function, in the userData
+parameter.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Note: The CAClockListenerProc may be called on a realtime thread internal to
+the clock object.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockRemoveListener;  name=CAClockRemoveListener --><a name="//apple_ref/c/func/CAClockRemoveListener"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockRemoveListener">CAClockRemoveListener</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Removes a listener callback function.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockRemoveListener" logicalPath="//apple_ref/c/instm/CAClockRemoveListener //apple_ref/c/clm/CAClockRemoveListener //apple_ref/c/intfcm/CAClockRemoveListener //apple_ref/c/func/CAClockRemoveListener" target="_top"><font class="function">CAClockRemoveListener</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockListenerProc" logicalPath="//apple_ref/c/cl/CAClockListenerProc //apple_ref/c/cl/CAClockListenerProc //apple_ref/c/tdef/CAClockListenerProc" target="_top"><font class="type">CAClockListenerProc</font></a> <font class="param">inListenerProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inUserData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inListenerProc</i></code></dt>
+<dd>The callback function.
+<br><br>
+</dd>
+<dt><code><i>inUserData</i></code></dt>
+<dd>The same value as was passed for inUserData when this
+function was registered with CAClockAddListener. (This
+allows a single callback function to be registered more
+than once, with different userData arguments.)
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockSetCurrentTime;  name=CAClockSetCurrentTime --><a name="//apple_ref/c/func/CAClockSetCurrentTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSetCurrentTime">CAClockSetCurrentTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets the clock's current position on the media timeline.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockSetCurrentTime" logicalPath="//apple_ref/c/instm/CAClockSetCurrentTime //apple_ref/c/clm/CAClockSetCurrentTime //apple_ref/c/intfcm/CAClockSetCurrentTime //apple_ref/c/func/CAClockSetCurrentTime" target="_top"><font class="function">CAClockSetCurrentTime</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">inTime</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inTime</i></code></dt>
+<dd>The new time position.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Call this to specify where on the media timeline playback will begin. The
+supplied time must be in seconds, beats, or SMPTE (not host time or audio
+samples). Must only be called when stopped.					
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockGetCurrentTime;  name=CAClockGetCurrentTime --><a name="//apple_ref/c/func/CAClockGetCurrentTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockGetCurrentTime">CAClockGetCurrentTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Obtain the clock's current position on the media timeline.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockGetCurrentTime" logicalPath="//apple_ref/c/instm/CAClockGetCurrentTime //apple_ref/c/clm/CAClockGetCurrentTime //apple_ref/c/intfcm/CAClockGetCurrentTime //apple_ref/c/func/CAClockGetCurrentTime" target="_top"><font class="function">CAClockGetCurrentTime</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockTimeFormat" logicalPath="//apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/tdef/CAClockTimeFormat //apple_ref/c/tag/CAClockTimeFormat" target="_top"><font class="type">CAClockTimeFormat</font></a> <font class="param">inTimeFormat</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">outTime</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inTimeFormat</i></code></dt>
+<dd>Specifies the desired format for outTime.
+<br><br>
+</dd>
+<dt><code><i>outTime</i></code></dt>
+<dd>On exit, the clock's current time position.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockGetStartTime;  name=CAClockGetStartTime --><a name="//apple_ref/c/func/CAClockGetStartTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockGetStartTime">CAClockGetStartTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Obtain the position on the media timeline where playback will start,
+or has already started.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockGetStartTime" logicalPath="//apple_ref/c/instm/CAClockGetStartTime //apple_ref/c/clm/CAClockGetStartTime //apple_ref/c/intfcm/CAClockGetStartTime //apple_ref/c/func/CAClockGetStartTime" target="_top"><font class="function">CAClockGetStartTime</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockTimeFormat" logicalPath="//apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/tdef/CAClockTimeFormat //apple_ref/c/tag/CAClockTimeFormat" target="_top"><font class="type">CAClockTimeFormat</font></a> <font class="param">inTimeFormat</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">outTime</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inTimeFormat</i></code></dt>
+<dd>Specifies the desired format for outTime.
+<br><br>
+</dd>
+<dt><code><i>outTime</i></code></dt>
+<dd>On exit, the clock's start time position.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockTranslateTime;  name=CAClockTranslateTime --><a name="//apple_ref/c/func/CAClockTranslateTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockTranslateTime">CAClockTranslateTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Convert between time units.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockTranslateTime" logicalPath="//apple_ref/c/instm/CAClockTranslateTime //apple_ref/c/clm/CAClockTranslateTime //apple_ref/c/intfcm/CAClockTranslateTime //apple_ref/c/func/CAClockTranslateTime" target="_top"><font class="function">CAClockTranslateTime</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">inTime</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Enums/Enums.html#//apple_ref/c/tag/CAClockTimeFormat" logicalPath="//apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/cl/CAClockTimeFormat //apple_ref/c/tdef/CAClockTimeFormat //apple_ref/c/tag/CAClockTimeFormat" target="_top"><font class="type">CAClockTimeFormat</font></a> <font class="param">inOutputTimeFormat</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">outTime</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inTime</i></code></dt>
+<dd>The time to be converted.
+<br><br>
+</dd>
+<dt><code><i>inOutputTimeFormat</i></code></dt>
+<dd>Specifies the desired format for outTime
+<br><br>
+</dd>
+<dt><code><i>outTime</i></code></dt>
+<dd>On exit, a time corresponding to inTime, converted to the desired
+time format.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockStart;  name=CAClockStart --><a name="//apple_ref/c/func/CAClockStart"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockStart">CAClockStart</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Begin advancing the clock on its media timeline.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockStart" logicalPath="//apple_ref/c/instm/CAClockStart //apple_ref/c/clm/CAClockStart //apple_ref/c/intfcm/CAClockStart //apple_ref/c/func/CAClockStart" target="_top"><font class="function">CAClockStart</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockStop;  name=CAClockStop --><a name="//apple_ref/c/func/CAClockStop"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockStop">CAClockStop</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Stop advancing the clock on its media timeline.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockStop" logicalPath="//apple_ref/c/instm/CAClockStop //apple_ref/c/clm/CAClockStop //apple_ref/c/intfcm/CAClockStop //apple_ref/c/func/CAClockStop" target="_top"><font class="function">CAClockStop</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockArm;  name=CAClockArm --><a name="//apple_ref/c/func/CAClockArm"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockArm">CAClockArm</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Allow received sync messages to start the clock.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockArm" logicalPath="//apple_ref/c/instm/CAClockArm //apple_ref/c/clm/CAClockArm //apple_ref/c/intfcm/CAClockArm //apple_ref/c/func/CAClockArm" target="_top"><font class="function">CAClockArm</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>If a clock is slaved to an external transport (e.g. MIDI Time Code), 
+call this to indicate that the client is ready to start its transport in response
+to the external transport having started.
+<br><br>
+The external time source will set the clock's start position and start
+the clock.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockDisarm;  name=CAClockDisarm --><a name="//apple_ref/c/func/CAClockDisarm"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockDisarm">CAClockDisarm</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Disallow received sync messages from starting the clock.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockDisarm" logicalPath="//apple_ref/c/instm/CAClockDisarm //apple_ref/c/clm/CAClockDisarm //apple_ref/c/intfcm/CAClockDisarm //apple_ref/c/func/CAClockDisarm" target="_top"><font class="function">CAClockDisarm</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p><br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockSetPlayRate;  name=CAClockSetPlayRate --><a name="//apple_ref/c/func/CAClockSetPlayRate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSetPlayRate">CAClockSetPlayRate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Alter the clock's playback rate.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockSetPlayRate" logicalPath="//apple_ref/c/instm/CAClockSetPlayRate //apple_ref/c/clm/CAClockSetPlayRate //apple_ref/c/intfcm/CAClockSetPlayRate //apple_ref/c/func/CAClockSetPlayRate" target="_top"><font class="function">CAClockSetPlayRate</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float64 //apple_ref/c/cl/Float64 //apple_ref/c/tdef/Float64 //apple_ref/c/tag/Float64 //apple_ref/c/econst/Float64 //apple_ref/c/struct/Float64 //apple_ref/c/clconst/Float64" --><font class="type">Float64</font><!-- /a --> <font class="param">inPlayRate</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inPlayRate</i></code></dt>
+<dd>The clock's desired play rate.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Adjusts the ratio between the timebase and media time; e.g. at 0.5, the 
+media time will move half as quickly as timebase time.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockGetPlayRate;  name=CAClockGetPlayRate --><a name="//apple_ref/c/func/CAClockGetPlayRate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockGetPlayRate">CAClockGetPlayRate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Obtain the clock's playback rate.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockGetPlayRate" logicalPath="//apple_ref/c/instm/CAClockGetPlayRate //apple_ref/c/clm/CAClockGetPlayRate //apple_ref/c/intfcm/CAClockGetPlayRate //apple_ref/c/func/CAClockGetPlayRate" target="_top"><font class="function">CAClockGetPlayRate</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Float64 //apple_ref/c/cl/Float64 //apple_ref/c/tdef/Float64 //apple_ref/c/tag/Float64 //apple_ref/c/econst/Float64 //apple_ref/c/struct/Float64 //apple_ref/c/clconst/Float64" --><font class="type">Float64</font><!-- /a --> *<font class="param">outPlayRate</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>outPlayRate</i></code></dt>
+<dd>On exit, the clock's playback rate.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Returns the clock's current play rate. If the clock is internally synced,
+this will be the last rate set by CAClockSetPlayRate. If the clock is
+externally synced, it will be the rate of the external sync source, where<br>
+timebase. (2.0 means twice as fast).
+
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockGetCurrentTempo;  name=CAClockGetCurrentTempo --><a name="//apple_ref/c/func/CAClockGetCurrentTempo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockGetCurrentTempo">CAClockGetCurrentTempo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Obtain the clock's current musical tempo.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockGetCurrentTempo" logicalPath="//apple_ref/c/instm/CAClockGetCurrentTempo //apple_ref/c/clm/CAClockGetCurrentTempo //apple_ref/c/intfcm/CAClockGetCurrentTempo //apple_ref/c/func/CAClockGetCurrentTempo" target="_top"><font class="function">CAClockGetCurrentTempo</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockTempo" logicalPath="//apple_ref/c/cl/CAClockTempo //apple_ref/c/cl/CAClockTempo //apple_ref/c/tdef/CAClockTempo" target="_top"><font class="type">CAClockTempo</font></a> *<font class="param">outTempo</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">outTimestamp</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>outTempo</i></code></dt>
+<dd>On exit, the current tempo.
+<br><br>
+</dd>
+<dt><code><i>outTimestamp</i></code></dt>
+<dd>If non-null, on exit, the time at which the tempo last changed.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Returns the current instantaneous tempo and a timestamp indicating where on the
+timeline the tempo most recently changed.
+<br><br>
+If the clock is externally synced, the returned tempo will not reflect the
+effective tempo; this routine always reflects the client-specified tempo. To
+obtain the effective tempo, multiply the current tempo by the current play
+rate.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockSetCurrentTempo;  name=CAClockSetCurrentTempo --><a name="//apple_ref/c/func/CAClockSetCurrentTempo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSetCurrentTempo">CAClockSetCurrentTempo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Manually override the clock's musical tempo during playback.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockSetCurrentTempo" logicalPath="//apple_ref/c/instm/CAClockSetCurrentTempo //apple_ref/c/clm/CAClockSetCurrentTempo //apple_ref/c/intfcm/CAClockSetCurrentTempo //apple_ref/c/func/CAClockSetCurrentTempo" target="_top"><font class="function">CAClockSetCurrentTempo</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockTempo" logicalPath="//apple_ref/c/cl/CAClockTempo //apple_ref/c/cl/CAClockTempo //apple_ref/c/tdef/CAClockTempo" target="_top"><font class="type">CAClockTempo</font></a> <font class="param">inTempo</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CAClockTime" logicalPath="//apple_ref/c/cl/CAClockTime //apple_ref/c/cl/CAClockTime //apple_ref/c/tdef/CAClockTime //apple_ref/c/tag/CAClockTime" target="_top"><font class="type">CAClockTime</font></a> *<font class="param">inTimestamp</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inTempo</i></code></dt>
+<dd>The new desired tempo.
+<br><br>
+</dd>
+<dt><code><i>inTimestamp</i></code></dt>
+<dd>Specifies a precise point on the timeline where the tempo change is to
+take effect. If null, the tempo change takes effect immediately.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code. If this call is made while stopped,
+kCAClock_CannotSetTimeError is returned.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Effects a manual override of the tempo map while running. After stopping and
+restarting, the original tempo map will be used again.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockSecondsToSMPTETime;  name=CAClockSecondsToSMPTETime --><a name="//apple_ref/c/func/CAClockSecondsToSMPTETime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSecondsToSMPTETime">CAClockSecondsToSMPTETime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts seconds to a SMPTE time representation.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockSecondsToSMPTETime" logicalPath="//apple_ref/c/instm/CAClockSecondsToSMPTETime //apple_ref/c/clm/CAClockSecondsToSMPTETime //apple_ref/c/intfcm/CAClockSecondsToSMPTETime //apple_ref/c/func/CAClockSecondsToSMPTETime" target="_top"><font class="function">CAClockSecondsToSMPTETime</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CAClockSeconds //apple_ref/c/cl/CAClockSeconds //apple_ref/c/tdef/CAClockSeconds //apple_ref/c/tag/CAClockSeconds //apple_ref/c/econst/CAClockSeconds //apple_ref/c/struct/CAClockSeconds //apple_ref/c/clconst/CAClockSeconds" --><font class="type">CAClockSeconds</font><!-- /a --> <font class="param">inSeconds</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="param">inSubframeDivisor</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SMPTETime //apple_ref/c/cl/SMPTETime //apple_ref/c/tdef/SMPTETime //apple_ref/c/tag/SMPTETime //apple_ref/c/econst/SMPTETime //apple_ref/c/struct/SMPTETime //apple_ref/c/clconst/SMPTETime" --><font class="type">SMPTETime</font><!-- /a --> *<font class="param">outSMPTETime</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inSeconds</i></code></dt>
+<dd>The number of seconds to be converted (e.g. 3600 = 1 hour).
+<br><br>
+</dd>
+<dt><code><i>inSubframeDivisor</i></code></dt>
+<dd>The number of subframes per frame desired in outSMPTETime.
+<br><br>
+</dd>
+<dt><code><i>outSMPTETime</i></code></dt>
+<dd>On exit, the SMPTE time corresponding to inSeconds.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Converts seconds on the media timeline to a SMPTE time. The clock's current
+SMPTE format and offset must be set appropriately.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockSMPTETimeToSeconds;  name=CAClockSMPTETimeToSeconds --><a name="//apple_ref/c/func/CAClockSMPTETimeToSeconds"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockSMPTETimeToSeconds">CAClockSMPTETimeToSeconds</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a SMPTE time representation to seconds.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockSMPTETimeToSeconds" logicalPath="//apple_ref/c/instm/CAClockSMPTETimeToSeconds //apple_ref/c/clm/CAClockSMPTETimeToSeconds //apple_ref/c/intfcm/CAClockSMPTETimeToSeconds //apple_ref/c/func/CAClockSMPTETimeToSeconds" target="_top"><font class="function">CAClockSMPTETimeToSeconds</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/SMPTETime //apple_ref/c/cl/SMPTETime //apple_ref/c/tdef/SMPTETime //apple_ref/c/tag/SMPTETime //apple_ref/c/econst/SMPTETime //apple_ref/c/struct/SMPTETime //apple_ref/c/clconst/SMPTETime" --><font class="type">SMPTETime</font><!-- /a --> *<font class="param">inSMPTETime</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CAClockSeconds //apple_ref/c/cl/CAClockSeconds //apple_ref/c/tdef/CAClockSeconds //apple_ref/c/tag/CAClockSeconds //apple_ref/c/econst/CAClockSeconds //apple_ref/c/struct/CAClockSeconds //apple_ref/c/clconst/CAClockSeconds" --><font class="type">CAClockSeconds</font><!-- /a --> *<font class="param">outSeconds</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inSMPTETime</i></code></dt>
+<dd>The SMPTE time to be converted to seconds.
+<br><br>
+</dd>
+<dt><code><i>outSeconds</i></code></dt>
+<dd>On exit, the number of seconds corresponding to inSMPTETime.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Converts SMPTE time to seconds on the media timeline. The clock's current
+SMPTE format and offset must be set appropriately.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockBeatsToBarBeatTime;  name=CAClockBeatsToBarBeatTime --><a name="//apple_ref/c/func/CAClockBeatsToBarBeatTime"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockBeatsToBarBeatTime">CAClockBeatsToBarBeatTime</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a number of beats to a CABarBeatTime structure.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockBeatsToBarBeatTime" logicalPath="//apple_ref/c/instm/CAClockBeatsToBarBeatTime //apple_ref/c/clm/CAClockBeatsToBarBeatTime //apple_ref/c/intfcm/CAClockBeatsToBarBeatTime //apple_ref/c/func/CAClockBeatsToBarBeatTime" target="_top"><font class="function">CAClockBeatsToBarBeatTime</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockBeats" logicalPath="//apple_ref/c/cl/CAClockBeats //apple_ref/c/cl/CAClockBeats //apple_ref/c/tdef/CAClockBeats" target="_top"><font class="type">CAClockBeats</font></a> <font class="param">inBeats</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="param">inSubbeatDivisor</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CABarBeatTime" logicalPath="//apple_ref/c/cl/CABarBeatTime //apple_ref/c/cl/CABarBeatTime //apple_ref/c/tdef/CABarBeatTime //apple_ref/c/tag/CABarBeatTime" target="_top"><font class="type">CABarBeatTime</font></a> *<font class="param">outBarBeatTime</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inBeats</i></code></dt>
+<dd>The absolute beat count to be converted.
+<br><br>
+</dd>
+<dt><code><i>inSubbeatDivisor</i></code></dt>
+<dd>The number of units per beat.
+<br><br>
+</dd>
+<dt><code><i>outBarBeatTime</i></code></dt>
+<dd>On exit, the bar/beat/subbeat time corresponding to inBeats.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Converts a beat position on the media timeline to a CABarBeatTime, using the
+clock's meter track. Examples using 4/4 time and a subbeat divisor of 480:
+</p>
+<table border="1">
+<tr>
+<th>inBeats</th>
+<th>outBarBeatTime: bars . beats . units</th>
+</tr>
+<tr>
+<td align="center">0</td>		<td align="center">1.1.0</td>
+</tr>
+<tr>
+<td align="center">1</td>		<td align="center">1.2.0</td>
+</tr>
+<tr>
+<td align="center">4</td>		<td align="center">2.1.0</td>
+</tr>
+<tr>
+<td align="center">4.5</td>		<td align="center">2.1.240</td>
+</tr>
+</table>
+<br><br><dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/CAClockBarBeatTimeToBeats;  name=CAClockBarBeatTimeToBeats --><a name="//apple_ref/c/func/CAClockBarBeatTimeToBeats"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="CAClockBarBeatTimeToBeats">CAClockBarBeatTimeToBeats</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a CABarBeatTime structure to a number of beats.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Functions/Functions.html#//apple_ref/c/func/CAClockBarBeatTimeToBeats" logicalPath="//apple_ref/c/instm/CAClockBarBeatTimeToBeats //apple_ref/c/clm/CAClockBarBeatTimeToBeats //apple_ref/c/intfcm/CAClockBarBeatTimeToBeats //apple_ref/c/func/CAClockBarBeatTimeToBeats" target="_top"><font class="function">CAClockBarBeatTimeToBeats</font></a>(
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockRef" logicalPath="//apple_ref/c/cl/CAClockRef //apple_ref/c/cl/CAClockRef //apple_ref/c/tdef/CAClockRef" target="_top"><font class="type">CAClockRef</font></a> <font class="param">inCAClock</font>, 
+    <font class="keyword">const</font> <a href="../../../AudioToolbox/CoreAudioClock/index.html?Structs/Structs.html#//apple_ref/c/tag/CABarBeatTime" logicalPath="//apple_ref/c/cl/CABarBeatTime //apple_ref/c/cl/CABarBeatTime //apple_ref/c/tdef/CABarBeatTime //apple_ref/c/tag/CABarBeatTime" target="_top"><font class="type">CABarBeatTime</font></a> *<font class="param">inBarBeatTime</font>, 
+    <a href="../../../AudioToolbox/CoreAudioClock/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/CAClockBeats" logicalPath="//apple_ref/c/cl/CAClockBeats //apple_ref/c/cl/CAClockBeats //apple_ref/c/tdef/CAClockBeats" target="_top"><font class="type">CAClockBeats</font></a> *<font class="param">outBeats</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inCAClock</i></code></dt>
+<dd>The clock object.
+<br><br>
+</dd>
+<dt><code><i>inBarBeatTime</i></code></dt>
+<dd>The bar/beat/subunit time to be converted to beats.
+<br><br>
+</dd>
+<dt><code><i>outBeats</i></code></dt>
+<dd>On exit, the number of absolute beats corresponding to inBarBeatTime.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus error code.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Converts a CABarBeatTime structure (bars/beats/subbeats) to a beat
+position, using the clock's meter track.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

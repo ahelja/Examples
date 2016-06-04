@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Structs</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1><br>
+<hr><a name="//apple_ref/c/tag/AudioBuffer"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioBuffer">AudioBuffer</a></h2>
+</td></tr></table><hr>A structure to hold a buffer of audio data.
+
+<blockquote><pre>
+struct AudioBuffer {
+    UInt32  mNumberChannels;
+    UInt32  mDataByteSize;
+    void*   mData;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mNumberChannels</tt></dt><dd>The number of interleaved channels in the buffer.</dd>
+<dt><tt>mDataByteSize</tt></dt><dd>The number of bytes in the buffer pointed at by mData.</dd>
+<dt><tt>mData</tt></dt><dd>A pointer to the buffer of audio data.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioBufferList"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioBufferList">AudioBufferList</a></h2>
+</td></tr></table><hr>A variable length array of AudioBuffer structures.
+
+<blockquote><pre>
+struct AudioBufferList {
+    UInt32      mNumberBuffers;
+    AudioBuffer mBuffers[kVariableLengthArray];
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mNumberBuffers</tt></dt><dd>The number of AudioBuffers in the mBuffers array.</dd>
+<dt><tt>mBuffers</tt></dt><dd>A variable length array of AudioBuffers.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioChannelDescription"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioChannelDescription">AudioChannelDescription</a></h2>
+</td></tr></table><hr>This structure describes a single channel.
+
+<blockquote><pre>
+struct AudioChannelDescription {
+    AudioChannelLabel   mChannelLabel;
+    UInt32              mChannelFlags;
+    Float32             mCoordinates[3];
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mChannelLabel</tt></dt><dd>The AudioChannelLabel that describes the channel.</dd>
+<dt><tt>mChannelFlags</tt></dt><dd>Flags that control the interpretation of mCoordinates.</dd>
+<dt><tt>mCoordinates</tt></dt><dd>An ordered triple that specifies a precise speaker location.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioChannelLayout"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioChannelLayout">AudioChannelLayout</a></h2>
+</td></tr></table><hr>This structure is used to specify channel layouts in files and hardware.
+
+<blockquote><pre>
+struct AudioChannelLayout {
+    AudioChannelLayoutTag       mChannelLayoutTag;
+    UInt32                      mChannelBitmap;
+    UInt32                      mNumberChannelDescriptions;
+    AudioChannelDescription     mChannelDescriptions[kVariableLengthArray];
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mChannelLayoutTag</tt></dt><dd>The AudioChannelLayoutTag that indicates the layout.</dd>
+<dt><tt>mChannelBitmap</tt></dt><dd>If mChannelLayoutTag is set to kAudioChannelLayoutTag_UseChannelBitmap, this
+field is the channel usage bitmap.</dd>
+<dt><tt>mNumberChannelDescriptions</tt></dt><dd>The number of items in the mChannelDescriptions array.</dd>
+<dt><tt>mChannelDescriptions</tt></dt><dd>A variable length array of AudioChannelDescriptions that describe the
+layout.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioClassDescription"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioClassDescription">AudioClassDescription</a></h2>
+</td></tr></table><hr>This structure is used to describe codecs installed on the system.
+
+<blockquote><pre>
+struct AudioClassDescription {
+    OSType  mType;
+    OSType  mSubType;
+    OSType  mManufacturer;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mType</tt></dt><dd>The four char code codec type.</dd>
+<dt><tt>mSubType</tt></dt><dd>The four char code codec subtype.</dd>
+<dt><tt>mManufacturer</tt></dt><dd>The four char code codec manufacturer.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioStreamBasicDescription"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamBasicDescription">AudioStreamBasicDescription</a></h2>
+</td></tr></table><hr>This structure encapsulates all the information for describing the basic
+format properties of a stream of audio data.
+
+<blockquote><pre>
+struct AudioStreamBasicDescription {
+    Float64 mSampleRate;
+    UInt32  mFormatID;
+    UInt32  mFormatFlags;
+    UInt32  mBytesPerPacket;
+    UInt32  mFramesPerPacket;
+    UInt32  mBytesPerFrame;
+    UInt32  mChannelsPerFrame;
+    UInt32  mBitsPerChannel;
+    UInt32  mReserved;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>This structure is sufficient to describe any constant bit rate format that  has
+channels that are the same size. Extensions are required for variable bit rate
+data and for constant bit rate data where the channels have unequal sizes.
+However, where applicable, the appropriate fields will be filled out correctly
+for these kinds of formats (the extra data is provided via separate properties).
+In all fields, a value of 0 indicates that the field is either unknown, not
+applicable or otherwise is inapproprate for the format and should be ignored.
+Note that 0 is still a valid value for most formats in the mFormatFlags field.
+<br><br>
+In audio data a frame is one sample across all channels. In non-interleaved
+audio, the per frame fields identify one channel. In interleaved audio, the per
+frame fields identify the set of n channels. In uncompressed audio, a Packet is
+one frame, (mFramesPerPacket == 1). In compressed audio, a Packet is an
+indivisible chunk of compressed data, for example an AAC packet will contain
+1024 sample frames.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mSampleRate</tt></dt><dd>The number of sample frames per second of the data in the stream.</dd>
+<dt><tt>mFormatID</tt></dt><dd>A four char code indicating the general kind of data in the stream.</dd>
+<dt><tt>mFormatFlags</tt></dt><dd>Flags specific to each format.</dd>
+<dt><tt>mBytesPerPacket</tt></dt><dd>The number of bytes in a packet of data.</dd>
+<dt><tt>mFramesPerPacket</tt></dt><dd>The number of sample frames in each packet of data.</dd>
+<dt><tt>mBytesPerFrame</tt></dt><dd>The number of bytes in a single sample frame of data.</dd>
+<dt><tt>mChannelsPerFrame</tt></dt><dd>The number of channels in each frame of data.</dd>
+<dt><tt>mBitsPerChannel</tt></dt><dd>The number of bits of sample data for each channel in a frame of data.</dd>
+<dt><tt>mReserved</tt></dt><dd>Pads the structure out to force an even 8 byte alignment.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioStreamPacketDescription"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamPacketDescription">AudioStreamPacketDescription</a></h2>
+</td></tr></table><hr>This structure describes the packet layout of a buffer of data where the size of
+each packet may not be the same or where there is extraneous data between
+packets.
+
+<blockquote><pre>
+struct  AudioStreamPacketDescription {
+    SInt64  mStartOffset;
+    UInt32  mVariableFramesInPacket;
+    UInt32  mDataByteSize;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mStartOffset</tt></dt><dd>The number of bytes from the start of the buffer to the beginning of the
+packet.</dd>
+<dt><tt>mVariableFramesInPacket</tt></dt><dd>The number of sample frames of data in the packet. For formats with a
+constant number of frames per packet, this field is set to 0.</dd>
+<dt><tt>mDataByteSize</tt></dt><dd>The number of bytes in the packet.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioTimeStamp"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioTimeStamp">AudioTimeStamp</a></h2>
+</td></tr></table><hr>A strucutre that holds different representations of the same point in time.
+
+<blockquote><pre>
+struct AudioTimeStamp {
+    Float64         mSampleTime;
+    UInt64          mHostTime;
+    Float64         mRateScalar;
+    UInt64          mWordClockTime;
+    SMPTETime       mSMPTETime;
+    UInt32          mFlags;
+    UInt32          mReserved;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mSampleTime</tt></dt><dd>The absolute sample frame time.</dd>
+<dt><tt>mHostTime</tt></dt><dd>The host machine's time base (see <CoreAudio/HostTime.h>).</dd>
+<dt><tt>mRateScalar</tt></dt><dd>The ratio of actual host ticks per sample frame to the nominal host ticks
+per sample frame.</dd>
+<dt><tt>mWordClockTime</tt></dt><dd>The word clock time.</dd>
+<dt><tt>mSMPTETime</tt></dt><dd>The SMPTE time.</dd>
+<dt><tt>mFlags</tt></dt><dd>A set of flags indicating which representations of the time are valid.</dd>
+<dt><tt>mReserved</tt></dt><dd>Pads the structure out to force an even 8 byte alignment.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioValueRange"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioValueRange">AudioValueRange</a></h2>
+</td></tr></table><hr>This structure holds a pair of numbers that represent a continuous range of
+values.
+
+<blockquote><pre>
+struct AudioValueRange {
+    Float64 mMinimum;
+    Float64 mMaximum;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mMinimum</tt></dt><dd>The minimum value.</dd>
+<dt><tt>mMaximum</tt></dt><dd>The maximum value.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/AudioValueTranslation"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioValueTranslation">AudioValueTranslation</a></h2>
+</td></tr></table><hr>This stucture holds the buffers necessary for translation operations.
+
+<blockquote><pre>
+struct AudioValueTranslation {
+    void*   mInputData;
+    UInt32  mInputDataSize;
+    void*   mOutputData;
+    UInt32  mOutputDataSize;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mInputData</tt></dt><dd>The buffer containing the data to be translated.</dd>
+<dt><tt>mInputDataSize</tt></dt><dd>The number of bytes in the buffer pointed at by mInputData.</dd>
+<dt><tt>mOutputData</tt></dt><dd>The buffer to hold the result of the translation.</dd>
+<dt><tt>mOutputDataSize</tt></dt><dd>The number of bytes in the buffer pointed at by mOutputData.</dd>
+</dl>
+</blockquote>
+<hr><a name="//apple_ref/c/tag/SMPTETime"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="SMPTETime">SMPTETime</a></h2>
+</td></tr></table><hr>A structure for holding a SMPTE time.
+
+<blockquote><pre>
+struct SMPTETime {
+    SInt16  mSubframes;
+    SInt16  mSubframeDivisor;
+    UInt32  mCounter;
+    UInt32  mType;
+    UInt32  mFlags;
+    SInt16  mHours;
+    SInt16  mMinutes;
+    SInt16  mSeconds;
+    SInt16  mFrames;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mSubframes</tt></dt><dd>The number of subframes in the full message.</dd>
+<dt><tt>mSubframeDivisor</tt></dt><dd>The number of subframes per frame (typically 80).</dd>
+<dt><tt>mCounter</tt></dt><dd>The total number of messages received.</dd>
+<dt><tt>mType</tt></dt><dd>The kind of SMPTE time using the SMPTE time type constants.</dd>
+<dt><tt>mFlags</tt></dt><dd>A set of flags that indicate the SMPTE state.</dd>
+<dt><tt>mHours</tt></dt><dd>The number of hourse in the full message.</dd>
+<dt><tt>mMinutes</tt></dt><dd>The number of minutes in the full message.</dd>
+<dt><tt>mSeconds</tt></dt><dd>The number of seconds in the full message.</dd>
+<dt><tt>mFrames</tt></dt><dd>The number of frames in the full message.</dd>
+</dl>
+</blockquote>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

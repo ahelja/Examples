@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B92001BDF0A11CA292A /* FileChooserDemo.java in Sources */ = {isa = PBXBuildFile; fileRef = 010341B7FEEF030011DB9C8B /* FileChooserDemo.java */; };
+		F536FFB90395762A01C917B9 /* gifIcon.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E1195A0340E4000158D420 /* gifIcon.gif */; settings = {JAVA_ARCHIVE_SUBDIR = images; }; };
+		F536FFBA0395762A01C917B9 /* jpgIcon.jpg in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E1195B0340E4000158D420 /* jpgIcon.jpg */; settings = {JAVA_ARCHIVE_SUBDIR = images; }; };
+		F5E1195D0340E4000158D420 /* ExampleFileFilter.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119570340E4000158D420 /* ExampleFileFilter.java */; };
+		F5E1195E0340E4000158D420 /* ExampleFileView.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E119580340E4000158D420 /* ExampleFileView.java */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B95001BDF0A11CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B96001BDF0A11CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		010341B7FEEF030011DB9C8B /* FileChooserDemo.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = FileChooserDemo.java; sourceTree = "<group>"; };
+		6A8008AE02C7B68F0CC91562 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		6A9ED92C02B0286D0CC91562 /* FileChooserDemo.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = FileChooserDemo.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E119570340E4000158D420 /* ExampleFileFilter.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ExampleFileFilter.java; sourceTree = "<group>"; };
+		F5E119580340E4000158D420 /* ExampleFileView.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = ExampleFileView.java; sourceTree = "<group>"; };
+		F5E1195A0340E4000158D420 /* gifIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifIcon.gif; sourceTree = "<group>"; };
+		F5E1195B0340E4000158D420 /* jpgIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jpgIcon.jpg; sourceTree = "<group>"; };
+		F5E1195C0340E4000158D420 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B94001BDF0A11CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				010341B7FEEF030011DB9C8B /* FileChooserDemo.java */,
+				F5E119570340E4000158D420 /* ExampleFileFilter.java */,
+				F5E119580340E4000158D420 /* ExampleFileView.java */,
+				F5E1195C0340E4000158D420 /* README.txt */,
+				6A8008AE02C7B68F0CC91562 /* Manifest */,
+				F5E119590340E4000158D420 /* images */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A9ED92C02B0286D0CC91562 /* FileChooserDemo.jar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5E119590340E4000158D420 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F5E1195A0340E4000158D420 /* gifIcon.gif */,
+				F5E1195B0340E4000158D420 /* jpgIcon.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B93001BDF0A11CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F536FFB90395762A01C917B9 /* gifIcon.gif in JavaArchive */,
+				F536FFBA0395762A01C917B9 /* jpgIcon.jpg in JavaArchive */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23435308DF2E98008B0BD4 /* Build configuration list for PBXProject "FileChooserDemo" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B95001BDF0A11CA292A /* Development */,
+				130F8B96001BDF0A11CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B90001BDF0A11CA292A /* FileChooserDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B91001BDF0A11CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B92001BDF0A11CA292A /* FileChooserDemo.java in Sources */,
+				F5E1195D0340E4000158D420 /* ExampleFileFilter.java in Sources */,
+				F5E1195E0340E4000158D420 /* ExampleFileView.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B90001BDF0A11CA292A /* FileChooserDemo */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23434F08DF2E98008B0BD4 /* Build configuration list for PBXToolTarget "FileChooserDemo" */;
+			buildPhases = (
+				130F8B91001BDF0A11CA292A /* Sources */,
+				130F8B93001BDF0A11CA292A /* JavaArchive */,
+				130F8B94001BDF0A11CA292A /* Frameworks */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/FileChooserDemo;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = FileChooserDemo;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = FileChooserDemo;
+			productInstallPath = /Developer/Examples/Java/JFC/FileChooserDemo;
+			productName = FileChooserDemo;
+			productReference = 6A9ED92C02B0286D0CC91562 /* FileChooserDemo.jar */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23435008DF2E98008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/FileChooserDemo;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = FileChooserDemo;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23435108DF2E98008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/FileChooserDemo;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = FileChooserDemo;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23435408DF2E98008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23435508DF2E98008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23434F08DF2E98008B0BD4 /* Build configuration list for PBXToolTarget "FileChooserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23435008DF2E98008B0BD4 /* Debug */,
+				4C23435108DF2E98008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23435308DF2E98008B0BD4 /* Build configuration list for PBXProject "FileChooserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23435408DF2E98008B0BD4 /* Debug */,
+				4C23435508DF2E98008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

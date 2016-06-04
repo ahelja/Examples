@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DF7B3AC07B02EE000D60FB6 /* FWUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 05662638FF8BF5E611CE2050 /* FWUtil.h */; };
+		4DF7B3AD07B02EE000D60FB6 /* FWUtilGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 05662642FF8BF69A11CE2050 /* FWUtilGlobals.h */; };
+		4DF7B3AE07B02EE000D60FB6 /* FWUtilCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 05662654FF8D335511CE2050 /* FWUtilCommand.h */; };
+		4DF7B3AF07B02EE000D60FB6 /* FWUtilException.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D11CD6FFA89E3C7F000001 /* FWUtilException.h */; };
+		4DF7B3B007B02EE000D60FB6 /* FWUtilThreads.h in Headers */ = {isa = PBXBuildFile; fileRef = F53E3FAD013D99A401CE2124 /* FWUtilThreads.h */; };
+		4DF7B3B107B02EE000D60FB6 /* FWLib_Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7041E4060FA8E800934A2E /* FWLib_Command.h */; };
+		4DF7B3B207B02EE000D60FB6 /* FWLib_Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7041E6060FA8E800934A2E /* FWLib_Device.h */; };
+		4DF7B3B307B02EE000D60FB6 /* FWLib_Matcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7041E8060FA8E800934A2E /* FWLib_Matcher.h */; };
+		4DF7B3B507B02EE000D60FB6 /* FWUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05662637FF8BF5E611CE2050 /* FWUtil.cpp */; settings = {ATTRIBUTES = (); }; };
+		4DF7B3B607B02EE000D60FB6 /* FWUtilGlobals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05662644FF8BF6C911CE2050 /* FWUtilGlobals.cpp */; settings = {ATTRIBUTES = (); }; };
+		4DF7B3B707B02EE000D60FB6 /* FWUtilException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00D11CD7FFA89E3C7F000001 /* FWUtilException.cpp */; settings = {ATTRIBUTES = (); }; };
+		4DF7B3B807B02EE000D60FB6 /* FWUtilCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05662656FF8D33C911CE2050 /* FWUtilCommand.cpp */; };
+		4DF7B3B907B02EE000D60FB6 /* FWUtilThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F53E3FAE013D99A401CE2124 /* FWUtilThreads.cpp */; };
+		4DF7B3BA07B02EE000D60FB6 /* FWLib_Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D7041E3060FA8E800934A2E /* FWLib_Command.cpp */; };
+		4DF7B3BB07B02EE000D60FB6 /* FWLib_Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D7041E5060FA8E800934A2E /* FWLib_Device.cpp */; };
+		4DF7B3BC07B02EE000D60FB6 /* FWLib_Matcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D7041E7060FA8E800934A2E /* FWLib_Matcher.cpp */; };
+		4DF7B3BE07B02EE000D60FB6 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0566263EFF8BF62B11CE2050 /* CoreFoundation.framework */; };
+		4DF7B3BF07B02EE000D60FB6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0566263FFF8BF62B11CE2050 /* IOKit.framework */; };
+		4DF7B3C007B02EE000D60FB6 /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05662648FF8D14FB11CE2050 /* System.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		0566263BFF8BF5E611CE2050 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "\U0001-g";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		0566263CFF8BF5E611CE2050 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				STRIPFLAGS = "-S";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		00D11CD6FFA89E3C7F000001 /* FWUtilException.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWUtilException.h; sourceTree = "<group>"; };
+		00D11CD7FFA89E3C7F000001 /* FWUtilException.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWUtilException.cpp; sourceTree = "<group>"; };
+		05662637FF8BF5E611CE2050 /* FWUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWUtil.cpp; sourceTree = "<group>"; };
+		05662638FF8BF5E611CE2050 /* FWUtil.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWUtil.h; sourceTree = "<group>"; };
+		0566263EFF8BF62B11CE2050 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		0566263FFF8BF62B11CE2050 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		05662642FF8BF69A11CE2050 /* FWUtilGlobals.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWUtilGlobals.h; sourceTree = "<group>"; };
+		05662644FF8BF6C911CE2050 /* FWUtilGlobals.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWUtilGlobals.cpp; sourceTree = "<group>"; };
+		05662648FF8D14FB11CE2050 /* System.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = System.framework; path = /System/Library/Frameworks/System.framework; sourceTree = "<absolute>"; };
+		05662654FF8D335511CE2050 /* FWUtilCommand.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWUtilCommand.h; sourceTree = "<group>"; };
+		05662656FF8D33C911CE2050 /* FWUtilCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWUtilCommand.cpp; sourceTree = "<group>"; };
+		4D7041E3060FA8E800934A2E /* FWLib_Command.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = FWLib_Command.cpp; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Command.cpp; sourceTree = "<absolute>"; };
+		4D7041E4060FA8E800934A2E /* FWLib_Command.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FWLib_Command.h; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Command.h; sourceTree = "<absolute>"; };
+		4D7041E5060FA8E800934A2E /* FWLib_Device.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = FWLib_Device.cpp; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Device.cpp; sourceTree = "<absolute>"; };
+		4D7041E6060FA8E800934A2E /* FWLib_Device.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FWLib_Device.h; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Device.h; sourceTree = "<absolute>"; };
+		4D7041E7060FA8E800934A2E /* FWLib_Matcher.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = FWLib_Matcher.cpp; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Matcher.cpp; sourceTree = "<absolute>"; };
+		4D7041E8060FA8E800934A2E /* FWLib_Matcher.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FWLib_Matcher.h; path = /Developer/Examples/IOKit/firewire/FWLib/FWLib_Matcher.h; sourceTree = "<absolute>"; };
+		4D8BB344037B87A300000202 /* About FWUtil.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About FWUtil.rtf"; sourceTree = "<group>"; };
+		4DF7B3C207B02EE000D60FB6 /* FWUtil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FWUtil; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53E3FAD013D99A401CE2124 /* FWUtilThreads.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FWUtilThreads.h; sourceTree = "<group>"; };
+		F53E3FAE013D99A401CE2124 /* FWUtilThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = FWUtilThreads.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DF7B3BD07B02EE000D60FB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF7B3BE07B02EE000D60FB6 /* CoreFoundation.framework in Frameworks */,
+				4DF7B3BF07B02EE000D60FB6 /* IOKit.framework in Frameworks */,
+				4DF7B3C007B02EE000D60FB6 /* System.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0249A662FF388D9811CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0566263EFF8BF62B11CE2050 /* CoreFoundation.framework */,
+				0566263FFF8BF62B11CE2050 /* IOKit.framework */,
+				05662648FF8D14FB11CE2050 /* System.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB7794FE84155DC02AAC07 /* FWUtil.project */ = {
+			isa = PBXGroup;
+			children = (
+				4D8BB344037B87A300000202 /* About FWUtil.rtf */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				0249A662FF388D9811CA2CEA /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = FWUtil.project;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05662638FF8BF5E611CE2050 /* FWUtil.h */,
+				05662637FF8BF5E611CE2050 /* FWUtil.cpp */,
+				05662642FF8BF69A11CE2050 /* FWUtilGlobals.h */,
+				05662644FF8BF6C911CE2050 /* FWUtilGlobals.cpp */,
+				05662654FF8D335511CE2050 /* FWUtilCommand.h */,
+				05662656FF8D33C911CE2050 /* FWUtilCommand.cpp */,
+				00D11CD6FFA89E3C7F000001 /* FWUtilException.h */,
+				00D11CD7FFA89E3C7F000001 /* FWUtilException.cpp */,
+				F53E3FAD013D99A401CE2124 /* FWUtilThreads.h */,
+				F53E3FAE013D99A401CE2124 /* FWUtilThreads.cpp */,
+				4D7041F6060FA8EB00934A2E /* FWLib */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DF7B3C207B02EE000D60FB6 /* FWUtil */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D7041F6060FA8EB00934A2E /* FWLib */ = {
+			isa = PBXGroup;
+			children = (
+				4D7041E3060FA8E800934A2E /* FWLib_Command.cpp */,
+				4D7041E4060FA8E800934A2E /* FWLib_Command.h */,
+				4D7041E5060FA8E800934A2E /* FWLib_Device.cpp */,
+				4D7041E6060FA8E800934A2E /* FWLib_Device.h */,
+				4D7041E7060FA8E800934A2E /* FWLib_Matcher.cpp */,
+				4D7041E8060FA8E800934A2E /* FWLib_Matcher.h */,
+			);
+			name = FWLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4DF7B3AB07B02EE000D60FB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF7B3AC07B02EE000D60FB6 /* FWUtil.h in Headers */,
+				4DF7B3AD07B02EE000D60FB6 /* FWUtilGlobals.h in Headers */,
+				4DF7B3AE07B02EE000D60FB6 /* FWUtilCommand.h in Headers */,
+				4DF7B3AF07B02EE000D60FB6 /* FWUtilException.h in Headers */,
+				4DF7B3B007B02EE000D60FB6 /* FWUtilThreads.h in Headers */,
+				4DF7B3B107B02EE000D60FB6 /* FWLib_Command.h in Headers */,
+				4DF7B3B207B02EE000D60FB6 /* FWLib_Device.h in Headers */,
+				4DF7B3B307B02EE000D60FB6 /* FWLib_Matcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DF7B3AA07B02EE000D60FB6 /* FWUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 144F8F81090066CD00B94B25 /* Build configuration list for PBXNativeTarget "FWUtil" */;
+			buildPhases = (
+				4DF7B3AB07B02EE000D60FB6 /* Headers */,
+				4DF7B3B407B02EE000D60FB6 /* Sources */,
+				4DF7B3BD07B02EE000D60FB6 /* Frameworks */,
+				4DF7B3C107B02EE000D60FB6 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_DEVELOPER_DIR)/Examples/IOKit/firewire/FWLib\"";
+				INSTALL_PATH = /Developer/Tools/firewire;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = FWUtil;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = FWUtil;
+			productInstallPath = /Developer/Tools/firewire;
+			productName = FWUtil.project;
+			productReference = 4DF7B3C207B02EE000D60FB6 /* FWUtil */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 144F8F85090066CD00B94B25 /* Build configuration list for PBXProject "FWUtil" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				0566263BFF8BF5E611CE2050 /* Development */,
+				0566263CFF8BF5E611CE2050 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* FWUtil.project */;
+			projectDirPath = "";
+			targets = (
+				4DF7B3AA07B02EE000D60FB6 /* FWUtil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		4DF7B3C107B02EE000D60FB6 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DF7B3B407B02EE000D60FB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF7B3B507B02EE000D60FB6 /* FWUtil.cpp in Sources */,
+				4DF7B3B607B02EE000D60FB6 /* FWUtilGlobals.cpp in Sources */,
+				4DF7B3B707B02EE000D60FB6 /* FWUtilException.cpp in Sources */,
+				4DF7B3B807B02EE000D60FB6 /* FWUtilCommand.cpp in Sources */,
+				4DF7B3B907B02EE000D60FB6 /* FWUtilThreads.cpp in Sources */,
+				4DF7B3BA07B02EE000D60FB6 /* FWLib_Command.cpp in Sources */,
+				4DF7B3BB07B02EE000D60FB6 /* FWLib_Device.cpp in Sources */,
+				4DF7B3BC07B02EE000D60FB6 /* FWLib_Matcher.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		144F8F82090066CD00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_DEVELOPER_DIR)/Examples/IOKit/firewire/FWLib\"";
+				INSTALL_PATH = /Developer/Tools/firewire;
+				PRODUCT_NAME = FWUtil;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		144F8F83090066CD00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "\"$(SYSTEM_DEVELOPER_DIR)/Examples/IOKit/firewire/FWLib\"";
+				INSTALL_PATH = /Developer/Tools/firewire;
+				PRODUCT_NAME = FWUtil;
+			};
+			name = Release;
+		};
+		144F8F86090066CD00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		144F8F87090066CD00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		144F8F81090066CD00B94B25 /* Build configuration list for PBXNativeTarget "FWUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F82090066CD00B94B25 /* Debug */,
+				144F8F83090066CD00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		144F8F85090066CD00B94B25 /* Build configuration list for PBXProject "FWUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F86090066CD00B94B25 /* Debug */,
+				144F8F87090066CD00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

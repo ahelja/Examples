@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDISetupRef;  name=MIDISetupRef --><a name="//apple_ref/c/tdef/MIDISetupRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDISetupRef">MIDISetupRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDISetup //apple_ref/c/cl/OpaqueMIDISetup //apple_ref/c/tdef/OpaqueMIDISetup //apple_ref/c/tag/OpaqueMIDISetup //apple_ref/c/econst/OpaqueMIDISetup //apple_ref/c/struct/OpaqueMIDISetup //apple_ref/c/clconst/OpaqueMIDISetup" --><font class="type">OpaqueMIDISetup</font><!-- /a --> <font class="type">*</font> <font class="var">MIDISetupRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Derives from MIDIObjectRef, does not have an owner object.
+<br><br>
+This represents the global state of the MIDI system,
+containing lists of the MIDI devices and serial port
+owners.
+<br><br>
+Generally, only MIDI drivers and specialized configuration
+editors will need to manipulate MIDISetup objects, not the
+average MIDI client application.  As of CoreMIDI 1.1, the
+MIDIServer maintains a single global MIDISetupRef, stored
+persistently in a preference file.
+</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

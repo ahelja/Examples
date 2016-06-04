@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Functions</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1><br>
+<hr><a name="//apple_ref/c/func/AudioChannelLayoutTag_GetNumberOfChannels"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioChannelLayoutTag_GetNumberOfChannels">AudioChannelLayoutTag_GetNumberOfChannels</a></h2>
+</td></tr></table><hr>A macro to get the number of channels out of an AudioChannelLayoutTag
+
+<blockquote><pre><tt>#define AudioChannelLayoutTag_GetNumberOfChannels(layoutTag) ((UInt32)((layoutTag) & 0x0000FFFF))
+</tt><br></pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The low 16 bits of an AudioChannelLayoutTag gives the number of channels except
+for kAudioChannelLayoutTag_UseChannelDescriptions and
+kAudioChannelLayoutTag_UseChannelBitmap.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>layoutTag</em></tt></dt><dd>The AudioChannelLayoutTag to examine.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The number of channels the tag indicates.
+</dd></dl>
+<hr><a name="//apple_ref/c/func/IsAudioFormatNativeEndian"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="IsAudioFormatNativeEndian">IsAudioFormatNativeEndian</a></h2>
+</td></tr></table><hr>A C++ inline function for checking if an ASBD indicates native endian linear PCM
+data.
+
+<blockquote><pre><tt>#if defined (
+&nbsp;&nbsp;&nbsp;&nbsp;__cplusplus
+)&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;inline bool IsAudioFormatNativeEndian(const AudioStreamBasicDescription& f
+);
+</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>f</em></tt></dt><dd>The AudioStreamBasicDescription to examine.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>Whether or not the ASBD indicates native endian linear PCM data.
+</dd></dl>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

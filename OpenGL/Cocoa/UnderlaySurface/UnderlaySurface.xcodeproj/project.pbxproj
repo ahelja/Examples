@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5633173107B18CB9001419B4 /* App.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5633172807B18CB9001419B4 /* App.mm */; };
+		5633173207B18CB9001419B4 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5633172A07B18CB9001419B4 /* GLView.mm */; };
+		5633173307B18CB9001419B4 /* qmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 5633172B07B18CB9001419B4 /* qmath.c */; };
+		5633173407B18CB9001419B4 /* qmath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5633172D07B18CB9001419B4 /* qmath.mm */; };
+		5633173507B18CB9001419B4 /* Sys.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5633173007B18CB9001419B4 /* Sys.mm */; };
+		5633173807B18CC5001419B4 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5633173607B18CC5001419B4 /* main.mm */; };
+		5633173D07B18CD5001419B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5633173907B18CD4001419B4 /* InfoPlist.strings */; };
+		5633173E07B18CD5001419B4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5633173B07B18CD5001419B4 /* MainMenu.nib */; };
+		5633174107B18DE1001419B4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5633173F07B18DE1001419B4 /* Cocoa.framework */; };
+		5633174207B18DE1001419B4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5633174007B18DE1001419B4 /* OpenGL.framework */; };
+		5633174807B18E27001419B4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5633174707B18E27001419B4 /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		563316FA07B18C29001419B4 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		563316FB07B18C29001419B4 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		5633171C07B18C50001419B4 /* UnderlaySurface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderlaySurface.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5633171F07B18C50001419B4 /* UnderlaySurface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "UnderlaySurface-Info.plist"; sourceTree = "<group>"; };
+		5633172707B18CB9001419B4 /* App.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = SOURCE_ROOT; };
+		5633172807B18CB9001419B4 /* App.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = App.mm; sourceTree = SOURCE_ROOT; };
+		5633172907B18CB9001419B4 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = SOURCE_ROOT; };
+		5633172A07B18CB9001419B4 /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = SOURCE_ROOT; };
+		5633172B07B18CB9001419B4 /* qmath.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = qmath.c; sourceTree = SOURCE_ROOT; };
+		5633172C07B18CB9001419B4 /* qmath.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = qmath.h; sourceTree = SOURCE_ROOT; };
+		5633172D07B18CB9001419B4 /* qmath.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = qmath.mm; sourceTree = SOURCE_ROOT; };
+		5633172E07B18CB9001419B4 /* qmath++.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "qmath++.h"; sourceTree = SOURCE_ROOT; };
+		5633172F07B18CB9001419B4 /* Sys.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Sys.h; sourceTree = SOURCE_ROOT; };
+		5633173007B18CB9001419B4 /* Sys.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = Sys.mm; sourceTree = SOURCE_ROOT; };
+		5633173607B18CC5001419B4 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = SOURCE_ROOT; };
+		5633173707B18CC5001419B4 /* prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = prefix.h; sourceTree = SOURCE_ROOT; };
+		5633173A07B18CD5001419B4 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5633173C07B18CD5001419B4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		5633173F07B18DE1001419B4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5633174007B18DE1001419B4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		5633174707B18E27001419B4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5633171A07B18C50001419B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5633174107B18DE1001419B4 /* Cocoa.framework in Frameworks */,
+				5633174207B18DE1001419B4 /* OpenGL.framework in Frameworks */,
+				5633174807B18E27001419B4 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		563316F807B18C29001419B4 = {
+			isa = PBXGroup;
+			children = (
+				5633172607B18C8F001419B4 /* Classes */,
+				5633172507B18C86001419B4 /* Other Sources */,
+				5633172407B18C80001419B4 /* Resources */,
+				5633172307B18C7A001419B4 /* Frameworks */,
+				5633171D07B18C50001419B4 /* Products */,
+				5633171F07B18C50001419B4 /* UnderlaySurface-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		5633171D07B18C50001419B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5633171C07B18C50001419B4 /* UnderlaySurface.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5633172307B18C7A001419B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5633174707B18E27001419B4 /* AppKit.framework */,
+				5633173F07B18DE1001419B4 /* Cocoa.framework */,
+				5633174007B18DE1001419B4 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5633172407B18C80001419B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5633173907B18CD4001419B4 /* InfoPlist.strings */,
+				5633173B07B18CD5001419B4 /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5633172507B18C86001419B4 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5633173607B18CC5001419B4 /* main.mm */,
+				5633173707B18CC5001419B4 /* prefix.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		5633172607B18C8F001419B4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5633172707B18CB9001419B4 /* App.h */,
+				5633172807B18CB9001419B4 /* App.mm */,
+				5633172907B18CB9001419B4 /* GLView.h */,
+				5633172A07B18CB9001419B4 /* GLView.mm */,
+				5633172B07B18CB9001419B4 /* qmath.c */,
+				5633172C07B18CB9001419B4 /* qmath.h */,
+				5633172D07B18CB9001419B4 /* qmath.mm */,
+				5633172E07B18CB9001419B4 /* qmath++.h */,
+				5633172F07B18CB9001419B4 /* Sys.h */,
+				5633173007B18CB9001419B4 /* Sys.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5633171B07B18C50001419B4 /* UnderlaySurface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC258308BBC88D006E9215 /* Build configuration list for PBXNativeTarget "UnderlaySurface" */;
+			buildPhases = (
+				5633171807B18C50001419B4 /* Resources */,
+				5633171907B18C50001419B4 /* Sources */,
+				5633171A07B18C50001419B4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.h;
+				INFOPLIST_FILE = "UnderlaySurface-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = UnderlaySurface;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = UnderlaySurface;
+			productName = UnderlaySurface;
+			productReference = 5633171C07B18C50001419B4 /* UnderlaySurface.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>UnderlaySurface</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.UnderlaySurface</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		563316FC07B18C29001419B4 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F0EC258708BBC88D006E9215 /* Build configuration list for PBXProject "UnderlaySurface" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				563316FA07B18C29001419B4 /* Development */,
+				563316FB07B18C29001419B4 /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = 563316F807B18C29001419B4;
+			productRefGroup = 5633171D07B18C50001419B4 /* Products */;
+			projectDirPath = "";
+			targets = (
+				5633171B07B18C50001419B4 /* UnderlaySurface */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5633171807B18C50001419B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5633173D07B18CD5001419B4 /* InfoPlist.strings in Resources */,
+				5633173E07B18CD5001419B4 /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5633171907B18C50001419B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5633173107B18CB9001419B4 /* App.mm in Sources */,
+				5633173207B18CB9001419B4 /* GLView.mm in Sources */,
+				5633173307B18CB9001419B4 /* qmath.c in Sources */,
+				5633173407B18CB9001419B4 /* qmath.mm in Sources */,
+				5633173507B18CB9001419B4 /* Sys.mm in Sources */,
+				5633173807B18CC5001419B4 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5633173907B18CD4001419B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5633173A07B18CD5001419B4 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+		5633173B07B18CD5001419B4 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5633173C07B18CD5001419B4 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0EC258408BBC88D006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.h;
+				INFOPLIST_FILE = "UnderlaySurface-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = UnderlaySurface;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC258508BBC88D006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.h;
+				INFOPLIST_FILE = "UnderlaySurface-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = UnderlaySurface;
+			};
+			name = Release;
+		};
+		F0EC258808BBC88D006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC258908BBC88D006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0EC258308BBC88D006E9215 /* Build configuration list for PBXNativeTarget "UnderlaySurface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC258408BBC88D006E9215 /* Debug */,
+				F0EC258508BBC88D006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC258708BBC88D006E9215 /* Build configuration list for PBXProject "UnderlaySurface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC258808BBC88D006E9215 /* Debug */,
+				F0EC258908BBC88D006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 563316FC07B18C29001419B4 /* Project object */;
+}

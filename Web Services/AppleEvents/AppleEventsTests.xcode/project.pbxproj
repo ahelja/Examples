@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		014CEA4C0018CE3E11CA2923 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		014CEA4D0018CE3E11CA2923 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//010
+//011
+//012
+//013
+//014
+//080
+//081
+//082
+//083
+//084
+		08FB7793FE84155DC02AAC07 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA4C0018CE3E11CA2923,
+				014CEA4D0018CE3E11CA2923,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 08FB7794FE84155DC02AAC07;
+			projectDirPath = "";
+			targets = (
+				D6190A6807D69C7000C6008B,
+				8DD76F840486A9BA00D96B5E,
+				D6190A5907D69C3600C6008B,
+			);
+		};
+		08FB7794FE84155DC02AAC07 = {
+			children = (
+				08FB7795FE84155DC02AAC07,
+				C6859E9C0290928B04C91782,
+				08FB779DFE84155DC02AAC07,
+				1A8B4A8EFE9D542A11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = AppleEventsTests;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 = {
+			children = (
+				D6190A6207D69C5100C6008B,
+				D6190A6407D69C5D00C6008B,
+			);
+			isa = PBXGroup;
+			name = Source;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 = {
+			children = (
+				D6190B8407D69CDC00C6008B,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+		1A8B4A8EFE9D542A11CA2CBB = {
+			children = (
+				8DD76F8E0486A9BA00D96B5E,
+				D6190A6007D69C3600C6008B,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8DD76F840486A9BA00D96B5E = {
+			buildPhases = (
+				8DD76F860486A9BA00D96B5E,
+				8DD76F880486A9BA00D96B5E,
+				8DD76F8B0486A9BA00D96B5E,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = soaptest;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = soaptest;
+			productInstallPath = "$(HOME)/bin";
+			productName = AppleEventsTests;
+			productReference = 8DD76F8E0486A9BA00D96B5E;
+			productType = "com.apple.product-type.tool";
+		};
+		8DD76F860486A9BA00D96B5E = {
+			buildActionMask = 2147483647;
+			files = (
+				D6190A6307D69C5100C6008B,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F880486A9BA00D96B5E = {
+			buildActionMask = 2147483647;
+			files = (
+				D6190B8607D69CDC00C6008B,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F8B0486A9BA00D96B5E = {
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8DD76F8E0486A9BA00D96B5E = {
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = soaptest;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//C60
+//C61
+//C62
+//C63
+//C64
+		C6859E9C0290928B04C91782 = {
+			children = (
+			);
+			isa = PBXGroup;
+			name = Documentation;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//C60
+//C61
+//C62
+//C63
+//C64
+//D60
+//D61
+//D62
+//D63
+//D64
+		D6190A5907D69C3600C6008B = {
+			buildPhases = (
+				D6190A5A07D69C3600C6008B,
+				D6190A5C07D69C3600C6008B,
+				D6190A5E07D69C3600C6008B,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PREBINDING = NO;
+				PRODUCT_NAME = xmlrpctest;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = xmlrpctest;
+			productInstallPath = "$(HOME)/bin";
+			productName = AppleEventsTests;
+			productReference = D6190A6007D69C3600C6008B;
+			productType = "com.apple.product-type.tool";
+		};
+		D6190A5A07D69C3600C6008B = {
+			buildActionMask = 2147483647;
+			files = (
+				D6190A6507D69C5D00C6008B,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6190A5C07D69C3600C6008B = {
+			buildActionMask = 2147483647;
+			files = (
+				D6190B8507D69CDC00C6008B,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6190A5E07D69C3600C6008B = {
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D6190A6007D69C3600C6008B = {
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = xmlrpctest;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6190A6207D69C5100C6008B = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = soap.cp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		D6190A6307D69C5100C6008B = {
+			fileRef = D6190A6207D69C5100C6008B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D6190A6407D69C5D00C6008B = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = xmlrpc.cp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		D6190A6507D69C5D00C6008B = {
+			fileRef = D6190A6407D69C5D00C6008B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D6190A6807D69C7000C6008B = {
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = all;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				D6190A6A07D69C7400C6008B,
+				D6190A6C07D69C7500C6008B,
+			);
+			isa = PBXAggregateTarget;
+			name = all;
+			productName = all;
+		};
+		D6190A6907D69C7400C6008B = {
+			containerPortal = 08FB7793FE84155DC02AAC07;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F840486A9BA00D96B5E;
+			remoteInfo = soaptest;
+		};
+		D6190A6A07D69C7400C6008B = {
+			isa = PBXTargetDependency;
+			target = 8DD76F840486A9BA00D96B5E;
+			targetProxy = D6190A6907D69C7400C6008B;
+		};
+		D6190A6B07D69C7500C6008B = {
+			containerPortal = 08FB7793FE84155DC02AAC07;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = D6190A5907D69C3600C6008B;
+			remoteInfo = xmlrpctest;
+		};
+		D6190A6C07D69C7500C6008B = {
+			isa = PBXTargetDependency;
+			target = D6190A5907D69C3600C6008B;
+			targetProxy = D6190A6B07D69C7500C6008B;
+		};
+		D6190B8407D69CDC00C6008B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = ApplicationServices.framework;
+			path = /System/Library/Frameworks/ApplicationServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		D6190B8507D69CDC00C6008B = {
+			fileRef = D6190B8407D69CDC00C6008B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D6190B8607D69CDC00C6008B = {
+			fileRef = D6190B8407D69CDC00C6008B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 08FB7793FE84155DC02AAC07;
+}

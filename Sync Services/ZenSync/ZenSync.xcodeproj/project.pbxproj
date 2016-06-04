@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		336D92790680D64B00633D0B /* CalendarKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 336D92780680D64B00633D0B /* CalendarKeys.h */; };
+		336D92AF0680D76100633D0B /* CalendarKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 336D92AD0680D76100633D0B /* CalendarKeys.m */; };
+		57CE84E80649946B0044B886 /* ZenCustomSyncClientNonSyncMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CE84E70649946B0044B886 /* ZenCustomSyncClientNonSyncMethods.m */; };
+		57CE85B1064998EC0044B886 /* ZenStockSyncClientNonSyncMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CE85B0064998EC0044B886 /* ZenStockSyncClientNonSyncMethods.m */; };
+		57DCA04C065440E4005571D6 /* SyncServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DCA04B065440E4005571D6 /* SyncServices.framework */; };
+		5A5769DD06F77CCF009E9A96 /* StockClientDescription.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 570AB32E06519DA5005546F3 /* StockClientDescription.plist */; };
+		5A5769DE06F77CCF009E9A96 /* CustomClientDescription.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA1DAF3606487327009FC777 /* CustomClientDescription.plist */; };
+		5A576A1E06F77F91009E9A96 /* ZenSchemaStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5769FC06F77F47009E9A96 /* ZenSchemaStrings.h */; };
+		5A576A2106F77F94009E9A96 /* ZenSchemaStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A576A0106F77F47009E9A96 /* ZenSchemaStrings.m */; };
+		5A576A2F06F77FC0009E9A96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		5A682176070CACA500AE9C5F /* ZenSyncDataClass.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5A682171070CAC8900AE9C5F /* ZenSyncDataClass.icns */; };
+		5A682282070CD97700AE9C5F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A68227F070CD97700AE9C5F /* AppKit.framework */; };
+		5A80341206F774BC003F3CCA /* Schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A80340F06F774BC003F3CCA /* Schema.strings */; };
+		5A80343606F775F3003F3CCA /* Schema.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A80343206F775F3003F3CCA /* Schema.plist */; };
+		5A80344806F77946003F3CCA /* ZenCustomSchema.syncschema in CopyFiles */ = {isa = PBXBuildFile; fileRef = AACFEF270648279F00EC0D88 /* ZenCustomSchema.syncschema */; };
+		5AFAB019078CBACE006A0E8B /* ZenSyncClient.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5AFAB013078CBAB6006A0E8B /* ZenSyncClient.png */; };
+		8DD76F980486AA7600D96B5E /* ZenSync_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32A70AAB03705E1F00C91783 /* ZenSync_Prefix.pch */; };
+		8DD76F9A0486AA7600D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		AACFEE5206481BD200EC0D88 /* strings.h in Headers */ = {isa = PBXBuildFile; fileRef = AACFEE4D06481BD200EC0D88 /* strings.h */; };
+		AACFEE5306481BD200EC0D88 /* ZenCustomSyncClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AACFEE4E06481BD200EC0D88 /* ZenCustomSyncClient.h */; };
+		AACFEE5406481BD200EC0D88 /* ZenCustomSyncClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AACFEE4F06481BD200EC0D88 /* ZenCustomSyncClient.m */; };
+		AACFEE5506481BD200EC0D88 /* ZenStockSyncClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AACFEE5006481BD200EC0D88 /* ZenStockSyncClient.h */; };
+		AACFEE5606481BD200EC0D88 /* ZenStockSyncClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AACFEE5106481BD200EC0D88 /* ZenStockSyncClient.m */; };
+		AADC26EF06FE8C2A003C8E3D /* ZenSchemaStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5769FC06F77F47009E9A96 /* ZenSchemaStrings.h */; };
+		AADC26F006FE8C2A003C8E3D /* ZenSchemaStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A576A0106F77F47009E9A96 /* ZenSchemaStrings.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA4F0018CE4811CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA500018CE4811CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		AA06ECE8064830FE009E0976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AACFEF260648279F00EC0D88;
+			remoteInfo = ZenCustomSchema;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A80344206F7777C003F3CCA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			comments = "You may ask yourself, \"Why are we copying the client plists in the schema target?\"\n\nI'd have no good answer for you.";
+			dstPath = $INSTALL_PATH;
+			dstSubfolderSpec = 0;
+			files = (
+				5AFAB019078CBACE006A0E8B /* ZenSyncClient.png in CopyFiles */,
+				5A5769DD06F77CCF009E9A96 /* StockClientDescription.plist in CopyFiles */,
+				5A5769DE06F77CCF009E9A96 /* CustomClientDescription.plist in CopyFiles */,
+				5A80344806F77946003F3CCA /* ZenCustomSchema.syncschema in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32A70AAB03705E1F00C91783 /* ZenSync_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenSync_Prefix.pch; sourceTree = "<group>"; };
+		336D92780680D64B00633D0B /* CalendarKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarKeys.h; sourceTree = "<group>"; };
+		336D92AD0680D76100633D0B /* CalendarKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarKeys.m; sourceTree = "<group>"; };
+		570AB32E06519DA5005546F3 /* StockClientDescription.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = StockClientDescription.plist; sourceTree = SOURCE_ROOT; };
+		57CE84E70649946B0044B886 /* ZenCustomSyncClientNonSyncMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZenCustomSyncClientNonSyncMethods.m; sourceTree = "<group>"; };
+		57CE85B0064998EC0044B886 /* ZenStockSyncClientNonSyncMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZenStockSyncClientNonSyncMethods.m; sourceTree = "<group>"; };
+		57DCA04B065440E4005571D6 /* SyncServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SyncServices.framework; path = /System/Library/Frameworks/SyncServices.framework; sourceTree = "<absolute>"; };
+		5A5769FC06F77F47009E9A96 /* ZenSchemaStrings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ZenSchemaStrings.h; sourceTree = "<group>"; };
+		5A576A0106F77F47009E9A96 /* ZenSchemaStrings.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ZenSchemaStrings.m; sourceTree = "<group>"; };
+		5A682171070CAC8900AE9C5F /* ZenSyncDataClass.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ZenSyncDataClass.icns; sourceTree = "<group>"; };
+		5A68227F070CD97700AE9C5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		5A80340806F774B0003F3CCA /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Schema.strings; sourceTree = "<group>"; };
+		5A80343206F775F3003F3CCA /* Schema.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Schema.plist; sourceTree = "<group>"; };
+		5AA6E8220681374D00175EC0 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5AFAB013078CBAB6006A0E8B /* ZenSyncClient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZenSyncClient.png; sourceTree = "<group>"; };
+		8DD76FA10486AA7600D96B5E /* ZenSync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZenSync; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1DAF3606487327009FC777 /* CustomClientDescription.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = CustomClientDescription.plist; sourceTree = "<group>"; };
+		AACFEE4D06481BD200EC0D88 /* strings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = strings.h; sourceTree = "<group>"; };
+		AACFEE4E06481BD200EC0D88 /* ZenCustomSyncClient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ZenCustomSyncClient.h; sourceTree = "<group>"; };
+		AACFEE4F06481BD200EC0D88 /* ZenCustomSyncClient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ZenCustomSyncClient.m; sourceTree = "<group>"; };
+		AACFEE5006481BD200EC0D88 /* ZenStockSyncClient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ZenStockSyncClient.h; sourceTree = "<group>"; };
+		AACFEE5106481BD200EC0D88 /* ZenStockSyncClient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ZenStockSyncClient.m; sourceTree = "<group>"; };
+		AACFEF270648279F00EC0D88 /* ZenCustomSchema.syncschema */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenCustomSchema.syncschema; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A576A2406F77FAA009E9A96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A576A2F06F77FC0009E9A96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+				57DCA04C065440E4005571D6 /* SyncServices.framework in Frameworks */,
+				5A682282070CD97700AE9C5F /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* ZenSync */ = {
+			isa = PBXGroup;
+			children = (
+				5AA6E8220681374D00175EC0 /* README.txt */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				5A682157070CAC2E00AE9C5F /* Resources */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = ZenSync;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AACFEE4D06481BD200EC0D88 /* strings.h */,
+				AACFEE4E06481BD200EC0D88 /* ZenCustomSyncClient.h */,
+				AACFEE4F06481BD200EC0D88 /* ZenCustomSyncClient.m */,
+				57CE84E70649946B0044B886 /* ZenCustomSyncClientNonSyncMethods.m */,
+				AACFEE5006481BD200EC0D88 /* ZenStockSyncClient.h */,
+				AACFEE5106481BD200EC0D88 /* ZenStockSyncClient.m */,
+				57CE85B0064998EC0044B886 /* ZenStockSyncClientNonSyncMethods.m */,
+				32A70AAB03705E1F00C91783 /* ZenSync_Prefix.pch */,
+				08FB7796FE84155DC02AAC07 /* main.m */,
+				336D92780680D64B00633D0B /* CalendarKeys.h */,
+				336D92AD0680D76100633D0B /* CalendarKeys.m */,
+				5A5769FC06F77F47009E9A96 /* ZenSchemaStrings.h */,
+				5A576A0106F77F47009E9A96 /* ZenSchemaStrings.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5A68227F070CD97700AE9C5F /* AppKit.framework */,
+				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+				57DCA04B065440E4005571D6 /* SyncServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FA10486AA7600D96B5E /* ZenSync */,
+				AACFEF270648279F00EC0D88 /* ZenCustomSchema.syncschema */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A682157070CAC2E00AE9C5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A682171070CAC8900AE9C5F /* ZenSyncDataClass.icns */,
+				5AFAB013078CBAB6006A0E8B /* ZenSyncClient.png */,
+				570AB32E06519DA5005546F3 /* StockClientDescription.plist */,
+				AA1DAF3606487327009FC777 /* CustomClientDescription.plist */,
+				5A80343206F775F3003F3CCA /* Schema.plist */,
+				5A80340F06F774BC003F3CCA /* Schema.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5A576A1006F77F7F009E9A96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A576A1E06F77F91009E9A96 /* ZenSchemaStrings.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F970486AA7600D96B5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F980486AA7600D96B5E /* ZenSync_Prefix.pch in Headers */,
+				AACFEE5206481BD200EC0D88 /* strings.h in Headers */,
+				AACFEE5306481BD200EC0D88 /* ZenCustomSyncClient.h in Headers */,
+				AACFEE5506481BD200EC0D88 /* ZenStockSyncClient.h in Headers */,
+				336D92790680D64B00633D0B /* CalendarKeys.h in Headers */,
+				AADC26EF06FE8C2A003C8E3D /* ZenSchemaStrings.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F960486AA7600D96B5E /* ZenSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 430EB2BC08BBE43A00420A0D /* Build configuration list for PBXNativeTarget "ZenSync" */;
+			buildPhases = (
+				8DD76F970486AA7600D96B5E /* Headers */,
+				8DD76F990486AA7600D96B5E /* Sources */,
+				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZenSync_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZenSync;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+				AA06ECE9064830FE009E0976 /* PBXTargetDependency */,
+			);
+			name = ZenSync;
+			productInstallPath = "$(HOME)/bin";
+			productName = ZenSync;
+			productReference = 8DD76FA10486AA7600D96B5E /* ZenSync */;
+			productType = "com.apple.product-type.tool";
+		};
+		AACFEF260648279F00EC0D88 /* ZenCustomSchema */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 430EB2B808BBE43A00420A0D /* Build configuration list for PBXNativeTarget "ZenCustomSchema" */;
+			buildPhases = (
+				5A576A1006F77F7F009E9A96 /* Headers */,
+				5A576A1306F77F87009E9A96 /* Sources */,
+				AACFEF230648279F00EC0D88 /* Resources */,
+				5A576A2406F77FAA009E9A96 /* Frameworks */,
+				5A80344206F7777C003F3CCA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ZenCustomSchema-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SyncExamples/ZenSync";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZenCustomSchema;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = syncschema;
+			};
+			dependencies = (
+			);
+			name = ZenCustomSchema;
+			productName = ZenCustomSchema;
+			productReference = AACFEF270648279F00EC0D88 /* ZenCustomSchema.syncschema */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>ZenCustomSchema</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.MySoftwareCompany.ZenCustomSchema</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0d1</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 430EB2C008BBE43A00420A0D /* Build configuration list for PBXProject "ZenSync" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA4F0018CE4811CA2923 /* Development */,
+				014CEA500018CE4811CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* ZenSync */;
+			projectDirPath = "";
+			targets = (
+				8DD76F960486AA7600D96B5E /* ZenSync */,
+				AACFEF260648279F00EC0D88 /* ZenCustomSchema */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AACFEF230648279F00EC0D88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A80341206F774BC003F3CCA /* Schema.strings in Resources */,
+				5A80343606F775F3003F3CCA /* Schema.plist in Resources */,
+				5A682176070CACA500AE9C5F /* ZenSyncDataClass.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A576A1306F77F87009E9A96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A576A2106F77F94009E9A96 /* ZenSchemaStrings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F990486AA7600D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9A0486AA7600D96B5E /* main.m in Sources */,
+				AACFEE5406481BD200EC0D88 /* ZenCustomSyncClient.m in Sources */,
+				AACFEE5606481BD200EC0D88 /* ZenStockSyncClient.m in Sources */,
+				57CE84E80649946B0044B886 /* ZenCustomSyncClientNonSyncMethods.m in Sources */,
+				57CE85B1064998EC0044B886 /* ZenStockSyncClientNonSyncMethods.m in Sources */,
+				336D92AF0680D76100633D0B /* CalendarKeys.m in Sources */,
+				AADC26F006FE8C2A003C8E3D /* ZenSchemaStrings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA06ECE9064830FE009E0976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AACFEF260648279F00EC0D88 /* ZenCustomSchema */;
+			targetProxy = AA06ECE8064830FE009E0976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A80340F06F774BC003F3CCA /* Schema.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A80340806F774B0003F3CCA /* English */,
+			);
+			name = Schema.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		430EB2B908BBE43A00420A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ZenCustomSchema-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SyncExamples/ZenSync";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = ZenCustomSchema;
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = syncschema;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		430EB2BA08BBE43A00420A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ZenCustomSchema-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SyncExamples/ZenSync";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = ZenCustomSchema;
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = syncschema;
+			};
+			name = Release;
+		};
+		430EB2BD08BBE43A00420A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZenSync_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = ZenSync;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		430EB2BE08BBE43A00420A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZenSync_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = ZenSync;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		430EB2C108BBE43A00420A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		430EB2C208BBE43A00420A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		430EB2B808BBE43A00420A0D /* Build configuration list for PBXNativeTarget "ZenCustomSchema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430EB2B908BBE43A00420A0D /* Debug */,
+				430EB2BA08BBE43A00420A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		430EB2BC08BBE43A00420A0D /* Build configuration list for PBXNativeTarget "ZenSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430EB2BD08BBE43A00420A0D /* Debug */,
+				430EB2BE08BBE43A00420A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		430EB2C008BBE43A00420A0D /* Build configuration list for PBXProject "ZenSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430EB2C108BBE43A00420A0D /* Debug */,
+				430EB2C208BBE43A00420A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

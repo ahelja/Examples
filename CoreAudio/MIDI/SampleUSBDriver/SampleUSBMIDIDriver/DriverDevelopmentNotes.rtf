@@ -1,0 +1,95 @@
+{\rtf1\mac\ansicpg10000\cocoartf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fswiss\fcharset77 Helvetica-Bold;\f2\fmodern\fcharset77 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww11120\viewh12760\viewkind0
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\fs36 \cf0 MIDI Driver Development Notes\
+
+\fs24 last revised 21 Oct 2001\
+\
+\
+
+\f1\b Introduction\
+
+\f0\b0 \
+SampleUSBDriver is an example of a Mac OS X MIDI driver.  MIDI drivers are CFPlugIns (described in the CoreFoundation documentation).\
+\
+The sample driver is structured as a collection of reusable C++ classes, with the code specific to a single vendor's devices isolated to a small portion of the source code.  If you find yourself needing to modify the classes other than SampleUSBDriver, please consider trying to implement the changes in a subclass instead, or telling Apple about the changes you need to make (contact: dwyatt@apple.com or http://www.apple.com/developer/bugreporter).  This allows the possibility of Apple providing improvements and fixes in the base classes in the future without your having to modify your driver other than to recompile it.\
+\
+Use SampleUSBDriver as a starting place for a USB MIDI interface driver.  Derive your USB driver from USBMIDIDriverBase.  Derive non-USB drivers from MIDIDriver.\
+\
+The MIDI driver programming interface is documented in <CoreMIDIServer/MIDIDriver.h>,\
+which your source should include.  Your driver may also use the application \
+programming interface in <CoreMIDI/CoreMIDI.h>.\
+\
+\
+
+\f1\b Project Settings
+\f0\b0 \
+\
+Your driver needs its own UUID (universally unique identifier) for its factory function.  The sample driver includes source for a command-line tool, mkuuid, that will generate one for you.  This UUID needs to be entered into two places in your project:\
+\
+   - defined as a constant in your code, and passed to the constructor of your MIDIDriver subclass (see kFactoryUUID in SampleUSBDriver.cpp)\
+   - the project's bundle settings\
+\
+Make sure that your driver's target settings include the following, accessible in Project Builder under the Expert Bundle Settings:\
+\
+
+\f2\fs20         CFPlugInDynamicRegistration     String          NO\
+        CFPlugInFactories               Dictionary      1 key/value pair\
+            <your new factory UUID>     String          <your factory function name>\
+        CFPlugInTypes                   Dictionary      1 key/value pair\
+            ECDE9574-0FE4-11D4-BB1A-0050E4CEA526        Array       1 object\
+                (this is kMIDIDriverTypeID)\
+                0                       String          <your new factory UUID>\
+
+\f0\fs24 \
+Among the Build settings:\
+
+\f2\fs20         WRAPPER_EXTENSION               plugin\
+
+\f0\fs24 \
+Link your driver against CoreMIDIServer.framework.  Note that it is not necessary\
+(and will cause potential problems) to link with CoreMIDI.framework as well.\
+\
+Install your driver into /Library/Audio/MIDI Drivers -- note that this is different\
+as of Mac OS 10.1.  /System/Library/Extensions is only for Apple-supplied drivers -- unless you are combining your MIDI driver plugin bundle with a kernel extension.\
+\
+\
+
+\f1\b Driver Debugging Tips\
+
+\f0\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 It may be helpful to disable drivers other than your own (/System/Library/Extensions/AppleMIDI* and /Library/Audio/MIDI Drivers/*).  Build your driver with debugging symbols enabled, and use gdb to debug /System/Library/Frameworks/CoreMIDIServer.framework/MIDIServer.  Your driver's Start method will get called during server initialization.\
+\
+Be sure your driver's factory UUID is newly generated and entered correctly in the custom bundle settings for CFPlugInFactories and CFPlugInTypes.\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+\cf0 \
+\
+
+\f1\b "How do I modify the entities/endpoints/properties of devices an older version of my driver created?"\
+\
+
+\f0\b0 There are several approaches to this.  The brute-force method is to delete \
+\
+	~/Library/Preferences/ByHost/ByHost/com.apple.MIDI.*.plist\
+\
+Another is, instead of marking the previously-present devices offline at the beginning of USBMIDIDeviceManager::USBMIDIDeviceManager, you could call MIDISetupRemoveDevice (probably in an override to USBVendorMIDIDriver::Start).  The reason we mark devices offline instead of removing them is because there's an design goal of being able to remember information about devices which are temporarily not present.  There's no way to distinguish between a device which is temporarily missing vs. one which is gone for good, or one whose driver needs to change the way it's defined.\
+\
+Perhaps the most elegant but elaborate approach would be to look at the properties of the entities and endpoints of your old devices, and dynamically modify them (using calls in CoreMIDI/MIDISetup.h) to match the new way you're defining your devices.  A suitable place to do this would be in an override to USBVendorMIDIDriver::CreateUSBMIDIDevice.\
+\
+\
+
+\f1\b CHANGE HISTORY
+\f0\b0 \
+\
+\ul 21 Oct 2001\
+\ulnone - Revised this documentation\
+- Include mkuuid tool in source distribution\
+\
+\
+\
+}

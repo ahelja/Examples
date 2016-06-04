@@ -1,0 +1,96 @@
+{\rtf1\mac\ansicpg10000\cocoartf809
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;\f2\fnil\fcharset77 Monaco;
+\f3\fmodern\fcharset77 Courier;\f4\fmodern\fcharset77 Courier-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\info}\margl1440\margr1440\vieww17300\viewh14400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs36 \cf0 MyCustomApplication and MyCustomImporter Examples\
+\
+
+\f1\b0\fs28 The 
+\f0\b MyCustomApplication
+\f1\b0  and 
+\f0\b MyCustomImporter
+\f1\b0  examples provide a complete example of how to write a metadata importer, along with declaring a UTI for your document as part of your application project.\
+\
+
+\f0\b MyCustomApplication
+\f1\b0  is a simple Cocoa document application.  A simple, bindings driven API allows the user to set a Title, Author and Notes for a document.  When saved, the document is written to a simple document file of type "myCustomDocument".\
+\
+
+\f0\b MyCustomImporter
+\f1\b0  is a metadata importer that can import the documents created by 
+\f0\b MyCustomApplication
+\f1\b0 . It stores the Title text in the 
+\f2\fs24 kMDItemTitle
+\f1\fs28  attribute, Author in the 
+\f2\fs24 kMDItemAuthors
+\f1\fs28  attribute, and the Notes text in the custom attribute 
+\f2\fs24 com_apple_myCocoaDocumentApp_myCustomDocument_notes
+\f1\fs28 .\
+\
+
+\f0\b Importer Notes
+\f1\b0 \
+\
+Importers are written using as CFPlugins. It is possible to use Objective-C code in your own importers.  MyCustomImporter uses the toll-free bridged foundation class NSDictionary in order to read the document data and populate the attributes dictionary.  Using Objective-C and Foundation required the following changes\
+\
+	1. Renaming the 
+\f2\fs24 main.c
+\f1\fs28  file to 
+\f2\fs24 main.m
+\f1\fs28 .\
+	2. Adding the 
+\f2\fs24 Foundation.framework
+\f1\fs28  to the project.\
+	3. Adding 
+\f2\fs24 #import <Foundation/Foundation.h>;
+\f1\fs28  to 
+\f2\fs24 main.m
+\f1\fs28 .\
+\
+\
+
+\f0\b Trying out the example
+\f1\b0 \
+\
+	1. Build 
+\f0\b MyCustomApplication
+\f1\b0  and copy the executable to an Applications directory.\
+	2. Run 
+\f0\b MyCustomApplication
+\f1\b0 , create and save a new document with some data.\
+	3. Build 
+\f0\b MyCustomImporter
+\f1\b0 , and copy MyCustomImporter.mdimporter to
+\f2\fs24  /Library/Spotlight\
+
+\f1\fs28 	4. Use the command line tool 
+\f2\fs24 mdimport
+\f1\fs28  to import your test document and dump the imported keys to the console.  The bold lines below indicate the attributes keys that are provided by the custom importer.\
+\
+\
+
+\f3\fs24 /usr/bin/mdimport -d2 Documents/test.myCustomDocument\
+\
+2004-06-25 02:25:29.881 mdimport[833] importing data from file '/Users/me/Documents/test.myCustomDocument' type 'com.apple.mycocoadocumentapp.mycustomdocument'\
+2004-06-25 02:25:29.903 mdimport[833] attributes of '/Users/me/Documents/test.myCustomDocument' : '\{\
+
+\f4\b     "com_apple_myCocoaDocumentApp_myCustomDocument_notes" = "This is a test of this stuff!"; \
+    kMDItemAuthors = (Me); \
+
+\f3\b0     kMDItemContentType = "com.apple.mycocoadocumentapp.mycustomdocument"; \
+    kMDItemContentTypeTree = ("com.apple.mycocoadocumentapp.mycustomdocument", "public.data", "public.item"); \
+    kMDItemDisplayName = "test.myCustomDocument"; \
+
+\f4\b     kMDItemTitle = test; \
+
+\f3\b0 \}'\
+
+\f1\fs36 \
+
+\fs28 	For further testing tips and troubleshooting strategies see the Troubleshooting Metadata Importer article.
+\fs36 \
+\
+}

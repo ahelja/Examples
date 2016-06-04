@@ -1,0 +1,6 @@
+{
+        ExecutableName = "HexInputServer.app/Contents/MacOS/HexInputServer";
+        ConnectionName = "HexInputServer2ConnectionName";
+        DisplayName = "Hexadecimal Input";
+	DefaultKeyBindings = "HexInputServer.dict";
+}

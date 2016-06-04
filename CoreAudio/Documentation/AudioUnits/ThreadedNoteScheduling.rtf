@@ -1,0 +1,220 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww18640\viewh15240\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs26 \cf0 Thread Safe Note Scheduling Code\
+
+\f1\b0\fs24 \
+\
+
+\f0\b\fs26 Basically:\
+
+\f1\b0\fs24 \
+If you call the APIs of the MusicDevice to start or stop a note, then  \
+those API's should be sensitive to the thread upon which they are being  \
+called:\
+	(1) If you are calling these on the render thread, then you can  \
+schedule the new note (or turn one off) straight away\
+	(2) If you are calling these from any other thread, then these note  \
+events have to be queued (and then when it next renders, it is  \
+de-queued and applied as part of the job of rendering notes)\
+\
+(The API's affected by this are:\
+ 	MusicDeviceStartNote,  \
+	MusicDeviceStopNote, \
+	MusicDeviceMIDIEvent, where the MIDI event is a note-on or off)\
+\
+Thus:\
+In your Render call, you get the thread ID (pthread_self), of the  \
+thread that you are being asked to render on.\
+In your API calls for starting and stopping notes you compare that  \
+thread ID with the thread ID you are being called on to start/stop a  \
+note, If it is the render thread, then you go through and do the work  \
+immediately, if not, you queue a start/stop note\
+\
+This code is kinda pulled out of context - but it gives the general idea.\
+Ideally we really would like to have a more complete abstract class for \
+people to implement synths - but we don't just yet!\
+\
+We have a NoteScheduler class that we use in the DLS Synth that, well,  \
+schedules notes:)... So, the client of that class (the AUBase derived  \
+SynthInstance), has the responsibility to determine if the note is  \
+being scheduled from the render or another thread) - based on that  \
+decision, the note is either queued or scheduled immediately.\
+\
+(Basically, and I've added this to the MusicDeviceBase and MIDIBase  \
+classes - where the MusicDeviceStartNote API checks for a zero  \
+velocity, and dispatches accordingly to StartNote or StopNote, and the  \
+MIDIBase class I think already dispatched to HandleNoteOn (non-zero  \
+velocity) and HandleNoteOff)\
+\
+HandleNoteOn and Off translate the MIDI message into the extended  \
+parlance and dispatch to another call ExtendedNoteOn/Off (which  \
+StartNote/StopNote do as well)\
+\
+We also break up the notes into the two events (note on, note off) -  \
+and share a structure for dealing with both of these types of events:\
+\
+When you are asked to render you de-queue any start/stop note requests.\
+\
+(An Implementation note - we factor ALL of the Start and Stop note and  \
+MIDI Commands for Starting and Stopping notes to a single method -  \
+SynthInstance::ExtendedNoteOn/Off - which makes the calls listed below)  \
+This call takes the extended semantic of the Start Note call, but as  \
+described in previous emails, MIDI notes can be fully expressed within  \
+this extended API.\
+\
+OK - enough preamble - here is the relevant code.\
+\
+struct ExtendedNoteParams\
+\{\
+	enum \{\
+		kUnused = 0,\
+		kNoteOn = 1,\
+		kNoteOff = 2\
+	\};\
+	\
+	UInt32						instrumentNumber;\
+	UInt32						groupID;\
+	long						scheduledSampleFrames;\
+	Float32						noteNumber;\
+	Float32						velocity;\
+	NoteInstanceID				instanceID;\
+	UInt32						eventType;\
+\};\
+\
+Then we define an array of these that will be used for queueing notes  \
+events (hereafter notes):\
+	enum \{kMaxQueueEvents = 512\};\
+	ExtendedNoteParams			mNoteOnQueue[kMaxQueueEvents];\
+	int							mQueueReadIndex;\
+	int							mQueueWriteIndex;\
+\
+The methods that queue the notes manipulate the write index. The method  \
+that dequeues the notes manipulate the read index - so without locking  \
+there is a high degree of thread-safeness - and we're only guaranteeing  \
+the operation of this with *one* additional queueing thread (we don't  \
+guard against 2 thread trying to simultaneously write to the queue\
+\
+So - what do the queue methods look like:\
+This guy determines if writing to the next slot would cause mQueueWriteIndex == mQueueReadIndex.\
+If that were to happen, that would signal that the queue is empty. So we can write at most kMaxQueueEvents-1 to the queue.\
+:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+\cf0 	\
+	ExtendedNoteParams*		NoteScheduler::FindUnusedQueueSlot ()\
+	\{\
+		// return next slot if it can be written.\
+		if (((mQueueWriteIndex + 1) % kMaxQueueEvents) == mQueueReadIndex) \
+			return NULL;\
+		return &mNoteOnQueue[mQueueWriteIndex];\
+	\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+Its used by both the queue calls for a note on and a note off (I'm  \
+including both here for completeness):\
+\
+(The GetNewNoteID will generate a noteID based on whether the note is a  \
+float or an int)\
+// the args here represents the union of what we need for both the ext  \
+and midi flavours of a note on (and off below)\
+void  \
+	NoteScheduler::QueueExtendedNoteOn(	UInt32 	inInstrumentNumber,\
+							UInt32			inGroupID,\
+							NoteInstanceID	&outNoteInstanceID,\
+							long				inScheduledSampleFrame,\
+							const MusicDeviceNoteParams &inParams)\
+\{\
+	ExtendedNoteParams* ptr = FindUnusedQueueSlot();\
+	if (ptr)\
+	\{\
+		ExtendedNoteParams &params = *ptr;\
+		params.eventType 				= ExtendedNoteParams::kNoteOn;\
+		\
+		// if note-on, then generate instanceID here, so later it will get passed\
+		// into ExtendedNoteOn() (via ScheduledQueuedEvents() )\
+		Float32 note = inParams.mPitch;\
+		outNoteInstanceID = Note::GetNewNoteID(note);\
+\
+\
+		params.instrumentNumber			= inInstrumentNumber;\
+		params.groupID					= inGroupID;\
+		params.scheduledSampleFrames	= inScheduledSampleFrame;\
+		params.noteNumber				= note;\
+		params.velocity					= inParams.mVelocity;\
+		params.instanceID				= outNoteInstanceID;\
+			\
+		// increment write index last!\
+		mQueueWriteIndex = (mQueueWriteIndex + 1) % kMaxQueueEvents;\
+	\}\
+\}\
+\
+void 	NoteScheduler::QueueExtendedNoteOff(UInt32		inGroupID,\
+						NoteInstanceID			inNoteInstanceID,\
+						long						inScheduledSampleFrame)\
+\{\
+	ExtendedNoteParams* ptr = FindUnusedQueueSlot();\
+	if (ptr)\
+	\{\
+		ExtendedNoteParams &params = *ptr;\
+		params.eventType 				= ExtendedNoteParams::kNoteOff;\
+		params.groupID				= inGroupID;\
+		params.instanceID				= inNoteInstanceID;\
+		params.scheduledSampleFrames	= inScheduledSampleFrame;\
+\
+		// increment write index last!\
+		mQueueWriteIndex = (mQueueWriteIndex + 1) % kMaxQueueEvents;\
+	\}\
+\}\
+\
+OK - so that is the queueing part.\
+\
+When the scheduler renders, it first checks to see if there is anything  \
+to dequeue\
+void NoteScheduler::ScheduleQueuedEvents()\
+\{\
+	while(mQueueReadIndex != mQueueWriteIndex )\
+	\{\
+		ExtendedNoteParams &params = mNoteOnQueue[mQueueReadIndex ];\
+		\
+		// There are two cases:\
+		//		note on	=> EventType is kNoteOn\
+		//		note off => EventType is kNoteOff\
+		\
+		if (params.eventType == ExtendedNoteParams::kNoteOn)\
+		\{\
+			MusicDeviceNoteParams noteParams;\
+			noteParams.argCount = 2;\
+			noteParams.mPitch = params.noteNumber;\
+			noteParams.mVelocity = params.velocity;\
+			NoteInstanceID noteID;\
+			\
+			ExtendedNoteOn(	params.instrumentNumber,\
+							params.groupID,\
+							noteID,	//it will be ignored in this case (because the queueing above has already generated it)\
+							params.scheduledSampleFrames,\
+							noteParams,\
+							params.instanceID);\
+		\}\
+		else\
+		\{\
+			// is note off\
+			ExtendedNoteOff (params.groupID, params.instanceID, params.scheduledSampleFrames);\
+		\}\
+		\
+		mNoteOnQueue[mQueueReadIndex ].eventType =  ExtendedNoteParams::kUnused; // free this slot\
+		\
+		mQueueReadIndex = (mQueueReadIndex + 1) % kMaxQueueEvents;\
+	\}\
+\}\
+\
+The one subtlety about this is that when you are queueing you already  \
+will have had to generate the unique note instance ID (to pass back to the caller of the API\
+- so when dequeueing, the params.instanceID will already have a value that  \
+ExtendedNoteOn will see and understand. When the SynthInstance calls  \
+ExtendedNoteOn itself (ie. it doesn't have to queue), then the value of  \
+this last argument will default to -1, so we know that there hasn't  \
+been a note instance ID generated yet, and ExtNoteOn will generate one.\
+}

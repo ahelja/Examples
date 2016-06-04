@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		565FEC4F07B179CA00C4E23A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565FEC3907B179A100C4E23A /* Cocoa.framework */; };
+		565FEC5007B179CE00C4E23A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565FEC3307B1797000C4E23A /* main.m */; };
+		565FEC5107B179D300C4E23A /* MyOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 565FEC3107B1796900C4E23A /* MyOpenGLView.m */; };
+		565FEC5207B179D400C4E23A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565FEC3B07B179A100C4E23A /* OpenGL.framework */; };
+		565FEC6407B17BE200C4E23A /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 565FEC3407B1797F00C4E23A /* MainMenu.nib */; };
+		565FEC6507B17BE300C4E23A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 565FEC3607B1797F00C4E23A /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		565FEC2207B1792E00C4E23A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		565FEC2307B1792E00C4E23A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		565FEC3107B1796900C4E23A /* MyOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyOpenGLView.m; sourceTree = SOURCE_ROOT; };
+		565FEC3207B1796900C4E23A /* MyOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyOpenGLView.h; sourceTree = SOURCE_ROOT; };
+		565FEC3307B1797000C4E23A /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		565FEC3507B1797F00C4E23A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		565FEC3707B1797F00C4E23A /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		565FEC3907B179A100C4E23A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		565FEC3B07B179A100C4E23A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		565FEC4B07B179BA00C4E23A /* CocoaGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		565FEC4E07B179BA00C4E23A /* CocoaGL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "CocoaGL-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		565FEC4907B179BA00C4E23A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565FEC4F07B179CA00C4E23A /* Cocoa.framework in Frameworks */,
+				565FEC5207B179D400C4E23A /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		565FEC2007B1792E00C4E23A = {
+			isa = PBXGroup;
+			children = (
+				565FEC2D07B1793B00C4E23A /* Classes */,
+				565FEC2E07B1794000C4E23A /* Other Sources */,
+				565FEC2F07B1794500C4E23A /* Resources */,
+				565FEC3007B1794A00C4E23A /* Frameworks */,
+				565FEC4C07B179BA00C4E23A /* Products */,
+				565FEC4E07B179BA00C4E23A /* CocoaGL-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		565FEC2D07B1793B00C4E23A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				565FEC3107B1796900C4E23A /* MyOpenGLView.m */,
+				565FEC3207B1796900C4E23A /* MyOpenGLView.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		565FEC2E07B1794000C4E23A /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				565FEC3307B1797000C4E23A /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		565FEC2F07B1794500C4E23A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				565FEC3407B1797F00C4E23A /* MainMenu.nib */,
+				565FEC3607B1797F00C4E23A /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		565FEC3007B1794A00C4E23A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				565FEC3907B179A100C4E23A /* Cocoa.framework */,
+				565FEC3B07B179A100C4E23A /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		565FEC4C07B179BA00C4E23A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				565FEC4B07B179BA00C4E23A /* CocoaGL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		565FEC4A07B179BA00C4E23A /* CocoaGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC255408BBC88B006E9215 /* Build configuration list for PBXNativeTarget "CocoaGL" */;
+			buildPhases = (
+				565FEC4707B179BA00C4E23A /* Resources */,
+				565FEC4807B179BA00C4E23A /* Sources */,
+				565FEC4907B179BA00C4E23A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "CocoaGL-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = CocoaGL;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = CocoaGL;
+			productName = CocoaGL;
+			productReference = 565FEC4B07B179BA00C4E23A /* CocoaGL.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>CocoaGL</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.CocoaGL</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		565FEC2407B1792E00C4E23A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F0EC255808BBC88B006E9215 /* Build configuration list for PBXProject "CocoaGL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				565FEC2207B1792E00C4E23A /* Development */,
+				565FEC2307B1792E00C4E23A /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = 565FEC2007B1792E00C4E23A;
+			productRefGroup = 565FEC4C07B179BA00C4E23A /* Products */;
+			projectDirPath = "";
+			targets = (
+				565FEC4A07B179BA00C4E23A /* CocoaGL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		565FEC4707B179BA00C4E23A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565FEC6407B17BE200C4E23A /* MainMenu.nib in Resources */,
+				565FEC6507B17BE300C4E23A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		565FEC4807B179BA00C4E23A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565FEC5007B179CE00C4E23A /* main.m in Sources */,
+				565FEC5107B179D300C4E23A /* MyOpenGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		565FEC3407B1797F00C4E23A /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				565FEC3507B1797F00C4E23A /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = SOURCE_ROOT;
+		};
+		565FEC3607B1797F00C4E23A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				565FEC3707B1797F00C4E23A /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0EC255508BBC88B006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "CocoaGL-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = CocoaGL;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC255608BBC88B006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "CocoaGL-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = CocoaGL;
+			};
+			name = Release;
+		};
+		F0EC255908BBC88B006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC255A08BBC88B006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0EC255408BBC88B006E9215 /* Build configuration list for PBXNativeTarget "CocoaGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC255508BBC88B006E9215 /* Debug */,
+				F0EC255608BBC88B006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC255808BBC88B006E9215 /* Build configuration list for PBXProject "CocoaGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC255908BBC88B006E9215 /* Debug */,
+				F0EC255A08BBC88B006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 565FEC2407B1792E00C4E23A /* Project object */;
+}

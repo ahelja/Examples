@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		080E96DDFE201D6D7F000001 = {
+			children = (
+				B1E9FA710177AB7E05CA2A1D,
+				B1E9FA720177AB7E05CA2A1D,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		089C165CFE840E0CC02AAC07 = {
+			children = (
+				089C165DFE840E0CC02AAC07,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		089C165DFE840E0CC02AAC07 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//100
+//101
+//102
+//103
+//104
+		1058C7A0FEA54F0111CA2CBB = {
+			children = (
+				1058C7A1FEA54F0111CA2CBB,
+				B1E9FA6B0177AA5905CA2A1D,
+				40DE5BFF029AF85E05CD2B6C,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1058C7A1FEA54F0111CA2CBB = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1058C7A2FEA54F0111CA2CBB = {
+			children = (
+				29B97325FDCFA39411CA2CEA,
+				29B97324FDCFA39411CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//100
+//101
+//102
+//103
+//104
+//190
+//191
+//192
+//193
+//194
+		19C28FACFE9D520D11CA2CBB = {
+			children = (
+				9A2EF43407A855E500258FA4,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//290
+//291
+//292
+//293
+//294
+		29B97313FDCFA39411CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA,
+				4A9504CDFFE6A4B311CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 29B97314FDCFA39411CA2CEA;
+			projectDirPath = "";
+			targets = (
+				9A2EF42507A855E500258FA4,
+			);
+		};
+		29B97314FDCFA39411CA2CEA = {
+			children = (
+				080E96DDFE201D6D7F000001,
+				29B97315FDCFA39411CA2CEA,
+				29B97317FDCFA39411CA2CEA,
+				29B97323FDCFA39411CA2CEA,
+				19C28FACFE9D520D11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = OBEXTest;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA = {
+			children = (
+				29B97316FDCFA39411CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97316FDCFA39411CA2CEA = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = main.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA = {
+			children = (
+				9A2EF43907A8560E00258FA4,
+				9AB5BB5208BE84130012F446,
+				089C165CFE840E0CC02AAC07,
+				9AB5BB5808BE84280012F446,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA = {
+			children = (
+				1058C7A0FEA54F0111CA2CBB,
+				1058C7A2FEA54F0111CA2CBB,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		29B97324FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		29B97325FDCFA39411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//290
+//291
+//292
+//293
+//294
+//400
+//401
+//402
+//403
+//404
+		40DE5BFF029AF85E05CD2B6C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOBluetoothUI.framework;
+			path = /System/Library/Frameworks/IOBluetoothUI.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//400
+//401
+//402
+//403
+//404
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+		4A9504CCFFE6A4B311CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+//9A0
+//9A1
+//9A2
+//9A3
+//9A4
+		9A2EF42507A855E500258FA4 = {
+			buildPhases = (
+				9A2EF42607A855E500258FA4,
+				9A2EF42807A855E500258FA4,
+				9A2EF42C07A855E500258FA4,
+				9A2EF42F07A855E500258FA4,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "${SYSTEM_APPS_DIR}/Extras/Bluetooth";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = OBEXSample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = OBEXSample;
+			productInstallPath = "${SYSTEM_APPS_DIR}/Extras/Bluetooth";
+			productName = OBEXTest;
+			productReference = 9A2EF43407A855E500258FA4;
+			productType = "com.apple.product-type.application";
+		};
+		9A2EF42607A855E500258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EF42707A855E500258FA4,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EF42707A855E500258FA4 = {
+			fileRef = B1E9FA720177AB7E05CA2A1D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EF42807A855E500258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EF42907A855E500258FA4,
+				9A2EF43B07A8560E00258FA4,
+				9AB5BB5308BE84130012F446,
+				9AB5BB5A08BE84280012F446,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EF42907A855E500258FA4 = {
+			fileRef = 089C165CFE840E0CC02AAC07;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EF42C07A855E500258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EF42D07A855E500258FA4,
+				9A2EF42E07A855E500258FA4,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EF42D07A855E500258FA4 = {
+			fileRef = 29B97316FDCFA39411CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		9A2EF42E07A855E500258FA4 = {
+			fileRef = B1E9FA710177AB7E05CA2A1D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EF42F07A855E500258FA4 = {
+			buildActionMask = 2147483647;
+			files = (
+				9A2EF43007A855E500258FA4,
+				9A2EF43107A855E500258FA4,
+				9A2EF43207A855E500258FA4,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2EF43007A855E500258FA4 = {
+			fileRef = 1058C7A1FEA54F0111CA2CBB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EF43107A855E500258FA4 = {
+			fileRef = B1E9FA6B0177AA5905CA2A1D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EF43207A855E500258FA4 = {
+			fileRef = 40DE5BFF029AF85E05CD2B6C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9A2EF43407A855E500258FA4 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = OBEXSample.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A2EF43907A8560E00258FA4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = Info.plist;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		9A2EF43B07A8560E00258FA4 = {
+			fileRef = 9A2EF43907A8560E00258FA4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9AB5BB5208BE84130012F446 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = Icon.icns;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		9AB5BB5308BE84130012F446 = {
+			fileRef = 9AB5BB5208BE84130012F446;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9AB5BB5808BE84280012F446 = {
+			children = (
+				9AB5BB5908BE84280012F446,
+			);
+			isa = PBXVariantGroup;
+			name = MainMenu.nib;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		9AB5BB5908BE84280012F446 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/MainMenu.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		9AB5BB5A08BE84280012F446 = {
+			fileRef = 9AB5BB5808BE84280012F446;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//9A0
+//9A1
+//9A2
+//9A3
+//9A4
+//B10
+//B11
+//B12
+//B13
+//B14
+		B1E9FA6B0177AA5905CA2A1D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOBluetooth.framework;
+			path = /System/Library/Frameworks/IOBluetooth.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		B1E9FA710177AB7E05CA2A1D = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = MyWindow.m;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		B1E9FA720177AB7E05CA2A1D = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MyWindow.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA;
+}

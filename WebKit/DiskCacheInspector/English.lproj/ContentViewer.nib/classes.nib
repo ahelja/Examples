@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            CLASS = ContentViewerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {emptyView = id; imageView = id; tabView = id; textView = id; }; 
+            SUPERCLASS = UtilityWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = UtilityWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

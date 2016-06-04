@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F94EEB207B3090600AE9F13 /* TCarbonEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F34130F032D695003CA0CF1 /* TCarbonEvent.h */; };
+		4F94EEB307B3090600AE9F13 /* TRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F341311032D695003CA0CF1 /* TRect.h */; };
+		4F94EEB407B3090600AE9F13 /* TView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F341313032D695003CA0CF1 /* TView.h */; };
+		4F94EEB507B3090600AE9F13 /* THexEditorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F341328032D6D1403CA0CF1 /* THexEditorView.h */; };
+		4F94EEB607B3090600AE9F13 /* THexEditorScrollableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F41840A033FB3F503CA0CF1 /* THexEditorScrollableView.h */; };
+		4F94EEB707B3090600AE9F13 /* TObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6029BEC003F9CF240BFF4F4D /* TObject.h */; };
+		4F94EEB807B3090600AE9F13 /* HIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 332477F80690C93700AAEC61 /* HIFramework.h */; };
+		4F94EEB907B3090600AE9F13 /* TEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 332477FA0690C93700AAEC61 /* TEventHandler.h */; };
+		4F94EEBB07B3090600AE9F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		4F94EEBC07B3090600AE9F13 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		4F94EEBD07B3090600AE9F13 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0F568949034A5FA503CA0CF1 /* README.rtf */; };
+		4F94EEBF07B3090600AE9F13 /* main.cp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* main.cp */; settings = {ATTRIBUTES = (); }; };
+		4F94EEC007B3090600AE9F13 /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = 0F34130E032D695003CA0CF1 /* TCarbonEvent.cp */; };
+		4F94EEC107B3090600AE9F13 /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = 0F341310032D695003CA0CF1 /* TRect.cp */; };
+		4F94EEC207B3090600AE9F13 /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 0F341312032D695003CA0CF1 /* TView.cp */; };
+		4F94EEC307B3090600AE9F13 /* THexEditorView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 0F341329032D6D1403CA0CF1 /* THexEditorView.cp */; };
+		4F94EEC407B3090600AE9F13 /* THexEditorScrollableView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 0F41840B033FB3F503CA0CF1 /* THexEditorScrollableView.cp */; };
+		4F94EEC507B3090600AE9F13 /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6029BEBF03F9CF240BFF4F4D /* TObject.cp */; };
+		4F94EEC607B3090600AE9F13 /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 332477F90690C93700AAEC61 /* TEventHandler.cp */; };
+		4F94EEC807B3090600AE9F13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F34130E032D695003CA0CF1 /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TCarbonEvent.cp; sourceTree = "<group>"; };
+		0F34130F032D695003CA0CF1 /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TCarbonEvent.h; sourceTree = "<group>"; };
+		0F341310032D695003CA0CF1 /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TRect.cp; sourceTree = "<group>"; };
+		0F341311032D695003CA0CF1 /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TRect.h; sourceTree = "<group>"; };
+		0F341312032D695003CA0CF1 /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TView.cp; sourceTree = "<group>"; };
+		0F341313032D695003CA0CF1 /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TView.h; sourceTree = "<group>"; };
+		0F341328032D6D1403CA0CF1 /* THexEditorView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = THexEditorView.h; sourceTree = "<group>"; };
+		0F341329032D6D1403CA0CF1 /* THexEditorView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = THexEditorView.cp; sourceTree = "<group>"; };
+		0F41840A033FB3F503CA0CF1 /* THexEditorScrollableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = THexEditorScrollableView.h; sourceTree = "<group>"; };
+		0F41840B033FB3F503CA0CF1 /* THexEditorScrollableView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = THexEditorScrollableView.cp; sourceTree = "<group>"; };
+		0F568949034A5FA503CA0CF1 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* main.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cp; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		332477F80690C93700AAEC61 /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HIFramework.h; sourceTree = "<group>"; };
+		332477F90690C93700AAEC61 /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TEventHandler.cp; sourceTree = "<group>"; };
+		332477FA0690C93700AAEC61 /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TEventHandler.h; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4F94EECA07B3090600AE9F13 /* Info-HexEditorView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-HexEditorView.plist"; sourceTree = "<group>"; };
+		4F94EECB07B3090600AE9F13 /* HexEditorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexEditorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029BEBF03F9CF240BFF4F4D /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TObject.cp; sourceTree = "<group>"; };
+		6029BEC003F9CF240BFF4F4D /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TObject.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F94EEC707B3090600AE9F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEC807B3090600AE9F13 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F34130D032D695003CA0CF1 /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				332477F80690C93700AAEC61 /* HIFramework.h */,
+				0F34130E032D695003CA0CF1 /* TCarbonEvent.cp */,
+				0F34130F032D695003CA0CF1 /* TCarbonEvent.h */,
+				332477F90690C93700AAEC61 /* TEventHandler.cp */,
+				332477FA0690C93700AAEC61 /* TEventHandler.h */,
+				6029BEBF03F9CF240BFF4F4D /* TObject.cp */,
+				6029BEC003F9CF240BFF4F4D /* TObject.h */,
+				0F341310032D695003CA0CF1 /* TRect.cp */,
+				0F341311032D695003CA0CF1 /* TRect.h */,
+				0F341312032D695003CA0CF1 /* TView.cp */,
+				0F341313032D695003CA0CF1 /* TView.h */,
+			);
+			name = HIFramework;
+			path = ../HIFramework;
+			sourceTree = SOURCE_ROOT;
+		};
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F94EECB07B3090600AE9F13 /* HexEditorView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* HexEditorView */ = {
+			isa = PBXGroup;
+			children = (
+				0F568949034A5FA503CA0CF1 /* README.rtf */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+				4F94EECA07B3090600AE9F13 /* Info-HexEditorView.plist */,
+			);
+			name = HexEditorView;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2BFDCF999611CA2CEA /* main.cp */,
+				0F341328032D6D1403CA0CF1 /* THexEditorView.h */,
+				0F341329032D6D1403CA0CF1 /* THexEditorView.cp */,
+				0F41840A033FB3F503CA0CF1 /* THexEditorScrollableView.h */,
+				0F41840B033FB3F503CA0CF1 /* THexEditorScrollableView.cp */,
+				0F34130D032D695003CA0CF1 /* HIFramework */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F94EEB107B3090600AE9F13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEB207B3090600AE9F13 /* TCarbonEvent.h in Headers */,
+				4F94EEB307B3090600AE9F13 /* TRect.h in Headers */,
+				4F94EEB407B3090600AE9F13 /* TView.h in Headers */,
+				4F94EEB507B3090600AE9F13 /* THexEditorView.h in Headers */,
+				4F94EEB607B3090600AE9F13 /* THexEditorScrollableView.h in Headers */,
+				4F94EEB707B3090600AE9F13 /* TObject.h in Headers */,
+				4F94EEB807B3090600AE9F13 /* HIFramework.h in Headers */,
+				4F94EEB907B3090600AE9F13 /* TEventHandler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F94EEB007B3090600AE9F13 /* HexEditorView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F2B04BD08A0265B0055E173 /* Build configuration list for PBXNativeTarget "HexEditorView" */;
+			buildPhases = (
+				4F94EEB107B3090600AE9F13 /* Headers */,
+				4F94EEBA07B3090600AE9F13 /* Resources */,
+				4F94EEBE07B3090600AE9F13 /* Sources */,
+				4F94EEC707B3090600AE9F13 /* Frameworks */,
+				4F94EEC907B3090600AE9F13 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-HexEditorView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = HexEditorView;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = HexEditorView;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = HexEditorView;
+			productReference = 4F94EECB07B3090600AE9F13 /* HexEditorView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F2B04C108A0265B0055E173 /* Build configuration list for PBXProject "HexEditorView" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* HexEditorView */;
+			projectDirPath = "";
+			targets = (
+				4F94EEB007B3090600AE9F13 /* HexEditorView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F94EEBA07B3090600AE9F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEBB07B3090600AE9F13 /* InfoPlist.strings in Resources */,
+				4F94EEBC07B3090600AE9F13 /* main.nib in Resources */,
+				4F94EEBD07B3090600AE9F13 /* README.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4F94EEC907B3090600AE9F13 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F94EEBE07B3090600AE9F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EEBF07B3090600AE9F13 /* main.cp in Sources */,
+				4F94EEC007B3090600AE9F13 /* TCarbonEvent.cp in Sources */,
+				4F94EEC107B3090600AE9F13 /* TRect.cp in Sources */,
+				4F94EEC207B3090600AE9F13 /* TView.cp in Sources */,
+				4F94EEC307B3090600AE9F13 /* THexEditorView.cp in Sources */,
+				4F94EEC407B3090600AE9F13 /* THexEditorScrollableView.cp in Sources */,
+				4F94EEC507B3090600AE9F13 /* TObject.cp in Sources */,
+				4F94EEC607B3090600AE9F13 /* TEventHandler.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F2B04BE08A0265B0055E173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-HexEditorView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = HexEditorView;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F2B04BF08A0265B0055E173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-HexEditorView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = HexEditorView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F2B04C208A0265B0055E173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F2B04C308A0265B0055E173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F2B04BD08A0265B0055E173 /* Build configuration list for PBXNativeTarget "HexEditorView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F2B04BE08A0265B0055E173 /* Debug */,
+				4F2B04BF08A0265B0055E173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F2B04C108A0265B0055E173 /* Build configuration list for PBXProject "HexEditorView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F2B04C208A0265B0055E173 /* Debug */,
+				4F2B04C308A0265B0055E173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

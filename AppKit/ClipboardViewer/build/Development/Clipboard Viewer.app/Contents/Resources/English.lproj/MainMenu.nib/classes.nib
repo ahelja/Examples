@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {save = id; setPasteboard = id; showContents = id; updateTypesList = id; }; 
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dataView = NSTextField; 
+                saveButton = NSButton; 
+                typeInfoField = NSTextField; 
+                typeMatrix = NSMatrix; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

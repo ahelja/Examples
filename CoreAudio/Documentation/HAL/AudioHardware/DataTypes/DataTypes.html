@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Defined Types</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1><br>
+<hr><a name="//apple_ref/c/tdef/AudioClassID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioClassID">AudioClassID</a></h2>
+</td></tr></table><hr>AudioClassIDs are used to identify the class of an AudioObject.
+
+<blockquote><pre>
+typedef UInt32      AudioClassID;
+</pre>
+</blockquote>
+<hr><a name="//apple_ref/c/tdef/AudioDeviceID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceID">AudioDeviceID</a></h2>
+</td></tr></table><hr>AudioDevice is the base class for all objects that represent an audio device.
+
+<blockquote><pre>
+typedef AudioObjectID   AudioDeviceID;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioDevice is a subclass of AudioObject. AudioDevices normally contain
+AudioStreams and AudioControls, but may contain other things depending on the
+kind of AudioDevice (e.g. aggregate devices contain other AudioDevices).
+</p>
+<hr><a name="//apple_ref/c/tdef/AudioDeviceIOProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDeviceIOProc">AudioDeviceIOProc</a></h2>
+</td></tr></table><hr>An AudioDeviceIOProc is called by an AudioDevice to provide input data read from
+the device and collect output data to be written to the device for the current
+IO cycle.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioDeviceIOProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID           inDevice,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp*   inNow,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioBufferList*  inInputData,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp*   inInputTime,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioBufferList*        outOutputData,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp*   inOutputTime,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;void*                   inClientData<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inDevice</tt></dt><dd>The AudioDevice doing the IO.</dd>
+<dt><tt>inNow</tt></dt><dd>An AudioTimeStamp that indicates the IO cycle started. Note that this time
+includes any scheduling latency that may have been incurred waking the
+thread on which IO is being done.</dd>
+<dt><tt>inInputData</tt></dt><dd>An AudioBufferList containing the input data for the current IO cycle. For
+streams that are disabled, the AudioBuffer's mData field will be NULL but
+the mDataByteSize field will still say how much data would have been there
+if it was enabled. Note that the contents of this structure should never be
+modified.</dd>
+<dt><tt>inInputTime</tt></dt><dd>An AudioTimeStamp that indicates the time at which the first frame in the
+data was acquired from the hardware. If the device has no input streams, the
+time stamp will be zeroed out.</dd>
+<dt><tt>outOutputData</tt></dt><dd>An AudioBufferList in which the output data for the current IO cycle is to
+be placed. On entry, each AudioBuffer's mDataByteSize field indicates the
+maximum amount of data that can be placed in the buffer and the buffer's
+memory has been zeroed out. For formats where the number of bytes per packet
+can vary (as with AC-3, for example), the client has to fill out on exit
+each mDataByteSize field in each AudioBuffer with the amount of data that
+was put in the buffer. Otherwise, the mDataByteSize field should not be
+changed. For streams that are disabled, the AudioBuffer's mData field will
+be NULL but the mDataByteSize field will still say how much data would have
+been there if it was enabled. Except as noted above, the contents of this
+structure should not other wise be modified.</dd>
+<dt><tt>inOutputTime</tt></dt><dd>An AudioTimeStamp that indicates the time at which the first frame in the
+data will be passed to the hardware. If the device has no output streams,
+the time stamp will be zeroed out.</dd>
+<dt><tt>inClientData</tt></dt><dd>A pointer to client data established when the AudioDeviceIOProc was
+registered with the AudioDevice.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<hr><a name="//apple_ref/c/tdef/AudioDevicePropertyID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDevicePropertyID">AudioDevicePropertyID</a></h2>
+</td></tr></table><hr>An AudioDevicePropertyID is an integer that identifies a specific piece of
+information about the object.
+
+<blockquote><pre>
+typedef AudioObjectPropertySelector AudioDevicePropertyID;
+</pre>
+</blockquote>
+<hr><a name="//apple_ref/c/tdef/AudioDevicePropertyListenerProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDevicePropertyListenerProc">AudioDevicePropertyListenerProc</a></h2>
+</td></tr></table><hr>Clients register an AudioDevicePropertyListenerProc with the AudioDevice object
+in order to receive notifications when the properties of the object change.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioDevicePropertyListenerProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID           inDevice,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32                  inChannel,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean                 isInput,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID   inPropertyID,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;void*                   inClientData<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inDevice</tt></dt><dd>The AudioDevice whose property has changed.</dd>
+<dt><tt>inChannel</tt></dt><dd>The channel of the property that changed where 0 is the master channel.</dd>
+<dt><tt>isInput</tt></dt><dd>Which section of the AudioDevice changed.</dd>
+<dt><tt>inPropertyID</tt></dt><dd>The AudioDevicePropertyID of the property that changed.</dd>
+<dt><tt>inClientData</tt></dt><dd>A pointer to client data established when the listener proc was registered
+with the object.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<hr><a name="//apple_ref/c/tdef/AudioHardwarePropertyID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwarePropertyID">AudioHardwarePropertyID</a></h2>
+</td></tr></table><hr>An AudioHardwarePropertyID is a integer that identifies a specific piece of
+information about the AudioSystemObject.
+
+<blockquote><pre>
+typedef AudioObjectPropertySelector AudioHardwarePropertyID;
+</pre>
+</blockquote>
+<hr><a name="//apple_ref/c/tdef/AudioHardwarePropertyListenerProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwarePropertyListenerProc">AudioHardwarePropertyListenerProc</a></h2>
+</td></tr></table><hr>Clients register an AudioHardwarePropertyListenerProc with the AudioSystemObject
+in order to receive notifications when the properties of the object change.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioHardwarePropertyListenerProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioHardwarePropertyID inPropertyID,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;void*                   inClientData<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inPropertyID</tt></dt><dd>The AudioHardwarePropertyID of the property that changed.</dd>
+<dt><tt>inClientData</tt></dt><dd>A pointer to client data established when the listener proc was registered
+with the AudioSystemObject.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<hr><a name="//apple_ref/c/tdef/AudioObjectID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectID">AudioObjectID</a></h2>
+</td></tr></table><hr>AudioObject is the base class for all the objects in the HAL.
+
+<blockquote><pre>
+typedef UInt32      AudioObjectID;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioObjects have properties and can contain other AudioObjects.
+</p>
+<hr><a name="//apple_ref/c/tdef/AudioObjectPropertyElement"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectPropertyElement">AudioObjectPropertyElement</a></h2>
+</td></tr></table><hr>An AudioObjectPropertyElement is an integer that identifies, along with the
+AudioObjectPropertySelector and AudioObjectPropertyScope, a specific piece of
+information about an AudioObject.
+
+<blockquote><pre>
+typedef UInt32  AudioObjectPropertyElement;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The element selects one of possibly many items in the section of the object in
+which to look for the property. Elements are number sequentially where 0
+represents the master element. Elements are particular to an instance of a
+class, meaning that two instances can have different numbers of elements in the
+same scope. There is no inheritance of elements.
+</p>
+<hr><a name="//apple_ref/c/tdef/AudioObjectPropertyListenerProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectPropertyListenerProc">AudioObjectPropertyListenerProc</a></h2>
+</td></tr></table><hr>Clients register an AudioObjectPropertyListenerProc with an AudioObject in order
+to receive notifications when the properties of the object change.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioObjectPropertyListenerProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioObjectID                       inObjectID,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32                              inNumberAddresses,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioObjectPropertyAddress    inAddresses[],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;void*                               inClientData<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Listeners will be called when possibly many properties have changed.
+Consequently, the implementation of a listener must go through the array of
+addresses to see what exactly has changed. Note that the array of addresses will
+always have at least one address in it for which the listener is signed up to
+receive notifications about but may contain addresses for properties for which
+the listener is not signed up to receive notifications.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inObjectID</tt></dt><dd>The AudioObject whose properties have changed.</dd>
+<dt><tt>inNumberAddresses</tt></dt><dd>The number of elements in the inAddresses array.</dd>
+<dt><tt>inAddresses</tt></dt><dd>An array of AudioObjectPropertyAddresses indicating which properties
+changed.</dd>
+<dt><tt>inClientData</tt></dt><dd>A pointer to client data established when the listener proc was registered
+with the AudioObject.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<hr><a name="//apple_ref/c/tdef/AudioObjectPropertyScope"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectPropertyScope">AudioObjectPropertyScope</a></h2>
+</td></tr></table><hr>An AudioObjectPropertyScope is a four char code that identifies, along with the
+AudioObjectPropertySelector and AudioObjectPropertyElement, a specific piece of
+information about an AudioObject.
+
+<blockquote><pre>
+typedef UInt32  AudioObjectPropertyScope;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The scope specifies the section of the object in which to look for the property,
+such as input, output, global, etc. Note that each class has a different set of
+scopes. A subclass inherits it's superclass's set of scopes.
+</p>
+<hr><a name="//apple_ref/c/tdef/AudioObjectPropertySelector"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioObjectPropertySelector">AudioObjectPropertySelector</a></h2>
+</td></tr></table><hr>An AudioObjectPropertySelector is a four char code that identifies, along with
+the AudioObjectPropertyScope and AudioObjectPropertyElement, a specific piece of
+information about an AudioObject.
+
+<blockquote><pre>
+typedef UInt32  AudioObjectPropertySelector;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The property selector specifies the general classification of the property such
+as volume, stream format, latency, etc. Note that each class has a different set
+of selectors. A subclass inherits it's super class's set of selectors, although
+it may not implement them all.
+</p>
+<hr><a name="//apple_ref/c/tdef/AudioStreamID"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamID">AudioStreamID</a></h2>
+</td></tr></table><hr>AudioStream is the base class for all objects that represent a stream of data on
+an audio device.
+
+<blockquote><pre>
+typedef AudioObjectID   AudioStreamID;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>AudioStream is a subclass of AudioObject and can contain AudioControls.
+</p>
+<hr><a name="//apple_ref/c/tdef/AudioStreamPropertyListenerProc"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioStreamPropertyListenerProc">AudioStreamPropertyListenerProc</a></h2>
+</td></tr></table><hr>Clients register an AudioStreamPropertyListenerProc with the AudioStream object
+in order to receive notifications when the properties of the object change.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioStreamPropertyListenerProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioStreamID           inStream,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32                  inChannel,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID   inPropertyID,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;void*                   inClientData<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the same functionality is provided by AudioObjectPropertyListenerProc.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inStream</tt></dt><dd>The AudioStream whose property has changed.</dd>
+<dt><tt>inChannel</tt></dt><dd>The channel of the property that changed where 0 is the master channel.</dd>
+<dt><tt>inPropertyID</tt></dt><dd>The AudioDevicePropertyID of the property that changed.</dd>
+<dt><tt>inClientData</tt></dt><dd>A pointer to client data established when the listener proc was registered
+with the object.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

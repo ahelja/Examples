@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUPropertyControl</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUPropertyControl</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "CarbonEventHandler_fs.html" target="_top">CarbonEventHandler</a><br>
+<big><b>Subclasses : </b></big>
+<a href = "AUVPresets_fs.html" target="_top">AUVPresets</a><br>
+<big><b>Header : </b></big>AUCarbonViewControl<br>
+<br><pre>class AUPropertyControl : public CarbonEventHandler </pre>
+<p></p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUPropertyControl">AUPropertyControl</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUPropertyControl (AUCarbonViewBase* inBase);</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AddInterest">AddInterest</a></h4>
+</td><td width="50%">
+<h4>public pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void AddInterest (
+          AUEventListenerRef              inListener,
+          void*                           inObject
+    ) = 0;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="EmbedControl">EmbedControl</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void EmbedControl (ControlRef theControl);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetCarbonWindow">GetCarbonWindow</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> WindowRef GetCarbonWindow();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetHeight">GetHeight</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> int GetHeight();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleControlChange">HandleControlChange</a></h4>
+</td><td width="50%">
+<h4>protected pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleControlChange () = 0;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleEvent">HandleEvent</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool HandleEvent(EventRef event);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandlePropertyChange">HandlePropertyChange</a></h4>
+</td><td width="50%">
+<h4>public pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool HandlePropertyChange (const AudioUnitProperty &inProp) = 0;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RegisterEvents">RegisterEvents</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void RegisterEvents ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RemoveInterest">RemoveInterest</a></h4>
+</td><td width="50%">
+<h4>public pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void RemoveInterest (
+          AUEventListenerRef              inListener,
+          void*                           inObject
+    ) = 0;</pre>
+<p></p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mControl">mControl</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> ControlRef mControl;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mHeight">mHeight</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> SInt16 mHeight;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mView">mView</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AUCarbonViewBase* mView;</pre>
+<p></p><br>
+<hr>
+</body></html>

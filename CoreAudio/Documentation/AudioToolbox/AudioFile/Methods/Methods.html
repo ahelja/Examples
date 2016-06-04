@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Methods</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Methods</font></h1>
+<br><a name="HeaderDoc_methods"></a><dl>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileGetUserDataSize" target="doc">-AudioFileGetUserDataSize</a></tt></dt>
+<dd>Get the size of user data in a file
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileGetUserData" target="doc">-AudioFileGetUserData</a></tt></dt>
+<dd>Get the data of a chunk in a file.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileSetUserData" target="doc">-AudioFileSetUserData</a></tt></dt>
+<dd>Set the data of a chunk in a file.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileGetPropertyInfo" target="doc">-AudioFileGetPropertyInfo</a></tt></dt>
+<dd>Get information about the size of a property of an AudioFile  and whether it can be set.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileGetProperty" target="doc">-AudioFileGetProperty</a></tt></dt>
+<dd>Copies the value for a property of an AudioFile into a buffer.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileSetProperty" target="doc">-AudioFileSetProperty</a></tt></dt>
+<dd>Sets the value for a property of an AudioFile .
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileGetGlobalInfoSize" target="doc">-AudioFileGetGlobalInfoSize</a></tt></dt>
+<dd>Get information about the size of a global property.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/c/instm/AudioFileGetGlobalInfo" target="doc">-AudioFileGetGlobalInfo</a></tt></dt>
+<dd>Copies the value for a global property into a buffer.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileGetUserDataSize;  name=AudioFileGetUserDataSize --><a name="//apple_ref/c/instm/AudioFileGetUserDataSize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetUserDataSize">AudioFileGetUserDataSize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get the size of user data in a file
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileGetUserDataSize ( <a logicalpath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inIndex</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/outUserDataSize //apple_ref/c/cl/outUserDataSize //apple_ref/c/tdef/outUserDataSize //apple_ref/c/tag/outUserDataSize //apple_ref/c/econst/outUserDataSize //apple_ref/c/struct/outUserDataSize //apple_ref/c/clconst/outUserDataSize" --><font class="type">outUserDataSize</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>inIndex</i></code></dt>
+<dd>an index specifying which chunk if there are more than one.</dd>
+<dt><code><i>outUserDataSize</i></code></dt>
+<dd>on output, if successful, the size of the user data chunk.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileGetUserData;  name=AudioFileGetUserData --><a name="//apple_ref/c/instm/AudioFileGetUserData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetUserData">AudioFileGetUserData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get the data of a chunk in a file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileGetUserData ( <a logicalpath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inIndex</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioUserDataSize</font>, <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/outUserData //apple_ref/c/cl/outUserData //apple_ref/c/tdef/outUserData //apple_ref/c/tag/outUserData //apple_ref/c/econst/outUserData //apple_ref/c/struct/outUserData //apple_ref/c/clconst/outUserData" --><font class="type">outUserData</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>inIndex</i></code></dt>
+<dd>an index specifying which chunk if there are more than one.</dd>
+<dt><code><i>ioUserDataSize</i></code></dt>
+<dd>the size of the buffer on input, size of bytes copied to buffer on output</dd>
+<dt><code><i>outUserData</i></code></dt>
+<dd>a pointer to a buffer in which to copy the chunk data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileSetUserData;  name=AudioFileSetUserData --><a name="//apple_ref/c/instm/AudioFileSetUserData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileSetUserData">AudioFileSetUserData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Set the data of a chunk in a file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileSetUserData ( <a logicalpath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inIndex</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataSize</font>, <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/inUserData //apple_ref/c/cl/inUserData //apple_ref/c/tdef/inUserData //apple_ref/c/tag/inUserData //apple_ref/c/econst/inUserData //apple_ref/c/struct/inUserData //apple_ref/c/clconst/inUserData" --><font class="type">inUserData</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>inIndex</i></code></dt>
+<dd>an index specifying which chunk if there are more than one.</dd>
+<dt><code><i>inUserDataSize</i></code></dt>
+<dd>on input the size of the data to copy, on output, size of bytes copied from the buffer</dd>
+<dt><code><i>inUserData</i></code></dt>
+<dd>a pointer to a buffer from which to copy the chunk data 
+(only the contents of the chunk, not including the chunk header).</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileGetPropertyInfo;  name=AudioFileGetPropertyInfo --><a name="//apple_ref/c/instm/AudioFileGetPropertyInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetPropertyInfo">AudioFileGetPropertyInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get information about the size of a property of an AudioFile  and whether it can be set.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileGetPropertyInfo( <a logicalpath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, <a logicalpath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outDataSize</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/isWritable //apple_ref/c/cl/isWritable //apple_ref/c/tdef/isWritable //apple_ref/c/tag/isWritable //apple_ref/c/econst/isWritable //apple_ref/c/struct/isWritable //apple_ref/c/clconst/isWritable" --><font class="type">isWritable</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileProperty constant.</dd>
+<dt><code><i>outDataSize</i></code></dt>
+<dd>the size of the property data. In order to get the property value, 
+you will need a buffer of this size.</dd>
+<dt><code><i>isWritable</i></code></dt>
+<dd>will be set to 1 if writable, or 0 if read only.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(description)
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileGetProperty;  name=AudioFileGetProperty --><a name="//apple_ref/c/instm/AudioFileGetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetProperty">AudioFileGetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Copies the value for a property of an AudioFile into a buffer.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileGetProperty( <a logicalpath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, <a logicalpath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioDataSize</font>, <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/outPropertyData //apple_ref/c/cl/outPropertyData //apple_ref/c/tdef/outPropertyData //apple_ref/c/tag/outPropertyData //apple_ref/c/econst/outPropertyData //apple_ref/c/struct/outPropertyData //apple_ref/c/clconst/outPropertyData" --><font class="type">outPropertyData</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileProperty constant.</dd>
+<dt><code><i>ioDataSize</i></code></dt>
+<dd>on input the size of the outPropertyData buffer. On output the number of bytes written to the buffer.</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>the buffer in which to write the property data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileSetProperty;  name=AudioFileSetProperty --><a name="//apple_ref/c/instm/AudioFileSetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileSetProperty">AudioFileSetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets the value for a property of an AudioFile .
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileSetProperty( <a logicalpath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, <a logicalpath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inDataSize</font>, <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/inPropertyData //apple_ref/c/cl/inPropertyData //apple_ref/c/tdef/inPropertyData //apple_ref/c/tag/inPropertyData //apple_ref/c/econst/inPropertyData //apple_ref/c/struct/inPropertyData //apple_ref/c/clconst/inPropertyData" --><font class="type">inPropertyData</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileProperty constant.</dd>
+<dt><code><i>inDataSize</i></code></dt>
+<dd>the size of the property data.</dd>
+<dt><code><i>inPropertyData</i></code></dt>
+<dd>the buffer containing the property data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileGetGlobalInfoSize;  name=AudioFileGetGlobalInfoSize --><a name="//apple_ref/c/instm/AudioFileGetGlobalInfoSize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetGlobalInfoSize">AudioFileGetGlobalInfoSize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get information about the size of a global property.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileGetGlobalInfoSize( <a logicalpath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inSpecifierSize</font>, <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSpecifier</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/outDataSize //apple_ref/c/cl/outDataSize //apple_ref/c/tdef/outDataSize //apple_ref/c/tag/outDataSize //apple_ref/c/econst/outDataSize //apple_ref/c/struct/outDataSize //apple_ref/c/clconst/outDataSize" --><font class="type">outDataSize</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileGlobalInfo property constant.</dd>
+<dt><code><i>inSpecifierSize</i></code></dt>
+<dd>The size of the specifier data.</dd>
+<dt><code><i>inSpecifier</i></code></dt>
+<dd>A specifier is a buffer of data used as an input argument to some of the global info properties.</dd>
+<dt><code><i>outDataSize</i></code></dt>
+<dd>the size of the property data. In order to get the property value, 
+you will need a buffer of this size.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=instm;  uid=//apple_ref/c/instm/AudioFileGetGlobalInfo;  name=AudioFileGetGlobalInfo --><a name="//apple_ref/c/instm/AudioFileGetGlobalInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetGlobalInfo">AudioFileGetGlobalInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Copies the value for a global property into a buffer.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <font class="param">OSStatus</font> AudioFileGetGlobalInfo( <a logicalpath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top" href="../../../AudioToolbox/AudioFile/DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inSpecifierSize</font>, <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSpecifier</font>, <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioDataSize</font>, <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/cl/outPropertyData //apple_ref/c/cl/outPropertyData //apple_ref/c/tdef/outPropertyData //apple_ref/c/tag/outPropertyData //apple_ref/c/econst/outPropertyData //apple_ref/c/struct/outPropertyData //apple_ref/c/clconst/outPropertyData" --><font class="type">outPropertyData</font><!-- /a -->); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileGlobalInfo property constant.</dd>
+<dt><code><i>inSpecifierSize</i></code></dt>
+<dd>The size of the specifier data.</dd>
+<dt><code><i>inSpecifier</i></code></dt>
+<dd>A specifier is a buffer of data used as an input argument to some of the global info properties.</dd>
+<dt><code><i>ioDataSize</i></code></dt>
+<dd>on input the size of the outPropertyData buffer. On output the number of bytes written to the buffer.</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>the buffer in which to write the property data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<p>(Last Updated April 06, 2005)
+</p>
+</body>
+</html>

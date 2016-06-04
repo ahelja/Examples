@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayName</key>
+	<string>Zen Stock Client</string>
+	<key>Entities</key>
+	<dict>
+		<key>com.apple.calendars.Calendar</key>
+		<array>
+			<string>com.apple.syncservices.RecordEntityName</string>
+			<string>title</string>
+		</array>
+		<key>com.apple.calendars.Event</key>
+		<array>
+			<string>com.apple.syncservices.RecordEntityName</string>
+			<string>summary</string>
+			<string>start date</string>
+			<string>end date</string>
+			<string>calendar</string>
+		</array>
+	</dict>
+	<key>Type</key>
+	<string>app</string>
+</dict>
+</plist>

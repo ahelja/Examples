@@ -1,0 +1,816 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Constants</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Constants</font></h1>
+<br><hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyName;  name=kMIDIPropertyName --><a name="//apple_ref/c/data/kMIDIPropertyName"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyName">kMIDIPropertyName</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyName</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, string
+<br><br>
+Devices, entities, and endpoints may all have names.  The recommended way to display an
+endpoint's name is to ask for the endpoint name, and display only that name if it is
+unique.  If it is non-unique, prepend the device name.
+<br><br>
+A setup editor may allow the user to set the names of both driver-owned and external
+devices.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyManufacturer;  name=kMIDIPropertyManufacturer --><a name="//apple_ref/c/data/kMIDIPropertyManufacturer"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyManufacturer">kMIDIPropertyManufacturer</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyManufacturer</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/endpoint property, string
+<br><br>
+Drivers should set this property on their devices.
+<br><br>
+Setup editors may allow the user to set this property on external devices.
+<br><br>
+Creators of virtual endpoints may set this property on their endpoints.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyModel;  name=kMIDIPropertyModel --><a name="//apple_ref/c/data/kMIDIPropertyModel"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyModel">kMIDIPropertyModel</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyModel</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/endpoint property, string
+<br><br>
+Drivers should set this property on their devices.
+<br><br>
+Setup editors may allow the user to set this property on external devices.
+<br><br>
+Creators of virtual endpoints may set this property on their endpoints.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyUniqueID;  name=kMIDIPropertyUniqueID --><a name="//apple_ref/c/data/kMIDIPropertyUniqueID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyUniqueID">kMIDIPropertyUniqueID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyUniqueID</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>devices, entities, endpoints all have unique ID's, integer
+<br><br>
+The system assigns unique ID's to all objects.  Creators of virtual endpoints may set
+this property on their endpoints, though doing so may fail if the chosen ID is not
+unique.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyDeviceID;  name=kMIDIPropertyDeviceID --><a name="//apple_ref/c/data/kMIDIPropertyDeviceID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyDeviceID">kMIDIPropertyDeviceID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyDeviceID</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer
+<br><br>
+The entity's system-exclusive ID, in user-visible form
+<br><br>
+Drivers may set this property on their devices or entities.
+<br><br>
+Setup editors may allow the user to set this property on external devices.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceiveChannels;  name=kMIDIPropertyReceiveChannels --><a name="//apple_ref/c/data/kMIDIPropertyReceiveChannels"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceiveChannels">kMIDIPropertyReceiveChannels</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceiveChannels</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>endpoint property, integer
+<br><br>
+The value is a bitmap of channels on which the object receives: 1=ch 1, 2=ch 2, 4=ch 3
+... 0x8000=ch 16.
+<br><br>
+Drivers may set this property on their entities or endpoints.
+<br><br>
+Setup editors may allow the user to set this property on external endpoints.
+<br><br>
+Virtual destination may set this property on their endpoints.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitChannels;  name=kMIDIPropertyTransmitChannels --><a name="//apple_ref/c/data/kMIDIPropertyTransmitChannels"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitChannels">kMIDIPropertyTransmitChannels</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitChannels</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>endpoint property, integer
+<br><br>
+The value is a bitmap of channels on which the object transmits: 1=ch 1, 2=ch 2, 4=ch 3
+... 0x8000=ch 16.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyMaxSysExSpeed;  name=kMIDIPropertyMaxSysExSpeed --><a name="//apple_ref/c/data/kMIDIPropertyMaxSysExSpeed"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyMaxSysExSpeed">kMIDIPropertyMaxSysExSpeed</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyMaxSysExSpeed</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, integer
+<br><br>
+Set by the owning driver; should not be touched by other clients.
+The value is the maximum rate, in bytes/second, at which sysex messages may
+be sent reliably to this object. (The default value is 3125, as with MIDI 1.0)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyAdvanceScheduleTimeMuSec;  name=kMIDIPropertyAdvanceScheduleTimeMuSec --><a name="//apple_ref/c/data/kMIDIPropertyAdvanceScheduleTimeMuSec"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyAdvanceScheduleTimeMuSec">kMIDIPropertyAdvanceScheduleTimeMuSec</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyAdvanceScheduleTimeMuSec</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, integer
+<br><br>
+Set by the owning driver; should not be touched by other clients. If it is non-zero,
+then it is a recommendation of how many microseconds in advance clients should schedule
+output. Clients should treat this value as a minimum.  For devices with a non-zero
+advance schedule time, drivers will receive outgoing messages to the device at the time
+they are sent by the client, via MIDISend, and the driver is responsible for scheduling
+events to be played at the right times according to their timestamps.
+<br><br>
+As of CoreMIDI 1.3, this property may also be set on virtual destinations (but only the
+creator of the destination should do so). When a client sends to a virtual destination
+with an advance schedule time of 0, the virtual destination receives its messages at
+their scheduled delivery time.  If a virtual destination has a non-zero advance schedule
+time, it receives timestamped messages as soon as they are sent, and must do its own
+internal scheduling of received events.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyIsEmbeddedEntity;  name=kMIDIPropertyIsEmbeddedEntity --><a name="//apple_ref/c/data/kMIDIPropertyIsEmbeddedEntity"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyIsEmbeddedEntity">kMIDIPropertyIsEmbeddedEntity</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyIsEmbeddedEntity</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>entity/endpoint property, integer
+<br><br>
+0 if there are external MIDI connectors, 1 if not.
+
+New for CoreMIDI 1.1 (Mac OS X 10.1)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyIsBroadcast;  name=kMIDIPropertyIsBroadcast --><a name="//apple_ref/c/data/kMIDIPropertyIsBroadcast"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyIsBroadcast">kMIDIPropertyIsBroadcast</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyIsBroadcast</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>entity/endpoint property, integer
+<br><br>
+1 if the endpoint broadcasts messages to all of the other endpoints in the device, 0 if
+not.  Set by the owning driver; should not be touched by other clients.
+
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertySingleRealtimeEntity;  name=kMIDIPropertySingleRealtimeEntity --><a name="//apple_ref/c/data/kMIDIPropertySingleRealtimeEntity"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertySingleRealtimeEntity">kMIDIPropertySingleRealtimeEntity</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertySingleRealtimeEntity</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device property, integer
+<br><br>
+Some MIDI interfaces cannot route MIDI realtime messages to individual outputs; they are
+broadcast.  On such devices the inverse is usually also true -- incoming realtime
+messages cannot be identified as originating from any particular source.
+<br><br>
+When this property is set on a driver device, it signifies the 0-based index of the
+entity on which incoming realtime messages from the device will appear to have
+originated from.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyConnectionUniqueID;  name=kMIDIPropertyConnectionUniqueID --><a name="//apple_ref/c/data/kMIDIPropertyConnectionUniqueID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyConnectionUniqueID">kMIDIPropertyConnectionUniqueID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyConnectionUniqueID</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, integer or CFDataRef
+<br><br>
+UniqueID of an external device/entity/endpoint attached to this one. As of Mac OS X
+10.3, Audio MIDI Setup maintains endpoint-to-external endpoint connections (in 10.2, it
+connected devices to devices).
+
+The property is non-existant or 0 if there is no connection.
+<br><br>
+New for CoreMIDI 1.1 (Mac OS X 10.1)
+<br><br>
+Beginning with CoreMIDI 1.3, this property may also be a CFDataRef containing an array of
+big-endian SInt32's, to allow specifying that a driver object connects to multiple
+external objects (via MIDI thru-ing or splitting).
+<br><br>
+This property may also exist for external devices/entities/endpoints, in which case it
+signifies a MIDI Thru connection to another external device/entity/endpoint (again,
+it is strongly recommended that it be an endpoint).
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyOffline;  name=kMIDIPropertyOffline --><a name="//apple_ref/c/data/kMIDIPropertyOffline"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyOffline">kMIDIPropertyOffline</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyOffline</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, integer
+<br><br>
+1 = device is offline (is temporarily absent), 0 = present. Set by the owning driver, on
+the device; should not be touched by other clients. Property is inherited from the
+device by its entities and endpoints.
+
+New for CoreMIDI 1.1 (Mac OS X 10.1)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyPrivate;  name=kMIDIPropertyPrivate --><a name="//apple_ref/c/data/kMIDIPropertyPrivate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyPrivate">kMIDIPropertyPrivate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyPrivate</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, integer
+<br><br>
+1 = endpoint is private, hidden from other clients. May be set on a device or entity,
+but they will still appear in the API; only affects whether the owned endpoints are
+hidden.
+
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyDriverOwner;  name=kMIDIPropertyDriverOwner --><a name="//apple_ref/c/data/kMIDIPropertyDriverOwner"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyDriverOwner">kMIDIPropertyDriverOwner</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyDriverOwner</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, string
+<br><br>
+Name of the driver that owns a device. Set by the owning driver, on the device; should
+not be touched by other clients. Property is inherited from the device by its entities
+and endpoints.
+<br><br>
+New for CoreMIDI 1.1 (Mac OS X 10.1)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyFactoryPatchNameFile;  name=kMIDIPropertyFactoryPatchNameFile --><a name="//apple_ref/c/data/kMIDIPropertyFactoryPatchNameFile"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyFactoryPatchNameFile">kMIDIPropertyFactoryPatchNameFile</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyFactoryPatchNameFile</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, CFData containing AliasHandle.
+<br><br>
+An alias to the device's current factory patch name file.
+<br><br>
+Added in CoreMIDI 1.1 (Mac OS X 10.1).  DEPRECATED as of CoreMIDI 1.3. Use
+kMIDIPropertyNameConfiguration instead.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyUserPatchNameFile;  name=kMIDIPropertyUserPatchNameFile --><a name="//apple_ref/c/data/kMIDIPropertyUserPatchNameFile"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyUserPatchNameFile">kMIDIPropertyUserPatchNameFile</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyUserPatchNameFile</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, CFData containing AliasHandle
+<br><br>
+An alias to the device's current user patch name file.
+<br><br>
+Added in CoreMIDI 1.1 (Mac OS X 10.1).  DEPRECATED as of CoreMIDI 1.3. Use
+kMIDIPropertyNameConfiguration instead.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyNameConfiguration;  name=kMIDIPropertyNameConfiguration --><a name="//apple_ref/c/data/kMIDIPropertyNameConfiguration"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyNameConfiguration">kMIDIPropertyNameConfiguration</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyNameConfiguration</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, CFDictionary
+<br><br>
+This specifies the device's current patch, note and control name values using the
+MIDINameDocument XML format.  This specification requires the use of higher-level,
+OS-specific constructs outside of the specification, to fully define the current names
+for a device.
+<br><br>
+The MIDINameConfiguration property is implementated as a CFDictionary:
+<br><br>
+key "master" maps to a CFDataRef containing an AliasHandle referring to the device's
+master name document.
+<br><br>
+key "banks" maps to a CFDictionaryRef.  This dictionary's keys are CFStringRef names of
+patchBank elements in the master document, and its values are each a CFDictionaryRef:
+key "file" maps to a CFDataRef containing an AliasHandle to a document containing
+patches that override those in the master document, and key "patchNameList" maps to a
+CFStringRef which is the name of the patchNameList element in the overriding document.
+<br><br>
+key "currentChannelNameSets" maps to a 16-element CFArrayRef, each element of which is a
+CFStringRef of the name of the current mode for each of the 16 MIDI channels.
+<br><br>
+key "currentDeviceMode" maps to a CFStringRef containing the name of the device's mode.
+<br><br>
+Clients setting this property must take particular care to preserve dictionary values
+other than the ones they are interested in changing, and to properly structure the
+dictionary.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyImage;  name=kMIDIPropertyImage --><a name="//apple_ref/c/data/kMIDIPropertyImage"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyImage">kMIDIPropertyImage</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyImage</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device property, CFStringRef which is a full POSIX path to a device or external device's
+icon, stored in any standard graphic file format such as JPEG, GIF, PNG and TIFF are all
+acceptable.  (See CFURL for functions to convert between POSIX paths and other ways of
+specifying files.)  The image's maximum size should be 128x128.
+<br><br>
+Drivers should set the icon on the devices they add.
+<br><br>
+A studio setup editor should allow the user to choose icons for external devices.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyDriverVersion;  name=kMIDIPropertyDriverVersion --><a name="//apple_ref/c/data/kMIDIPropertyDriverVersion"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyDriverVersion">kMIDIPropertyDriverVersion</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyDriverVersion</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, integer, returns the driver version API of the owning
+driver (only for driver- owned devices).  Drivers need not set this property;
+applications should not write to it.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertySupportsGeneralMIDI;  name=kMIDIPropertySupportsGeneralMIDI --><a name="//apple_ref/c/data/kMIDIPropertySupportsGeneralMIDI"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertySupportsGeneralMIDI">kMIDIPropertySupportsGeneralMIDI</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertySupportsGeneralMIDI</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity implements
+the General MIDI specification.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertySupportsMMC;  name=kMIDIPropertySupportsMMC --><a name="//apple_ref/c/data/kMIDIPropertySupportsMMC"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertySupportsMMC">kMIDIPropertySupportsMMC</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertySupportsMMC</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity implements
+the MIDI Machine Control portion of the MIDI specification.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyCanRoute;  name=kMIDIPropertyCanRoute --><a name="//apple_ref/c/data/kMIDIPropertyCanRoute"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyCanRoute">kMIDIPropertyCanRoute</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyCanRoute</font>; <font class="comment">// e.g. is patch bay</font> </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity can route
+MIDI messages to or from other external MIDI devices (as with MIDI patch bays). This
+should NOT be set on devices which are controlled by drivers.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceivesClock;  name=kMIDIPropertyReceivesClock --><a name="//apple_ref/c/data/kMIDIPropertyReceivesClock"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceivesClock">kMIDIPropertyReceivesClock</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceivesClock</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity  responds
+to MIDI beat clock messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceivesMTC;  name=kMIDIPropertyReceivesMTC --><a name="//apple_ref/c/data/kMIDIPropertyReceivesMTC"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceivesMTC">kMIDIPropertyReceivesMTC</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceivesMTC</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity responds
+to MIDI Time Code messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceivesNotes;  name=kMIDIPropertyReceivesNotes --><a name="//apple_ref/c/data/kMIDIPropertyReceivesNotes"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceivesNotes">kMIDIPropertyReceivesNotes</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceivesNotes</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity responds
+to MIDI Note On messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceivesProgramChanges;  name=kMIDIPropertyReceivesProgramChanges --><a name="//apple_ref/c/data/kMIDIPropertyReceivesProgramChanges"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceivesProgramChanges">kMIDIPropertyReceivesProgramChanges</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceivesProgramChanges</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity responds
+to MIDI program change messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceivesBankSelectMSB;  name=kMIDIPropertyReceivesBankSelectMSB --><a name="//apple_ref/c/data/kMIDIPropertyReceivesBankSelectMSB"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceivesBankSelectMSB">kMIDIPropertyReceivesBankSelectMSB</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceivesBankSelectMSB</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity responds
+to MIDI bank select MSB messages (control 0).
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyReceivesBankSelectLSB;  name=kMIDIPropertyReceivesBankSelectLSB --><a name="//apple_ref/c/data/kMIDIPropertyReceivesBankSelectLSB"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyReceivesBankSelectLSB">kMIDIPropertyReceivesBankSelectLSB</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyReceivesBankSelectLSB</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity responds
+to MIDI bank select LSB messages (control 32).
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitsClock;  name=kMIDIPropertyTransmitsClock --><a name="//apple_ref/c/data/kMIDIPropertyTransmitsClock"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitsClock">kMIDIPropertyTransmitsClock</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitsClock</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity transmits
+MIDI beat clock messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitsMTC;  name=kMIDIPropertyTransmitsMTC --><a name="//apple_ref/c/data/kMIDIPropertyTransmitsMTC"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitsMTC">kMIDIPropertyTransmitsMTC</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitsMTC</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity transmits
+MIDI Time Code messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitsNotes;  name=kMIDIPropertyTransmitsNotes --><a name="//apple_ref/c/data/kMIDIPropertyTransmitsNotes"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitsNotes">kMIDIPropertyTransmitsNotes</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitsNotes</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity transmits
+MIDI note messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitsProgramChanges;  name=kMIDIPropertyTransmitsProgramChanges --><a name="//apple_ref/c/data/kMIDIPropertyTransmitsProgramChanges"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitsProgramChanges">kMIDIPropertyTransmitsProgramChanges</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitsProgramChanges</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity transmits
+MIDI program change messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitsBankSelectMSB;  name=kMIDIPropertyTransmitsBankSelectMSB --><a name="//apple_ref/c/data/kMIDIPropertyTransmitsBankSelectMSB"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitsBankSelectMSB">kMIDIPropertyTransmitsBankSelectMSB</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitsBankSelectMSB</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity transmits
+MIDI bank select MSB messages (control 0).
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyTransmitsBankSelectLSB;  name=kMIDIPropertyTransmitsBankSelectLSB --><a name="//apple_ref/c/data/kMIDIPropertyTransmitsBankSelectLSB"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyTransmitsBankSelectLSB">kMIDIPropertyTransmitsBankSelectLSB</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyTransmitsBankSelectLSB</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity transmits
+MIDI bank select LSB messages (control 32).
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyPanDisruptsStereo;  name=kMIDIPropertyPanDisruptsStereo --><a name="//apple_ref/c/data/kMIDIPropertyPanDisruptsStereo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyPanDisruptsStereo">kMIDIPropertyPanDisruptsStereo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyPanDisruptsStereo</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the MIDI pan messages (control
+10), when sent to the device or entity, cause undesirable effects when playing stereo
+sounds (e.g. converting the signal to mono).
+
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyIsSampler;  name=kMIDIPropertyIsSampler --><a name="//apple_ref/c/data/kMIDIPropertyIsSampler"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyIsSampler">kMIDIPropertyIsSampler</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyIsSampler</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity plays
+audio samples in response to MIDI note messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyIsDrumMachine;  name=kMIDIPropertyIsDrumMachine --><a name="//apple_ref/c/data/kMIDIPropertyIsDrumMachine"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyIsDrumMachine">kMIDIPropertyIsDrumMachine</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyIsDrumMachine</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity's sound
+presets tend to be collections of non-transposable samples (e.g. drum kits).
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyIsMixer;  name=kMIDIPropertyIsMixer --><a name="//apple_ref/c/data/kMIDIPropertyIsMixer"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyIsMixer">kMIDIPropertyIsMixer</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyIsMixer</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity mixes
+external audio signals, controlled by MIDI messages.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyIsEffectUnit;  name=kMIDIPropertyIsEffectUnit --><a name="//apple_ref/c/data/kMIDIPropertyIsEffectUnit"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyIsEffectUnit">kMIDIPropertyIsEffectUnit</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyIsEffectUnit</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device or entity is
+primarily a MIDI-controlled audio effect unit (i.e. does not generate sound on its own).
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyMaxReceiveChannels;  name=kMIDIPropertyMaxReceiveChannels --><a name="//apple_ref/c/data/kMIDIPropertyMaxReceiveChannels"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyMaxReceiveChannels">kMIDIPropertyMaxReceiveChannels</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyMaxReceiveChannels</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0-16). Indicates the maximum number of MIDI channels on
+which a device may simultaneously receive MIDI Channel Messages. Common values are 0
+(devices which only respond to System Messages), 1 (non-multitimbral devices), and 16
+(fully multitimbral devices). Other values are possible, for example devices which are
+multi-timbral but have fewer than 16 "parts".
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyMaxTransmitChannels;  name=kMIDIPropertyMaxTransmitChannels --><a name="//apple_ref/c/data/kMIDIPropertyMaxTransmitChannels"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyMaxTransmitChannels">kMIDIPropertyMaxTransmitChannels</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyMaxTransmitChannels</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates the maximum number of MIDI channels on
+which a device may simultaneously transmit MIDI Channel Messages. Common values are 0, 1
+and 16.
+<br><br>
+New for CoreMIDI 1.3.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyDriverDeviceEditorApp;  name=kMIDIPropertyDriverDeviceEditorApp --><a name="//apple_ref/c/data/kMIDIPropertyDriverDeviceEditorApp"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyDriverDeviceEditorApp">kMIDIPropertyDriverDeviceEditorApp</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyDriverDeviceEditorApp</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device property, string, contains the full path to an application which knows how to
+configure this driver-owned devices. Drivers may set this property on their owned
+devices. Applications must not write to it.
+<br><br>
+New for CoreMIDI 1.4.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertySupportsShowControl;  name=kMIDIPropertySupportsShowControl --><a name="//apple_ref/c/data/kMIDIPropertySupportsShowControl"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertySupportsShowControl">kMIDIPropertySupportsShowControl</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertySupportsShowControl</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity property, integer (0/1). Indicates whether the device implements the MIDI
+Show Control specification.
+<br><br>
+New for CoreMIDI 1.5.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kMIDIPropertyDisplayName;  name=kMIDIPropertyDisplayName --><a name="//apple_ref/c/data/kMIDIPropertyDisplayName"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIPropertyDisplayName">kMIDIPropertyDisplayName</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">extern</font> <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">kMIDIPropertyDisplayName</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>device/entity/endpoint property, string.
+<br><br>
+Provides the Apple-recommended user-visible name for an endpoint, by combining the
+device and endpoint names.
+<br><br>
+For objects other than endpoints, the display name is the same as the name.
+<br><br>
+New for CoreMIDI 1.5.
+</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

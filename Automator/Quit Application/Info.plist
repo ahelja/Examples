@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMAccepts</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Optional</key>
+		<true/>
+		<key>Types</key>
+		<array>
+			<string>com.apple.applescript.object</string>
+		</array>
+	</dict>
+	<key>AMApplication</key>
+	<string>Finder</string>
+	<key>AMCategory</key>
+	<string>Utility</string>
+	<key>AMDefaultParameters</key>
+	<dict>
+		<key>appPath</key>
+		<string>/Applications/Address Book.app</string>
+		<key>saving</key>
+		<integer>0</integer>
+	</dict>
+	<key>AMDescription</key>
+	<dict>
+		<key>AMDSummary</key>
+		<string>This action quits the chosen application, saving or discarding any changes as desired.</string>
+	</dict>
+	<key>AMIconName</key>
+	<string>Finder</string>
+	<key>AMKeywords</key>
+	<array>
+		<string>File</string>
+		<string>Quit</string>
+	</array>
+	<key>AMName</key>
+	<string>Quit Application</string>
+	<key>AMProvides</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Types</key>
+		<array>
+			<string>com.apple.applescript.object</string>
+		</array>
+	</dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Quit Application version 1.0, Copyright (c) 2005, Apple Computer, Inc.</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.AutomatorExamples.QuitApplication</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Quit Application</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSPrincipalClass</key>
+	<string>AMAppleScriptAction</string>
+</dict>
+</plist>

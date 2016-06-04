@@ -1,0 +1,52 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf100
+{\fonttbl\f0\fnil\fcharset77 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\fs20 \cf0 \ul \ulc0 Abstract\ulnone \
+\
+This project shows how to create and maintain relationships that travel across store boundaries. Specifically, the Person subentites (Student and Teacher) are persisted to a private store, while Course entities are persisted to a public store.\
+\
+\
+\ul Implementation Discussion\ulnone \
+\
+1) Configurations \
+\
+Instances of entities are directed automatically to stores through the use of configurations. Person, Student, Teacher and IDGenerator have been added to the "private" configuration; Course has been added to the "public" configuration.\
+\
+2) Use of transient properties to model relationships\
+\
+Because Core Data does not support cross store relationships out of the box, these relationships are marked as transient in the model. Information about the objects in these relationships is saved to separate persistent attributes, and then reconstructed as necessary.\
+\
+3) The Student <<-->> Course relationship\
+\
+This is a fairly standard many to many relationship, and demonstrates how to do relationship maintenance using the prepareForSave/awakeFromFetch pattern for doing relationship maintenance.\
+\
+4) The Teacher <-->> Course relationship\
+\
+This relationship is much less traditional. The Course-->Teacher portion of the relationship is maintained using the accessor/awakeFromFetch pattern, but the Feacher-->>Course portion uses a fetched property to find Courses based on the same attribute (teacherURI) used by the Course to find it's instance of Teacher. \
+\
+Due to the assymetrical nature of this relationship, Core Data cannot maintain integrity of the object graph: if an instance of Teacher is deleted, there is no way for Core Data to know that one or more Course objects may need to be updated. To handle this, Course objects register for the NSManagedObjectContextDidChange notification and do appropriate cleanup if the notificationw as sent as a result of the instance of Teacher set in their teacher relationship is marked as being deleted.\
+\
+Something else to note here is the way in which instances of Teacher cause themselves to be refreshed in signUpToTeach:/resignFromTeaching: to force the courses property to be refetched.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 5) Saving\
+\
+Cross store relationships can only be created between objects which have their permanent objectIDs. Because of this, the managed object context is saved after every change. This forces all objects into a state where permanent objectIDs have been assigned before any relationships can be created. Because the NSManagedObjectContextDidChange notification is posted during \CocoaLigature0 processPendingChanges at the end of the event loop, the application delegate cannot simply call saveAction: directly. It must instead call performSelector:withObject:afterDelay: to give processPendingChanges time to complete processing.\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\ul Other Notes\ulnone \
+\
+1) IDGenerator getNewID\
+\
+The IDGenerator class implements a method 'getNewID' that is used to increment the mostRecentID counter used to track the last id generated and return the new value. This behavior cannot be modeled as a property without causing Core Data to go into an infinite loop, since attempting to validate the property would increment it, which would mark the object as dirty and in need of validation.\
+\
+\ul Building on this example\ulnone \
+\
+This example is designed to demonstrate the mechanisms behind cross-store relationships. It depends heavily on the fact that both required stores are always available and mounted automatically.\
+\
+In addition to the iClass_DataModel.xcdatamodel which is used by the iClass application, this example contains a second model, iClassV2_DataModel.xcdatamodel. This second model shows how a proxy pattern can be used to decouple the application classes from the logic required to handle the cross store aspects of relationships. This pattern may be more desirable in cases where one or more of the stores from which data is to be drawn are not mounted at the point at which relationships are resolved. This allows for relationships to be managed without having all stores available, but does require additional work on the part of the developer to maintain data integrity when relationships are created or when new stores are mounted (for example, cleaning out the inverse information for relationships that were broken while the store was unmounted).\
+\
+In this example, the managed object context is saved whenever the NSManagedObjectContextDidSave notification is sent. This forces all objects to always have a permanent objectID, but also has the effect of causing all changes to be persisted immediately. It is possible to save only when objects are inserted, but this may cause unexpected behavior if all work is being done in a single context: since all changes in a context are pushed to the store at once, modifying object A, inserting object B, and quitting the application without saving will result in a different persistent state than inserting object B, modifying object A, and quitting the application without saving. This can be worked around by doing all inserts in a separate context then loading them into the main context.\
+}

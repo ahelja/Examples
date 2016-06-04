@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>#defines</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">#defines</font></h1>
+<br><hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/MIDIThruConnectionParamsSize;  name=MIDIThruConnectionParamsSize --><a name="//apple_ref/c/macro/MIDIThruConnectionParamsSize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIThruConnectionParamsSize">MIDIThruConnectionParamsSize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns the size of a MIDIThruConnectionParams.</p>
+<blockquote><pre>#define <a href="../../../CoreMIDI/MIDIThruConnection/index.html?PDefines/PDefines.html#//apple_ref/c/macro/MIDIThruConnectionParamsSize" logicalPath="//apple_ref/c/instm/MIDIThruConnectionParamsSize //apple_ref/c/clm/MIDIThruConnectionParamsSize //apple_ref/c/intfcm/MIDIThruConnectionParamsSize //apple_ref/c/func/MIDIThruConnectionParamsSize //apple_ref/c/ftmplt/MIDIThruConnectionParamsSize //apple_ref/c/defn/MIDIThruConnectionParamsSize //apple_ref/c/macro/MIDIThruConnectionParamsSize" target="_top"><font class="function">MIDIThruConnectionParamsSize</font></a>(
+    <font class="var">ptr</font>) \ (
+    <!-- a logicalPath="//apple_ref/c/instm/sizeof //apple_ref/c/clm/sizeof //apple_ref/c/intfcm/sizeof //apple_ref/c/func/sizeof //apple_ref/c/ftmplt/sizeof //apple_ref/c/defn/sizeof //apple_ref/c/macro/sizeof" --><font class="function">sizeof</font><!-- /a -->(
+    <font class="var">MIDIThruConnectionParams</font>) + (
+    <font class="var">ptr</font>)-&gt;<!-- a logicalPath="//apple_ref/c/cl/numControlTransforms //apple_ref/c/cl/numControlTransforms //apple_ref/c/tdef/numControlTransforms //apple_ref/c/tag/numControlTransforms //apple_ref/c/econst/numControlTransforms //apple_ref/c/struct/numControlTransforms //apple_ref/c/clconst/numControlTransforms" --><font class="type">numControlTransforms</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/instm/sizeof //apple_ref/c/clm/sizeof //apple_ref/c/intfcm/sizeof //apple_ref/c/func/sizeof //apple_ref/c/ftmplt/sizeof //apple_ref/c/defn/sizeof //apple_ref/c/macro/sizeof" --><font class="function">sizeof</font><!-- /a -->(
+    <font class="var">MIDIControlTransform</font>) \ + (
+    <font class="var">ptr</font>)-&gt;<!-- a logicalPath="//apple_ref/c/cl/numMaps //apple_ref/c/cl/numMaps //apple_ref/c/tdef/numMaps //apple_ref/c/tag/numMaps //apple_ref/c/econst/numMaps //apple_ref/c/struct/numMaps //apple_ref/c/clconst/numMaps" --><font class="type">numMaps</font><!-- /a --> *<!-- a logicalPath="//apple_ref/c/instm/sizeof //apple_ref/c/clm/sizeof //apple_ref/c/intfcm/sizeof //apple_ref/c/func/sizeof //apple_ref/c/ftmplt/sizeof //apple_ref/c/defn/sizeof //apple_ref/c/macro/sizeof" --><font class="function">sizeof</font><!-- /a -->(
+    <font class="var">MIDIValueMap</font>)) </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Accounts for the variable-length elements in the structure and returns its true
+size in bytes.</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

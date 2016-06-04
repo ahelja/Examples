@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D06F85E06E3B4F10069AAEC /* Browser.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4D06F85C06E3B4F10069AAEC /* Browser.nib */; };
+		4D06F85F06E3B4F10069AAEC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4D06F85D06E3B4F10069AAEC /* MainMenu.nib */; };
+		4D707CE5060A541100EC3C65 /* ApplicationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F561677B02D61FA901CE2124 /* ApplicationController.h */; };
+		4D707CE6060A541100EC3C65 /* BrowserController.h in Headers */ = {isa = PBXBuildFile; fileRef = F561677D02D61FA901CE2124 /* BrowserController.h */; };
+		4D707CE7060A541100EC3C65 /* InspectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = F561677F02D61FA901CE2124 /* InspectorController.h */; };
+		4D707CE8060A541100EC3C65 /* OutlineItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F561678202D61FA901CE2124 /* OutlineItem.h */; };
+		4D707CE9060A541100EC3C65 /* OutlineViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F561678402D61FA901CE2124 /* OutlineViewDataSource.h */; };
+		4D707CEA060A541100EC3C65 /* PrefsController.h in Headers */ = {isa = PBXBuildFile; fileRef = F561678602D61FA901CE2124 /* PrefsController.h */; };
+		4D707CEB060A541100EC3C65 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F56167B002D6388701CE2124 /* Utils.h */; };
+		4D707CEC060A541100EC3C65 /* NSDataTableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C8220702E3B41001CE2124 /* NSDataTableDataSource.h */; };
+		4D707CED060A541100EC3C65 /* OutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = F535C5E302E71BC2015837C7 /* OutlineView.h */; };
+		4D707CF1060A541100EC3C65 /* Mr. Registry Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F50FFC7502E4C89301CE2124 /* Mr. Registry Icon.icns */; };
+		4D707CF2060A541100EC3C65 /* right T.tif in Resources */ = {isa = PBXBuildFile; fileRef = F5DF7D3202E6438B01CE2124 /* right T.tif */; };
+		4D707CF3060A541100EC3C65 /* L.tif in Resources */ = {isa = PBXBuildFile; fileRef = F56DB39C02E64E1301F5D3C0 /* L.tif */; };
+		4D707CF4060A541100EC3C65 /* I.tif in Resources */ = {isa = PBXBuildFile; fileRef = F56DB3A402E6573001F5D3C0 /* I.tif */; };
+		4D707CF5060A541100EC3C65 /* dash.tif in Resources */ = {isa = PBXBuildFile; fileRef = F56DB3A602E65AF901F5D3C0 /* dash.tif */; };
+		4D707CF7060A541100EC3C65 /* About FWOffice.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BB33A037B876600000202 /* About FWOffice.rtf */; };
+		4D707CF9060A541100EC3C65 /* ApplicationController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561677C02D61FA901CE2124 /* ApplicationController.mm */; };
+		4D707CFA060A541100EC3C65 /* BrowserController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561677E02D61FA901CE2124 /* BrowserController.mm */; };
+		4D707CFB060A541100EC3C65 /* InspectorController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561678002D61FA901CE2124 /* InspectorController.mm */; };
+		4D707CFC060A541100EC3C65 /* OutlineItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561678302D61FA901CE2124 /* OutlineItem.mm */; };
+		4D707CFD060A541100EC3C65 /* OutlineViewDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561678502D61FA901CE2124 /* OutlineViewDataSource.mm */; };
+		4D707CFE060A541100EC3C65 /* PrefsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561678702D61FA901CE2124 /* PrefsController.mm */; };
+		4D707CFF060A541100EC3C65 /* Mr. Registry.mm in Sources */ = {isa = PBXBuildFile; fileRef = F561679502D61FB601CE2124 /* Mr. Registry.mm */; };
+		4D707D00060A541100EC3C65 /* Utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = F56167B202D638CB01CE2124 /* Utils.mm */; };
+		4D707D01060A541100EC3C65 /* NSDataTableDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5C8220802E3B41001CE2124 /* NSDataTableDataSource.mm */; };
+		4D707D02060A541100EC3C65 /* OutlineView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F535C5E402E71BC2015837C7 /* OutlineView.mm */; };
+		4D707D04060A541100EC3C65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4D707D05060A541100EC3C65 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59B992B025265E0019F41A9 /* IOKit.framework */; };
+		4D7B484B060BB5590000B8A7 /* Info-Mr__Registry.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D7B484A060BB5590000B8A7 /* Info-Mr__Registry.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.6;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				VERSIONING_SYSTEM = "apple-generic";
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4D06F85C06E3B4F10069AAEC /* Browser.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Browser.nib; path = "Mr. Registry/Resources/Browser.nib"; sourceTree = SOURCE_ROOT; };
+		4D06F85D06E3B4F10069AAEC /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = "Mr. Registry/Resources/MainMenu.nib"; sourceTree = SOURCE_ROOT; };
+		4D707D08060A541100EC3C65 /* Mr. Registry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mr. Registry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7B484A060BB5590000B8A7 /* Info-Mr__Registry.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Info-Mr__Registry.plist"; sourceTree = "<group>"; };
+		4D8BB33A037B876600000202 /* About FWOffice.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "About FWOffice.rtf"; sourceTree = "<group>"; };
+		F50FFC7502E4C89301CE2124 /* Mr. Registry Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "Mr. Registry Icon.icns"; path = "Mr. Registry/Resources/Mr. Registry Icon.icns"; sourceTree = "<group>"; };
+		F535C5E302E71BC2015837C7 /* OutlineView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OutlineView.h; path = "Mr. Registry/OutlineView.h"; sourceTree = "<group>"; };
+		F535C5E402E71BC2015837C7 /* OutlineView.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = OutlineView.mm; path = "Mr. Registry/OutlineView.mm"; sourceTree = "<group>"; };
+		F561677B02D61FA901CE2124 /* ApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ApplicationController.h; path = "Mr. Registry/ApplicationController.h"; sourceTree = "<group>"; };
+		F561677C02D61FA901CE2124 /* ApplicationController.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = ApplicationController.mm; path = "Mr. Registry/ApplicationController.mm"; sourceTree = "<group>"; };
+		F561677D02D61FA901CE2124 /* BrowserController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BrowserController.h; path = "Mr. Registry/BrowserController.h"; sourceTree = "<group>"; };
+		F561677E02D61FA901CE2124 /* BrowserController.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = BrowserController.mm; path = "Mr. Registry/BrowserController.mm"; sourceTree = "<group>"; };
+		F561677F02D61FA901CE2124 /* InspectorController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = InspectorController.h; path = "Mr. Registry/InspectorController.h"; sourceTree = "<group>"; };
+		F561678002D61FA901CE2124 /* InspectorController.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = InspectorController.mm; path = "Mr. Registry/InspectorController.mm"; sourceTree = "<group>"; };
+		F561678202D61FA901CE2124 /* OutlineItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OutlineItem.h; path = "Mr. Registry/OutlineItem.h"; sourceTree = "<group>"; };
+		F561678302D61FA901CE2124 /* OutlineItem.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = OutlineItem.mm; path = "Mr. Registry/OutlineItem.mm"; sourceTree = "<group>"; };
+		F561678402D61FA901CE2124 /* OutlineViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OutlineViewDataSource.h; path = "Mr. Registry/OutlineViewDataSource.h"; sourceTree = "<group>"; };
+		F561678502D61FA901CE2124 /* OutlineViewDataSource.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = OutlineViewDataSource.mm; path = "Mr. Registry/OutlineViewDataSource.mm"; sourceTree = "<group>"; };
+		F561678602D61FA901CE2124 /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PrefsController.h; path = "Mr. Registry/PrefsController.h"; sourceTree = "<group>"; };
+		F561678702D61FA901CE2124 /* PrefsController.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = PrefsController.mm; path = "Mr. Registry/PrefsController.mm"; sourceTree = "<group>"; };
+		F561679502D61FB601CE2124 /* Mr. Registry.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = "Mr. Registry.mm"; path = "Mr. Registry/Mr. Registry.mm"; sourceTree = "<group>"; };
+		F56167B002D6388701CE2124 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Common/Utils.h; sourceTree = "<group>"; };
+		F56167B202D638CB01CE2124 /* Utils.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = Utils.mm; path = Common/Utils.mm; sourceTree = "<group>"; };
+		F56DB39C02E64E1301F5D3C0 /* L.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = L.tif; path = "Mr. Registry/Resources/L.tif"; sourceTree = "<group>"; };
+		F56DB3A402E6573001F5D3C0 /* I.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = I.tif; path = "Mr. Registry/Resources/I.tif"; sourceTree = "<group>"; };
+		F56DB3A602E65AF901F5D3C0 /* dash.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = dash.tif; path = "Mr. Registry/Resources/dash.tif"; sourceTree = "<group>"; };
+		F59B992B025265E0019F41A9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		F5C8220702E3B41001CE2124 /* NSDataTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSDataTableDataSource.h; path = "Mr. Registry/NSDataTableDataSource.h"; sourceTree = "<group>"; };
+		F5C8220802E3B41001CE2124 /* NSDataTableDataSource.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; name = NSDataTableDataSource.mm; path = "Mr. Registry/NSDataTableDataSource.mm"; sourceTree = "<group>"; };
+		F5DF7D3202E6438B01CE2124 /* right T.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "right T.tif"; path = "Mr. Registry/Resources/right T.tif"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D707D03060A541100EC3C65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D707D04060A541100EC3C65 /* Cocoa.framework in Frameworks */,
+				4D707D05060A541100EC3C65 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F561677B02D61FA901CE2124 /* ApplicationController.h */,
+				F561677C02D61FA901CE2124 /* ApplicationController.mm */,
+				F561677D02D61FA901CE2124 /* BrowserController.h */,
+				F561677E02D61FA901CE2124 /* BrowserController.mm */,
+				F561677F02D61FA901CE2124 /* InspectorController.h */,
+				F561678002D61FA901CE2124 /* InspectorController.mm */,
+				F561678202D61FA901CE2124 /* OutlineItem.h */,
+				F561678302D61FA901CE2124 /* OutlineItem.mm */,
+				F561678402D61FA901CE2124 /* OutlineViewDataSource.h */,
+				F561678502D61FA901CE2124 /* OutlineViewDataSource.mm */,
+				F561678602D61FA901CE2124 /* PrefsController.h */,
+				F561678702D61FA901CE2124 /* PrefsController.mm */,
+				F5C8220702E3B41001CE2124 /* NSDataTableDataSource.h */,
+				F5C8220802E3B41001CE2124 /* NSDataTableDataSource.mm */,
+				F535C5E302E71BC2015837C7 /* OutlineView.h */,
+				F535C5E402E71BC2015837C7 /* OutlineView.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				F59B992B025265E0019F41A9 /* IOKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D707D08060A541100EC3C65 /* Mr. Registry.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* FWOffice2 */ = {
+			isa = PBXGroup;
+			children = (
+				4D8BB33A037B876600000202 /* About FWOffice.rtf */,
+				F56167B002D6388701CE2124 /* Utils.h */,
+				F56167B202D638CB01CE2124 /* Utils.mm */,
+				F58C6C3C02D22B54013BFCFC /* Mr. Registry */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4D7B484A060BB5590000B8A7 /* Info-Mr__Registry.plist */,
+			);
+			name = FWOffice2;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F561679502D61FB601CE2124 /* Mr. Registry.mm */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D06F85C06E3B4F10069AAEC /* Browser.nib */,
+				4D06F85D06E3B4F10069AAEC /* MainMenu.nib */,
+				F50FFC7502E4C89301CE2124 /* Mr. Registry Icon.icns */,
+				F5DF7D3202E6438B01CE2124 /* right T.tif */,
+				F56DB39C02E64E1301F5D3C0 /* L.tif */,
+				F56DB3A402E6573001F5D3C0 /* I.tif */,
+				F56DB3A602E65AF901F5D3C0 /* dash.tif */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F58C6C3C02D22B54013BFCFC /* Mr. Registry */ = {
+			isa = PBXGroup;
+			children = (
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+			);
+			name = "Mr. Registry";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D707CE4060A541100EC3C65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D707CE5060A541100EC3C65 /* ApplicationController.h in Headers */,
+				4D707CE6060A541100EC3C65 /* BrowserController.h in Headers */,
+				4D707CE7060A541100EC3C65 /* InspectorController.h in Headers */,
+				4D707CE8060A541100EC3C65 /* OutlineItem.h in Headers */,
+				4D707CE9060A541100EC3C65 /* OutlineViewDataSource.h in Headers */,
+				4D707CEA060A541100EC3C65 /* PrefsController.h in Headers */,
+				4D707CEB060A541100EC3C65 /* Utils.h in Headers */,
+				4D707CEC060A541100EC3C65 /* NSDataTableDataSource.h in Headers */,
+				4D707CED060A541100EC3C65 /* OutlineView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D707CE3060A541100EC3C65 /* Mr. Registry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 144F8F12090066CA00B94B25 /* Build configuration list for PBXNativeTarget "Mr. Registry" */;
+			buildPhases = (
+				4D707CE4060A541100EC3C65 /* Headers */,
+				4D707CEE060A541100EC3C65 /* Resources */,
+				4D707CF8060A541100EC3C65 /* Sources */,
+				4D707D03060A541100EC3C65 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				HEADER_SEARCH_PATHS = "$(SRC_ROOT)";
+				INFOPLIST_FILE = "Info-Mr__Registry.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Mr. Registry";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "Mr. Registry";
+			productInstallPath = /Developer/Applications/FireWire;
+			productName = FWOffice2;
+			productReference = 4D707D08060A541100EC3C65 /* Mr. Registry.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 144F8F16090066CA00B94B25 /* Build configuration list for PBXProject "FWOffice" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* FWOffice2 */;
+			projectDirPath = "";
+			targets = (
+				4D707CE3060A541100EC3C65 /* Mr. Registry */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D707CEE060A541100EC3C65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D707CF1060A541100EC3C65 /* Mr. Registry Icon.icns in Resources */,
+				4D707CF2060A541100EC3C65 /* right T.tif in Resources */,
+				4D707CF3060A541100EC3C65 /* L.tif in Resources */,
+				4D707CF4060A541100EC3C65 /* I.tif in Resources */,
+				4D707CF5060A541100EC3C65 /* dash.tif in Resources */,
+				4D707CF7060A541100EC3C65 /* About FWOffice.rtf in Resources */,
+				4D7B484B060BB5590000B8A7 /* Info-Mr__Registry.plist in Resources */,
+				4D06F85E06E3B4F10069AAEC /* Browser.nib in Resources */,
+				4D06F85F06E3B4F10069AAEC /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D707CF8060A541100EC3C65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D707CF9060A541100EC3C65 /* ApplicationController.mm in Sources */,
+				4D707CFA060A541100EC3C65 /* BrowserController.mm in Sources */,
+				4D707CFB060A541100EC3C65 /* InspectorController.mm in Sources */,
+				4D707CFC060A541100EC3C65 /* OutlineItem.mm in Sources */,
+				4D707CFD060A541100EC3C65 /* OutlineViewDataSource.mm in Sources */,
+				4D707CFE060A541100EC3C65 /* PrefsController.mm in Sources */,
+				4D707CFF060A541100EC3C65 /* Mr. Registry.mm in Sources */,
+				4D707D00060A541100EC3C65 /* Utils.mm in Sources */,
+				4D707D01060A541100EC3C65 /* NSDataTableDataSource.mm in Sources */,
+				4D707D02060A541100EC3C65 /* OutlineView.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		144F8F13090066CA00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(SRC_ROOT)";
+				INFOPLIST_FILE = "Info-Mr__Registry.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				PRODUCT_NAME = "Mr. Registry";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		144F8F14090066CA00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "$(SRC_ROOT)";
+				INFOPLIST_FILE = "Info-Mr__Registry.plist";
+				INSTALL_PATH = /Developer/Applications/Utilities/FireWire;
+				PRODUCT_NAME = "Mr. Registry";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		144F8F17090066CA00B94B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		144F8F18090066CA00B94B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		144F8F12090066CA00B94B25 /* Build configuration list for PBXNativeTarget "Mr. Registry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F13090066CA00B94B25 /* Debug */,
+				144F8F14090066CA00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		144F8F16090066CA00B94B25 /* Build configuration list for PBXProject "FWOffice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				144F8F17090066CA00B94B25 /* Debug */,
+				144F8F18090066CA00B94B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

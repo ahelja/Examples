@@ -1,0 +1,1147 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE9F329607C2AFBB00156466 /* Main.h in Headers */ = {isa = PBXBuildFile; fileRef = F557976900A8A9FC01000001 /* Main.h */; };
+		EE9F329707C2AFBB00156466 /* FauxTunes.h in Headers */ = {isa = PBXBuildFile; fileRef = F557975100A8A3AA01000001 /* FauxTunes.h */; };
+		EE9F329907C2AFBB00156466 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		EE9F329A07C2AFBB00156466 /* NewPlaylist.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC6600B895EC01CA1585 /* NewPlaylist.tif */; };
+		EE9F329B07C2AFBB00156466 /* Visual.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5B00B8914401CA1585 /* Visual.tif */; };
+		EE9F329C07C2AFBB00156466 /* Shuffle.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5A00B8914401CA1585 /* Shuffle.tif */; };
+		EE9F329D07C2AFBB00156466 /* Repeat.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5900B8914401CA1585 /* Repeat.tif */; };
+		EE9F329E07C2AFBB00156466 /* Play.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5800B8914401CA1585 /* Play.tif */; };
+		EE9F329F07C2AFBB00156466 /* Eject.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5700B8914401CA1585 /* Eject.tif */; };
+		EE9F32A007C2AFBB00156466 /* SpeakerSoft.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAF000B88BC501CA1585 /* SpeakerSoft.tif */; };
+		EE9F32A107C2AFBB00156466 /* SpeakerLoud.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEF00B88BC501CA1585 /* SpeakerLoud.tif */; };
+		EE9F32A207C2AFBB00156466 /* GreenBkgrnd.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEE00B88BC501CA1585 /* GreenBkgrnd.tif */; };
+		EE9F32A307C2AFBB00156466 /* Reverse.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73C00B1B64F01000001 /* Reverse.tif */; };
+		EE9F32A407C2AFBB00156466 /* Forward.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73B00B1B64F01000001 /* Forward.tif */; };
+		EE9F32A607C2AFBB00156466 /* MainUsingNSSpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 907EB6BF047B4F1C00A4A196 /* MainUsingNSSpeechRecognizer.m */; };
+		EE9F32A707C2AFBB00156466 /* FauxTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = F557975200A8A3AA01000001 /* FauxTunes.m */; };
+		EE9F32A907C2AFBB00156466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE9F32B007C2AFBB00156466 /* FauxTunes.h in Headers */ = {isa = PBXBuildFile; fileRef = F557975100A8A3AA01000001 /* FauxTunes.h */; };
+		EE9F32B107C2AFBB00156466 /* SpeechRoutines.h in Headers */ = {isa = PBXBuildFile; fileRef = F557975B00A8A61B01000001 /* SpeechRoutines.h */; };
+		EE9F32B207C2AFBB00156466 /* Main.h in Headers */ = {isa = PBXBuildFile; fileRef = F557976900A8A9FC01000001 /* Main.h */; };
+		EE9F32B407C2AFBB00156466 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		EE9F32B507C2AFBB00156466 /* Forward.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73B00B1B64F01000001 /* Forward.tif */; };
+		EE9F32B607C2AFBB00156466 /* Reverse.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73C00B1B64F01000001 /* Reverse.tif */; };
+		EE9F32B707C2AFBB00156466 /* GreenBkgrnd.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEE00B88BC501CA1585 /* GreenBkgrnd.tif */; };
+		EE9F32B807C2AFBB00156466 /* SpeakerLoud.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEF00B88BC501CA1585 /* SpeakerLoud.tif */; };
+		EE9F32B907C2AFBB00156466 /* SpeakerSoft.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAF000B88BC501CA1585 /* SpeakerSoft.tif */; };
+		EE9F32BA07C2AFBB00156466 /* Eject.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5700B8914401CA1585 /* Eject.tif */; };
+		EE9F32BB07C2AFBB00156466 /* Play.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5800B8914401CA1585 /* Play.tif */; };
+		EE9F32BC07C2AFBB00156466 /* Repeat.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5900B8914401CA1585 /* Repeat.tif */; };
+		EE9F32BD07C2AFBB00156466 /* Shuffle.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5A00B8914401CA1585 /* Shuffle.tif */; };
+		EE9F32BE07C2AFBB00156466 /* Visual.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5B00B8914401CA1585 /* Visual.tif */; };
+		EE9F32BF07C2AFBB00156466 /* NewPlaylist.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC6600B895EC01CA1585 /* NewPlaylist.tif */; };
+		EE9F32C107C2AFBB00156466 /* SpeechRoutines.c in Sources */ = {isa = PBXBuildFile; fileRef = F557974500A895B601000001 /* SpeechRoutines.c */; };
+		EE9F32C207C2AFBB00156466 /* FauxTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = F557975200A8A3AA01000001 /* FauxTunes.m */; };
+		EE9F32C307C2AFBB00156466 /* MainUsingSpeechAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F557975700A8A61B01000001 /* MainUsingSpeechAPI.m */; };
+		EE9F32C507C2AFBB00156466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE9F32C607C2AFBB00156466 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F557975C00A8A61B01000001 /* Carbon.framework */; };
+		EE9F32CD07C2AFBB00156466 /* FauxTunes.h in Headers */ = {isa = PBXBuildFile; fileRef = F557975100A8A3AA01000001 /* FauxTunes.h */; };
+		EE9F32CE07C2AFBB00156466 /* Main.h in Headers */ = {isa = PBXBuildFile; fileRef = F557976900A8A9FC01000001 /* Main.h */; };
+		EE9F32D007C2AFBB00156466 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		EE9F32D107C2AFBB00156466 /* NewPlaylist.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC6600B895EC01CA1585 /* NewPlaylist.tif */; };
+		EE9F32D207C2AFBB00156466 /* Visual.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5B00B8914401CA1585 /* Visual.tif */; };
+		EE9F32D307C2AFBB00156466 /* Shuffle.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5A00B8914401CA1585 /* Shuffle.tif */; };
+		EE9F32D407C2AFBB00156466 /* Repeat.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5900B8914401CA1585 /* Repeat.tif */; };
+		EE9F32D507C2AFBB00156466 /* Play.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5800B8914401CA1585 /* Play.tif */; };
+		EE9F32D607C2AFBB00156466 /* Eject.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5700B8914401CA1585 /* Eject.tif */; };
+		EE9F32D707C2AFBB00156466 /* SpeakerSoft.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAF000B88BC501CA1585 /* SpeakerSoft.tif */; };
+		EE9F32D807C2AFBB00156466 /* SpeakerLoud.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEF00B88BC501CA1585 /* SpeakerLoud.tif */; };
+		EE9F32D907C2AFBB00156466 /* GreenBkgrnd.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEE00B88BC501CA1585 /* GreenBkgrnd.tif */; };
+		EE9F32DA07C2AFBB00156466 /* Reverse.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73C00B1B64F01000001 /* Reverse.tif */; };
+		EE9F32DB07C2AFBB00156466 /* Forward.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73B00B1B64F01000001 /* Forward.tif */; };
+		EE9F32DD07C2AFBB00156466 /* FauxTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = F557975200A8A3AA01000001 /* FauxTunes.m */; };
+		EE9F32DE07C2AFBB00156466 /* MainUsingEmbeddedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C2742A02E3836D01CA1584 /* MainUsingEmbeddedItems.m */; };
+		EE9F32E007C2AFBB00156466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE9F32E307C2AFBB00156466 /* Quit fauxTunes.scpt in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5C2740D02E3833A01CA1584 /* Quit fauxTunes.scpt */; };
+		EE9F32E407C2AFBB00156466 /* Display at full screen.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F50128FF02E39BE901CA1584 /* Display at full screen.SpeakableItemsCommand */; };
+		EE9F32E507C2AFBB00156466 /* Display visual.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290002E39BE901CA1584 /* Display visual.SpeakableItemsCommand */; };
+		EE9F32E607C2AFBB00156466 /* Eject the CD.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290102E39BE901CA1584 /* Eject the CD.SpeakableItemsCommand */; };
+		EE9F32E707C2AFBB00156466 /* Get song info.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290202E39BE901CA1584 /* Get song info.SpeakableItemsCommand */; };
+		EE9F32E807C2AFBB00156466 /* Hide fauxTunes window.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290302E39BE901CA1584 /* Hide fauxTunes window.SpeakableItemsCommand */; };
+		EE9F32E907C2AFBB00156466 /* Make new playlist.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290402E39BE901CA1584 /* Make new playlist.SpeakableItemsCommand */; };
+		EE9F32EA07C2AFBB00156466 /* Mute volume.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290502E39BE901CA1584 /* Mute volume.SpeakableItemsCommand */; };
+		EE9F32EB07C2AFBB00156466 /* New playlist from selection.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290602E39BE901CA1584 /* New playlist from selection.SpeakableItemsCommand */; };
+		EE9F32EC07C2AFBB00156466 /* Open stream.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290702E39BE901CA1584 /* Open stream.SpeakableItemsCommand */; };
+		EE9F32ED07C2AFBB00156466 /* Play this song.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290802E39BE901CA1584 /* Play this song.SpeakableItemsCommand */; };
+		EE9F32EE07C2AFBB00156466 /* Select all songs.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290902E39BE901CA1584 /* Select all songs.SpeakableItemsCommand */; };
+		EE9F32EF07C2AFBB00156466 /* Select none.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290A02E39BE901CA1584 /* Select none.SpeakableItemsCommand */; };
+		EE9F32F007C2AFBB00156466 /* Show current song.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290B02E39BE901CA1584 /* Show current song.SpeakableItemsCommand */; };
+		EE9F32F107C2AFBB00156466 /* Show fauxTunes window.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290C02E39BE901CA1584 /* Show fauxTunes window.SpeakableItemsCommand */; };
+		EE9F32F207C2AFBB00156466 /* Show song file.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290D02E39BE901CA1584 /* Show song file.SpeakableItemsCommand */; };
+		EE9F32F307C2AFBB00156466 /* Stop playing song.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290E02E39BE901CA1584 /* Stop playing song.SpeakableItemsCommand */; };
+		EE9F32F407C2AFBB00156466 /* Turn full screen off.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501290F02E39BE901CA1584 /* Turn full screen off.SpeakableItemsCommand */; };
+		EE9F32F507C2AFBB00156466 /* Turn visual off.SpeakableItemsCommand in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501291002E39BE901CA1584 /* Turn visual off.SpeakableItemsCommand */; };
+		EE9F32FC07C2AFBB00156466 /* FauxTunes.h in Headers */ = {isa = PBXBuildFile; fileRef = F557975100A8A3AA01000001 /* FauxTunes.h */; };
+		EE9F32FD07C2AFBB00156466 /* InstallSpeakableItems.h in Headers */ = {isa = PBXBuildFile; fileRef = F557975A00A8A61B01000001 /* InstallSpeakableItems.h */; };
+		EE9F32FE07C2AFBB00156466 /* Main.h in Headers */ = {isa = PBXBuildFile; fileRef = F557976900A8A9FC01000001 /* Main.h */; };
+		EE9F330007C2AFBB00156466 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		EE9F330107C2AFBB00156466 /* Forward.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73B00B1B64F01000001 /* Forward.tif */; };
+		EE9F330207C2AFBB00156466 /* Reverse.tif in Resources */ = {isa = PBXBuildFile; fileRef = F558C73C00B1B64F01000001 /* Reverse.tif */; };
+		EE9F330307C2AFBB00156466 /* GreenBkgrnd.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEE00B88BC501CA1585 /* GreenBkgrnd.tif */; };
+		EE9F330407C2AFBB00156466 /* SpeakerLoud.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAEF00B88BC501CA1585 /* SpeakerLoud.tif */; };
+		EE9F330507C2AFBB00156466 /* SpeakerSoft.tif in Resources */ = {isa = PBXBuildFile; fileRef = F561CAF000B88BC501CA1585 /* SpeakerSoft.tif */; };
+		EE9F330607C2AFBB00156466 /* Eject.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5700B8914401CA1585 /* Eject.tif */; };
+		EE9F330707C2AFBB00156466 /* Play.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5800B8914401CA1585 /* Play.tif */; };
+		EE9F330807C2AFBB00156466 /* Repeat.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5900B8914401CA1585 /* Repeat.tif */; };
+		EE9F330907C2AFBB00156466 /* Shuffle.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5A00B8914401CA1585 /* Shuffle.tif */; };
+		EE9F330A07C2AFBB00156466 /* Visual.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC5B00B8914401CA1585 /* Visual.tif */; };
+		EE9F330B07C2AFBB00156466 /* NewPlaylist.tif in Resources */ = {isa = PBXBuildFile; fileRef = F593BC6600B895EC01CA1585 /* NewPlaylist.tif */; };
+		EE9F330D07C2AFBB00156466 /* FauxTunes.m in Sources */ = {isa = PBXBuildFile; fileRef = F557975200A8A3AA01000001 /* FauxTunes.m */; };
+		EE9F330E07C2AFBB00156466 /* InstallSpeakableItems.c in Sources */ = {isa = PBXBuildFile; fileRef = F557975900A8A61B01000001 /* InstallSpeakableItems.c */; };
+		EE9F330F07C2AFBB00156466 /* MainUsingSpeakableItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F557975800A8A61B01000001 /* MainUsingSpeakableItems.m */; };
+		EE9F331107C2AFBB00156466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE9F331207C2AFBB00156466 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F557975C00A8A61B01000001 /* Carbon.framework */; };
+		EE9F331507C2AFBB00156466 /* Display at full screen in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99F400B798F301000001 /* Display at full screen */; };
+		EE9F331607C2AFBB00156466 /* Display visual in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99F500B798F301000001 /* Display visual */; };
+		EE9F331707C2AFBB00156466 /* Eject the CD in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99F600B798F301000001 /* Eject the CD */; };
+		EE9F331807C2AFBB00156466 /* Get song info in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99F700B798F301000001 /* Get song info */; };
+		EE9F331907C2AFBB00156466 /* Hide fauxTunes window in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99F800B798F301000001 /* Hide fauxTunes window */; };
+		EE9F331A07C2AFBB00156466 /* Make new playlist in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99F900B798F301000001 /* Make new playlist */; };
+		EE9F331B07C2AFBB00156466 /* Mute volume in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99FA00B798F301000001 /* Mute volume */; };
+		EE9F331C07C2AFBB00156466 /* New playlist from selection in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99FB00B798F301000001 /* New playlist from selection */; };
+		EE9F331D07C2AFBB00156466 /* Open stream in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99FC00B798F301000001 /* Open stream */; };
+		EE9F331E07C2AFBB00156466 /* Play this song in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99FD00B798F301000001 /* Play this song */; };
+		EE9F331F07C2AFBB00156466 /* Select all songs in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99FE00B798F301000001 /* Select all songs */; };
+		EE9F332007C2AFBB00156466 /* Select none in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB99FF00B798F301000001 /* Select none */; };
+		EE9F332107C2AFBB00156466 /* Show current song in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0000B798F301000001 /* Show current song */; };
+		EE9F332207C2AFBB00156466 /* Show fauxTunes window in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0100B798F301000001 /* Show fauxTunes window */; };
+		EE9F332307C2AFBB00156466 /* Show song file in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0200B798F301000001 /* Show song file */; };
+		EE9F332407C2AFBB00156466 /* Stop playing song in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0300B798F301000001 /* Stop playing song */; };
+		EE9F332507C2AFBB00156466 /* Turn full screen off in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0400B798F301000001 /* Turn full screen off */; };
+		EE9F332607C2AFBB00156466 /* Turn visual off in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0500B798F301000001 /* Turn visual off */; };
+		EE9F332807C2AFBB00156466 /* Quit fauxTunes in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5EB9A0600B798F301000001 /* Quit fauxTunes */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE9F32E207C2AFBB00156466 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = SpeakableItems;
+			dstSubfolderSpec = 7;
+			files = (
+				EE9F32E307C2AFBB00156466 /* Quit fauxTunes.scpt in CopyFiles */,
+				EE9F32E407C2AFBB00156466 /* Display at full screen.SpeakableItemsCommand in CopyFiles */,
+				EE9F32E507C2AFBB00156466 /* Display visual.SpeakableItemsCommand in CopyFiles */,
+				EE9F32E607C2AFBB00156466 /* Eject the CD.SpeakableItemsCommand in CopyFiles */,
+				EE9F32E707C2AFBB00156466 /* Get song info.SpeakableItemsCommand in CopyFiles */,
+				EE9F32E807C2AFBB00156466 /* Hide fauxTunes window.SpeakableItemsCommand in CopyFiles */,
+				EE9F32E907C2AFBB00156466 /* Make new playlist.SpeakableItemsCommand in CopyFiles */,
+				EE9F32EA07C2AFBB00156466 /* Mute volume.SpeakableItemsCommand in CopyFiles */,
+				EE9F32EB07C2AFBB00156466 /* New playlist from selection.SpeakableItemsCommand in CopyFiles */,
+				EE9F32EC07C2AFBB00156466 /* Open stream.SpeakableItemsCommand in CopyFiles */,
+				EE9F32ED07C2AFBB00156466 /* Play this song.SpeakableItemsCommand in CopyFiles */,
+				EE9F32EE07C2AFBB00156466 /* Select all songs.SpeakableItemsCommand in CopyFiles */,
+				EE9F32EF07C2AFBB00156466 /* Select none.SpeakableItemsCommand in CopyFiles */,
+				EE9F32F007C2AFBB00156466 /* Show current song.SpeakableItemsCommand in CopyFiles */,
+				EE9F32F107C2AFBB00156466 /* Show fauxTunes window.SpeakableItemsCommand in CopyFiles */,
+				EE9F32F207C2AFBB00156466 /* Show song file.SpeakableItemsCommand in CopyFiles */,
+				EE9F32F307C2AFBB00156466 /* Stop playing song.SpeakableItemsCommand in CopyFiles */,
+				EE9F32F407C2AFBB00156466 /* Turn full screen off.SpeakableItemsCommand in CopyFiles */,
+				EE9F32F507C2AFBB00156466 /* Turn visual off.SpeakableItemsCommand in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32F607C2AFBB00156466 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F331407C2AFBB00156466 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = CommandFiles;
+			dstSubfolderSpec = 7;
+			files = (
+				EE9F331507C2AFBB00156466 /* Display at full screen in CopyFiles */,
+				EE9F331607C2AFBB00156466 /* Display visual in CopyFiles */,
+				EE9F331707C2AFBB00156466 /* Eject the CD in CopyFiles */,
+				EE9F331807C2AFBB00156466 /* Get song info in CopyFiles */,
+				EE9F331907C2AFBB00156466 /* Hide fauxTunes window in CopyFiles */,
+				EE9F331A07C2AFBB00156466 /* Make new playlist in CopyFiles */,
+				EE9F331B07C2AFBB00156466 /* Mute volume in CopyFiles */,
+				EE9F331C07C2AFBB00156466 /* New playlist from selection in CopyFiles */,
+				EE9F331D07C2AFBB00156466 /* Open stream in CopyFiles */,
+				EE9F331E07C2AFBB00156466 /* Play this song in CopyFiles */,
+				EE9F331F07C2AFBB00156466 /* Select all songs in CopyFiles */,
+				EE9F332007C2AFBB00156466 /* Select none in CopyFiles */,
+				EE9F332107C2AFBB00156466 /* Show current song in CopyFiles */,
+				EE9F332207C2AFBB00156466 /* Show fauxTunes window in CopyFiles */,
+				EE9F332307C2AFBB00156466 /* Show song file in CopyFiles */,
+				EE9F332407C2AFBB00156466 /* Stop playing song in CopyFiles */,
+				EE9F332507C2AFBB00156466 /* Turn full screen off in CopyFiles */,
+				EE9F332607C2AFBB00156466 /* Turn visual off in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F332707C2AFBB00156466 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = AppleScriptDataFiles;
+			dstSubfolderSpec = 7;
+			files = (
+				EE9F332807C2AFBB00156466 /* Quit fauxTunes in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		907EB6BF047B4F1C00A4A196 /* MainUsingNSSpeechRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MainUsingNSSpeechRecognizer.m; path = Sources/MainUsingNSSpeechRecognizer.m; sourceTree = "<group>"; };
+		EE9F32AB07C2AFBB00156466 /* Info-fauxTunes__NSSpeechRecognizer___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-fauxTunes__NSSpeechRecognizer___Upgraded_.plist"; sourceTree = "<group>"; };
+		EE9F32AC07C2AFBB00156466 /* fauxTunes (NSSpeechRecognizer).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fauxTunes (NSSpeechRecognizer).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9F32C807C2AFBB00156466 /* Info-fauxTunes__Carbon_API___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-fauxTunes__Carbon_API___Upgraded_.plist"; sourceTree = "<group>"; };
+		EE9F32C907C2AFBB00156466 /* fauxTunes (Carbon API).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fauxTunes (Carbon API).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9F32F707C2AFBB00156466 /* Info-fauxTunes__SI_Embedded___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-fauxTunes__SI_Embedded___Upgraded_.plist"; sourceTree = "<group>"; };
+		EE9F32F807C2AFBB00156466 /* fauxTunes (Embedded).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fauxTunes (Embedded).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9F332907C2AFBB00156466 /* Info-fauxTunes__SI_Installed___Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-fauxTunes__SI_Installed___Upgraded_.plist"; sourceTree = "<group>"; };
+		EE9F332A07C2AFBB00156466 /* fauxTunes (SI).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fauxTunes (SI).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50128FF02E39BE901CA1584 /* Display at full screen.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Display at full screen.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Display at full screen.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290002E39BE901CA1584 /* Display visual.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Display visual.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Display visual.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290102E39BE901CA1584 /* Eject the CD.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Eject the CD.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Eject the CD.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290202E39BE901CA1584 /* Get song info.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Get song info.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Get song info.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290302E39BE901CA1584 /* Hide fauxTunes window.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Hide fauxTunes window.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Hide fauxTunes window.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290402E39BE901CA1584 /* Make new playlist.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Make new playlist.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Make new playlist.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290502E39BE901CA1584 /* Mute volume.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Mute volume.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Mute volume.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290602E39BE901CA1584 /* New playlist from selection.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "New playlist from selection.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/New playlist from selection.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290702E39BE901CA1584 /* Open stream.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Open stream.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Open stream.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290802E39BE901CA1584 /* Play this song.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Play this song.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Play this song.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290902E39BE901CA1584 /* Select all songs.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Select all songs.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Select all songs.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290A02E39BE901CA1584 /* Select none.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Select none.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Select none.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290B02E39BE901CA1584 /* Show current song.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Show current song.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Show current song.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290C02E39BE901CA1584 /* Show fauxTunes window.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Show fauxTunes window.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Show fauxTunes window.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290D02E39BE901CA1584 /* Show song file.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Show song file.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Show song file.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290E02E39BE901CA1584 /* Stop playing song.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Stop playing song.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Stop playing song.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501290F02E39BE901CA1584 /* Turn full screen off.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Turn full screen off.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Turn full screen off.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F501291002E39BE901CA1584 /* Turn visual off.SpeakableItemsCommand */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Turn visual off.SpeakableItemsCommand"; path = "Resources/EmbeddedItems/Turn visual off.SpeakableItemsCommand"; sourceTree = "<group>"; };
+		F557974500A895B601000001 /* SpeechRoutines.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = SpeechRoutines.c; path = Sources/SpeechRoutines.c; sourceTree = "<group>"; };
+		F557975100A8A3AA01000001 /* FauxTunes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FauxTunes.h; path = Sources/FauxTunes.h; sourceTree = "<group>"; };
+		F557975200A8A3AA01000001 /* FauxTunes.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FauxTunes.m; path = Sources/FauxTunes.m; sourceTree = "<group>"; };
+		F557975700A8A61B01000001 /* MainUsingSpeechAPI.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MainUsingSpeechAPI.m; path = Sources/MainUsingSpeechAPI.m; sourceTree = "<group>"; };
+		F557975800A8A61B01000001 /* MainUsingSpeakableItems.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MainUsingSpeakableItems.m; path = Sources/MainUsingSpeakableItems.m; sourceTree = "<group>"; };
+		F557975900A8A61B01000001 /* InstallSpeakableItems.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = InstallSpeakableItems.c; path = Sources/InstallSpeakableItems.c; sourceTree = "<group>"; };
+		F557975A00A8A61B01000001 /* InstallSpeakableItems.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = InstallSpeakableItems.h; path = Sources/InstallSpeakableItems.h; sourceTree = "<group>"; };
+		F557975B00A8A61B01000001 /* SpeechRoutines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SpeechRoutines.h; path = Sources/SpeechRoutines.h; sourceTree = "<group>"; };
+		F557975C00A8A61B01000001 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		F557976900A8A9FC01000001 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Main.h; path = Sources/Main.h; sourceTree = "<group>"; };
+		F558C73B00B1B64F01000001 /* Forward.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Forward.tif; path = Resources/Graphics/Forward.tif; sourceTree = "<group>"; };
+		F558C73C00B1B64F01000001 /* Reverse.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Reverse.tif; path = Resources/Graphics/Reverse.tif; sourceTree = "<group>"; };
+		F561CAEE00B88BC501CA1585 /* GreenBkgrnd.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = GreenBkgrnd.tif; path = Resources/Graphics/GreenBkgrnd.tif; sourceTree = "<group>"; };
+		F561CAEF00B88BC501CA1585 /* SpeakerLoud.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = SpeakerLoud.tif; path = Resources/Graphics/SpeakerLoud.tif; sourceTree = "<group>"; };
+		F561CAF000B88BC501CA1585 /* SpeakerSoft.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = SpeakerSoft.tif; path = Resources/Graphics/SpeakerSoft.tif; sourceTree = "<group>"; };
+		F593BC5700B8914401CA1585 /* Eject.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Eject.tif; path = Resources/Graphics/Eject.tif; sourceTree = "<group>"; };
+		F593BC5800B8914401CA1585 /* Play.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Play.tif; path = Resources/Graphics/Play.tif; sourceTree = "<group>"; };
+		F593BC5900B8914401CA1585 /* Repeat.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Repeat.tif; path = Resources/Graphics/Repeat.tif; sourceTree = "<group>"; };
+		F593BC5A00B8914401CA1585 /* Shuffle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Shuffle.tif; path = Resources/Graphics/Shuffle.tif; sourceTree = "<group>"; };
+		F593BC5B00B8914401CA1585 /* Visual.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Visual.tif; path = Resources/Graphics/Visual.tif; sourceTree = "<group>"; };
+		F593BC6600B895EC01CA1585 /* NewPlaylist.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = NewPlaylist.tif; path = Resources/Graphics/NewPlaylist.tif; sourceTree = "<group>"; };
+		F5C2740D02E3833A01CA1584 /* Quit fauxTunes.scpt */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.scpt; name = "Quit fauxTunes.scpt"; path = "Resources/EmbeddedItems/Quit fauxTunes.scpt"; sourceTree = "<group>"; };
+		F5C2742A02E3836D01CA1584 /* MainUsingEmbeddedItems.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MainUsingEmbeddedItems.m; path = Sources/MainUsingEmbeddedItems.m; sourceTree = "<group>"; };
+		F5EB99F400B798F301000001 /* Display at full screen */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Display at full screen"; path = "Resources/SpeakableItems/CommandFiles/Display at full screen"; sourceTree = "<group>"; };
+		F5EB99F500B798F301000001 /* Display visual */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Display visual"; path = "Resources/SpeakableItems/CommandFiles/Display visual"; sourceTree = "<group>"; };
+		F5EB99F600B798F301000001 /* Eject the CD */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Eject the CD"; path = "Resources/SpeakableItems/CommandFiles/Eject the CD"; sourceTree = "<group>"; };
+		F5EB99F700B798F301000001 /* Get song info */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Get song info"; path = "Resources/SpeakableItems/CommandFiles/Get song info"; sourceTree = "<group>"; };
+		F5EB99F800B798F301000001 /* Hide fauxTunes window */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Hide fauxTunes window"; path = "Resources/SpeakableItems/CommandFiles/Hide fauxTunes window"; sourceTree = "<group>"; };
+		F5EB99F900B798F301000001 /* Make new playlist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Make new playlist"; path = "Resources/SpeakableItems/CommandFiles/Make new playlist"; sourceTree = "<group>"; };
+		F5EB99FA00B798F301000001 /* Mute volume */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Mute volume"; path = "Resources/SpeakableItems/CommandFiles/Mute volume"; sourceTree = "<group>"; };
+		F5EB99FB00B798F301000001 /* New playlist from selection */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "New playlist from selection"; path = "Resources/SpeakableItems/CommandFiles/New playlist from selection"; sourceTree = "<group>"; };
+		F5EB99FC00B798F301000001 /* Open stream */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Open stream"; path = "Resources/SpeakableItems/CommandFiles/Open stream"; sourceTree = "<group>"; };
+		F5EB99FD00B798F301000001 /* Play this song */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Play this song"; path = "Resources/SpeakableItems/CommandFiles/Play this song"; sourceTree = "<group>"; };
+		F5EB99FE00B798F301000001 /* Select all songs */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Select all songs"; path = "Resources/SpeakableItems/CommandFiles/Select all songs"; sourceTree = "<group>"; };
+		F5EB99FF00B798F301000001 /* Select none */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Select none"; path = "Resources/SpeakableItems/CommandFiles/Select none"; sourceTree = "<group>"; };
+		F5EB9A0000B798F301000001 /* Show current song */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Show current song"; path = "Resources/SpeakableItems/CommandFiles/Show current song"; sourceTree = "<group>"; };
+		F5EB9A0100B798F301000001 /* Show fauxTunes window */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Show fauxTunes window"; path = "Resources/SpeakableItems/CommandFiles/Show fauxTunes window"; sourceTree = "<group>"; };
+		F5EB9A0200B798F301000001 /* Show song file */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Show song file"; path = "Resources/SpeakableItems/CommandFiles/Show song file"; sourceTree = "<group>"; };
+		F5EB9A0300B798F301000001 /* Stop playing song */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Stop playing song"; path = "Resources/SpeakableItems/CommandFiles/Stop playing song"; sourceTree = "<group>"; };
+		F5EB9A0400B798F301000001 /* Turn full screen off */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Turn full screen off"; path = "Resources/SpeakableItems/CommandFiles/Turn full screen off"; sourceTree = "<group>"; };
+		F5EB9A0500B798F301000001 /* Turn visual off */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Turn visual off"; path = "Resources/SpeakableItems/CommandFiles/Turn visual off"; sourceTree = "<group>"; };
+		F5EB9A0600B798F301000001 /* Quit fauxTunes */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quit fauxTunes"; path = "Resources/SpeakableItems/CompiledASDataFiles/Quit fauxTunes"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE9F32A807C2AFBB00156466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32A907C2AFBB00156466 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32C407C2AFBB00156466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32C507C2AFBB00156466 /* Cocoa.framework in Frameworks */,
+				EE9F32C607C2AFBB00156466 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32DF07C2AFBB00156466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32E007C2AFBB00156466 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F331007C2AFBB00156466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F331107C2AFBB00156466 /* Cocoa.framework in Frameworks */,
+				EE9F331207C2AFBB00156466 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Common Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F557975100A8A3AA01000001 /* FauxTunes.h */,
+				F557975200A8A3AA01000001 /* FauxTunes.m */,
+				F557976900A8A9FC01000001 /* Main.h */,
+			);
+			name = "Common Classes";
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				F557975C00A8A61B01000001 /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F32AC07C2AFBB00156466 /* fauxTunes (NSSpeechRecognizer).app */,
+				EE9F32C907C2AFBB00156466 /* fauxTunes (Carbon API).app */,
+				EE9F32F807C2AFBB00156466 /* fauxTunes (Embedded).app */,
+				EE9F332A07C2AFBB00156466 /* fauxTunes (SI).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* fauxTunes */ = {
+			isa = PBXGroup;
+			children = (
+				907EB6BE047B4E6400A4A196 /* fauxTunes (NSSpeechRecognizer) Sources */,
+				29B97315FDCFA39411CA2CEA /* fauxTunes (Carbon API) Sources */,
+				F5C273FB02E3713901CA1584 /* fauxTunes (SI-Embedded) Sources */,
+				F51FE0C200AC94B601000001 /* fauxTunes (SI-Installed) Sources */,
+				080E96DDFE201D6D7F000001 /* Common Classes */,
+				29B97317FDCFA39411CA2CEA /* Common Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				EE9F32AB07C2AFBB00156466 /* Info-fauxTunes__NSSpeechRecognizer___Upgraded_.plist */,
+				EE9F32C807C2AFBB00156466 /* Info-fauxTunes__Carbon_API___Upgraded_.plist */,
+				EE9F32F707C2AFBB00156466 /* Info-fauxTunes__SI_Embedded___Upgraded_.plist */,
+				EE9F332907C2AFBB00156466 /* Info-fauxTunes__SI_Installed___Upgraded_.plist */,
+			);
+			name = fauxTunes;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* fauxTunes (Carbon API) Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F557975700A8A61B01000001 /* MainUsingSpeechAPI.m */,
+				F557975B00A8A61B01000001 /* SpeechRoutines.h */,
+				F557974500A895B601000001 /* SpeechRoutines.c */,
+			);
+			name = "fauxTunes (Carbon API) Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Common Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F51FE0C300AC9CB101000001 /* Graphics */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = "Common Resources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		907EB6BE047B4E6400A4A196 /* fauxTunes (NSSpeechRecognizer) Sources */ = {
+			isa = PBXGroup;
+			children = (
+				907EB6BF047B4F1C00A4A196 /* MainUsingNSSpeechRecognizer.m */,
+			);
+			name = "fauxTunes (NSSpeechRecognizer) Sources";
+			sourceTree = "<group>";
+		};
+		F51FE0C200AC94B601000001 /* fauxTunes (SI-Installed) Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F557975800A8A61B01000001 /* MainUsingSpeakableItems.m */,
+				F557975A00A8A61B01000001 /* InstallSpeakableItems.h */,
+				F557975900A8A61B01000001 /* InstallSpeakableItems.c */,
+				F557976C00A8B27201000001 /* Speakable Items */,
+			);
+			name = "fauxTunes (SI-Installed) Sources";
+			sourceTree = "<group>";
+		};
+		F51FE0C300AC9CB101000001 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				F558C73B00B1B64F01000001 /* Forward.tif */,
+				F558C73C00B1B64F01000001 /* Reverse.tif */,
+				F561CAEE00B88BC501CA1585 /* GreenBkgrnd.tif */,
+				F561CAEF00B88BC501CA1585 /* SpeakerLoud.tif */,
+				F561CAF000B88BC501CA1585 /* SpeakerSoft.tif */,
+				F593BC5700B8914401CA1585 /* Eject.tif */,
+				F593BC5800B8914401CA1585 /* Play.tif */,
+				F593BC5900B8914401CA1585 /* Repeat.tif */,
+				F593BC5A00B8914401CA1585 /* Shuffle.tif */,
+				F593BC5B00B8914401CA1585 /* Visual.tif */,
+				F593BC6600B895EC01CA1585 /* NewPlaylist.tif */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		F557976C00A8B27201000001 /* Speakable Items */ = {
+			isa = PBXGroup;
+			children = (
+				F557977300A8B79301000001 /* CommandFiles */,
+				F557977400A8B79301000001 /* CompiledASDataFiles */,
+			);
+			name = "Speakable Items";
+			sourceTree = "<group>";
+		};
+		F557977300A8B79301000001 /* CommandFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F5EB99F400B798F301000001 /* Display at full screen */,
+				F5EB99F500B798F301000001 /* Display visual */,
+				F5EB99F600B798F301000001 /* Eject the CD */,
+				F5EB99F700B798F301000001 /* Get song info */,
+				F5EB99F800B798F301000001 /* Hide fauxTunes window */,
+				F5EB99F900B798F301000001 /* Make new playlist */,
+				F5EB99FA00B798F301000001 /* Mute volume */,
+				F5EB99FB00B798F301000001 /* New playlist from selection */,
+				F5EB99FC00B798F301000001 /* Open stream */,
+				F5EB99FD00B798F301000001 /* Play this song */,
+				F5EB99FE00B798F301000001 /* Select all songs */,
+				F5EB99FF00B798F301000001 /* Select none */,
+				F5EB9A0000B798F301000001 /* Show current song */,
+				F5EB9A0100B798F301000001 /* Show fauxTunes window */,
+				F5EB9A0200B798F301000001 /* Show song file */,
+				F5EB9A0300B798F301000001 /* Stop playing song */,
+				F5EB9A0400B798F301000001 /* Turn full screen off */,
+				F5EB9A0500B798F301000001 /* Turn visual off */,
+			);
+			name = CommandFiles;
+			sourceTree = "<group>";
+		};
+		F557977400A8B79301000001 /* CompiledASDataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F5EB9A0600B798F301000001 /* Quit fauxTunes */,
+			);
+			name = CompiledASDataFiles;
+			sourceTree = "<group>";
+		};
+		F5C273FB02E3713901CA1584 /* fauxTunes (SI-Embedded) Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5C2742A02E3836D01CA1584 /* MainUsingEmbeddedItems.m */,
+				F5C2740102E381A801CA1584 /* Speakable Items */,
+			);
+			name = "fauxTunes (SI-Embedded) Sources";
+			sourceTree = "<group>";
+		};
+		F5C2740102E381A801CA1584 /* Speakable Items */ = {
+			isa = PBXGroup;
+			children = (
+				F5C2740D02E3833A01CA1584 /* Quit fauxTunes.scpt */,
+				F50128FF02E39BE901CA1584 /* Display at full screen.SpeakableItemsCommand */,
+				F501290002E39BE901CA1584 /* Display visual.SpeakableItemsCommand */,
+				F501290102E39BE901CA1584 /* Eject the CD.SpeakableItemsCommand */,
+				F501290202E39BE901CA1584 /* Get song info.SpeakableItemsCommand */,
+				F501290302E39BE901CA1584 /* Hide fauxTunes window.SpeakableItemsCommand */,
+				F501290402E39BE901CA1584 /* Make new playlist.SpeakableItemsCommand */,
+				F501290502E39BE901CA1584 /* Mute volume.SpeakableItemsCommand */,
+				F501290602E39BE901CA1584 /* New playlist from selection.SpeakableItemsCommand */,
+				F501290702E39BE901CA1584 /* Open stream.SpeakableItemsCommand */,
+				F501290802E39BE901CA1584 /* Play this song.SpeakableItemsCommand */,
+				F501290902E39BE901CA1584 /* Select all songs.SpeakableItemsCommand */,
+				F501290A02E39BE901CA1584 /* Select none.SpeakableItemsCommand */,
+				F501290B02E39BE901CA1584 /* Show current song.SpeakableItemsCommand */,
+				F501290C02E39BE901CA1584 /* Show fauxTunes window.SpeakableItemsCommand */,
+				F501290D02E39BE901CA1584 /* Show song file.SpeakableItemsCommand */,
+				F501290E02E39BE901CA1584 /* Stop playing song.SpeakableItemsCommand */,
+				F501290F02E39BE901CA1584 /* Turn full screen off.SpeakableItemsCommand */,
+				F501291002E39BE901CA1584 /* Turn visual off.SpeakableItemsCommand */,
+			);
+			name = "Speakable Items";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EE9F329507C2AFBB00156466 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F329607C2AFBB00156466 /* Main.h in Headers */,
+				EE9F329707C2AFBB00156466 /* FauxTunes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32AF07C2AFBB00156466 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32B007C2AFBB00156466 /* FauxTunes.h in Headers */,
+				EE9F32B107C2AFBB00156466 /* SpeechRoutines.h in Headers */,
+				EE9F32B207C2AFBB00156466 /* Main.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32CC07C2AFBB00156466 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32CD07C2AFBB00156466 /* FauxTunes.h in Headers */,
+				EE9F32CE07C2AFBB00156466 /* Main.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32FB07C2AFBB00156466 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32FC07C2AFBB00156466 /* FauxTunes.h in Headers */,
+				EE9F32FD07C2AFBB00156466 /* InstallSpeakableItems.h in Headers */,
+				EE9F32FE07C2AFBB00156466 /* Main.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EE9F329407C2AFBB00156466 /* fauxTunes (NSSpeechRecognizer) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30DAA08F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (NSSpeechRecognizer)" */;
+			buildPhases = (
+				EE9F329507C2AFBB00156466 /* Headers */,
+				EE9F329807C2AFBB00156466 /* Resources */,
+				EE9F32A507C2AFBB00156466 /* Sources */,
+				EE9F32A807C2AFBB00156466 /* Frameworks */,
+				EE9F32AA07C2AFBB00156466 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				INFOPLIST_FILE = "Info-fauxTunes__NSSpeechRecognizer___Upgraded_.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "fauxTunes (NSSpeechRecognizer)";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "fauxTunes (NSSpeechRecognizer)";
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = "fauxTunes (NSSpeechRecognizer)";
+			productReference = EE9F32AC07C2AFBB00156466 /* fauxTunes (NSSpeechRecognizer).app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE9F32AE07C2AFBB00156466 /* fauxTunes (Carbon API) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30DAE08F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (Carbon API)" */;
+			buildPhases = (
+				EE9F32AF07C2AFBB00156466 /* Headers */,
+				EE9F32B307C2AFBB00156466 /* Resources */,
+				EE9F32C007C2AFBB00156466 /* Sources */,
+				EE9F32C407C2AFBB00156466 /* Frameworks */,
+				EE9F32C707C2AFBB00156466 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-fauxTunes__Carbon_API___Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "fauxTunes (Carbon API)";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "fauxTunes (Carbon API)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = fauxTunes;
+			productReference = EE9F32C907C2AFBB00156466 /* fauxTunes (Carbon API).app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE9F32CB07C2AFBB00156466 /* fauxTunes (SI-Embedded) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30DB208F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (SI-Embedded)" */;
+			buildPhases = (
+				EE9F32CC07C2AFBB00156466 /* Headers */,
+				EE9F32CF07C2AFBB00156466 /* Resources */,
+				EE9F32DC07C2AFBB00156466 /* Sources */,
+				EE9F32DF07C2AFBB00156466 /* Frameworks */,
+				EE9F32E107C2AFBB00156466 /* Rez */,
+				EE9F32E207C2AFBB00156466 /* CopyFiles */,
+				EE9F32F607C2AFBB00156466 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				INFOPLIST_FILE = "Info-fauxTunes__SI_Embedded___Upgraded_.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "fauxTunes (Embedded)";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "fauxTunes (SI-Embedded)";
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = "fauxTunes (Embedded)";
+			productReference = EE9F32F807C2AFBB00156466 /* fauxTunes (Embedded).app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE9F32FA07C2AFBB00156466 /* fauxTunes (SI-Installed) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30DB608F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (SI-Installed)" */;
+			buildPhases = (
+				EE9F32FB07C2AFBB00156466 /* Headers */,
+				EE9F32FF07C2AFBB00156466 /* Resources */,
+				EE9F330C07C2AFBB00156466 /* Sources */,
+				EE9F331007C2AFBB00156466 /* Frameworks */,
+				EE9F331307C2AFBB00156466 /* Rez */,
+				EE9F331407C2AFBB00156466 /* CopyFiles */,
+				EE9F332707C2AFBB00156466 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				INFOPLIST_FILE = "Info-fauxTunes__SI_Installed___Upgraded_.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "fauxTunes (SI)";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "fauxTunes (SI-Installed)";
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = fauxTunesUsingSpeakableItems;
+			productReference = EE9F332A07C2AFBB00156466 /* fauxTunes (SI).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 48C30DBA08F73EEE00D0B768 /* Build configuration list for PBXProject "fauxTunes" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* fauxTunes */;
+			projectDirPath = "";
+			targets = (
+				EE9F329407C2AFBB00156466 /* fauxTunes (NSSpeechRecognizer) */,
+				EE9F32AE07C2AFBB00156466 /* fauxTunes (Carbon API) */,
+				EE9F32CB07C2AFBB00156466 /* fauxTunes (SI-Embedded) */,
+				EE9F32FA07C2AFBB00156466 /* fauxTunes (SI-Installed) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE9F329807C2AFBB00156466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F329907C2AFBB00156466 /* MainMenu.nib in Resources */,
+				EE9F329A07C2AFBB00156466 /* NewPlaylist.tif in Resources */,
+				EE9F329B07C2AFBB00156466 /* Visual.tif in Resources */,
+				EE9F329C07C2AFBB00156466 /* Shuffle.tif in Resources */,
+				EE9F329D07C2AFBB00156466 /* Repeat.tif in Resources */,
+				EE9F329E07C2AFBB00156466 /* Play.tif in Resources */,
+				EE9F329F07C2AFBB00156466 /* Eject.tif in Resources */,
+				EE9F32A007C2AFBB00156466 /* SpeakerSoft.tif in Resources */,
+				EE9F32A107C2AFBB00156466 /* SpeakerLoud.tif in Resources */,
+				EE9F32A207C2AFBB00156466 /* GreenBkgrnd.tif in Resources */,
+				EE9F32A307C2AFBB00156466 /* Reverse.tif in Resources */,
+				EE9F32A407C2AFBB00156466 /* Forward.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32B307C2AFBB00156466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32B407C2AFBB00156466 /* MainMenu.nib in Resources */,
+				EE9F32B507C2AFBB00156466 /* Forward.tif in Resources */,
+				EE9F32B607C2AFBB00156466 /* Reverse.tif in Resources */,
+				EE9F32B707C2AFBB00156466 /* GreenBkgrnd.tif in Resources */,
+				EE9F32B807C2AFBB00156466 /* SpeakerLoud.tif in Resources */,
+				EE9F32B907C2AFBB00156466 /* SpeakerSoft.tif in Resources */,
+				EE9F32BA07C2AFBB00156466 /* Eject.tif in Resources */,
+				EE9F32BB07C2AFBB00156466 /* Play.tif in Resources */,
+				EE9F32BC07C2AFBB00156466 /* Repeat.tif in Resources */,
+				EE9F32BD07C2AFBB00156466 /* Shuffle.tif in Resources */,
+				EE9F32BE07C2AFBB00156466 /* Visual.tif in Resources */,
+				EE9F32BF07C2AFBB00156466 /* NewPlaylist.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32CF07C2AFBB00156466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32D007C2AFBB00156466 /* MainMenu.nib in Resources */,
+				EE9F32D107C2AFBB00156466 /* NewPlaylist.tif in Resources */,
+				EE9F32D207C2AFBB00156466 /* Visual.tif in Resources */,
+				EE9F32D307C2AFBB00156466 /* Shuffle.tif in Resources */,
+				EE9F32D407C2AFBB00156466 /* Repeat.tif in Resources */,
+				EE9F32D507C2AFBB00156466 /* Play.tif in Resources */,
+				EE9F32D607C2AFBB00156466 /* Eject.tif in Resources */,
+				EE9F32D707C2AFBB00156466 /* SpeakerSoft.tif in Resources */,
+				EE9F32D807C2AFBB00156466 /* SpeakerLoud.tif in Resources */,
+				EE9F32D907C2AFBB00156466 /* GreenBkgrnd.tif in Resources */,
+				EE9F32DA07C2AFBB00156466 /* Reverse.tif in Resources */,
+				EE9F32DB07C2AFBB00156466 /* Forward.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32FF07C2AFBB00156466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F330007C2AFBB00156466 /* MainMenu.nib in Resources */,
+				EE9F330107C2AFBB00156466 /* Forward.tif in Resources */,
+				EE9F330207C2AFBB00156466 /* Reverse.tif in Resources */,
+				EE9F330307C2AFBB00156466 /* GreenBkgrnd.tif in Resources */,
+				EE9F330407C2AFBB00156466 /* SpeakerLoud.tif in Resources */,
+				EE9F330507C2AFBB00156466 /* SpeakerSoft.tif in Resources */,
+				EE9F330607C2AFBB00156466 /* Eject.tif in Resources */,
+				EE9F330707C2AFBB00156466 /* Play.tif in Resources */,
+				EE9F330807C2AFBB00156466 /* Repeat.tif in Resources */,
+				EE9F330907C2AFBB00156466 /* Shuffle.tif in Resources */,
+				EE9F330A07C2AFBB00156466 /* Visual.tif in Resources */,
+				EE9F330B07C2AFBB00156466 /* NewPlaylist.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		EE9F32AA07C2AFBB00156466 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32C707C2AFBB00156466 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32E107C2AFBB00156466 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F331307C2AFBB00156466 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE9F32A507C2AFBB00156466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32A607C2AFBB00156466 /* MainUsingNSSpeechRecognizer.m in Sources */,
+				EE9F32A707C2AFBB00156466 /* FauxTunes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32C007C2AFBB00156466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32C107C2AFBB00156466 /* SpeechRoutines.c in Sources */,
+				EE9F32C207C2AFBB00156466 /* FauxTunes.m in Sources */,
+				EE9F32C307C2AFBB00156466 /* MainUsingSpeechAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F32DC07C2AFBB00156466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F32DD07C2AFBB00156466 /* FauxTunes.m in Sources */,
+				EE9F32DE07C2AFBB00156466 /* MainUsingEmbeddedItems.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F330C07C2AFBB00156466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F330D07C2AFBB00156466 /* FauxTunes.m in Sources */,
+				EE9F330E07C2AFBB00156466 /* InstallSpeakableItems.c in Sources */,
+				EE9F330F07C2AFBB00156466 /* MainUsingSpeakableItems.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C30DAB08F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-fauxTunes__NSSpeechRecognizer___Upgraded_.plist";
+				PRODUCT_NAME = "fauxTunes (NSSpeechRecognizer)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		48C30DAC08F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-fauxTunes__NSSpeechRecognizer___Upgraded_.plist";
+				PRODUCT_NAME = "fauxTunes (NSSpeechRecognizer)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48C30DAF08F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-fauxTunes__Carbon_API___Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "fauxTunes (Carbon API)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		48C30DB008F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-fauxTunes__Carbon_API___Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "fauxTunes (Carbon API)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48C30DB308F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-fauxTunes__SI_Embedded___Upgraded_.plist";
+				PRODUCT_NAME = "fauxTunes (Embedded)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		48C30DB408F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-fauxTunes__SI_Embedded___Upgraded_.plist";
+				PRODUCT_NAME = "fauxTunes (Embedded)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48C30DB708F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-fauxTunes__SI_Installed___Upgraded_.plist";
+				PRODUCT_NAME = "fauxTunes (SI)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		48C30DB808F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-fauxTunes__SI_Installed___Upgraded_.plist";
+				PRODUCT_NAME = "fauxTunes (SI)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48C30DBB08F73EEE00D0B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		48C30DBC08F73EEE00D0B768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C30DAA08F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (NSSpeechRecognizer)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DAB08F73EEE00D0B768 /* Debug */,
+				48C30DAC08F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30DAE08F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (Carbon API)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DAF08F73EEE00D0B768 /* Debug */,
+				48C30DB008F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30DB208F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (SI-Embedded)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DB308F73EEE00D0B768 /* Debug */,
+				48C30DB408F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30DB608F73EEE00D0B768 /* Build configuration list for PBXNativeTarget "fauxTunes (SI-Installed)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DB708F73EEE00D0B768 /* Debug */,
+				48C30DB808F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30DBA08F73EEE00D0B768 /* Build configuration list for PBXProject "fauxTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30DBB08F73EEE00D0B768 /* Debug */,
+				48C30DBC08F73EEE00D0B768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

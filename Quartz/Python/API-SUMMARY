@@ -1,0 +1,2933 @@
+# API-SUMMARY
+# $Id: API-SUMMARY,v 1.20 2005/01/28 22:00:33 velocio Exp $
+
+# This file describes the mapping of the C CoreGraphics APIs to the
+# Python language
+
+# Everything is stored in the `CoreGraphics' module
+
+# Standard types are generally mapped as would be expected. `float
+# array[N]' parameters are passed as Python tuples, i.e. `(0, 1, 2)'
+# Sequences with a single element may be specified as a single number.
+# Any required undefined values will default to zero.
+
+# C `out' style parameters are returned as extra values from the
+# function (in a tuple)
+
+# CG `objects' are mapped to native Python objects. Constructors (i.e.
+# `CGFooCreate' functions) are mapped to Python functions of the same
+# name. Methods are mapped to native Python methods with the object
+# name removed and the first character in lowercase.
+
+# For example, given a CG object `CGFoo' with a method `DoSomething'
+# (i.e. `CGFooDoSomething (object, args...)'), the python method would
+# be called `doSomething' (i.e. `object.doSomething (args...)')
+
+# Example:
+
+# from CoreGraphics import *
+#
+# ctx = CGBitmapContextCreateWithColor (612, 792,
+#    CGColorSpaceCreateDeviceRGB (), (0, 0, 0, 0))
+#
+# pdf = CGPDFDocumentCreateWithProvider (
+#    CGDataProviderCreateWithFilename ("in.pdf"))
+#
+# ctx.drawPDFDocument (CGRectMake (0, 0, 612, 792), pdf, 1)
+# ctx.writeToFile ("out.png", kCGImageFormatPNG)
+
+
+# Constants
+
+/* Rectangle edges. */
+
+enum CGRectEdge {
+    CGRectMinXEdge, CGRectMinYEdge, CGRectMaxXEdge, CGRectMaxYEdge
+};
+typedef enum CGRectEdge CGRectEdge;
+
+/* Path element types. */
+
+enum CGPathElementType {
+    kCGPathElementMoveToPoint,
+    kCGPathElementAddLineToPoint,
+    kCGPathElementAddQuadCurveToPoint,
+    kCGPathElementAddCurveToPoint,
+    kCGPathElementCloseSubpath
+};
+typedef enum CGPathElementType CGPathElementType;
+
+/* Line join styles. */
+
+enum CGLineJoin {
+    kCGLineJoinMiter,
+    kCGLineJoinRound,
+    kCGLineJoinBevel
+};
+typedef enum CGLineJoin CGLineJoin;
+
+/* Line cap styles. */
+
+enum CGLineCap {
+    kCGLineCapButt,
+    kCGLineCapRound,
+    kCGLineCapSquare
+};
+typedef enum CGLineCap CGLineCap;
+
+/* Drawing modes for paths. */
+
+enum CGPathDrawingMode {
+    kCGPathFill,
+    kCGPathEOFill,
+    kCGPathStroke,
+    kCGPathFillStroke,
+    kCGPathEOFillStroke
+};
+typedef enum CGPathDrawingMode CGPathDrawingMode;
+
+/* Drawing modes for text. */
+
+enum CGTextDrawingMode {
+    kCGTextFill,
+    kCGTextStroke,
+    kCGTextFillStroke,
+    kCGTextInvisible,
+    kCGTextFillClip,
+    kCGTextStrokeClip,
+    kCGTextFillStrokeClip,
+    kCGTextClip
+};
+typedef enum CGTextDrawingMode CGTextDrawingMode;
+
+/* Text encodings. */
+
+enum CGTextEncoding {
+    kCGEncodingFontSpecific,
+    kCGEncodingMacRoman
+};
+typedef enum CGTextEncoding CGTextEncoding;
+
+enum CGInterpolationQuality {
+    kCGInterpolationDefault,		/* Let the context decide. */
+    kCGInterpolationNone,		/* Never interpolate. */
+    kCGInterpolationLow,		/* Fast, low quality. */
+    kCGInterpolationHigh		/* Slow, high quality. */
+};
+typedef enum CGInterpolationQuality CGInterpolationQuality;
+
+enum CGBlendMode {
+    kCGBlendModeNormal,
+    kCGBlendModeMultiply,
+    kCGBlendModeScreen,
+    kCGBlendModeOverlay,
+    kCGBlendModeDarken,
+    kCGBlendModeLighten,
+    kCGBlendModeColorDodge,
+    kCGBlendModeColorBurn,
+    kCGBlendModeSoftLight,
+    kCGBlendModeHardLight,
+    kCGBlendModeDifference,
+    kCGBlendModeExclusion,
+    kCGBlendModeHue,
+    kCGBlendModeSaturation,
+    kCGBlendModeColor,
+    kCGBlendModeLuminosity
+};
+typedef enum CGBlendMode CGBlendMode;
+
+enum CGImageAlphaInfo {
+    kCGImageAlphaNone,
+    kCGImageAlphaPremultipliedLast,  /* For example, premultiplied RGBA */
+    kCGImageAlphaPremultipliedFirst, /* For example, premultiplied ARGB */
+    kCGImageAlphaLast,               /* For example, non-premultiplied RGBA */
+    kCGImageAlphaFirst,              /* For example, non-premultiplied ARGB */
+    kCGImageAlphaNoneSkipLast,       /* Equivalent to kCGImageAlphaNone. */
+    kCGImageAlphaNoneSkipFirst
+};
+typedef enum CGImageAlphaInfo CGImageAlphaInfo;
+
+enum CGColorRenderingIntent {
+    kCGRenderingIntentDefault,
+    kCGRenderingIntentAbsoluteColorimetric,
+    kCGRenderingIntentRelativeColorimetric,
+    kCGRenderingIntentPerceptual,
+    kCGRenderingIntentSaturation
+};
+typedef enum CGColorRenderingIntent CGColorRenderingIntent;
+
+/* kCGPatternTilingNoDistortion: The pattern cell is not distorted when
+ * painted, however the spacing between pattern cells may vary by as much
+ * as 1 device pixel.
+ *
+ * kCGPatternTilingConstantSpacingMinimalDistortion: Pattern cells are
+ * spaced consistently, however the pattern cell may be distorted by as
+ * much as 1 device pixel when the pattern is painted.
+ *
+ * kCGPatternTilingConstantSpacing: Pattern cells are spaced consistently
+ * as with kCGPatternTilingConstantSpacingMinimalDistortion, however the
+ * pattern cell may be distorted additionally to permit a more efficient
+ * implementation. */
+
+enum CGPatternTiling {
+    kCGPatternTilingNoDistortion,
+    kCGPatternTilingConstantSpacingMinimalDistortion,
+    kCGPatternTilingConstantSpacing
+};
+typedef enum CGPatternTiling CGPatternTiling;
+
+enum CGImageSourceStatus {
+    kCGImageStatusUnexpectedEOF = -5,
+    kCGImageStatusInvalidData = -4,
+    kCGImageStatusUnknownType = -3,
+    kCGImageStatusReadingHeader = -2,
+    kCGImageStatusIncomplete = -1,
+    kCGImageStatusComplete = 0,
+};
+typedef enum CGImageSourceStatus CGImageSourceStatus;
+
+enum CGPDFBox {
+    kCGPDFMediaBox = 0,
+    kCGPDFCropBox = 1,
+    kCGPDFBleedBox = 2,
+    kCGPDFTrimBox = 3,
+    kCGPDFArtBox = 4
+};
+typedef enum CGPDFBox CGPDFBox;
+
+
+# CGAffineTransform
+
+typedef struct CGAffineTransform CGAffineTransform;
+
+struct CGAffineTransform {
+    float a, b, c, d;
+    float tx, ty;
+};
+
+/* The identity transform: [ 1 0 0 1 0 0 ]. */
+
+CG_EXTERN const CGAffineTransform CGAffineTransformIdentity;
+
+/* Return the transform [ a b c d tx ty ]. */
+
+CG_EXTERN CGAffineTransform CGAffineTransformMake(float a, float b, float c, float d, float tx, float ty);
+
+/* Return a transform which translates by `(tx, ty)':
+ *   t' = [ 1 0 0 1 tx ty ] */
+
+CG_EXTERN CGAffineTransform CGAffineTransformMakeTranslation(float tx, float ty);
+
+/* Return a transform which scales by `(sx, sy)':
+ *   t' = [ sx 0 0 sy 0 0 ] */
+
+CG_EXTERN CGAffineTransform CGAffineTransformMakeScale(float sx, float sy);
+
+/* Return a transform which rotates by `angle' radians:
+ *   t' = [ cos(angle) sin(angle) -sin(angle) cos(angle) 0 0 ] */
+
+CG_EXTERN CGAffineTransform CGAffineTransformMakeRotation(float angle);
+
+class CGAffineTransform {
+
+  /* Translate `t' by `(tx, ty)' and return the result:
+   *   t' = [ 1 0 0 1 tx ty ] * t */
+
+  CGAffineTransform translate (float tx, float ty) {
+    return CGAffineTransformTranslate (*self, tx, ty);
+  }
+
+  /* Scale `t' by `(sx, sy)' and return the result:
+   *   t' = [ sx 0 0 sy 0 0 ] * t */
+
+  CGAffineTransform scale (float sx, float sy) {
+    return CGAffineTransformScale (*self, sx, sy);
+  }
+
+  /* Rotate `t' by `angle' radians and return the result:
+   *   t' =  [ cos(angle) sin(angle) -sin(angle) cos(angle) 0 0 ] * t */
+
+  CGAffineTransform rotate (float angle) {
+    return CGAffineTransformRotate (*self, angle);
+  }
+
+  /* Invert `t' and return the result.  If `t' has zero determinant, then `t'
+   * is returned unchanged. */
+
+  CGAffineTransform invert () {
+    return CGAffineTransformInvert (*self);
+  }
+
+  /* Concatenate `t2' to `t1' and return the result:
+   *   t' = t1 * t2 */
+
+  CGAffineTransform concat (CGAffineTransform t2) {
+    return CGAffineTransformConcat (*self, t2);
+  }
+    
+  /* Return true if `t1' and `t2' are equal, false otherwise. */
+
+  bool equalToTransform(CGAffineTransform t2) {
+	return CGAffineTransformEqualToTransform(*self, t2);
+  }
+  
+  /* Return true if `t' is the identity transform, false otherwise. */
+
+  bool transformIsIdentity () {
+	return CGAffineTransformIsIdentity (*self);
+  }
+
+}
+
+
+# CGGeometry
+
+/* Points. */
+
+struct CGPoint {
+    float x;
+    float y;
+};
+typedef struct CGPoint CGPoint;
+
+/* Sizes. */
+
+struct CGSize {
+    float width;
+    float height;
+};
+typedef struct CGSize CGSize;
+
+/* Rectangles. */
+
+struct CGRect {
+    CGPoint origin;
+    CGSize size;
+};
+typedef struct CGRect CGRect;
+
+
+/* The "zero" point -- equivalent to CGPointMake(0, 0). */ 
+
+CG_EXTERN const CGPoint CGPointZero;
+
+/* Make a point from `(x, y)'. */
+
+CG_INLINE CGPoint CGPointMake(float x, float y);
+
+class CGPoint {
+
+  /* Return true if `point1' and `point2' are the same, 0 otherwise. */
+
+  bool equalToPoint (CGPoint point2) {
+    return CGPointEqualToPoint (*self, point2);
+  }
+
+  /* Transform `point' by `t' and return the result:
+   *   p' = p * t
+   * where p = [ x y 1 ]. */
+
+  CGPoint applyAffineTransform (CGAffineTransform t) {
+    return CGPointApplyAffineTransform (*self, t);
+  }
+}
+
+
+/* The "zero" size -- equivalent to CGSizeMake(0, 0). */ 
+
+CG_EXTERN const CGSize CGSizeZero;
+
+/* Make a size from `(width, height)'. */
+
+CG_INLINE CGSize CGSizeMake(float width, float height);
+
+class CGSize {
+
+  /* Return true if `size1' and `size2' are the same, 0 otherwise. */
+
+  bool equalToSize (CGSize size2) {
+    return CGSizeEqualToSize (*self, size2);
+  }
+
+  /* Transform `size' by `t' and return the result:
+   *   s' = s * t
+   * where s = [ width height 0 ]. */
+
+  CGSize applyAffineTransform (CGAffineTransform t) {
+    return CGSizeApplyAffineTransform (*self, t);
+  }
+}
+
+
+/* The "zero" rectangle -- equivalent to CGRectMake(0, 0, 0, 0). */ 
+
+CG_EXTERN const CGRect CGRectZero;
+
+/* The "empty" rect.  This is the rectangle returned when, for example, we
+ * intersect two disjoint rectangles.  Note that the null rect is not the
+ * same as the zero rect. */
+
+CG_EXTERN const CGRect CGRectNull;
+
+/* The infinite rectangle. */
+
+CG_EXTERN const CGRect CGRectInfinite;
+
+/* Make a rect from `(x, y; width, height)'. */
+
+CG_INLINE CGRect CGRectMake(float x, float y, float width, float height);
+
+class CGRect {
+
+  /* Return the leftmost x-value of `rect'. */
+
+  float getMinX () {
+    return CGRectGetMinX (*self);
+  }
+
+  /* Return the midpoint x-value of `rect'. */
+
+  float getMidX () {
+    return CGRectGetMidX (*self);
+  }
+
+  /* Return the rightmost x-value of `rect'. */
+
+  float getMaxX () {
+    return CGRectGetMaxX (*self);
+  }
+
+  /* Return the bottommost y-value of `rect'. */
+
+  float getMinY () {
+    return CGRectGetMinY (*self);
+  }
+
+  /* Return the midpoint y-value of `rect'. */
+
+  float getMidY () {
+    return CGRectGetMidY (*self);
+  }
+
+  /* Return the topmost y-value of `rect'. */
+
+  float getMaxY () {
+    return CGRectGetMaxY (*self);
+  }
+
+  /* Return the width of `rect'. */
+
+  float getWidth () {
+    return CGRectGetWidth (*self);
+  }
+
+  /* Return the height of `rect'. */
+
+  float getHeight () {
+    return CGRectGetHeight (*self);
+  }
+
+  /* Return true if `rect1' and `rect2' are the same, 0 otherwise. */
+
+  bool equalToRect (CGRect rect2) {
+    return CGRectEqualToRect (*self, rect2);
+  }
+
+  /* Standardize `rect' -- i.e., convert it to an equivalent rect which has
+   * positive width and height. */
+
+  CGRect standardize () {
+    return CGRectStandardize (*self);
+  }
+
+  /* Return true if `rect' is empty -- i.e., if it has zero width or height.  A
+   * null rect is defined to be empty. */
+
+  bool isEmpty () {
+    return CGRectIsEmpty (*self);
+  }
+
+  /* Return true if `rect' is null -- e.g., the result of intersecting two
+   * disjoint rectangles is a null rect. */
+
+  bool isNull () {
+    return CGRectIsNull (*self);
+  }
+
+  /* Return true if `rect' is the infinite rectangle, false otherwise. */
+
+  bool isInfinite () {
+	return CGRectIsInfinite (*self);
+  }
+
+  /* Inset `rect' by `(dx, dy)' -- i.e., offset its origin by `(dx, dy)', and
+   * decrease its size by `(2*dx, 2*dy)'. */
+
+  CGRect inset (float dx, float dy) {
+    return CGRectInset (*self, dx, dy);
+  }
+
+  /* Expand `rect' to the smallest rect containing it with integral origin
+   * and size. */
+
+  CGRect integral () {
+    return CGRectIntegral (*self);
+  }
+
+  /* Return the union of `r1' and `r2'.
+   * NOTE: the python/perl methods are actually called 'union'. */
+
+  CGRect Union (CGRect r2) {
+    return CGRectUnion (*self, r2);
+  }
+
+  /* Return the intersection of `r1' and `r2'.  This may return a null
+   * rect. */
+
+  CGRect intersection (CGRect r2) {
+    return CGRectIntersection (*self, r2);
+  }
+
+  /* Offset `rect' by `(dx, dy)'. */
+
+  CGRect offset (float dx, float dy) {
+    return CGRectOffset (*self, dx, dy);
+  }
+
+  /* Make two new rectangles, `slice' and `remainder', by dividing `rect'
+   * with a line that's parallel to one of its sides, specified by `edge' --
+   * either `CGRectMinXEdge', `CGRectMinYEdge', `CGRectMaxXEdge', or
+   * `CGRectMaxYEdge'.  The size of `slice' is determined by `amount', which
+   * measures the distance from the specified edge. */
+
+  void divide (CGRect *slice, CGRect *remainder,
+	       float amount, CGRectEdge edge)
+  {
+    CGRectDivide (*self, slice, remainder, amount, edge);
+  }
+
+  /* Return true if `point' is contained in `rect', 0 otherwise. */
+
+  bool containsPoint (CGPoint point) {
+    return CGRectContainsPoint (*self, point);
+  }
+
+  /* Return true if `rect2' is contained in `rect1', 0 otherwise.  `rect2' is
+   * contained in `rect1' if the union of `rect1' and `rect2' is equal to
+   * `rect1'. */
+
+  bool containsRect (CGRect rect2) {
+    return CGRectContainsRect (*self, rect2);
+  }
+
+  /* Return true if `rect1' intersects `rect2', 0 otherwise.  `rect1'
+   * intersects `rect2' if the intersection of `rect1' and `rect2' is
+   * not the null rect. */
+
+  bool intersectsRect (CGRect rect2) {
+    return CGRectIntersectsRect (*self, rect2);
+  }
+  
+  /* Transform `rect' by `t' and return the result. Since affine transforms
+  * do not preserve rectangles in general, this function returns the
+  * smallest rectangle which contains the transformed corner points of
+  * `rect'. If `t' consists solely of scales, flips and translations, then
+  * the returned rectangle coincides with the rectangle constructed from the
+  * four transformed corners. */
+ 
+  CGRect applyAffineTransform (CGAffineTransform t) {
+    return CGRectApplyAffineTransform (*self, t);
+  }
+}
+
+
+# CGImage
+
+/* Create an image. */
+
+CG_EXTERN CGImageRef CGImageCreate(size_t width, size_t height, size_t bitsPerComponent, size_t bitsPerPixel, size_t bytesPerRow, CGColorSpaceRef colorspace, CGImageAlphaInfo alphaInfo, CGDataProviderRef provider, const float decode[10], bool shouldInterpolate, CGColorRenderingIntent intent);
+
+/* Create an image mask. */
+
+CG_EXTERN CGImageRef CGImageMaskCreate(size_t width, size_t height, size_t bitsPerComponent, size_t bitsPerPixel, size_t bytesPerRow, CGDataProviderRef provider, const float decode[10], bool shouldInterpolate);
+
+/* Create an image from `source', a data provider of JPEG-encoded data. */
+
+CG_EXTERN CGImageRef CGImageCreateWithJPEGDataProvider(CGDataProviderRef source, const float decode[10], bool shouldInterpolate, CGColorRenderingIntent intent);
+
+/* Create an image using `source', a data provider for PNG-encoded data. */
+
+CG_EXTERN CGImageRef CGImageCreateWithPNGDataProvider(CGDataProviderRef source, const float decode[10], bool shouldInterpolate, CGColorRenderingIntent intent);
+
+
+class CGImage {
+
+  /* Return true if `image' is an image mask, false otherwise. */
+
+  bool isMask () {
+    return CGImageIsMask (self);
+  }
+
+  /* Return the width of `image'. */
+
+  size_t getWidth () {
+    return CGImageGetWidth (self);
+  }
+
+  /* Return the height of `image'. */
+
+  size_t getHeight () {
+    return CGImageGetHeight (self);
+  }
+
+  /* Return the number of bits/component of `image'. */
+
+  size_t getBitsPerComponent () {
+    return CGImageGetBitsPerComponent (self);
+  }
+
+  /* Return the number of bits/pixel of `image'. */
+
+  size_t getBitsPerPixel () {
+    return CGImageGetBitsPerPixel (self);
+  }
+
+  /* Return the number of bytes/row of `image'. */
+
+  size_t getBytesPerRow () {
+    return CGImageGetBytesPerRow (self);
+  }
+
+  /* Return the colorspace of `image', or NULL if `image' is an image
+   * mask. */
+
+  CGColorSpaceRef getColorSpace () {
+    return CGColorSpaceRetain (CGImageGetColorSpace (self));
+  }
+
+  /* Return the alpha info of `image'. */
+
+  CGImageAlphaInfo getAlphaInfo () {
+    return CGImageGetAlphaInfo (self);
+  }
+  
+  /* Return the data provider of `image'. */
+
+  CGDataProviderRef getDataProvider () {
+    return CGDataProviderRetain (CGImageGetDataProvider (self));
+  }
+
+  /* Return the decode array of `image'. */
+
+  const float *getDecode () {
+    return CGImageGetDecode (self);
+  }
+
+  /* Return the interpolation parameter of `image'. */
+
+  bool getShouldInterpolate () {
+    return CGImageGetShouldInterpolate (self);
+  }
+
+  /* Return the rendering intent of `image'. */
+
+  CGColorRenderingIntent getRenderingIntent () {
+    return CGImageGetRenderingIntent (self);
+  }
+  
+  /* Return the bitmap info of `image'. */
+
+  CGBitmapInfo getBitmapInfo () {
+	return CGImageGetBitmapInfo (self);
+  }
+  
+  /* Create an image using the data contained within the subrectangle `rect'
+   * of `image'.
+   *
+   * The new image is created by
+   *   1) adjusting `rect' to integral bounds by calling "CGRectIntegral";
+   *   2) intersecting the result with a rectangle with origin (0, 0) and
+   *      size equal to the size of `image';
+   *   3) referencing the pixels within the resulting rectangle, treating the
+   *      first pixel of the image data as the origin of the image.
+   * If the resulting rectangle is the null rectangle, this function returns
+   * NULL.
+   *
+   * If W and H are the width and height of image, respectively, then the
+   * point (0,0) corresponds to the first pixel of the image data; the point
+   * (W-1, 0) is the last pixel of the first row of the image data; (0, H-1)
+   * is the first pixel of the last row of the image data; and (W-1, H-1) is
+   * the last pixel of the last row of the image data.
+   *
+   * The resulting image retains a reference to the original image, so you
+   * may release the original image after calling this function. */
+
+  CGImageRef createWithImageInRect (CGRect rect)
+  {
+	return CGImageCreateWithImageInRect (self, rect);
+  }
+  
+  /* Create a new image from `image' masked by `mask', which may be an image
+   * mask or an image.
+   *
+   * If `mask' is an image mask, then it indicates which parts of the context
+   * are to be painted with the image when drawn in a context, and which are
+   * to be masked out (left unchanged). The source samples of the image mask
+   * determine which areas are painted, acting as an "inverse alpha": if the
+   * value of a source sample in the image mask is S, then the corresponding
+   * region in `image' is blended with the destination using an alpha of
+   * (1-S).  (For example, if S is 1, then the region is not painted, while
+   * if S is 0, the region is fully painted.)
+   *
+   * If `mask' is an image, then it serves as alpha mask for blending the
+   * image onto the destination.  The source samples of `mask' determine
+   * which areas are painted: if the value of the source sample in mask is S,
+   * then the corresponding region in image is blended with the destination
+   * with an alpha of S.  (For example, if S is 0, then the region is not
+   * painted, while if S is 1, the region is fully painted.)
+   *
+   * The parameter `image' may not be an image mask and may not have an image
+   * mask or masking color associated with it.
+   *
+   * If `mask' is an image, then it must be in the DeviceGray color space,
+   * may not have alpha, and may not itself be masked by an image mask
+   * or a masking color. */
+
+  CGImageRef createWithMask (CGImageRef mask)
+  {
+	return CGImageCreateWithMask (self, mask);
+  }
+  
+  /* Create a new image from `image' masked by `components', an array of 2N
+   * values { min[1], max[1], ... min[N], max[N] } where N is the number of
+   * components in color space of `image'. Any image sample with color value
+   * {c[1], ... c[N]} where min[i] <= c[i] <= max[i] for 1 <= i <= N is
+   * masked out (that is, not painted).
+   *
+   * Each value in `components' must be a valid image sample value: if
+   * `image' has integral pixel components, then each value of must be in the
+   * range [0 .. 2**bitsPerComponent - 1] (where `bitsPerComponent' is the
+   * number of bits/component of `image'); if `image' has floating-point
+   * pixel components, then each value may be any floating-point number which
+   * is a valid color component.
+   *
+   * The parameter `image' may not be an image mask, and may not already have
+   * an image mask or masking color associated with it. */
+
+  CGImageRef createWithMaskingColors (const float components[8]) {
+	return CGImageCreateWithMaskingColors (self, components);
+  }
+}
+
+
+# CGDataConsumer
+
+/* Create a new data consumer that will write data to the file 'filename'. */
+
+CG_EXTERN CGDataConsumerRef CGDataConsumerCreateWithFilename (const char *filename);
+
+
+# CGDataProvider
+
+/* Create a new data provider that will read data from the file 'filename'. */
+
+CGDataProviderRef CGDataProviderCreateWithFilename (const char *filename);
+
+/* Create a new data provider that will read data from 'string'. */
+
+CGDataProviderRef CGDataProviderCreateWithString (const char *string);
+
+
+# CGImage
+
+/* Create an image. */
+
+CG_EXTERN CGImageRef CGImageCreate(size_t width, size_t height, size_t bitsPerComponent, size_t bitsPerPixel, size_t bytesPerRow, CGColorSpaceRef colorspace, CGImageAlphaInfo alphaInfo, CGDataProviderRef provider, const float decode[10], bool shouldInterpolate, CGColorRenderingIntent intent);
+
+/* Create an image mask. */
+
+CG_EXTERN CGImageRef CGImageMaskCreate(size_t width, size_t height, size_t bitsPerComponent, size_t bitsPerPixel, size_t bytesPerRow, CGDataProviderRef provider, const float decode[10], bool shouldInterpolate);
+
+/* Create an image from `source', a data provider of JPEG-encoded data. */
+
+CG_EXTERN CGImageRef CGImageCreateWithJPEGDataProvider(CGDataProviderRef source, const float decode[10], bool shouldInterpolate, CGColorRenderingIntent intent);
+
+/* Create an image using `source', a data provider for PNG-encoded data. */
+
+CG_EXTERN CGImageRef CGImageCreateWithPNGDataProvider(CGDataProviderRef source, const float decode[10], bool shouldInterpolate, CGColorRenderingIntent intent);
+
+/* Create an image using `source', a data provider with data encoded using
+   one of the standard image formats. */
+
+CG_EXTERN CGImageRef CGImageCreateWithDataProvider (CGDataProviderRef source);
+
+/* Create an image using `source', a data provider with data encoded using
+   one of the image formats supported by ImageIO. */
+
+CG_EXTERN CGImageRef CGImageImport (CGDataProviderRef source);
+
+/* Create an image using `source', a data provider with data encoded using
+   one of the image formats supported by QuickTime graphics importers.
+   The returned affine transform has the necessary scale factors to map
+   the created image to 72dpi. */
+
+CG_EXTERN CGImageRef CGImageImportWithAffineTransform (CGDataProviderRef source, CGAffineTransform *OUTPUT);
+
+
+class CGImage {
+
+  /* Return true if `image' is an image mask, false otherwise. */
+
+  bool isMask () {
+    return CGImageIsMask (self);
+  }
+
+  /* Return the width of `image'. */
+
+  size_t getWidth () {
+    return CGImageGetWidth (self);
+  }
+
+  /* Return the height of `image'. */
+
+  size_t getHeight () {
+    return CGImageGetHeight (self);
+  }
+
+  /* Return the number of bits/component of `image'. */
+
+  size_t getBitsPerComponent () {
+    return CGImageGetBitsPerComponent (self);
+  }
+
+  /* Return the number of bits/pixel of `image'. */
+
+  size_t getBitsPerPixel () {
+    return CGImageGetBitsPerPixel (self);
+  }
+
+  /* Return the number of bytes/row of `image'. */
+
+  size_t getBytesPerRow () {
+    return CGImageGetBytesPerRow (self);
+  }
+
+  /* Return the colorspace of `image', or NULL if `image' is an image
+   * mask. */
+
+  CGColorSpaceRef getColorSpace () {
+    return CGColorSpaceRetain (CGImageGetColorSpace (self));
+  }
+
+  /* Return the alpha info of `image'. */
+
+  CGImageAlphaInfo getAlphaInfo () {
+    return CGImageGetAlphaInfo (self);
+  }
+  
+  /* Return the data provider of `image'. */
+
+  CGDataProviderRef getDataProvider () {
+    return CGDataProviderRetain (CGImageGetDataProvider (self));
+  }
+
+  /* Return the decode array of `image'. */
+
+  const float *getDecode () {
+    return CGImageGetDecode (self);
+  }
+
+  /* Return the interpolation parameter of `image'. */
+
+  bool getShouldInterpolate () {
+    return CGImageGetShouldInterpolate (self);
+  }
+
+  /* Return the rendering intent of `image'. */
+
+  CGColorRenderingIntent getRenderingIntent () {
+    return CGImageGetRenderingIntent (self);
+  }
+}
+
+
+# CGPath
+
+/* Create a mutable path. */
+
+CG_EXTERN CGMutablePathRef CGPathCreateMutable(void);
+
+/* Create a copy of `path'. */
+
+CG_EXTERN CGPathRef CGPathCreateCopy(CGPathRef path);
+
+/* Create a mutable copy of `path'. */
+
+CG_EXTERN CGMutablePathRef CGPathCreateMutableCopy(CGPathRef path);
+
+
+class CGPath {
+
+  /* Return true if `path1' is equal to `path2'; false otherwise. */
+
+  bool equalToPath (CGPathRef path2) {
+    return CGPathEqualToPath (self, path2);
+  }
+
+
+  /*** Path information functions. ***/
+
+  /* Return true if `path' contains no elements, false otherwise. */
+
+  bool isEmpty () {
+    return CGPathIsEmpty (self);
+  }
+
+  /* Return true if `path' represents a rectangle, false otherwise. */
+
+  bool isRect (CGRect *rect) {
+    return CGPathIsRect (self, rect);
+  }
+
+  /* Return the current point of the current subpath of `path'.  If there is
+   * no current point, then return CGPointZero. */
+
+  CGPoint getCurrentPoint () {
+    return CGPathGetCurrentPoint (self);
+  }
+
+  /* Return the bounding box of `path'.  The bounding box is the smallest
+   * rectangle completely enclosing all points in the path, including control
+   * points for Bezier and quadratic curves. If the path is empty, then
+   * return CGRectNull. */
+
+  CGRect getBoundingBox () {
+    return CGPathGetBoundingBox (self);
+  }
+
+  /* Return true if `point' is contained in `path'; false otherwise.  A point
+   * is contained in a path if it is inside the painted region when the path
+   * is filled; if `eoFill' is true, then the even-odd fill rule is used to
+   * evaluate the painted region of the path, otherwise, the winding-number
+   * fill rule is used. If `m' is non-NULL, then the point is transformed by
+   * `m' before determining whether the path contains it. */
+
+  bool containsPoint (const CGAffineTransform *m, CGPoint point, bool eoFill) {
+	return CGPathContainsPoint (self, m, point, eoFill);
+  }
+
+  /*** Path construction functions. ***/
+
+  /* Move the current point to `(x, y)' in `path' and begin a new subpath.
+   * If `m' is non-NULL, then transform `(x, y)' by `m' first. */
+
+  void moveToPoint (const CGAffineTransform *m, float x, float y) {
+    CGPathMoveToPoint (self, m, x, y);
+  }
+
+  /* Append a straight line segment from the current point to `(x, y)' in
+   * `path' and move the current point to `(x, y)'.  If `m' is non-NULL, then
+   * transform `(x, y)' by `m' first. */
+
+  void addLineToPoint (const CGAffineTransform *m, float x, float y) {
+    CGPathAddLineToPoint (self, m, x, y);
+  }
+
+  /* Append a quadratic curve from the current point to `(x, y)' with control
+   * point `(cpx, cpy)' in `path' and move the current point to `(x, y)'.  If
+   * `m' is non-NULL, then transform all points by `m' first. */
+
+  void addQuadCurveToPoint (const CGAffineTransform *m,
+			    float cpx, float cpy, float x, float y)
+  {
+    CGPathAddQuadCurveToPoint (self, m, cpx, cpy, x, y);
+  }
+
+  /* Append a cubic Bezier curve from the current point to `(x,y)' with
+   * control points `(cp1x, cp1y)' and `(cp2x, cp2y)' in `path' and move the
+   * current point to `(x, y)'. If `m' is non-NULL, then transform all points
+   * by `m' first. */
+
+  void addCurveToPoint (const CGAffineTransform *m, float cp1x, float cp1y,
+		        float cp2x, float cp2y, float x, float y)
+  {
+    CGPathAddCurveToPoint (self, m, cp1x, cp1y, cp2x, cp2y, x, y);
+  }
+
+  /* Append a line from the current point to the starting point of the
+   * current subpath of `path' and end the subpath. */
+
+  void closeSubpath () {
+    CGPathCloseSubpath (self);
+  }
+
+
+  /*** Path construction convenience functions. ***/
+
+  /* Add `rect' to `path'. If `m' is non-NULL, then first transform `rect' by
+   * `m' before adding it to `path'. */
+
+  void addRect (const CGAffineTransform *m, CGRect rect) {
+    CGPathAddRect (self, m, rect);
+  }
+
+  /* Add each rectangle specified by `rects', an array of `count' CGRects, to
+   * `path'. If `m' is non-NULL, then first transform each rectangle by `m'
+   * before adding it to `path'. */
+
+  void addRects (const CGAffineTransform *m,
+		 const CGRect rects[], size_t count)
+  {
+    CGPathAddRects (self, m, rects, count);
+  }
+
+  /* Move to the first element of `points', an array of `count' CGPoints, and
+   * append a line from each point to the next point in `points'.  If `m' is
+   * non-NULL, then first transform each point by `m'. */
+
+  void addLines (const CGAffineTransform *m,
+		 const CGPoint points[], size_t count)
+  {
+    CGPathAddLines (self, m, points, count);
+  }
+
+/* Add an ellipse (an oval) inside `rect' to `path'.  The ellipse is
+   * approximated by a sequence of Bezier curves.  The center of the ellipse
+   * is the midpoint of `rect'.  If `rect' is square, then the ellipse will
+   * be circular with radius equal to one-half the width (equivalently,
+   * one-half the height) of `rect'.  If `rect' is rectangular, then the
+   * major- and minor-axes will be the `width' and `height' of rect.  The
+   * ellipse forms a complete subpath of `path' --- that is, it begins with a
+   * "move to" and ends with a "close subpath" --- oriented in the clockwise
+   * direction.  If `m' is non-NULL, then the constructed Bezier curves
+   * representing the ellipse will be transformed by `m' before they are
+   * added to `path'. */
+
+  void addEllipseInRect (const CGAffineTransform *m, CGRect rect) {
+	CGPathAddEllipseInRect (self, m, rect);
+  }
+
+  /* Add an arc of a circle to `path', possibly preceded by a straight line
+   * segment. The arc is approximated by a sequence of cubic Bezier
+   * curves. `(x, y)' is the center of the arc; `radius' is its radius;
+   * `startAngle' is the angle to the first endpoint of the arc; `endAngle'
+   * is the angle to the second endpoint of the arc; and `clockwise' is true
+   * if the arc is to be drawn clockwise, false otherwise.  `startAngle' and
+   * `endAngle' are measured in radians.  If `m' is non-NULL, then the
+   * constructed Bezier curves representing the arc will be transformed by
+   * `m' before they are added to `path'. */
+
+  void addArc (const CGAffineTransform *m, float x, float y, float radius,
+	       float startAngle, float endAngle, bool clockwise)
+  {
+    CGPathAddArc (self, m, x, y, radius, startAngle, endAngle, clockwise);
+  }
+
+  /* Add an arc of a circle to `path', possibly preceded by a straight line
+   * segment.  The arc is approximated by a sequence of cubic Bezier curves.
+   * `radius' is the radius of the arc.  The resulting arc is tangent to the
+   * line from the current point of `path' to `(x1, y1)', and the line from
+   * `(x1, y1)' to `(x2, y2)'.  If `m' is non-NULL, then the constructed
+   * Bezier curves representing the arc will be transformed by `m' before
+   * they are added to `path'. */
+
+  void addArcToPoint (const CGAffineTransform *m, float x1, float y1,
+		      float x2, float y2, float radius)
+  {
+    CGPathAddArcToPoint (self, m, x1, y1, x2, y2, radius);
+  }
+
+  /* Add `path2' to `path1'. If `m' is non-NULL, then the points in `path2'
+  * will be transformed by `m' before they are added to `path1'.*/
+
+  void addPath (const CGAffineTransform *m, CGPathRef path2) {
+    CGPathAddPath (self, m, path2);
+  }
+}
+
+
+# CGColor
+
+/* Create a color in colorspace `colorspace' with color components
+ * (including alpha) specified by `components'.  `colorspace' may be any
+ * colorspace expect a pattern colorspace. */
+
+CG_EXTERN CGColorRef CGColorCreate(CGColorSpaceRef colorspace, const float components[5]);
+
+/* Create a color in colorspace `colorspace' with pattern `pattern' and
+ * components `components'.  `colorspace' must be a pattern colorspace. */
+
+CG_EXTERN CGColorRef CGColorCreateWithPattern(CGColorSpaceRef colorspace, CGPatternRef pattern, const float components[5]);
+
+
+class CGColor {
+
+  /* Return true if `color1' is equal to `color2'; false otherwise. */
+
+  bool equalToColor (CGColorRef color2) {
+    return CGColorEqualToColor (self, color2);
+  }
+
+  /* Return the number of color components (including alpha) associated with
+   * `color'. */
+
+  size_t getNumberOfComponents () {
+    return CGColorGetNumberOfComponents (self);
+  }
+
+  /* Return the color components associated with `color'. */
+
+  const float *getComponents () {
+    return CGColorGetComponents (self);
+  }
+
+  /* Return the alpha component associated with `color'. */
+
+  float getAlpha () {
+    return CGColorGetAlpha (self);
+  }
+
+  /* Return the colorspace associated with `color'. */
+
+  CGColorSpaceRef getColorSpace () {
+    return CGColorSpaceRetain (CGColorGetColorSpace (self));
+  }
+
+  /* Return the pattern associated with `color', if it's a color in a pattern
+   * colorspace; NULL otherwise. */
+
+  CGPatternRef getPattern () {
+    return CGPatternRetain (CGColorGetPattern (self));
+  }
+}
+
+
+# CGColorSpace
+
+/* Use "kCGColorSpaceGenericGray" instead. */
+#define kCGColorSpaceUserGray "kCGColorSpaceUserGray"
+/* Use "kCGColorSpaceGenericRGB" instead. */
+#define kCGColorSpaceUserRGB  "kCGColorSpaceUserRGB"
+/* Use "kCGColorSpaceGenericCMYK" instead. */
+#define kCGColorSpaceUserCMYK "kCGColorSpaceUserCMYK"
+
+#define kCGColorSpaceGenericGray "kCGColorSpaceGenericGray"
+#define kCGColorSpaceGenericRGB  "kCGColorSpaceGenericRGB"
+#define kCGColorSpaceGenericCMYK "kCGColorSpaceGenericCMYK"
+
+/** Device-dependent color spaces.  **/
+
+/* Create a DeviceGray colorspace. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateDeviceGray(void);
+
+/* Create a DeviceRGB colorspace. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateDeviceRGB(void);
+
+/* Create a DeviceCMYK colorspace. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateDeviceCMYK(void);
+
+/** Device-independent color spaces. **/
+
+/* Create a calibrated gray colorspace.  `whitePoint' is an array of 3
+ * numbers specifying the tristimulus value, in the CIE 1931 XYZ-space, of
+ * the diffuse white point.  `blackPoint' is an array of 3 numbers
+ * specifying the tristimulus value, in CIE 1931 XYZ-space, of the diffuse
+ * black point. `gamma' defines the gamma for the gray component. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateCalibratedGray(const float whitePoint[3], const float blackPoint[3], float gamma);
+
+/* Create a calibrated RGB colorspace.  `whitePoint' is an array of 3
+ * numbers specifying the tristimulus value, in the CIE 1931 XYZ-space, of
+ * the diffuse white point.  `blackPoint' is an array of 3 numbers
+ * specifying the tristimulus value, in CIE 1931 XYZ-space, of the diffuse
+ * black point. `gamma' is an array of 3 numbers specifying the gamma for
+ * the red, green, and blue components of the color space. `matrix' is an
+ * array of 9 numbers specifying the linear interpretation of the
+ * gamma-modified RGB values of the colorspace with respect to the final
+ * XYZ representation. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateCalibratedRGB(const float whitePoint[3], const float blackPoint[3], const float gamma[3], const float matrix[9]);
+
+/* Create an L*a*b* colorspace.  `whitePoint' is an array of 3 numbers
+ * specifying the tristimulus value, in the CIE 1931 XYZ-space, of the
+ * diffuse white point.  `blackPoint' is an array of 3 numbers specifying
+ * the tristimulus value, in CIE 1931 XYZ-space, of the diffuse black
+ * point. `range' is an array of four numbers specifying the range of valid
+ * values for the a* and b* components of the color space. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateLab(const float whitePoint[3], const float blackPoint[3], const float range[4]);
+
+/** Special colorspaces. **/
+
+/* Create an indexed colorspace.  A sample value in an indexed color space
+ * is treated as an index into the color table of the color space.  `base'
+ * specifies the base color space in which the values in the color table
+ * are to be interpreted. `lastIndex' is an integer which specifies the
+ * maximum valid index value; it must be less than or equal to 255.
+ * `colorTable' is an array of m * (lastIndex + 1) bytes, where m is
+ * the number of color components in the base color space.  Each byte
+ * is an unsigned integer in the range 0 to 255 that is scaled to the
+ * range of the corresponding color component in the base color space. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateIndexed(CGColorSpaceRef baseSpace, size_t lastIndex, const unsigned char *colorTable);
+
+/* Create a pattern colorspace. `baseSpace' is the underlying colorspace of
+ * the pattern colorspace.  For colored patterns, `baseSpace' should be
+ * NULL; for uncolored patterns, `baseSpace' specifies the colorspace of
+ * colors which will be painted through the pattern. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreatePattern(CGColorSpaceRef baseSpace);
+
+/* Create a CGColorSpace using `platformColorSpaceReference', a pointer to
+ * a platform-specific color space reference. For MacOS X,
+ * `platformColorSpaceReference' should be a pointer to a CMProfileRef. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateWithPlatformColorSpace(void *platformColorSpaceReference);
+
+/* Create a colorspace using `name' as the identifier for the colorspace. */
+
+CG_EXTERN CGColorSpaceRef CGColorSpaceCreateWithName(CFStringRef name);
+
+
+class CGColorSpace {
+
+  /** Colorspace information. **/
+
+  /* Return the number of color components in the colorspace `cs'. */
+
+  size_t getNumberOfComponents () {
+    return CGColorSpaceGetNumberOfComponents (self);
+  }
+}
+
+
+# CGContext
+
+class CGContext {
+
+  void finish () {
+    /* Finalize the context, emitting any pending output. Any future
+     * calls to the context object produce undefined behavior. */
+  }
+
+  /** Graphics state functions. **/
+
+  /* Push a copy of the current graphics state onto the graphics state
+   * stack. Note that the path is not considered part of the gstate, and is
+   * not saved. */
+
+  void saveGState () {
+    CGContextSaveGState (self);
+  }
+
+  /* Restore the current graphics state from the one on the top of the
+   * graphics state stack, popping the graphics state stack in the
+   * process. */
+
+  void restoreGState () {
+    CGContextRestoreGState (self);
+  }
+
+
+  /** Coordinate space transformations. **/
+
+  /* Scale the current graphics state's transformation matrix (the CTM) by
+   * `(sx, sy)'. */
+
+  void scaleCTM (float sx, float sy) {
+    CGContextScaleCTM (self, sx, sy);
+  }
+
+  /* Translate the current graphics state's transformation matrix (the CTM)
+   * by `(tx, ty)'. */
+
+  void translateCTM (float tx, float ty) {
+    CGContextTranslateCTM (self, tx, ty);
+  }
+
+  /* Rotate the current graphics state's transformation matrix (the CTM) by
+   * `angle' radians. */
+
+  void rotateCTM (float angle) {
+    CGContextRotateCTM (self, angle);
+  }
+
+  /* Concatenate the current graphics state's transformation matrix (the CTM)
+   * with the affine transform `transform'. */
+
+  void concatCTM (CGAffineTransform transform) {
+    CGContextConcatCTM (self, transform);
+  }
+
+  /* Return the current graphics state's transformation matrix. */
+
+  CGAffineTransform getCTM () {
+    return CGContextGetCTM (self);
+  }
+
+
+  /** Drawing attribute functions. **/
+
+  /* Set the line width in the current graphics state to `width'. */
+
+  void setLineWidth (float width) {
+    CGContextSetLineWidth (self, width);
+  }
+
+  /* Set the line cap in the current graphics state to `cap'. */
+
+  void setLineCap (CGLineCap cap) {
+    CGContextSetLineCap (self, cap);
+  }
+
+  /* Set the line join in the current graphics state to `join'. */
+
+  void setLineJoin (CGLineJoin join) {
+    CGContextSetLineJoin (self, join);
+  }
+
+  /* Set the miter limit in the current graphics state to `limit'. */
+
+  void setMiterLimit (float limit) {
+    CGContextSetMiterLimit (self, limit);
+  }
+
+  /* Set the line dash patttern in the current graphics state. */
+
+  void setLineDash (float phase, const float *lengths, size_t count) {
+    CGContextSetLineDash (self, phase, lengths, count);
+  }
+
+  /* Set the path flatness parameter in the current graphics state to
+   * `flatness'. */
+
+  void setFlatness (float flatness) {
+    CGContextSetFlatness (self, flatness);
+  }
+
+  /* Set the alpha value in the current graphics state to `alpha'. */
+
+  void setAlpha (float alpha) {
+    CGContextSetAlpha (self, alpha);
+  }
+
+  /* Set the blend mode of `context' to `mode'. */
+
+  void setBlendMode (CGBlendMode mode) {
+	CGContextSetBlendMode(self, mode);
+  }
+
+  /** Path construction functions. **/
+
+  /* Note that a context has a single path in use at any time: a path is not
+   * part of the graphics state. */
+
+  /* Begin a new path.  The old path is discarded. */
+
+  void beginPath () {
+    CGContextBeginPath (self);
+  }
+
+  /* Start a new subpath at point `(x, y)' in the context's path. */
+
+  void moveToPoint (float x, float y) {
+    CGContextMoveToPoint (self, x, y);
+  }
+
+  /* Append a straight line segment from the current point to `(x, y)'. */
+
+  void addLineToPoint (float x, float y) {
+    CGContextAddLineToPoint (self, x, y);
+  }
+
+  /* Append a cubic Bezier curve from the current point to `(x,y)', with
+   * control points `(cp1x, cp1y)' and `(cp2x, cp2y)'. */
+
+  void addCurveToPoint (float cp1x, float cp1y,
+       		        float cp2x, float cp2y,
+		        float x, float y)
+  {
+    CGContextAddCurveToPoint (self, cp1x, cp1y, cp2x, cp2y, x, y);
+  }
+
+  /* Append a quadratic curve from the current point to `(x, y)', with
+   * control point `(cpx, cpy)'. */
+
+  void addQuadCurveToPoint (float cpx, float cpy, float x, float y) {
+    CGContextAddQuadCurveToPoint (self, cpx, cpy, x, y);
+  }
+
+  /* Close the current subpath of the context's path. */
+
+  void closePath () {
+    CGContextClosePath (self);
+  }
+
+
+  /** Path construction convenience functions. **/
+
+  /* Add a single rect to the context's path. */
+
+  void addRect (CGRect rect) {
+    CGContextAddRect (self, rect);
+  }
+
+  /* Add a set of rects to the context's path. */
+
+  void addRects (const CGRect rects[], size_t count) {
+    CGContextAddRects (self, rects, count);
+  }
+
+  /* Add a set of lines to the context's path. */
+
+  void addLines (const CGPoint points[], size_t count) {
+    CGContextAddLines (self, points, count);
+  }
+
+  /* Add an ellipse inside `rect' to the current path of `context'.  See the
+   * function `CGPathAddEllipseInRect' for more information on how the path
+   * for the ellipse is constructed. */
+
+  void addEllipseInRect (CGRect rect) {
+	CGContextAddEllipseInRect (self, rect);
+  }
+
+  /* Add an arc of a circle to the context's path, possibly preceded by a
+   * straight line segment.  `(x, y)' is the center of the arc; `radius' is
+   * its radius; `startAngle' is the angle to the first endpoint of the arc;
+   * `endAngle' is the angle to the second endpoint of the arc; and
+   * `clockwise' is 1 if the arc is to be drawn clockwise, 0 otherwise.
+   * `startAngle' and `endAngle' are measured in radians. */
+
+  void addArc (float x, float y, float radius,
+	       float startAngle, float endAngle, int clockwise)
+  {
+    CGContextAddArc (self, x, y, radius, startAngle, endAngle, clockwise);
+  }
+
+  /* Add an arc of a circle to the context's path, possibly preceded by a
+   * straight line segment.  `radius' is the radius of the arc.  The arc is
+   * tangent to the line from the current point to `(x1, y1)', and the line
+   * from `(x1, y1)' to `(x2, y2)'. */
+
+  void addArcToPoint (float x1, float y1, float x2, float y2, float radius) {
+    CGContextAddArcToPoint (self, x1, y1, x2, y2, radius);
+  }
+
+  /* Add `path' to the path of context.  The points in `path' are transformed
+   * by the CTM of context before they are added. */
+
+  void addPath (CGPathRef path) {
+    CGContextAddPath (self, path);
+  }
+
+  /* Replace the path in context with the stroked version of the path, using
+   * the parameters of `context' to calculate the stroked path.  The
+   * resulting path is created such that filling it with the appropriate
+   * color will produce the same results as stroking the original path. You
+   * can use this path in the same way you can use the path of any context;
+   * for example, you can clip to the stroked version of a path by calling
+   * this function followed by a call to "CGContextClipPath". */
+
+  void replacePathWithStrokedPath () {
+	return CGContextReplacePathWithStrokedPath (self);
+  }
+
+  /** Path information functions. **/
+
+  /* Return 1 if the context's path contains no elements, 0 otherwise. */
+
+  bool isPathEmpty () {
+    return CGContextIsPathEmpty (self);
+  }
+
+  /* Return the current point of the current subpath of the context's
+   * path. */
+
+  CGPoint getPathCurrentPoint () {
+    return CGContextGetPathCurrentPoint (self);
+  }
+
+  /* Return the bounding box of the context's path.  The bounding box is the
+   * smallest rectangle completely enclosing all points in the path,
+   * including control points for Bezier and quadratic curves. */
+
+  CGRect getPathBoundingBox () {
+    return CGContextGetPathBoundingBox (self);
+  }
+
+  /* Return true if `point' is contained in the current path of `context'.  A
+   * point is contained within a context's path if it is inside the painted
+   * region when the path is stroked or filled with opaque colors using the
+   * path drawing mode `mode'.  `point' is specified is user space. */
+
+  bool pathContainsPoint(CGPoint point, CGPathDrawingMode mode) {
+	return CGContextPathContainsPoint (self, point, mode);
+  }
+
+  /** Path drawing functions. **/
+
+  /* Draw the context's path using drawing mode `mode'. */
+
+  void drawPath (CGPathDrawingMode mode) {
+    CGContextDrawPath (self, mode);
+  }
+
+
+  /** Path drawing convenience functions. **/
+
+  /* Fill the context's path using the winding-number fill rule.  Any open
+   * subpath of the path is implicitly closed. */
+
+  void fillPath () {
+    CGContextFillPath (self);
+  }
+
+  /* Fill the context's path using the even-odd fill rule.  Any open subpath
+   * of the path is implicitly closed. */
+
+  void eoFillPath () {
+    CGContextEOFillPath (self);
+  }
+
+  /* Stroke the context's path. */
+
+  void strokePath () {
+    CGContextStrokePath (self);
+  }
+
+  /* Fill `rect' with the current fill color. */
+
+  void fillRect (CGRect rect) {
+    CGContextFillRect (self, rect);
+  }
+
+  /* Fill `rects', an array of `count' CGRects, with the current fill
+   * color. */
+
+  void fillRects (const CGRect rects[], size_t count) {
+    CGContextFillRects (self, rects, count);
+  }
+
+  /* Stroke `rect' with the current stroke color and the current linewidth. */
+
+  void strokeRect (CGRect rect) {
+    CGContextStrokeRect (self, rect);
+  }
+
+  /* Stroke `rect' with the current stroke color, using `width' as the the
+   * line width. */
+
+  void strokeRectWithWidth (CGRect rect, float width) {
+    CGContextStrokeRectWithWidth (self, rect, width);
+  }
+
+  /* Clear `rect' (that is, set the region within the rect to
+   * transparent). */
+
+  void clearRect (CGRect rect) {
+    CGContextClearRect (self, rect);
+  }
+
+  /* Fill an ellipse (an oval) inside `rect'. */
+
+  void fillEllipseInRect (CGRect rect)
+  {
+	CGContextFillEllipseInRect (self, rect);
+  }
+  
+  /* Stroke an ellipse (an oval) inside `rect'. */
+
+  void strokeEllipseInRect (CGRect rect)
+  {
+	CGContextStrokeEllipseInRect (self, rect);
+  }
+
+  /* Stroke a sequence of line segments one after another in `context'.  The
+   * line segments are specified by `points', an array of `count' CGPoints.
+   * This function is equivalent to
+   *   CGContextBeginPath(context);
+   *   for (k = 0; k < count; k += 2) {
+   *       CGContextMoveToPoint(context, s[k].x, s[k].y);
+   *       CGContextAddLineToPoint(context, s[k+1].x, s[k+1].y);
+   *   }
+   *   CGContextStrokePath(context);
+   */
+
+  void strokeLineSegments (const CGPoint points[], size_t count)
+  {
+	CGContextStrokeLineSegments (self, points, count);
+  }
+
+  /** Clipping functions. **/
+
+  /* Intersect the context's path with the current clip path and use the
+   * resulting path as the clip path for subsequent rendering operations.
+   * Use the winding-number fill rule for deciding what's inside the path. */
+
+  void clip () {
+    CGContextClip (self);
+  }
+
+  /* Intersect the context's path with the current clip path and use the
+   * resulting path as the clip path for subsequent rendering operations.
+   * Use the even-odd fill rule for deciding what's inside the path. */
+
+  void eoClip () {
+    CGContextEOClip (self);
+  }
+
+  /* Add `mask' transformed to `rect' to the clipping area of `context'.  The
+   * mask, which may be either an image mask or an image, is mapped into the
+   * specified rectangle and intersected with the current clipping area of
+   * the context.
+   *
+   * If `mask' is an image mask, then it clips in a manner identical to the
+   * behavior if it were used with "CGContextDrawImage": it indicates an area
+   * to be masked out (left unchanged) when drawing.  The source samples of
+   * the image mask determine which points of the clipping area are changed,
+   * acting as an "inverse alpha": if the value of a source sample in the
+   * image mask is S, then the corresponding point in the current clipping
+   * area will be multiplied by an alpha of (1-S).  (For example, if S is 1,
+   * then the point in the clipping area becomes clear, while if S is 0, the
+   * point in the clipping area is unchanged.
+   *
+   * If `mask' is an image, then it serves as alpha mask and is blended with
+   * the current clipping area.  The source samples of mask determine which
+   * points of the clipping area are changed: if the value of the source
+   * sample in mask is S, then the corresponding point in the current
+   * clipping area will be multiplied by an alpha of S.  (For example, if S
+   * is 0, then the point in the clipping area becomes clear, while if S is
+   * 1, the point in the clipping area is unchanged.
+   *
+   * If `mask' is an image, then it must be in the DeviceGray color space,
+   * may not have alpha, and may not be masked by an image mask or masking
+   * color. */
+
+  void clipToMask (CGRect rect, CGImageRef mask) {
+	CGContextClipToMask (self, rect, mask);
+  }
+
+  /** Clipping convenience functions. **/
+
+  /* Intersect the current clipping path with `rect'.  Note that this
+   * function resets the context's path to the empty path. */
+
+  void clipToRect (CGRect rect) {
+    CGContextClipToRect (self, rect);
+  }
+
+  /* Intersect the current clipping path with the clipping region formed by
+   * creating a path consisting of all rects in `rects'.  Note that this
+   * function resets the context's path to the empty path. */
+
+  void clipToRects (const CGRect rects[], size_t count) {
+    CGContextClipToRects (self, rects, count);
+  }
+
+
+  /** Primitive color functions. **/
+
+  /* Set the current fill color in the context `c' to `color'. */
+
+  void setFillColorWithColor(CGColorRef color) {
+    CGContextSetFillColorWithColor (self, color);
+  }
+
+  /* Set the current stroke color in the context `c' to `color'. */
+
+  void setStrokeColorWithColor(CGColorRef color); {
+    CGContextSetStrokeColorWithColor (self, color);
+  }
+
+
+  /** Colorspace functions. **/
+
+  /* Set the current fill colorspace in the context `c' to `colorspace'.  As
+   * a side-effect, set the fill color to a default value appropriate for the
+   * colorspace. */
+
+  void setFillColorSpace (CGColorSpaceRef colorspace) {
+    CGContextSetFillColorSpace (self, colorspace);
+  }
+
+  /* Set the current stroke colorspace in the context `c' to `colorspace'.
+   * As a side-effect, set the stroke color to a default value appropriate
+   * for the colorspace. */
+
+  void setStrokeColorSpace (CGColorSpaceRef colorspace) {
+    CGContextSetStrokeColorSpace (self, colorspace);
+  }
+
+
+  /** Color functions. **/
+
+  /* Set the components of the current fill color in the context `c' to the
+   * values specifed by `components'.  The number of elements in `components'
+   * must be one greater than the number of components in the current fill
+   * colorspace (N color components + 1 alpha component).  The current fill
+   * colorspace must not be a pattern colorspace. */
+
+  void setFillColor (const float components[5]) {
+    CGContextSetFillColor (self, components);
+  }
+
+  /* Set the components of the current stroke color in the context `c' to the
+   * values specifed by `components'.  The number of elements in `components'
+   * must be one greater than the number of components in the current stroke
+   * colorspace (N color components + 1 alpha component).  The current stroke
+   * colorspace must not be a pattern colorspace. */
+
+  void setStrokeColor (const float components[5]) {
+    CGContextSetStrokeColor (self, components);
+  }
+
+
+
+  /** Pattern functions. **/
+
+  /* Set the components of the current fill color in the context `c' to the
+   * values specifed by `components', and set the current fill pattern to
+   * `pattern'.  The number of elements in `components' must be one greater
+   * than the number of components in the current fill colorspace (N color
+   * components + 1 alpha component).  The current fill colorspace must be a
+   * pattern colorspace. */
+
+  void setFillPattern  (CGPatternRef pattern, const float components[5]) {
+    CGContextSetFillPattern (self, pattern, components);
+  }
+
+  /* Set the components of the current stroke color in the context `c' to the
+   * values specifed by `components', and set the current stroke pattern to
+   * `pattern'.  The number of elements in `components' must be one greater
+   * than the number of components in the current stroke colorspace (N color
+   * components + 1 alpha component).  The current stroke colorspace must be
+   * a pattern colorspace. */
+
+  void setStrokePattern  (CGPatternRef pattern, const float components[5]) {
+    CGContextSetStrokePattern (self, pattern, components);
+  }
+
+  /* Set the pattern phase of context `c' to `phase'. */
+
+  void setPatternPhase (CGSize phase) {
+    CGContextSetPatternPhase (self, phase);
+  }
+
+
+  /** Color convenience functions. **/
+
+  /* Set the current fill colorspace in the context `c' to `DeviceGray' and
+   * set the components of the current fill color to `(gray, alpha)'. */
+
+  void setGrayFillColor (float gray, float alpha) {
+    CGContextSetGrayFillColor (self, gray, alpha);
+  }
+
+  /* Set the current stroke colorspace in the context `c' to `DeviceGray' and
+   * set the components of the current stroke color to `(gray, alpha)'. */
+
+  void setGrayStrokeColor (float gray, float alpha) {
+    CGContextSetGrayStrokeColor (self, gray, alpha);
+  }
+
+  /* Set the current fill colorspace in the context `c' to `DeviceRGB' and
+   * set the components of the current fill color to `(red, green, blue,
+   * alpha)'. */
+
+  void setRGBFillColor (float red, float green, float blue, float alpha) {
+    CGContextSetRGBFillColor (self, red, green, blue, alpha);
+  }
+
+  /* Set the current stroke colorspace in the context `c' to `DeviceRGB' and
+   * set the components of the current stroke color to `(red, green, blue,
+   * alpha)'. */
+
+  void setRGBStrokeColor (float red, float green, float blue, float alpha) {
+    CGContextSetRGBStrokeColor (self, red, green, blue, alpha);
+  }
+
+  /* Set the current fill colorspace in the context `c' to `DeviceCMYK' and
+   * set the components of the current fill color to `(cyan, magenta, yellow,
+   * black, alpha)'. */
+
+  void setCMYKFillColor (float cyan, float magenta,
+			 float yellow, float black, float alpha)
+  {
+    CGContextSetCMYKFillColor (self, cyan, magenta, yellow, black, alpha);
+  }
+
+  /* Set the current stroke colorspace in the context `c' to `DeviceCMYK' and
+   * set the components of the current stroke color to `(cyan, magenta,
+   * yellow, black, alpha)'. */
+
+  void setCMYKStrokeColor (float cyan, float magenta,
+			   float yellow, float black, float alpha)
+  {
+    CGContextSetCMYKStrokeColor (self, cyan, magenta, yellow, black, alpha);
+  }
+
+
+  /** Rendering intent. **/
+
+  /* Set the current rendering intent in the context `c' to `intent'. */
+
+  void setRenderingIntent (CGColorRenderingIntent intent) {
+    CGContextSetRenderingIntent (self, intent);
+  }
+
+
+  /** Image functions. **/
+
+  /* Draw `image' in the rectangular area specified by `rect' in the context
+   * `c'.  The image is scaled, if necessary, to fit into `rect'. */
+
+  void drawImage (CGRect rect, CGImageRef image) {
+    CGContextDrawImage (self, rect, image);
+  }
+
+  /* Return the interpolation quality for image rendering of the context `c'.
+   * The interpolation quality is a gstate-parameter which controls the level
+   * of interpolation performed when an image is interpolated (for example,
+   * when scaling the image). Note that it is merely a hint to the context:
+   * not all contexts support all interpolation quality levels. */
+
+  CGInterpolationQuality getInterpolationQuality () {
+    return CGContextGetInterpolationQuality (self);
+  }
+
+  /* Set the interpolation quality of the context `c' to `quality'. */
+
+  void setInterpolationQuality (CGInterpolationQuality quality) {
+    CGContextSetInterpolationQuality (self, quality);
+  }
+
+
+  /** Shadow support. **/
+
+  /* Set the shadow parameters in `context'.  `offset' specifies a
+   * translation in base-space; `blur' is a non-negative number specifying
+   * the amount of blur; `color' specifies the color of the shadow, which may
+   * contain a non-opaque alpha value.  If `color' is NULL, it's equivalent
+   * to specifying a fully transparent color.  The shadow is a gstate
+   * parameter. After a shadow is specified, all objects drawn subsequently
+   * will be shadowed.  To turn off shadowing, set the shadow color to a
+   * fully transparent color (or pass NULL as the color), or use the standard
+   * gsave/grestore mechanism. */
+
+  void setShadowWithColor (CGSize offset, float blur, CGColorRef color) {
+    CGContextSetShadowWithColor (self, offset, blur, color);
+  }
+
+  /* Equivalent to calling
+   *   CGContextSetShadowWithColor(context, offset, blur, color)
+   * where color is black with 1/3 alpha (i.e., RGBA = {0, 0, 0, 1.0/3.0}) in
+   * the DeviceRGB colorspace. */
+
+  void setShadow (CGSize offset, float blur) {
+    CGContextSetShadow (self, offset, blur);
+  }
+
+
+  /** Shading functions. **/
+
+  /* Fill the current clipping region of `c' with `shading'. */
+
+  void drawShading (CGShadingRef shading) {
+    CGContextDrawShading (self, shading);
+  }
+
+
+  /** Text functions. **/
+
+  /* Set the current character spacing in the context `c' to `spacing'.  The
+   * character spacing is added to the displacement between the origin of one
+   * character and the origin of the next. */
+
+  void setCharacterSpacing (float spacing) {
+    CGContextSetCharacterSpacing (self, spacing);
+  }
+
+  /* Set the user-space point at which text will be drawn in the context `c'
+   * to `(x, y)'. */
+
+  void setTextPosition (float x, float y) {
+    CGContextSetTextPosition (self, x, y);
+  }
+
+  /* Return the user-space point at which text will be drawn in the context
+   * `c'. */
+
+  CGPoint getTextPosition () {
+    return CGContextGetTextPosition (self);
+  }
+
+  /* Set the text matrix in the context `c' to `t'. */
+
+  void setTextMatrix (CGAffineTransform t) {
+    CGContextSetTextMatrix (self, t);
+  }
+
+  /* Return the text matrix in the context `c'. */
+
+  CGAffineTransform getTextMatrix () {
+    return CGContextGetTextMatrix (self);
+  }
+
+  /* Set the current text drawing mode in the context `c' to `mode'. */
+
+  void setTextDrawingMode (CGTextDrawingMode mode) {
+    CGContextSetTextDrawingMode (self, mode);
+  }
+
+  /* Set the current font size in the context `c' to `size'. */
+
+  void setFontSize (float size) {
+    CGContextSetFontSize (self, size);
+  }
+
+  /* Attempts to find the font named `name' for the context `c'.  If
+   * successful, scales it to `size' units in text space.  `textEncoding'
+   * specifies how to translate from bytes to glyphs. */
+
+  void selectFont (const char *name, float size, CGTextEncoding encoding) {
+    CGContextSelectFont (self, name, size, encoding);
+  }
+
+  /* Draw `string', a string of `length' bytes, at the point specified by the
+   * text matrix in the context `c'.  Each byte of the string is mapped
+   * through the encoding vector of the current font to obtain the glyph to
+   * display. */
+
+  void showText (const char *string, size_t length) {
+    CGContextShowText (self, string, length);
+  }
+
+  /* Draw the glyphs pointed to by `g', an array of `count' glyphs, at the
+   * point specified by the text matrix in the context `c'. */
+
+  void showGlyphs (const CGGlyph g[], size_t count) {
+    CGContextShowGlyphs (self, g, count);
+  }
+
+
+  /** Text convenience functions. **/
+
+  /* Draw `string', a string of `length' bytes, at the point `(x, y)',
+   * specified in user space, in the context `c'.  Each byte of the string is
+   * mapped through the encoding vector of the current font to obtain the
+   * glyph to display. */
+
+  void showTextAtPoint (float x, float y, const char *string, size_t length) {
+    CGContextShowTextAtPoint (self, x, y, string, length);
+  }
+
+  /* Display the glyphs pointed to by `glyphs', an array of `count' glyphs,
+   * at at the point `(x, y)', specified in user space, in the context
+   * `c'. */
+
+  void showGlyphsAtPoint (float x, float y, const CGGlyph g[], size_t count) {
+    CGContextShowGlyphsAtPoint (self, x, y, g, count);
+  }
+
+
+  /** Text extra convenience functions. Uses the font size from the
+      context gstate when drawing (when greater than zero). **/
+
+  CGRect drawPlainTextInRect (CGDataProviderRef provider, CGRect rect,
+			      float fontSize = 0)
+  {
+    return CGContextDrawPlainTextInRect (self, provider, rect, fontSize);
+  }
+
+  CGRect drawRTFTextInRect (CGDataProviderRef provider, CGRect rect,
+			    float fontSize = 0)
+  {
+    return CGContextDrawRTFTextInRect (self, provider, rect, fontSize);
+  }
+  
+  CGRect drawDocFormatTextInRect (CGDataProviderRef provider, CGRect rect,
+			    float fontSize = 0)
+  {
+    return CGContextDrawDocFormatTextInRect (self, provider, rect, fontSize);
+  }
+
+  CGRect drawHTMLTextInRect (CGDataProviderRef provider, CGRect rect,
+			     float fontSize = 0)
+  {
+    return CGContextDrawHTMLTextInRect (self, provider, rect, fontSize);
+  }
+
+
+  /** PDF document functions. **/
+
+  /* Draw `page' in `document' in the rectangular area specified by `rect' in
+   * the context `c'.  The media box of the page is scaled, if necessary, to
+   * fit into `rect'. */
+
+  void drawPDFDocument (CGRect rect, CGPDFDocumentRef document, int page) {
+    CGContextDrawPDFDocument (self, rect, document, page);
+  }
+
+
+  /** Page functions. **/
+
+  /* Begin a new page. */
+
+  void beginPage (const CGRect *mediaBox) {
+    CGContextBeginPage (self, mediaBox);
+  }
+
+  /* End the current page. */
+
+  void endPage () {
+    CGContextEndPage (self);
+  }
+
+
+  /** Context functions. **/
+
+  /* Flush all drawing to the destination. */
+
+  void flush () {
+    CGContextFlush (self);
+  }
+
+  /* Synchronized drawing. */
+
+  void synchronize () {
+    CGContextSynchronize (self);
+  }
+
+
+  /** Antialiasing functions. **/
+
+  /* Turn on antialiasing if `shouldAntialias' is true; turn it off
+   * otherwise.  This parameter is part of the graphics state. */
+
+  void setShouldAntialias (bool should) {
+    CGContextSetShouldAntialias (self, should);
+  }
+
+  /* Allow antialiasing in context `c' if `allowsAntialiasing' is true; don't
+   * allow it otherwise. This parameter is not part of the graphics state. A
+   * context will perform antialiasing if both `allowsAntialiasing' and the
+   * graphics state parameter `shouldAntialias' are true. */
+
+  void setAllowsAntialiasing (bool allowsAntialiasing) {
+	CGContextSetAllowsAntialiasing (self, allowsAntialiasing);
+  }
+
+  /** Font smoothing functions. **/
+
+  /* Turn on font smoothing if `shouldSmoothFonts' is true; turn it off
+   * otherwise.  This parameter is part of the graphics state. */
+
+  void setShouldSmoothFonts (bool should) {
+    CGContextSetShouldSmoothFonts (self, should);
+  }
+
+
+  /** Transparency layer support. **/
+
+  /* Begin a transparency layer.  All subsequent drawing operations until a
+   * corresponding CGContextEndTransparencyLayer are composited into a fully
+   * transparent backdrop (which is treated as a separate destination buffer
+   * from the context); after a call to CGContextEndTransparencyLayer, the
+   * result is composited into the context using the global alpha and shadow
+   * state of the context.  This operation respects the clipping region of
+   * the context.  After a call to this function, all of the parameters in
+   * the graphics state remain unchanged with the exception of the following:
+   *   The global alpha is set to 1.
+   *   The shadow is turned off.
+   * Ending the transparency layer restores these parameters to the values
+   * they had before CGContextBeginTransparencyLayer was called.
+   * Transparency layers may be nested. */
+
+  void beginTransparencyLayer (CFDictionaryRef auxiliaryInfo = NULL) {
+    CGContextBeginTransparencyLayer (self, auxiliaryInfo);
+  }
+
+  /* End a tranparency layer. */
+
+  void endTransparencyLayer () {
+    CGContextEndTransparencyLayer (self);
+  }
+  
+  /* Return the affine transform mapping the user space (abstract
+   * coordinates) of `context' to device space (pixels). */
+
+ CGAffineTransform getUserSpaceToDeviceSpaceTransform () {
+	return CGContextGetUserSpaceToDeviceSpaceTransform (self);
+ }
+
+  /* Transform `point' from the user space of `context' to device space. */
+
+  CGPoint convertPointToDeviceSpace (CGPoint point) {
+	return CGContextConvertPointToDeviceSpace (self, point);
+  }
+
+  /* Transform `point' from device space to the user space of `context'. */
+
+  CGPoint convertPointToUserSpace (CGPoint point) {
+	return CGContextConvertPointToUserSpace (self, point);
+  }
+  
+  /* Transform `size' from the user space of `context' to device space. */
+
+  CGSize convertSizeToDeviceSpace (CGSize size) {
+	return CGContextConvertSizeToDeviceSpace (self, size);
+  }
+
+  /* Transform `size' from device space to the user space of `context'. */
+
+  CGSize convertSizeToUserSpace (CGSize size) {
+	return CGContextConvertSizeToUserSpace (self, size);
+  }
+  
+  /* Transform `rect' from the user space of `context' to device space. Since
+   * affine transforms do not preserve rectangles in general, this function
+   * returns the smallest rectangle which contains the transformed corner
+   * points of `rect'. */
+
+  CGRect CGContextConvertRectToDeviceSpace (CGRect rect) {
+	return CGContextConvertRectToDeviceSpace (self, rect);
+  }
+
+  /* Transform `rect' from device space to the user space of `context'. Since
+   * affine transforms do not preserve rectangles in general, this function
+   * returns the smallest rectangle which contains the transformed corner
+   * points of `rect'. */
+
+  CGRect convertRectToUserSpace (CGRect rect) {
+	return CGContextConvertRectToUserSpace (self, rect);
+  }
+
+}
+
+
+/* Create an 'auxiliaryInfo' dictionary from the XML file 'path'. This
+ * dictionary may be used when creating drawing contexts.
+ */
+
+%newobject CGContextFilterCreateDictionary;
+CG_EXTERN CFDictionaryRef CGContextFilterCreateDictionary (const char *path);
+
+
+/** Convenience functions for measuring text. **/
+
+CG_EXTERN CGRect CGContextMeasurePlainTextInRect (CGDataProviderRef provider, CGRect rect, float fontSize = 0);
+
+CG_EXTERN CGRect CGContextMeasureRTFTextInRect (CGDataProviderRef provider, CGRect rect, float fontSize = 0);
+
+CG_EXTERN CGRect CGContextMeasureDocFormatTextInRect (CGDataProviderRef provider, CGRect rect, float fontSize = 0);
+
+CG_EXTERN CGRect CGContextMeasureHTMLTextInRect (CGDataProviderRef provider, CGRect rect, float fontSize = 0);
+
+
+# CGPattern
+
+/* Create and return a pointer to an opaque object representing a pattern
+ * being defined. */
+
+CG_EXTERN void *CGPatternBegin (void);
+
+/* Given a handle returned by CGPatternBegin, returns a context that can
+ * be used to define the contents of the pattern cell. */
+
+CG_EXTERN CGContextRef CGPatternGetContext (void *handle);
+
+/* Create a pattern. The handle will be deallocated. */
+
+CG_EXTERN CGPatternRef CGPatternEnd (void *handle, CGRect bounds, CGAffineTransform matrix, float xStep, float yStep, CGPatternTiling tiling, bool isColored);
+
+
+# CGBitmapContext
+
+/* Create a bitmap context.  The context draws into a bitmap which is
+ * `width' pixels wide and `height' pixels high.  The number of components
+ * for each pixel is specified by `colorspace', which also may specify a
+ * destination color profile. The number of bits for each component of a
+ * pixel is specified by `bitsPerComponent', which must be 1, 2, 4, or 8.
+ * Each row of the bitmap consists of `bytesPerRow' bytes, which must be at
+ * least `(width * bitsPerComponent * number of components + 7)/8' bytes.
+ * `data' points a block of memory at least `bytesPerRow * height' bytes.
+ * `alphaInfo' specifies whether the bitmap should contain an alpha
+ * channel, and how it's to be generated. */
+
+CG_EXTERN CGContextRef CGBitmapContextCreateWithColor (size_t width, size_t height, CGColorSpaceRef colorspace, const float color[5], CFDictionaryRef auxInfo = NULL);
+
+
+/* Format specifiers for writeToDataConsumer/writeToFile */
+
+const char *kCGImageFormatPNG
+const char *kCGImageFormatJPEG
+const char *kCGImageFormatGIF
+const char *kCGImageFormatTIFF
+
+
+%class CGBitmapContext : CGContext {
+
+  /* Return the data associated with the bitmap context `c', or NULL if `c'
+   * is not a bitmap context. */
+
+  void *getData () {
+    return CGBitmapContextGetData (self);
+  }
+
+  /* Return the width of the bitmap context `c', or 0 if `c' is not a bitmap
+   * context. */
+
+  size_t getWidth () {
+    return CGBitmapContextGetWidth (self);
+  }
+
+  /* Return the height of the bitmap context `c', or 0 if `c' is not a bitmap
+   * context. */
+
+  size_t getHeight () {
+    return CGBitmapContextGetHeight (self);
+  }
+
+  /* Return the bits per component of the bitmap context `c', or 0 if `c' is
+   * not a bitmap context. */
+
+  size_t getBitsPerComponent () {
+    return CGBitmapContextGetBitsPerComponent (self);
+  }
+  
+  /* Return the bits per pixel of the bitmap context `c', or 0 if `c' is not
+   * a bitmap context. */
+
+  size_t getBitsPerPixel () {
+    return CGBitmapContextGetBitsPerPixel (self);
+  }
+
+  /* Return the bytes per row of the bitmap context `c', or 0 if `c' is not a
+   * bitmap context. */
+
+  size_t getBytesPerRow () {
+    return CGBitmapContextGetBytesPerRow (self);
+  }
+
+  /* Return the colorspace of the bitmap context `c', or NULL if `c' is not a
+   * bitmap context. */
+
+  CGColorSpaceRef getColorSpace () {
+    return CGColorSpaceRetain (CGBitmapContextGetColorSpace (self));
+  }
+
+  /* Return the alpha info of the bitmap context `c', or kCGImageAlphaNone if
+   * `c' is not a bitmap context. */
+
+  CGImageAlphaInfo getAlphaInfo () {
+    return CGBitmapContextGetAlphaInfo (self);
+  }
+
+  /* Return an image containing the current contents of the bitmap
+   * context `c'. */
+
+  CGImageRef createImage () {
+    return CGBitmapContextCreateImage (self);
+  }
+
+  /* Write an encoded representation of the current contents of the
+   * bitmap context `c' to the data consumer `consumer'. */
+
+  bool writeToDataConsumer (CGDataConsumerRef consumer,
+			    const char *format, const char *params)
+  {
+    return CGBitmapContextWriteToDataConsumer (self, consumer, format, params);
+  }
+
+  bool writeToFile (const char *filename,
+		    const char *format, const char *params = "")
+  {
+    return CGBitmapContextWriteToFile (self, filename, format, params);
+  }
+}
+
+
+# CGPDFContext
+
+/* Create a new pdf context that will output to the file called
+ * `filename'. */
+
+CG_EXTERN CGContextRef CGPDFContextCreateWithFilename (char *filename, const CGRect *mediaBox, CFDictionaryRef auxiliaryInfo = NULL);
+
+class CGContext {
+/* Set the URL associated with `rect' to `url' in the PDF context
+ * `context'. */
+ 
+ void setURLForRect (CFURLRef url, CGRect rect) {
+	CGPDFContextSetURLForRect (self, url, rect);
+ }
+
+/* Create a PDF destination named `name' at `point' in the current page of
+ * the PDF context `context'. */
+
+void addDestinationAtPoint (CFStringRef name, CGPoint point) {
+	CGPDFContextAddDestinationAtPoint (self, name, point);
+	}
+
+/* Specify a destination named `name' to jump to when clicking in `rect' of
+ * the current page of the PDF context `context'. */
+
+ void setDestinationForRect (CFStringRef name, CGRect rect) {
+	CGPDFContextSetDestinationForRect (self, name, rect);
+ }
+}
+
+# CGPDFDocument
+
+/* Create a PDF document, using `provider' to obtain the document's
+ * data. */
+
+CG_EXTERN CGPDFDocumentRef CGPDFDocumentCreateWithProvider(CGDataProviderRef provider);
+
+
+class CGPDFDocument {
+
+  /* Return the major and minor version numbers of `document'. */
+
+  void getVersion (int *majorVersion, int *minorVersion) {
+    CGPDFDocumentGetVersion (self, majorVersion, minorVersion);
+  }
+
+  /* Return true if the PDF file associated with `document' is encrypted;
+   * false otherwise.  If the PDF file is encrypted, then a password must be
+   * supplied before certain operations are enabled; different passwords may
+   * enable different operations. */
+
+  bool isEncrypted () {
+    return CGPDFDocumentIsEncrypted (self);
+  }
+
+  /* Use `password' to decrypt `document' and grant permission for certain
+   * operations.  Returns true if `password' is a valid password; false
+   * otherwise. */
+
+  bool unlockWithPassword (const char *passwd) {
+    return CGPDFDocumentUnlockWithPassword (self, passwd);
+  }
+
+  /* Return true if `document' is unlocked; false otherwise.  A document is
+   * unlocked if it isn't encrypted, or if it is encrypted and a valid password
+   * was previously specified with CGPDFDocumentUnlockWithPassword. */
+
+  bool isUnlocked () {
+    return CGPDFDocumentIsUnlocked (self);
+  }
+
+  /* Return true if `document' allows printing; false otherwise.  Typically,
+   * this function returns false only if the document is encrypted and the
+   * document's current password doesn't grant permission to perform
+   * printing. */
+
+  bool allowsPrinting () {
+    return CGPDFDocumentAllowsPrinting (self);
+  }
+
+  /* Return true if `document' allows copying; false otherwise.  Typically,
+   * this function returns false only if the document is encrypted and the
+   * document's current password doesn't grant permission to perform
+   * copying. */
+
+  bool allowsCopying () {
+    return CGPDFDocumentAllowsCopying (self);
+  }
+
+  /* Return the number of pages in `document'. */
+
+  size_t getNumberOfPages () {
+    return CGPDFDocumentGetNumberOfPages (self);
+  }
+
+  /* Return the page corresponding to `pageNumber', or NULL if no such page
+   * exists in the document.  Pages are numbered starting at 1. */
+
+  CGPDFPageRef getPage (size_t pageNumber) {
+    return CGPDFPageRetain (CGPDFDocumentGetPage (self, pageNumber));
+  }
+
+  /* Return the document catalog of `document'. */
+
+  CGPDFDictionaryRef getCatalog () {
+    return CGPDFDocumentGetCatalog (self);
+  }
+
+  /* Return the info dictionary of `document'. */
+
+  CGPDFDictionaryRef getInfo () {
+	return CGPDFDocumentGetInfo (self);
+  }
+
+  /* Return the "file identifier" of `document'. */
+
+  CGPDFArrayRef getID () {
+	return CGPDFDocumentGetID (self);
+  }
+
+  /* Return the media box of page number `page' in `document'. */
+
+  CGRect getMediaBox (int page) {
+    return CGPDFDocumentGetMediaBox (self, page);
+  }
+
+  /* Return the crop box of page number `page' in `document'. */
+
+  CGRect getCropBox (int page) {
+    return CGPDFDocumentGetCropBox (self, page);
+  }
+
+  /* Return the bleed box of page number `page' in `document'. */
+
+  CGRect getBleedBox (int page) {
+    return CGPDFDocumentGetBleedBox (self, page);
+  }
+
+  /* Return the trim box of page number `page' in `document'. */
+
+  CGRect getTrimBox (int page) {
+    return CGPDFDocumentGetTrimBox (self, page);
+  }
+
+  /* Return the art box of page number `page' in `document'. */
+
+  CGRect getArtBox (int page) {
+    return CGPDFDocumentGetArtBox (self, page);
+  }
+
+  /* Return the rotation angle (in degrees) of page number `page' in
+   * `document'. */
+
+  int getRotationAngle (int page) {
+    return CGPDFDocumentGetRotationAngle (self, page);
+  }
+}
+
+
+# CGPDFPage
+
+class CGPDFPage {
+
+  /* Return the document of `page'. */
+
+  CGPDFDocumentRef getDocument () {
+    return CGPDFDocumentRetain (CGPDFPageGetDocument (self));
+  }
+
+  /* Return the page number of `page'. */
+
+  size_t getPageNumber () {
+    return CGPDFPageGetPageNumber (self);
+  }
+
+  /* Return the rectangle associated with `box' in `page'.  This is the value
+   * of the corresponding entry (such as /MediaBox, /ArtBox, and so on) in
+   * the page's dictionary. */
+
+  CGRect getBoxRect (CGPDFBox box) {
+    return CGPDFPageGetBoxRect (self, box);
+  }
+
+  /* Return the rotation angle (in degrees) of `page'.  This is the value of
+   * the /Rotate entry in the page's dictionary. */
+
+  int getRotationAngle () {
+    return CGPDFPageGetRotationAngle (self);
+  }
+
+  /* Return a transform mapping the box specified by `box' to `rect' as
+   * follows:
+   *   - Compute the effective rect by intersecting the rect associated with
+   *     `box' and the /MediaBox entry of the page.
+   *   - Rotate the effective rect according to the page's /Rotate entry.
+   *   - Center the resulting rect on `rect'.  If `rotation' is non-zero,
+   *     then the rect will rotated clockwise by `rotation' degrees.
+   *     `rotation' must be a multiple of 90.
+   *   - Scale the rect down, if necessary, so that it coincides with the
+   *     edges of `rect'.  If `preserveAspectRatio' is true, then the final
+   *     rect will coincide with the edges of `rect' only in the more
+   *     restrictive dimension. */
+
+  CGAffineTransform getDrawingTransform (CGPDFBox box, CGRect rect,
+					 int rotate, bool preserveAspectRatio)
+  {
+    return CGPDFPageGetDrawingTransform (self, box, rect, rotate,
+					 preserveAspectRatio);
+  }
+
+  /* Return the dictionary of `page'. */
+
+  CGPDFDictionaryRef getDictionary () {
+    return CGPDFPageGetDictionary (self);
+  }
+}
+
+
+# CGPDFArray
+
+class CGPDFArray {
+
+  size_t getCount () {
+    return CGPDFArrayGetCount (self);
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a null, return
+   * true; otherwise, return false. */
+
+  bool getNull (size_t index) {
+    return CGPDFArrayGetNull (self, index);
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a boolean, return
+   * the result in `value'.  Return true on success; false otherwise. */
+
+  bool getBoolean (size_t index, CGPDFBoolean *OUTPUT) {
+    return CGPDFArrayGetBoolean (self, index, OUTPUT);
+  }
+
+  /* Look up the object at `index' in `array' and, if it's an integer, return
+   * the result in `value'.  Return true on success; false otherwise. */
+
+  bool getInteger (size_t index, CGPDFInteger *OUTPUT) {
+    return CGPDFArrayGetInteger (self, index, OUTPUT);
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a number (real or
+   * integer), return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  bool getNumber (size_t index, CGPDFReal *OUTPUT) {
+    return CGPDFArrayGetNumber (self, index, OUTPUT);
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a name, return the
+   * result in `value'.  Return true on success; false otherwise. */
+
+  const char *getName (size_t index) {
+    const char *s = NULL;
+    CGPDFArrayGetName (self, index, &s);
+    return s;
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a string, return
+   * the result in `value'.  Return true on success; false otherwise. */
+
+  CGPDFStringRef getString (size_t index) {
+    CGPDFStringRef s = NULL;
+    CGPDFArrayGetString (self, index, &s);
+    return s;
+  }
+
+  /* Look up the object at `index' in `array' and, if it's an array, return
+   * it in `value'.  Return true on success; false otherwise. */
+
+  CGPDFArrayRef getArray (size_t index) {
+    CGPDFArrayRef a = NULL;
+    CGPDFArrayGetArray (self, index, &a);
+    return a;
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a dictionary,
+   * return it in `value'.  Return true on success; false otherwise. */
+
+  CGPDFDictionaryRef getDictionary (size_t index) {
+    CGPDFDictionaryRef d = NULL;
+    CGPDFArrayGetDictionary (self, index, &d);
+    return d;
+  }
+
+  /* Look up the object at `index' in `array' and, if it's a stream, return
+   * it in `value'.  Return true on success; false otherwise. */
+
+  CGPDFStreamRef getStream (size_t index) {
+    CGPDFStreamRef s = NULL;
+    CGPDFArrayGetStream (self, index, &s);
+    return s;
+  }
+}
+
+
+# CGPDFContentStream
+
+/* Create a content stream from `page'. */
+CG_EXTERN CGPDFContentStreamRef CGPDFContentStreamCreateWithPage(CGPDFPageRef page) AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;
+
+class CGPDFContentStream {
+	/* Increment the retain count of `cs'. */
+	
+	 CGPDFContentStreamRef retain () {
+		return CGPDFContentStreamRetain (self);
+	 }
+	
+	/* Decrement the retain count of `cs'. */
+	
+	 void release () {
+		CGPDFContentStreamRelease (self);
+	 }
+	
+	/* Return the array of CGPDFStreamRefs comprising the entire content stream
+		* of `cs'. */
+	
+	 CFArrayRef getStreams () {
+		return CGPDFContentStreamGetStreams (self);
+	 }
+	
+	/* Return the resource named `name' in category `category' of the resource
+		* dictionaries of `cs'. */
+	
+	 CGPDFObjectRef getResource (const char *category, const char *name) {
+		return CGPDFContentStreamGetResource (self, category, name);
+	 }
+}
+
+
+# CGPDFDictionary
+
+class CGPDFDictionary {
+
+  /* Return the number of entries in `dictionary'. */
+
+  size_t getCount () {
+    return CGPDFDictionaryGetCount (self);
+  }
+
+  /* Return an array containing all keys defined by `dict'. */
+
+  CFTypeRef getKeys () {
+    return CGPDFDictionaryGetKeys (self);
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's a
+   * boolean, return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  bool getBoolean (const char *key, CGPDFBoolean *OUTPUT) {
+    return CGPDFDictionaryGetBoolean (self, key, OUTPUT);
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's an
+   * integer, return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  bool getInteger (const char *key, CGPDFInteger *OUTPUT) {
+    return CGPDFDictionaryGetInteger (self, key, OUTPUT);
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's a number
+   * (real or integer), return the result in `value'.  Return true on
+   * success; false otherwise. */
+
+  bool getNumber (const char *key, CGPDFReal *OUTPUT) {
+    return CGPDFDictionaryGetNumber (self, key, OUTPUT);
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's a name,
+   * return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  const char *getName (const char *key) {
+    const char *s = NULL;
+    CGPDFDictionaryGetName (self, key, &s);
+    return s;
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's a
+   * string, return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  CGPDFStringRef getString (const char *key) {
+    CGPDFStringRef s = NULL;
+    CGPDFDictionaryGetString (self, key, &s);
+    return s;
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's an
+   * array, return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  CGPDFArrayRef getArray (const char *key) {
+    CGPDFArrayRef a = NULL;
+    CGPDFDictionaryGetArray (self, key, &a);
+    return a;
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's a
+   * dictionary, return the result in `value'.  Return true on success; false
+   * otherwise. */
+
+  CGPDFDictionaryRef getDictionary (const char *key) {
+    CGPDFDictionaryRef d = NULL;
+    CGPDFDictionaryGetDictionary (self, key, &d);
+    return d;
+  }
+
+  /* Look up the object associated with `key' in `dict' and, if it's a
+   * stream, return the result in `value'. Return true on success; false
+   * otherwise. */
+
+  CGPDFStreamRef getStream (const char *key) {
+    CGPDFStreamRef s = NULL;
+    CGPDFDictionaryGetStream (self, key, &s);
+    return s;
+  }
+}
+
+
+# CGPDFObject
+
+/* A type for boolean values. */
+
+typedef unsigned char CGPDFBoolean;
+
+/* A type for integer values. */
+
+typedef long int CGPDFInteger;
+
+/* A type for real values. */
+
+typedef float CGPDFReal;
+
+
+# CGPDFStream
+
+enum CGPDFDataFormat {
+    CGPDFDataFormatRaw, CGPDFDataFormatJPEGEncoded
+};
+typedef enum CGPDFDataFormat CGPDFDataFormat;
+
+class CGPDFStream {
+
+  /* Return the dictionary of `stream'. */
+
+  CGPDFDictionaryRef getDictionary () {
+    return CGPDFStreamGetDictionary (self);
+  }
+
+  /* Return the data of `stream'. */
+
+  CGPDFDataFormat copyDataToConsumer (CGDataConsumerRef consumer) {
+    return CGPDFStreamCopyDataToConsumer (self, consumer);
+  }
+}
+
+
+# CGPDFOperatorTable
+
+typedef void (*CGPDFOperatorCallback)(CGPDFScannerRef scanner, void *info);
+
+/* Return an empty operator table. */
+%newobject CGPDFOperatorTableCreate;
+CG_EXTERN CGPDFOperatorTableRef CGPDFOperatorTableCreate(void) AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;
+
+class CGPDFOperatorTable {
+	/* Increment the retain count of `table'. */
+	
+	 CGPDFOperatorTableRef retain () {
+		return CGPDFOperatorTableRetain (self);
+	 }
+	
+	/* Decrement the retain count of `table'. */
+	
+	 void release () {
+		CGPDFOperatorTableRelease (self);
+	 }
+	
+	/* Set the callback for the operator named `name' to `callback' */
+	
+	 void setCallback (const char *name, CGPDFOperatorCallback callback) {
+		CGPDFOperatorTableSetCallback (self, name, callback);
+	 }
+}
+
+
+# CGPDFScanner
+
+/* Create a scanner. */
+CG_EXTERN CGPDFScannerRef CGPDFScannerCreate(CGPDFContentStreamRef cs, CGPDFOperatorTableRef table, void *info) AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;
+
+class CGPDFScanner {
+	/* Retain `scanner'. */
+	
+	 CGPDFScannerRef retain () {
+		return CGPDFScannerRetain (self);
+	 }
+	
+	/* Release `scanner'. */
+	
+	 void release () {
+		CGPDFScannerRelease (self);
+	 }
+	
+	/* Scan the content stream of `scanner'. Returns true if the entire stream
+	 * was scanned successfully; false if scanning failed for some reason (for
+	 * example, if the stream's data is corrupted). */
+	
+	 bool scan () {
+		return CGPDFScannerScan (self);
+	 }
+	
+	/* Return the content stream associated with `scanner'. */
+	
+	 CGPDFContentStreamRef getContentStream () {
+		return CGPDFScannerGetContentStream (self);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and return it in `value'. */
+	
+	 bool popObject (CGPDFObjectRef *value) {
+		return CGPDFScannerPopObject (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's a boolean, return
+		* it in `value'. Return false if the top of the stack isn't a boolean. */
+	
+	 bool popBoolean (CGPDFBoolean *value) {
+		return CGPDFScannerPopBoolean (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's an integer,
+		* return it in `value'. Return false if the top of the stack isn't an
+		* integer. */
+	
+	 bool popInteger (CGPDFInteger *value) {
+		return CGPDFScannerPopInteger (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's a number, return
+		* it in `value'. Return false if the top of the stack isn't a number. */
+	
+	 bool popNumber (CGPDFReal *value) {
+		return CGPDFScannerPopNumber (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's a name, return it
+		* in `value'. Return false if the top of the stack isn't a name. */
+	
+	 bool popName (const char **value) {
+		return CGPDFScannerPopName (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's a string, return
+		* it in `value'. Return false if the top of the stack isn't a string. */
+	
+	 bool popString (CGPDFStringRef *value) {
+		return CGPDFScannerPopString (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's an array, return
+		* it in `value'. Return false if the top of the stack isn't an array. */
+	
+	 bool popArray (CGPDFArrayRef *value) {
+		return CGPDFScannerPopArray (self, value);
+	 }
+	
+	/* Pop an object from the stack of `scanner' and, if it's a dictionary,
+		* return it in `value'. Return false if the top of the stack isn't a
+		* dictionary. */
+	
+	 bool popDictionary (CGPDFDictionaryRef *value) {
+		return CGPDFScannerPopDictionary (self, value);
+	 }
+	
+	/* Scan an inline image from `scanner' and return it. Return NULL if it's
+		* not possible to build the inline image for any reason. */
+	
+	 CGImageRef createImage () {
+		return CGPDFScannerCreateImage (self);
+	 }
+	
+	/* Skip past an inline image in `scanner'. */
+	
+	 void skipImage () {
+		CGPDFScannerSkipImage (self);
+	 }
+	
+}
+
+
+# CGPSConverter
+
+/* Create a new CGPSConverter object. */
+
+CG_EXTERN CGPSConverterRef CGPSConverterCreateWithoutCallbacks (void);
+
+class CGPSConverter {
+
+  /* Use `converter' to convert PostScript data to PDF data.  The PostScript
+   * data is supplied by `provider'; the resulting PDF is written to
+   * `consumer'.  Returns true if the conversion succeeded; false
+   * otherwise. */
+
+  bool convert (CGDataProviderRef provider, CGDataConsumerRef consumer) {
+      return CGPSConverterConvert (self, provider, consumer, NULL);
+  }
+
+  /* Tell the `converter' to abort conversion at the next possible
+   * opportunity. */
+
+  bool abort (void) {
+      return CGPSConverterAbort (self);
+  }
+
+  /* Return true if `converter' is currently converting data. */
+
+  bool isConverting (void) {
+      return CGPSConverterIsConverting (self);
+  }
+}
+
+
+# QDPict
+
+/* Create a QDPict reference, using `provider' to obtain the QDPict's data. 
+ * It is assumed that either the first byte or the 513th byte of data
+ * in the file referenced by the URL is the first byte of the picture
+ * header. If the URL does not begin PICT data at one of these places
+ * in the data fork then the QDPictRef returned will be NULL. */
+
+CG_EXTERN QDPictRef QDPictCreateWithProvider (CGDataProviderRef provider);
+
+/* Create a QDPict reference from `filename'. 
+ * It is assumed that either the first byte or the 513th byte of data
+ * in the file referenced by the filename is the first byte of the
+ * picture header. If the file does not begin PICT data at one of these
+ * places in the data fork then the QDPictRef returned will be NULL. */
+
+CG_EXTERN QDPictRef QDPictCreateWithFilename (const char *filename);
+
+class QDPict {
+
+  /* Return the Picture Bounds of the QuickDraw picture represented
+   * by `pictRef'. This rectangle is in the default user space with
+   * one unit = 1/72 inch. */
+
+  CGRect getBounds () {
+    return QDPictGetBounds (self);
+  }
+
+  /* Return the resolution of the QuickDraw picture represented by
+   * `pictRef'. This data, together with the CGRect returned by
+   * QDPictGetBounds, can be used to compute the size of the picture in
+   * pixels, which is what QuickDraw really records into pictures. */
+
+  CGPoint getResolution () {
+    CGPoint p;
+    QDPictGetResolution (self, &p.x, &p.y);
+    return p;
+  }
+
+  /* Draw `pictRef' in the rectangular area specified by `rect'. The
+   * PICT bounds of the page is scaled, if necessary, to fit into
+   * `rect'. To get unscaled results, supply a rect the size of the
+   * rect returned by QDPictGetBounds. */
+
+  bool drawToCGContext (CGContext *ctx, CGRect rect) {
+    return QDPictDrawToCGContext (ctx, rect, self) == 0;
+  }
+}

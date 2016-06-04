@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {goToLocationFieldAddress = id; hideLocationSheet = id; }; 
+            CLASS = BlotDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {locationField = NSTextField; locationSheet = NSPanel; webView = WebView; }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIDriverRef;  name=MIDIDriverRef --><a name="//apple_ref/c/tdef/MIDIDriverRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDriverRef">MIDIDriverRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">typedef</font> <a href="../../../CoreMIDI/MIDIDriver/Classes/MIDIDriverInterface/index.html#//apple_ref/c/cl/MIDIDriverInterface" logicalPath="//apple_ref/c/cl/MIDIDriverInterface" target="_top"><font class="type">MIDIDriverInterface</font></a> <font class="type">*</font><font class="type">*</font> <font class="var">MIDIDriverRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Points to a pointer to a MIDIDriverInterface, a CFPlugIn
+structure (defined in MIDIDriver.h) containing function
+pointers for the driver's methods.  Only the MIDIServer
+may call a driver's methods.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/MIDIDeviceListRef;  name=MIDIDeviceListRef --><a name="//apple_ref/c/tdef/MIDIDeviceListRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="MIDIDeviceListRef">MIDIDeviceListRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueMIDIDeviceList //apple_ref/c/cl/OpaqueMIDIDeviceList //apple_ref/c/tdef/OpaqueMIDIDeviceList //apple_ref/c/tag/OpaqueMIDIDeviceList //apple_ref/c/econst/OpaqueMIDIDeviceList //apple_ref/c/struct/OpaqueMIDIDeviceList //apple_ref/c/clconst/OpaqueMIDIDeviceList" --><font class="type">OpaqueMIDIDeviceList</font><!-- /a --><font class="type">*</font> <font class="var">MIDIDeviceListRef</font>; </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>A MIDIDeviceListRef is a list of MIDIDeviceRef's.  The devices are
+not owned by the list (i.e., disposing the list does not dispose
+the devices it references).
+</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

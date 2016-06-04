@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {colorDidChange = id; show = id; }; 
+            CLASS = Inspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {categoryText = id; colorWell = id; panel = id; tabView = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

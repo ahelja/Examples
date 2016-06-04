@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUElement</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUElement</a></h1>
+<big><b>Superclasses : </b></big>
+none<br>
+<big><b>Subclasses : </b></big>
+<a href = "AUIOElement_fs.html" target="_top">AUIOElement</a><br>
+<big><b>Header : </b></big>AUScopeElement<br>
+<br><pre>class AUElement </pre>
+<p>Each scope of an AudioUnit contains elements which contain the parameters that can be set in that scope. 
+	For input and output scopes, elements represent busses and each buss contains some number of channels of audio. 
+	For global scope there is a single element containing all of the parameters that affect the entire audio unit.
+	For group scope, the parameters affect that group. </p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUElement">AUElement</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUElement(AUBase *audioUnit);</pre>
+<p></p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUElement">~AUElement</a></h4>
+</td><td width="50%">
+<h4>public virtual destructor</h4>
+</td></tr></table>
+<br><pre> virtual ~AUElement();</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetAudioUnit">GetAudioUnit</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUBase* GetAudioUnit() const;</pre>
+<p>Internal. Accessor. Return the AudioUnit that owns this element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetName">GetName</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> CFStringRef GetName () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetRampSliceStartEnd">GetRampSliceStartEnd</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void GetRampSliceStartEnd(
+          AudioUnitParameterID            paramID,
+          Float32&                        outStartValue,
+          Float32&                        outEndValue,
+          Float32&                        outValuePerFrameDelta
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasName">HasName</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool HasName () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetName">SetName</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetName (CFStringRef inName);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetRampParameter">SetRampParameter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetScheduledEvent(
+          AudioUnitParameterID            paramID,
+          const AudioUnitParameterEvent&  inEvent,
+          UInt32                          inSliceOffsetInBuffer,
+          UInt32                          inSliceDurationFrames
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="UseIndexedParameters">UseIndexedParameters</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void UseIndexedParameters(int inNumberOfParameters);</pre>
+<p></p><br>
+<hr>
+<h3><u>Parameters</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetNumberOfParameters">GetNumberOfParameters</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> UInt32 GetNumberOfParameters();</pre>
+<p>Internal. Return the number of parameters in this element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameter">GetParameter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> Float32 GetParameter(AudioUnitParameterID paramID);</pre>
+<p>Internal. Return the the value of a parameter in this element. This gets called from <a href="AUBase_fs.html" target="_top">AUBase</a>::GetParameter. </p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameterList">GetParameterList</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void GetParameterList(AudioUnitParameterID *outList);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RestoreState">RestoreState</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> const UInt8* RestoreState(const UInt8 *state);</pre>
+<p>Internal. Restores the state of this element's parameters from a CFMutableDataRef. This gets called from <a href="AUBase_fs.html" target="_top">AUBase</a>::RestoreState.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SaveState">SaveState</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SaveState(CFMutableDataRef data);</pre>
+<p>Internal. Saves the state of this element's parameters to a CFMutableDataRef. This gets called from <a href="AUBase_fs.html" target="_top">AUBase</a>::SaveState.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetParameter">SetParameter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetParameter(
+          AudioUnitParameterID            paramID,
+          Float32                         value
+    );</pre>
+<p>Internal. Set the the value of a parameter in this element. This gets called from <a href="AUBase_fs.html" target="_top">AUBase</a>::SetParameter.</p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAudioUnit">mAudioUnit</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AUBase* mAudioUnit;</pre>
+<p>The owning <a href="AUBase_fs.html" target="_top">AUBase</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mElementName">mElementName</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> CFStringRef mElementName;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mIndexedParameters">mIndexedParameters</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> std::vector&lt;ParameterMapEvent&gt; mIndexedParameters;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParameters">mParameters</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> ParameterMap mParameters;</pre>
+<p>A data structure containing all of the parameter values for this element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mUseIndexedParameters">mUseIndexedParameters</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mUseIndexedParameters;</pre>
+<p></p><br>
+<hr>
+</body></html>

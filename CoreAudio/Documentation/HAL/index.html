@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Core Audio Documentation</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1><font color="#FF7700">HAL Documentation</font></h1>
+
+<ul>
+	<li><a href="AudioDriverPlugIn/index.html"><font size="+1">AudioDriverPlugIn</font></a>
+		<dd><dt>IOAudio family drivers can specify a CFBundle in order to implement device specific properties on behalf of the HAL. The CFBundle provides routines for opening and closing the device as well as the property management routines. The mechanism by which the driver specifies which CFBundle to load is defined by the IOAudio driver family in IOKit. The routines described in this header are loaded by name from the CFBundle. 
+		</dt></dd>
+		</li>
+		<br>
+		
+	<li><a href="AudioHardware/index.html"><font size="+1">AudioHardware</font></a>
+		<dd><dt>The audio HAL provides an abstraction through which applications can access audio hardware. To do this, the HAL provides a small set of AudioObjects that provide access to the various pieces of the system.
+		</dt></dd>
+		</li>
+		<br>
+	
+	<li><a href="AudioHardwarePlugIn/index.html"><font size="+1">AudioHardwarePlugIn</font></a>
+		<dd><dt>This is the CFPlugIn interface presented by a HAL plug-in. The HAL will create only one instance of each interface. This instance is responsible for providing all required services on behalf of as many devices of the kind it implements.
+		</dt></dd>
+		</li>
+		<br>
+		
+	<li><a href="CoreAudioTypes/index.html"><font size="+1">CoreAudioTypes</font></a>
+		<dd><dt>This header defines the types and constants that all the CoreAudio APIs have in common.
+		</dt></dd>
+		</li>
+		<br>
+	
+	<li><a href="HostTime/index.html"><font size="+1">HostTime</font></a>
+		<dd><dt>This collection of functions provides access to the host's time base. It also provides discriptive information about the time base and translations to and from nanoseconds.
+		</dt></dd>
+		</li>
+		<br>
+</ul>
+
+</body>
+</html>
+

@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUVParameter</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUVParameter</a></h1>
+<big><b>Superclasses : </b></big>
+AudioUnitParameter<br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUVParameter<br>
+<br><pre>class AUVParameter : public AudioUnitParameter </pre>
+<p></p><hr>
+<h2>Methods</h2>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUVParameter">~AUVParameter</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual destructor</h4>
+</td></tr></table>
+<br><pre> ~AUVParameter();</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUVParameter.0">AUVParameter</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUVParameter();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUVParameter.1">AUVParameter</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUVParameter(
+          AudioUnit                       au,
+          AudioUnitParameterID            param,
+          AudioUnitScope                  scope,
+          AudioUnitElement                element
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUVParameter.2">AUVParameter</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUVParameter(const AUVParameter &a);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetName">GetName</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> CFStringRef GetName();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetNumIndexedParams">GetNumIndexedParams</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> int GetNumIndexedParams () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParamName">GetParamName</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> CFStringRef GetParamName (int inIndex);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParamTag">GetParamTag</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> CFStringRef GetParamTag();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetValue">GetValue</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> Float32 GetValue();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasNamedParams">HasNamedParams</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool HasNamedParams () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsIndexedParam">IsIndexedParam</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool IsIndexedParam () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ParamInfo">ParamInfo</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> const AudioUnitParameterInfo& ParamInfo();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetValue">SetValue</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetValue(
+          AUParameterListenerRef          inListener,
+          void*                           inObject,
+          Float32                         inValue
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="operator <">operator <</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool operator < (const AUVParameter &a) const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="operator =">operator =</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUVParameter& operator = (const AUVParameter &a);</pre>
+<p></p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mNamedParams">mNamedParams</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> CFArrayRef mNamedParams;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mNumIndexedParams">mNumIndexedParams</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> short mNumIndexedParams;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParamInfo">mParamInfo</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AudioUnitParameterInfo mParamInfo;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParamName">mParamName</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> CFStringRef mParamName;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParamTag">mParamTag</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> CFStringRef mParamTag;</pre>
+<p></p><br>
+<hr>
+</body></html>

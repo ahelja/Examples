@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAppleScriptBuildPhase section */
+		4E446E8007309B2700EF95E7 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				4E446E8107309B2700EF95E7 /* Mail Search.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXAppleScriptBuildPhase section */
+
+/* Begin PBXBuildFile section */
+		4E446E7807309B2700EF95E7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		4E446E7907309B2700EF95E7 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		4E446E7A07309B2700EF95E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		4E446E7B07309B2700EF95E7 /* Document.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0158FEDBFFFBA9B6112B14C0 /* Document.nib */; };
+		4E446E7C07309B2700EF95E7 /* Message.nib in Resources */ = {isa = PBXBuildFile; fileRef = DADC4244017FB40A03A80106 /* Message.nib */; };
+		4E446E7D07309B2700EF95E7 /* StatusPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = DADC4246017FB40A03A80106 /* StatusPanel.nib */; };
+		4E446E7E07309B2700EF95E7 /* find.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DADC424D017FB58803A80106 /* find.tiff */; };
+		4E446E7F07309B2700EF95E7 /* Mail Search.icns in Resources */ = {isa = PBXBuildFile; fileRef = DAB7857E01F8CB9203D3F082 /* Mail Search.icns */; };
+		4E446E8107309B2700EF95E7 /* Mail Search.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DAB7857D01F8CB9203D3F082 /* Mail Search.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		4E446E8407309B2700EF95E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4E446E8607309B2700EF95E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		4E446E8707309B2700EF95E7 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF9015C4FF003C91932 /* AppleScriptKit.framework */; };
+		65024DFD078DDA3900CC0C36 /* Document.h in Headers */ = {isa = PBXBuildFile; fileRef = 65024DFB078DDA3900CC0C36 /* Document.h */; };
+		65024DFE078DDA3900CC0C36 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 65024DFC078DDA3900CC0C36 /* Document.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		01BFAB97FFEAD4F711CA2A57 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		01BFAB98FFEAD4F711CA2A57 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0158FEDCFFFBA9B6112B14C0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Document.nib; sourceTree = "<group>"; };
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4E446E8907309B2700EF95E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E446E8A07309B2700EF95E7 /* Mail Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mail Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65024DF8078DD9AD00CC0C36 /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
+		65024DFB078DDA3900CC0C36 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		65024DFC078DDA3900CC0C36 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		DA206CF9015C4FF003C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
+		DAB7857D01F8CB9203D3F082 /* Mail Search.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = "Mail Search.applescript"; sourceTree = "<group>"; };
+		DAB7857E01F8CB9203D3F082 /* Mail Search.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Mail Search.icns"; sourceTree = "<group>"; };
+		DADC4245017FB40A03A80106 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Message.nib; sourceTree = "<group>"; };
+		DADC4247017FB40A03A80106 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/StatusPanel.nib; sourceTree = "<group>"; };
+		DADC424D017FB58803A80106 /* find.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = find.tiff; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E446E8507309B2700EF95E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E446E8607309B2700EF95E7 /* Cocoa.framework in Frameworks */,
+				4E446E8707309B2700EF95E7 /* AppleScriptKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01BFAB9DFFEAD6D111CA2A57 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				DAB7857D01F8CB9203D3F082 /* Mail Search.applescript */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				DA206CF9015C4FF003C91932 /* AppleScriptKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E446E8A07309B2700EF95E7 /* Mail Search.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				01BFAB9DFFEAD6D111CA2A57 /* Scripts */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+				4E446E8907309B2700EF95E7 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				65024DFB078DDA3900CC0C36 /* Document.h */,
+				65024DFC078DDA3900CC0C36 /* Document.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				0158FEDBFFFBA9B6112B14C0 /* Document.nib */,
+				DADC4244017FB40A03A80106 /* Message.nib */,
+				DADC4246017FB40A03A80106 /* StatusPanel.nib */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				DADC424D017FB58803A80106 /* find.tiff */,
+				DAB7857E01F8CB9203D3F082 /* Mail Search.icns */,
+				65024DF8078DD9AD00CC0C36 /* AppleScriptKit.sdef */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4E446E7507309B2700EF95E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65024DFD078DDA3900CC0C36 /* Document.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4E446E7407309B2700EF95E7 /* Mail Search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E4B603C08859576007FFB18 /* Build configuration list for PBXNativeTarget "Mail Search" */;
+			buildPhases = (
+				4E446E7507309B2700EF95E7 /* Headers */,
+				4E446E7707309B2700EF95E7 /* Resources */,
+				4E446E8007309B2700EF95E7 /* AppleScript */,
+				4E446E8207309B2700EF95E7 /* Sources */,
+				4E446E8507309B2700EF95E7 /* Frameworks */,
+				4E446E8807309B2700EF95E7 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = "Mail Search";
+			productInstallPath = "$(HOME)/Applications";
+			productName = Application;
+			productReference = 4E446E8A07309B2700EF95E7 /* Mail Search.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4E4B604008859576007FFB18 /* Build configuration list for PBXProject "Mail Search" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				01BFAB97FFEAD4F711CA2A57 /* Development */,
+				01BFAB98FFEAD4F711CA2A57 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Application */;
+			projectDirPath = "";
+			targets = (
+				4E446E7407309B2700EF95E7 /* Mail Search */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E446E7707309B2700EF95E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E446E7807309B2700EF95E7 /* Credits.rtf in Resources */,
+				4E446E7907309B2700EF95E7 /* MainMenu.nib in Resources */,
+				4E446E7A07309B2700EF95E7 /* InfoPlist.strings in Resources */,
+				4E446E7B07309B2700EF95E7 /* Document.nib in Resources */,
+				4E446E7C07309B2700EF95E7 /* Message.nib in Resources */,
+				4E446E7D07309B2700EF95E7 /* StatusPanel.nib in Resources */,
+				4E446E7E07309B2700EF95E7 /* find.tiff in Resources */,
+				4E446E7F07309B2700EF95E7 /* Mail Search.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4E446E8807309B2700EF95E7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E446E8207309B2700EF95E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E446E8407309B2700EF95E7 /* main.m in Sources */,
+				65024DFE078DDA3900CC0C36 /* Document.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0158FEDBFFFBA9B6112B14C0 /* Document.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0158FEDCFFFBA9B6112B14C0 /* English */,
+			);
+			name = Document.nib;
+			sourceTree = "<group>";
+		};
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DADC4244017FB40A03A80106 /* Message.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADC4245017FB40A03A80106 /* English */,
+			);
+			name = Message.nib;
+			sourceTree = "<group>";
+		};
+		DADC4246017FB40A03A80106 /* StatusPanel.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADC4247017FB40A03A80106 /* English */,
+			);
+			name = StatusPanel.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E4B603D08859576007FFB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Mail Search";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4E4B603E08859576007FFB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_OSAFLAGS = "-x";
+				PRODUCT_NAME = "Mail Search";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4E4B604108859576007FFB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4E4B604208859576007FFB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E4B603C08859576007FFB18 /* Build configuration list for PBXNativeTarget "Mail Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E4B603D08859576007FFB18 /* Debug */,
+				4E4B603E08859576007FFB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E4B604008859576007FFB18 /* Build configuration list for PBXProject "Mail Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E4B604108859576007FFB18 /* Debug */,
+				4E4B604208859576007FFB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

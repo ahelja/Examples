@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>#defines</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">#defines</font></h1><br>
+<hr><a name="//apple_ref/c/macro/kAudioAggregateDeviceIsPrivateKey"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="kAudioAggregateDeviceIsPrivateKey">kAudioAggregateDeviceIsPrivateKey</a></h2>
+</td></tr></table><hr><blockquote><pre>
+#define kAudioAggregateDeviceIsPrivateKey       "private"
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The key used in a CFDictionary that describes the composition of an
+AudioAggregateDevice. The value for this key is a CFNumber where a value of 0
+means that the AudioAggregateDevice is to be published to the entire system and
+a value of 1 means that the AudioAggregateDevice is private to the process that
+created it. Note that a private AudioAggregateDevice is not persistent across
+launches of the process that created it. Note that if this key is not present,
+it implies that the AudioAggregateDevice is published to the entire system.</p>
+<hr><a name="//apple_ref/c/macro/kAudioAggregateDeviceMasterSubDeviceKey"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="kAudioAggregateDeviceMasterSubDeviceKey">kAudioAggregateDeviceMasterSubDeviceKey</a></h2>
+</td></tr></table><hr><blockquote><pre>
+#define kAudioAggregateDeviceMasterSubDeviceKey "master"
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The key used in a CFDictionary that describes the composition of an
+AudioAggregateDevice. The value for this key is a CFString that contains the
+UID for the sub-device that is the master time source for the
+AudioAggregateDevice.</p>
+<hr><a name="//apple_ref/c/macro/kAudioAggregateDeviceNameKey"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="kAudioAggregateDeviceNameKey">kAudioAggregateDeviceNameKey</a></h2>
+</td></tr></table><hr><blockquote><pre>
+#define kAudioAggregateDeviceNameKey            "name"
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The key used in a CFDictionary that describes the composition of an
+AudioAggregateDevice. The value for this key is a CFString that contains the
+human readable name of the AudioAggregateDevice.</p>
+<hr><a name="//apple_ref/c/macro/kAudioAggregateDeviceSubDeviceListKey"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="kAudioAggregateDeviceSubDeviceListKey">kAudioAggregateDeviceSubDeviceListKey</a></h2>
+</td></tr></table><hr><blockquote><pre>
+#define kAudioAggregateDeviceSubDeviceListKey   "subdevices"
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The key used in a CFDictionary that describes the composition of an
+AudioAggregateDevice. The value for this key is a CFArray of CFDictionaries that
+describe each sub-device in the AudioAggregateDevice. The keys for this
+CFDictionary are defined in the AudioSubDevice section.</p>
+<hr><a name="//apple_ref/c/macro/kAudioAggregateDeviceUIDKey"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="kAudioAggregateDeviceUIDKey">kAudioAggregateDeviceUIDKey</a></h2>
+</td></tr></table><hr><blockquote><pre>
+#define kAudioAggregateDeviceUIDKey             "uid"
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The key used in a CFDictionary that describes the composition of an
+AudioAggregateDevice. The value for this key is a CFString that contains the UID
+of the AudioAggregateDevice.</p>
+<hr><a name="//apple_ref/c/macro/kAudioSubDeviceUIDKey"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="kAudioSubDeviceUIDKey">kAudioSubDeviceUIDKey</a></h2>
+</td></tr></table><hr><blockquote><pre>
+#define kAudioSubDeviceUIDKey   "uid"
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The key used in a CFDictionary that describes the state of an AudioSubDevice.
+The value for this key is a CFString that contains the UID for the
+AudioSubDevice.</p>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

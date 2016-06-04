@@ -1,0 +1,45 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                CaptureRatePopUpAction = id; 
+                ClearDataButtonAction = id; 
+                DeviceInfoButtonAction = id; 
+                DevicePopUpAction = id; 
+                EnableLatencyTracingCheckBoxAction = id; 
+                LongCycleTextFieldAction = id; 
+                NextButtonAction = id; 
+                PreviousButtonAction = id; 
+                ProcessIDTextFieldAction = id; 
+                SaveDataButtonAction = id; 
+                SaveZerosButtonAction = id; 
+                SelectProcessButtonAction = id; 
+                ShowRadioMatrixAction = id; 
+                TelemetryOutlineAction = id; 
+                TraceOnLongCyclesCheckBoxAction = id; 
+                TraceOnOverloadsCheckBoxAction = id; 
+                TraceOnWakingLateCheckBoxAction = id; 
+                WakingLateTextFieldAction = id; 
+            }; 
+            CLASS = HLIOCycleTelemetryWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCaptureRatePopUp = NSPopUpButton; 
+                mDevicePopUp = NSPopUpButton; 
+                mEnableLatencyTracingCheckBox = NSButton; 
+                mLongCycleThresholdTextField = NSTextField; 
+                mProcessIDTextField = NSTextField; 
+                mProcessNameTextField = NSTextField; 
+                mShowRadioButtonMatrix = NSMatrix; 
+                mTelemetryOutline = NSOutlineView; 
+                mTraceOnLongCyclesCheckBox = NSButton; 
+                mTraceOnOverloadsCheckBox = NSButton; 
+                mTraceOnWakingLateCheckBox = NSButton; 
+                mWakingLateThresholdTextField = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

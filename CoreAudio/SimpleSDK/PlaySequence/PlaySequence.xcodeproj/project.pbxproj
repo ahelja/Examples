@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EB3AE04079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 08FB7796FE84155DC02AAC07;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		3EB3AE06079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5D74C5F0243EFAA01370FF7;
+		};
+		3EB3AE07079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F5D74C600243EFAA01370FF7;
+		};
+		3EB3AE08079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F530D68A0282348701CA27A0;
+		};
+		3EB3AE09079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = F530D68B0282348701CA27A0;
+		};
+		3EB3AE0A079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = EC8A4FE903705E200DCA2268;
+		};
+		3EB3AE0B079D59670046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = A94727BA0415DB9B00000102;
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA460018CE2711CA2923 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "\U0001-DDEBUG";
+			};
+			name = Development;
+		};
+		014CEA470018CE2711CA2923 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = main.cpp;
+			sourceTree = "<group>";
+		};
+		3EB3AE0D079D59670046E3F3 = {
+			isa = PBXFileReference;
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			path = PlaySequence;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A94727BA0415DB9B00000102 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudio.framework;
+			path = /System/Library/Frameworks/CoreAudio.framework;
+			sourceTree = "<absolute>";
+		};
+		EC8A4FE903705E200DCA2268 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreMIDI.framework;
+			path = /System/Library/Frameworks/CoreMIDI.framework;
+			sourceTree = "<absolute>";
+		};
+		F530D68A0282348701CA27A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = /System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = "<absolute>";
+		};
+		F530D68B0282348701CA27A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioUnit.framework;
+			path = /System/Library/Frameworks/AudioUnit.framework;
+			sourceTree = "<absolute>";
+		};
+		F5D74C5F0243EFAA01370FF7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreFoundation.framework;
+			path = /System/Library/Frameworks/CoreFoundation.framework;
+			sourceTree = "<absolute>";
+		};
+		F5D74C600243EFAA01370FF7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreServices.framework;
+			path = /System/Library/Frameworks/CoreServices.framework;
+			sourceTree = "<absolute>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EB3AE05079D59670046E3F3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AE06079D59670046E3F3,
+				3EB3AE07079D59670046E3F3,
+				3EB3AE08079D59670046E3F3,
+				3EB3AE09079D59670046E3F3,
+				3EB3AE0A079D59670046E3F3,
+				3EB3AE0B079D59670046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0249A662FF388D9811CA2CEA = {
+			isa = PBXGroup;
+			children = (
+				F530D68A0282348701CA27A0,
+				F530D68B0282348701CA27A0,
+				F5D74C5F0243EFAA01370FF7,
+				F5D74C600243EFAA01370FF7,
+				EC8A4FE903705E200DCA2268,
+				A94727BA0415DB9B00000102,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB7794FE84155DC02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07,
+				0249A662FF388D9811CA2CEA,
+				1AB674ADFE9D54B511CA2CBB,
+			);
+			name = PrintSequence;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				3EB3AE0D079D59670046E3F3,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EB3AE02079D59670046E3F3 = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EB3AE01079D59670046E3F3 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E884560874AAEB00B2DFE8;
+			buildPhases = (
+				3EB3AE02079D59670046E3F3,
+				3EB3AE03079D59670046E3F3,
+				3EB3AE05079D59670046E3F3,
+				3EB3AE0C079D59670046E3F3,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PlaySequence;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = PlaySequence;
+			productInstallPath = "$(HOME)/bin";
+			productName = PrintSequence;
+			productReference = 3EB3AE0D079D59670046E3F3;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 = {
+			isa = PBXProject;
+			buildConfigurationList = A9E8845A0874AAEB00B2DFE8;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA460018CE2711CA2923,
+				014CEA470018CE2711CA2923,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07;
+			projectDirPath = "";
+			targets = (
+				3EB3AE01079D59670046E3F3,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		3EB3AE0C079D59670046E3F3 = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EB3AE03079D59670046E3F3 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AE04079D59670046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9E884570874AAEB00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = " -DDEBUG";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PlaySequence;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		A9E884580874AAEB00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PlaySequence;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A9E884590874AAEB00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PlaySequence;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		A9E8845B0874AAEB00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		A9E8845C0874AAEB00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		A9E8845D0874AAEB00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9E884560874AAEB00B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E884570874AAEB00B2DFE8,
+				A9E884580874AAEB00B2DFE8,
+				A9E884590874AAEB00B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E8845A0874AAEB00B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E8845B0874AAEB00B2DFE8,
+				A9E8845C0874AAEB00B2DFE8,
+				A9E8845D0874AAEB00B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07;
+}

@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {increaseFont = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {displaySecondWindow = id; }; 
+            CLASS = SMWAppDelegate; 
+            LANGUAGE = Java; 
+            OUTLETS = {_answer = NSFormCell; _firstWindow = NSWindow; _question = NSFormCell; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

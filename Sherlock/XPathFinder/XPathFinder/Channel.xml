@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+(C) Copyright 2002-2003 Apple Computer, Inc. All rights reserved.
+
+IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc. ("Apple") in consideration of your agreement to the following terms, and your use, installation, modification or redistribution of this Apple software constitutes acceptance of these terms.  If you do not agree with these terms, please do not use, install, modify or redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and subject to these terms, Apple grants you a personal, non-exclusive license, under Apple's copyrights in this original Apple software (the "Apple Software"), to use, reproduce, modify and redistribute the Apple Software, with or without modifications, in source and/or binary forms; provided that if you redistribute the Apple Software in its entirety and without modifications, you must retain this notice and the following text and disclaimers in all such redistributions of the Apple Software.  Neither the name, trademarks, service marks or logos of Apple Computer, Inc. may be used to endorse or promote products derived from the Apple Software without specific prior written permission from Apple.  Except as expressly stated in this notice, no other rights or licenses, express or implied, are granted by Apple herein, including but not limited to any patent rights that may be infringed by your derivative works or by other works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.         												
+-->
+
+
+<channel>
+
+<initialize language="JavaScript">
+	/* Set the minimum size for this channel */
+	DataStore.Set("PathFinder.minViewSize", "{width=730; height=500}");
+	
+	/* Set a default value for the URL text field */
+	DataStore.Set("PathFinder.URLTextField.objectValue", "http://www.apple.com");
+	
+	/* With this set to true, "PathFinder.URLTextField.objectValue" is updated as
+	   the user types. This way, when the user clicks the "Get HTML" button,
+	   we can immediately read the value for "PathFinder.URLTextField.objectValue",
+	   and it will be up to date.
+	*/
+	DataStore.Set("PathFinder.URLTextField.updateValueOnTextChanged", true);
+	
+	/* Default to have rendering turned on */
+	DataStore.Set("PathFinder.RenderCheckbox.objectValue", 1);
+	
+	/* Disable the "Post Data" text field by default */
+	DataStore.Set("PathFinder.PostDataTextField.enabled", false);
+	DataStore.Set("PathFinder.PostDataTextField.updateValueOnTextChanged", false);
+	
+	/* We use these locations to track when the channel is busy doing
+	   something, so we can display the indeterminate activity indicator.
+	*/
+	DataStore.Set("Busy.ComputingNextColumn", false);
+	DataStore.Set("Busy.ComputingXQPath", false);
+	DataStore.Set("Busy.RenderingHTML", false);
+</initialize>
+
+<triggers>
+
+<scripts>
+
+<!-- Include some utility functions here. -->
+
+<script language="XQuery">
+
+{-- Given some HTML (data), convert it to text. --}
+define function HTMLToText($html)
+{
+	$html/source(.)
+}
+
+
+{-- Given some HTML (data), convert it to a list of values which
+	can be used by the NSBrowser (column view).
+
+	The NSBrowser expects an array of either strings (for a simple list),
+	or dictionaries. We will use dictionaries, and each dictionary will
+	have four entries:
+		value - string to display to the user
+		isLeaf - boolean indicating if this entry is a leaf node
+		representedObject - the item itself
+		id - a unique ID used elsewhere
+--}
+define function HTMLToBrowserArray($html)
+{
+
+	{-- Set $ea to be every item at the top level of $html --}
+	let $ea := $html/*
+	
+	{-- For every item at the top level... --}
+	let $result := for $e in $ea
+		{-- ...collect some information --}
+		let $value := $e/name()
+		let $isLeaf := if (empty($e/*)) then 1 else 0
+		let $representedObject := $e
+		let $id := unique-id()
+		{-- ...return a dictionary with the information --}
+		return dictionary(
+			("value", $value),
+			("isLeaf", $isLeaf),
+			("representedObject", $representedObject),
+			("id", $id))
+	return $result
+}
+
+
+{-- We need to know the index of a given item, given that the
+	item may appear multiple times in the column. For example,
+	if we are currently selecting the 3rd "table", return "3"
+
+	colData - array of dictionaries
+	colSelection - index into the array of dictionaries
+	value - text of the selected item
+--}
+define function ComputeIndex($colData, $colSelection, $value)
+{
+	{-- Get the identifier of the selected item --}
+	let $id := $colData[$colSelection]/id
+	{-- Get a list of all column items with the desired name (value) --}
+	let $matching := $colData[value = $value]
+	let $count := count($matching)
+	{-- Figure out which item has the identifer we want --}
+	let $index := index-of($matching/id, $id)
+	let $index := if ($count = 1) then 0 else $index
+	return $index
+}
+
+</script>
+</scripts>
+
+
+<trigger language="XQuery" path="PathFinder.PostCheckbox.objectValue"
+	inputs="postCheckbox=PathFinder.PostCheckbox.objectValue"
+	output="PathFinder.PostDataTextField.enabled">
+{-- When the user changes the value of the "post" checkbox, we want
+	to enable/disable the "post" text field.
+--}
+
+$postCheckbox
+
+{--	Note that there is no "return" in this function, since a "return"
+	is only required when there is a preceeding "let" statement.
+	
+	We could have also written this function as...
+	
+		let $a := $postCheckbox
+		return $a
+--}
+</trigger>
+
+
+<trigger language="XQuery" path="PathFinder.GetHTMLButton.action"
+	inputs="htmlSourceURL=PathFinder.URLTextField.objectValue,
+		postCheckbox=PathFinder.PostCheckbox.objectValue,
+		postData=PathFinder.PostDataTextField.objectValue"
+	output="Data.HTML">
+	
+	{-- This triggeris executed when the "Get HTML" button is clicked. --}
+	
+	{-- Do a post if necessary --}
+	let $document := if ($postCheckbox) then
+		http-post($htmlSourceURL, $postData)/DATA
+	else
+		document($htmlSourceURL)
+  
+	let $head := data-match-ignore-case($document, "head", "/head")
+  	let $charset := data-match-ignore-case($head, "charset=", '"')
+  	let $charset := if-empty($charset, "Windows-1252")
+  	return encoded-data-to-string($document, $charset)
+</trigger>
+
+
+<trigger language="JavaScript" path="Data.HTML">
+	/*	This trigger is called whenever the HTML we are examining changes.
+		It will either clear out the list of selected cells, or, if it's
+		already clear, just post a notification that it is clear, triggering
+		an update of the column browser.
+	*/
+	if (DataStore.Get("PathFinder.BrowserView.selectedCells[0]") == -1)
+		DataStore.Notify("PathFinder.BrowserView.selectedCells[0]");
+	else
+		DataStore.Set("PathFinder.BrowserView.selectedCells[0]", -1);
+</trigger>
+
+
+<trigger language="JavaScript" path="PathFinder.BrowserView.selectedCells">
+	/*	Someone has changed the list of selected cells in the column
+		browser. We need to update the column browser data, so that the
+		text for the next column appears.
+	*/
+	
+	/* Indicate we're busy... */
+	DataStore.Set("Busy.ComputingNextColumn", true);
+	
+	/* Kick off a notification to recompute the XQuery Path */
+	DataStore.Notify("Action.ComputeXQPath");
+
+
+	/* Find the first unselected column */	
+	selectedCells = DataStore.Get("PathFinder.BrowserView.selectedCells");
+	for (c=0; ; ++c)
+	{
+		selection = selectedCells[c];
+		
+		if (selection == null) break;	// leaf node
+		if (selection[0] != null)		// multiple selection
+			selection = selection[0];
+		if (selection &lt; 0)			// no selection
+		{
+			for (d=c+1; ; ++d)			// clear excess columns
+			{
+				columnData = DataStore.Get("PathFinder.BrowserView.data." + d);
+				if (columnData == null) break;
+				DataStore.Set("PathFinder.BrowserView.data." + d, null);
+			}
+			break;
+		}
+	}
+	
+	/* Find the html corresponding to the current selection */
+	if (c == 0)
+	{
+		html = DataStore.Get("Data.HTML");
+	}
+	else
+	{
+		selectedColumn = c - 1;
+		selection = selectedCells[selectedColumn];
+		if (selection[0] != null) selection = selection[0];		// multiple selection
+
+		columnData = DataStore.Get("PathFinder.BrowserView.data." + selectedColumn);
+
+		selectedItem = columnData[selection];
+		if (selectedItem == null) selectedItem = columnData;	// single item in column
+		html = selectedItem.representedObject;
+	}
+
+	/* Display the HTML text and the next column */
+	htmlText = HTMLToText(html);
+	DataStore.Set("PathFinder.HTMLSourceTextView.objectValue", htmlText);
+
+	newColumnData = HTMLToBrowserArray(html);
+	DataStore.Set("PathFinder.BrowserView.data." + c, newColumnData);
+
+	DataStore.Set("Busy.ComputingNextColumn", false);
+</trigger>
+
+
+<trigger language="JavaScript" path="Action.ComputeXQPath" task="true">
+	/*	Compute the XQuery path (shown in the lower text field) based
+		on the current cell selection.
+	*/
+	
+	/* Indicate we are busy */
+	DataStore.Set("Busy.ComputingXQPath", true);
+	
+	url = DataStore.Get("PathFinder.URLTextField.objectValue");
+	
+	/* Determine if we are going a GET or POST */
+	isPost = DataStore.Get("PathFinder.PostCheckbox.objectValue");
+	var path;
+	if (isPost)
+		path = 'http-post("' + url + '")/DATA';
+	else
+		path = 'document("' + url + '")';
+	
+	/* Read the selected cells and create the path */
+	selectedCells = DataStore.Get("PathFinder.BrowserView.selectedCells");
+	data = DataStore.Get("PathFinder.BrowserView.data");
+
+	for(c = 0; ; ++c)
+	{
+		selection = selectedCells[c];
+
+		if (selection == null) break;	// leaf node		
+		if (selection[0] != null)		// multiple selection
+			selection = selection[0];
+		if (selection &lt; 0) break;		// no selection
+		
+		columnData = data[c];
+
+		selectedItem = columnData[selection];
+		if (selectedItem == null) selectedItem = columnData;
+		name = selectedItem.value;
+
+		index = ComputeIndex(columnData, selection + 1, name);
+
+		if (name == "div")
+            name = ":" + name
+            
+		if (index == 0)
+			path = path + "/" + name;
+		else
+			path = path + "/" + name + "[" + index + "]";
+	}
+
+	/* Store the computed path in the text field */
+	DataStore.Set("PathFinder.XQPath.objectValue", path);
+	
+	/* Signal that we are done computing the path */
+	DataStore.Set("Busy.ComputingXQPath", false);
+</trigger>
+
+
+<trigger language="JavaScript" path="PathFinder.HTMLSourceTextView.objectValue" task="true">
+	/*  When the HTML changes, re-render it if the "render" checkbox is checked.
+		Note that this has task="true", so that if we get several of these triggers
+		in rapid succession, only the last one has any visible effect.
+	*/
+	isChecked = DataStore.Get("PathFinder.RenderCheckbox.objectValue");
+	if (isChecked == 1)
+	{
+		DataStore.Notify("Action.Render");
+	}
+</trigger>
+
+
+<trigger language="JavaScript" path="PathFinder.RenderCheckbox">
+	/*	If the value of the "render" checkbox changes, update the
+		rendered HTML.
+	*/
+	isChecked = DataStore.Get("PathFinder.RenderCheckbox.objectValue");
+	if (isChecked == 1)
+	{
+		DataStore.Notify("Action.Render");
+	}
+</trigger>
+
+
+<trigger language="XQuery" path="Action.Render"
+      inputs="htmlSource=PathFinder.HTMLSourceTextView.valueAsString"
+	  output="PathFinder.HTMLView.htmlData">
+	{-- This trigger is called to render whatever HTML is in the HTML
+		text view. We just take its value and send it off to the
+		HTMLView.
+	--}
+	let $htmlData := $htmlSource/data()
+    let $head := data-match-ignore-case($htmlData, "head", "/head")
+    let $charset := data-match-ignore-case($head, "charset=", '"')
+    let $charset := if-empty($charset, "utf-8")
+    return string-to-encoded-data($htmlSource, $charset)
+</trigger>
+
+
+<trigger language="XQuery" path="Busy.ComputingNextColumn"
+	notify="Action.CheckWhetherBusy">
+	{-- We just want to cause the CheckWhetherBusy trigger to run, but
+		XQueries must return a value, so we just return 1.
+	--}
+	1
+</trigger>
+
+
+<trigger language="XQuery" path="Busy.ComputingXQPath"
+	notify="Action.CheckWhetherBusy">
+	{-- We just want to cause the CheckWhetherBusy trigger to run, but
+		XQueries must return a value, so we just return 1.
+	--}
+	1
+</trigger>
+
+
+<trigger language="XQuery" path="Action.CheckWhetherBusy"
+	inputs="computingNextColumn=Busy.ComputingNextColumn,
+		computingXQPath=Busy.ComputingXQPath,
+		renderingHTML=Busy.RenderingHTML"
+	output="PathFinder.BusyIndicator.animating">
+	{-- We want the "busy" indicator to run if we are either busy
+		computing the next column, or busy computing the XQuery path.
+	--}
+
+	$computingNextColumn or $computingXQPath or $renderingHTML
+</trigger>
+
+
+</triggers>
+
+
+</channel>
+

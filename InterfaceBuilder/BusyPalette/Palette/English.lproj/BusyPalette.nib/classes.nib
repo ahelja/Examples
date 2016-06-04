@@ -1,0 +1,22 @@
+{
+    IBClasses = (
+        {
+            CLASS = BusyPalette; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                checkBoxView = NSButton; 
+                formatterImageView = NSImageView; 
+                menuImageView = NSImageView; 
+            }; 
+            SUPERCLASS = IBPalette; 
+        }, 
+        {
+            CLASS = ExpressionFormatter; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSNumberFormatter; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NiftyMenuItem; LANGUAGE = ObjC; SUPERCLASS = NSMenuItem; }
+    ); 
+    IBVersion = 1; 
+}

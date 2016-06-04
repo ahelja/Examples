@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B86001BDB6411CA292A /* Animator.java in Sources */ = {isa = PBXBuildFile; fileRef = 00E68290FEC88D7311DB9C8B /* Animator.java */; };
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+		F58D7FAE0381920D014B2308 /* example2.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F978903818D110193DE26 /* example2.html */; };
+		F58D7FAF0381920D014B2308 /* example3.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F978A03818D110193DE26 /* example3.html */; };
+		F58D7FB00381920D014B2308 /* example4.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F978B03818D110193DE26 /* example4.html */; };
+		F58D7FB203819239014B2308 /* 0.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979003818E320193DE26 /* 0.au */; };
+		F58D7FB303819239014B2308 /* 1.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979103818E320193DE26 /* 1.au */; };
+		F58D7FB403819239014B2308 /* 2.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979203818E320193DE26 /* 2.au */; };
+		F58D7FB503819239014B2308 /* 3.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979303818E320193DE26 /* 3.au */; };
+		F58D7FB603819239014B2308 /* 4.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979403818E320193DE26 /* 4.au */; };
+		F58D7FB703819239014B2308 /* 5.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979503818E320193DE26 /* 5.au */; };
+		F58D7FB803819239014B2308 /* 6.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979603818E320193DE26 /* 6.au */; };
+		F58D7FB903819239014B2308 /* 7.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979703818E320193DE26 /* 7.au */; };
+		F58D7FBA03819239014B2308 /* 8.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979803818E320193DE26 /* 8.au */; };
+		F58D7FBB03819239014B2308 /* 9.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979903818E320193DE26 /* 9.au */; };
+		F58D7FBC03819239014B2308 /* spacemusic.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979A03818E320193DE26 /* spacemusic.au */; };
+		F58D7FBE0381925E014B2308 /* loading-msg.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A703818E3F0193DE26 /* loading-msg.gif */; };
+		F58D7FC003819290014B2308 /* T1.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979D03818E3F0193DE26 /* T1.gif */; };
+		F58D7FC103819290014B2308 /* T10.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979E03818E3F0193DE26 /* T10.gif */; };
+		F58D7FC203819290014B2308 /* T2.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F979F03818E3F0193DE26 /* T2.gif */; };
+		F58D7FC303819290014B2308 /* T3.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A003818E3F0193DE26 /* T3.gif */; };
+		F58D7FC403819290014B2308 /* T4.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A103818E3F0193DE26 /* T4.gif */; };
+		F58D7FC503819290014B2308 /* T5.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A203818E3F0193DE26 /* T5.gif */; };
+		F58D7FC603819290014B2308 /* T6.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A303818E3F0193DE26 /* T6.gif */; };
+		F58D7FC703819290014B2308 /* T7.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A403818E3F0193DE26 /* T7.gif */; };
+		F58D7FC803819290014B2308 /* T8.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A503818E3F0193DE26 /* T8.gif */; };
+		F58D7FC903819290014B2308 /* T9.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A603818E3F0193DE26 /* T9.gif */; };
+		F58D7FCB038192B3014B2308 /* T1.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97A903818E3F0193DE26 /* T1.gif */; };
+		F58D7FCC038192B3014B2308 /* T2.gif in CopyFiles */ = {isa = PBXBuildFile; fileRef = F57F97AA03818E3F0193DE26 /* T2.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Animator;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+				F58D7FAE0381920D014B2308 /* example2.html in CopyFiles */,
+				F58D7FAF0381920D014B2308 /* example3.html in CopyFiles */,
+				F58D7FB00381920D014B2308 /* example4.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58D7FB103819228014B2308 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Animator/audio;
+			dstSubfolderSpec = 16;
+			files = (
+				F58D7FB203819239014B2308 /* 0.au in CopyFiles */,
+				F58D7FB303819239014B2308 /* 1.au in CopyFiles */,
+				F58D7FB403819239014B2308 /* 2.au in CopyFiles */,
+				F58D7FB503819239014B2308 /* 3.au in CopyFiles */,
+				F58D7FB603819239014B2308 /* 4.au in CopyFiles */,
+				F58D7FB703819239014B2308 /* 5.au in CopyFiles */,
+				F58D7FB803819239014B2308 /* 6.au in CopyFiles */,
+				F58D7FB903819239014B2308 /* 7.au in CopyFiles */,
+				F58D7FBA03819239014B2308 /* 8.au in CopyFiles */,
+				F58D7FBB03819239014B2308 /* 9.au in CopyFiles */,
+				F58D7FBC03819239014B2308 /* spacemusic.au in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58D7FBD03819247014B2308 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Animator/images;
+			dstSubfolderSpec = 16;
+			files = (
+				F58D7FBE0381925E014B2308 /* loading-msg.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58D7FBF0381926F014B2308 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Animator/images/Beans;
+			dstSubfolderSpec = 16;
+			files = (
+				F58D7FC003819290014B2308 /* T1.gif in CopyFiles */,
+				F58D7FC103819290014B2308 /* T10.gif in CopyFiles */,
+				F58D7FC203819290014B2308 /* T2.gif in CopyFiles */,
+				F58D7FC303819290014B2308 /* T3.gif in CopyFiles */,
+				F58D7FC403819290014B2308 /* T4.gif in CopyFiles */,
+				F58D7FC503819290014B2308 /* T5.gif in CopyFiles */,
+				F58D7FC603819290014B2308 /* T6.gif in CopyFiles */,
+				F58D7FC703819290014B2308 /* T7.gif in CopyFiles */,
+				F58D7FC803819290014B2308 /* T8.gif in CopyFiles */,
+				F58D7FC903819290014B2308 /* T9.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58D7FCA03819298014B2308 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Animator/images/SimpleAnimation;
+			dstSubfolderSpec = 16;
+			files = (
+				F58D7FCB038192B3014B2308 /* T1.gif in CopyFiles */,
+				F58D7FCC038192B3014B2308 /* T2.gif in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68290FEC88D7311DB9C8B /* Animator.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Animator.java; sourceTree = "<group>"; };
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F57F978903818D110193DE26 /* example2.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example2.html; sourceTree = "<group>"; };
+		F57F978A03818D110193DE26 /* example3.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example3.html; sourceTree = "<group>"; };
+		F57F978B03818D110193DE26 /* example4.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example4.html; sourceTree = "<group>"; };
+		F57F979003818E320193DE26 /* 0.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 0.au; sourceTree = "<group>"; };
+		F57F979103818E320193DE26 /* 1.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 1.au; sourceTree = "<group>"; };
+		F57F979203818E320193DE26 /* 2.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 2.au; sourceTree = "<group>"; };
+		F57F979303818E320193DE26 /* 3.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 3.au; sourceTree = "<group>"; };
+		F57F979403818E320193DE26 /* 4.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 4.au; sourceTree = "<group>"; };
+		F57F979503818E320193DE26 /* 5.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 5.au; sourceTree = "<group>"; };
+		F57F979603818E320193DE26 /* 6.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 6.au; sourceTree = "<group>"; };
+		F57F979703818E320193DE26 /* 7.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 7.au; sourceTree = "<group>"; };
+		F57F979803818E320193DE26 /* 8.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 8.au; sourceTree = "<group>"; };
+		F57F979903818E320193DE26 /* 9.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = 9.au; sourceTree = "<group>"; };
+		F57F979A03818E320193DE26 /* spacemusic.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = spacemusic.au; sourceTree = "<group>"; };
+		F57F979D03818E3F0193DE26 /* T1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T1.gif; sourceTree = "<group>"; };
+		F57F979E03818E3F0193DE26 /* T10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T10.gif; sourceTree = "<group>"; };
+		F57F979F03818E3F0193DE26 /* T2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T2.gif; sourceTree = "<group>"; };
+		F57F97A003818E3F0193DE26 /* T3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T3.gif; sourceTree = "<group>"; };
+		F57F97A103818E3F0193DE26 /* T4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T4.gif; sourceTree = "<group>"; };
+		F57F97A203818E3F0193DE26 /* T5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T5.gif; sourceTree = "<group>"; };
+		F57F97A303818E3F0193DE26 /* T6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T6.gif; sourceTree = "<group>"; };
+		F57F97A403818E3F0193DE26 /* T7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T7.gif; sourceTree = "<group>"; };
+		F57F97A503818E3F0193DE26 /* T8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T8.gif; sourceTree = "<group>"; };
+		F57F97A603818E3F0193DE26 /* T9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T9.gif; sourceTree = "<group>"; };
+		F57F97A703818E3F0193DE26 /* loading-msg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-msg.gif"; sourceTree = "<group>"; };
+		F57F97A903818E3F0193DE26 /* T1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T1.gif; sourceTree = "<group>"; };
+		F57F97AA03818E3F0193DE26 /* T2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = T2.gif; sourceTree = "<group>"; };
+		F598D76A038192E0016F49E8 /* Animator */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = Animator; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				00E68290FEC88D7311DB9C8B /* Animator.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				F57F978903818D110193DE26 /* example2.html */,
+				F57F978A03818D110193DE26 /* example3.html */,
+				F57F978B03818D110193DE26 /* example4.html */,
+				F57F978F03818E320193DE26 /* audio */,
+				F57F979B03818E3F0193DE26 /* images */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F598D76A038192E0016F49E8 /* Animator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F57F978F03818E320193DE26 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				F57F979003818E320193DE26 /* 0.au */,
+				F57F979103818E320193DE26 /* 1.au */,
+				F57F979203818E320193DE26 /* 2.au */,
+				F57F979303818E320193DE26 /* 3.au */,
+				F57F979403818E320193DE26 /* 4.au */,
+				F57F979503818E320193DE26 /* 5.au */,
+				F57F979603818E320193DE26 /* 6.au */,
+				F57F979703818E320193DE26 /* 7.au */,
+				F57F979803818E320193DE26 /* 8.au */,
+				F57F979903818E320193DE26 /* 9.au */,
+				F57F979A03818E320193DE26 /* spacemusic.au */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		F57F979B03818E3F0193DE26 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F57F979C03818E3F0193DE26 /* Beans */,
+				F57F97A703818E3F0193DE26 /* loading-msg.gif */,
+				F57F97A803818E3F0193DE26 /* SimpleAnimation */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		F57F979C03818E3F0193DE26 /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				F57F979D03818E3F0193DE26 /* T1.gif */,
+				F57F979E03818E3F0193DE26 /* T10.gif */,
+				F57F979F03818E3F0193DE26 /* T2.gif */,
+				F57F97A003818E3F0193DE26 /* T3.gif */,
+				F57F97A103818E3F0193DE26 /* T4.gif */,
+				F57F97A203818E3F0193DE26 /* T5.gif */,
+				F57F97A303818E3F0193DE26 /* T6.gif */,
+				F57F97A403818E3F0193DE26 /* T7.gif */,
+				F57F97A503818E3F0193DE26 /* T8.gif */,
+				F57F97A603818E3F0193DE26 /* T9.gif */,
+			);
+			path = Beans;
+			sourceTree = "<group>";
+		};
+		F57F97A803818E3F0193DE26 /* SimpleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F57F97A903818E3F0193DE26 /* T1.gif */,
+				F57F97AA03818E3F0193DE26 /* T2.gif */,
+			);
+			path = SimpleAnimation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C23422E08DF2E8D008B0BD4 /* Build configuration list for PBXProject "Animator" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* Animator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B86001BDB6411CA292A /* Animator.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* Animator */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C23422A08DF2E8D008B0BD4 /* Build configuration list for PBXToolTarget "Animator" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F58D7FB103819228014B2308 /* CopyFiles */,
+				F58D7FBD03819247014B2308 /* CopyFiles */,
+				F58D7FBF0381926F014B2308 /* CopyFiles */,
+				F58D7FCA03819298014B2308 /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Animator;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = Animator;
+			productInstallPath = /Developer/Examples/Java/Applets;
+			productName = JavaAWTApplet;
+			productReference = F598D76A038192E0016F49E8 /* Animator */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C23422B08DF2E8D008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Animator;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C23422C08DF2E8D008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Animator;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C23422F08DF2E8D008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C23423008DF2E8D008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C23422A08DF2E8D008B0BD4 /* Build configuration list for PBXToolTarget "Animator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23422B08DF2E8D008B0BD4 /* Debug */,
+				4C23422C08DF2E8D008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C23422E08DF2E8D008B0BD4 /* Build configuration list for PBXProject "Animator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23422F08DF2E8D008B0BD4 /* Debug */,
+				4C23423008DF2E8D008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

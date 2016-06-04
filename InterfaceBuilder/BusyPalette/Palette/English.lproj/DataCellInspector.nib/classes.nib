@@ -1,0 +1,12 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {disconnect = id; }; 
+            CLASS = DataCellInspector; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = IBInspector; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

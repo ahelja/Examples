@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_framework?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitFramework"></a>
+<h1>AudioUnit Framework</h1>
+
+<p>	The <tt>AudioUnit.framework</tt> publishes the API for applications that want to
+use Audio Units. These headers define the expected behaviour of Audio Units.</p>
+
+<dl>
+<dt><tt>AudioUnit.h</tt></dt>
+<dt><tt>AudioUnit.r</tt></dt>
+<dd>
+	Are umbrella headers that includes all of the headers that are found in this framework.
+</dd>
+
+<dt><tt>AUComponent.h</tt></dt>
+<dd>
+	Defines the complete API for the Audio Unit component, including component
+types, functions declarations, etc.
+</dd>
+<dt><tt>AUNTComponent.h</tt></dt>
+<dd>
+	Defines those API that are unique to the first version (V1) of the Audio Unit
+API, whereas AUComponent.h describes version 2 (V2). The differences between
+these two are discussed throughout this document and are also outlined
+specifically below.
+</dd>
+<dt><tt>AUComponent.r</tt></dt>
+<dt><tt>AUNTComponent.r</tt></dt>
+<dd>
+	Contain resource definitions that are needed when building custom
+Audio Units.
+</dd>
+<dt><tt>AudioUnitProperties.h</tt></dt>
+<dd>
+	Defines the properties, and supporting structures, that are used by
+Audio Units.
+</dd>
+<dt><tt>AudioUnitParameters.h</tt></dt>
+<dd>
+	Defines constants for the parameters that are defined by the Audio Units that
+Apple ships.
+</dd>
+<dt><tt>MusicDevice.h</tt></dt>
+<dd>
+	Defines the additional API that adds to the base-level Audio Unit
+extensions that are appropriate for Software Synthesizers.
+</dd>
+<dt><tt>AudioOutputUnit.h</tt></dt>
+<dd>
+	Defines additional selectors for Audio Units that provide the semantic for
+starting and stopping a processing graph.
+</dd>
+<dt><tt>AudioUnitCarbonView.h</tt></dt>
+<dt><tt>AudioUnitCarbonView.r</tt></dt>
+<dd>
+	These provide the API (and resource definitions for implementations of the
+API) to present a view that is associated with an Audio Unit. This includes  a
+generic view component that is provided by Apple for effect units.
+</dd>
+<dt><tt>AudioCodec.h</tt></dt>
+<dd>
+	AudioCodecs are another type of component. Essentially where Audio Units will
+deal primarily with PCM audio data,  AudioCodecs' primary role is to do audio
+data transformations (for example an decoding an AAC stream into PCM audio
+data). These components are dealt with in a separate document.
+</dd>
+</dl>
+
+
+</body>
+</html>

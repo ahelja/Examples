@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {nameCancel = id; nameOK = id; }; 
+            CLASS = AwardView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {nameField = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

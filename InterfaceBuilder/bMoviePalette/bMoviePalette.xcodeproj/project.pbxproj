@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		253DB5AD04D7379F00BC8F8F /* MovieEditorPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = F87941EE007FBE6704CA0CBA /* MovieEditorPalette.h */; };
+		253DB5AE04D7379F00BC8F8F /* MovieEditingController.h in Headers */ = {isa = PBXBuildFile; fileRef = F87941F5007FBEBB04CA0CBA /* MovieEditingController.h */; };
+		253DB5AF04D7379F00BC8F8F /* MyMovie.h in Headers */ = {isa = PBXBuildFile; fileRef = F87941F7007FBEBB04CA0CBA /* MyMovie.h */; };
+		253DB5B004D7379F00BC8F8F /* TimeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F85581520082919F04CA0CBA /* TimeFormatter.h */; };
+		253DB5B104D7379F00BC8F8F /* SoundFileWell.h in Headers */ = {isa = PBXBuildFile; fileRef = F80B56900087787304CA0CBA /* SoundFileWell.h */; };
+		253DB5B304D7379F00BC8F8F /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = 0259C583FE90428111CA0C5A /* palette.table */; };
+		253DB5B404D7379F00BC8F8F /* MovieEditorPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = F87941F0007FBE6704CA0CBA /* MovieEditorPalette.nib */; };
+		253DB5B504D7379F00BC8F8F /* MovieController.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F87941FD007FC07604CA0CBA /* MovieController.tiff */; };
+		253DB5B604D7379F00BC8F8F /* music.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F8D29AB50098DADD04CA0CBA /* music.tiff */; };
+		253DB5B704D7379F00BC8F8F /* QT.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F8D29AB70098DDE004CA0CBA /* QT.tiff */; };
+		253DB5B804D7379F00BC8F8F /* MovieEditorPalette.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F8E16EA90098E2FE04CA0CBA /* MovieEditorPalette.tiff */; };
+		253DB5BA04D7379F00BC8F8F /* MovieEditorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = F87941EF007FBE6704CA0CBA /* MovieEditorPalette.m */; };
+		253DB5BB04D7379F00BC8F8F /* MovieEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F87941F6007FBEBB04CA0CBA /* MovieEditingController.m */; };
+		253DB5BC04D7379F00BC8F8F /* MyMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F87941F8007FBEBB04CA0CBA /* MyMovie.m */; };
+		253DB5BD04D7379F00BC8F8F /* TimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F85581530082919F04CA0CBA /* TimeFormatter.m */; };
+		253DB5BE04D7379F00BC8F8F /* SoundFileWell.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B56910087787304CA0CBA /* SoundFileWell.m */; };
+		253DB5C004D7379F00BC8F8F /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */; };
+		253DB5C104D7379F00BC8F8F /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87941FF007FC1BE04CA0CBA /* QuickTime.framework */; };
+		253DB5C204D7379F00BC8F8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80AA5B200C5928F04CA0CBA /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0259C583FE90428111CA0C5A /* palette.table */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = palette.table; sourceTree = "<group>"; };
+		253DB5C504D7379F00BC8F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		253DB5C604D7379F00BC8F8F /* bMoviePalette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bMoviePalette.palette; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
+		F80AA5B200C5928F04CA0CBA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		F80B56900087787304CA0CBA /* SoundFileWell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SoundFileWell.h; sourceTree = "<group>"; };
+		F80B56910087787304CA0CBA /* SoundFileWell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SoundFileWell.m; sourceTree = "<group>"; };
+		F85581520082919F04CA0CBA /* TimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TimeFormatter.h; sourceTree = "<group>"; };
+		F85581530082919F04CA0CBA /* TimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TimeFormatter.m; sourceTree = "<group>"; };
+		F87941EE007FBE6704CA0CBA /* MovieEditorPalette.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MovieEditorPalette.h; sourceTree = "<group>"; };
+		F87941EF007FBE6704CA0CBA /* MovieEditorPalette.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MovieEditorPalette.m; sourceTree = "<group>"; };
+		F87941F1007FBE6704CA0CBA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MovieEditorPalette.nib; sourceTree = "<group>"; };
+		F87941F5007FBEBB04CA0CBA /* MovieEditingController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MovieEditingController.h; sourceTree = "<group>"; };
+		F87941F6007FBEBB04CA0CBA /* MovieEditingController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MovieEditingController.m; sourceTree = "<group>"; };
+		F87941F7007FBEBB04CA0CBA /* MyMovie.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyMovie.h; sourceTree = "<group>"; };
+		F87941F8007FBEBB04CA0CBA /* MyMovie.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyMovie.m; sourceTree = "<group>"; };
+		F87941FD007FC07604CA0CBA /* MovieController.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MovieController.tiff; sourceTree = "<group>"; };
+		F87941FF007FC1BE04CA0CBA /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		F8C13B6700C5A8CC04CA0CBA /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		F8D29AB50098DADD04CA0CBA /* music.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = music.tiff; sourceTree = "<group>"; };
+		F8D29AB70098DDE004CA0CBA /* QT.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = QT.tiff; sourceTree = "<group>"; };
+		F8E16EA90098E2FE04CA0CBA /* MovieEditorPalette.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MovieEditorPalette.tiff; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		253DB5BF04D7379F00BC8F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253DB5C004D7379F00BC8F8F /* InterfaceBuilder.framework in Frameworks */,
+				253DB5C104D7379F00BC8F8F /* QuickTime.framework in Frameworks */,
+				253DB5C204D7379F00BC8F8F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* MovieEditorPalette */ = {
+			isa = PBXGroup;
+			children = (
+				253DB5C504D7379F00BC8F8F /* Info.plist */,
+				F87941F5007FBEBB04CA0CBA /* MovieEditingController.h */,
+				F87941F6007FBEBB04CA0CBA /* MovieEditingController.m */,
+				F87941EE007FBE6704CA0CBA /* MovieEditorPalette.h */,
+				F87941EF007FBE6704CA0CBA /* MovieEditorPalette.m */,
+				F87941F7007FBEBB04CA0CBA /* MyMovie.h */,
+				F87941F8007FBEBB04CA0CBA /* MyMovie.m */,
+				F8C13B6700C5A8CC04CA0CBA /* README.rtf */,
+				F80B56900087787304CA0CBA /* SoundFileWell.h */,
+				F80B56910087787304CA0CBA /* SoundFileWell.m */,
+				F85581520082919F04CA0CBA /* TimeFormatter.h */,
+				F85581530082919F04CA0CBA /* TimeFormatter.m */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				0259C582FE90428111CA0C5A /* Resources */,
+			);
+			name = MovieEditorPalette;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0259C583FE90428111CA0C5A /* palette.table */,
+				F87941F0007FBE6704CA0CBA /* MovieEditorPalette.nib */,
+				F87941FD007FC07604CA0CBA /* MovieController.tiff */,
+				F8D29AB50098DADD04CA0CBA /* music.tiff */,
+				F8D29AB70098DDE004CA0CBA /* QT.tiff */,
+				F8E16EA90098E2FE04CA0CBA /* MovieEditorPalette.tiff */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				253DB5C604D7379F00BC8F8F /* bMoviePalette.palette */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F80AA5B200C5928F04CA0CBA /* Cocoa.framework */,
+				2E58F362FFB2327711CA0CBA /* InterfaceBuilder.framework */,
+				F87941FF007FC1BE04CA0CBA /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		253DB5AC04D7379F00BC8F8F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253DB5AD04D7379F00BC8F8F /* MovieEditorPalette.h in Headers */,
+				253DB5AE04D7379F00BC8F8F /* MovieEditingController.h in Headers */,
+				253DB5AF04D7379F00BC8F8F /* MyMovie.h in Headers */,
+				253DB5B004D7379F00BC8F8F /* TimeFormatter.h in Headers */,
+				253DB5B104D7379F00BC8F8F /* SoundFileWell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		253DB5AB04D7379F00BC8F8F /* bMoviePalette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C017325E08A95E46009534D0 /* Build configuration list for PBXNativeTarget "bMoviePalette" */;
+			buildPhases = (
+				253DB5AC04D7379F00BC8F8F /* Headers */,
+				253DB5B204D7379F00BC8F8F /* Resources */,
+				253DB5B904D7379F00BC8F8F /* Sources */,
+				253DB5BF04D7379F00BC8F8F /* Frameworks */,
+				253DB5C304D7379F00BC8F8F /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = bMoviePalette;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = MovieEditorPalette;
+			productReference = 253DB5C604D7379F00BC8F8F /* bMoviePalette.palette */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C017326208A95E46009534D0 /* Build configuration list for PBXProject "bMoviePalette" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* MovieEditorPalette */;
+			projectDirPath = "";
+			targets = (
+				253DB5AB04D7379F00BC8F8F /* bMoviePalette */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		253DB5B204D7379F00BC8F8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253DB5B304D7379F00BC8F8F /* palette.table in Resources */,
+				253DB5B404D7379F00BC8F8F /* MovieEditorPalette.nib in Resources */,
+				253DB5B504D7379F00BC8F8F /* MovieController.tiff in Resources */,
+				253DB5B604D7379F00BC8F8F /* music.tiff in Resources */,
+				253DB5B704D7379F00BC8F8F /* QT.tiff in Resources */,
+				253DB5B804D7379F00BC8F8F /* MovieEditorPalette.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		253DB5C304D7379F00BC8F8F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		253DB5B904D7379F00BC8F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253DB5BA04D7379F00BC8F8F /* MovieEditorPalette.m in Sources */,
+				253DB5BB04D7379F00BC8F8F /* MovieEditingController.m in Sources */,
+				253DB5BC04D7379F00BC8F8F /* MyMovie.m in Sources */,
+				253DB5BD04D7379F00BC8F8F /* TimeFormatter.m in Sources */,
+				253DB5BE04D7379F00BC8F8F /* SoundFileWell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F87941F0007FBE6704CA0CBA /* MovieEditorPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F87941F1007FBE6704CA0CBA /* English */,
+			);
+			name = MovieEditorPalette.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C017325F08A95E46009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				PRODUCT_NAME = bMoviePalette;
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C017326008A95E46009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				PRODUCT_NAME = bMoviePalette;
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Release;
+		};
+		C017326308A95E46009534D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C017326408A95E46009534D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C017325E08A95E46009534D0 /* Build configuration list for PBXNativeTarget "bMoviePalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017325F08A95E46009534D0 /* Debug */,
+				C017326008A95E46009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017326208A95E46009534D0 /* Build configuration list for PBXProject "bMoviePalette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017326308A95E46009534D0 /* Debug */,
+				C017326408A95E46009534D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

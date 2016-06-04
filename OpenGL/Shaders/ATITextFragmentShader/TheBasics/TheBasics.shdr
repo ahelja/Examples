@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>creatorShortVersionString</key>
+	<string>1.1.0</string>
+	<key>primitive</key>
+	<string>2</string>
+	<key>programTabViewIndex</key>
+	<string>1</string>
+	<key>renderingPassList</key>
+	<dict>
+		<key>Default Rendering Pass</key>
+		<dict>
+			<key>baseColor</key>
+			<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+			<key>fragmentProgramExecuter</key>
+			<dict>
+				<key>language</key>
+				<integer>33280</integer>
+				<key>programString</key>
+				<string>!!ATIfs1.0
+
+# Basic Passthrough by James A. McCombe, Tue Jun 17 2003
+#
+# Very basic example of a fragment program.  Simply samples texture unit 0 and
+# modulates with the interpolated vertex color
+#
+# Texture units:
+#   Unit 0 - Base texture map
+
+StartOutputPass;
+	SampleMap r0, t0.str;    # Sample the texture at the modified texture coordinates
+	
+	MUL r0, r0, color0;
+EndPass;</string>
+				<key>symbolTable</key>
+				<dict/>
+			</dict>
+			<key>multiTextureList</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33984, 1, 34168, 5890, 8448]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>textureFilename</key>
+					<string>Rock Base.tga</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33985, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33986, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33987, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33988, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33989, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33990, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33991, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+			</dict>
+			<key>opacity</key>
+			<string>1.000000</string>
+			<key>vertexProgramExecuter</key>
+			<dict>
+				<key>programString</key>
+				<string>!!ARBvp1.0
+
+ATTRIB vertexPosition  = vertex.position;
+OUTPUT outputPosition  = result.position;
+
+# Transform the vertex by the modelview/projection matrix
+DP4    outputPosition.x, state.matrix.mvp.row[0], vertexPosition;
+DP4    outputPosition.y, state.matrix.mvp.row[1], vertexPosition;
+DP4    outputPosition.z, state.matrix.mvp.row[2], vertexPosition;
+DP4    outputPosition.w, state.matrix.mvp.row[3], vertexPosition;
+
+# Pass the color and texture coordinate through
+MOV    result.color, vertex.color;
+MOV    result.texcoord[0], vertex.texcoord[0];
+MOV    result.texcoord[1], vertex.texcoord[1];
+
+END</string>
+				<key>symbolTable</key>
+				<dict>
+					<key>outputPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vertexPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>windowFrame</key>
+	<string>{{4.42676, 0}, {0, 0}}</string>
+</dict>
+</plist>

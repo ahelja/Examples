@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {saveAction = id; }; 
+            CLASS = BackgroundFetchingAppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {browserDoubleClick = id; browserSingleClick = id; reloadData = id; }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fsBrowser = id; nodeIconWell = id; nodeInspector = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

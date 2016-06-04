@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeBuildStyle = 4A9504CCFFE6A4B311CA0CBA /* Development */;
+		activeExecutable = 6B9EB7DEC5B0417500721F6F /* DOMHTMLEditor */;
+		activeTarget = 8D1107260486CEB800E47090 /* DOMHTMLEditor */;
+		codeSenseManager = 6B9EB7F3C5B0418900721F6F /* Code sense */;
+		executables = (
+			6B9EB7DEC5B0417500721F6F /* DOMHTMLEditor */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48.1626,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = "-978304651";
+			PBXWorkspaceStateSaveDate = "-978304651";
+		};
+		sourceControlManager = 6B9EB7F2C5B0418900721F6F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	6B9EB7DEC5B0417500721F6F /* DOMHTMLEditor */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = DOMHTMLEditor;
+		sourceDirectories = (
+		);
+	};
+	6B9EB7F2C5B0418900721F6F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	6B9EB7F3C5B0418900721F6F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8D1107260486CEB800E47090 /* DOMHTMLEditor */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB7DEC5B0417500721F6F /* DOMHTMLEditor */,
+		);
+	};
+}

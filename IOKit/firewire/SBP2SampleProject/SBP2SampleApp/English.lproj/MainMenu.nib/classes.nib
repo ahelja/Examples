@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = LUNController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fWindow = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {selectItem = id; }; 
+            CLASS = SelectorController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fBrowser = id; fWindow = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

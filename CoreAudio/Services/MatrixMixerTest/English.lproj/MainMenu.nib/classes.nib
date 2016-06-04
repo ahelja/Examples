@@ -1,0 +1,83 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addFile = id; 
+                automateOff = id; 
+                automateOn = id; 
+                enableInput = id; 
+                enableOutput = id; 
+                myAction = id; 
+                myAction1 = id; 
+                myAction2 = id; 
+                myAction3 = id; 
+                play = id; 
+                setInputVolume = id; 
+                setMasterVolume = id; 
+                setMatrixVolume = id; 
+                setOutputVolume = id; 
+                stop = id; 
+            }; 
+            CLASS = MixerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                meterIn0 = id; 
+                meterIn1 = id; 
+                meterIn2 = id; 
+                meterIn3 = id; 
+                meterInPre0 = id; 
+                meterInPre1 = id; 
+                meterInPre2 = id; 
+                meterInPre3 = id; 
+                meterOut0 = id; 
+                meterOut1 = id; 
+                meterOut2 = id; 
+                meterOut3 = id; 
+                meterOut4 = id; 
+                xpmeter11 = id; 
+                xpmeter12 = id; 
+                xpmeter13 = id; 
+                xpmeter14 = id; 
+                xpmeter15 = id; 
+                xpmeter21 = id; 
+                xpmeter22 = id; 
+                xpmeter23 = id; 
+                xpmeter24 = id; 
+                xpmeter25 = id; 
+                xpmeter31 = id; 
+                xpmeter32 = id; 
+                xpmeter33 = id; 
+                xpmeter34 = id; 
+                xpmeter35 = id; 
+                xpmeter41 = id; 
+                xpmeter42 = id; 
+                xpmeter43 = id; 
+                xpmeter44 = id; 
+                xpmeter45 = id; 
+                xpslider11 = id; 
+                xpslider12 = id; 
+                xpslider13 = id; 
+                xpslider14 = id; 
+                xpslider15 = id; 
+                xpslider21 = id; 
+                xpslider22 = id; 
+                xpslider23 = id; 
+                xpslider24 = id; 
+                xpslider25 = id; 
+                xpslider31 = id; 
+                xpslider32 = id; 
+                xpslider33 = id; 
+                xpslider34 = id; 
+                xpslider35 = id; 
+                xpslider41 = id; 
+                xpslider42 = id; 
+                xpslider43 = id; 
+                xpslider44 = id; 
+                xpslider45 = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>#defines</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">#defines</font></h1>
+<br><hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kMIDIDriverTypeID;  name=kMIDIDriverTypeID --><a name="//apple_ref/c/macro/kMIDIDriverTypeID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIDriverTypeID">kMIDIDriverTypeID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>The UUID for MIDI driver plugins.</p>
+<blockquote><pre>#define <!-- a logicalPath="//apple_ref/c/cl/kMIDIDriverTypeID //apple_ref/c/cl/kMIDIDriverTypeID //apple_ref/c/tdef/kMIDIDriverTypeID //apple_ref/c/tag/kMIDIDriverTypeID //apple_ref/c/econst/kMIDIDriverTypeID //apple_ref/c/struct/kMIDIDriverTypeID //apple_ref/c/clconst/kMIDIDriverTypeID" --><font class="type">kMIDIDriverTypeID</font><!-- /a --> \ <!-- a logicalPath="//apple_ref/c/instm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/clm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/intfcm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/func/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/ftmplt/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/defn/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/macro/CFUUIDGetConstantUUIDWithBytes" --><font class="function">CFUUIDGetConstantUUIDWithBytes</font><!-- /a -->(
+    <font class="keyword">NULL</font>, <font class="var">0xEC</font>, <font class="var">0xDE</font>, <font class="number">0x95</font>, <font class="number">0x74</font>, <font class="var">0x0F</font>, <font class="var">0xE4</font>, <font class="number">0x11</font>, <font class="var">0xD4</font>, <font class="var">0xBB</font>, <font class="var">0x1A</font>, 
+    <font class="number">0x00</font>, <font class="number">0x50</font>, <font class="var">0xE4</font>, <font class="var">0xCE</font>, <font class="var">0xA5</font>, <font class="number">0x26</font>) </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>kMIDIDriverTypeID should be entered into your driver's bundle settings
+as follows:
+<br><br></p>
+<pre>
+CFPlugInTypes                   Dictionary      1 key/value pair
+	ECDE9574-0FE4-11D4-BB1A-0050E4CEA526        Array       1 object
+		(this is kMIDIDriverTypeID)<br></pre>
+</dl>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kMIDIDriverInterfaceID;  name=kMIDIDriverInterfaceID --><a name="//apple_ref/c/macro/kMIDIDriverInterfaceID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIDriverInterfaceID">kMIDIDriverInterfaceID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>The UUID for version 1 of the MIDI driver interface.</p>
+<blockquote><pre>#define <!-- a logicalPath="//apple_ref/c/cl/kMIDIDriverInterfaceID //apple_ref/c/cl/kMIDIDriverInterfaceID //apple_ref/c/tdef/kMIDIDriverInterfaceID //apple_ref/c/tag/kMIDIDriverInterfaceID //apple_ref/c/econst/kMIDIDriverInterfaceID //apple_ref/c/struct/kMIDIDriverInterfaceID //apple_ref/c/clconst/kMIDIDriverInterfaceID" --><font class="type">kMIDIDriverInterfaceID</font><!-- /a --> \ <!-- a logicalPath="//apple_ref/c/instm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/clm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/intfcm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/func/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/ftmplt/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/defn/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/macro/CFUUIDGetConstantUUIDWithBytes" --><font class="function">CFUUIDGetConstantUUIDWithBytes</font><!-- /a -->(
+    <font class="keyword">NULL</font>, <font class="number">0x49</font>, <font class="var">0xDF</font>, <font class="var">0xCA</font>, <font class="var">0x9E</font>, <font class="var">0x0F</font>, <font class="var">0xE5</font>, <font class="number">0x11</font>, <font class="var">0xD4</font>, <font class="number">0x95</font>, <font class="var">0x0D</font>, 
+    <font class="number">0x00</font>, <font class="number">0x50</font>, <font class="var">0xE4</font>, <font class="var">0xCE</font>, <font class="var">0xA5</font>, <font class="number">0x26</font>) </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>See the description of the MIDIDriverInterface structure for
+information about different versions of the MIDI driver interface.</p>
+</dl>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kMIDIDriverInterface2ID;  name=kMIDIDriverInterface2ID --><a name="//apple_ref/c/macro/kMIDIDriverInterface2ID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="kMIDIDriverInterface2ID">kMIDIDriverInterface2ID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>The UUID for version 2 of the MIDI driver interface.</p>
+<blockquote><pre>#define <!-- a logicalPath="//apple_ref/c/cl/kMIDIDriverInterface2ID //apple_ref/c/cl/kMIDIDriverInterface2ID //apple_ref/c/tdef/kMIDIDriverInterface2ID //apple_ref/c/tag/kMIDIDriverInterface2ID //apple_ref/c/econst/kMIDIDriverInterface2ID //apple_ref/c/struct/kMIDIDriverInterface2ID //apple_ref/c/clconst/kMIDIDriverInterface2ID" --><font class="type">kMIDIDriverInterface2ID</font><!-- /a --> \ <!-- a logicalPath="//apple_ref/c/instm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/clm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/intfcm/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/func/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/ftmplt/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/defn/CFUUIDGetConstantUUIDWithBytes //apple_ref/c/macro/CFUUIDGetConstantUUIDWithBytes" --><font class="function">CFUUIDGetConstantUUIDWithBytes</font><!-- /a -->(
+    <font class="keyword">NULL</font>, <font class="number">0x43</font>, <font class="var">0xC9</font>, <font class="var">0x8C</font>, <font class="var">0x3C</font>, <font class="number">0x30</font>, <font class="var">0x6C</font>, <font class="number">0x11</font>, <font class="var">0xD5</font>, <font class="var">0xAF</font>, <font class="number">0x73</font>, <font class="number">0x00</font>, <font class="number">0x30</font>, <font class="number">0x65</font>, <font class="var">0xA8</font>, 
+    <font class="number">0x30</font>, <font class="var">0x1E</font>) </pre></blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>See the description of the MIDIDriverInterface structure for
+information about different versions of the MIDI driver interface.
+<br><br>
+The version 2 driver interface is available beginning with CoreMIDI 1.1.</p>
+</dl>
+<p>(Last Updated February 25, 2005)
+</p>
+</body>
+</html>

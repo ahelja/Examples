@@ -1,0 +1,241 @@
+/*
+	These are the additions for the <AudioUnit/...> headers added
+	for the offline render unit
+*/
+
+
+// In AUComponent.h
+	kAudioUnitType_OfflineEffect         = FOUR_CHAR_CODE('auol')
+
+// offline render flags
+	kAudioOfflineUnitRenderAction_Preflight 	= (1 << 5)
+	kAudioOfflineUnitRenderAction_Render	 	= (1 << 6)
+	kAudioOfflineUnitRenderAction_Complete		= (1 << 7)
+
+// offline errors
+	kAudioUnitErr_InvalidOfflineRender		  	= -10848
+
+
+/*
+	Latency and Tail handling:
+	An offline unit should not return latent samples (ie. zero samples at the start
+	because of latency in its processing).. It should also not expect the caller to 
+	handle any tail characteristics of its processing... The caller of an offline unit
+	does NOT know how to deal with either of these properties, so the AU should:
+	(1) Absorb any latent samples at the beginning of its processing
+	(2) Continue to produce output unit the tail of its processing has completed
+
+	An Offline unit can feasibly require any number of input samples for a given
+	number of output samples it is asked to produce at any time. In order to simplify
+	the handling of buffering, the offline unit is restricted to asking its input for
+	no more samples than the MaxFramesPerSlice property allows. It if requires more
+	input, then it can just pull again before returning the output for that slice.
+*/
+
+/*
+	Channelization and other general rendering considerations
+	
+	Channelization:
+	An offline render unit's channel valence handling operates on 
+	the same assumptions as an effect unit.
+
+	If the units does not support the kAudioUnitProperty_SupportedNumChannels
+	property, then it is assumed that the channel numbers on input and output
+	must match.
+	
+	
+
+	Basic sketch of how this works:
+	
+	Host - sets input samples count to process property
+	Call AudioUnitRender:
+	(1) kAudioOfflineUnitRenderAction_Preflight
+		until kAudioUnitStatus_OfflineRenderComplete is set in the ioRenderActionFlags
+		- no data is returned in the audio buffer list
+	(2) kAudioOfflineUnitRenderAction_Render
+		until kAudioUnitStatus_OfflineRenderComplete is set in the ioRenderActionFlags
+		- processed data is returned in the audio buffer list
+	
+	When an offline render unit is called (in either mode) it will 
+	call for input data. The host uses the sample count field in 
+	the render callback to determine from which sample (and how many samples)
+	should be returned by that input callback. This may not be contiguous
+	from one call to the next, and the host may call the input callback more than
+	once for a given slice of output samples if there is random access to the input
+	samples required based on the settings/operational logic of the offline renderer
+	
+	When an offline render has both:
+		- completely read the input data it is required to process
+		- AND has allowed for any tailing of the processing to occur (like a reverb tail)
+	the AU will set the	kAudioUnitStatus_OfflineRenderComplete bit in the ioRenderActionFlags.
+		
+	When the host sees this flag set after calling AudioUnitRender it can determine that is has reached
+	the end of the processing of the AU. At that stage it needs to check the size of the
+	sample data (for the kAudioOfflineUnitRenderAction_Render case) returned in the
+	audio buffer list's: 
+		mBuffer[0].mDataByteSize field
+	
+	This field describes how many bytes are contained in the attached data field (mData) and
+	the AU will reset that size field to describe how many valid bytes of sample data
+	there are in this last pull.
+	
+	
+	For eg:
+		(lets say you are going to get 1050 samples back...)
+		myTimeStamp.mSampleTime = 0;
+		AudioUnitRender (myOfflineUnit, myTimeStamp,... ,512, //this is the num frames to produce...
+		//first call AUR will return noErr and 512 samples
+
+		// second call
+		myTimeStamp.mSampleTime = 512;
+		AudioUnitRender (myOfflineUnit, myTimeStamp,... ,512, //this is the num frames to produce...
+		// second call AUR will return  noErr and 512 samples
+
+		// third call
+		myTimeStamp.mSampleTime = 1024;
+		AudioUnitRender (myOfflineUnit, myTimeStamp,... ,512, //this is the num frames to produce...
+		// third call, AU will set ioRenderActionFlags with the kAudioUnitStatus_OfflineRenderComplete
+		// check myBufferList.mBuffer[0].mDataByteSize
+		// this tells you how many samples are contained in the returned last buffer
+		UInt32 numFrames = myBufferList.mBuffer[0].mDataByteSize / sizeof(Float32);
+		// so there are 26 valid samples in this last buffer that the host has to pull out
+		
+		ASSUMPTIONS:
+		- this assumes that the sizeof(Float32) is the size of the sample 
+			- this will typically be the case
+		- this also assumes that the unit is being pulled for data in the de-interleaved
+		format where the buffer list is constructed for numChannels AudioBuffers
+		
+		The Host as you can see, is responsible for incrementing the sample count of the time
+		stamp it passes to AudioUnitRender and to pull this data out in an incremental and
+		contiguous manner for the output side.
+		
+		As this is offline processing, only the sample count field need be valid in the AudioTimeStamp
+		(certainly the host time field will NOT be valid)... Other time indicators, like SMPTE time,
+		can also be valid if the AU supports this..
+
+		In the Preflight stage, the AU may return the kAudioUnitStatus_OfflineRenderComplete bit set
+		on the first pull if there is not an analysis stage that the AU requires or is has already done this
+		
+		Any non-zero result codes from AudioUnitRender should be treated appropriately
+*/
+
+/*
+	AUOffline Rendering
+	This is done in 1 of 2 modes (both modes are explicitly indicated):
+	
+	kAudioOfflineUnitRenderAction_Preflight 
+	(if required or optional)
+		
+	In this case the host is telling the offline AU to preflight or analyze the input
+	data based on the settings that the host has configured this AU too. If the AU
+	does not require any preflight processing, then it can just return from the
+	render call.
+	
+	In this mode the AU will NOT return any data in the supplied AudioBufferList.
+			
+	
+	kAudioOfflineUnitRenderAction_Render	 	= (1 << 6)
+
+	In this case the unit will actually process and return the processed samples in
+	the supplied AudioBufferList. 
+	
+	In both cases, once all of the input data has been processed, and there
+	is not additional output data to be returned, the offline AU will set the
+	kAudioUnitStatus_OfflineRenderComplete bit in the render action flags which the host
+	is REQUIRED to check after each call to AudioUnitRender
+*/
+
+/*
+	AUOffline Hosting
+	In many cases an offline unit will present some UI to configure the offline processing.
+	
+	The Host should typically present at least two buttons as part of the offline process:
+	Preview
+	This button allows the unit's processing to be previewed by the user. Previewing is
+	done just like rendering (preflighting if required (if optional, then recommended), then render). 
+	The results of a preview should be played out (so typically a host will create a temp file
+	of the results then play that)
+	
+	Process
+	This will perform the processing and save/apply the results.
+	
+	Preflight
+	If the unit reports either optional or required as its preflight requirements, then the host
+	should present a third button.
+	The host can ask the unit for the best name to present to the user using the 
+		kAudioUnitOfflineProperty_PreflightName
+	property. If the unit supports that property, then the host should present this third button
+	with the name supplied by the unit.
+
+	If the user changes the selection of the input data to be processed, then the host of course
+	has to tell the unit that the input data has changed - it does this by setting the either or both
+		kAudioOfflineUnitProperty_InputSize
+		and/or
+		kAudioUnitOfflineProperty_StartOffset
+		
+	properties.
+	This may (or may not) reset the offline unit (putting back into a mode where it should re-analyze the input data).
+*/
+
+// In AudioUnitProperties.h
+	kAudioOfflineUnitProperty_InputSize					= 3020
+	kAudioOfflineUnitProperty_OutputSize				= 3021
+	kAudioUnitOfflineProperty_StartOffset				= 3022
+	kAudioUnitOfflineProperty_PreflightRequirements		= 3023
+	kAudioUnitOfflineProperty_PreflightName				= 3024
+
+
+/*
+	kAudioOfflineUnitProperty_InputSize			UInt64 read/write
+	Once set, the AU will presume that the input samples have been reset to a
+	new region, so setting this property will ALSO cause the audio unit's
+	internal DSP state to be reset (ie. the unit calls AudioUnitReset on itself)
+	
+	This tells the offline unit how many samples it is to process. Once it knows
+	this number it will then call for input from 0 -> (nSamples-1) in its input
+	proc and the host of this AU is required to provide the particular samples as 
+	specified in the sample count field of that Input's callback.
+	
+	kAudioOfflineUnitProperty_OutputSize		UInt64 read
+	The host can use this field to determine an *estimate* of how many output
+	samples the unit will produce for the specified input samples. The property value
+	is invalid if InputSize is not set. 
+	
+	The host cannot assume that this is the exact number of samples (though it maybe)
+	that a unit will produce. It is a guide only (so can be used for a progress bar for instance)
+	the termination of the processing is solely determined by the setting of the 
+	kAudioUnitStatus_OfflineRenderComplete in the ioRenderActionFlags from AudioUnitRender.
+*/
+
+
+
+	kOfflinePreflight_NotRequired 	= 0
+	kOfflinePreflight_Optional		= 1
+	kOfflinePreflight_Required		= 2
+
+/*
+	kAudioUnitOfflineProperty_StartOffset				UInt64 (read/write)
+	The host sets this to tell the unit that the start offset of the data it
+	is processing has been changed. This should be set along with the InputSize
+	property, so that the unit knows that its input data has been set 
+	or changed.
+	
+	kAudioUnitOfflineProperty_PreflightRequirements		UInt32 (read only)
+	Returns one of the kOfflinePreflight_ results: Currently:
+	kOfflinePreflight_NotRequired
+		Offline unit does not require preflight
+	
+	kOfflinePreflight_Optional
+		Offline unit will generally behave better if it is preflighted, but it is not
+		required to be preflighted - see comments below.
+	
+	kOfflinePreflight_Required
+		Offline unit requires preflighting or it cannot do its work
+
+
+	kAudioUnitOfflineProperty_PreflightName			CFStringRef (read only)
+	Allows a unit that requires either optional or required preflighting, to furnish to
+	the host a name that best describes the unit's preflight operations. 
+	See notes on Host responsibilities.
+*/

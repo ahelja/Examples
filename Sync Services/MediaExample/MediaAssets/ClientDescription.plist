@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayName</key>
+	<string>MediaAssets</string>
+	<key>ImagePath</key>
+	<string>MediaAssets.icns</string>
+	<key>Entities</key>
+	<dict>
+		<key>com.mycompany.syncexamples.Event</key>
+		<array>
+			<string>date</string>
+			<string>startDate</string>
+			<string>endDate</string>
+			<string>title</string>
+			<string>media</string>
+		</array>
+		<key>com.mycompany.syncexamples.Media</key>
+		<array>
+			<string>date</string>
+			<string>imageURL</string>
+			<string>title</string>
+			<string>event</string>
+		</array>
+	</dict>
+</dict>
+</plist>

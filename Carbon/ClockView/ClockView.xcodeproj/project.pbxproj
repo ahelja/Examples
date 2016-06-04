@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F94EDDC07B308B300AE9F13 /* TClockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C1F5CE02F889010BCA0CB8 /* TClockView.h */; };
+		4F94EDDD07B308B300AE9F13 /* TCarbonEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 60B8C05202F9EF390BCA0CB8 /* TCarbonEvent.h */; };
+		4F94EDDE07B308B300AE9F13 /* TView.h in Headers */ = {isa = PBXBuildFile; fileRef = 60B8C05402F9EF390BCA0CB8 /* TView.h */; };
+		4F94EDDF07B308B300AE9F13 /* TRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 6022E113030631B60B6E4D1F /* TRect.h */; };
+		4F94EDE007B308B300AE9F13 /* TObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6029BE8C03F9CDBE0BFF4F4D /* TObject.h */; };
+		4F94EDE107B308B300AE9F13 /* HIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3324793B0690E04800AAEC61 /* HIFramework.h */; };
+		4F94EDE207B308B300AE9F13 /* TEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3324793D0690E04800AAEC61 /* TEventHandler.h */; };
+		4F94EDE407B308B300AE9F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		4F94EDE507B308B300AE9F13 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		4F94EDE607B308B300AE9F13 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 60338D3D034E58DB0BCA0CB8 /* README.rtf */; };
+		4F94EDE807B308B300AE9F13 /* main.cp in Sources */ = {isa = PBXBuildFile; fileRef = 608F71A302F7582E0BCA0CB8 /* main.cp */; };
+		4F94EDE907B308B300AE9F13 /* TClockView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 60C1F5CD02F889010BCA0CB8 /* TClockView.cp */; };
+		4F94EDEA07B308B300AE9F13 /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = 60B8C05102F9EF390BCA0CB8 /* TCarbonEvent.cp */; };
+		4F94EDEB07B308B300AE9F13 /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = 60B8C05302F9EF390BCA0CB8 /* TView.cp */; };
+		4F94EDEC07B308B300AE9F13 /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6022E112030631B60B6E4D1F /* TRect.cp */; };
+		4F94EDED07B308B300AE9F13 /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6029BE8B03F9CDBE0BFF4F4D /* TObject.cp */; };
+		4F94EDEE07B308B300AE9F13 /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 3324793C0690E04800AAEC61 /* TEventHandler.cp */; };
+		4F94EDF007B308B300AE9F13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DDEBUG";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		3324793B0690E04800AAEC61 /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HIFramework.h; path = ../HIFramework/HIFramework.h; sourceTree = SOURCE_ROOT; };
+		3324793C0690E04800AAEC61 /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TEventHandler.cp; path = ../HIFramework/TEventHandler.cp; sourceTree = SOURCE_ROOT; };
+		3324793D0690E04800AAEC61 /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TEventHandler.h; path = ../HIFramework/TEventHandler.h; sourceTree = SOURCE_ROOT; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4F94EDF207B308B300AE9F13 /* Info-ClockView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-ClockView.plist"; sourceTree = "<group>"; };
+		4F94EDF307B308B300AE9F13 /* ClockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6022E112030631B60B6E4D1F /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TRect.cp; path = ../HIFramework/TRect.cp; sourceTree = SOURCE_ROOT; };
+		6022E113030631B60B6E4D1F /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TRect.h; path = ../HIFramework/TRect.h; sourceTree = SOURCE_ROOT; };
+		6029BE8B03F9CDBE0BFF4F4D /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TObject.cp; path = ../HIFramework/TObject.cp; sourceTree = SOURCE_ROOT; };
+		6029BE8C03F9CDBE0BFF4F4D /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TObject.h; path = ../HIFramework/TObject.h; sourceTree = SOURCE_ROOT; };
+		60338D3D034E58DB0BCA0CB8 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		608F71A302F7582E0BCA0CB8 /* main.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cp; sourceTree = "<group>"; };
+		60B8C05102F9EF390BCA0CB8 /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCarbonEvent.cp; path = ../HIFramework/TCarbonEvent.cp; sourceTree = SOURCE_ROOT; };
+		60B8C05202F9EF390BCA0CB8 /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCarbonEvent.h; path = ../HIFramework/TCarbonEvent.h; sourceTree = SOURCE_ROOT; };
+		60B8C05302F9EF390BCA0CB8 /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TView.cp; path = ../HIFramework/TView.cp; sourceTree = SOURCE_ROOT; };
+		60B8C05402F9EF390BCA0CB8 /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TView.h; path = ../HIFramework/TView.h; sourceTree = SOURCE_ROOT; };
+		60C1F5CD02F889010BCA0CB8 /* TClockView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = TClockView.cp; sourceTree = SOURCE_ROOT; };
+		60C1F5CE02F889010BCA0CB8 /* TClockView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TClockView.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F94EDEF07B308B300AE9F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EDF007B308B300AE9F13 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F94EDF307B308B300AE9F13 /* ClockView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* ClockView */ = {
+			isa = PBXGroup;
+			children = (
+				60338D3D034E58DB0BCA0CB8 /* README.rtf */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+				60DED36203019FE90BCA0CB8 /* HIFramework */,
+				4F94EDF207B308B300AE9F13 /* Info-ClockView.plist */,
+			);
+			name = ClockView;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				608F71A302F7582E0BCA0CB8 /* main.cp */,
+				60C1F5CD02F889010BCA0CB8 /* TClockView.cp */,
+				60C1F5CE02F889010BCA0CB8 /* TClockView.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		60DED36203019FE90BCA0CB8 /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				3324793B0690E04800AAEC61 /* HIFramework.h */,
+				60B8C05102F9EF390BCA0CB8 /* TCarbonEvent.cp */,
+				60B8C05202F9EF390BCA0CB8 /* TCarbonEvent.h */,
+				3324793C0690E04800AAEC61 /* TEventHandler.cp */,
+				3324793D0690E04800AAEC61 /* TEventHandler.h */,
+				6029BE8B03F9CDBE0BFF4F4D /* TObject.cp */,
+				6029BE8C03F9CDBE0BFF4F4D /* TObject.h */,
+				6022E112030631B60B6E4D1F /* TRect.cp */,
+				6022E113030631B60B6E4D1F /* TRect.h */,
+				60B8C05302F9EF390BCA0CB8 /* TView.cp */,
+				60B8C05402F9EF390BCA0CB8 /* TView.h */,
+			);
+			name = HIFramework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F94EDDB07B308B300AE9F13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EDDC07B308B300AE9F13 /* TClockView.h in Headers */,
+				4F94EDDD07B308B300AE9F13 /* TCarbonEvent.h in Headers */,
+				4F94EDDE07B308B300AE9F13 /* TView.h in Headers */,
+				4F94EDDF07B308B300AE9F13 /* TRect.h in Headers */,
+				4F94EDE007B308B300AE9F13 /* TObject.h in Headers */,
+				4F94EDE107B308B300AE9F13 /* HIFramework.h in Headers */,
+				4F94EDE207B308B300AE9F13 /* TEventHandler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F94EDDA07B308B300AE9F13 /* ClockView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5571BA08A00D3100BAA99A /* Build configuration list for PBXNativeTarget "ClockView" */;
+			buildPhases = (
+				4F94EDDB07B308B300AE9F13 /* Headers */,
+				4F94EDE307B308B300AE9F13 /* Resources */,
+				4F94EDE707B308B300AE9F13 /* Sources */,
+				4F94EDEF07B308B300AE9F13 /* Frameworks */,
+				4F94EDF107B308B300AE9F13 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-ClockView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ClockView;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = ClockView;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = ClockView;
+			productReference = 4F94EDF307B308B300AE9F13 /* ClockView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F5571BE08A00D3100BAA99A /* Build configuration list for PBXProject "ClockView" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* ClockView */;
+			projectDirPath = "";
+			targets = (
+				4F94EDDA07B308B300AE9F13 /* ClockView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F94EDE307B308B300AE9F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EDE407B308B300AE9F13 /* InfoPlist.strings in Resources */,
+				4F94EDE507B308B300AE9F13 /* main.nib in Resources */,
+				4F94EDE607B308B300AE9F13 /* README.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4F94EDF107B308B300AE9F13 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F94EDE707B308B300AE9F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94EDE807B308B300AE9F13 /* main.cp in Sources */,
+				4F94EDE907B308B300AE9F13 /* TClockView.cp in Sources */,
+				4F94EDEA07B308B300AE9F13 /* TCarbonEvent.cp in Sources */,
+				4F94EDEB07B308B300AE9F13 /* TView.cp in Sources */,
+				4F94EDEC07B308B300AE9F13 /* TRect.cp in Sources */,
+				4F94EDED07B308B300AE9F13 /* TObject.cp in Sources */,
+				4F94EDEE07B308B300AE9F13 /* TEventHandler.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F5571BB08A00D3100BAA99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-ClockView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = ClockView;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F5571BC08A00D3100BAA99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-ClockView.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = ClockView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F5571BF08A00D3100BAA99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F5571C008A00D3100BAA99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F5571BA08A00D3100BAA99A /* Build configuration list for PBXNativeTarget "ClockView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5571BB08A00D3100BAA99A /* Debug */,
+				4F5571BC08A00D3100BAA99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F5571BE08A00D3100BAA99A /* Build configuration list for PBXProject "ClockView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5571BF08A00D3100BAA99A /* Debug */,
+				4F5571C008A00D3100BAA99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

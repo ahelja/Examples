@@ -1,0 +1,652 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>Structs</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1><br>
+<hr><a name="//apple_ref/c/tag/AudioHardwarePlugInInterface"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioHardwarePlugInInterface">AudioHardwarePlugInInterface</a></h2>
+</td></tr></table><hr>The CFPlugIn interface to a HAL plug-in.
+
+<blockquote><pre>
+struct  AudioHardwarePlugInInterface {
+    /*!
+    @field          _reserved
+    @abstract       A standard part of the IUnknown interface.
+    */
+    */
+    void*       _reserved;
+    /*!
+    @method         QueryInterface
+    @abstract       The IUnknown method for finding an interface on a CFPlugIn type.
+    @param          inSelf
+    The CFPlugIn type to query.
+    @param          inUUID
+    The UUID of the interface to find.
+    @param          outInterface
+    The returned interface or NULL if none was found.
+    @result         An error code indicating success of failure.
+    */
+    */
+    HRESULT
+    (STDMETHODCALLTYPE *QueryInterface)(    void*   inSelf,
+    REFIID  inUUID,
+    LPVOID* outInterface);
+    /*!
+    @method         AddRef
+    @abstract       The IUnknown method for retaining a reference to a CFPlugIn type.
+    @param          inSelf
+    The CFPlugIn type to retain.
+    @result         The resulting reference count after the new reference is added.
+    */
+    */
+    ULONG
+    (STDMETHODCALLTYPE *AddRef)(    void*   inSelf);
+    /*!
+    @method         Release
+    @abstract       The IUnknown method for releasing a reference to a CFPlugIn type.
+    @param          inSelf
+    The CFPlugIn type to release.
+    @result         The resulting reference count after the reference has been removed.
+    */
+    */
+    ULONG
+    (STDMETHODCALLTYPE *Release)(   void*   inSelf);
+    /*!
+    @method         Initialize
+    @abstract       This method is called to initialize the instance of the plug-in.
+    @discussion     As part of initialization, the plug-in should publish all the AudioObjects
+    it knows about at the time.
+    @param          inSelf
+    The instance to initialize.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*Initialize)(  AudioHardwarePlugInRef  inSelf);
+    /*!
+    @method         Teardown
+    @abstract       This method is called to tear down the instance of the plug-in.
+    @param          inSelf
+    The instance to tear down.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*Teardown)(    AudioHardwarePlugInRef  inSelf);
+    /*!
+    @method         DeviceAddIOProc
+    @abstract       Registers the given AudioDeviceIOProc with the AudioDevice.
+    @discussion     A client may have multiple IOProcs for a given device, but the device is
+    free to only accept as many as it can handle. Note that it is not
+    recommended for clients to have more than a single IOProc registered at a
+    time as this can be wasteful of system resources. Rather, it is recommended
+    that the client do any necessary mixing itself so that only one IOProc is
+    necessary.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to register the IOProc with.
+    @param          inProc
+    The AudioDeviceIOProc to register.
+    @param          inClientData
+    A pointer to client data that is passed back to the IOProc when it is
+    called.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceAddIOProc)( AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioDeviceIOProc       inProc,
+    void*                   inClientData);
+    /*!
+    @method         DeviceRemoveIOProc
+    @abstract       Unregisters the given AudioDeviceIOProc from the AudioDevice.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to unregister the IOProc from.
+    @param          inProc
+    The AudioDeviceIOProc to unregister.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceRemoveIOProc)(  AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioDeviceIOProc       inProc);
+    /*!
+    @method         DeviceStart
+    @abstract       Starts IO for the given AudioDeviceIOProc.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to start the IOProc on.
+    @param          inProc
+    The AudioDeviceIOProc to start. Note that this can be NULL, which starts
+    the hardware regardless of whether or not there are any IOProcs
+    registered. This is necessary if any of the AudioDevice's timing
+    services are to be used. A balancing call to AudioDeviceStop with a NULL
+    IOProc is required to stop the hardware.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceStart)( AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioDeviceIOProc       inProc);
+    /*!
+    @method         DeviceStop
+    @abstract       Stops IO for the given AudioDeviceIOProc.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to stop the IOProc on.
+    @param          inProc
+    The AudioDeviceIOProc to stop.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceStop)(  AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioDeviceIOProc       inProc);
+    /*!
+    @method         DeviceRead
+    @abstract       Read some data from an AudioDevice starting at the given time.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to read from.
+    @param          inStartTime
+    An AudioTimeStamp indicating the time from which to read the data. In
+    general, the valid range of time (in frames) is from the current time
+    minus the maximum IO buffer size to the current time minus the safety
+    offset.
+    @param          outData
+    An AudioBufferList that must be the same size and shape as that returned
+    by kAudioDevicePropertyStreamConfiguration. Further, the AudioBufferList
+    must have been previously registered with the device via
+    kAudioDevicePropertyRegisterBufferList. On exit, the mDataSize fields
+    will be updated with the amount of data read.
+    @result         An OSStatus indicating success or failure.
+    kAudioHardwareUnsupportedOperationError will be returned if the AudioDevice
+    does not support direct reading.
+    */
+    */
+    OSStatus
+    (*DeviceRead)(  AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    const AudioTimeStamp*   inStartTime,
+    AudioBufferList*        outData);
+    /*!
+    @method         DeviceGetCurrentTime
+    @abstract       Retrieves the current time from an AudioDevice. Note that the device has to
+    be running.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to from which to get the time.
+    @param          outTime
+    An AudioTimeStamp into which the current time is put.
+    @result         An OSStatus indicating success or failure. kAudioHardwareNotRunningError
+    will be returned if the AudioDevice isn't running.
+    */
+    */
+    OSStatus
+    (*DeviceGetCurrentTime)(    AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioTimeStamp*         outTime);
+    /*!
+    @method         DeviceTranslateTime
+    @abstract       Translates the time in the AudioDevice's time base from one representation
+    to another. Note that the device has to be running
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice whose time base governs the translation.
+    @param          inTime
+    An AudioTimeStamp containing the time to be translated.
+    @param          outTime
+    An AudioTimeStamp into which the translated time is put. On entry, the
+    mFlags field specifies which representations to translate the input time
+    into. Because not every device supports all time representations, on
+    exit, the mFlags field will indicate which translations were actually
+    done.
+    @result         An OSStatus indicating success or failure. kAudioHardwareNotRunningError
+    will be returned if the AudioDevice isn't running.
+    */
+    */
+    OSStatus
+    (*DeviceTranslateTime)( AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    const AudioTimeStamp*   inTime,
+    AudioTimeStamp*         outTime);
+    /*!
+    @method         DeviceGetPropertyInfo
+    @abstract       Retrieve information about the given property of an AudioDevice.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to query.
+    @param          inChannel
+    The channel of the property to query where 0 is the master channel.
+    @param          isInput
+    Which section of the AudioDevice to query.
+    @param          inPropertyID
+    The AudioDevicePropertyID of the property to query.
+    @param          outSize
+    A pointer to a UInt32 that receives the size of the property data in
+    bytes on exit. This can be NULL if the size information is not being
+    requested.
+    @param          outWritable
+    A pointer to a Boolean that receives indication of whether or not the
+    given property can be set. This can be NULL if the writability is not
+    being requested.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceGetPropertyInfo)(   AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    UInt32                  inChannel,
+    Boolean                 isInput,
+    AudioDevicePropertyID   inPropertyID,
+    UInt32*                 outSize,
+    Boolean*                outWritable);
+    /*!
+    @method         DeviceGetProperty
+    @abstract       Queries an the AudioDevice object to get the data of the given property and
+    places it in the provided buffer.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to query.
+    @param          inChannel
+    The channel of the property to query where 0 is the master channel.
+    @param          isInput
+    Which section of the AudioDevice to query.
+    @param          inPropertyID
+    The AudioDevicePropertyID of the property to query.
+    @param          ioPropertyDataSize
+    A UInt32 which on entry indicates the size of the buffer pointed to by
+    outData and on exit indicates how much of the buffer was used.
+    @param          outPropertyData
+    The buffer into which the object will put the data for the given
+    property.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceGetProperty)(   AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    UInt32                  inChannel,
+    Boolean                 isInput,
+    AudioDevicePropertyID   inPropertyID,
+    UInt32*                 ioPropertyDataSize,
+    void*                   outPropertyData);
+    /*!
+    @method         DeviceSetProperty
+    @abstract       Tells the AudioDevice object to change the value of the given property using
+    the provided data.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to change.
+    @param          inWhen
+    A pointer to an AudioTimeStamp that says when to change the property's
+    value relative to the device's time base. NULL means execute the change
+    immediately.
+    @param          inChannel
+    The channel of the property to change where 0 is the master channel.
+    @param          isInput
+    Which section of the AudioDevice to change.
+    @param          inPropertyID
+    The AudioDevicePropertyID of the property to change.
+    @param          inPropertyDataSize
+    A UInt32 indicating the size of the buffer pointed to by inData.
+    @param          inPropertyData
+    The buffer containing the data to be used to change the property's
+    value.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*DeviceSetProperty)(   AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    const AudioTimeStamp*   inWhen,
+    UInt32                  inChannel,
+    Boolean                 isInput,
+    AudioDevicePropertyID   inPropertyID,
+    UInt32                  inPropertyDataSize,
+    const void*             inPropertyData);
+    /*!
+    @method         StreamGetPropertyInfo
+    @abstract       Retrieve information about the given property of an AudioStream.
+    @param          inSelf
+    The plug-in instance that owns the AudioStream.
+    @param          inStream
+    The AudioStream to query.
+    @param          inChannel
+    The channel of the property to query where 0 is the master channel.
+    @param          inPropertyID
+    The AudioDevicePropertyID of the property to query.
+    @param          outSize
+    A pointer to a UInt32 that receives the size of the property data in
+    bytes on exit. This can be NULL if the size information is not being
+    requested.
+    @param          outWritable
+    A pointer to a Boolean that receives indication of whether or not the
+    given property can be set. This can be NULL if the writability is not
+    being requested.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*StreamGetPropertyInfo)(   AudioHardwarePlugInRef  inSelf,
+    AudioStreamID           inStream,
+    UInt32                  inChannel,
+    AudioDevicePropertyID   inPropertyID,
+    UInt32*                 outSize,
+    Boolean*                outWritable);
+    /*!
+    @method         StreamGetProperty
+    @abstract       Queries an the AudioStream object to get the data of the given property and
+    places it in the provided buffer.
+    @param          inSelf
+    The plug-in instance that owns the AudioStream.
+    @param          inStream
+    The AudioStream to query.
+    @param          inChannel
+    The channel of the property to query where 0 is the master channel.
+    @param          inPropertyID
+    The AudioDevicePropertyID of the property to query.
+    @param          ioPropertyDataSize
+    A UInt32 which on entry indicates the size of the buffer pointed to by
+    outData and on exit indicates how much of the buffer was used.
+    @param          outPropertyData
+    The buffer into which the object will put the data for the given
+    property.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*StreamGetProperty)(   AudioHardwarePlugInRef  inSelf,
+    AudioStreamID           inStream,
+    UInt32                  inChannel,
+    AudioDevicePropertyID   inPropertyID,
+    UInt32*                 ioPropertyDataSize,
+    void*                   outPropertyData);
+    /*!
+    @method         StreamSetProperty
+    @abstract       Tells the AudioStream object to change the value of the given property using
+    the provided data.
+    @param          inSelf
+    The plug-in instance that owns the AudioStream.
+    @param          inStream
+    The AudioStream to change.
+    @param          inWhen
+    A pointer to an AudioTimeStamp that says when to change the property's
+    value relative to the device's time base. NULL means execute the change
+    immediately.
+    @param          inChannel
+    The channel of the property to change where 0 is the master channel.
+    @param          inPropertyID
+    The AudioDevicePropertyID of the property to change.
+    @param          inPropertyDataSize
+    A UInt32 indicating the size of the buffer pointed to by inData.
+    @param          inPropertyData
+    The buffer containing the data to be used to change the property's
+    value.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*StreamSetProperty)(   AudioHardwarePlugInRef  inSelf,
+    AudioStreamID           inStream,
+    const AudioTimeStamp*   inWhen,
+    UInt32                  inChannel,
+    AudioDevicePropertyID   inPropertyID,
+    UInt32                  inPropertyDataSize,
+    const void*             inPropertyData);
+    /*!
+    @method         DeviceStartAtTime
+    @abstract       Starts IO for the given AudioDeviceIOProc and aligns the IO cycle of the
+    AudioDevice with the given time.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to start the IOProc on.
+    @param          inProc
+    The AudioDeviceIOProc to start. Note that this can be NULL, which starts
+    the hardware regardless of whether or not there are any IOProcs
+    registered.
+    @param          ioRequestedStartTime
+    A pointer to an AudioTimeStamp that, on entry, is the requested time to
+    start the IOProc. On exit, it will be the actual time the IOProc will
+    start.
+    @param          inFlags
+    A UInt32 containing flags that modify how this function behaves.
+    @result         An OSStatus indicating success or failure.
+    kAudioHardwareUnsupportedOperationError will be returned if the AudioDevice
+    does not support starting at a specific time and inProc and
+    ioRequestedStartTime are not NULL.
+    */
+    */
+    OSStatus
+    (*DeviceStartAtTime)(   AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioDeviceIOProc       inProc,
+    AudioTimeStamp*         ioRequestedStartTime,
+    UInt32                  inFlags);
+    /*!
+    @method         DeviceGetNearestStartTime
+    @abstract       Query an AudioDevice to get a time equal to or later than the given time
+    that is the best time to start IO.
+    @discussion     The time that is returned is dictated by the constraints of the device and
+    the system. For instance, the driver of a device that provides both audio
+    and video data may only allow start times that coincide with the edge of a
+    video frame. Also, if the device already has one or more active IOProcs, the
+    start time will be shifted to the beginning of the next IO cycle so as not
+    to cause discontinuities in the existing IOProcs. Another reason the start
+    time may shift is to allow for aligning the buffer accesses in an optimal
+    fashion. Note that the device must be running to use this function.
+    @param          inSelf
+    The plug-in instance that owns the AudioDevice.
+    @param          inDevice
+    The AudioDevice to query.
+    @param          ioRequestedStartTime
+    A pointer to an AudioTimeStamp that, on entry, is the requested start
+    time. On exit, it will have the a time equal to or later than the
+    requested time, as dictated by the device's constraints.
+    @param          inFlags
+    A UInt32 containing flags that modify how this function behaves.
+    @result         An OSStatus indicating success or failure. kAudioHardwareNotRunningError
+    will be returned if the AudioDevice isn't running.
+    kAudioHardwareUnsupportedOperationError will be returned if the AudioDevice
+    does not support starting at a specific time.
+    */
+    */
+    OSStatus
+    (*DeviceGetNearestStartTime)(   AudioHardwarePlugInRef  inSelf,
+    AudioDeviceID           inDevice,
+    AudioTimeStamp*         ioRequestedStartTime,
+    UInt32                  inFlags);
+    /*!
+    @method         InitializeWithObjectID
+    @abstract       This method is called to initialize the instance of the plug-in.
+    @discussion     As part of initialization, the plug-in should publish all the AudioObjects
+    it knows about at the time. This method supersedes the Initialize method for
+    version 3 plug-ins so that an AudioObjectID can be associated with the plug-in
+    right from the start.
+    @param          inSelf
+    The instance to initialize.
+    @param          inObjectID
+    The AudioObjectID the plug-in is to use to identify itself.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*InitializeWithObjectID)(  AudioHardwarePlugInRef  inSelf,
+    AudioObjectID           inObjectID);
+    /*!
+    @method         ObjectShow
+    @abstract       Prints to standard out a textural description of the AudioObject.
+    @param          inSelf
+    The plug-in instance that owns the AudioObject.
+    @param          inObjectID
+    The AudioObject to show.
+    */
+    */
+    void
+    (*ObjectShow)(  AudioHardwarePlugInRef  inSelf,
+    AudioObjectID           inObjectID);
+    /*!
+    @method         ObjectHasProperty
+    @abstract       Queries an AudioObject about whether or not it has the given property.
+    @param          inSelf
+    The plug-in instance that owns the AudioObject.
+    @param          inObjectID
+    The AudioObject to query.
+    @param          inAddress
+    An AudioObjectPropertyAddress indicating which property is being
+    queried.
+    @result         A Boolean indicating whether or not the AudioObject has the given property.
+    */
+    */
+    Boolean
+    (*ObjectHasProperty)(   AudioHardwarePlugInRef              inSelf,
+    AudioObjectID                       inObjectID,
+    const AudioObjectPropertyAddress*   inAddress);
+    /*!
+    @method         ObjectIsPropertySettable
+    @abstract       Queries an AudioObject about whether or not the given property can be set
+    using AudioObjectSetPropertyData.
+    @param          inSelf
+    The plug-in instance that owns the AudioObject.
+    @param          inObjectID
+    The AudioObject to query.
+    @param          inAddress
+    An AudioObjectPropertyAddress indicating which property is being
+    queried.
+    @param          outIsSettable
+    A Boolean indicating whether or not the property can be set.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*ObjectIsPropertySettable)(    AudioHardwarePlugInRef              inSelf,
+    AudioObjectID                       inObjectID,
+    const AudioObjectPropertyAddress*   inAddress,
+    Boolean*                            outIsSettable);
+    /*!
+    @method         ObjectGetPropertyDataSize
+    @abstract       Queries an AudioObject to find the size of the data for the given property.
+    @param          inSelf
+    The plug-in instance that owns the AudioObject.
+    @param          inObjectID
+    The AudioObject to query.
+    @param          inAddress
+    An AudioObjectPropertyAddress indicating which property is being
+    queried.
+    @param          inQualifierDataSize
+    A UInt32 indicating the size of the buffer pointed to by
+    inQualifierData. Note that not all properties require qualification, in
+    which case this value will be 0.
+    @param          inQualifierData,
+    A buffer of data to be used in determining the data of the property
+    being queried. Note that not all properties require qualification, in
+    which case this value will be NULL.
+    @param          outDataSize
+    A UInt32 indicating how many bytes the data for the given property
+    occupies.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*ObjectGetPropertyDataSize)(   AudioHardwarePlugInRef              inSelf,
+    AudioObjectID                       inObjectID,
+    const AudioObjectPropertyAddress*   inAddress,
+    UInt32                              inQualifierDataSize,
+    const void*                         inQualifierData,
+    UInt32*                             outDataSize);
+    /*!
+    @method         ObjectGetPropertyData
+    @abstract       Queries an AudioObject to get the data of the given property and places it
+    in the provided buffer.
+    @param          inSelf
+    The plug-in instance that owns the AudioObject.
+    @param          inObjectID
+    The AudioObject to query.
+    @param          inAddress
+    An AudioObjectPropertyAddress indicating which property is being
+    queried.
+    @param          inQualifierDataSize
+    A UInt32 indicating the size of the buffer pointed to by
+    inQualifierData. Note that not all properties require qualification, in
+    which case this value will be 0.
+    @param          inQualifierData,
+    A buffer of data to be used in determining the data of the property
+    being queried. Note that not all properties require qualification, in
+    which case this value will be NULL.
+    @param          ioDataSize
+    A UInt32 which on entry indicates the size of the buffer pointed to by
+    outData and on exit indicates how much of the buffer was used.
+    @param          outData
+    The buffer into which the AudioObject will put the data for the given
+    property.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*ObjectGetPropertyData)(   AudioHardwarePlugInRef              inSelf,
+    AudioObjectID                       inObjectID,
+    const AudioObjectPropertyAddress*   inAddress,
+    UInt32                              inQualifierDataSize,
+    const void*                         inQualifierData,
+    UInt32*                             ioDataSize,
+    void*                               outData);
+    /*!
+    @method         ObjectSetPropertyData
+    @abstract       Tells an AudioObject to change the value of the given property using the
+    provided data.
+    @param          inSelf
+    The plug-in instance that owns the AudioObject.
+    @param          inObjectID
+    The AudioObject to change.
+    @param          inAddress
+    An AudioObjectPropertyAddress indicating which property is being
+    changed.
+    @param          inQualifierDataSize
+    A UInt32 indicating the size of the buffer pointed to by
+    inQualifierData. Note that not all properties require qualification, in
+    which case this value will be 0.
+    @param          inQualifierData
+    A buffer of data to be used in determining the data of the property
+    being queried. Note that not all properties require qualification, in
+    which case this value will be NULL.
+    @param          inDataSize
+    A UInt32 indicating the size of the buffer pointed to by inData.
+    @param          inData
+    The buffer containing the data to be used to change the property's
+    value.
+    @result         An OSStatus indicating success or failure.
+    */
+    */
+    OSStatus
+    (*ObjectSetPropertyData)(   AudioHardwarePlugInRef              inSelf,
+    AudioObjectID                       inObjectID,
+    const AudioObjectPropertyAddress*   inAddress,
+    UInt32                              inQualifierDataSize,
+    const void*                         inQualifierData,
+    UInt32                              inDataSize,
+    const void*                         inData);
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>In CFPlugIn terms, AudioHardwarePlugInInterface is a subclass of IUnknown.
+</p>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

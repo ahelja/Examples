@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_state?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitState"></a>
+<h1>Audio Unit State</h1>
+
+<p>	Audio Units are created when a Component with appropriate type, subType
+and manufactureID is opened. In the underlying implementation this will create a
+C++ object - the open component calls can viewed as the basic allocation of the
+unit's basic resources.</p>
+
+<p>	In a reciprocal operation, the close component calls are expected to
+delete and remove any resources that were in use by the Audio Unit. In the
+underlying implementation this will delete a C++ object.</p>
+
+<p>	When an Audio Unit is created (i.e. the Component is opened), the
+underlying code is expected to only do a minimal amount of work, in fact as
+little as possible. There are a number of properties of a unit that a host
+application may query for information before deciding to use a unit. Thus, the
+act of opening an Audio Unit is expected to be a relatively inexpensive
+operation.</p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="2"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_state.html#Initialization">Initialization</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_state.html#ResettingState">Resetting State</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_state.html#OutputUnits-StartandStopState">Output Units - Start and Stop State</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_state.html#IDs,ScopeandElements-PropertiesandParameters">IDs, Scope and Elements - Properties and Parameters</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioUnitInitialize">AudioUnitInitialize</a></td>
+<td>Initialize an Audio Unit.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioUnitUninitialize">AudioUnitUninitialize</a></td>
+<td>Uninitialize an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioUnitReset">AudioUnitReset</a></td>
+<td>Reset the state of an Audio Unit.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioOutputUnitStart">AudioOutputUnitStart</a></td>
+<td>
+		Start an output unit.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioOutputUnitStop">AudioOutputUnitStop</a></td>
+<td>
+		Stop an output unit.
+	</td>
+</tr>
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioUnitElement">AudioUnitElement</a></td></tr>
+<tr><td colspan="3"><b>Enumerations</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_state.html#AudioUnitScope">AudioUnitScope</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+<a name="Initialization"></a>
+<h2>Initialization</h2>
+
+<p>	In order to discriminate between an opened state and a state where the
+Audio Unit can be expected to do work, there are additional functions:</p>
+
+<a name="//apple_ref/c/func/AudioUnitInitialize"></a>
+<h3><a name="AudioUnitInitialize">AudioUnitInitialize</a></h3>
+Initialize an Audio Unit.
+<pre>ComponentResult <b>AudioUnitInitialize</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>  ci
+);</pre>
+	
+		After opening an Audio Unit component, it must be initialized with this function.<p>
+
+		Initialization of an Audio Unit can be an expensive operation, as it can
+		involve the acquisition of assets (e.g. a sound bank for a MusicDevice),
+		allocation of memory buffers required for the processing involved within
+		the unit, and so forth. Once a unit is initialized it is basically in a
+		state in which it can be largely expected to do work.<p>
+
+		Some properties can only be queried and set when an Audio Unit is
+		initialized, though many can and should be set before the unit is
+		initialized.
+	
+
+
+
+<a name="//apple_ref/c/func/AudioUnitUninitialize"></a>
+<h3><a name="AudioUnitUninitialize">AudioUnitUninitialize</a></h3>
+Uninitialize an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>.
+<pre>ComponentResult <b>AudioUnitUninitialize</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>  ci
+);</pre>
+	
+		This function may be used to return an Audio Unit to its uninitialized state,
+		causing it to release resources without closing the component.  <a href="au_state.html#AudioUnitInitialize"><tt>AudioUnitInitialize</tt></a>
+		must be called again before the unit can be expected to do work again.<p>
+
+		Uninitialization should release as many of the resources that have been
+		acquired in initialization as possible.
+	
+
+
+
+
+<a name="ResettingState"></a>
+<h2>Resetting State</h2>
+
+<a name="//apple_ref/c/func/AudioUnitReset"></a>
+<h3><a name="AudioUnitReset">AudioUnitReset</a></h3>
+Reset the state of an Audio Unit.
+<pre>ComponentResult <b>AudioUnitReset</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>         ci,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>    inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>  inElement
+);</pre>
+	
+		This is typically used when an Audio Unit
+		has been initialized, but the hosting program wants to restore the unit
+		to its initialized state without going through the process of releasing
+		resources and re-acquiring them. Reset can be applied to specific scopes
+		of the unit as appropriate. This call is <b>not</b> expected to reset
+		the values of parameters to an initial state, but will for example,
+		clear state of a filter, clear delay lines, and so forth.
+		
+		Normally <tt>inScope</tt> should be <a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Global</tt></a> and <tt>inElement</tt>
+		should be 0.
+	
+
+
+
+
+<a name="OutputUnits-StartandStopState"></a>
+<h2>Output Units - Start and Stop State</h2>
+
+<p>	Output Audio Units implement two additional functions:
+<a href="au_state.html#AudioOutputUnitStart"><tt>AudioOutputUnitStart</tt></a> and <a href="au_state.html#AudioOutputUnitStop"><tt>AudioOutputUnitStop</tt></a>. These
+functions can be used for example, to start an AudioDevice for one of the device
+output units. In this case, the <code>IOProc</code> of the device will be
+started, which will in turn call the Render function of the output unit, which
+then turns and obtains input data from its attached callbacks or connections.
+The OutputUnit is also used as the sole head of an <code>AUGraph</code>, where
+starting the graph will call the start method of its output unit.</p>
+
+<p>	The output units support an kAudioUnitProperty_IsRunning property that will,
+when queried, return the running status of the unit. This property can also
+generate notifications when the unit is started or stopped.</p>
+
+<p>	Calls to all of these functions are not accumulative or counted. Thus, calling
+these will have the expected effect, where units will be started, stopped,
+initialized and so forth. Once an Audio Unit is closed, any subsequent call that
+uses the Audio Unit identifier will return a badComponentInstance result.</p>
+
+<a name="//apple_ref/c/func/AudioOutputUnitStart"></a>
+<h3><a name="AudioOutputUnitStart">AudioOutputUnitStart</a></h3>
+
+		Start an output unit.
+	
+<pre>ComponentResult <b>AudioOutputUnitStart</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>  ci
+);</pre>
+	
+	
+
+
+
+<a name="//apple_ref/c/func/AudioOutputUnitStop"></a>
+<h3><a name="AudioOutputUnitStop">AudioOutputUnitStop</a></h3>
+
+		Stop an output unit.
+	
+<pre>ComponentResult <b>AudioOutputUnitStop</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>  ci
+);</pre>
+	
+	
+
+
+
+
+<a name="IDs,ScopeandElements-PropertiesandParameters"></a>
+<h2>IDs, Scope and Elements - Properties and Parameters</h2>
+
+<p>	Whilst the above relate to a more generic concept of the Audio Unit's
+state, there are also two other ways that the state of an Audio Unit can be
+managed. </p>
+
+<p>	Properties are defined to represent those states that establish a
+particular unit's operational state. For instance, an effect unit will require
+some input data on which it can operate. An Audio Unit can receive input data
+from one of two sources, an <a href="au_render.html#AURenderCallback"><tt>AURenderCallback</tt></a>, where the host has
+supplied a callback function, or a connection, where the Audio Unit will receive
+input data from another Audio Unit. These input source are established through
+the Audio Unit property mechanism.</p>
+
+<p>	Parameters represent state that directly effects the rendering activity
+of an Audio Unit. For instance, the delay time of an Audio Unit that is a delay
+effect, can be changed as often as desired, and this will directly effect the
+results of the render processing that this unit has on its source data.</p>
+
+<p>	How properties and parameters should be applied to an Audio Unit are
+described by three numbers:
+	<dl>
+		<dt>The Property or Parameter Identifier (ID)</dt>
+			<dd>This is specified by an identifier. Property ID's are listed in
+<code>AudioUnitProperties.h</code>. Parameter ID's are found by one of two
+mechanisms.
+			<ul>
+				<li>Through a specific declaration of the ParameterID in
+<code>AudioUnitParameters.h</code></li>
+				<li>Through a discovery mechanism with the
+<code><a href="au_properties.html#kAudioUnitProperty_ParameterList">kAudioUnitProperty_ParameterList</a></code> property. The host can use the
+<code><a href="au_properties.html#kAudioUnitProperty_ParameterInfo">kAudioUnitProperty_ParameterInfo</a></code> property to retrieve specific
+information about a given ParameterID.</li>
+			</ul>
+			</dd>
+		<dt>Scope</dt>
+			<dd>Scope is generally one of three values.
+			<ul>
+				<li>Global Scope</li>
+				<li>Input Scope</li>
+				<li>Output Scope</li>
+			</ul>
+			The MusicDevice defines a further scope <code>Group Scope</code>
+that is applicable to that class of Audio Unit.</dd>
+		<dt>Element</dt>
+			<dd>Element further specialises a particular scope to correspond to
+an element of that scope.</dd>
+	</dl></p>
+
+<p>	For example, a Mixer unit will generally have parameters that are defined
+by either the Input or Output scope, for example <code>volume</code>. A mixer
+may take several inputs and mix them to one output, so in this case the host
+will want to apply a different volume (or pan) on each of the inputs, so the
+volume parameter would be specified with:
+	<pre>
+	    <a href="au_params.html#AudioUnitSetParameter">AudioUnitSetParameter</a> (myMixerUnit, kStereoMixerParam_Volume, 
+	                      <a href="au_state.html#AudioUnitScope">kAudioUnitScope_Input</a>, 2, 0.5, mySampleOffset);</pre>
+	Here, we are applying a volume of 0.5 to the input that is on
+<code>elementID==2</code>. The <code>mySampleOffset</code> is an sample-frame
+offest into the next buffer that the mixer will render that describes when this
+parameter value should be applied.
+	<pre>
+	    <a href="au_params.html#AudioUnitSetParameter">AudioUnitSetParameter</a> (myMixerUnit, kStereoMixerParam_Volume, 
+	                      <a href="au_state.html#AudioUnitScope">kAudioUnitScope_Output</a>, 0, 0.8, 0);</pre>
+	Here, we are applying the same parameter (volume), but this time on the
+output scope - which in this case will represent the entire mixed output of the
+mixer's inputs.</p>
+
+<p>	In this case (and in many cases with Audio Units), the
+<code>elementID</code> can be considered like a bus on a mixing board. It
+generally represents a bus of audio data that is being passed around together,
+and is expected to be acted upon at the same time with a single call to the
+Audio Unit's render method. This should <b>not</b> be confused with channels. A
+bus can and often does, contain more than a single channel of audio data.</p>
+
+<p>	Many properties on an Audio Unit are defined to act in the global scope,
+and the elementID for the global scope is always zero.</p>
+
+<a name="//apple_ref/c/tag/AudioUnitScope"></a>
+<h3><a name="AudioUnitScope">AudioUnitScope</a></h3>
+
+		<pre>typedef UInt32 <b>AudioUnitScope</b>;</pre>
+<pre>enum {
+  kAudioUnitScope_Global  = 0,
+  kAudioUnitScope_Input   = 1,
+  kAudioUnitScope_Output  = 2,
+  kAudioUnitScope_Group   = 3
+};</pre>
+	
+		These constants are used to specify the scope of a parameter or property.
+		See the discussion of <a href="au_state.html#AudioUnitElement"><tt>AudioUnitElement</tt></a>, below.
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioUnitScope_Global"><tt>kAudioUnitScope_Global</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitScope_Input"><tt>kAudioUnitScope_Input</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitScope_Output"><tt>kAudioUnitScope_Output</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitScope_Group"><tt>kAudioUnitScope_Group</tt></a></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/tdef/AudioUnitElement"></a>
+<h3><a name="AudioUnitElement">AudioUnitElement</a></h3>
+
+		<pre>typedef UInt32 <b>AudioUnitElement</b>;</pre>
+	
+		An <tt>AudioUnitElement</tt> specifies an element within a scope.
+		
+		In the input and output scopes, the element corresponds to an I/O
+		bus of the unit.  For example, in an effect unit, input and output
+		elements 0 can be thought of as the main input and output, and 
+		any additional elements can be thought of as "side-chain" inputs
+		or outputs.
+		
+		A mixer unit's multiple inputs are represented as elements in the
+		input scope.
+		
+		The global scope always contains only one element, with index 0.
+		
+		Group scope is used in more specialized situations specific to the
+		Audio Unit.
+	
+
+
+
+</body>
+</html>

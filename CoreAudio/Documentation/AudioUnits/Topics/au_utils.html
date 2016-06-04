@@ -1,0 +1,512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_utils?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitUtilities"></a>
+<h1>Audio Unit Utilities</h1>
+
+<p><b>Header file:</b> <tt>AudioToolbox/AudioUnitUtilities.h</tt></p>
+
+
+
+<p>	The AU Parameter Listener is designed to provide notifications of an Audio
+Unit's parameters. This API is designed to avoid the need for UI components to
+continually poll an Audio Unit to determine if a parameter value has been
+changed. In order for this notification to be used, the parameter value should
+be changed using the <a href="au_utils.html#AUParameterSet"><tt>AUParameterSet</tt></a> call (discussed below), which allows
+the notification mechanism to be used. This also removes the need for an Audio
+Unit to provide and support a notification mechanism, particular as
+<a href="au_params.html#AudioUnitSetParameter"><tt>AudioUnitSetParameter</tt></a> may be received by an Audio Unit during the render
+process.</p>
+
+<p>	There are also some utilities for converting between non-linear and
+linear value ranges. These are very useful for displaying a non-linear parameter
+(such as Hz, or dB) using a linear control mechanism, such as a slider, to
+ensure that the user has a wider perceived range of control over the parameter
+value.</p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="1"><b>Contents</b></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUListenerCreate">AUListenerCreate</a></td>
+<td>
+		Create an object for fielding notifications when <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> parameter
+		values change.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUListenerDispose">AUListenerDispose</a></td>
+<td>
+		Dispose a parameter listener object.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUListenerAddParameter">AUListenerAddParameter</a></td>
+<td>
+		Connect a parameter to a listener.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUListenerRemoveParameter">AUListenerRemoveParameter</a></td>
+<td>
+		Remove a parameter/listener connection.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterSet">AUParameterSet</a></td>
+<td>
+		Set an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> parameter value and notify listeners.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterListenerNotify">AUParameterListenerNotify</a></td>
+<td>
+		Notify listeners of a parameter change without actually changing the
+		value.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterValueFromLinear">AUParameterValueFromLinear</a></td>
+<td>
+		Converts a linear value to the parameter's natural value range,
+		according to its units.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterValueToLinear">AUParameterValueToLinear</a></td>
+<td>
+		Converts a parameter value to a linear value according to the parameter's
+		units.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterFormatValue">AUParameterFormatValue</a></td>
+<td>
+		Format a parameter value into a string.
+	</td>
+</tr>
+<tr><td colspan="3"><b>Callbacks</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterListenerProc">AUParameterListenerProc</a></td>
+<td>Called when a parameter's value has changed.</td>
+</tr>
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a></td></tr>
+<tr><td colspan="3"><b>Constants</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_utils.html#kAUParameterListener_AnyParameter">kAUParameterListener_AnyParameter</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+<a name="//apple_ref/c/func/AUListenerCreate"></a>
+<h3><a name="AUListenerCreate">AUListenerCreate</a></h3>
+
+		Create an object for fielding notifications when <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> parameter
+		values change.
+	
+		<pre>OSStatus <b>AUListenerCreate</b>(
+  <a href="au_utils.html#AUParameterListenerProc">AUParameterListenerProc</a>   inProc,
+  void *                    inRefCon,
+  CFRunLoopRef              inRunLoop,
+  CFStringRef               inRunLoopMode,
+  Float32                   inNotificationInterval,
+  <a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a> *  outListener
+);</pre>
+	
+		Note that only parameter changes issued through <a href="au_utils.html#AUParameterSet"><tt>AUParameterSet</tt></a> will
+		generate notifications to listeners; thus, in most cases, <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>
+		clients should use <a href="au_utils.html#AUParameterSet"><tt>AUParameterSet</tt></a> in preference to
+		AudioUnitSetParameterValue.
+	<h4>Parameters</h4>
+<dl><dt><tt>inProc</tt></dt>
+<dd>
+			The callback function which is called when the parameter's value
+			changes.
+		</dd>
+<dt><tt>inRefCon</tt></dt>
+<dd>
+			A reference constant for the use of the callback function.
+		</dd>
+<dt><tt>inRunLoop</tt></dt>
+<dd>
+			The run loop on which the callback is called.  If NULL,
+			CFRunLoopGetCurrent() is used.
+		</dd>
+<dt><tt>inRunLoopMode</tt></dt>
+<dd>
+			The run loop mode in which the callback's underlying run loop source
+			will be attached.  If NULL, kCFRunLoopDefaultMode is used.
+		</dd>
+<dt><tt>inNotificationInterval</tt></dt>
+<dd>
+			The maximum time interval, in seconds, at which the callback will be
+			called.  If multiple parameter value changes occur within this time
+			interval, the listener will only receive a notification for the last
+			value change that occurred before the callback.  If
+			inNotificationInterval is 0, the inRunLoop and inRunLoopMode
+			arguments are ignored, and the callback will be issued immediately,
+			on the thread on which the parameter was changed.
+		</dd>
+<dt><tt>outListener</tt></dt>
+<dd>
+		On succcessful return, an <a href="au_utils.html#AUParameterListenerRef"><tt>AUParameterListenerRef</tt></a>.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUListenerDispose"></a>
+<h3><a name="AUListenerDispose">AUListenerDispose</a></h3>
+
+		Dispose a parameter listener object.
+	
+		<pre>OSStatus <b>AUListenerDispose</b>(
+  <a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a>  inListener
+);</pre>
+	
+		
+	<h4>Parameters</h4>
+<dl><dt><tt>inListener</tt></dt>
+<dd>
+			The parameter listener to dispose.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUListenerAddParameter"></a>
+<h3><a name="AUListenerAddParameter">AUListenerAddParameter</a></h3>
+
+		Connect a parameter to a listener.
+	
+		<pre>OSStatus <b>AUListenerAddParameter</b>(
+  <a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a>      inListener,
+  void *                      inObject,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter
+);</pre>
+	
+		Associate an arbitrary object (often a user interface widget) with an
+		<a href="au_params.html#AudioUnitParameter"><tt>AudioUnitParameter</tt></a>, and deliver notifications to the specified listener,
+		telling it that the object needs to be informed of the parameter's value
+		change.
+	<h4>Parameters</h4>
+<dl><dt><tt>inListener</tt></dt>
+<dd>
+			The parameter listener which will receive the callback.
+		</dd>
+<dt><tt>inObject</tt></dt>
+<dd>
+			The object which is interested in the value of the parameter.  This
+			will be passed as the inObject parameter to the listener callback
+			function when the parameter changes.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter whose value changes are to generate callbacks.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUListenerRemoveParameter"></a>
+<h3><a name="AUListenerRemoveParameter">AUListenerRemoveParameter</a></h3>
+
+		Remove a parameter/listener connection.
+	
+		<pre>OSStatus <b>AUListenerRemoveParameter</b>(
+  <a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a>      inListener,
+  void *                      inObject,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inListener</tt></dt>
+<dd>
+			The parameter listener to stop receiving callbacks.
+		</dd>
+<dt><tt>inObject</tt></dt>
+<dd>
+			The object which is no longer interested in the value of the
+			parameter.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter whose value changes are to stop generating callbacks.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUParameterSet"></a>
+<h3><a name="AUParameterSet">AUParameterSet</a></h3>
+
+		Set an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> parameter value and notify listeners.
+	
+		<pre>OSStatus <b>AUParameterSet</b>(
+  <a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a>      inListener,
+  void *                      inObject,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter,
+  Float32                     inValue,
+  UInt32                      inBufferOffsetInFrames
+);</pre>
+	
+		Calls <a href="au_params.html#AudioUnitSetParameter"><tt>AudioUnitSetParameter</tt></a>, and performs/schedules notification
+		callbacks to all parameter listeners, for that parameter -- except that
+		optionally, no callback will be generated to the inListener/inObject
+		pair that invoked this call.
+	<h4>Parameters</h4>
+<dl><dt><tt>inListener</tt></dt>
+<dd>
+			A parameter listener generating the change and does not want to
+			receive a callback as a result of it. May be NULL.
+		</dd>
+<dt><tt>inObject</tt></dt>
+<dd>
+			The object generating the change and does not want to receive a
+			callback as a result of it. NULL is treated specially when
+			inListener is non-null; it signifies that none of the specified
+			listener's objects will receive notifications.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter being changed.
+		</dd>
+<dt><tt>inValue</tt></dt>
+<dd>
+			The new value of the parameter.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUParameterListenerNotify"></a>
+<h3><a name="AUParameterListenerNotify">AUParameterListenerNotify</a></h3>
+
+		Notify listeners of a parameter change without actually changing the
+		value.
+	
+		<pre>OSStatus <b>AUParameterListenerNotify</b>(
+  <a href="au_utils.html#AUParameterListenerRef">AUParameterListenerRef</a>      inListener,
+  void *                      inObject,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter
+);</pre>
+	
+		Performs and schedules the listener notification functions of
+		<a href="au_utils.html#AUParameterSet"><tt>AUParameterSet</tt></a>, without actually setting an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> parameter value.
+		Clients scheduling ramped parameter changes to AudioUnits must make this
+		call dynamically during playback in order for AudioUnitViews to be
+		updated.  When the view's listener receives a notification, it will be
+		passed the current value of the parameter.<p>
+
+		A special meaning is applied if the mParameterID value of inParameter is
+		equal to <a href="au_utils.html#kAUParameterListener_AnyParameter"><tt>kAUParameterListener_AnyParameter</tt></a>. In this case, ANY listener
+		for ANY parameter value changes on the specified <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> will be
+		notified of the current value of that parameter.
+	<h4>Parameters</h4>
+<dl><dt><tt>inListener</tt></dt>
+<dd>
+			A parameter listener generating the change and does not want to
+			receive a callback as a result of it. May be NULL.
+		</dd>
+<dt><tt>inObject</tt></dt>
+<dd>
+			The object generating the change and does not want to receive a
+			callback as a result of it. NULL is treated specially when
+			inListener is non-null; it signifies that none of the specified
+			listener's objects will receive notifications.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter being changed.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AUParameterValueFromLinear"></a>
+<h3><a name="AUParameterValueFromLinear">AUParameterValueFromLinear</a></h3>
+
+		Converts a linear value to the parameter's natural value range,
+		according to its units.
+	
+		<pre>Float32 <b>AUParameterValueFromLinear</b>(
+  Float32                     inLinearValue,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter
+);</pre>
+	
+		
+	<h4>Parameters</h4>
+<dl><dt><tt>inLinearValue</tt></dt>
+<dd>
+			The linear value (0.0-1.0) to convert.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter, including its Audio Unit, that will define the
+			conversion of the supplied linear value to a value that is natural
+			to that parameter.
+		</dd>
+</dl>
+<b>Result:</b> 
+		The converted parameter value.
+	
+
+
+
+<a name="//apple_ref/c/func/AUParameterValueToLinear"></a>
+<h3><a name="AUParameterValueToLinear">AUParameterValueToLinear</a></h3>
+
+		Converts a parameter value to a linear value according to the parameter's
+		units.
+	
+		<pre>Float32 <b>AUParameterValueToLinear</b>(
+  Float32                     inParameterValue,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter
+);</pre>
+	
+		
+	<h4>Parameters</h4>
+<dl><dt><tt>inParameterValue</tt></dt>
+<dd>
+			The value in the natural units of the specified parameter.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter, including its Audio Unit, that will define the
+			conversion of the supplied parameter value to a corresponding linear
+			value.
+		</dd>
+</dl>
+<b>Result:</b> 
+		A number 0.0-1.0.
+	
+
+
+
+<a name="//apple_ref/c/func/AUParameterFormatValue"></a>
+<h3><a name="AUParameterFormatValue">AUParameterFormatValue</a></h3>
+
+		Format a parameter value into a string.
+	
+		<pre>char * <b>AUParameterFormatValue</b>(
+  double                      inParameterValue,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter,
+  char *                      inTextBuffer,
+  UInt32                      inDigits
+);</pre>
+	
+		Formats a floating point value into a string.  Computes a power of 10 to
+		which the value will be rounded and displayed as follows:  if the the
+		parameter is logarithmic (Hertz), the number of significant digits is
+		inDigits - pow10(inParameterValue) + 1.  Otherwise, it is inDigits -
+		pow10(maxValue - minValue) + 1.<p>
+
+	    Example for inDigits=3:
+<pre>
+	    pow10   range           digits after decimal place display
+	    -2      .0100-.0999     4
+	    -1      .100-.999       3
+	    0       1.00-9.99       2
+	    1       10.0-99.9       1
+	    2       100-999         0
+	    3       1000-9990       -1
+	    4       10000-99900     -2</pre>
+	<h4>Parameters</h4>
+<dl><dt><tt>inParameterValue</tt></dt>
+<dd>
+			The parameter value to be formatted.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The Audio Unit, scope, element, and parameter whose value this is.
+		</dd>
+<dt><tt>inTextBuffer</tt></dt>
+<dd>
+			The character array to receive the formatted text.  Should
+			be at least 32 characters.
+		</dd>
+<dt><tt>inDigits</tt></dt>
+<dd>
+			The resolution of the string (see example above).
+		</dd>
+</dl>
+<b>Result:</b> 
+		<tt>outTextBuffer</tt>
+	
+
+
+
+<a name="//apple_ref/c/tdef/AUParameterListenerProc"></a>
+<h3><a name="AUParameterListenerProc">AUParameterListenerProc</a></h3>
+Called when a parameter's value has changed.
+		<pre>typedef void (*<b>AUParameterListenerProc</b>)(
+  void *                      inRefCon,
+  void *                      inObject,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter,
+  Float32                     inValue
+);</pre>
+	
+		
+	<h4>Parameters</h4>
+<dl><dt><tt>inRefCon</tt></dt>
+<dd>
+			The <tt>inRefCon</tt> argument which was passed to <a href="au_utils.html#AUListenerCreate"><tt>AUListenerCreate</tt></a>.
+		</dd>
+<dt><tt>inObject</tt></dt>
+<dd>
+			The <tt>inObject</tt> argument which was passed to <a href="au_utils.html#AUListenerAddParameter"><tt>AUListenerAddParameter</tt></a>
+			for the parameter which has changed.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter which has changed.
+		</dd>
+<dt><tt>inValue</tt></dt>
+<dd>
+			The parameter's most recent value.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/tdef/AUParameterListenerRef"></a>
+<h3><a name="AUParameterListenerRef">AUParameterListenerRef</a></h3>
+
+		<pre>typedef struct AUParameterListener *<b>AUParameterListenerRef</b>;</pre>
+	
+		
+	
+
+
+
+<a name="//apple_ref/c/data/kAUParameterListener_AnyParameter"></a>
+<h3><a name="kAUParameterListener_AnyParameter">kAUParameterListener_AnyParameter</a></h3>
+
+		<pre>enum {
+  kAUParameterListener_AnyParameter  = 0xFFFFFFFF
+};</pre>
+	
+		
+	
+
+
+
+
+
+</body>
+</html>

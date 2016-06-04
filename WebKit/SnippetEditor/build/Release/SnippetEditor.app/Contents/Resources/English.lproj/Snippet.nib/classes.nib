@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {updateFromText = id; updateFromURL = id; }; 
+            CLASS = SnippetController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                attributedStringScrollView = id; 
+                attributedStringView = id; 
+                showUsingNSTextSwitch = id; 
+                splitView = id; 
+                textView = id; 
+                updateFromURLButton = id; 
+                urlField = id; 
+                webView = id; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = WebView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

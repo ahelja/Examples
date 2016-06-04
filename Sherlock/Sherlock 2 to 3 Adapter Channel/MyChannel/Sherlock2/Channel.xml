@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+(C) Copyright 2002 Apple Computer, Inc. All rights reserved.
+
+IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc. (ÒAppleÓ) in consideration of your agreement to the following terms, and your use, installation, modification or redistribution of this Apple software constitutes acceptance of these terms.  If you do not agree with these terms, please do not use, install, modify or redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and subject to these terms, Apple grants you a personal, non-exclusive license, under AppleÕs copyrights in this original Apple software (the ÒApple SoftwareÓ), to use, reproduce, modify and redistribute the Apple Software, with or without modifications, in source and/or binary forms; provided that if you redistribute the Apple Software in its entirety and without modifications, you must retain this notice and the following text and disclaimers in all such redistributions of the Apple Software.  Neither the name, trademarks, service marks or logos of Apple Computer, Inc. may be used to endorse or promote products derived from the Apple Software without specific prior written permission from Apple.  Except as expressly stated in this notice, no other rights or licenses, express or implied, are granted by Apple herein, including but not limited to any patent rights that may be infringed by your derivative works or by other works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.         												
+-->
+
+
+<!--
+		To do:
+			Handle POST searches (currently only handles GET
+			Deal with resultItemSiteTag
+			Deal with nameStart
+			Handle "no items found"
+-->
+
+
+
+<channel>
+
+  <initialize language="JavaScript">
+ 	DataStore.Set("Internet.minViewSize", "{width=310; height=260}");
+	DataStore.Set("Internet.MainQueryField.updateValueOnTextChanged", true);
+	DataStore.Set("Internet.SearchButton.imageURL", "http://si.info.apple.com/sherlock3s/channels/shared/search.tiff");
+	DataStore.Set("Internet.SearchButton.altImageURL", "http://si.info.apple.com/sherlock3s/channels/shared/searchDown.tiff");
+	DataStore.Set("Internet.SearchResultsTable.columns.relevance.dataCellType", "RankCell");
+	DataStore.Set("Internet.SearchResultsTable.pasteboardTypes.NSStringPboardType", "description.URL.objectValue");
+	DataStore.Set("Internet.SearchResultsTable.pasteboardTypes.NSURLPboardType", "doubleClickURL");
+	DataStore.Set("Internet.SearchResultsTable.visibleDragColumns", "description");
+	/* Initialize this with an empty document, so it fills in with white */
+	DataStore.Set("Internet.DetailHTMLView.HTMLData", "");
+ </initialize>
+
+<triggers>
+
+
+<trigger path="Internet.didInstall" language="XQuery"
+	output="Internet.ChannelSrc">
+	{-- Read in the Channel.src file, and store any --}
+	{-- useful information in the data store.       --}
+	document(string-combine((base-url(), "Channel.src"), ""))/search
+</trigger>
+
+<trigger path="Internet.SearchButton.action" language="JavaScript">
+	DataStore.Notify("DATA.action.search");
+</trigger> 
+
+<trigger path="DATA.action.search" language="JavaScript">
+	DataStore.Set("Internet.SearchResultsTable.dataValue", null);
+	DataStore.Set("Internet.searchComplete", false);
+	DataStore.Set("Internet.NetworkArrows.animating", true);
+	DataStore.Notify("DATA.action.searchGeneric");
+</trigger> 
+
+ 
+<trigger path="DATA.action.searchGeneric" language="XQuery"
+	inputs="query=Internet.MainQueryField.objectValue,
+	channelSrc=Internet.ChannelSrc">
+
+	let $l := msg("channelSrc: ", $channelSrc)
+	let $l := msg("interpret: ", $channelSrc//interpret[1])
+	let $l := msg("resultListStart: ", $channelSrc//interpret[1]/@resultItemStart)
+	let $l := msg("resultListEnd: ", $channelSrc//interpret[1]/@resultListEnd)
+	let $l := msg("resultItemStart: ", $channelSrc//interpret[1]/@resultItemStart)
+	let $l := msg("resultItemEnd: ", $channelSrc//interpret[1]/@resultItemEnd)
+
+	{-- Setup the query --}
+	let $eq := url-encode($query, " ", "+", $query_encoding)/translate(., " ", "+")
+	let $queryURL := $channelSrc/@action
+	
+	let $inputs := ($channelSrc//input, $channelSrc//INPUT)
+
+let $l := msg($inputs)
+
+	{-- Do not include inputs that are for when displaying results in a browser --}
+	let $inputs := for $input in $inputs where (not($input/@mode = "browser") and not($input/@MODE = "browser"))
+		return $input
+		
+	let $inputs := for $input in $inputs
+		{-- note that "user" has no value; it's either there, or it's not --}
+		let $user := exists($input/@user)
+		let $user := if ($user) then $user else exists($input/@USER)
+		let $name := $input/@name
+		let $name := if ($name) then $name else $input/@NAME
+		let $value := $input/@value
+		let $value := if ($value) then $value else $input/@VALUE
+		let $result := if ($user) then
+			concat($name, "=", $eq)
+		else
+			concat($name, "=", $value)
+		
+		return $result
+		
+		
+		
+	let $queryURL := if ($inputs) then
+		{-- Some URLs already end in ?; in that case, don't add one. --}
+		let $qmark := if (ends-with($queryURL, "?")) then "" else "?"
+		return concat($queryURL, $qmark, string-combine($inputs, "&amp;"))
+	else
+		$queryURL
+
+	let $l := msg("Query URL: ", $queryURL)
+
+	
+	{-- Do the search --}
+	let $interpret := $channelSrc//interpret[1] {-- // handles bad XML better --}
+
+	let $l := msg("interpret: ", $interpret)
+
+	let $resultsData := document($queryURL)/data-match(., $interpret/@resultListStart, $interpret/@resultListEnd)
+
+	let $l := msg("resultsData: ", $resultsData/string())
+
+	let $resultRows := data-match-all($resultsData, $interpret/@resultItemStart, $interpret/@resultItemEnd)
+	{-- In some cases, the resultItemEnd is not present --}
+	let $resultRows := if ($resultRows) then $resultRows else
+		data-match-all($resultsData, $interpret/@resultItemStart, $interpret/@resultItemStart, false(), false())
+	
+	let $l := msg("resultRows: ", $resultRows)
+
+	let $results := for $row in $resultRows
+		let $anchor := $row//A[1]  
+		let $anchor := if ($anchor) then $anchor else $row//a[1]  
+		let $url := $anchor/@HREF/url()
+		let $url := if ($url) then $url else $anchor/@href/url()
+		let $title := string-combine($anchor//text()/convert-html(.), "")
+		
+		let $l := msg("   result title: ", $title)
+
+		let $htmlData := $row
+		let $relevance := data-match($row, $interpret/@relevanceStart, $interpret/@relevanceEnd)/number()
+		return dictionary(
+			("htmlData", $htmlData),
+			("relevance", $relevance),
+			("description", $title),
+			("doubleClickURL", $url))
+
+	return dictionary(("Internet.SearchResultsTable.dataValue", $results),
+		("Internet.SearchResultsTable.selectedRows", null()),
+		("Internet.searchComplete", true()),
+		("Internet.NetworkArrows.animating", false()) )
+ </trigger>
+
+
+<trigger path="Internet.SearchResultsTable" language="XQuery"
+   inputs="tableRows=Internet.SearchResultsTable.dataValue, selectedRows=Internet.SearchResultsTable.selectedRows" 
+   output="Internet.DetailHTMLView.htmlData" task="true">
+	{-- If any aspect of the results table changes (.dataValue, or .selectedRows) --}
+	{-- we want to trigger an update of the detail view.                          --}
+
+	let $selectedItem := if (exists($selectedRows)) then
+		$tableRows[1+$selectedRows]
+	else
+		null()
+
+	return $selectedItem/htmlData
+ </trigger>
+
+
+</triggers>
+
+</channel>
+

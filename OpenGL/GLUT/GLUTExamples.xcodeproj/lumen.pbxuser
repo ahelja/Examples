@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	5601F31607B19FAB00796960 /* Chess */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB78CC5B0407A00721F6F /* Chess */,
+		);
+	};
+	5601F32C07B1A03600796960 /* Decal */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB78DC5B0407A00721F6F /* Decal */,
+		);
+	};
+	5601F33C07B1A0C200796960 /* GeoFace */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB78EC5B0407A00721F6F /* GeoFace */,
+		);
+	};
+	5601F36207B1A19C00796960 /* GLIQ */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB78FC5B0407A00721F6F /* GLIQ */,
+		);
+	};
+	5601F37F07B1A25500796960 /* GLUTMech */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB790C5B0407A00721F6F /* GLUTMech */,
+		);
+	};
+	5601F38A07B1A2C700796960 /* Underwater */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB792C5B0407A00721F6F /* Underwater */,
+		);
+	};
+	5601F3E507B1A38100796960 /* UseSphereMap */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB793C5B0407A00721F6F /* UseSphereMap */,
+		);
+	};
+	5607DA3007B19B9D00C2151B /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeBuildStyle = 5607DA2E07B19B9D00C2151B /* Development */;
+		activeExecutable = 6B9EB78AC5B0407A00721F6F /* Atlantis */;
+		activeTarget = 5673FECC07B19E4E00AF4085 /* Atlantis */;
+		codeSenseManager = 6B9EB7A3C5B0408900721F6F /* Code sense */;
+		executables = (
+			6B9EB78AC5B0407A00721F6F /* Atlantis */,
+			6B9EB78BC5B0407A00721F6F /* BluePony */,
+			6B9EB78CC5B0407A00721F6F /* Chess */,
+			6B9EB78DC5B0407A00721F6F /* Decal */,
+			6B9EB78EC5B0407A00721F6F /* GeoFace */,
+			6B9EB78FC5B0407A00721F6F /* GLIQ */,
+			6B9EB790C5B0407A00721F6F /* GLUTMech */,
+			6B9EB791C5B0407A00721F6F /* NewWave */,
+			6B9EB792C5B0407A00721F6F /* Underwater */,
+			6B9EB793C5B0407A00721F6F /* UseSphereMap */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48.1626,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = "-978304902";
+			PBXWorkspaceStateSaveDate = "-978304902";
+		};
+		sourceControlManager = 6B9EB7A2C5B0408900721F6F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5673FE8207B19D4B00AF4085 /* NewWave */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB791C5B0407A00721F6F /* NewWave */,
+		);
+	};
+	5673FECC07B19E4E00AF4085 /* Atlantis */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB78AC5B0407A00721F6F /* Atlantis */,
+		);
+	};
+	5673FEDF07B19EB200AF4085 /* BluePony */ = {
+		activeExec = 0;
+		executables = (
+			6B9EB78BC5B0407A00721F6F /* BluePony */,
+		);
+	};
+	6B9EB78AC5B0407A00721F6F /* Atlantis */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Atlantis;
+		sourceDirectories = (
+		);
+	};
+	6B9EB78BC5B0407A00721F6F /* BluePony */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = BluePony;
+		sourceDirectories = (
+		);
+	};
+	6B9EB78CC5B0407A00721F6F /* Chess */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Chess;
+		sourceDirectories = (
+		);
+	};
+	6B9EB78DC5B0407A00721F6F /* Decal */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Decal;
+		sourceDirectories = (
+		);
+	};
+	6B9EB78EC5B0407A00721F6F /* GeoFace */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = GeoFace;
+		sourceDirectories = (
+		);
+	};
+	6B9EB78FC5B0407A00721F6F /* GLIQ */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = GLIQ;
+		sourceDirectories = (
+		);
+	};
+	6B9EB790C5B0407A00721F6F /* GLUTMech */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = GLUTMech;
+		sourceDirectories = (
+		);
+	};
+	6B9EB791C5B0407A00721F6F /* NewWave */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = NewWave;
+		sourceDirectories = (
+		);
+	};
+	6B9EB792C5B0407A00721F6F /* Underwater */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Underwater;
+		sourceDirectories = (
+		);
+	};
+	6B9EB793C5B0407A00721F6F /* UseSphereMap */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = UseSphereMap;
+		sourceDirectories = (
+		);
+	};
+	6B9EB7A2C5B0408900721F6F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	6B9EB7A3C5B0408900721F6F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

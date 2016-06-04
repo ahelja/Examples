@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_view?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitViewComponents"></a>
+<h1>Audio Unit View Components</h1>
+
+<p><b>Header file:</b> <tt>AudioUnit/AudioUnitCarbonView.h</tt></p>
+
+
+<hr>
+
+	
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_view.html#AudioUnitCarbonViewCreate">AudioUnitCarbonViewCreate</a></td>
+<td>Open a view component's user interface.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_view.html#AudioUnitCarbonViewSetEventListener">AudioUnitCarbonViewSetEventListener</a></td>
+<td>Installs an event listener in an <a href="au_view.html#AudioUnitCarbonView"><tt>AudioUnitCarbonView</tt></a>.</td>
+</tr>
+<tr><td colspan="3"><b>Callbacks</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_view.html#AudioUnitCarbonViewEventListener">AudioUnitCarbonViewEventListener</a></td>
+<td>Receive notifications from user-interface events.</td>
+</tr>
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_view.html#AudioUnitCarbonView">AudioUnitCarbonView</a></td></tr>
+<tr><td colspan="3"><b>Enumerations</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_view.html#kAudioUnitCarbonViewComponentType">kAudioUnitCarbonViewComponentType</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_view.html#AudioUnitCarbonViewEventID">AudioUnitCarbonViewEventID</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitCarbonViewCreate"></a>
+<h3><a name="AudioUnitCarbonViewCreate">AudioUnitCarbonViewCreate</a></h3>
+Open a view component's user interface.
+<pre>ComponentResult <b>AudioUnitCarbonViewCreate</b>(
+  <a href="au_view.html#AudioUnitCarbonView">AudioUnitCarbonView</a>   inView,
+  <a href="au_components.html#AudioUnit">AudioUnit</a>             inAudioUnit,
+  WindowRef             inWindow,
+  ControlRef            inParentControl,
+  const Float32Point *  inLocation,
+  const Float32Point *  inSize,
+  ControlRef *          outControl
+);</pre>
+	
+		The host application specifies the <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> which the view is to
+		control, and provides a window, parent control, and rectangle into which
+		the <a href="au_view.html#AudioUnitCarbonView"><tt>AudioUnitCarbonView</tt></a> component is to create itself.<p>
+
+		The host application is responsible for closing the <a href="au_view.html#AudioUnitCarbonView"><tt>AudioUnitCarbonView</tt></a>
+		component (via CloseComponent) before closing its window.
+	<h4>Parameters</h4>
+<dl><dt><tt>inView</tt></dt>
+<dd>
+			The view component instance.
+		</dd>
+<dt><tt>inAudioUnit</tt></dt>
+<dd>
+			The <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> component instance which the view is to control.
+		</dd>
+<dt><tt>inWindow</tt></dt>
+<dd>
+			The Carbon window in which the user interface is to be opened.
+		</dd>
+<dt><tt>inParentControl</tt></dt>
+<dd>
+			The Carbon control into which the user interface is to be
+			embedded (often but not necessarily the window's root control).
+		</dd>
+<dt><tt>inLocation</tt></dt>
+<dd>
+			The host application's requested location for the view.
+			The view should always create itself at the specified location,
+		</dd>
+<dt><tt>inSize</tt></dt>
+<dd>
+			The host application's requested size for the view. The view may
+			choose a different size for itself, determined by the dimensions of
+			outControl.
+		</dd>
+<dt><tt>outControl</tt></dt>
+<dd>
+			On exit, the Carbon control which contains the entire user interface.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitCarbonViewSetEventListener"></a>
+<h3><a name="AudioUnitCarbonViewSetEventListener">AudioUnitCarbonViewSetEventListener</a></h3>
+Installs an event listener in an <a href="au_view.html#AudioUnitCarbonView"><tt>AudioUnitCarbonView</tt></a>.
+<pre>ComponentResult <b>AudioUnitCarbonViewSetEventListener</b>(
+  <a href="au_view.html#AudioUnitCarbonView">AudioUnitCarbonView</a>               inView,
+  <a href="au_view.html#AudioUnitCarbonViewEventListener">AudioUnitCarbonViewEventListener</a>  inCallback,
+  void *                            inUserData
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>inView</tt></dt>
+<dd>
+			The view component instance.
+		</dd>
+<dt><tt>inCallback</tt></dt>
+<dd>
+			The event listener callback function.
+		</dd>
+<dt><tt>inUserData</tt></dt>
+<dd>
+			A user data pointer passed to the callback.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/tdef/AudioUnitCarbonViewEventListener"></a>
+<h3><a name="AudioUnitCarbonViewEventListener">AudioUnitCarbonViewEventListener</a></h3>
+Receive notifications from user-interface events.
+<pre>typedef void (*<b>AudioUnitCarbonViewEventListener</b>)(
+  void *                      inUserData,
+  <a href="au_view.html#AudioUnitCarbonView">AudioUnitCarbonView</a>         inView,
+  const <a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a> *  inParameter,
+  <a href="au_view.html#AudioUnitCarbonViewEventID">AudioUnitCarbonViewEventID</a>  inEvent,
+  const void *                inEventParam
+);</pre>
+	
+		This callback function is called when certain events occur in an
+		<a href="au_view.html#AudioUnitCarbonView"><tt>AudioUnitCarbonView</tt></a>, such as mouse-down and up events on a control.
+	<h4>Parameters</h4>
+<dl><dt><tt>inUserData</tt></dt>
+<dd>
+			User-defined pointer that was passed to <a href="au_view.html#AudioUnitCarbonViewSetEventListener"><tt>AudioUnitCarbonViewSetEventListener</tt></a>.
+		</dd>
+<dt><tt>inView</tt></dt>
+<dd>
+			The AudioUnitCarbonVIew generating the message.
+		</dd>
+<dt><tt>inParameter</tt></dt>
+<dd>
+			The parameter associated with the control generating the message.
+		</dd>
+<dt><tt>inEvent</tt></dt>
+<dd>
+			The type of event.
+		</dd>
+<dt><tt>inEventParam</tt></dt>
+<dd>
+			Further information about the event, dependent on its type.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/tdef/AudioUnitCarbonView"></a>
+<h3><a name="AudioUnitCarbonView">AudioUnitCarbonView</a></h3>
+
+		<pre>typedef ComponentInstance <b>AudioUnitCarbonView</b>;</pre>
+	
+	
+
+
+
+<a name="//apple_ref/c/tag/kAudioUnitCarbonViewComponentType"></a>
+<h3><a name="kAudioUnitCarbonViewComponentType">kAudioUnitCarbonViewComponentType</a></h3>
+
+<pre>enum {
+  kAudioUnitCarbonViewComponentType  = FOUR_CHAR_CODE('auvw')
+};</pre>
+	
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioUnitCarbonViewComponentType"><tt>kAudioUnitCarbonViewComponentType</tt></a></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitCarbonViewEventID"></a>
+<h3><a name="AudioUnitCarbonViewEventID">AudioUnitCarbonViewEventID</a></h3>
+
+		<pre>typedef SInt32 <b>AudioUnitCarbonViewEventID</b>;</pre>
+<pre>enum {
+  kAudioUnitCarbonViewEvent_MouseDownInControl  = 0,
+  kAudioUnitCarbonViewEvent_MouseUpInControl    = 1
+};</pre>
+	
+		Specifies an event passed to an <a href="au_view.html#AudioUnitCarbonViewEventListener"><tt>AudioUnitCarbonViewEventListener</tt></a>.
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioUnitCarbonViewEvent_MouseDownInControl"><tt>kAudioUnitCarbonViewEvent_MouseDownInControl</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitCarbonViewEvent_MouseUpInControl"><tt>kAudioUnitCarbonViewEvent_MouseUpInControl</tt></a></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+
+</body>
+</html>

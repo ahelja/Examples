@@ -1,0 +1,1394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_properties?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitProperties"></a>
+<h1>Audio Unit Properties</h1>
+
+<p><b>Header file:</b> <tt>AudioUnit/AudioUnitProperties.h</tt></p>
+
+<p>This section describes the different properties that apply to Audio Units.
+These are organized in functional groups as listed below. The
+<a href="au_properties.html#AudioUnitPropertyID"><tt>AudioUnitPropertyID</tt></a> is listed with the struct or type that represents the
+property's value. These values are declared in
+<code>AudioUnit/AudioUnitProperties.h</code>. <br></br><b>Important</b> - these
+property values are always passed by reference to both the Get and Set property
+calls (i.e. you pass a pointer to the type specified).</p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="2"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#ConnectionManagement">Connection Management</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#FormatNegotiation">Format Negotiation</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#Parameters">Parameters</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#BufferManagement">Buffer Management</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#RenderingProperties">Rendering Properties</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#PerformanceProperties">Performance Properties</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#AudioUnitViewandHostProperties">Audio Unit View and Host Properties</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#HostCallbacks-MusicalTime">Host Callbacks - Musical Time</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#AudioUnitPresetsandPersistence">Audio Unit Presets and Persistence</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#InternalAlgorithmConfiguration">Internal Algorithm Configuration</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#MusicDeviceProperties">MusicDevice Properties</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#AudioDeviceIDProperty">AudioDeviceID Property</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#OutputUnitProperties">OutputUnit Properties</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_properties.html#3DandSpatializationProperties">3D and Spatialization Properties</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Callbacks</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitGetParameterProc">AudioUnitGetParameterProc</a></td>
+<td></td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitSetParameterProc">AudioUnitSetParameterProc</a></td>
+<td></td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitRenderProc">AudioUnitRenderProc</a></td>
+<td></td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#HostCallback_GetBeatAndTempo">HostCallback_GetBeatAndTempo</a></td>
+<td>This callback is provided to obtain basic information from the host of its current musical location, namely its current beat and current tempo. By convention, it is assumed that the first beat of a sequence starts at beat zero.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#HostCallback_GetMusicalTimeLocation">HostCallback_GetMusicalTimeLocation</a></td>
+<td>This callback is provided to obtain more detailed information from the host concerning its current musical location.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#HostCallback_GetTransportState">HostCallback_GetTransportState</a></td>
+<td>This callback is provided to obtain information from the host about its current transport state</td>
+</tr>
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a></td></tr>
+<tr><td colspan="3"><b>Structs</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitConnection">AudioUnitConnection</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AURenderCallbackStruct">AURenderCallbackStruct</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AUChannelInfo">AUChannelInfo</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitMIDIControlMapping">AudioUnitMIDIControlMapping</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AudioUnitExternalBuffer">AudioUnitExternalBuffer</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#HostCallbackInfo">HostCallbackInfo</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#AUPreset">AUPreset</a></td></tr>
+<tr><td colspan="3"><b>Constants</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_MakeConnection">kAudioUnitProperty_MakeConnection</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_BusCount">kAudioUnitProperty_BusCount</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SetRenderCallback">kAudioUnitProperty_SetRenderCallback</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SetInputCallback">kAudioUnitProperty_SetInputCallback</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SampleRate">kAudioUnitProperty_SampleRate</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SupportedNumChannels">kAudioUnitProperty_SupportedNumChannels</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ParameterList">kAudioUnitProperty_ParameterList</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ParameterInfo">kAudioUnitProperty_ParameterInfo</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ParameterValueStrings">kAudioUnitProperty_ParameterValueStrings</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_MIDIControlMapping">kAudioUnitProperty_MIDIControlMapping</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_MaximumFramesPerSlice">kAudioUnitProperty_MaximumFramesPerSlice</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SetExternalBuffer">kAudioUnitProperty_SetExternalBuffer</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_Latency">kAudioUnitProperty_Latency</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_TailTime">kAudioUnitProperty_TailTime</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_BypassEffect">kAudioUnitProperty_BypassEffect</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_LastRenderError">kAudioUnitProperty_LastRenderError</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_FastDispatch">kAudioUnitProperty_FastDispatch</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_CPULoad">kAudioUnitProperty_CPULoad</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_RenderQuality">kAudioUnitProperty_RenderQuality</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_GetUIComponentList">kAudioUnitProperty_GetUIComponentList</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ContextName">kAudioUnitProperty_ContextName</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_IconLocation">kAudioUnitProperty_IconLocation</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ElementName">kAudioUnitProperty_ElementName</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_HostCallbacks">kAudioUnitProperty_HostCallbacks</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ClassInfo">kAudioUnitProperty_ClassInfo</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_CurrentPreset">kAudioUnitProperty_CurrentPreset</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_PresentPreset">kAudioUnitProperty_PresentPreset</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_FactoryPresets">kAudioUnitProperty_FactoryPresets</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_ReverbRoomType">kAudioUnitProperty_ReverbRoomType</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_UsesInternalReverb">kAudioUnitProperty_UsesInternalReverb</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SRCAlgorithm">kAudioUnitProperty_SRCAlgorithm</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_InstrumentCount">kMusicDeviceProperty_InstrumentCount</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_InstrumentName">kMusicDeviceProperty_InstrumentName</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_InstrumentNumber">kMusicDeviceProperty_InstrumentNumber</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_SoundBankFSSpec">kMusicDeviceProperty_SoundBankFSSpec</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_BankName">kMusicDeviceProperty_BankName</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_GroupOutputBus">kMusicDeviceProperty_GroupOutputBus</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kMusicDeviceProperty_MIDIXMLNames">kMusicDeviceProperty_MIDIXMLNames</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioOutputUnitProperty_CurrentDevice">kAudioOutputUnitProperty_CurrentDevice</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioOutputUnitProperty_IsRunning">kAudioOutputUnitProperty_IsRunning</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SpeakerConfiguration">kAudioUnitProperty_SpeakerConfiguration</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_SpatializationAlgorithm">kAudioUnitProperty_SpatializationAlgorithm</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_properties.html#kAudioUnitProperty_DopplerShift">kAudioUnitProperty_DopplerShift</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+<a name="//apple_ref/c/tdef/AudioUnitPropertyID"></a>
+<h3><a name="AudioUnitPropertyID">AudioUnitPropertyID</a></h3>
+
+		<pre>typedef UInt32 <b>AudioUnitPropertyID</b>;</pre>
+	
+		The constants declared in this header file are represented
+		using this type.
+	
+
+
+
+<hr></hr>
+
+<a name="ConnectionManagement"></a>
+<h2>Connection Management</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_MakeConnection"></a>
+<h3><a name="kAudioUnitProperty_MakeConnection">kAudioUnitProperty_MakeConnection</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#AudioUnitConnection"><tt>AudioUnitConnection</tt></a><p>
+
+		Use this property with <a href="au_property_funcs.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> to establish a connection
+		between the destination unit (which is the Audio Unit that you make the
+		call on) and the source unit that is specified in the provided
+		<a href="au_properties.html#AudioUnitConnection"><tt>AudioUnitConnection</tt></a> struct. In <a href="au_property_funcs.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> you specify
+		<a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Input</tt></a> for the <a href="au_state.html#AudioUnitScope"><tt>AudioUnitScope</tt></a> parameter. The elementID is
+		the input number upon which the connection will be made (this is also
+		redundantly stored in the <a href="au_properties.html#AudioUnitConnection"><tt>AudioUnitConnection</tt></a>).
+	
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitConnection"></a>
+<h3><a name="AudioUnitConnection">AudioUnitConnection</a></h3>
+
+<pre>struct AudioUnitConnection {
+  <a href="au_components.html#AudioUnit">AudioUnit</a>  sourceAudioUnit;
+  UInt32     sourceOutputNumber;
+  UInt32     destInputNumber;
+};</pre>
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_BusCount"></a>
+<h3><a name="kAudioUnitProperty_BusCount">kAudioUnitProperty_BusCount</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 The scope is either <a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Input</tt></a> or <a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Output</tt></a> to
+		 both get and set the number of input or output busses (elements). By
+		 default many Audio Units will create a single input or output bus
+		 (element), so this call is generally used to create additional busses.
+		 A typical example would be the interleaver or deinterleaver units where
+		 their behaviour is determined by the number of in or out busses
+		 respectively. Other units, such as Mixer units, may have already
+		 allocated the necessary state to accept a number of inputs, so this
+		 call can be used to determine that limit.
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SetRenderCallback"></a>
+<h3><a name="kAudioUnitProperty_SetRenderCallback">kAudioUnitProperty_SetRenderCallback</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#AURenderCallbackStruct"><tt>AURenderCallbackStruct</tt></a><p>
+
+		This is used with a <a href="au_property_funcs.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> call on a V2 Audio Unit (i.e.
+		where the Component's type is <b>not</b> kAudioUnitComponentType). This
+		(and the corresponding <code><a href="au_properties.html#kAudioUnitProperty_SetInputCallback">kAudioUnitProperty_SetInputCallback</a></code>
+		for the V1 Audio Unit) are used to register a callback with an Audio
+		Unit to provide audio data on the specified elementID (bus) of the input
+		scope. When the Audio Unit calls the render callback (or input callback
+		for V1), it will provide a buffer that the input callback should fill
+		with data. When this property is set the caller should also set the
+		stream format property for that elementID (bus) of the input scope to
+		tell the Audio Unit what format the data is in that it will be providing
+		(see <code><a href="au_properties.html#kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a></code>).
+	
+
+
+
+<a name="//apple_ref/c/tag/AURenderCallbackStruct"></a>
+<h3><a name="AURenderCallbackStruct">AURenderCallbackStruct</a></h3>
+
+<pre>struct AURenderCallbackStruct {
+  <a href="au_render.html#AURenderCallback">AURenderCallback</a>  inputProc;
+  void *            inputProcRefCon;
+};</pre>
+	
+
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SetInputCallback"></a>
+<h3><a name="kAudioUnitProperty_SetInputCallback">kAudioUnitProperty_SetInputCallback</a></h3>
+
+		<b>Type: </b>AudioUnitInputCallback<p>
+
+		 This is used with a <a href="au_property_funcs.html#AudioUnitSetProperty"><tt>AudioUnitSetProperty</tt></a> call on a V1 Audio Unit (i.e.
+		 where the Component's type is kAudioUnitComponentType).
+	
+
+
+
+<hr></hr>
+
+<a name="FormatNegotiation"></a>
+<h2>Format Negotiation</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_StreamFormat"></a>
+<h3><a name="kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a></h3>
+
+		<b>Type: </b>AudioStreamBasicDescription<p>
+
+	<p>Typically <a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Input</tt></a> or <a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Output</tt></a> are passed in for the <a href="au_state.html#AudioUnitScope"><tt>AudioUnitScope</tt></a> and the bus number (zero based) is specified in the elementID. This completely specifies the format that exists on the specified scope. Some units can take this property on the <a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Global</tt></a>, which will generally mean either (the common case) that the formats are the same on both input and output, or that the audio unit can internally process data in a different format than its in and out formats (less typical, but possible). See <code><a href="au_properties.html#kAudioUnitProperty_SpeakerConfiguration">kAudioUnitProperty_SpeakerConfiguration</a></code> for more complex rendering processes involving audio spatialization.</p>
+		
+	<p>There is a subtlety about the usage of the format flags with the AudioStreamBasicDescription and the Audio Unit V2 format that should be discusssed.</p>
+	
+	<p>When an AudioStreamBasicDescription has the kAudioFormatFlagIsNonInterleaved flag, which is the case with the cannonical format for the V2 units, the AudioBufferList has a different structure and semantic. In this case, the AudioStreamBasicDescription fields will describe the format of ONE of the AudioBuffers that are contained in the list, AND each AudioBuffer in the list is determined to have a single (mono) channel of audio data. Then, the AudioStreamBasicDescription's mChannelsPerFrame will indicate the total number of AudioBuffers that are contained within the AudioBufferList - where each buffer contains one channel. This is used primarily with the <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> (and AudioConverter) representation of this list - and typically won't be found in the AudioHardware.h usage of this structure.</p>
+		
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SampleRate"></a>
+<h3><a name="kAudioUnitProperty_SampleRate">kAudioUnitProperty_SampleRate</a></h3>
+
+		<b>Type: </b>Float64<p>
+
+		 This is a convenience property of the complete
+		 <code><a href="au_properties.html#kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a></code> above. However, it is
+		 particularly useful in those cases where an application wishes to track
+		 the sample rate of an Audio Unit, for example, in the case of an
+		 AudioDeviceID unit where the user may change its sample rate
+		 independently of the application. This can also be used of course to
+		 set the sample rate of an input or output element.
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SupportedNumChannels"></a>
+<h3><a name="kAudioUnitProperty_SupportedNumChannels">kAudioUnitProperty_SupportedNumChannels</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#AUChannelInfo"><tt>AUChannelInfo</tt></a><p>
+
+		If <b>not</b> implemented, the Audio Unit may be agnostic about the
+		number of channels and only a format setting can validate whether the
+		channels are accepted. Generally, this will mean (particularly with
+		Effect Units) that any number of channels are usable as long as there is
+		the same number of channels on both the input and output scopes. Other
+		units can accept a mismatch in the channelization of their busses, thus
+		this property is provide to allow those units to publish the allowable
+		channel configurations that can be accepted on input and output.<p>
+
+		Returns pairs of numbers of channels (e.g. 1 in / 1 out, 1 in / 2 out, 2
+		in / 2 out, etc.). If a value of -1 is seen, then this can be
+		interpreted as "any" number of channels for that scope. So, the default setting for an Effect Unit would be -1/-1, and for these types of units it is not expected that they publish this property if this value (same number of channels in and out, with no restriction on the number of channels) is supported.
+	
+
+
+
+<a name="//apple_ref/c/tag/AUChannelInfo"></a>
+<h3><a name="AUChannelInfo">AUChannelInfo</a></h3>
+
+<pre>struct AUChannelInfo {
+  SInt16  inChannels;
+  SInt16  outChannels;
+};</pre>
+	
+
+
+
+<hr></hr>
+
+<a name="Parameters"></a>
+<h2>Parameters</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ParameterList"></a>
+<h3><a name="kAudioUnitProperty_ParameterList">kAudioUnitProperty_ParameterList</a></h3>
+
+		<b>Type: </b><a href="au_params.html#AudioUnitParameterID"><tt>AudioUnitParameterID</tt></a> array<p>
+
+		The caller specifies the <a href="au_state.html#AudioUnitScope"><tt>AudioUnitScope</tt></a> to be queried for its
+		parameters. Most effect units will define parameters in the global scope
+		(as the unit itself applies the parameters to the work it does). A mixer
+		unit will typically define parameters in both the input (apply different
+		volumes to each input) and output scopes (the overall volume of the
+		mix). The call will return a list of AudioUnitParameterIDs, which can
+		then be used with <code><a href="au_properties.html#kAudioUnitProperty_ParameterInfo">kAudioUnitProperty_ParameterInfo</a></code> to
+		obtain information about the parameter.<p>
+
+		Some parameters range may change depending on characteristics of the
+		formats the Audio Unit is operating in. For instance, a common case is a
+		Hz parameter in an effect, where the real limitation (maximum value) of this
+		parameter will vary based on the sample rate that the unit is operating
+		at. In this case, if the sample rate of an audio unit is changed, a
+		notification can be sent for this property change and the application
+		can then re-present the new maximum value of the Hz parameter at this new
+		sample rate.
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ParameterInfo"></a>
+<h3><a name="kAudioUnitProperty_ParameterInfo">kAudioUnitProperty_ParameterInfo</a></h3>
+
+		<b>Type: </b><a href="au_params.html#AudioUnitParameterInfo"><tt>AudioUnitParameterInfo</tt></a><p>
+
+		 The caller passes in the desired <a href="au_state.html#AudioUnitScope"><tt>AudioUnitScope</tt></a>, <a href="au_state.html#AudioUnitElement"><tt>AudioUnitElement</tt></a> for
+		 the <a href="au_params.html#AudioUnitParameterID"><tt>AudioUnitParameterID</tt></a> in the <a href="au_property_funcs.html#AudioUnitGetProperty"><tt>AudioUnitGetProperty</tt></a> call to obtain
+		 information about a particular parameter.
+	
+
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ParameterValueStrings"></a>
+<h3><a name="kAudioUnitProperty_ParameterValueStrings">kAudioUnitProperty_ParameterValueStrings</a></h3>
+
+		<b>Type: </b>CFArrayRef<p>
+
+		The caller passes in the desired <a href="au_state.html#AudioUnitScope"><tt>AudioUnitScope</tt></a>, <a href="au_state.html#AudioUnitElement"><tt>AudioUnitElement</tt></a> for
+		the <a href="au_params.html#AudioUnitParameterID"><tt>AudioUnitParameterID</tt></a> and receives an array of CFString's
+		corresponding to the discrete integral values of the parameter. Only
+		valid for parameters which have a unit of
+		<code><a href="au_params.html#AudioUnitParameterUnit">kAudioUnitParameterUnit_Indexed</a></code>. The caller is responsible
+		for releasing the array.  (Releasing the array will in turn
+		automatically release the contained CFStrings.)
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_MIDIControlMapping"></a>
+<h3><a name="kAudioUnitProperty_MIDIControlMapping">kAudioUnitProperty_MIDIControlMapping</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#AudioUnitMIDIControlMapping"><tt>AudioUnitMIDIControlMapping</tt></a><p>
+
+		The caller passes in global scope, the elementID ignored. It returns an
+		array of <a href="au_properties.html#AudioUnitMIDIControlMapping"><tt>AudioUnitMIDIControlMapping</tt></a>'s, specifying a default mapping of
+		MIDI controls and/or NRPN's to Audio Unit scopes/elements/parameters.
+		
+		For more detailed information on these properties see the section on <a i.e.="au_params.html#param_info_au" target="content_pane">Parameter
+		Types and Information</a>.
+	
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitMIDIControlMapping"></a>
+<h3><a name="AudioUnitMIDIControlMapping">AudioUnitMIDIControlMapping</a></h3>
+
+<pre>struct AudioUnitMIDIControlMapping {
+  UInt16                midiNRPN;
+  UInt8                 midiControl;
+  UInt8                 scope;
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>      element;
+  <a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>  parameter;
+};</pre>
+	
+	<h4>Fields</h4>
+<dl>
+<dt><tt>midiNRPN</tt></dt>
+<dd>0xFFFF if none, MSB, LSB are in low 14 bits</dd>
+<dt><tt>midiControl</tt></dt>
+<dd>0xFF if none, must not use controls:
+			<ul>
+				<li>0, 32 (bank select)</li>
+				<li>6, 38 (data entry MSB/LSB)</li>
+				<li>96-101 (increment, decrement, RPN/NRPN select)</li>
+				<li>120-127 (channel mode messages)</li>
+			</ul>
+		</dd>
+<dt><tt>scope</tt></dt>
+<dd></dd>
+<dt><tt>element</tt></dt>
+<dd></dd>
+<dt><tt>parameter</tt></dt>
+<dd></dd>
+</dl>
+
+
+
+
+
+<hr></hr>
+
+<a name="BufferManagement"></a>
+<h2>Buffer Management</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_MaximumFramesPerSlice"></a>
+<h3><a name="kAudioUnitProperty_MaximumFramesPerSlice">kAudioUnitProperty_MaximumFramesPerSlice</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 This property describes the maximum number of frames an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> will be asked to render. Where possible it is also recommended that this is always what an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> is asked to render. When asking for input, and <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> can also not ask for more input than its maximum number of frames. If it needs more input than allowed by its Max Frames setting, then it should slice its input request into multiple requests. (This can be the case with both Converter AU's and Offline AU's as they can process more or less input for any given output request - for instance a sample rate conversion).
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SetExternalBuffer"></a>
+<h3><a name="kAudioUnitProperty_SetExternalBuffer">kAudioUnitProperty_SetExternalBuffer</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#AudioUnitExternalBuffer"><tt>AudioUnitExternalBuffer</tt></a><p>
+
+		 A new property for the V2 Audio Unit, and should be set on a global
+		 scope (### This may be incorrect -- see the SDK source for a definitive
+		 answer ###). Sophisticated hosts of audio units can use this property to
+		 better manage the memory usage and performance of a graph of audio
+		 units, for instance allowing for the reuse of buffers in a chain.<p>
+
+		 Basically, the behaviour of this is, if set, an Audio Unit can and
+		 should use this buffer to pull its inputs (as a v2 AU MUST provide a
+		 buffer when calling the RenderCallback on its inputs, it would use this
+		 instead of an internally created buffer.
+	
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitExternalBuffer"></a>
+<h3><a name="AudioUnitExternalBuffer">AudioUnitExternalBuffer</a></h3>
+
+<pre>struct AudioUnitExternalBuffer {
+  Byte *  buffer;
+  UInt32  size;
+};</pre>
+	
+	<h4>Fields</h4>
+<dl>
+<dt><tt>buffer</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>size</tt></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+
+
+<hr></hr>
+
+<a name="RenderingProperties"></a>
+<h2>Rendering Properties</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_Latency"></a>
+<h3><a name="kAudioUnitProperty_Latency">kAudioUnitProperty_Latency</a></h3>
+
+		<b>Type: </b>Float64<p>
+
+	<p>The input to output latency in seconds. This figure should be as accurate as possible, as it represents the offset of how much time it takes for a sample on input to appear in the output of an audio unit.</p>
+
+	<p>This property should report this value as accurately as it can represent it in a single value. The unit is also free to change this value if any changes a user makes to its parameters would effect the overall processing latency of the unit.</p>
+
+	<p>For example, a look ahead limiter would require a certain number of samples of input before it can represent those samples in the output (as it has to be able to estimate the sample values and its slope to determine how to limit the signal without clipping it), and thus the output of a particular input sample would occur some time after the input sample was received.</p>
+
+	<p>For a host that is doing sample accurate processing of two or more audio inputs (or synchronizing its audio output to some other timeline), it is extremely important that it can determine the processing latency that might be introduced by a particular unit. If a host is passing audio through a number of audio units, then the host can query each audio unit in succession, adding the reported latency values to arrive at the overall latency.</p>
+
+	<p>This overall latency can then be used by the host in the following manner. The host would feed the number of samples that correspond to the latency amount through the processing chain, getting that number of samples on the output side. The host then throws those output samples away (they will typically have sample values of zero anyway). When feeding the audio units input in this scenario, the input is the actual input that you are going to want to render. After having thrown the latency number of samples away on the output, the next sample that you get back will be the first valid sample that has been processed from the input.</p>
+
+	<p>When pre-rolling a unit (or set of units) in this manner, <a href="au_state.html#AudioUnitReset"><tt>AudioUnitReset</tt></a> should be called to clear any processing state that an audio unit may have retained from its previous render operations.</p>
+
+	<p>This property is often used in conjunction with the <a href="au_properties.html#kAudioUnitProperty_TailTime"><tt>kAudioUnitProperty_TailTime</tt></a> property, where there is more discussion of these issues.</p>
+	
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_TailTime"></a>
+<h3><a name="kAudioUnitProperty_TailTime">kAudioUnitProperty_TailTime</a></h3>
+
+		<b>Type: </b>Float64<p>
+
+	<p>This value represents any additional input (or output that must be captured) to pass a signal completely through an effect. This can be thought of as the length of time taken for the output signal to die down to silence (defined here as less than -120dB of full scale). For example, a reverb or delay effect would take a certain amount of time (say 2 seconds) for its output to go to silence after its input signal goes to silence. Many effects use filters having an impluse response which will introduce, similar to a reverb, an output signal that goes past the last input signal.</p>
+
+	<p>An Audio Unit is expected to publish its tail time, even in the case of a filter where the tail is a minimal value (say around 1 msec).</p>
+
+	<p>How does a host then use this property?</p>
+
+	<p>Let us take an example of a host that allows for arbitrary start of playback within a sound file. The host wants to be able to produce the same output for that first sample of playback from both this "in the middle" start and from starting playback at the beginning of the file.</p>
+
+	<p>When starting "in the middle" the host needs to determine for a given signal chain, two things. Firstly, lets take an example of a delay effect. The output of the first samples would contain the delays from the previous samples (that in this case aren't actually being played). So, the host can ask the delay unit for its tail (lets say its 2 seconds). Then, it can pre-roll the proceeding 2 seconds of input data, which the unit itself will of course mix that into the first 2 seconds of the output that it produces. This is of course the normal result when you start playback from the beginning.</p>
+
+	<p>The host will throw away the output the gets generated when it prepares the audio unit in this manner (because that is output that is actually before the output that it wants). But, it has now primed the audio unit, so when it pulls for the data it does want, the preceding 2 seconds of data is in the delay (in this case), and will thus be present in the output.</p>
+
+	<p>When pre-rolling a unit (or set of units) in this manner, <a href="au_state.html#AudioUnitReset"><tt>AudioUnitReset</tt></a> should be called to clear any processing state that an audio unit may have retained from its previous render operations.</p>
+
+	<p>This property's value will also be used at the end of rendering a piece of audio. Lets say that you are applying a reverb effect to some source and you're outputting a file with that processing applied. Obviously, when the input audio data is finished you still want to render some additional audio to capture the tail of the effect (eg. The reverb dying down to silence). The tail property tells you how much additional output you'd need to get (in this case the input would be silence), in order to push the entire audible effect of the unit through to the output.</p>
+
+	<p>This property is also closely related to <a href="au_properties.html#kAudioUnitProperty_Latency"><tt>kAudioUnitProperty_Latency</tt></a> and typically a host that is dealing with these issues will need to know both the latency an effect introduces as well as its tail.</p> <p>
+
+	<p>An important difference between these is that the tail can be an approximate estimate and should be biased on the conservative side. The latency however, should be as accurate as possible, because of the offset between input and output placement of a sample that the latency property indicates. It is important to note with effects that are specifically designed to introduce delays (like a reverb or a delay audio unit) should <b>not</b> report that as latency, since this is part of the desired affect.</p>
+
+	<p>When taken together the latency and tail properties enable a host to determine how much priming an audio unit requires (and for that matter an entire processing graph of several audio units) and how much additional output after the end of the input is reached, should be captured to accurately preserve the entire contents of the rendering.</p>
+
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_BypassEffect"></a>
+<h3><a name="kAudioUnitProperty_BypassEffect">kAudioUnitProperty_BypassEffect</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		Can be used to have an effect unit not apply its processing on its
+		input, but just pass it through to the output without processing it.
+	
+
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_LastRenderError"></a>
+<h3><a name="kAudioUnitProperty_LastRenderError">kAudioUnitProperty_LastRenderError</a></h3>
+
+		<b>Type: </b>OSStatus<p>
+
+		This is a read only property that returns the last error code returned
+		by <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a>, and clears it. Rather than polling this property,
+		it's best that interested clients install a property listener on it.
+	
+
+
+
+	
+<hr></hr>
+
+<a name="PerformanceProperties"></a>
+<h2>Performance Properties</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_FastDispatch"></a>
+<h3><a name="kAudioUnitProperty_FastDispatch">kAudioUnitProperty_FastDispatch</a></h3>
+
+		<b>Type: </b>function pointer<p>
+
+		<p>The inElement value is the component selector that describes to the unit
+		what the function pointer corresponds to.  Dispatching through the
+		Component API calls has some overhead that can and should be avoided in
+		the rendering and parameter setting calls where a real-time context is
+		normally required.</p>
+		
+		<p>The <tt>inComponentStorage</tt> argument that is passed to each of these callbacks when user code is calling them, is <b>not</b> the <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> - the ComponentInstance. It is the value that is returned by the following call:</p>
+<pre>
+	myCompStorage = GetComponentInstanceStorage (anAudioUnit);
+</pre>
+
+		<p>The following fast dispatch function pointers are declared in AUComponent.h</p>
+		
+
+
+
+<a name="//apple_ref/c/tdef/AudioUnitGetParameterProc"></a>
+<h3><a name="AudioUnitGetParameterProc">AudioUnitGetParameterProc</a></h3>
+
+		<pre>
+		typedef extern ComponentResult	(*AudioUnitGetParameterProc)(	void 					*inComponentStorage,
+																		<a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>	inID,
+																		<a href="au_state.html#AudioUnitScope">AudioUnitScope</a>			inScope,
+																		<a href="au_state.html#AudioUnitElement">AudioUnitElement</a>		inElement,
+																		Float32					*outValue );
+																	
+		</pre>
+		
+
+
+<a name="//apple_ref/c/tdef/AudioUnitSetParameterProc"></a>
+<h3><a name="AudioUnitSetParameterProc">AudioUnitSetParameterProc</a></h3>
+
+		<pre>
+		typedef extern ComponentResult	(*AudioUnitSetParameterProc)(	void 					*inComponentStorage,
+																		<a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>	inID,
+																		<a href="au_state.html#AudioUnitScope">AudioUnitScope</a>			inScope,
+																		<a href="au_state.html#AudioUnitElement">AudioUnitElement</a>		inElement,
+																		Float32					inValue,
+																		UInt32					inBufferOffsetInFrames );
+		</pre>
+		
+
+
+		
+<a name="//apple_ref/c/tdef/AudioUnitRenderProc"></a>
+<h3><a name="AudioUnitRenderProc">AudioUnitRenderProc</a></h3>
+
+		<pre>
+		typedef extern ComponentResult (*AudioUnitRenderProc)(		void 						*inComponentStorage,
+																	<a href="au_render.html#AudioUnitRenderActionFlags">AudioUnitRenderActionFlags</a>	*ioActionFlags,
+																	const AudioTimeStamp		*inTimeStamp,
+																	UInt32						inOutputBusNumber,
+																	UInt32						inNumberFrames,
+																	AudioBufferList				*ioData );
+		</pre>
+		
+
+
+	
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_CPULoad"></a>
+<h3><a name="kAudioUnitProperty_CPULoad">kAudioUnitProperty_CPULoad</a></h3>
+
+		<b>Type: </b>Float32<p>
+
+		Is used to specify to the Audio Unit the desired load that it should
+		limit its rendering times to that limit. The property is specified with
+		a range of 0 to 1. A value of zero means no limitation - and represents
+		a way to turn this limitation off, desirable for instance when doing
+		off-line rendering.
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_RenderQuality"></a>
+<h3><a name="kAudioUnitProperty_RenderQuality">kAudioUnitProperty_RenderQuality</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		Provides a quality range (0-127) that an audio unit can use to decide
+		how high a quality it uses when doing its rendering (which generally
+		trades off the amount of CPU that is consumed). Currently both the DLS
+		Synth and the Reverb use this to scale back the quality of their
+		rendering. Generally the kRenderQuality enum settings should be used,
+		however some units may respond to intermediate values. In those that
+		don't, the quality is rounded to the nearest value as represented by
+		this enum.
+	
+
+
+
+
+<hr></hr>
+
+<a name="AudioUnitViewandHostProperties"></a>
+<h2>Audio Unit View and Host Properties</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_GetUIComponentList"></a>
+<h3><a name="kAudioUnitProperty_GetUIComponentList">kAudioUnitProperty_GetUIComponentList</a></h3>
+
+		<b>Type: </b>ComponentDescription array<p>
+
+		Returns an array of ComponentDescriptions specifying <a href="au_view.html#AudioUnitCarbonView"><tt>AudioUnitCarbonView</tt></a>
+		components designed to present custom user interfaces for editing this
+		Audio Unit (as distinct from the generic user interface supplied by Apple).
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ContextName"></a>
+<h3><a name="kAudioUnitProperty_ContextName">kAudioUnitProperty_ContextName</a></h3>
+
+		<b>Type: </b>CFStringRef<p>
+
+		Allows an application to provide a name that can be presented to the user that specifies the context of a specific unit. Whilst the string supplied by the host is by and large dependent on the Host App and the context within which a given AU is being used, in general it is recommended that this string <b>not</b> contain the name of the Audio Unit.<p>
+
+		Host applications typically provide context information within how they present an Audio Unit to the user, and thus should not rely on the AU incorporate contextual information in their normal UI. For example, a host might set the title of the AU's View Window:
+<pre>
+- - - - - - - My Synth Track::(4) AUMatrixReverb  - - - - - - -
+</pre>
+
+		(Where My Synth Track is the user supplied name of the track, (4) is the index of the effect in that track, and the name of the AU)<p>
+
+		In this case, the host might provide a context string to the Audio Unit as: "My Synth Track::Effect (4)"
+		
+		An Audio Unit can use this string however, in situations where it needs to provide some visual feedback to the user based on state of a particular instance of itself. It is recommended that the AU provides some additional context about the context string:<p>
+
+<pre>
+- - - - - - -
+AU Matrix Reverb
+Being used within context: My Synth Track::Effect (4)
+Can't find resource file...
+- - - - - - -
+</pre>
+
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_IconLocation"></a>
+<h3><a name="kAudioUnitProperty_IconLocation">kAudioUnitProperty_IconLocation</a></h3>
+
+		<b>Type: </b>CFURLRef<p>
+
+		Allows an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> to specify an associated icon. Returns a CFURLRef containing the full Posix-style path of the icon file.  The caller is responsible for releasing the CFURLRef, and for instantiating the image.<p>
+
+To facilitate support for these icons in Carbon as well as Cocoa UI, we require that this property point to a ".icns" files.  These files can be created using /Developer/Applications/Utilities/Icon\ Composer.app.
+	
+
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ElementName"></a>
+<h3><a name="kAudioUnitProperty_ElementName">kAudioUnitProperty_ElementName</a></h3>
+
+		<b>Type: </b>CFStringRef<p>
+
+		Allows an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> to provide names for the individual elements that are contained in a scope. 
+		
+		A typical usage is to provide names for the input and outputs elements (or buses).<p>
+
+		For example, Apple's DLSMusicDevice implements this property for the two outputs it provides. The names of each of these two elements are different based on whether the AU's internal reverb is on or off. If on, then the first output is "Stereo Mix", the second "Unused". If off, the first output is "Wet Mix" and the second is "Dry Mix".<p>
+
+		Typically this property will be read only, but in some cases an AU might provide the ability to set the name to any arbitrary string. 
+	
+
+
+
+<hr></hr>
+
+<a name="HostCallbacks-MusicalTime"></a>
+<h2>Host Callbacks - Musical Time</h2>
+	
+<a name="//apple_ref/c/data/kAudioUnitProperty_HostCallbacks"></a>
+<h3><a name="kAudioUnitProperty_HostCallbacks">kAudioUnitProperty_HostCallbacks</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#HostCallbackInfo"><tt>HostCallbackInfo</tt></a><p>
+
+	<p>Used by the host to provide callbacks that an Audio Unit can use to obtain information from the host.</p>
+
+	<p>Currently, this property provides for two callbacks that are based around the concept of musical time. That is, when an Audio Unit is asked to render, it can query the host for information about the host's musical time, and then use that information to match its DSP to a musical context. For example, a delay unit can time the delays to the beats, based on the song's time signature as well as tracking tempo changes.</p>
+
+	<p>How does this work?</p>
+	
+	<p>When the host opens an Audio Unit and connects it, it should also call this property.</p>
+
+<pre>
+    <a href="au_properties.html#HostCallbackInfo">HostCallbackInfo</a> info;
+    memset (&info, 0, sizeof (<a href="au_properties.html#HostCallbackInfo">HostCallbackInfo</a>));
+    info.hostUserData = this;
+    info.beatAndTempoProc = DispatchGetBeatAndTempo;
+		
+        //ignore result of this - don't care if the property isn't supported
+    <a href="au_property_funcs.html#AudioUnitSetProperty">AudioUnitSetProperty</a> (mAudioUnit, 
+                        kAudioUnitProperty_HostCallbacks, 
+                        <a href="au_state.html#AudioUnitScope">kAudioUnitScope_Global</a>, 
+                        0, //elementID 
+                        &info,
+                        sizeof (<a href="au_properties.html#HostCallbackInfo">HostCallbackInfo</a>));
+</pre>
+	
+	<p>In this example, the host is only supporting the <a href="au_properties.html#HostCallback_GetBeatAndTempo"><tt>HostCallback_GetBeatAndTempo</tt></a> callback, so in that case this is the only information that the host can provide to the Audio Unit. Any unsupported callbacks from a host should of course be set to NULL.</p>
+
+	<p>Once the host has set this property, the Audio Unit now has callbacks that it can make to the host.</p>
+
+	<p>The <tt>"info.hostUserData = this"</tt> line shows the host seeting this user data field to the value of the <tt>this</tt> pointer of a C++ object. The Audio Unit is required to always pass this <tt>hostUserData</tt> field back to the host when it makes the callback.</p>
+
+	<p>In this case, how does the host implement this callback?</p>
+
+<pre>
+OSStatus AUNodeSequenceDest::DispatchGetBeatAndTempo (
+                                     void*                inHostUserData,
+                                     Float64*             outCurrentBeat, 
+                                     Float64*             outCurrentTempo)
+{
+    AUNodeSequenceDest* This = (AUNodeSequenceDest*)inHostUserData;
+    if (This)
+        return This->GetBeatAndTempo (outCurrentBeat, outCurrentTempo);
+    
+    return paramErr;
+}
+</pre>
+
+	<p>When the Audio Unit calls the <tt>beatAndTempoProc</tt> it will call this dispatch. The <tt>inHostUserData</tt> is treated as it was passed in, ie. the <tt>this</tt> pointer to the object in question. The dispatch call here, is defined as a <tt>static</tt> (or class) member function, which then dispatches to an instance method <tt>GetBeatAndTempo</tt>.</p>
+
+	<p>If the host is unable to provide the requested information (for instance the audio is coming from a live situation with no beat or tempo context) then it can return the kAudioUnitErr_CannotDoInCurrentContext error code.</p>
+
+	<p>The Audio Unit will only make this call in response to the host calling the unit's <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a> call. Thus, any of the values that the host provides to the Audio Unit in these callbacks relate to the particular buffer that it has asked the Audio Unit to render.</p>
+	
+	<p>An Audio Unit may also decide to publish parameters where the unit types of those parameters are based on tempo and beat information. See <a href="au_params.html#TempoParameters">Tempo Parameters</a> for more detail in the parameter section of this documentation.</p>
+
+	
+
+
+
+
+<a name="//apple_ref/c/tag/HostCallbackInfo"></a>
+<h3><a name="HostCallbackInfo">HostCallbackInfo</a></h3>
+
+<pre>struct HostCallbackInfo {
+  void *                        			hostUserData;
+  <a href="au_properties.html#HostCallback_GetBeatAndTempo">HostCallback_GetBeatAndTempo</a>  			beatAndTempoProc;
+  <a href="au_properties.html#HostCallback_GetMusicalTimeLocation">HostCallback_GetMusicalTimeLocation</a>  		musicalTimeLocationProc;
+  <a href="au_properties.html#HostCallback_GetTransportState">HostCallback_GetTransportState</a>			transportStateProc;	
+};</pre>
+	
+	
+
+
+
+	
+<a name="//apple_ref/c/tdef/HostCallback_GetBeatAndTempo"></a>
+<h3><a name="HostCallback_GetBeatAndTempo">HostCallback_GetBeatAndTempo</a></h3>
+This callback is provided to obtain basic information from the host of its current musical location, namely its current beat and current tempo. By convention, it is assumed that the first beat of a sequence starts at beat zero.
+<pre>typedef OSStatus (*<b>HostCallback_GetBeatAndTempo</b>)(
+  void *     inHostUserData,
+  Float64 *  outCurrentBeat,
+  Float64 *  outCurrentTempo
+);</pre>
+	
+	When the Audio Unit makes this call any of the <tt>out...</tt> parameters can be NULL. This indicates to the host that the Audio Unit does not need information about that particular value. Thus, the host should always check the <tt>out...</tt> pointers to ensure they are valid.
+	<h4>Parameters</h4>
+<dl><dt><tt>inHostUserData</tt></dt>
+<dd>
+		This is the value that was passed in by the host for the <tt>hostUserData</tt> field of the <a href="au_properties.html#HostCallbackInfo"><tt>HostCallbackInfo</tt></a> structure. The Audio Unit, when calling this callback <b>must</b> supply this value as it was given.
+		</dd>
+<dt><tt>outCurrentBeat</tt></dt>
+<dd>
+		This should represent the exact beat value that applies to the <b>start</b> of the current buffer that the Audio Unit has been asked to render. This can, of course, be a fractional beat value.	
+		</dd>
+<dt><tt>outCurrentTempo</tt></dt>
+<dd>
+		This represents the current tempo at the time of the first sample of the current buffer. If there is a tempo change within the buffer itself, then this cannot be communicated by the host to the Audio Unit, except of course that the next buffer's tempo value would be different. Tempo is defined as the number of whole-number (integer) beat values (as indicated by the outCurrentBeat field) per minute.
+		</dd>
+</dl>
+<b>Result:</b> 
+		<p>noErr, or kAudioUnitErr_CannotDoInCurrentContext if unable to provide requested information</p>
+	
+
+
+
+<a name="//apple_ref/c/tdef/HostCallback_GetMusicalTimeLocation"></a>
+<h3><a name="HostCallback_GetMusicalTimeLocation">HostCallback_GetMusicalTimeLocation</a></h3>
+This callback is provided to obtain more detailed information from the host concerning its current musical location.
+<pre>typedef OSStatus (*<b>HostCallback_GetMusicalTimeLocation</b>)(
+  void *     inHostUserData,
+  UInt32 *   outDeltaSampleOffsetToNextBeat,
+  Float32 *  outTimeSig_Numerator,
+  UInt32 *   outTimeSig_Denominator,
+  Float64 *  outCurrentMeasureDownBeat);
+</pre>
+	
+	<p>How does this work? Lets take an example of a score, and the beats, etc, that a host would be expected to provide to the Audio Unit. In the following, the first beat is 0.</p>
+
+<pre>
+Score Time Sig: |3/4     |       |4/8    |6/8    |5/8    |3/4    |4/4    |
+Down Beats:      0        3       6       8       11      13.5    16.5    20.5
+</pre>
+
+ <p>For a change from 3/4 to 4/8 the value of the beat does not change (thus, a 4/8 time sig will still have 2 beat values for that measure - the value of the beat unit does not change as the time signature changes). In common practise a beat is generally associated with a quarter note.</p>
+
+	<p>Typically of course, if the Audio Unit is using this callback it will also need to use the <a href="au_properties.html#HostCallback_GetBeatAndTempo"><tt>HostCallback_GetBeatAndTempo</tt></a> callback as well. Thus a host is required to support that callback if it supports this one.</p>
+
+	<p>When the Audio Unit makes this call any of the <tt>out...</tt> parameters can be NULL. This indicates to the host that the Audio Unit does not need information about that particular value. Thus, the host should always check the <tt>out...</tt> pointers to ensure they are valid.</p>
+
+<h4>Parameters</h4>
+<dl><dt><tt>inHostUserData</tt></dt>
+<dd>
+		This is the value that was passed in by the host for the <tt>hostUserData</tt> field of the <a href="au_properties.html#HostCallbackInfo"><tt>HostCallbackInfo</tt></a> structure. The Audio Unit, when calling this callback <b>must</b> supply this value as it was given.
+		</dd>
+<dt><tt>outDeltaSampleOffsetToNextBeat</tt></dt>
+<dd>
+		Will contain the number of samples until the next whole beat from the start sample of the current rendering buffer.	
+		</dd>
+<dt><tt>outTimeSig_Numerator</tt></dt>
+<dd>
+		The number of beats of the denominator value that are contained in the current measure.
+		</dd>
+<dt><tt>outTimeSig_Denominator</tt></dt>
+<dd>
+		Uses music notational conventions (4 is a quarter note, 8 an eigth note, etc). A whole (integer) beat in any of the beat values is generally considered to be a quarter note.
+		</dd>
+<dt><tt>outCurrentMeasureDownBeat</tt></dt>
+<dd>
+		The beat that corresponds to the downbeat (first beat) of the current measure that is being rendered.
+		</dd>
+</dl>
+<b>Result:</b> 
+		<p>noErr, or kAudioUnitErr_CannotDoInCurrentContext if unable to provide requested information</p>
+	
+
+
+
+<a name="//apple_ref/c/tdef/HostCallback_GetTransportState"></a>
+<h3><a name="HostCallback_GetTransportState">HostCallback_GetTransportState</a></h3>
+This callback is provided to obtain information from the host about its current transport state
+<pre>typedef OSStatus (*<b>HostCallback_GetTransportState</b>)(
+  void 		*inHostUserData,
+  Boolean 	*outIsPlaying,
+  Boolean 	*outTransportStateChanged,
+  Float64 	*outCurrentSampleInTimeLine,
+  Boolean 	*outIsCycling,
+  Float64 	*outCycleStartBeat,
+  Float64 	*outCycleEndBeat);
+</pre>
+	
+	When the Audio Unit makes this call any of the <tt>out...</tt> parameters can be NULL. This indicates to the host that the Audio Unit does not need information about that particular value. Thus, the host should always check the <tt>out...</tt> pointers to ensure they are valid.
+	<h4>Parameters</h4>
+<dl><dt><tt>inHostUserData</tt></dt>
+<dd>
+		This is the value that was passed in by the host for the <tt>hostUserData</tt> field of the <a href="au_properties.html#HostCallbackInfo"><tt>HostCallbackInfo</tt></a> structure. The Audio Unit, when calling this callback <b>must</b> supply this value as it was given.
+		</dd>
+<dt><tt>outIsPlaying</tt></dt>
+<dd>
+		The time line of the host's transport is advancing (true), or not (false). If false, host's may only be able to provide limited information for other properties in this (and the other) host callbacks.	
+		</dd>
+<dt><tt>outTransportStateChanged</tt></dt>
+<dd>
+		Indicates that some state of the host's transport has changed. For instance, the time-line has started or stopped, the position within the time-line has changed (for eg. the SPL has been moved to a new location, or the transport is in cycle mode, and has jumped from the end back to the start of the cycle).
+		</dd>
+<dt><tt>outCurrentSampleInTimeLine</tt></dt>
+<dd>
+		Represents how many samples from the start of the song (in the sample rate of the AU) that the AU's current render cycle starts at.
+		</dd>
+<dt><tt>outIsCycling</tt></dt>
+<dd>
+		If false, there is no valid value for either the cycling start or end beats. Thus, these values are only valid if the host's transport is actually cycling at the time the Audio Unit makes this call.
+		</dd>
+<dt><tt>outCycleStartBeat</tt></dt>
+<dd>
+		If is cycling, this value represents the beat of the start of the cycle.
+		</dd>
+<dt><tt>outCycleEndBeat</tt></dt>
+<dd>
+		If is cycling, this value represents the beat of the end of the cycle.
+		</dd>
+</dl>
+<b>Result:</b> 
+		<p>noErr, or kAudioUnitErr_CannotDoInCurrentContext if unable to provide requested information</p>
+	
+
+
+
+
+<hr></hr>
+
+
+<a name="AudioUnitPresetsandPersistence"></a>
+<h2>Audio Unit Presets and Persistence</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ClassInfo"></a>
+<h3><a name="kAudioUnitProperty_ClassInfo">kAudioUnitProperty_ClassInfo</a></h3>
+
+		<b>Type: </b>CFPropertyListRef dictionary<p>
+
+		CFPropertyListRef dictionary is a constrained subset of a CFDictionary
+		that uses CFStrings as keys, and whose values can only be
+		CFPropertyListRefs (which includes CFStrings, CFNumbers, CFData, or
+		arrays/dictionaries whose values and keys are constrained in this same way).<p>
+
+		There are essentially two types of preset dictionaries. The global preset, which specifies the entire state of an <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a>. The part preset, which contains the addition <b>part</b> key, specifies the preset state of a part. See discussion on multimbral MusicDevice units for more information.<p>
+
+		The dictionary contains several key/value pairs:<p>
+
+		<dl>
+			<dt>name</dt>
+				<dd>a CFString that is the name associated with the current
+				preset</dd>
+			<dt>version</dt>
+				<dd>a CFNumber that represents the version of the class
+				data</dd>
+			<dt>type</dt>
+				<dd>a CFNumber that represents the componentType of the Audio
+				Unit as defined by its ComponentDescription</dd>
+			<dt>subtype</dt>
+				<dd>a CFNumber that represents the componentSubType of the Audio
+				Unit as defined by its ComponentDescription</dd>
+			<dt>manufacturer</dt>
+				<dd>a CFNumber that represents the componentManufacturerID of
+				the Audio Unit as defined by its ComponentDescription</dd>
+			<dt>data</dt>
+				<dd>Audio Unit-specific internal state, contained in a CFDataRef
+				- currently this is the value of each of the parameters, on each
+				element of each scope.</dd>
+			<dt>vstdata</dt>
+				<dd>the data delivered from the GetChunk call of the VST interface. It is provided so that AU's that have VST equivalents, can be instantiated from the preset state of their VST equivalent</dd>
+			<dt>part</dt>
+				<dd>is used to describe that this preset belongs to a single part of a multi-timbral MusicDevice. The value is specific to the particular <a href="au_components.html#AudioUnit"><tt>AudioUnit</tt></a> for this key</dd>
+			<dt>render-quality</dt>
+				<dd>If the Audio Unit supports <a href="au_properties.html#kAudioUnitProperty_RenderQuality"><tt>kAudioUnitProperty_RenderQuality</tt></a>, the state of this property will be saved and restored</dd>
+			<dt>cpu-load</dt>
+				<dd>If the Audio Unit supports <a href="au_properties.html#kAudioUnitProperty_CPULoad"><tt>kAudioUnitProperty_CPULoad</tt></a>, the state of this property will be saved and restored</dd>
+		</dl>
+		
+		On exit from GetProperty, the client owns a reference to the
+		CFPropertyListRef. SetProperty does not consume (release) a reference to
+		the CFPropertyListRef.<p>
+
+		The name field is filled in by finding the last preset that was
+		currently set on the unit (whether factory or ClassInfo). The name will
+		be "Untitled" if the unit has no presets, and the ClassInfo has never
+		been set.<p>
+
+		The dictionary can be parsed using the appropriate CoreFoundation
+		functions. The class data contains enough information to establish a
+		ComponentDescription that can then be used to find and open the
+		appropriate Audio Unit, open it, and then re-establish the state as
+		saved in the dictionary. As this currently only contains the parameter
+		values (for Apple's Audio Units as shipped in 10.2) this may not be
+		complete for some units. For example, the name of the SoundBank for the
+		DLSMusicDevice is not currently saved in the class data. It is
+		anticipated that properties that are needed to reestablish the complete
+		state of an Audio Unit will be saved in future release (and
+		consequently, the version number of the class data will be revised).
+		
+		Developers can add custom property keys that are unique to their Audio Units.
+		In this case we recommend that developers begin their keys with their Unique
+		ManufacturerID to avoid possible conflicts with future keys that might be defined.
+		
+		For eg. <tt>ACME-my-custom-key</tt>
+		
+		Apple will continue to define (and thus reserves) properties that are not qualified 
+		with a manufacturer ID.
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_CurrentPreset"></a>
+<h3><a name="kAudioUnitProperty_CurrentPreset">kAudioUnitProperty_CurrentPreset</a></h3>
+
+		Deprecated, see <a href="au_properties.html#kAudioUnitProperty_PresentPreset"><tt>kAudioUnitProperty_PresentPreset</tt></a>
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_PresentPreset"></a>
+<h3><a name="kAudioUnitProperty_PresentPreset">kAudioUnitProperty_PresentPreset</a></h3>
+
+		<b>Type: </b><a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a><p>
+
+		This property has the same logistics as the pre-exising Current Preset property.
+		However, that property had undefined behaviour when it came to the CFString contained
+		within the <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a>. Thus, it was decided to deprecate the <a href="au_properties.html#kAudioUnitProperty_CurrentPreset"><tt>kAudioUnitProperty_CurrentPreset</tt></a>
+		property and replace this with this one, where the semantics of the CFString usage are
+		both clear and consistent with other properties that use CF objects.
+		See, the CF_AU_Properties document in the SDK.
+	 
+	 	<b>Read:</b>
+
+		This can be used by the caller to identify the current preset of the
+		unit. This behaves differently for handling both Factory Presets and
+		User states (ClassInfo). If the last state set is a factory preset (i.e.
+		no call to set ClassInfo has been made), then the <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a> contains both
+		a valid number (greater than or equal to zero) and name (the number and
+		name of the appropriate factory preset). If the unit has factory
+		presets, then the first time this property is queried, it returns the
+		default preset.<p>
+
+		If a set ClassInfo property was the last call made, then the <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a>
+		will contain a number of -1 (signifying User preset), and the name
+		contained within the class info. If the name has not been set, you get a
+		default name, such as "Untitled".
+		
+		When returned, the CFString (as with all other CF objects retrieved from Get Property)
+		in the <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a> is owned by the client and should be released. Code in PublicUtility
+		(CAAudioUnit), shows how a client can deal with the migration of usage from units
+		that do not yet implement the _CurrentPreset property.<p>
+
+		<b>Write:</b>
+		
+		The number in <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a> is used to select the preset.
+	 
+		If presetNumber is equal to or greater than zero (factory preset):<br></br>
+		Set the state of the unit to one of the factory presets. The caller
+		provides an <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a> (from <a href="au_properties.html#kAudioUnitProperty_FactoryPresets"><tt>kAudioUnitProperty_FactoryPresets</tt></a>), and this
+		becomes the current state of the unit.
+		kAudioUnitErr_InvalidPropertyValue is returned if the preset number is
+		not recognised by the Audio Unit.
+				
+		If presetNumber is less than zero: (signifying a user preset):<br></br>
+		Sets the current preset for the unit (including the name supplied in
+		presetName). This name will then be saved into the unit's data when
+		getting the current state of the ClassInfo property. This allows the
+		name of a state to be saved along with the state so it can be shown to
+		the user when that state is re-established.<p>
+
+	
+
+
+
+<a name="//apple_ref/c/tag/AUPreset"></a>
+<h3><a name="AUPreset">AUPreset</a></h3>
+
+<pre>struct AUPreset {
+  SInt32       presetNumber;
+  CFStringRef  presetName;
+};</pre>
+	
+	<h4>Fields</h4>
+<dl>
+<dt><tt>presetNumber</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>presetName</tt></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_FactoryPresets"></a>
+<h3><a name="kAudioUnitProperty_FactoryPresets">kAudioUnitProperty_FactoryPresets</a></h3>
+
+		<b>Type: </b>CFArrayRef containing <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a>'s<p>
+
+		Returns an array of <a href="au_properties.html#AUPreset"><tt>AUPreset</tt></a> that contain a number and name for each of
+		the presets. The number of each preset must be greater (or equal to)
+		zero, and the numbers need not be ordered or contiguous. The name of
+		each preset can be presented to the user as a means of identifying each
+		preset. The CFArrayRef should be released by the caller.
+	
+
+
+
+	
+<hr></hr>
+
+<a name="InternalAlgorithmConfiguration"></a>
+<h2>Internal Algorithm Configuration</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_ReverbRoomType"></a>
+<h3><a name="kAudioUnitProperty_ReverbRoomType">kAudioUnitProperty_ReverbRoomType</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		The caller should pass in one of the kReverbRoomType enum values. This
+		property is supported by those units that implement the
+		<code><a href="au_properties.html#kAudioUnitProperty_UsesInternalReverb">kAudioUnitProperty_UsesInternalReverb</a></code> (DLSMusicDevice,
+		3DMixer) as well as the MatrixReverb unit.
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_UsesInternalReverb"></a>
+<h3><a name="kAudioUnitProperty_UsesInternalReverb">kAudioUnitProperty_UsesInternalReverb</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 Some audio units can use an internal reverb. The 3DMixer and the
+		 DLSMusicDevice both have this property on by default (value==1). To
+		 turn this off, set the value of this property to zero.
+	
+
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SRCAlgorithm"></a>
+<h3><a name="kAudioUnitProperty_SRCAlgorithm">kAudioUnitProperty_SRCAlgorithm</a></h3>
+
+		<b>Type: </b>OSType<p>
+
+		 The value is an identifier for the sample rate converter algorithm to
+		 use. This is currently supported by the AUConverter unit and the
+		 OutputDevice units.
+	
+
+
+
+
+<hr></hr>
+
+<a name="MusicDeviceProperties"></a>
+<h2>MusicDevice Properties</h2>
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_InstrumentCount"></a>
+<h3><a name="kMusicDeviceProperty_InstrumentCount">kMusicDeviceProperty_InstrumentCount</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 This returns the number of instruments that are able to be used by a
+		 MusicDevice Audio Unit. In the DLSMusicDevice this returns the number
+		 of instruments that are in the DLS or SoundFont collection that is
+		 currently set on this unit.
+	
+
+
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_InstrumentName"></a>
+<h3><a name="kMusicDeviceProperty_InstrumentName">kMusicDeviceProperty_InstrumentName</a></h3>
+
+		<b>Type: </b>char array<p>
+
+		 The <a href="au_music.html#MusicDeviceInstrumentID"><tt>MusicDeviceInstrumentID</tt></a> is passed in for the inElement argument,
+		 and the call returns the name for that instrumentID.
+	
+
+
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_InstrumentNumber"></a>
+<h3><a name="kMusicDeviceProperty_InstrumentNumber">kMusicDeviceProperty_InstrumentNumber</a></h3>
+
+		<b>Type: </b><a href="au_music.html#MusicDeviceInstrumentID"><tt>MusicDeviceInstrumentID</tt></a><p>
+
+		The caller passes in the instrument "index" in the inElement argument.
+		This "index" is zero-based and must be less than the number of
+		instruments (determined using the <a href="au_properties.html#kMusicDeviceProperty_InstrumentCount"><tt>kMusicDeviceProperty_InstrumentCount</tt></a>
+		property).<p>
+
+		The value passed back will be a <a href="au_music.html#MusicDeviceInstrumentID"><tt>MusicDeviceInstrumentID</tt></a>. This
+		<a href="au_music.html#MusicDeviceInstrumentID"><tt>MusicDeviceInstrumentID</tt></a> may then be used with the
+		<a href="au_properties.html#kMusicDeviceProperty_InstrumentName"><tt>kMusicDeviceProperty_InstrumentName</tt></a> property, or in any of the
+		MusicDevice calls which take a <a href="au_music.html#MusicDeviceInstrumentID"><tt>MusicDeviceInstrumentID</tt></a> argument.<p>
+
+		This value is further expected to be formatted in a particular manner
+		relating to the bank and patch number values of MIDI. The number is
+		formatted as 0xMMLLPP, where the lowest byte is the patch number of the
+		instrument, the second byte the LSB of the instrument's bank select, and
+		the 3rd byte, the MSB of the instrument's bank select.
+	
+
+
+
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_SoundBankFSSpec"></a>
+<h3><a name="kMusicDeviceProperty_SoundBankFSSpec">kMusicDeviceProperty_SoundBankFSSpec</a></h3>
+
+		<b>Type: </b>FSSpec<p>
+
+		 This property is used with a MusicDevice that requires sample data to
+		 be used as a source for its rendering. The DLSMusicDevice will accept
+		 both DownLoadable Sound files and Sound Fonts as the sample data for
+		 its intruments.
+	
+
+
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_BankName"></a>
+<h3><a name="kMusicDeviceProperty_BankName">kMusicDeviceProperty_BankName</a></h3>
+
+		<b>Type: </b>CFStringRef<p>
+
+		 Returns the name of the currently loaded sound bank of the
+		 DLSMusicDevice. The CFStringRef should be released by the caller.
+	
+
+
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_GroupOutputBus"></a>
+<h3><a name="kMusicDeviceProperty_GroupOutputBus">kMusicDeviceProperty_GroupOutputBus</a></h3>
+
+		<b>Type: </b>UInt32
+		
+		The caller passes in <a href="au_music.html#MusicDeviceGroupID"><tt>MusicDeviceGroupID</tt></a> for the <a href="au_state.html#AudioUnitElement"><tt>AudioUnitElement</tt></a> and
+		<a href="au_state.html#AudioUnitScope"><tt>kAudioUnitScope_Group</tt></a> for the <a href="au_state.html#AudioUnitScope"><tt>AudioUnitScope</tt></a>. The caller should
+		pre-assign the number of busses that are going to be assigned using this
+		call. Then, when this property is set, any notes that are produced on a
+		particular group (which can be considered as equivalent to a MIDI
+		Channel for the moment) will be produced on this assigned bus. This
+		property is implemented by the DLSMusicDevice.
+	
+
+
+
+<a name="//apple_ref/c/data/kMusicDeviceProperty_MIDIXMLNames"></a>
+<h3><a name="kMusicDeviceProperty_MIDIXMLNames">kMusicDeviceProperty_MIDIXMLNames</a></h3>
+
+		<b>Type: </b>CFURLRef<p>
+
+		 Returns a URL to a MIDINameDocument describing the MusicDevice's patch,
+		 note and control names.
+	
+
+
+
+
+<hr></hr>
+
+<a name="AudioDeviceIDProperty"></a>
+<h2>AudioDeviceID Property</h2>
+
+<a name="//apple_ref/c/data/kAudioOutputUnitProperty_CurrentDevice"></a>
+<h3><a name="kAudioOutputUnitProperty_CurrentDevice">kAudioOutputUnitProperty_CurrentDevice</a></h3>
+
+		<b>Type: </b>AudioDeviceID
+		
+		Will return the AudioDeviceID of any Audio Unit that is set (or will
+		track) an AudioDevice. The property can be set on some Audio Units, but
+		not on others.
+	
+
+
+
+
+<hr></hr>
+
+<a name="OutputUnitProperties"></a>
+<h2>OutputUnit Properties</h2>
+
+<a name="//apple_ref/c/data/kAudioOutputUnitProperty_IsRunning"></a>
+<h3><a name="kAudioOutputUnitProperty_IsRunning">kAudioOutputUnitProperty_IsRunning</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 This value is initially set to 0 (false). When <a href="au_state.html#AudioOutputUnitStart"><tt>AudioOutputUnitStart</tt></a> is
+		 called the value of this property is 1 (true), and when
+		 <a href="au_state.html#AudioOutputUnitStop"><tt>AudioOutputUnitStop</tt></a> is consequently called the value is again zero.
+		 Audio Units do not count the number of times that their start or stop
+		 methods are called.
+	
+
+
+
+
+<hr></hr>
+
+<a name="3DandSpatializationProperties"></a>
+<h2>3D and Spatialization Properties</h2>
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SpeakerConfiguration"></a>
+<h3><a name="kAudioUnitProperty_SpeakerConfiguration">kAudioUnitProperty_SpeakerConfiguration</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 This is a property that is typically supported by Audio Units that
+		 generate content that corresponds to common multi-channel formats.
+		 Currently the following values are defined for this property. When this
+		 property is supported it should be used over the
+		 <code><a href="au_properties.html#kAudioUnitProperty_StreamFormat">kAudioUnitProperty_StreamFormat</a></code> as the stream format
+		 doesn't describe sufficient information to the renderer when applying
+		 spatialization techniques.<p>
+
+		<dl>
+		<dt><code>kSpeakerConfiguration_HeadPhones</code></dt>
+			<dd>Used to signify that the rendering should be based on the user
+listening with headphones</dd>
+		<dt><code>kSpeakerConfiguration_Stereo</code></dt>
+			<dd>Used to signify that stereo speakers will be used. The channel
+ordering is Left/Right. Stereo speakers are generally expected to be 30 degrees
+to the left and right respectively of the listener</dd>
+		<dt><code>kSpeakerConfiguration_Quad</code></dt>
+			<dd>Used to signify that quad speakers will be used. The channel
+ordering is Left/Right/Rear Left/Rear Right. Generally these speakers are place
+in a square around the listener, where the listener is located in the center of
+the square.</dd>
+		<dt><code>kSpeakerConfiguration_5_1</code></dt>
+			<dd>Used to signify a 5.1 speaker configuration. The channel
+ordering is Left/Right/Rear Left/Rear Right/Center/Sub. Often, an Audio Unit
+generating content for this configuration will olny generate 5 channels of data
+(not 6). This channel ordering is expected to be observed for this value (even
+though there are other channel orderings for 5.1 content that are also in common
+usage.</dd>
+		</dl>
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_SpatializationAlgorithm"></a>
+<h3><a name="kAudioUnitProperty_SpatializationAlgorithm">kAudioUnitProperty_SpatializationAlgorithm</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 The caller passes in one of the kSpatializationAlgorithm enum values to
+		 specify which particular algorithm should be applied on the specified
+		 scope (input for the 3DMixer) and elementID (bus number). This allows
+		 different inputs to the 3DMixer to have different spatialization
+		 algorithms applied to each input.<p>
+
+	
+
+
+
+<a name="//apple_ref/c/data/kAudioUnitProperty_DopplerShift"></a>
+<h3><a name="kAudioUnitProperty_DopplerShift">kAudioUnitProperty_DopplerShift</a></h3>
+
+		<b>Type: </b>UInt32<p>
+
+		 A value of 1 will enable the application of a Doppler shift effect to a
+		 moving source in the 3DMixer unit.
+	
+
+
+
+
+</body>
+</html>

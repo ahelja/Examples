@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BackwardsCompatibleClassLookup</key>
+	<true/>
+	<key>CFBundleDisplayName</key>
+	<string>Scroller</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.dts.samplecode.scroller</string>
+	<key>CFBundleName</key>
+	<string>Scroller</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0</string>
+	<key>CFBundleVersion</key>
+	<string>200</string>
+	<key>CloseBoxInsetX</key>
+	<integer>15</integer>
+	<key>CloseBoxInsetY</key>
+	<integer>15</integer>
+	<key>Height</key>
+	<integer>290</integer>
+	<key>MainHTML</key>
+	<string>Scroller.html</string>
+	<key>Width</key>
+	<integer>352</integer>
+</dict>
+</plist>

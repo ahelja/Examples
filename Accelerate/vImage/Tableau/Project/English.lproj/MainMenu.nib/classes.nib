@@ -1,0 +1,116 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {doOK = id; doSlider = id; }; 
+            CLASS = AlphaPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                okButton = NSButton; 
+                transparencySlider = NSSlider; 
+                valueDisplay = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = FunctionMenu; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; imageView = MyImageFilterView; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {hitOK = id; }; 
+            CLASS = FunctionPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {OK = NSButton; kernelWidth = NSStepper; textBox = NSTextField; }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            ACTIONS = {changeColor = id; doColor = id; go = id; updateTransformMatrix = id; }; 
+            CLASS = GeometryPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                backColor = NSButton; 
+                goButton = NSButton; 
+                rotate = NSSlider; 
+                "scale_X" = NSSlider; 
+                "scale_Y" = NSSlider; 
+                "shear_X" = NSSlider; 
+                "shear_Y" = NSSlider; 
+                target = id; 
+                transformMatrix = NSTableView; 
+                "translate_X" = NSSlider; 
+                "translate_Y" = NSSlider; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            CLASS = HidableProgressBar; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSProgressIndicator; 
+        }, 
+        {
+            ACTIONS = {
+                applyFilter = id; 
+                findImage = id; 
+                resetImage = id; 
+                setDataType = id; 
+                setFilterType = id; 
+                setTestIterations = id; 
+            }; 
+            CLASS = ImageFilterController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                alphaPane = AlphaPane; 
+                functionMenu = FunctionMenu; 
+                functionPane = FunctionPane; 
+                geometryPane = GeometryPane; 
+                goButton = NSButton; 
+                imageSizeDisplayField = NSTextField; 
+                imageView = MyImageFilterView; 
+                kernelPane = KernelPane; 
+                progressBar = NSProgressIndicator; 
+                testIterationPopup = NSPopUpButton; 
+                theWindow = NSWindow; 
+                timeDisplayField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                applyChanges = id; 
+                cancelChanges = id; 
+                setIntOrFloat = id; 
+                setKernelInitFunction = id; 
+                setPrefabType = id; 
+                setSize = id; 
+            }; 
+            CLASS = KernelPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = NSButton; 
+                cancelButton = NSButton; 
+                controller = ImageFilterController; 
+                intFloatSelector = NSMatrix; 
+                kernelData = NSTableView; 
+                kernelInitFunctionPopup = NSPopupButton; 
+                kernelPrefabType = NSPopUpButton; 
+                kernelSize = NSForm; 
+            }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            CLASS = MyImage; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {drawingSurface = NSImageView; }; 
+            SUPERCLASS = NSImage; 
+        }, 
+        {
+            CLASS = MyImageFilterView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {sizeOfDisplay = NSTextField; }; 
+            SUPERCLASS = NSImageView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

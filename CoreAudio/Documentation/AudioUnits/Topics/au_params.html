@@ -1,0 +1,719 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_params?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitParameters"></a>
+<h1>Audio Unit Parameters</h1>
+
+<p>	Audio Unit parameters are used to modify the behaviour of the rendering
+process of an Audio Unit. Parameters can often be applied in real time (though
+some parameters will cause glitching when changed because of the nature of the
+underlying DSP or the nature of the parameter itself). Parameters can be applied
+very frequently as a particular value is changed over a short period of time. A
+parameter's value is defined to be a <code>Float32</code>, and like properties
+is specified through the parameterID, its scope and the element (or bus) within
+that scope.</p>
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="2"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_params.html#GettingandSettingParameterValues">Getting and Setting Parameter Values</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_params.html#ParameterTypesandInformation">Parameter Types and Information</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_params.html#TempoParameters">Tempo Parameters</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_params.html#ParameterID'sforAppleAudioUnits">ParameterID's for Apple Audio Units</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitGetParameter">AudioUnitGetParameter</a></td>
+<td>
+		Get a parameter's value.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitSetParameter">AudioUnitSetParameter</a></td>
+<td>
+		Set a parameter's value.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitScheduleParameters">AudioUnitScheduleParameters</a></td>
+<td>
+		Schedule one or more parameter changes to happen within the current
+		render cycle.
+	</td>
+</tr>
+<tr><td colspan="3"><b>Defined Types</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a></td></tr>
+<tr><td colspan="3"><b>Structs</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitParameter">AudioUnitParameter</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitParameterEvent">AudioUnitParameterEvent</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitParameterInfo">AudioUnitParameterInfo</a></td></tr>
+<tr><td colspan="3"><b>Enumerations</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AUParameterEventType">AUParameterEventType</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitParameterUnit">AudioUnitParameterUnit</a></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_params.html#AudioUnitParameterInfoflags">AudioUnitParameterInfo flags</a></td></tr>
+</table>
+
+
+<hr>
+
+
+
+
+<a name="GettingandSettingParameterValues"></a>
+<h2>Getting and Setting Parameter Values</h2>
+
+<a name="//apple_ref/c/tdef/AudioUnitParameterID"></a>
+<h3><a name="AudioUnitParameterID">AudioUnitParameterID</a></h3>
+
+		<pre>typedef UInt32 <b>AudioUnitParameterID</b>;</pre>
+	
+		
+	
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitParameter"></a>
+<h3><a name="AudioUnitParameter">AudioUnitParameter</a></h3>
+
+<pre>struct AudioUnitParameter {
+  <a href="au_components.html#AudioUnit">AudioUnit</a>             mAudioUnit;
+  <a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>  mParameterID;
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>        mScope;
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>      mElement;
+};</pre>
+	
+		This structure is used in the <a href="au_utils.html#AudioUnitUtilities">Audio Unit Utilities</a> to
+		specify an individual Audio Unit parameter with a single function argument.
+	
+
+
+
+<a name="//apple_ref/c/func/AudioUnitGetParameter"></a>
+<h3><a name="AudioUnitGetParameter">AudioUnitGetParameter</a></h3>
+
+		Get a parameter's value.
+	
+<pre>ComponentResult <b>AudioUnitGetParameter</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>             ci,
+  <a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>  inID,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>        inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>      inElement,
+  Float32 *             outValue
+);</pre>
+	
+		This function retrieves the current value of the parameter as
+		specified by its ID, scope and element.
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+			The Audio Unit whose parameter value is to be retrieved.
+		</dd>
+<dt><tt>inID</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inScope</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inElement</tt></dt>
+<dd>
+			Specify the scope, element, and parameter to be retrieved.
+		</dd>
+<dt><tt>outValue</tt></dt>
+<dd>
+			On exit, the parameter's value.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitSetParameter"></a>
+<h3><a name="AudioUnitSetParameter">AudioUnitSetParameter</a></h3>
+
+		Set a parameter's value.
+	
+<pre>ComponentResult <b>AudioUnitSetParameter</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>             ci,
+  <a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>  inID,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>        inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>      inElement,
+  Float32               inValue,
+  UInt32                inBufferOffsetInFrames
+);</pre>
+	
+		This function sets the current value of the parameter as specified by
+		its ID, scope and element.<p>
+
+		The AUParameterListener, described in the <a href="au_utils.html#AudioUnitUtilities">Audio Unit
+		Utilities</a> section, provides an alternative function,
+		<a href="au_utils.html#AUParameterSet"><tt>AUParameterSet</tt></a>, that can be used to set the value of a parameter. This
+		service provides the capability of notifying other portions of your
+		program that the value of an Audio Unit parameter has been changed.
+		Internally it uses <tt>AudioUnitSetParameter</tt> to change the parameter value.<p>
+
+		Parameter changes are ideally scheduled just before the <a href="au_render.html#AudioUnitRender"><tt>AudioUnitRender</tt></a>
+		call is made. Thus, the <tt>AudioUnitSetParameter</tt> is also delineated with a
+		<code>inBufferOffsetInFrames</code> argument; this value specifies to
+		the Audio Unit that the parameter value should be changed in the next
+		render the <code>inBufferOffsetInFrames</code> sample frames within the
+		buffer that is next rendered. A value of zero will apply the new
+		parameter value as soon as possible. Given this, however, not all Audio
+		Units will be able to do intra-buffer adjustments to parameter values,
+		though the API gives units the opportunity to do that.<p>
+
+		In many digital music environments there are two rates that are of
+		interest. The first is the sample rate of the audio data itself - this
+		is a well understood concept and how this rate effects the frequencies
+		that can be represented by a particular digitally generated audio
+		signal. The second is often known as the <i>k-rate</i>, or control rate.
+		This rate determines the granularity of control or (in Audio Unit
+		parlance) parameter value changes. For Audio Unit processing, this is
+		generally equivalent to the size of the audio buffer (how many sample
+		frames) divided by the sample rate.<p>
+
+		For instance, given a sample rate of 48KHz, and a buffer size of 512
+		samples, the k-rate is 10.666 msecs. Whereas a buffer size of 128
+		samples gives you a k-rate of 2.666 msecs. So, parameter changes will
+		have a granularity of 10.666 msecs (or 2.666 msecs for 128 frames). The
+		provision of the buffer offset in <tt>AudioUnitSetParameter</tt> provides the
+		capability of a k-rate that can be the same as the sample rate (i.e.
+		parameter changes can be applied on a sample by sample basis).
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+			The Audio Unit whose parameter is to be changed.
+		</dd>
+<dt><tt>inID</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inScope</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inElement</tt></dt>
+<dd>
+			Specify the scope, element, and parameter to be changed.
+		</dd>
+<dt><tt>inValue</tt></dt>
+<dd>
+			The parameter's new value
+		</dd>
+<dt><tt>inBufferOffsetInFrames</tt></dt>
+<dd>
+			If non-zero, specifies that the parameter change is to take
+			effect at this number of sample frames into the next buffer
+			to be rendered.  Since the concept of the "next" buffer is
+			indeterminate except in the context of the thread on which
+			rendering is happening, non-zero values should only be passed
+			when setting the parameter from the render thread, in a render
+			callback function.
+		</dd>
+</dl>
+
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitScheduleParameters"></a>
+<h3><a name="AudioUnitScheduleParameters">AudioUnitScheduleParameters</a></h3>
+
+		Schedule one or more parameter changes to happen within the current
+		render cycle.
+	
+<pre>ComponentResult <b>AudioUnitScheduleParameters</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>                        ci,
+  const <a href="au_params.html#AudioUnitParameterEvent">AudioUnitParameterEvent</a> *  inParameterEvent,
+  UInt32                           inNumParamEvents
+);</pre>
+	
+		The limitations of <a href="au_params.html#AudioUnitSetParameter"><tt>AudioUnitSetParameter</tt></a> (see above) led to an enhanced
+		method of setting of parameter values with the V2 Audio Unit, with the
+		addition of this function.<p>
+
+		This allows multiple parameter events to be scheduled simultaneously,
+		thus making it explicit that the Audio Unit should apply potentially
+		multiple parameter value changes within the same render buffer.
+	
+This call introduces a new parameter event, the ramp parameter. This is
+used when the host wishes the Audio Unit to ramp a parameter from a start value
+to an end value, over a specified number of frames. Ramp parameters should be
+rescheduled each buffer.<p>
+
+For instance, you have a parameter that you wish to ramp from a value of
+0.5 to 0.8. You want this ramp to last for 2000 samples, and at the time you
+want this to start, it should start 400 samples within the current buffer. We'll
+also assume that we have a render buffer size of 512 samples. This situation
+would be scheduled like this:<p>
+
+<pre>
+	                    startOffset   durInFrames  startValue  endValue 
+	   First Schedule:    400         2000         0.5         0.8     - Render first buffer
+	   Second Schedule:  -112         2000         0.5         0.8     - Render second buffer
+	   Third Schedule:   -624         2000         0.5         0.8     - Render third buffer
+	   Fourth Schedule: -1136         2000         0.5         0.8     - Render fourth buffer
+	   Fifth Schedule:  -1648         2000         0.5         0.8     - Render fifth (and last) buffer</pre>
+
+	The scheduling first indicates where the ramp event should start. The second
+	and consequent schedule events (done before each consequent buffer),
+	indicate with the negative number how far into the ramp we are for the next
+	render cycle.<p>
+
+The curve that is applied to a ramped parameter is determined by the
+Audio Unit itself. This allows the host to just specify the progression of the
+curve in a linear manner (as described above). If a host wishes to apply a
+non-linear curve, that can currently be approximated through smaller line
+segments. This may change in the future with the additions of standard
+properties to allow an Audio Unit to have particular curves applied to ramped
+parameter values.<p>
+
+If the time line was shifted by the host to some place within a ramped
+parameter event, the host need only schedule the remaining portion of the ramp.
+For instance, in the example above, imagine playback was stopped and the play
+head was moved so that it fell at 402 samples before the end of the ramp event.
+The host need only schedule the last slice.
+<pre>
+	                    startOffset   durInFrames  startValue  endValue 
+	   First Schedule:  -1598         2000         0.5         0.8     - Render first (and last) buffer</pre>
+
+	   
+If parameter values are to be set outside of the rendering process and
+there is no external timing information available that would allow a parameter
+value to be scheduled within a buffer, then the bufferOffset can and should be
+set to zero. This allows the Audio Unit to apply the parameter value as soon as
+possible. This is for instance, how the <a href="au_utils.html#AUParameterSet"><tt>AUParameterSet</tt></a> call works, and also how
+the GenericAUView component sends the parameter value changes. In this
+situation, the ScheduledParameter API call can't be used, so ramped parameter
+events cannot be scheduled without a knowledge of where in the Audio Unit's
+sample-based time line you will be at for the Audio Unit's render cycle.<p>
+
+	
+
+
+
+<a name="//apple_ref/c/tag/AUParameterEventType"></a>
+<h3><a name="AUParameterEventType">AUParameterEventType</a></h3>
+
+		<pre>typedef UInt32 <b>AUParameterEventType</b>;</pre>
+<pre>enum {
+  kParameterEvent_Immediate  = 1,
+  kParameterEvent_Ramped     = 2
+};</pre>
+	
+		The <code><a href="au_params.html#AudioUnitParameterEvent">AudioUnitParameterEvent</a></code> struct can contain either a single
+		parameter value, or information for a ramped parameter event.
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kParameterEvent_Immediate"><tt>kParameterEvent_Immediate</tt></a></dt>
+<dd>
+				
+		</dd>
+<dt><a name="//apple_ref/c/econst/kParameterEvent_Ramped"><tt>kParameterEvent_Ramped</tt></a></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitParameterEvent"></a>
+<h3><a name="AudioUnitParameterEvent">AudioUnitParameterEvent</a></h3>
+
+<pre>struct AudioUnitParameterEvent {
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>              scope;
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>            element;
+  <a href="au_params.html#AudioUnitParameterID">AudioUnitParameterID</a>        parameter;
+  <a href="au_params.html#AUParameterEventType">AUParameterEventType</a>        eventType;
+  union {
+    struct {
+      SInt32 startBufferOffset;
+      UInt32 durationInFrames;
+      Float32 startValue;
+      Float32 endValue;
+    }  ramp;
+    struct {
+      UInt32 bufferOffset;
+      Float32 value;
+    } immediate;
+  }                           eventValues;
+};</pre>
+	
+
+
+
+
+<hr></hr>
+
+<a name="ParameterTypesandInformation"></a>
+<h2>Parameter Types and Information</h2>
+
+<p>Parameters can be of various types, with differing ranges and
+characteristics. It is expected that Audio Units will publish their parameters in
+format that is most natural to the parameter itself.</p>
+
+<a name="//apple_ref/c/tag/AudioUnitParameterInfo"></a>
+<h3><a name="AudioUnitParameterInfo">AudioUnitParameterInfo</a></h3>
+
+<pre>struct AudioUnitParameterInfo {
+  char                    name[60];
+  CFStringRef             cfNameString;
+  <a href="au_params.html#AudioUnitParameterUnit">AudioUnitParameterUnit</a>  unit;
+  Float32                 minValue;
+  Float32                 maxValue;
+  Float32                 defaultValue;
+  UInt32                  flags;
+};</pre>
+	
+		Contains information about a particular parameter as defined by an
+		Audio Unit. This information includes the name of parameter, its
+		minimum, maximum and default value, flags, as well as the parameter's
+		unit or format as described below.<p>
+
+		The <a href="au_properties.html#kAudioUnitProperty_ParameterInfo"><tt>kAudioUnitProperty_ParameterInfo</tt></a> property returns information
+		about an Audio Unit parameter in this structure.
+	<h4>Fields</h4>
+<dl>
+<dt><tt>name</tt></dt>
+<dd>
+			The parameter's name as an ASCII-encoded C string.
+		</dd>
+<dt><tt>cfNameString</tt></dt>
+<dd>
+			The parameter's name as a CFStringRef.  Only valid if
+			<tt>flags & <a href="au_params.html#AudioUnitParameterInfoflags">kAudioUnitParameterFlag_HasCFNameString</a></tt>
+			is non-zero.
+		</dd>
+<dt><tt>unit</tt></dt>
+<dd>
+			The parameter's units.
+		</dd>
+<dt><tt>minValue</tt></dt>
+<dd>
+			The parameter's minimum value.
+		</dd>
+<dt><tt>maxValue</tt></dt>
+<dd>
+			The parameter's maximum value.
+		</dd>
+<dt><tt>defaultValue</tt></dt>
+<dd>
+			The parameter's default value.
+		</dd>
+<dt><tt>flags</tt></dt>
+<dd>
+			See "<tt>AudioUnitParameterInfo</tt> flags," below.
+		</dd>
+</dl>
+
+
+
+
+
+<a name="//apple_ref/c/tag/AudioUnitParameterUnit"></a>
+<h3><a name="AudioUnitParameterUnit">AudioUnitParameterUnit</a></h3>
+
+		<pre>typedef UInt32 <b>AudioUnitParameterUnit</b>;</pre>
+<pre>enum {
+  kAudioUnitParameterUnit_Generic              = 0,
+  kAudioUnitParameterUnit_Indexed              = 1,
+  kAudioUnitParameterUnit_Boolean              = 2,
+  kAudioUnitParameterUnit_Percent              = 3,
+  kAudioUnitParameterUnit_Seconds              = 4,
+  kAudioUnitParameterUnit_SampleFrames         = 5,
+  kAudioUnitParameterUnit_Phase                = 6,
+  kAudioUnitParameterUnit_Rate                 = 7,
+  kAudioUnitParameterUnit_Hertz                = 8,
+  kAudioUnitParameterUnit_Cents                = 9,
+  kAudioUnitParameterUnit_RelativeSemiTones    = 10,
+  kAudioUnitParameterUnit_MIDINoteNumber       = 11,
+  kAudioUnitParameterUnit_MIDIController       = 12,
+  kAudioUnitParameterUnit_Decibels             = 13,
+  kAudioUnitParameterUnit_LinearGain           = 14,
+  kAudioUnitParameterUnit_Degrees              = 15,
+  kAudioUnitParameterUnit_EqualPowerCrossfade  = 16,
+  kAudioUnitParameterUnit_MixerFaderCurve1     = 17,
+  kAudioUnitParameterUnit_Pan                  = 18,
+  kAudioUnitParameterUnit_Meters               = 19,
+  kAudioUnitParameterUnit_AbsoluteCents        = 20
+};</pre>
+	
+		This enumeration defines a parameter's value units, as
+		returned in the <tt>unit</tt> field of the <a href="au_params.html#AudioUnitParameterInfo"><tt>AudioUnitParameterInfo</tt></a>
+		structure.<p>
+
+		These ranges are recommended ranges only and some Audio Units may report
+		different ranges. Audio Units publish their parameters using the
+		<code><a href="au_properties.html#kAudioUnitProperty_ParameterInfo">kAudioUnitProperty_ParameterInfo</a></code> property. The <a href="au_properties.html#AudioUnitProperties">Audio
+		Unit Properties</a> section contains general information about those
+		properties that relate to parameter management.
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Generic"><tt>kAudioUnitParameterUnit_Generic</tt></a></dt>
+<dd>
+			untyped value generally between 0.0 and 1.0
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Indexed"><tt>kAudioUnitParameterUnit_Indexed</tt></a></dt>
+<dd>
+			value is an integer index (good for menu selections)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Boolean"><tt>kAudioUnitParameterUnit_Boolean</tt></a></dt>
+<dd>
+			0.0 means FALSE, non-zero means TRUE
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Percent"><tt>kAudioUnitParameterUnit_Percent</tt></a></dt>
+<dd>
+			usually from 0 -> 100, sometimes -50 -> +50, but
+			may have a different range
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Seconds"><tt>kAudioUnitParameterUnit_Seconds</tt></a></dt>
+<dd>
+			absolute or relative time
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_SampleFrames"><tt>kAudioUnitParameterUnit_SampleFrames</tt></a></dt>
+<dd>
+			one sample frame equals (1.0/sampleRate) seconds
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Phase"><tt>kAudioUnitParameterUnit_Phase</tt></a></dt>
+<dd>
+			-180 to 180 degrees
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Rate"><tt>kAudioUnitParameterUnit_Rate</tt></a></dt>
+<dd>
+			a rate multiplier, for playback speed, etc. (e.g. 2.0 == twice as fast)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Hertz"><tt>kAudioUnitParameterUnit_Hertz</tt></a></dt>
+<dd>
+			an absolute frequency (or pitch) in cycles/second
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Cents"><tt>kAudioUnitParameterUnit_Cents</tt></a></dt>
+<dd>
+			unit of relative pitch
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_RelativeSemiTones"><tt>kAudioUnitParameterUnit_RelativeSemiTones</tt></a></dt>
+<dd>
+			useful for coarse detuning
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_MIDINoteNumber"><tt>kAudioUnitParameterUnit_MIDINoteNumber</tt></a></dt>
+<dd>
+			an absolute pitch as defined in the MIDI spec (exact frequency may
+			depend on a tuning table)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_MIDIController"><tt>kAudioUnitParameterUnit_MIDIController</tt></a></dt>
+<dd>
+			a generic MIDI controller value from 0 -> 127
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Decibels"><tt>kAudioUnitParameterUnit_Decibels</tt></a></dt>
+<dd>
+			logarithmic relative gain
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_LinearGain"><tt>kAudioUnitParameterUnit_LinearGain</tt></a></dt>
+<dd>
+			linear relative gain
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Degrees"><tt>kAudioUnitParameterUnit_Degrees</tt></a></dt>
+<dd>
+			-180 to 180 degrees, similar to phase but more general (good for 3D
+			coordinate systems)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_EqualPowerCrossfade"><tt>kAudioUnitParameterUnit_EqualPowerCrossfade</tt></a></dt>
+<dd>
+			0 -> 100, crossfade mix two sources according to sqrt(x) and sqrt(1.0 - x)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_MixerFaderCurve1"><tt>kAudioUnitParameterUnit_MixerFaderCurve1</tt></a></dt>
+<dd>
+			0.0 -> 1.0, pow(x, 3.0) -> linear gain to simulate a reasonable
+			mixer channel fader response
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Pan"><tt>kAudioUnitParameterUnit_Pan</tt></a></dt>
+<dd>
+			standard left to right mixer pan
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Meters"><tt>kAudioUnitParameterUnit_Meters</tt></a></dt>
+<dd>
+			distance measured in meters
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_AbsoluteCents"><tt>kAudioUnitParameterUnit_AbsoluteCents</tt></a></dt>
+<dd>
+			absolute frequency measurement: if f is a frequency in Hertz, then 
+				<pre>absoluteCents = 1200 * log2(f / 440) + 6900</pre>
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Octaves"><tt>kAudioUnitParameterUnit_Octaves</tt></a></dt>
+<dd>
+			octaves in relative pitch where a value of 1 is equal to 1200 cents (and octave). It is relative in that a value of 1 would change the parameter value up an octave, and -1 would change the parameter value down an octave... Fractional values can be expressed as well, so a value of 0.5 would change the value by a half an octave (or 600 cents)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_BPM"><tt>kAudioUnitParameterUnit_BPM</tt></a></dt>
+<dd>
+			beats per minute, ie tempo
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Beats"><tt>kAudioUnitParameterUnit_Beats</tt></a></dt>
+<dd>
+			time relative to tempo; where this value determines how many "beats" the parameter expresses.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterUnit_Milliseconds"><tt>kAudioUnitParameterUnit_Milliseconds</tt></a></dt>
+<dd>
+			arameter is expressed in milliseconds
+		</dd>
+</dl>
+
+
+
+<a name="TempoParameters"></a>
+<h2>Tempo Parameters</h2>
+	<p>Some parameters may publish their parameter types as <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_Beats</tt></a> or <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_BPM</tt></a>. It is worth noting some points here, and how this can related to the <a href="au_properties.html#kAudioUnitProperty_HostCallbacks"><tt>kAudioUnitProperty_HostCallbacks</tt></a> property, which provides the ability of an Audio Unit to get information from the hosting application about the current tempo.</p>
+	
+	<p>Firstly, A parameter unit type of the <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_BPM</tt></a> means that the parameter value will be timed as beats per minute. So far so good, but we still haven't told the audio unit what to do, though without any further information we can reasonably presume that this parameter will be timed to beat at that rate.</p>
+
+	<p>But we can have a finer degree of control here, and this is represented by the parameter unit called <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_Beats</tt></a>.</p>
+
+	<p>This describes how that parameter will relate its timing to the tempo. Here, we're expecting that a value of "1" means that the parameter is timed to a beat (as expressed by the _BPM - whether this is maintained by the host tempo or set by the user), a value of "2" means the parameter is timed at 2 beats, a value of "0.5" means its timed at a half a beat, etc...</p>
+
+	<p>Either of these parameters can be used independantly, ie. an explicit beat tempo can be specified using the <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_BPM</tt></a> parameter unit, or a scaled relationship to a tempo can be represented using the <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_Beats</tt></a> parameter unit. However, the <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_Beats</tt></a> parameter unit is only useful if the audio unit itself can follow the tempo of the host, and this parameter then allows for this scaled or relative relationship to be drawn to the tempo.</p>
+
+	<p>There maybe some situations however when the Audio Unit is not able to get tempo information from the host. Either, the host doesn't support that property (<a href="au_properties.html#kAudioUnitProperty_HostCallbacks"><tt>kAudioUnitProperty_HostCallbacks</tt></a>), or the host is being used by a user in a live situationn where no tempo can be ascertained by the host.</p>
+
+	<p>In this case an Audio Unit may decide to publish parameters for both of these properties, thus allowing the user to specify both a default tempo <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_BPM</tt></a>, and a relationship of other parameters to that tempo with parameters that are based on the <a href="au_params.html#AudioUnitParameterUnit"><tt>kAudioUnitParameterUnit_Beats</tt></a> parameter type.</p>
+
+	<p>Lets take an example. We have a multi-tap delay unit where each tap can be delayed by a different time.</p>
+
+<pre>
+    Delay Tempo Parameter (<a href="au_params.html#AudioUnitParameterUnit">kAudioUnitParameterUnit_BPM</a> parameter units)
+        -> Range from 20 to 400 BPM
+    Delay Tap 1 Time (<a href="au_params.html#AudioUnitParameterUnit">kAudioUnitParameterUnit_Beats</a> parameter units)
+        -> Range from 0 to 4
+    Delay Tap 2 Time (<a href="au_params.html#AudioUnitParameterUnit">kAudioUnitParameterUnit_Beats</a> parameter units)
+        -> Range from 0 to 4
+    Delay Tap 3 Time (<a href="au_params.html#AudioUnitParameterUnit">kAudioUnitParameterUnit_Beats</a> parameter units)
+        -> Range from 0 to 4
+</pre>
+
+	<p>We decide that we want these three taps to have a musically interesting relationship to each other. So, we decide to set "Delay Tap 1 Time" to 1, "Delay Tap 2 Time" to 2 and "Delay Tap 3 Time" to 0.5. Now, as we set the tempo of the delay unit, these taps will change their actual delay time in that relationship.</p>
+
+<pre>
+    Tempo   ->   Tap 1 (1)     Tap 2 (2)    Tap 3 (0.5)
+    60           60 a sec      30 a sec     120 a sec       
+    120          120 a sec     60 a sec     240 a sec
+</pre>
+
+	<p>Thus, by just changing the Delay Tempo Parameter, the times of each of the taps (in this example) changes relative to that tempo setting. An Audio Unit may link these tempos to beats, or may not - this is just an example.</p>
+	
+	<p>You can also see that one way to view the beat parameter is as a musical note. Lets assume that the BPM is in terms of quarter notes (crotchets) - typical for much music where the time signature is 4/4... So, a beat value of 1 means that the parameter beats at the rate of a quarter note. If the beat value is 2, then this parameter will beat at a value of a half note (minim) - ie. 2 beats per note. If the beat value is 0.5, then this parameter will beat at a value of an eighth note (quaver) - ie. 1/2 a beat per note. Of course, we don't know, nor do we need to know in this case, how the music is being notated. <b>All</b> we care about here is how many beats per minute, and then what the relationship of a beat parameter would be to that tempo.</p>
+
+	<p>Now, a complication can come into play here when we relate this to the <a href="au_properties.html#kAudioUnitProperty_HostCallbacks"><tt>kAudioUnitProperty_HostCallbacks</tt></a> property and its support for deriving the tempo from the host. This is obviously a highly desirable capability, but if an Audio Unit also publishes a tempo based parameter, which tempo wins?</p>	
+
+	<p>It is suggested that if the audio unit can support both, that it presents to the user a boolean property, that allows the user to choose whether the tempo should be tracked from the host, or the tempo as set by this tempo based parameter is to be the tempo used. Thus, </p>
+
+<pre>
+    Delay Tracks Host Tempo (<a href="au_params.html#AudioUnitParameterUnit">kAudioUnitParameterUnit_Boolean</a>)
+        -> if true, ignores user setting of the "Delay Tempo Parameter" above
+        -> if false, ignores host tempo    
+</pre>
+
+	<p>Where "Delay Tracks Host Tempo" is set to true, the Audio Unit would then treat the "Delay Tempo Parameter" as a read only parameter, and attempts by the user to explicitly set this might fail.</p>
+
+<hr></hr>
+
+<a name="//apple_ref/c/tag/AudioUnitParameterInfo flags"></a>
+<h3><a name="AudioUnitParameterInfoflags">AudioUnitParameterInfo flags</a></h3>
+
+<pre>enum {
+  kAudioUnitParameterFlag_IsHighResolution  = (1L << 23),
+  kAudioUnitParameterFlag_NonRealTime       = (1L << 24),
+  kAudioUnitParameterFlag_CanRamp           = (1L << 25),
+  kAudioUnitParameterFlag_ExpertMode        = (1L << 26),
+  kAudioUnitParameterFlag_HasCFNameString   = (1L << 27),
+  kAudioUnitParameterFlag_IsGlobalMeta      = (1L << 28),
+  kAudioUnitParameterFlag_IsElementMeta     = (1L << 29),
+  kAudioUnitParameterFlag_IsReadable        = (1L << 30),
+  kAudioUnitParameterFlag_IsWritable        = (1L << 31)
+};</pre>
+	
+		The flags that are specified in this struct contain additional information about the parameter.
+	<h4>Constants</h4>
+<dl>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_IsHighResolution"><tt>kAudioUnitParameterFlag_IsHighResolution</tt></a></dt>
+<dd>
+			This flag provides a hint to a host that this parameter should be
+			controlled through the highest resolution if the host has
+			limitations on the control resolution of parameter values. Generally
+			this means that controlling this parameter with a single MIDI
+			Control message (i.e. 128 values) is too course a grain for that
+			parameter, and a finer control resolution should be used if
+			possible. If this flag is not set, then a host can assume that a
+			7-bit control quantization is acceptable. Ideally, parameters should
+			be controlled in the fullest resolution that they are published
+			with.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_NonRealTime"><tt>kAudioUnitParameterFlag_NonRealTime</tt></a></dt>
+<dd>
+			If set, parameter will have undesirable effects if it is changed in
+			real-time (i.e. a glitch or other artifact)
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_CanRamp"><tt>kAudioUnitParameterFlag_CanRamp</tt></a></dt>
+<dd>
+			If set, parameter can be ramped.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_ExpertMode"><tt>kAudioUnitParameterFlag_ExpertMode</tt></a></dt>
+<dd>
+			If set, parameter is obscure (hint to UI to only display in expert
+			mode).
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_HasCFNameString"><tt>kAudioUnitParameterFlag_HasCFNameString</tt></a></dt>
+<dd>
+			In the original ParameterInfo a C string only was specified. With
+			10.2, the last four bytes of this string are reserved for a
+			CFStringRef, which gives the ability to used Unicode encoding,
+			necessary for providing a name in languages using non-ASCII characters.
+			If this flag bit is set, the CFStringRef is valid.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_IsGlobalMeta"><tt>kAudioUnitParameterFlag_IsGlobalMeta</tt></a></dt>
+<dd>
+			If set, changing this parameter may change any number of others in the
+			Audio Unit.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_IsElementMeta"><tt>kAudioUnitParameterFlag_IsElementMeta</tt></a></dt>
+<dd>
+			If set, changing this parameter may change others in the same element as the
+			current parameter.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_IsReadable"><tt>kAudioUnitParameterFlag_IsReadable</tt></a></dt>
+<dd>
+			Parameter is readable. Most parameters are both readable and
+			writeable.
+		</dd>
+<dt><a name="//apple_ref/c/econst/kAudioUnitParameterFlag_IsWritable"><tt>kAudioUnitParameterFlag_IsWritable</tt></a></dt>
+<dd>
+			Parameter is writable. Most parameters are both readable and
+			writeable.
+		</dd>
+</dl>
+
+
+
+<hr></hr>
+
+<a name="ParameterID'sforAppleAudioUnits"></a>
+<h2>ParameterID's for Apple Audio Units</h2>
+
+<p>The discovery mechanism for parameters is the most reliable means of
+obtaining information about a parameter. However, this can be somewhat onerous
+if an Audio Unit is being used programmatically. Thus, in
+<code>AudioUnit/AudioUnitParameters.h</code> a complete definitions of the
+parameterIDs for all of Apple's Audio Units are provided, with comments about
+their respective scope, range and default values. Third party Audio Units that
+may also be used in such a manner should also publish a similar definition of
+their parameters to make this process easier.</p>
+
+</body>
+</html>

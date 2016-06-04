@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {askQuestion = id; increaseFont = id; }; 
+            CLASS = SMWSecondWindowController; 
+            LANGUAGE = Java; 
+            OUTLETS = {questionField = NSTextField; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

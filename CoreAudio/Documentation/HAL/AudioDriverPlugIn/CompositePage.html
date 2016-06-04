@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:visited {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:active {text-decoration: none; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}a:hover {text-decoration: underline; font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: small}h4 {text-decoration: none; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; size: tiny; font-weight: bold}--></style><head>
+    <title>AudioDriverPlugIn</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">AudioDriverPlugIn</font></h1><br>
+<h2>Discussion</h2>
+IOAudio family drivers can specify a CFBundle in order to implement device specific properties
+on behalf of the HAL. The CFBundle provides routines for opening and closing the device as well
+as the property management routines. The mechanism by which the driver specifies which CFBundle
+to load is defined by the IOAudio driver family in IOKit. The routines described in this header
+are loaded by name from the CFBundle.
+<hr><br><h2>Functions</h2>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInClose">AudioDriverPlugInClose</a></h2>
+</td></tr></table><hr>Closes an instance of the driver plug-in.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInClose (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDeviceID that describes the device who's plug-in instance is being
+closed.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInDeviceGetProperty">AudioDriverPlugInDeviceGetProperty</a></h2>
+</td></tr></table><hr>Queries an the AudioDevice object to get the data of the given property and
+places it in the provided buffer.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInDeviceGetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* ioPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;void* outPropertyData
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to query.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>ioPropertyDataSize</em></tt></dt><dd>A UInt32 which on entry indicates the size of the buffer pointed to by
+outData and on exit indicates how much of the buffer was used.</dd>
+<dt><tt><em>outPropertyData</em></tt></dt><dd>The buffer into which the object will put the data for the given property.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. Note that if the plug-in does not
+implement the given property, it should return
+kAudioHardwareUnknownPropertyError to ensure that the HAL handles the property
+normally.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInDeviceGetPropertyInfo">AudioDriverPlugInDeviceGetPropertyInfo</a></h2>
+</td></tr></table><hr>Retrieve information about the given property of an AudioDevice.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInDeviceGetPropertyInfo (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* outSize,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean* outWritable
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to query.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>outSize</em></tt></dt><dd>A pointer to a UInt32 that receives the size of the property data in bytes
+on exit. This can be NULL if the size information is not being requested.</dd>
+<dt><tt><em>outWritable</em></tt></dt><dd>A pointer to a Boolean that receives indication of whether or not the given
+property can be set. This can be NULL if the writability is not being
+requested.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. Note that if the plug-in does not
+implement the given property, it should return
+kAudioHardwareUnknownPropertyError to ensure that the HAL handles the property
+normally.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInDeviceSetProperty">AudioDriverPlugInDeviceSetProperty</a></h2>
+</td></tr></table><hr>Tells the AudioDevice object to change the value of the given property using the
+provided data.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInDeviceSetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp* inWhen,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean isInput,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inPropertyData
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the value of the property should not be considered changed until the
+HAL has called the listeners as many properties values are changed
+asynchronously.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice to change.</dd>
+<dt><tt><em>inWhen</em></tt></dt><dd>A pointer to an AudioTimeStamp that says when to change the property's value
+relative to the device's time base. NULL means execute the change
+immediately.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to change where 0 is the master channel.</dd>
+<dt><tt><em>isInput</em></tt></dt><dd>Which section of the AudioDevice to change.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to change.</dd>
+<dt><tt><em>inPropertyDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inData.</dd>
+<dt><tt><em>inPropertyData</em></tt></dt><dd>The buffer containing the data to be used to change the property's value.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. Note that if the plug-in does not
+implement the given property, it should return
+kAudioHardwareUnknownPropertyError to ensure that the HAL handles the property
+normally.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInOpen">AudioDriverPlugInOpen</a></h2>
+</td></tr></table><hr>Instantiates a new instance of the driver plug-in.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInOpen (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDriverPlugInHostInfo* inHostInfo
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inHostInfo</em></tt></dt><dd>An AudioDriverPlugInHostInfo struct that tells the plug-in what device it is
+being instantiated for.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInStreamGetProperty">AudioDriverPlugInStreamGetProperty</a></h2>
+</td></tr></table><hr>Queries an the AudioStream object to get the data of the given property and
+places it in the provided buffer.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInStreamGetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;io_object_t inIOAudioStream,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* ioPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;void* outPropertyData
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice who's stream is being queried.</dd>
+<dt><tt><em>inIOAudioStream</em></tt></dt><dd>The IOAudioStream to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>ioPropertyDataSize</em></tt></dt><dd>A UInt32 which on entry indicates the size of the buffer pointed to by
+outData and on exit indicates how much of the buffer was used.</dd>
+<dt><tt><em>outPropertyData</em></tt></dt><dd>The buffer into which the object will put the data for the given property.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. Note that if the plug-in does not
+implement the given property, it should return
+kAudioHardwareUnknownPropertyError to ensure that the HAL handles the property
+normally.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInStreamGetPropertyInfo">AudioDriverPlugInStreamGetPropertyInfo</a></h2>
+</td></tr></table><hr>Retrieve information about the given property of an AudioStream.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInStreamGetPropertyInfo (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;io_object_t inIOAudioStream,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32* outSize,
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean* outWritable
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice who's stream is being queried.</dd>
+<dt><tt><em>inIOAudioStream</em></tt></dt><dd>The IOAudioStream to query.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to query where 0 is the master channel.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to query.</dd>
+<dt><tt><em>outSize</em></tt></dt><dd>A pointer to a UInt32 that receives the size of the property data in bytes
+on exit. This can be NULL if the size information is not being requested.</dd>
+<dt><tt><em>outWritable</em></tt></dt><dd>A pointer to a Boolean that receives indication of whether or not the given
+property can be set. This can be NULL if the writability is not being
+requested.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. Note that if the plug-in does not
+implement the given property, it should return
+kAudioHardwareUnknownPropertyError to ensure that the HAL handles the property
+normally.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInStreamSetProperty">AudioDriverPlugInStreamSetProperty</a></h2>
+</td></tr></table><hr>Tells the AudioStream object to change the value of the given property using the
+provided data.
+
+<blockquote><pre><tt>extern OSStatus AudioDriverPlugInStreamSetProperty (
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID inDevice,
+&nbsp;&nbsp;&nbsp;&nbsp;io_object_t inIOAudioStream,
+&nbsp;&nbsp;&nbsp;&nbsp;const AudioTimeStamp* inWhen,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inChannel,
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID inPropertyID,
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32 inPropertyDataSize,
+&nbsp;&nbsp;&nbsp;&nbsp;const void* inPropertyData
+);</tt><br>
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>Note that the value of the property should not be considered changed until the
+HAL has called the listeners as many properties values are changed
+asynchronously.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>inDevice</em></tt></dt><dd>The AudioDevice who's stream is being changed.</dd>
+<dt><tt><em>inIOAudioStream</em></tt></dt><dd>The IOAudioStream to change.</dd>
+<dt><tt><em>inWhen</em></tt></dt><dd>A pointer to an AudioTimeStamp that says when to change the property's value
+relative to the device's time base. NULL means execute the change
+immediately.</dd>
+<dt><tt><em>inChannel</em></tt></dt><dd>The channel of the property to change where 0 is the master channel.</dd>
+<dt><tt><em>inPropertyID</em></tt></dt><dd>The AudioDevicePropertyID of the property to change.</dd>
+<dt><tt><em>inPropertyDataSize</em></tt></dt><dd>A UInt32 indicating the size of the buffer pointed to by inData.</dd>
+<dt><tt><em>inPropertyData</em></tt></dt><dd>The buffer containing the data to be used to change the property's value.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>An OSStatus indicating success or failure. Note that if the plug-in does not
+implement the given property, it should return
+kAudioHardwareUnknownPropertyError to ensure that the HAL handles the property
+normally.
+</dd></dl>
+<h2>Typedefs</h2>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInDevicePropertyChangedProc">AudioDriverPlugInDevicePropertyChangedProc</a></h2>
+</td></tr></table><hr>A plug-in calls this routine to notify the HAL that one of it's device's
+properties has changed.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioDriverPlugInDevicePropertyChangedProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID           inDevice,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32                  inChannel,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean                 isInput,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID   inPropertyID<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The HAL will notify any listeners on behalf of the plug-in. The pointer to this
+routine is supplied to the plug-in when it is opened.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inDevice</tt></dt><dd>The device whose property has changed.</dd>
+<dt><tt>inChannel</tt></dt><dd>The channel of the device the property that has changed belongs to.</dd>
+<dt><tt>isInput</tt></dt><dd>The section of the device the property that has changed belongs to.</dd>
+<dt><tt>inPropertyID</tt></dt><dd>The selector of the property that has changed.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInStreamPropertyChangedProc">AudioDriverPlugInStreamPropertyChangedProc</a></h2>
+</td></tr></table><hr>A plug-in calls this routine to notify the HAL that a property of one of the
+streams of one of it's devices has changed.
+
+<blockquote><tt>typedef OSStatus (<b>typedef OSStatus
+*AudioDriverPlugInStreamPropertyChangedProc</b>) (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDeviceID           inDevice,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;io_object_t             inIOAudioStream,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;UInt32                  inChannel,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;AudioDevicePropertyID   inPropertyID<BR>);</tt><br>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5><p>The HAL will notify any listeners on behalf of the plug-in. The pointer to this
+routine is supplied to the plug-in when it is opened.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl><dt><tt>inDevice</tt></dt><dd>The device whose property has changed.</dd>
+<dt><tt>inIOAudioStream</tt></dt><dd>The stream whose property has changed.</dd>
+<dt><tt>inChannel</tt></dt><dd>The channel of the stream the property that has changed belongs to.</dd>
+<dt><tt>inPropertyID</tt></dt><dd>The selector of the property that has changed.</dd>
+</dl>
+</blockquote>
+<dl><dt><i>function result</i></dt><dd>The return value is currently unused and should always be 0.
+</dd></dl>
+<h2>Structs</h2>
+<hr>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="AudioDriverPlugInHostInfo">AudioDriverPlugInHostInfo</a></h2>
+</td></tr></table><hr>This structure provides the plug-in with all the info it needs with respect to
+communicating with the HAL.
+
+<blockquote><pre>
+struct AudioDriverPlugInHostInfo {
+    AudioDeviceID                               mDeviceID;
+    io_object_t                                 mIOAudioDevice;
+    io_object_t                                 mIOAudioEngine;
+    AudioDriverPlugInDevicePropertyChangedProc  mDevicePropertyChangedProc;
+    AudioDriverPlugInStreamPropertyChangedProc  mStreamPropertyChangedProc;
+} ;
+</pre>
+</blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt>mDeviceID</tt></dt><dd>The AudioDeviceID of the audio device.</dd>
+<dt><tt>mIOAudioDevice</tt></dt><dd>The io_object_t that points to the IOAudioDevice object for the device in
+the driver.</dd>
+<dt><tt>mIOAudioEngine</tt></dt><dd>The io_object_t that points to the IOAudioEngine object for the device in
+the driver.</dd>
+<dt><tt>mDevicePropertyChangedProc</tt></dt><dd>The AudioDriverPlugInDevicePropertyChangedProc the plug-in should call when
+a device property changes.</dd>
+<dt><tt>mStreamPropertyChangedProc</tt></dt><dd>The AudioDriverPlugInStreamPropertyChangedProc the plug-in should call when
+a stream property changes.</dd>
+</dl>
+</blockquote>
+<p>(Last Updated 12/13/2004)
+</p></body></html>

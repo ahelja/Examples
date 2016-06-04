@@ -1,0 +1,106 @@
+{
+    IBClasses = (
+        {CLASS = DataCollectionView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {iaItemDataViewScalarChanged = id; iaItemDisplayListChanged = id; }; 
+            CLASS = DataViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                uiDataCollectionView = DataCollectionView; 
+                uiDataViewScalar = id; 
+                uiItemDisplayList = NSMatrix; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MMInfoView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {
+                iaDisplayUnitsSelectorChanged = id; 
+                iaDisplayUpdateFrequencyChanged = id; 
+                iaFTPolicyChanged = id; 
+                iaFTPriorityChanged = id; 
+                iaFeederThreadCPULoadingChanged = id; 
+                iaFeederThreadCPUWorkCyclesChanged = id; 
+                iaIOProcSizeChanged = id; 
+                iaItemDisplayListChanged = id; 
+                iaPanelNextTrace = id; 
+                iaPanelPrevTrace = id; 
+                iaPanelTraceTypeSelectionChanged = id; 
+                iaScalarChanged = id; 
+                iaSelectedDeviceChanged = id; 
+                iaSelectedTestChanged = id; 
+                iaSeparateThreadSelectorChanged = id; 
+                iaShowTraceWindow = id; 
+                iaTestButtonPressed = id; 
+                iaTraceSelectionChanged = id; 
+            }; 
+            CLASS = MillionMonkeys; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                uiAmplitudeSlider = NSSlider; 
+                uiConsolePanel = NSPanel; 
+                uiDataCollectionView = DataCollectionView; 
+                uiDataUpdateFrequency = NSTextField; 
+                uiDeviceList = NSPopUpButton; 
+                uiDisplayUnitsSelector = NSMatrix; 
+                uiDisplayUpdateFrequency = NSTextField; 
+                uiFTPolicy = NSMatrix; 
+                uiFTPolicySetTitle = NSTextField; 
+                uiFTPriority = NSPopUpButton; 
+                uiFTPriorityGetTitle = NSTextField; 
+                uiFTPrioritySetTitle = NSTextField; 
+                uiFTScalar = NSSlider; 
+                uiFeederThreadCPUWorkCycles = NSTextField; 
+                uiFeederThreadLoading = NSTextField; 
+                uiFeederThreadLoadingSlider = NSSlider; 
+                uiFeederThreadRetrievedPriority = NSTextField; 
+                uiFrequencyBox = NSComboBox; 
+                uiHALScalar = NSSlider; 
+                uiIOProcSizePopUp = NSPopUpButton; 
+                uiItemDisplayList = NSMatrix; 
+                uiLatencyTrace = NSButton; 
+                uiLogToFile = NSButton; 
+                uiLongTermTest = NSButton; 
+                uiMMInfoDrawer = NSDrawer; 
+                uiMMInfoView = MMInfoView; 
+                uiOverloadSwitch = NSButton; 
+                uiPanelFTBlocked = NSTextField; 
+                uiPanelFTLatency = NSTextField; 
+                uiPanelFTOVL = NSTextField; 
+                uiPanelFTTraceOVL = NSTextField; 
+                uiPanelHALOVL = NSTextField; 
+                uiPanelHALTraceOVL = NSTextField; 
+                uiPanelTraceView = NSTextView; 
+                uiPanelWakeupOffset = NSTextField; 
+                uiPanelWorkDone = NSTextField; 
+                uiPanelWorkTraceOVL = NSTextField; 
+                uiPanelWorkloadTitle = NSTextField; 
+                uiPanelWorkloadUnits = NSTextField; 
+                uiSafetyOffset = NSTextField; 
+                uiSelectedTest = NSMatrix; 
+                uiSeparateThreadSelector = NSMatrix; 
+                uiTestButton = NSButton; 
+                uiTestTime = NSTextField; 
+                uiTestTypeContainer = NSView; 
+                uiTestTypeTimeConsole = NSBox; 
+                uiTestTypeWorkConsole = NSBox; 
+                uiThreadLatencyThreshold = NSTextField; 
+                uiTimeSlice = NSTextField; 
+                uiTraceIndex = NSTextField; 
+                uiTraceNextButton = NSButton; 
+                uiTracePrevButton = NSButton; 
+                uiTraceSelectionMatrix = NSMatrix; 
+                uiUnitsView = UnitsView; 
+                uiWaveformPopUp = NSPopUpButton; 
+                uiWorkLoopTrace = NSButton; 
+                uiWorkLoopTraceThreshold = NSTextField; 
+                uiWorkScalar = NSSlider; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = UnitsView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

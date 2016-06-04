@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Defined Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Defined Types</font></h1>
+<br><hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioConverterRef;  name=AudioConverterRef --><a name="//apple_ref/c/tdef/AudioConverterRef"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterRef">AudioConverterRef</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A reference to an AudioConverter object.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueAudioConverter //apple_ref/c/cl/OpaqueAudioConverter //apple_ref/c/tdef/OpaqueAudioConverter //apple_ref/c/tag/OpaqueAudioConverter //apple_ref/c/econst/OpaqueAudioConverter //apple_ref/c/struct/OpaqueAudioConverter //apple_ref/c/clconst/OpaqueAudioConverter" --><font class="type">OpaqueAudioConverter</font><!-- /a --> <font class="type">*</font> <font class="var">AudioConverterRef</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioConverterInputDataProc;  name=AudioConverterInputDataProc --><a name="//apple_ref/c/tdef/AudioConverterInputDataProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterInputDataProc">AudioConverterInputDataProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Callback function for supplying input data to AudioConverterFillBuffer.</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioConverterInputDataProc //apple_ref/c/clm/AudioConverterInputDataProc //apple_ref/c/intfcm/AudioConverterInputDataProc //apple_ref/c/func/AudioConverterInputDataProc //apple_ref/c/ftmplt/AudioConverterInputDataProc //apple_ref/c/defn/AudioConverterInputDataProc //apple_ref/c/macro/AudioConverterInputDataProc" --><font class="function">AudioConverterInputDataProc</font><!-- /a -->)(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">ioDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="type">*</font> <font class="param">outData</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">inUserData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inAudioConverter</code></dt>
+<dd>The AudioConverter requesting input.</dd>
+<dt><code>ioDataSize</code></dt>
+<dd>On entry, the minimum number of bytes of audio data the converter
+would like in order to fulfill its current FillBuffer request.
+On exit, the number of bytes of audio data actually being provided
+for input, or 0 if there is no more input.</dd>
+<dt><code>outData</code></dt>
+<dd>On exit, *outData should point to the audio data being provided
+for input.</dd>
+<dt><code>inUserData</code></dt>
+<dd>The inInputDataProcUserData parameter passed to AudioConverterFillBuffer().</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This callback function supplies input to AudioConverterFillBuffer.
+<br><br>
+The AudioConverter requests a minimum amount of data (*ioDataSize). The callback
+may return any amount of data. If it is less than than the minimum, the callback
+will simply be called again in the near future.
+<br><br>
+The callback supplies a pointer to a buffer of audio data. The callback is
+responsible for not freeing or altering this buffer until it is called again.
+<br><br>
+If the callback returns an error, it must return zero bytes of data.
+AudioConverterFillBuffer will stop producing output and return whatever output
+has already been produced to its caller, along with the error code. This
+mechanism can be used when an input proc has temporarily run out of data, but
+has not yet reached end of stream.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/AudioConverterComplexInputDataProc;  name=AudioConverterComplexInputDataProc --><a name="//apple_ref/c/tdef/AudioConverterComplexInputDataProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterComplexInputDataProc">AudioConverterComplexInputDataProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Callback function for supplying input data to AudioConverterFillComplexBuffer.</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioConverterComplexInputDataProc //apple_ref/c/clm/AudioConverterComplexInputDataProc //apple_ref/c/intfcm/AudioConverterComplexInputDataProc //apple_ref/c/func/AudioConverterComplexInputDataProc //apple_ref/c/ftmplt/AudioConverterComplexInputDataProc //apple_ref/c/defn/AudioConverterComplexInputDataProc //apple_ref/c/macro/AudioConverterComplexInputDataProc" --><font class="function">AudioConverterComplexInputDataProc</font><!-- /a -->)(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">ioNumberDataPackets</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioBufferList //apple_ref/c/cl/AudioBufferList //apple_ref/c/tdef/AudioBufferList //apple_ref/c/tag/AudioBufferList //apple_ref/c/econst/AudioBufferList //apple_ref/c/struct/AudioBufferList //apple_ref/c/clconst/AudioBufferList" --><font class="type">AudioBufferList</font><!-- /a -->*<font class="param">ioData</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/tdef/AudioStreamPacketDescription //apple_ref/c/tag/AudioStreamPacketDescription //apple_ref/c/econst/AudioStreamPacketDescription //apple_ref/c/struct/AudioStreamPacketDescription //apple_ref/c/clconst/AudioStreamPacketDescription" --><font class="type">AudioStreamPacketDescription</font><!-- /a -->*<font class="type">*</font> <font class="param">outDataPacketDescription</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">inUserData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inAudioConverter</code></dt>
+<dd>The AudioConverter requesting input.</dd>
+<dt><code>ioNumberDataPackets</code></dt>
+<dd>On entry, the minimum number of packets of input audio data the converter
+would like in order to fulfill its current FillBuffer request. On exit, the
+number of packets of audio data actually being provided for input, or 0 if
+there is no more input.</dd>
+<dt><code>ioData</code></dt>
+<dd>On exit, the members of ioData should be set to point to the audio data
+being provided for input.</dd>
+<dt><code>outDataPacketDescription</code></dt>
+<dd>If non-null, on exit, the callback is expected to fill this in with
+an AudioStreamPacketDescription for each packet of input data being provided.</dd>
+<dt><code>inUserData</code></dt>
+<dd>The inInputDataProcUserData parameter passed to AudioConverterFillBuffer().</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This callback function supplies input to AudioConverterFillComplexBuffer.
+<br><br>
+The AudioConverter requests a minimum number of packets (*ioNumberDataPackets).
+The callback may return one or more packets. If this is less than than the minimum,
+the callback will simply be called again in the near future.
+<br><br>
+The callback manipulates the members of ioData to point to one or more buffers
+of audio data (multiple buffers are used with non-interleaved PCM data). The
+callback is responsible for not freeing or altering this buffer until it is
+called again.
+<br><br>
+If the callback returns an error, it must return zero packets of data.
+AudioConverterFillComplexBuffer will stop producing output and return whatever
+output has already been produced to its caller, along with the error code. This
+mechanism can be used when an input proc has temporarily run out of data, but
+has not yet reached end of stream.
+</p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

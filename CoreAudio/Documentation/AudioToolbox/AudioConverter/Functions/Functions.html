@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Functions</font></h1>
+<br><a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterNew" target="doc">AudioConverterNew</a></tt></dt>
+<dd>Create a new AudioConverter.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterNewSpecific" target="doc">AudioConverterNewSpecific</a></tt></dt>
+<dd>Create a new AudioConverter using specific codecs.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterDispose" target="doc">AudioConverterDispose</a></tt></dt>
+<dd>Destroy an AudioConverter.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterReset" target="doc">AudioConverterReset</a></tt></dt>
+<dd>Reset an AudioConverter</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterGetPropertyInfo" target="doc">AudioConverterGetPropertyInfo</a></tt></dt>
+<dd>Returns information about an AudioConverter property.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterGetProperty" target="doc">AudioConverterGetProperty</a></tt></dt>
+<dd>Returns an AudioConverter property value.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterSetProperty" target="doc">AudioConverterSetProperty</a></tt></dt>
+<dd>Sets an AudioConverter property value.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterFillBuffer" target="doc">AudioConverterFillBuffer</a></tt></dt>
+<dd>Converts data supplied by an input callback function.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterConvertBuffer" target="doc">AudioConverterConvertBuffer</a></tt></dt>
+<dd>Converts data from an input buffer to an output buffer.</dd>
+<dt><tt><a href="Functions.html#//apple_ref/c/func/AudioConverterFillComplexBuffer" target="doc">AudioConverterFillComplexBuffer</a></tt></dt>
+<dd>Converts data supplied by an input callback function, supporting non-interleaved
+and packetized formats.</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterNew;  name=AudioConverterNew --><a name="//apple_ref/c/func/AudioConverterNew"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterNew">AudioConverterNew</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create a new AudioConverter.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterNew" logicalPath="//apple_ref/c/instm/AudioConverterNew //apple_ref/c/clm/AudioConverterNew //apple_ref/c/intfcm/AudioConverterNew //apple_ref/c/func/AudioConverterNew" target="_top"><font class="function">AudioConverterNew</font></a>(
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a -->*<font class="param">inSourceFormat</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a -->*<font class="param">inDestinationFormat</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a>*<font class="param">outAudioConverter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inSourceFormat</i></code></dt>
+<dd>The format of the source audio to be converted.</dd>
+<dt><code><i>inDestinationFormat</i></code></dt>
+<dd>The destination format to which the audio is to be converter.</dd>
+<dt><code><i>outAudioConverter</i></code></dt>
+<dd>On successful return, points to a new AudioConverter instance.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>For a pair of linear PCM formats, the following conversions
+are supported:
+<br><br></p>
+<ul>
+<li>addition and removal of channels, when the stream descriptions'
+mChannelsPerFrame does not match. Channels may also be reordered and removed
+using the kAudioConverterChannelMap property.</li>
+<li>sample rate conversion</li>
+<li>interleaving/deinterleaving, when the stream descriptions' (mFormatFlags &amp;
+kAudioFormatFlagIsNonInterleaved) does not match.</li>
+<li>conversion between any pair of the following formats:</li>
+<ul>
+<li>8 bit integer, signed or unsigned</li>
+<li>16, 24, or 32-bit integer, big- or little-endian. Other integral
+bit depths, if high-aligned and non-packed, are also supported</li>
+<li>32 and 64-bit float, big- or little-endian.</li>
+</ul>
+</ul>
+<br><br>
+Also, encoding and decoding between linear PCM and compressed formats is
+supported. Functions in AudioToolbox/AudioFormat.h return information about the
+supported formats. When using a codec, you can use any supported PCM format (as
+above); the converter will perform any necessary additional conversion between
+your PCM format and the one created or consumed by the codec.
+
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterNewSpecific;  name=AudioConverterNewSpecific --><a name="//apple_ref/c/func/AudioConverterNewSpecific"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterNewSpecific">AudioConverterNewSpecific</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Create a new AudioConverter using specific codecs.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterNewSpecific" logicalPath="//apple_ref/c/instm/AudioConverterNewSpecific //apple_ref/c/clm/AudioConverterNewSpecific //apple_ref/c/intfcm/AudioConverterNewSpecific //apple_ref/c/func/AudioConverterNewSpecific" target="_top"><font class="function">AudioConverterNewSpecific</font></a>(
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a -->*<font class="param">inSourceFormat</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a -->*<font class="param">inDestinationFormat</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inNumberClassDescriptions</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioClassDescription //apple_ref/c/cl/AudioClassDescription //apple_ref/c/tdef/AudioClassDescription //apple_ref/c/tag/AudioClassDescription //apple_ref/c/econst/AudioClassDescription //apple_ref/c/struct/AudioClassDescription //apple_ref/c/clconst/AudioClassDescription" --><font class="type">AudioClassDescription</font><!-- /a -->*<font class="param">inClassDescriptions</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a>*<font class="param">outAudioConverter</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inSourceFormat</i></code></dt>
+<dd>The format of the source audio to be converted.</dd>
+<dt><code><i>inDestinationFormat</i></code></dt>
+<dd>The destination format to which the audio is to be converter.</dd>
+<dt><code><i>inNumberClassDescriptions</i></code></dt>
+<dd>The number of class descriptions.</dd>
+<dt><code><i>inClassDescriptions</i></code></dt>
+<dd>AudioClassDescriptions specifiying the codec to instantiate.</dd>
+<dt><code><i>outAudioConverter</i></code></dt>
+<dd>On successful return, points to a new AudioConverter instance.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This function is identical to AudioConverterNew(), except that the client may
+explicitly choose which codec to instantiate if there is more than one choice.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterDispose;  name=AudioConverterDispose --><a name="//apple_ref/c/func/AudioConverterDispose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterDispose">AudioConverterDispose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Destroy an AudioConverter.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterDispose" logicalPath="//apple_ref/c/instm/AudioConverterDispose //apple_ref/c/clm/AudioConverterDispose //apple_ref/c/intfcm/AudioConverterDispose //apple_ref/c/func/AudioConverterDispose" target="_top"><font class="function">AudioConverterDispose</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to dispose.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterReset;  name=AudioConverterReset --><a name="//apple_ref/c/func/AudioConverterReset"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterReset">AudioConverterReset</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Reset an AudioConverter</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterReset" logicalPath="//apple_ref/c/instm/AudioConverterReset //apple_ref/c/clm/AudioConverterReset //apple_ref/c/intfcm/AudioConverterReset //apple_ref/c/func/AudioConverterReset" target="_top"><font class="function">AudioConverterReset</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to reset.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Should be called whenever there is a discontinuity in the source audio stream
+being provided to the converter. This will flush any internal buffers in the
+converter.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterGetPropertyInfo;  name=AudioConverterGetPropertyInfo --><a name="//apple_ref/c/func/AudioConverterGetPropertyInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterGetPropertyInfo">AudioConverterGetPropertyInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns information about an AudioConverter property.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterGetPropertyInfo" logicalPath="//apple_ref/c/instm/AudioConverterGetPropertyInfo //apple_ref/c/clm/AudioConverterGetPropertyInfo //apple_ref/c/intfcm/AudioConverterGetPropertyInfo //apple_ref/c/func/AudioConverterGetPropertyInfo" target="_top"><font class="function">AudioConverterGetPropertyInfo</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/tag/AudioConverterPropertyID" logicalPath="//apple_ref/c/cl/AudioConverterPropertyID //apple_ref/c/cl/AudioConverterPropertyID //apple_ref/c/tdef/AudioConverterPropertyID //apple_ref/c/tag/AudioConverterPropertyID" target="_top"><font class="type">AudioConverterPropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">outSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a -->*<font class="param">outWritable</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to query.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property to query.</dd>
+<dt><code><i>outSize</i></code></dt>
+<dd>If non-null, on exit, the size of the property value in bytes.</dd>
+<dt><code><i>outWritable</i></code></dt>
+<dd>If non-null, on exit, indicates whether the property value is writable.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterGetProperty;  name=AudioConverterGetProperty --><a name="//apple_ref/c/func/AudioConverterGetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterGetProperty">AudioConverterGetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Returns an AudioConverter property value.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterGetProperty" logicalPath="//apple_ref/c/instm/AudioConverterGetProperty //apple_ref/c/clm/AudioConverterGetProperty //apple_ref/c/intfcm/AudioConverterGetProperty //apple_ref/c/func/AudioConverterGetProperty" target="_top"><font class="function">AudioConverterGetProperty</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/tag/AudioConverterPropertyID" logicalPath="//apple_ref/c/cl/AudioConverterPropertyID //apple_ref/c/cl/AudioConverterPropertyID //apple_ref/c/tdef/AudioConverterPropertyID //apple_ref/c/tag/AudioConverterPropertyID" target="_top"><font class="type">AudioConverterPropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">ioPropertyDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">outPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to query.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property to fetch.</dd>
+<dt><code><i>ioPropertyDataSize</i></code></dt>
+<dd>On entry, the size of the memory pointed to by outPropertyData. On 
+successful exit, the size of the property value.</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>On exit, the property value.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterSetProperty;  name=AudioConverterSetProperty --><a name="//apple_ref/c/func/AudioConverterSetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterSetProperty">AudioConverterSetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets an AudioConverter property value.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterSetProperty" logicalPath="//apple_ref/c/instm/AudioConverterSetProperty //apple_ref/c/clm/AudioConverterSetProperty //apple_ref/c/intfcm/AudioConverterSetProperty //apple_ref/c/func/AudioConverterSetProperty" target="_top"><font class="function">AudioConverterSetProperty</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?Enums/Enums.html#//apple_ref/c/tag/AudioConverterPropertyID" logicalPath="//apple_ref/c/cl/AudioConverterPropertyID //apple_ref/c/cl/AudioConverterPropertyID //apple_ref/c/tdef/AudioConverterPropertyID //apple_ref/c/tag/AudioConverterPropertyID" target="_top"><font class="type">AudioConverterPropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inPropertyDataSize</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">inPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to modify.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>The property to set.</dd>
+<dt><code><i>inPropertyDataSize</i></code></dt>
+<dd>The size in bytes of the property value.</dd>
+<dt><code><i>inPropertyData</i></code></dt>
+<dd>Points to the new property value.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterFillBuffer;  name=AudioConverterFillBuffer --><a name="//apple_ref/c/func/AudioConverterFillBuffer"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterFillBuffer">AudioConverterFillBuffer</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts data supplied by an input callback function.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterFillBuffer" logicalPath="//apple_ref/c/instm/AudioConverterFillBuffer //apple_ref/c/clm/AudioConverterFillBuffer //apple_ref/c/intfcm/AudioConverterFillBuffer //apple_ref/c/func/AudioConverterFillBuffer" target="_top"><font class="function">AudioConverterFillBuffer</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterInputDataProc" logicalPath="//apple_ref/c/cl/AudioConverterInputDataProc //apple_ref/c/cl/AudioConverterInputDataProc //apple_ref/c/tdef/AudioConverterInputDataProc" target="_top"><font class="type">AudioConverterInputDataProc</font></a> <font class="param">inInputDataProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">inInputDataProcUserData</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">ioOutputDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">outOutputData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to use.</dd>
+<dt><code><i>inInputDataProc</i></code></dt>
+<dd>A callback function which supplies the input data.</dd>
+<dt><code><i>inInputDataProcUserData</i></code></dt>
+<dd>A value for the use of the callback function.</dd>
+<dt><code><i>ioOutputDataSize</i></code></dt>
+<dd>On entry, the size of the buffer pointed to by outOutputData.
+On exit, the number of bytes written to outOutputData</dd>
+<dt><code><i>outOutputData</i></code></dt>
+<dd>The buffer into which the converted data is written.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Produces a buffer of output data from an AudioConverter. The supplied input
+callback function is called whenever necessary.
+<br><br><b>NOTE:</b> AudioConverterFillBuffer is limited to simpler conversions
+that do not involve multiple deinterleaved buffers or packetized
+formats. Use AudioConverterFillComplexBuffer for those cases.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterConvertBuffer;  name=AudioConverterConvertBuffer --><a name="//apple_ref/c/func/AudioConverterConvertBuffer"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterConvertBuffer">AudioConverterConvertBuffer</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts data from an input buffer to an output buffer.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterConvertBuffer" logicalPath="//apple_ref/c/instm/AudioConverterConvertBuffer //apple_ref/c/clm/AudioConverterConvertBuffer //apple_ref/c/intfcm/AudioConverterConvertBuffer //apple_ref/c/func/AudioConverterConvertBuffer" target="_top"><font class="function">AudioConverterConvertBuffer</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inInputDataSize</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">inInputData</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">ioOutputDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">outOutputData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to use.</dd>
+<dt><code><i>inInputDataSize</i></code></dt>
+<dd>The size of the buffer inInputData.</dd>
+<dt><code><i>inInputData</i></code></dt>
+<dd>The input audio data buffer.</dd>
+<dt><code><i>ioOutputDataSize</i></code></dt>
+<dd>On entry, the size of the buffer outOutputData. On exit, the number of bytes
+written to outOutputData.</dd>
+<dt><code><i>outOutputData</i></code></dt>
+<dd>The output data buffer.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>Produces a buffer of output data from an AudioConverter, using the supplied
+input buffer. 
+<br><br><b>WARNING:</b> this function will fail for any conversion where there is a
+variable relationship between the input and output data buffer sizes. This
+includes sample rate conversions and most compressed formats. In these cases,
+use AudioConverterFillBuffer. Generally this function is only appropriate for
+PCM-to-PCM conversions where there is no sample rate conversion.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.1.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/c/func/AudioConverterFillComplexBuffer;  name=AudioConverterFillComplexBuffer --><a name="//apple_ref/c/func/AudioConverterFillComplexBuffer"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterFillComplexBuffer">AudioConverterFillComplexBuffer</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts data supplied by an input callback function, supporting non-interleaved
+and packetized formats.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../../AudioToolbox/AudioConverter/index.html?Functions/Functions.html#//apple_ref/c/func/AudioConverterFillComplexBuffer" logicalPath="//apple_ref/c/instm/AudioConverterFillComplexBuffer //apple_ref/c/clm/AudioConverterFillComplexBuffer //apple_ref/c/intfcm/AudioConverterFillComplexBuffer //apple_ref/c/func/AudioConverterFillComplexBuffer" target="_top"><font class="function">AudioConverterFillComplexBuffer</font></a>(
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterRef" logicalPath="//apple_ref/c/cl/AudioConverterRef //apple_ref/c/cl/AudioConverterRef //apple_ref/c/tdef/AudioConverterRef" target="_top"><font class="type">AudioConverterRef</font></a> <font class="param">inAudioConverter</font>, 
+    <a href="../../../AudioToolbox/AudioConverter/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioConverterComplexInputDataProc" logicalPath="//apple_ref/c/cl/AudioConverterComplexInputDataProc //apple_ref/c/cl/AudioConverterComplexInputDataProc //apple_ref/c/tdef/AudioConverterComplexInputDataProc" target="_top"><font class="type">AudioConverterComplexInputDataProc</font></a> <font class="param">inInputDataProc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a -->*<font class="param">inInputDataProcUserData</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a -->*<font class="param">ioOutputDataPacketSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioBufferList //apple_ref/c/cl/AudioBufferList //apple_ref/c/tdef/AudioBufferList //apple_ref/c/tag/AudioBufferList //apple_ref/c/econst/AudioBufferList //apple_ref/c/struct/AudioBufferList //apple_ref/c/clconst/AudioBufferList" --><font class="type">AudioBufferList</font><!-- /a -->*<font class="param">outOutputData</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/tdef/AudioStreamPacketDescription //apple_ref/c/tag/AudioStreamPacketDescription //apple_ref/c/econst/AudioStreamPacketDescription //apple_ref/c/struct/AudioStreamPacketDescription //apple_ref/c/clconst/AudioStreamPacketDescription" --><font class="type">AudioStreamPacketDescription</font><!-- /a -->*<font class="param">outPacketDescription</font>) ; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioConverter</i></code></dt>
+<dd>The AudioConverter to use.</dd>
+<dt><code><i>inInputDataProc</i></code></dt>
+<dd>A callback function which supplies the input data.</dd>
+<dt><code><i>inInputDataProcUserData</i></code></dt>
+<dd>A value for the use of the callback function.</dd>
+<dt><code><i>ioOutputDataPacketSize</i></code></dt>
+<dd>On entry, the capacity of outOutputData expressed in packets in the
+converter's output format. On exit, the number of packets of converted
+data that were written to outOutputData.</dd>
+<dt><code><i>outOutputData</i></code></dt>
+<dd>The converted output data is written to this buffer.</dd>
+<dt><code><i>outPacketDescription</i></code></dt>
+<dd>If non-null, and the converter's output uses packet descriptions, then
+packet descriptions are written to this array. It must point to a memory
+block capable of holding *ioOutputDataPacketSize packet descriptions.
+(See AudioFormat.h for ways to determine whether an audio format
+uses packet descriptions).</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>An OSStatus result code.
+<br><br>
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Produces a buffer list of output data from an AudioConverter. The supplied input
+callback function is called whenever necessary.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

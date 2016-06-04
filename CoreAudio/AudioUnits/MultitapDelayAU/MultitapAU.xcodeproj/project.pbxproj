@@ -1,0 +1,1313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3E8BF0FF079CA60200021B09 = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A9E884B50874ABE600B2DFE8;
+			buildPhases = (
+				3E3BB887089A907D0036BC12,
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Multitap AU + View";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+				3E8BF141079CA60300021B09,
+				3E8BF13F079CA60300021B09,
+			);
+			name = "Multitap AU + View";
+			productName = "Multitap AU + View";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3E3BB88B089A90D10036BC12 = {
+			isa = PBXBuildFile;
+			fileRef = 3E8BF13D079CA60300021B09;
+		};
+		3E8BF104079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5DA37AE0281F988014500A0;
+		};
+		3E8BF105079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199ED03175E1E01CA2136;
+		};
+		3E8BF106079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199EF03175E1E01CA2136;
+		};
+		3E8BF107079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F103175E1E01CA2136;
+		};
+		3E8BF108079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F303175E1E01CA2136;
+		};
+		3E8BF109079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F603175E1E01CA2136;
+		};
+		3E8BF10A079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199FA03175E1E01CA2136;
+		};
+		3E8BF10B079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199FF03175E1E01CA2136;
+		};
+		3E8BF10C079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19A0F03175E1E01CA2136;
+		};
+		3E8BF10D079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19A6903175E8C01CA2136;
+		};
+		3E8BF10E079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = 7967EF8C04D70E7C00C625F7;
+		};
+		3E8BF10F079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = A91D087B06D53C7000C3FE6D;
+		};
+		3E8BF112079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5AA9A160281A6B401C34293;
+		};
+		3E8BF113079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199EC03175E1E01CA2136;
+		};
+		3E8BF114079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199EE03175E1E01CA2136;
+		};
+		3E8BF115079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F003175E1E01CA2136;
+		};
+		3E8BF116079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F203175E1E01CA2136;
+		};
+		3E8BF117079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F503175E1E01CA2136;
+		};
+		3E8BF118079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F903175E1E01CA2136;
+		};
+		3E8BF119079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199FE03175E1E01CA2136;
+		};
+		3E8BF11A079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19A0E03175E1E01CA2136;
+		};
+		3E8BF11B079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = 7967EF8B04D70E7C00C625F7;
+		};
+		3E8BF11C079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = 7967EF8D04D70E7C00C625F7;
+		};
+		3E8BF11D079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = 79E71DC004E172CE00D95691;
+		};
+		3E8BF11F079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5AA9A2F0281AAB901C34293;
+		};
+		3E8BF120079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5AA9A300281AAB901C34293;
+		};
+		3E8BF121079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5DA37E702821D04014500A0;
+		};
+		3E8BF122079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19ABE0317606901CA2136;
+		};
+		3E8BF129079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AB103175F3201CA2136;
+		};
+		3E8BF12A079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AAD03175F3201CA2136;
+		};
+		3E8BF12B079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AAA03175F3201CA2136;
+		};
+		3E8BF12C079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AA803175F3201CA2136;
+		};
+		3E8BF12D079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199FA03175E1E01CA2136;
+		};
+		3E8BF12E079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = EF64FA43057BC39200D99563;
+		};
+		3E8BF130079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5DA37A10281F8A3014500A0;
+		};
+		3E8BF131079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AB003175F3201CA2136;
+		};
+		3E8BF132079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AAC03175F3201CA2136;
+		};
+		3E8BF133079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AAB03175F3201CA2136;
+		};
+		3E8BF134079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AA903175F3201CA2136;
+		};
+		3E8BF135079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19AA703175F3201CA2136;
+		};
+		3E8BF136079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D199F903175E1E01CA2136;
+		};
+		3E8BF137079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = EF64FA42057BC39200D99563;
+		};
+		3E8BF139079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5DA37E702821D04014500A0;
+		};
+		3E8BF13A079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5AA9A300281AAB901C34293;
+		};
+		3E8BF13B079CA60300021B09 = {
+			isa = PBXBuildFile;
+			fileRef = F5D19ABE0317606901CA2136;
+		};
+		3E8BF159079CA7A800021B09 = {
+			isa = PBXBuildFile;
+			fileRef = 3E8BF154079CA7A800021B09;
+		};
+		A9E885EA0874B5BF00B2DFE8 = {
+			isa = PBXBuildFile;
+			fileRef = A9E885E90874B5BF00B2DFE8;
+		};
+		F49842B007B8252500D57F5A = {
+			isa = PBXBuildFile;
+			fileRef = F5AA9E8C0281AC4D01C34293;
+		};
+		F4E5DC2B0898301D00589A5A = {
+			isa = PBXBuildFile;
+			fileRef = F4E5DC280898301D00589A5A;
+		};
+		F4E5DC2C0898301D00589A5A = {
+			isa = PBXBuildFile;
+			fileRef = F4E5DC290898301D00589A5A;
+		};
+		F4E5DC2D0898301D00589A5A = {
+			isa = PBXBuildFile;
+			fileRef = F4E5DC2A0898301D00589A5A;
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		F5AA99B80281A61201C34293 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		F5AA99B90281A61201C34293 = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3E8BF13E079CA60300021B09 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5AA99BA0281A61201C34293;
+			proxyType = 1;
+			remoteGlobalIDString = 3E8BF102079CA60300021B09;
+			remoteInfo = "MultitapAU (Upgraded)";
+		};
+		3E8BF140079CA60300021B09 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5AA99BA0281A61201C34293;
+			proxyType = 1;
+			remoteGlobalIDString = 3E8BF127079CA60300021B09;
+			remoteInfo = "MultitapAUView (Upgraded)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E3BB887089A907D0036BC12 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = MultitapAU.component/Contents/MacOS;
+			dstSubfolderSpec = 16;
+			files = (
+				3E3BB88B089A90D10036BC12,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E3AAA740670E29D00C484A8 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.rez;
+			path = AUResources.r;
+			sourceTree = "<group>";
+		};
+		3E8BF125079CA60300021B09 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "Info-MultitapAU.plist";
+			sourceTree = "<group>";
+		};
+		3E8BF126079CA60300021B09 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = MultitapAU.component;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E8BF13D079CA60300021B09 = {
+			isa = PBXFileReference;
+			explicitFileType = "compiled.mach-o.dylib";
+			includeInIndex = 0;
+			path = MultitapAUView;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E8BF154079CA7A800021B09 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = /System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = "<absolute>";
+		};
+		7967EF8B04D70E7C00C625F7 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CAAudioChannelLayout.cpp;
+			sourceTree = "<group>";
+		};
+		7967EF8C04D70E7C00C625F7 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAAudioChannelLayout.h;
+			sourceTree = "<group>";
+		};
+		7967EF8D04D70E7C00C625F7 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CAStreamBasicDescription.cpp;
+			sourceTree = "<group>";
+		};
+		79E71DC004E172CE00D95691 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = ViewComponentShim.cpp;
+			sourceTree = "<group>";
+		};
+		79E71E0004E17C6700D95691 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.exports;
+			path = MultitapAUView.exp;
+			sourceTree = "<group>";
+		};
+		A3C2CC6105B4A4BE000F141E = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUViewLocalizedStringKeys.h;
+			sourceTree = "<group>";
+		};
+		A91D087B06D53C7000C3FE6D = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUMultitapVersion.h;
+			sourceTree = "<group>";
+		};
+		A9E885E90874B5BF00B2DFE8 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAThreadSafeList.h;
+			sourceTree = "<group>";
+		};
+		EF64FA42057BC39200D99563 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CAAUParameter.cpp;
+			sourceTree = "<group>";
+		};
+		EF64FA43057BC39200D99563 = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAAUParameter.h;
+			sourceTree = "<group>";
+		};
+		F4E5DC280898301D00589A5A = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CAVectorUnit.cpp;
+			sourceTree = "<group>";
+		};
+		F4E5DC290898301D00589A5A = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAVectorUnit.h;
+			sourceTree = "<group>";
+		};
+		F4E5DC2A0898301D00589A5A = {
+			isa = PBXFileReference;
+			fileEncoding = 30;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAVectorUnitTypes.h;
+			sourceTree = "<group>";
+		};
+		F5AA9A160281A6B401C34293 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MultitapAU.cpp;
+			sourceTree = "<group>";
+		};
+		F5AA9A2F0281AAB901C34293 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = CoreFoundation.framework;
+			sourceTree = "<group>";
+		};
+		F5AA9A300281AAB901C34293 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = CoreServices.framework;
+			sourceTree = "<group>";
+		};
+		F5AA9E8A0281ABB601C34293 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.exports;
+			path = MultitapAU.exp;
+			sourceTree = "<group>";
+		};
+		F5AA9E8C0281AC4D01C34293 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.rez;
+			path = MultitapAU.r;
+			sourceTree = "<group>";
+		};
+		F5D199EC03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUBase.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199ED03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUBase.h;
+			sourceTree = "<group>";
+		};
+		F5D199EE03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUDispatch.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199EF03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUDispatch.h;
+			sourceTree = "<group>";
+		};
+		F5D199F003175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUInputElement.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199F103175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUInputElement.h;
+			sourceTree = "<group>";
+		};
+		F5D199F203175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUOutputElement.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199F303175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUOutputElement.h;
+			sourceTree = "<group>";
+		};
+		F5D199F503175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUScopeElement.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199F603175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUScopeElement.h;
+			sourceTree = "<group>";
+		};
+		F5D199F903175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = ComponentBase.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199FA03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = ComponentBase.h;
+			sourceTree = "<group>";
+		};
+		F5D199FE03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUEffectBase.cpp;
+			sourceTree = "<group>";
+		};
+		F5D199FF03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUEffectBase.h;
+			sourceTree = "<group>";
+		};
+		F5D19A0E03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUBuffer.cpp;
+			sourceTree = "<group>";
+		};
+		F5D19A0F03175E1E01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUBuffer.h;
+			sourceTree = "<group>";
+		};
+		F5D19A6903175E8C01CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CAStreamBasicDescription.h;
+			sourceTree = "<group>";
+		};
+		F5D19AA703175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUCarbonViewBase.cpp;
+			sourceTree = "<group>";
+		};
+		F5D19AA803175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUCarbonViewBase.h;
+			sourceTree = "<group>";
+		};
+		F5D19AA903175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUCarbonViewControl.cpp;
+			sourceTree = "<group>";
+		};
+		F5D19AAA03175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUCarbonViewControl.h;
+			sourceTree = "<group>";
+		};
+		F5D19AAB03175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUCarbonViewDispatch.cpp;
+			sourceTree = "<group>";
+		};
+		F5D19AAC03175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = AUControlGroup.cpp;
+			sourceTree = "<group>";
+		};
+		F5D19AAD03175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AUControlGroup.h;
+			sourceTree = "<group>";
+		};
+		F5D19AB003175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = CarbonEventHandler.cpp;
+			sourceTree = "<group>";
+		};
+		F5D19AB103175F3201CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CarbonEventHandler.h;
+			sourceTree = "<group>";
+		};
+		F5D19ABE0317606901CA2136 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = AudioUnit.framework;
+			sourceTree = "<group>";
+		};
+		F5DA37A10281F8A3014500A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MultitapAUView.cpp;
+			sourceTree = "<group>";
+		};
+		F5DA37AE0281F988014500A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MultitapAU.h;
+			sourceTree = "<group>";
+		};
+		F5DA37E702821D04014500A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = Carbon.framework;
+			sourceTree = "<group>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E8BF11E079CA60300021B09 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8BF11F079CA60300021B09,
+				3E8BF120079CA60300021B09,
+				3E8BF121079CA60300021B09,
+				3E8BF122079CA60300021B09,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E8BF138079CA60300021B09 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8BF139079CA60300021B09,
+				3E8BF13A079CA60300021B09,
+				3E8BF13B079CA60300021B09,
+				3E8BF159079CA7A800021B09,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3C2CC6005B4A4BE000F141E = {
+			isa = PBXGroup;
+			children = (
+				A3C2CC6105B4A4BE000F141E,
+			);
+			path = AUViewBase;
+			sourceTree = "<group>";
+		};
+		F5AA99B60281A61201C34293 = {
+			isa = PBXGroup;
+			children = (
+				F5D199EA03175DB401CA2136,
+				F5AA99C40281A62C01C34293,
+				F5AA9E890281AAC901C34293,
+				3E8BF125079CA60300021B09,
+			);
+			sourceTree = "<group>";
+		};
+		F5AA99C40281A62C01C34293 = {
+			isa = PBXGroup;
+			children = (
+				3E8BF126079CA60300021B09,
+				3E8BF13D079CA60300021B09,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5AA99C50281A64501C34293 = {
+			isa = PBXGroup;
+			children = (
+				F5D199EB03175E1E01CA2136,
+				A3C2CC6005B4A4BE000F141E,
+				F5D19AA603175F3201CA2136,
+				F5D199FD03175E1E01CA2136,
+				F5D19A0C03175E1E01CA2136,
+			);
+			name = AUPublic;
+			path = /Developer/Examples/CoreAudio/AudioUnits/AUPublic;
+			sourceTree = "<absolute>";
+		};
+		F5AA9A140281A69D01C34293 = {
+			isa = PBXGroup;
+			children = (
+				F5AA9A160281A6B401C34293,
+				A91D087B06D53C7000C3FE6D,
+				F5DA37AE0281F988014500A0,
+				F5AA9E8A0281ABB601C34293,
+				F5AA9E8C0281AC4D01C34293,
+				79E71DC004E172CE00D95691,
+				F5DA37A10281F8A3014500A0,
+				79E71E0004E17C6700D95691,
+			);
+			name = MultitapAU;
+			sourceTree = "<group>";
+		};
+		F5AA9E890281AAC901C34293 = {
+			isa = PBXGroup;
+			children = (
+				F5D19ABE0317606901CA2136,
+				3E8BF154079CA7A800021B09,
+				F5DA37E702821D04014500A0,
+				F5AA9A2F0281AAB901C34293,
+				F5AA9A300281AAB901C34293,
+			);
+			name = Frameworks;
+			path = /System/Library/Frameworks;
+			sourceTree = "<absolute>";
+		};
+		F5D199EA03175DB401CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F5AA9A140281A69D01C34293,
+				F5AA99C50281A64501C34293,
+				F5D19A3603175E8C01CA2136,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		F5D199EB03175E1E01CA2136 = {
+			isa = PBXGroup;
+			children = (
+				3E3AAA740670E29D00C484A8,
+				F5D199EC03175E1E01CA2136,
+				F5D199ED03175E1E01CA2136,
+				F5D199EE03175E1E01CA2136,
+				F5D199EF03175E1E01CA2136,
+				F5D199F003175E1E01CA2136,
+				F5D199F103175E1E01CA2136,
+				F5D199F203175E1E01CA2136,
+				F5D199F303175E1E01CA2136,
+				F5D199F503175E1E01CA2136,
+				F5D199F603175E1E01CA2136,
+				F5D199F903175E1E01CA2136,
+				F5D199FA03175E1E01CA2136,
+			);
+			path = AUBase;
+			sourceTree = "<group>";
+		};
+		F5D199FD03175E1E01CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F5D199FE03175E1E01CA2136,
+				F5D199FF03175E1E01CA2136,
+			);
+			path = OtherBases;
+			sourceTree = "<group>";
+		};
+		F5D19A0C03175E1E01CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F5D19A0E03175E1E01CA2136,
+				F5D19A0F03175E1E01CA2136,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F5D19A3603175E8C01CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F4E5DC280898301D00589A5A,
+				F4E5DC290898301D00589A5A,
+				F4E5DC2A0898301D00589A5A,
+				A9E885E90874B5BF00B2DFE8,
+				7967EF8C04D70E7C00C625F7,
+				7967EF8B04D70E7C00C625F7,
+				F5D19A6903175E8C01CA2136,
+				7967EF8D04D70E7C00C625F7,
+				EF64FA42057BC39200D99563,
+				EF64FA43057BC39200D99563,
+			);
+			name = PublicUtility;
+			path = /Developer/Examples/CoreAudio/PublicUtility;
+			sourceTree = "<absolute>";
+		};
+		F5D19AA603175F3201CA2136 = {
+			isa = PBXGroup;
+			children = (
+				F5D19AA703175F3201CA2136,
+				F5D19AA803175F3201CA2136,
+				F5D19AA903175F3201CA2136,
+				F5D19AAA03175F3201CA2136,
+				F5D19AAB03175F3201CA2136,
+				F5D19AAC03175F3201CA2136,
+				F5D19AAD03175F3201CA2136,
+				F5D19AB003175F3201CA2136,
+				F5D19AB103175F3201CA2136,
+			);
+			path = AUCarbonViewBase;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E8BF103079CA60300021B09 = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8BF104079CA60300021B09,
+				3E8BF105079CA60300021B09,
+				3E8BF106079CA60300021B09,
+				3E8BF107079CA60300021B09,
+				3E8BF108079CA60300021B09,
+				3E8BF109079CA60300021B09,
+				3E8BF10A079CA60300021B09,
+				3E8BF10B079CA60300021B09,
+				3E8BF10C079CA60300021B09,
+				3E8BF10D079CA60300021B09,
+				3E8BF10E079CA60300021B09,
+				3E8BF10F079CA60300021B09,
+				A9E885EA0874B5BF00B2DFE8,
+				F4E5DC2C0898301D00589A5A,
+				F4E5DC2D0898301D00589A5A,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E8BF128079CA60300021B09 = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8BF129079CA60300021B09,
+				3E8BF12A079CA60300021B09,
+				3E8BF12B079CA60300021B09,
+				3E8BF12C079CA60300021B09,
+				3E8BF12D079CA60300021B09,
+				3E8BF12E079CA60300021B09,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E8BF102079CA60300021B09 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E884AD0874ABE600B2DFE8;
+			buildPhases = (
+				3E8BF103079CA60300021B09,
+				3E8BF110079CA60300021B09,
+				3E8BF111079CA60300021B09,
+				3E8BF11E079CA60300021B09,
+				3E8BF123079CA60300021B09,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				EXPORTED_SYMBOLS_FILE = MultitapAU.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				INFOPLIST_FILE = "Info-MultitapAU.plist";
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "-I / -I /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAU;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = component;
+			};
+			dependencies = (
+			);
+			name = MultitapAU;
+			productInstallPath = "$(USER_LIBRARY_DIR)/Bundles";
+			productName = MultitapAU;
+			productReference = 3E8BF126079CA60300021B09;
+			productType = "com.apple.product-type.bundle";
+		};
+		3E8BF127079CA60300021B09 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E884B10874ABE600B2DFE8;
+			buildPhases = (
+				3E8BF128079CA60300021B09,
+				3E8BF12F079CA60300021B09,
+				3E8BF138079CA60300021B09,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_SUFFIX = "";
+				EXPORTED_SYMBOLS_FILE = MultitapAUView.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/MultitapAU.component/Contents/MacOS/";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "-I /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAUView;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = MultitapAUView;
+			productInstallPath = /usr/local/lib;
+			productName = MultitapAUView;
+			productReference = 3E8BF13D079CA60300021B09;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5AA99BA0281A61201C34293 = {
+			isa = PBXProject;
+			buildConfigurationList = A9E884B90874ABE600B2DFE8;
+			buildSettings = {
+			};
+			buildStyles = (
+				F5AA99B80281A61201C34293,
+				F5AA99B90281A61201C34293,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = F5AA99B60281A61201C34293;
+			productRefGroup = F5AA99C40281A62C01C34293;
+			projectDirPath = "";
+			targets = (
+				3E8BF0FF079CA60200021B09,
+				3E8BF102079CA60300021B09,
+				3E8BF127079CA60300021B09,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E8BF110079CA60300021B09 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		3E8BF123079CA60300021B09 = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49842B007B8252500D57F5A,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E8BF111079CA60300021B09 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8BF112079CA60300021B09,
+				3E8BF113079CA60300021B09,
+				3E8BF114079CA60300021B09,
+				3E8BF115079CA60300021B09,
+				3E8BF116079CA60300021B09,
+				3E8BF117079CA60300021B09,
+				3E8BF118079CA60300021B09,
+				3E8BF119079CA60300021B09,
+				3E8BF11A079CA60300021B09,
+				3E8BF11B079CA60300021B09,
+				3E8BF11C079CA60300021B09,
+				3E8BF11D079CA60300021B09,
+				F4E5DC2B0898301D00589A5A,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E8BF12F079CA60300021B09 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8BF130079CA60300021B09,
+				3E8BF131079CA60300021B09,
+				3E8BF132079CA60300021B09,
+				3E8BF133079CA60300021B09,
+				3E8BF134079CA60300021B09,
+				3E8BF135079CA60300021B09,
+				3E8BF136079CA60300021B09,
+				3E8BF137079CA60300021B09,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E8BF13F079CA60300021B09 = {
+			isa = PBXTargetDependency;
+			target = 3E8BF102079CA60300021B09;
+			targetProxy = 3E8BF13E079CA60300021B09;
+		};
+		3E8BF141079CA60300021B09 = {
+			isa = PBXTargetDependency;
+			target = 3E8BF127079CA60300021B09;
+			targetProxy = 3E8BF140079CA60300021B09;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A9E884AE0874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXPORTED_SYMBOLS_FILE = MultitapAU.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				INFOPLIST_FILE = "Info-MultitapAU.plist";
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I / -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAU;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = component;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		A9E884AF0874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXPORTED_SYMBOLS_FILE = MultitapAU.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				INFOPLIST_FILE = "Info-MultitapAU.plist";
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I / -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAU;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = component;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A9E884B00874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXPORTED_SYMBOLS_FILE = MultitapAU.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				INFOPLIST_FILE = "Info-MultitapAU.plist";
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I / -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAU;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = component;
+			};
+			name = Default;
+		};
+		A9E884B20874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_SUFFIX = "";
+				EXPORTED_SYMBOLS_FILE = MultitapAUView.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/MultitapAU.component/Contents/MacOS/";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAUView;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		A9E884B30874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_SUFFIX = "";
+				EXPORTED_SYMBOLS_FILE = MultitapAUView.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/MultitapAU.component/Contents/MacOS/";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAUView;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A9E884B40874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_SUFFIX = "";
+				EXPORTED_SYMBOLS_FILE = MultitapAUView.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				INSTALL_PATH = "/Library/Audio/Plug-Ins/Components/MultitapAU.component/Contents/MacOS/";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -I /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_NAME = MultitapAUView;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		A9E884B60874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Multitap AU + View";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		A9E884B70874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Multitap AU + View";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		A9E884B80874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Multitap AU + View";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		A9E884BA0874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		A9E884BB0874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		A9E884BC0874ABE600B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9E884AD0874ABE600B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E884AE0874ABE600B2DFE8,
+				A9E884AF0874ABE600B2DFE8,
+				A9E884B00874ABE600B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E884B10874ABE600B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E884B20874ABE600B2DFE8,
+				A9E884B30874ABE600B2DFE8,
+				A9E884B40874ABE600B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E884B50874ABE600B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E884B60874ABE600B2DFE8,
+				A9E884B70874ABE600B2DFE8,
+				A9E884B80874ABE600B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E884B90874ABE600B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E884BA0874ABE600B2DFE8,
+				A9E884BB0874ABE600B2DFE8,
+				A9E884BC0874ABE600B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5AA99BA0281A61201C34293;
+}

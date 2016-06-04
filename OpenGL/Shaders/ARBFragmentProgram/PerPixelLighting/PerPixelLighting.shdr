@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>creatorShortVersionString</key>
+	<string>1.1.0</string>
+	<key>primitive</key>
+	<string>2</string>
+	<key>programTabViewIndex</key>
+	<string>0</string>
+	<key>renderingPassList</key>
+	<dict>
+		<key>Default Rendering Pass</key>
+		<dict>
+			<key>baseColor</key>
+			<string>[0.644295, 0.382550, 0.530201, 0.420000]</string>
+			<key>fragmentProgramExecuter</key>
+			<dict>
+				<key>language</key>
+				<integer>34820</integer>
+				<key>programString</key>
+				<string>!!ARBfp1.0
+
+# Displacement Filter by James A. McCombe, Mon Jul 14 2003
+#
+# Implements per-pixel lighting effect.  A light position in is converted into model space
+# by the vertex program and passed into the fragment program through a texture coordinate
+# channel.  The incoming light direction vector is calculated from the light position and fragment
+# position.  The reflected light vector is calculated using the fragment normal at that position, 
+# acquired from texture unit 1.  In order to get the light intensity at this point, the outgoing
+# light direction vector (after reflection) is DOT3'd with the light direction vector which, for
+# simplicity is pointing directly along the surface normal.
+#
+# With the light intensity known, it is attenuated by multiplying it with a function of the 
+# distance of the light source from the fragment position which was calculated near the beginning
+# of the program.
+#
+# Finally, its modulated with the light brightness and color parameter and modulated with the base
+# texture map stored in texture unit 0.
+#
+# The comments in the program are intentionally verbose to as to better document this process.
+#
+# Texture units:
+#   Unit 0 - Base texture map
+#   Unit 1 - Surface normals, encoded in the red, green and blue color channels
+#
+# Parameters:
+#   These are all accessible from the vertex program tab.
+
+# Main contributing entities
+ATTRIB lightPosition            = fragment.texcoord[3];   # Model space
+ATTRIB lightColorAndBrightness  = fragment.texcoord[4];
+ATTRIB fragmentPosition         = fragment.texcoord[2];   # Model space
+TEMP fragmentNormal;
+ATTRIB polygonNormal            = fragment.texcoord[1];
+ATTRIB baseTexCoords            = fragment.texcoord[0];
+
+# Basic constants used in calculations
+PARAM  zero             = { 0.0, 0.0, 0.0, 0.0 };
+PARAM  one              = { 1.0, 1.0, 1.0, 1.0 };
+PARAM  constants        = { 0.5, 5.0, 0.0, 0.0 };
+
+TEMP distanceFromLightToFragment;
+TEMP lightDirection; # Always negative normal in this example
+
+TEMP t0, t1, t2;	 # General purpose temporaries
+
+# Calculate the vector from light to fragment
+MOV t0, zero;        # Initialise t0 to all zeros
+SUB t0.xyz, lightPosition, -fragmentPosition;
+DP3 t0.w, t0, t0;
+RSQ t0.w, t0.w;
+
+# Calculate the distance from light to fragment (used for attenuation later)
+RCP distanceFromLightToFragment, t0.w;
+MUL distanceFromLightToFragment, distanceFromLightToFragment, distanceFromLightToFragment;
+SUB distanceFromLightToFragment, one, distanceFromLightToFragment;
+MUL t0.xyz, t0, t0.w;    # t0 now contains the normalized 
+						 # incoming light vector for each fragment
+
+# Acquire the fragment normal (from the normal map texture)
+TEX fragmentNormal, fragment.texcoord[0], texture[1], 2D;
+SUB fragmentNormal, fragmentNormal, constants.x;
+#MOV fragmentNormal, polygonNormal; # Just have a flat surface - for demonstration
+
+# Calculate the light vector after reflection
+XPD t1, fragmentNormal, t0;
+XPD t1, fragmentNormal, t1;
+ADD t2, t0, t1;
+ADD t0, t2, t1;
+
+# Dot product incident light ray with light direction vector
+MOV lightDirection, -fragmentNormal;
+DP3_SAT t0, t0, lightDirection;
+
+# Attenuate light intensity scalar with function of light distance
+MUL_SAT t0, t0, distanceFromLightToFragment;
+
+# Modulate with light brightness
+MUL t0, t0, lightColorAndBrightness.w;
+MUL t0, t0, constants.y;
+MUL t0.rgb, t0, lightColorAndBrightness;
+
+# Modulate with base texture
+TEX t1, baseTexCoords, texture[0], 2D;
+ADD t1, t1, t0;
+MUL t0, t1, t0;
+
+# Write the output color
+MOV result.color, t0;
+MOV result.color.a, 1.0;
+
+END</string>
+				<key>symbolTable</key>
+				<dict>
+					<key>baseTexCoords</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>constants</key>
+					<dict>
+						<key>data</key>
+						<string>[0.50, 5.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>distanceFromLightToFragment</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>fragmentNormal</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>fragmentPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>lightColorAndBrightness</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>lightDirection</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>lightPosition</key>
+					<dict>
+						<key>data</key>
+						<string>[0.20, 0.26, -0.02, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>one</key>
+					<dict>
+						<key>data</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>polygonNormal</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>t0</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>t1</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>t2</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>zero</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>multiTextureList</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33984, 1, 34168, 5890, 8448]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>textureFilename</key>
+					<string>face.jpg</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33985, 1, 34168, 5890, 8448]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>textureFilename</key>
+					<string>face_norm.jpg</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33986, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33987, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33988, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33989, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33990, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>combinerOptions</key>
+					<string>[33991, 0, 5890, 5890, 7681]</string>
+					<key>constantColor</key>
+					<string>[1.000000, 1.000000, 1.000000, 1.000000]</string>
+					<key>filteringOptions</key>
+					<string>[9729, 9729]</string>
+					<key>wrappingOptions</key>
+					<string>[10497, 10497]</string>
+				</dict>
+			</dict>
+			<key>opacity</key>
+			<string>1.000000</string>
+			<key>vertexProgramExecuter</key>
+			<dict>
+				<key>programString</key>
+				<string>!!ARBvp1.0
+
+# Displacement Filter by James A. McCombe, Mon Jul 14 2003
+#
+# Pre-fragment program preparation, see the Fragment Program for specifics.
+#
+# Texture units:
+#   Unit 0 - Base texture map
+#   Unit 1 - Surface normals, encoded in the red, green and blue color channels
+#
+# Parameters:
+#   program.env[0].xyz - Light position in eye space.
+#   program.env[1].rgb - Light color
+#   program.env[1].a   - Light brightness control
+
+ATTRIB vertexPositionModel     = vertex.position;
+ATTRIB normalModel             = vertex.normal;
+PARAM  lightPositionEye        = program.env[0];
+PARAM  lightColorAndBrightness = program.env[1];
+TEMP   lightPositionModel;
+TEMP   vertexPositionClip;
+
+# Transform the vertex into clip space
+DP4    vertexPositionClip.x, state.matrix.mvp.row[0], vertexPositionModel;
+DP4    vertexPositionClip.y, state.matrix.mvp.row[1], vertexPositionModel;
+DP4    vertexPositionClip.z, state.matrix.mvp.row[2], vertexPositionModel;
+DP4    vertexPositionClip.w, state.matrix.mvp.row[3], vertexPositionModel;
+
+# Transform the light position into model space
+DP3 lightPositionModel.x, state.matrix.modelview.inverse.row[0], lightPositionEye;
+DP3 lightPositionModel.y, state.matrix.modelview.inverse.row[1], lightPositionEye;
+DP3 lightPositionModel.z, state.matrix.modelview.inverse.row[2], lightPositionEye;
+
+# Pass the color and texture coordinate through
+MOV    result.position, vertexPositionClip;
+MOV    result.color, vertex.color;
+MUL    result.texcoord[0], vertex.texcoord, 1;
+MOV    result.texcoord[1], normalModel;
+MOV    result.texcoord[2], vertexPositionModel;
+MOV    result.texcoord[3], lightPositionModel;
+MOV    result.texcoord[4], lightColorAndBrightness;
+
+END</string>
+				<key>symbolTable</key>
+				<dict>
+					<key>lightColorAndBrightness</key>
+					<dict>
+						<key>data</key>
+						<string>[1.00, 0.80, 0.92, 0.60]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 5.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, 0.00]</string>
+					</dict>
+					<key>lightPositionEye</key>
+					<dict>
+						<key>data</key>
+						<string>[-0.30, 0.43, -0.12, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 0.00, 10.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, 0.00]</string>
+					</dict>
+					<key>lightPositionModel</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>normalModel</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vertexPositionClip</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+					<key>vertexPositionModel</key>
+					<dict>
+						<key>data</key>
+						<string>[0.00, 0.00, 0.00, 0.00]</string>
+						<key>maximum</key>
+						<string>[1.00, 1.00, 1.00, 1.00]</string>
+						<key>minimum</key>
+						<string>[-1.00, -1.00, -1.00, -1.00]</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>windowFrame</key>
+	<string>{{1.875, 0}, {0, 0}}</string>
+</dict>
+</plist>

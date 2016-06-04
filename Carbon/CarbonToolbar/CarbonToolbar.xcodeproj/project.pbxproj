@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F0C7B1107C5626D00AEA647 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C7B1007C5626D00AEA647 /* left.png */; };
+		4F0C7B1C07C5629300AEA647 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C7B1B07C5629300AEA647 /* right.png */; };
+		4FAA6ABB07B3247300885199 /* CustomToolbarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F7DF0EB6028C82DF03CA0DE6 /* CustomToolbarItem.h */; };
+		4FAA6ABC07B3247300885199 /* Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 223C58C00693CA3C000CB21E /* Prefix.h */; };
+		4FAA6ABE07B3247300885199 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		4FAA6ABF07B3247300885199 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		4FAA6AC007B3247300885199 /* cut.icns in Resources */ = {isa = PBXBuildFile; fileRef = F7E373F60241296103CA0DE6 /* cut.icns */; };
+		4FAA6AC107B3247300885199 /* red.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8DB17E7007693A2300DF5371 /* red.icns */; };
+		4FAA6AC507B3247300885199 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* main.c */; settings = {ATTRIBUTES = (); }; };
+		4FAA6AC607B3247300885199 /* CustomToolbarItem.c in Sources */ = {isa = PBXBuildFile; fileRef = F7DF0EB4028C82D803CA0DE6 /* CustomToolbarItem.c */; };
+		4FAA6AC807B3247300885199 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = main.c; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		223C58C00693CA3C000CB21E /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		4F0C7B1007C5626D00AEA647 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		4F0C7B1B07C5629300AEA647 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		4FAA6ACA07B3247300885199 /* Info-CarbonToolbar.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-CarbonToolbar.plist"; sourceTree = "<group>"; };
+		4FAA6ACB07B3247300885199 /* CarbonToolbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonToolbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB17E7007693A2300DF5371 /* red.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = red.icns; sourceTree = "<group>"; };
+		F7DF0EB4028C82D803CA0DE6 /* CustomToolbarItem.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = CustomToolbarItem.c; sourceTree = "<group>"; };
+		F7DF0EB6028C82DF03CA0DE6 /* CustomToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CustomToolbarItem.h; sourceTree = "<group>"; };
+		F7E373F60241296103CA0DE6 /* cut.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = cut.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FAA6AC707B3247300885199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAA6AC807B3247300885199 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FAA6ACB07B3247300885199 /* CarbonToolbar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* CarbonToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+				4FAA6ACA07B3247300885199 /* Info-CarbonToolbar.plist */,
+			);
+			name = CarbonToolbar;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2BFDCF999611CA2CEA /* main.c */,
+				F7DF0EB4028C82D803CA0DE6 /* CustomToolbarItem.c */,
+				F7DF0EB6028C82DF03CA0DE6 /* CustomToolbarItem.h */,
+				223C58C00693CA3C000CB21E /* Prefix.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7E373F60241296103CA0DE6 /* cut.icns */,
+				8DB17E7007693A2300DF5371 /* red.icns */,
+				4F0C7B1007C5626D00AEA647 /* left.png */,
+				4F0C7B1B07C5629300AEA647 /* right.png */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4FAA6ABA07B3247300885199 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAA6ABB07B3247300885199 /* CustomToolbarItem.h in Headers */,
+				4FAA6ABC07B3247300885199 /* Prefix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4FAA6AB907B3247300885199 /* CarbonToolbar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5571A608A00AD000BAA99A /* Build configuration list for PBXNativeTarget "CarbonToolbar" */;
+			buildPhases = (
+				4FAA6ABA07B3247300885199 /* Headers */,
+				4FAA6ABD07B3247300885199 /* Resources */,
+				4FAA6AC407B3247300885199 /* Sources */,
+				4FAA6AC707B3247300885199 /* Frameworks */,
+				4FAA6AC907B3247300885199 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-CarbonToolbar.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CarbonToolbar;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = CarbonToolbar;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = CarbonToolbar;
+			productReference = 4FAA6ACB07B3247300885199 /* CarbonToolbar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4F5571AA08A00AD000BAA99A /* Build configuration list for PBXProject "CarbonToolbar" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* CarbonToolbar */;
+			projectDirPath = "";
+			targets = (
+				4FAA6AB907B3247300885199 /* CarbonToolbar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FAA6ABD07B3247300885199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAA6ABE07B3247300885199 /* InfoPlist.strings in Resources */,
+				4FAA6ABF07B3247300885199 /* main.nib in Resources */,
+				4FAA6AC007B3247300885199 /* cut.icns in Resources */,
+				4FAA6AC107B3247300885199 /* red.icns in Resources */,
+				4F0C7B1107C5626D00AEA647 /* left.png in Resources */,
+				4F0C7B1C07C5629300AEA647 /* right.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4FAA6AC907B3247300885199 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FAA6AC407B3247300885199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAA6AC507B3247300885199 /* main.c in Sources */,
+				4FAA6AC607B3247300885199 /* CustomToolbarItem.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F5571A708A00AD000BAA99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-CarbonToolbar.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = CarbonToolbar;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F5571A808A00AD000BAA99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				INFOPLIST_FILE = "Info-CarbonToolbar.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				PRODUCT_NAME = CarbonToolbar;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F5571AB08A00AD000BAA99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4F5571AC08A00AD000BAA99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F5571A608A00AD000BAA99A /* Build configuration list for PBXNativeTarget "CarbonToolbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5571A708A00AD000BAA99A /* Debug */,
+				4F5571A808A00AD000BAA99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F5571AA08A00AD000BAA99A /* Build configuration list for PBXProject "CarbonToolbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5571AB08A00AD000BAA99A /* Debug */,
+				4F5571AC08A00AD000BAA99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

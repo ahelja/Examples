@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Structs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">Structs</font></h1>
+<br><hr>
+<!-- headerDoc=tag;  uid=//apple_ref/c/tag/AudioConverterPrimeInfo;  name=AudioConverterPrimeInfo --><a name="//apple_ref/c/tag/AudioConverterPrimeInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioConverterPrimeInfo">AudioConverterPrimeInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Specifies priming information.</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../../AudioToolbox/AudioConverter/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioConverterPrimeInfo" logicalPath="//apple_ref/c/cl/AudioConverterPrimeInfo //apple_ref/c/cl/AudioConverterPrimeInfo //apple_ref/c/tdef/AudioConverterPrimeInfo //apple_ref/c/tag/AudioConverterPrimeInfo" target="_top"><font class="type">AudioConverterPrimeInfo</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">leadingFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">trailingFrames</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>leadingFrames</code></dt>
+<dd>Specifies the number of leading (previous) input frames, relative to the normal/desired
+start input frame, required by the converter to perform a high quality conversion. If
+using kConverterPrimeMethod_Pre, the client should "pre-seek" the input stream provided
+through the input proc by leadingFrames. If no frames are available previous to the
+desired input start frame (because, for example, the desired start frame is at the very
+beginning of available audio), then provide "leadingFrames" worth of initial zero frames
+in the input proc.  Do not "pre-seek" in the default case of
+kConverterPrimeMethod_Normal or when using kConverterPrimeMethod_None.
+<br><br>
+</dd>
+<dt><code>trailingFrames</code></dt>
+<dd>Specifies the number of trailing input frames (past the normal/expected end input frame)
+required by the converter to perform a high quality conversion.  The client should be
+prepared to provide this number of additional input frames except when using
+kConverterPrimeMethod_None. If no more frames of input are available in the input stream
+(because, for example, the desired end frame is at the end of an audio file), then zero
+(silent) trailing frames will be synthesized for the client.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>When using AudioConverterFillBuffer() (either a single call or a series of calls), some
+conversions, particularly involving sample-rate conversion, ideally require a certain
+number of input frames previous to the normal start input frame and beyond the end of
+the last expected input frame in order to yield high-quality results.
+<br><br>
+These are expressed in the leadingFrames and trailingFrames members of the structure.
+<br><br>
+The very first call to AudioConverterFillBuffer(), or first call after
+AudioConverterReset(), will request additional input frames beyond those normally
+expected in the input proc callback to fulfill this first AudioConverterFillBuffer()
+request. The number of additional frames requested, depending on the prime method, will
+be approximately:
+<br><br></p>
+<pre>
+            kConverterPrimeMethod_Pre       leadingFrames + trailingFrames
+            kConverterPrimeMethod_Normal    trailingFrames
+            kConverterPrimeMethod_None      0
+</pre>
+<br><br>
+Thus, in effect, the first input proc callback(s) may provide not only the leading
+frames, but also may "read ahead" by an additional number of trailing frames depending
+on the prime method.
+<br><br>
+kConverterPrimeMethod_None is useful in a real-time application processing live input,
+in which case trailingFrames (relative to input sample rate) of through latency will be
+seen at the beginning of the output of the AudioConverter.  In other real-time
+applications such as DAW systems, it may be possible to provide these initial extra
+audio frames since they are stored on disk or in memory somewhere and
+kConverterPrimeMethod_Pre may be preferable.  The default method is
+kConverterPrimeMethod_Normal, which requires no pre-seeking of the input stream and
+generates no latency at the output.
+
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

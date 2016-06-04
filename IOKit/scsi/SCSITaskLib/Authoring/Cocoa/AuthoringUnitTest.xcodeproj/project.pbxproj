@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC78D77007B2D5B5009C927D /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */; };
+		AC78D77107B2D5B5009C927D /* AuthoringDeviceTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D59BA400ADEAD811CE1A69 /* AuthoringDeviceTester.h */; };
+		AC78D77207B2D5B5009C927D /* DeviceDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0826EDF400BED9B911CE15BF /* DeviceDataSource.h */; };
+		AC78D77307B2D5B5009C927D /* AuthoringDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0826EDF800BEDBD311CE15BF /* AuthoringDevice.h */; };
+		AC78D77407B2D5B5009C927D /* InterfaceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0826EDEE00BED45011CE15BF /* InterfaceController.h */; };
+		AC78D77507B2D5B5009C927D /* VerticallyCenteredTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ACCEF86904D8814100D5E026 /* VerticallyCenteredTextFieldCell.h */; };
+		AC78D77607B2D5B5009C927D /* ImageAndTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDEE76604D89E1A0001C085 /* ImageAndTextCell.h */; };
+		AC78D77807B2D5B5009C927D /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */; };
+		AC78D77A07B2D5B5009C927D /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 04F1F35200C6FC1E11CE15BF /* MainMenu.nib */; };
+		AC78D77B07B2D5B5009C927D /* CD-R.icns in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3704E99EE600C23B3E /* CD-R.icns */; };
+		AC78D77C07B2D5B5009C927D /* CD-RW.icns in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3804E99EE600C23B3E /* CD-RW.icns */; };
+		AC78D77D07B2D5B5009C927D /* DVD-R.icns in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3904E99EE600C23B3E /* DVD-R.icns */; };
+		AC78D77E07B2D5B5009C927D /* DVD-RAM.icns in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3A04E99EE600C23B3E /* DVD-RAM.icns */; };
+		AC78D77F07B2D5B5009C927D /* DVD-RW.icns in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3B04E99EE600C23B3E /* DVD-RW.icns */; };
+		AC78D78007B2D5B5009C927D /* Fibre Channel Interface.png in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3C04E99EE600C23B3E /* Fibre Channel Interface.png */; };
+		AC78D78107B2D5B5009C927D /* FireWire.png in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3D04E99EE600C23B3E /* FireWire.png */; };
+		AC78D78207B2D5B5009C927D /* SCSI Parallel Interface.png in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3E04E99EE600C23B3E /* SCSI Parallel Interface.png */; };
+		AC78D78307B2D5B5009C927D /* USB.png in Resources */ = {isa = PBXBuildFile; fileRef = AC989A3F04E99EE600C23B3E /* USB.png */; };
+		AC78D78507B2D5B5009C927D /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		AC78D78607B2D5B5009C927D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		AC78D78707B2D5B5009C927D /* AuthoringDeviceTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D59BA500ADEAD811CE1A69 /* AuthoringDeviceTester.m */; };
+		AC78D78807B2D5B5009C927D /* DeviceDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826EDF500BED9B911CE15BF /* DeviceDataSource.m */; };
+		AC78D78907B2D5B5009C927D /* AuthoringDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826EDF900BEDBD311CE15BF /* AuthoringDevice.m */; };
+		AC78D78A07B2D5B5009C927D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826EDEF00BED45011CE15BF /* InterfaceController.m */; };
+		AC78D78B07B2D5B5009C927D /* VerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCEF86A04D8814100D5E026 /* VerticallyCenteredTextFieldCell.m */; };
+		AC78D78C07B2D5B5009C927D /* ImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDEE76704D89E1A0001C085 /* ImageAndTextCell.m */; };
+		AC78D78E07B2D5B5009C927D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		AC78D78F07B2D5B5009C927D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D59BAE00AE1C8911CE1A69 /* IOKit.framework */; };
+		AC78D79007B2D5B5009C927D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F623CF400BF100E11CE15BF /* CoreFoundation.framework */; };
+		AC78D79107B2D5B5009C927D /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60314C206C1D7F00085690D /* DiskArbitration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504D0FFE6A4CB11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		4A9504D1FFE6A4CB11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		014F4CCE00C5613A11CE15BF /* System.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = System.framework; path = /System/Library/Frameworks/System.framework; sourceTree = "<absolute>"; };
+		01D59BA400ADEAD811CE1A69 /* AuthoringDeviceTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthoringDeviceTester.h; sourceTree = "<group>"; };
+		01D59BA500ADEAD811CE1A69 /* AuthoringDeviceTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthoringDeviceTester.m; sourceTree = "<group>"; };
+		01D59BAE00AE1C8911CE1A69 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		04F1F35300C6FC1E11CE15BF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		0826EDEE00BED45011CE15BF /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		0826EDEF00BED45011CE15BF /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		0826EDF400BED9B911CE15BF /* DeviceDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceDataSource.h; sourceTree = "<group>"; };
+		0826EDF500BED9B911CE15BF /* DeviceDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceDataSource.m; sourceTree = "<group>"; };
+		0826EDF800BEDBD311CE15BF /* AuthoringDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthoringDevice.h; sourceTree = "<group>"; };
+		0826EDF900BEDBD311CE15BF /* AuthoringDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthoringDevice.m; sourceTree = "<group>"; };
+		0F623CF400BF100E11CE15BF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MyDocument.nib; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		AC78D79307B2D5B5009C927D /* Info-AuthoringUnitTest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-AuthoringUnitTest.plist"; sourceTree = "<group>"; };
+		AC78D79407B2D5B5009C927D /* AuthoringUnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthoringUnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC989A3704E99EE600C23B3E /* CD-R.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "CD-R.icns"; path = "Images/CD-R.icns"; sourceTree = "<group>"; };
+		AC989A3804E99EE600C23B3E /* CD-RW.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "CD-RW.icns"; path = "Images/CD-RW.icns"; sourceTree = "<group>"; };
+		AC989A3904E99EE600C23B3E /* DVD-R.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "DVD-R.icns"; path = "Images/DVD-R.icns"; sourceTree = "<group>"; };
+		AC989A3A04E99EE600C23B3E /* DVD-RAM.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "DVD-RAM.icns"; path = "Images/DVD-RAM.icns"; sourceTree = "<group>"; };
+		AC989A3B04E99EE600C23B3E /* DVD-RW.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "DVD-RW.icns"; path = "Images/DVD-RW.icns"; sourceTree = "<group>"; };
+		AC989A3C04E99EE600C23B3E /* Fibre Channel Interface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fibre Channel Interface.png"; path = "Images/Fibre Channel Interface.png"; sourceTree = "<group>"; };
+		AC989A3D04E99EE600C23B3E /* FireWire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FireWire.png; path = Images/FireWire.png; sourceTree = "<group>"; };
+		AC989A3E04E99EE600C23B3E /* SCSI Parallel Interface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SCSI Parallel Interface.png"; path = "Images/SCSI Parallel Interface.png"; sourceTree = "<group>"; };
+		AC989A3F04E99EE600C23B3E /* USB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = USB.png; path = Images/USB.png; sourceTree = "<group>"; };
+		ACCEF86904D8814100D5E026 /* VerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
+		ACCEF86A04D8814100D5E026 /* VerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = VerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
+		ACDEE76604D89E1A0001C085 /* ImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ImageAndTextCell.h; sourceTree = "<group>"; };
+		ACDEE76704D89E1A0001C085 /* ImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ImageAndTextCell.m; sourceTree = "<group>"; };
+		E60314C206C1D7F00085690D /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC78D78D07B2D5B5009C927D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC78D78E07B2D5B5009C927D /* Cocoa.framework in Frameworks */,
+				AC78D78F07B2D5B5009C927D /* IOKit.framework in Frameworks */,
+				AC78D79007B2D5B5009C927D /* CoreFoundation.framework in Frameworks */,
+				AC78D79107B2D5B5009C927D /* DiskArbitration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60314C206C1D7F00085690D /* DiskArbitration.framework */,
+				0F623CF400BF100E11CE15BF /* CoreFoundation.framework */,
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				01D59BAE00AE1C8911CE1A69 /* IOKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				014F4CCE00C5613A11CE15BF /* System.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC78D79407B2D5B5009C927D /* AuthoringUnitTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* UserClientTester */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+				0826EDEE00BED45011CE15BF /* InterfaceController.h */,
+				0826EDEF00BED45011CE15BF /* InterfaceController.m */,
+				0826EDF400BED9B911CE15BF /* DeviceDataSource.h */,
+				0826EDF500BED9B911CE15BF /* DeviceDataSource.m */,
+				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				01D59BA400ADEAD811CE1A69 /* AuthoringDeviceTester.h */,
+				01D59BA500ADEAD811CE1A69 /* AuthoringDeviceTester.m */,
+				0826EDF800BEDBD311CE15BF /* AuthoringDevice.h */,
+				0826EDF900BEDBD311CE15BF /* AuthoringDevice.m */,
+				ACDEE76604D89E1A0001C085 /* ImageAndTextCell.h */,
+				ACDEE76704D89E1A0001C085 /* ImageAndTextCell.m */,
+				ACCEF86904D8814100D5E026 /* VerticallyCenteredTextFieldCell.h */,
+				ACCEF86A04D8814100D5E026 /* VerticallyCenteredTextFieldCell.m */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = UserClientTester;
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC78D79307B2D5B5009C927D /* Info-AuthoringUnitTest.plist */,
+				AC989A6604E99F5700C23B3E /* Nibs */,
+				AC989A6304E99F4200C23B3E /* Icons */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC989A6304E99F4200C23B3E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AC989A3C04E99EE600C23B3E /* Fibre Channel Interface.png */,
+				AC989A3D04E99EE600C23B3E /* FireWire.png */,
+				AC989A3E04E99EE600C23B3E /* SCSI Parallel Interface.png */,
+				AC989A3F04E99EE600C23B3E /* USB.png */,
+				AC989A3704E99EE600C23B3E /* CD-R.icns */,
+				AC989A3804E99EE600C23B3E /* CD-RW.icns */,
+				AC989A3904E99EE600C23B3E /* DVD-R.icns */,
+				AC989A3A04E99EE600C23B3E /* DVD-RAM.icns */,
+				AC989A3B04E99EE600C23B3E /* DVD-RW.icns */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		AC989A6604E99F5700C23B3E /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				04F1F35200C6FC1E11CE15BF /* MainMenu.nib */,
+				2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AC78D76F07B2D5B5009C927D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC78D77007B2D5B5009C927D /* MyDocument.h in Headers */,
+				AC78D77107B2D5B5009C927D /* AuthoringDeviceTester.h in Headers */,
+				AC78D77207B2D5B5009C927D /* DeviceDataSource.h in Headers */,
+				AC78D77307B2D5B5009C927D /* AuthoringDevice.h in Headers */,
+				AC78D77407B2D5B5009C927D /* InterfaceController.h in Headers */,
+				AC78D77507B2D5B5009C927D /* VerticallyCenteredTextFieldCell.h in Headers */,
+				AC78D77607B2D5B5009C927D /* ImageAndTextCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AC78D76E07B2D5B5009C927D /* AuthoringUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCD5B0F08FEE229004DD4C3 /* Build configuration list for PBXNativeTarget "AuthoringUnitTest" */;
+			buildPhases = (
+				AC78D76F07B2D5B5009C927D /* Headers */,
+				AC78D77707B2D5B5009C927D /* Resources */,
+				AC78D78407B2D5B5009C927D /* Sources */,
+				AC78D78D07B2D5B5009C927D /* Frameworks */,
+				AC78D79207B2D5B5009C927D /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-AuthoringUnitTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = AuthoringUnitTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = AuthoringUnitTest;
+			productInstallPath = "$(HOME)/Applications";
+			productName = UserClientTester;
+			productReference = AC78D79407B2D5B5009C927D /* AuthoringUnitTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = ACCD5B1308FEE22A004DD4C3 /* Build configuration list for PBXProject "AuthoringUnitTest" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504D0FFE6A4CB11CA0CBA /* Development */,
+				4A9504D1FFE6A4CB11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* UserClientTester */;
+			projectDirPath = "";
+			targets = (
+				AC78D76E07B2D5B5009C927D /* AuthoringUnitTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC78D77707B2D5B5009C927D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC78D77807B2D5B5009C927D /* MyDocument.nib in Resources */,
+				AC78D77A07B2D5B5009C927D /* MainMenu.nib in Resources */,
+				AC78D77B07B2D5B5009C927D /* CD-R.icns in Resources */,
+				AC78D77C07B2D5B5009C927D /* CD-RW.icns in Resources */,
+				AC78D77D07B2D5B5009C927D /* DVD-R.icns in Resources */,
+				AC78D77E07B2D5B5009C927D /* DVD-RAM.icns in Resources */,
+				AC78D77F07B2D5B5009C927D /* DVD-RW.icns in Resources */,
+				AC78D78007B2D5B5009C927D /* Fibre Channel Interface.png in Resources */,
+				AC78D78107B2D5B5009C927D /* FireWire.png in Resources */,
+				AC78D78207B2D5B5009C927D /* SCSI Parallel Interface.png in Resources */,
+				AC78D78307B2D5B5009C927D /* USB.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		AC78D79207B2D5B5009C927D /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC78D78407B2D5B5009C927D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC78D78507B2D5B5009C927D /* MyDocument.m in Sources */,
+				AC78D78607B2D5B5009C927D /* main.m in Sources */,
+				AC78D78707B2D5B5009C927D /* AuthoringDeviceTester.m in Sources */,
+				AC78D78807B2D5B5009C927D /* DeviceDataSource.m in Sources */,
+				AC78D78907B2D5B5009C927D /* AuthoringDevice.m in Sources */,
+				AC78D78A07B2D5B5009C927D /* InterfaceController.m in Sources */,
+				AC78D78B07B2D5B5009C927D /* VerticallyCenteredTextFieldCell.m in Sources */,
+				AC78D78C07B2D5B5009C927D /* ImageAndTextCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04F1F35200C6FC1E11CE15BF /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F1F35300C6FC1E11CE15BF /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = MyDocument.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACCD5B1008FEE22A004DD4C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-AuthoringUnitTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AuthoringUnitTest;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		ACCD5B1108FEE22A004DD4C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "Info-AuthoringUnitTest.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AuthoringUnitTest;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ACCD5B1408FEE22A004DD4C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		ACCD5B1508FEE22A004DD4C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACCD5B0F08FEE229004DD4C3 /* Build configuration list for PBXNativeTarget "AuthoringUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCD5B1008FEE22A004DD4C3 /* Debug */,
+				ACCD5B1108FEE22A004DD4C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCD5B1308FEE22A004DD4C3 /* Build configuration list for PBXProject "AuthoringUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCD5B1408FEE22A004DD4C3 /* Debug */,
+				ACCD5B1508FEE22A004DD4C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

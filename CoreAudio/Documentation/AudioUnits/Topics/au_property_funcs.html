@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+	"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+	<META http-equiv="content-type" CONTENT="text/html;charset=iso-8859-1">
+	<title>?au_property_funcs?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<a name="AudioUnitPropertyFunctions"></a>
+<h1>Audio Unit Property Functions</h1>
+
+<p>Audio Units manage their internal state through a generic property mechanism.
+There are several properties that are generic for all types of Audio Units and
+some that are specific to particular types. These general properties are listed
+in <code>AudioUnit/AudioUnitProperties.h</code>. Property values vary, with each
+property needing to describe (in documentation) to the user what
+<code>type</code> will represent the value of a particular property. Property
+values are always passed by reference when both getting and setting the value of
+a property. </p>
+
+
+
+<hr>
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="2"><b>Contents</b></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_property_funcs.html#GettingandSettingProperties">Getting and Setting Properties</a></td></tr>
+<tr><td width="32">&nbsp;</td><td colspan="1"><a href="au_property_funcs.html#ListeningforPropertyChanges">Listening for Property Changes</a></td></tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="4">
+<tr><td colspan="3"><b>Functions</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_property_funcs.html#AudioUnitGetPropertyInfo">AudioUnitGetPropertyInfo</a></td>
+<td>
+		Retrieve the size of property's value and whether it is read-only.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_property_funcs.html#AudioUnitGetProperty">AudioUnitGetProperty</a></td>
+<td>
+		Retrieve the current value of a property.
+	</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_property_funcs.html#AudioUnitSetProperty">AudioUnitSetProperty</a></td>
+<td>Set a property value.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_property_funcs.html#AudioUnitAddPropertyListener">AudioUnitAddPropertyListener</a></td>
+<td>Request notification when a property value changes.</td>
+</tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_property_funcs.html#AudioUnitRemovePropertyListener">AudioUnitRemovePropertyListener</a></td>
+<td>Remove a property change notification callback.</td>
+</tr>
+<tr><td colspan="3"><b>Callbacks</b></td></tr>
+<tr valign="top"><td width="32">&nbsp;</td><td><a href="au_property_funcs.html#AudioUnitPropertyListenerProc">AudioUnitPropertyListenerProc</a></td>
+<td>
+		Called when a property value changes.
+	</td>
+</tr>
+</table>
+
+
+<hr>
+
+
+
+
+<a name="GettingandSettingProperties"></a>
+<h2>Getting and Setting Properties</h2>
+
+<p>There are three functions that are used when dealing with properties.
+Properties are defined using three parameters, the ID - this delineates which
+property is being queried, the Scope - this specifies which scope the property
+is applied to, and the elementID, which further specifies the scope
+(particularly on the input and output scopes).</p>
+
+<a name="//apple_ref/c/func/AudioUnitGetPropertyInfo"></a>
+<h3><a name="AudioUnitGetPropertyInfo">AudioUnitGetPropertyInfo</a></h3>
+
+		Retrieve the size of property's value and whether it is read-only.
+	
+<pre>ComponentResult <b>AudioUnitGetPropertyInfo</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>            ci,
+  <a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a>  inID,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>       inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>     inElement,
+  UInt32 *             outDataSize,
+  Boolean *            outWritable
+);</pre>
+	
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+			The Audio Unit whose property is to be queried.
+		</dd>
+<dt><tt>inID</tt></dt>
+<dd>
+			The property to be queried.
+		</dd>
+<dt><tt>inScope</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inElement</tt></dt>
+<dd>
+			The scope and element of the property to be queried.
+		</dd>
+<dt><tt>outDataSize</tt></dt>
+<dd>
+			On exit, the size of the property.  May be NULL.
+		</dd>
+<dt><tt>outWritable</tt></dt>
+<dd>
+			On exit, whether the property is writable.  May be NULL.
+		</dd>
+</dl>
+
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitGetProperty"></a>
+<h3><a name="AudioUnitGetProperty">AudioUnitGetProperty</a></h3>
+
+		Retrieve the current value of a property.
+	
+<pre>ComponentResult <b>AudioUnitGetProperty</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>            ci,
+  <a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a>  inID,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>       inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>     inElement,
+  void *               outData,
+  UInt32 *             ioDataSize
+);</pre>
+	
+		This call is used to retrieve the value of the specified property. The
+		caller is responsible for allocating enough space to hold the value of
+		the property. If insufficient space is specified then the Audio Unit is
+		free to retrieve either an error, or a partial result - where the value
+		is filled in as much as is possible given the specified space. On
+		return, the <code>ioDataSize</code> will be set to the number of bytes
+		that were actually used and written to the memory location as specified
+		by the <code>outData</code> address. The property must be readable for
+		this call to succeed.<p>
+
+		If <code>outData</code> is NULL, then upon return
+		<code>ioDataSize</code> will contain the size needed to retrieve the
+		property's value.
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+			The Audio Unit whose property value is to be retrieved.
+		</dd>
+<dt><tt>inID</tt></dt>
+<dd>
+			The property to be retrieved.
+		</dd>
+<dt><tt>inScope</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inElement</tt></dt>
+<dd>
+			The scope and element of the property to be retrieved.
+		</dd>
+<dt><tt>outData</tt></dt>
+<dd>
+			On exit, the property's value.
+		</dd>
+<dt><tt>ioDataSize</tt></dt>
+<dd>
+			On entry, the size of the memory object pointed to by <tt>outData</tt>;
+			the maximum-sized value to be returned.  On exit, the actual size
+			of the value returned.
+		</dd>
+</dl>
+
+
+
+
+<a name="//apple_ref/c/func/AudioUnitSetProperty"></a>
+<h3><a name="AudioUnitSetProperty">AudioUnitSetProperty</a></h3>
+Set a property value.
+<pre>ComponentResult <b>AudioUnitSetProperty</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>            ci,
+  <a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a>  inID,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>       inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>     inElement,
+  void *               inData,
+  UInt32               inDataSize
+);</pre>
+	
+		This call is used to set the value of the specified property. If
+		<code>inDataSize</code> is less than the size needed to set the complete value
+		of the property the call will return an error. The property must be writable for
+		this call to succeed.
+	<h4>Parameters</h4>
+<dl><dt><tt>ci</tt></dt>
+<dd>
+			The Audio Unit whose property value is to be set.
+		</dd>
+<dt><tt>inID</tt></dt>
+<dd>
+			The property to be set.
+		</dd>
+<dt><tt>inScope</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inElement</tt></dt>
+<dd>
+			The scope and element of the property to be set.
+		</dd>
+<dt><tt>inData</tt></dt>
+<dd>
+			
+		</dd>
+<dt><tt>inDataSize</tt></dt>
+<dd>
+				
+		</dd>
+</dl>
+
+
+
+
+
+<a name="ListeningforPropertyChanges"></a>
+<h2>Listening for Property Changes</h2>
+
+<p>A property's value can be changed by any number of actions both internal and
+external to the Audio Unit, depending of course on the property itself. </p>
+
+<p>For instance, an output unit that tracks the device that the user chooses as
+the Default Output Unit in the Sound Preferences pane, can be changed at any
+time through this action. If a program has an instance of the
+<code>DefaultOutputUnit</code> open, then a property listener for the
+AudioDeviceID property can be established to allow the program to detect that
+change. Alternatively, the program may not care about the particular device that
+the DefaultOutputUnit is connected too, but may care about the format of that
+device, e.g. the sample rate of the device. When that property changes, any
+listener instantiated for that property will be notified that that property has
+changed. The program can then take any appropriate actions that it needs to.
+</p>
+
+<p>Other, and probably the more usual condition, will have an Audio Unit's
+properties completely under the control of the program itself, and so a property
+listener is not required. Nevertheless, there are many situations where it is
+more convenient, and provides a better locality of code, to have reactions to
+changes in a property's value handled through a notification that the property
+has been changed. </p>
+
+<p>There are two functions that are provided, one to register a listener for a
+particular property, and another to remove a listener. Wild-card instantiation of
+listeners are not currently supported by Audio Units, so any property listener
+that is registered must identify the particular property. Any changes to the
+value of that property, regardless of its scope, will be notified to the
+registered listener. </p>
+
+<a name="//apple_ref/c/func/AudioUnitAddPropertyListener"></a>
+<h3><a name="AudioUnitAddPropertyListener">AudioUnitAddPropertyListener</a></h3>
+Request notification when a property value changes.
+<pre>ComponentResult <b>AudioUnitAddPropertyListener</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>                      ci,
+  <a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a>            inID,
+  <a href="au_property_funcs.html#AudioUnitPropertyListenerProc">AudioUnitPropertyListenerProc</a>  inProc,
+  void *                         inProcRefCon
+);</pre>
+	
+		This function registers the specified listenerProc for the specified property ID.
+		This listenerProc will be called if and when that property's value is changed,
+		and when called, the listenerProc will be passed in both the Audio Unit upon
+		which the property has been changed, and the inProcRefCon that is supplied in
+		this function.
+		
+		Property listener procs can be registered multiple times for different
+		property IDs. The Audio Unit allows for multiple listeners for the same ID, as
+		long as these listeners have a different inProc address.
+	
+
+
+
+<a name="//apple_ref/c/func/AudioUnitRemovePropertyListener"></a>
+<h3><a name="AudioUnitRemovePropertyListener">AudioUnitRemovePropertyListener</a></h3>
+Remove a property change notification callback.
+<pre>ComponentResult <b>AudioUnitRemovePropertyListener</b>(
+  <a href="au_components.html#AudioUnit">AudioUnit</a>                      ci,
+  <a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a>            inID,
+  <a href="au_property_funcs.html#AudioUnitPropertyListenerProc">AudioUnitPropertyListenerProc</a>  inProc
+);</pre>
+	
+		This function will remove all of the property listeners that match the specified
+		property ID and the inProc address.
+	
+
+
+
+<a name="//apple_ref/c/tdef/AudioUnitPropertyListenerProc"></a>
+<h3><a name="AudioUnitPropertyListenerProc">AudioUnitPropertyListenerProc</a></h3>
+
+		Called when a property value changes.
+	
+<pre>typedef void (*<b>AudioUnitPropertyListenerProc</b>)(
+  void *               inRefCon,
+  <a href="au_components.html#AudioUnit">AudioUnit</a>            ci,
+  <a href="au_properties.html#AudioUnitPropertyID">AudioUnitPropertyID</a>  inID,
+  <a href="au_state.html#AudioUnitScope">AudioUnitScope</a>       inScope,
+  <a href="au_state.html#AudioUnitElement">AudioUnitElement</a>     inElement
+);</pre>
+	
+		This is the callback function established by <a href="au_property_funcs.html#AudioUnitAddPropertyListener"><tt>AudioUnitAddPropertyListener</tt></a>.
+	<h4>Parameters</h4>
+<dl><dt><tt>inRefCon</tt></dt>
+<dd>
+			The <tt>inProcRefCon</tt> that was passed to <a href="au_property_funcs.html#AudioUnitAddPropertyListener"><tt>AudioUnitAddPropertyListener</tt></a>.
+		</dd>
+<dt><tt>ci</tt></dt>
+<dd>
+			
+		</dd>
+<dt><tt>inID</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inScope</tt></dt>
+<dd>
+				
+		</dd>
+<dt><tt>inElement</tt></dt>
+<dd>
+			These specify the Audio Unit property whose value has changed.
+		</dd>
+</dl>
+
+
+
+
+
+</body>
+</html>

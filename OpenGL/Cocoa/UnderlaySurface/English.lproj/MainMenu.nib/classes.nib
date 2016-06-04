@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {alphaSlider = id; modeSelect = id; }; 
+            CLASS = App; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {glView = GLView; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GLView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fpsText = NSTextField; }; 
+            SUPERCLASS = NSOpenGLView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

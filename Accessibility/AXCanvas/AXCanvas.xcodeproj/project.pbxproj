@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		8D15AC2E0486D014006FF6A4 /* CanvasDoc.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* CanvasDoc.nib */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC310486D014006FF6A4 /* CanvasDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* CanvasDoc.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		B547001E072FEAF000B5DFAF /* CanvasTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B547001D072FEAF000B5DFAF /* CanvasTextObject.m */; };
+		B5470059072FED3900B5DFAF /* CanvasTextObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5470058072FED3900B5DFAF /* CanvasTextObjectView.m */; };
+		E710064F078BC6D000058084 /* move_forward.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E710064D078BC6D000058084 /* move_forward.tiff */; };
+		E7100650078BC6D000058084 /* move_backward.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E710064E078BC6D000058084 /* move_backward.tiff */; };
+		E71607FF078BE963008EEF35 /* CanvasObjectViewAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = E71607FE078BE963008EEF35 /* CanvasObjectViewAccessibility.m */; };
+		E716088D078BF4B0008EEF35 /* NSSet_Intersection.m in Sources */ = {isa = PBXBuildFile; fileRef = E716088B078BF4B0008EEF35 /* NSSet_Intersection.m */; };
+		E71640C207832DBD00978D5A /* tab_canvas_sel.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640BA07832DBD00978D5A /* tab_canvas_sel.tiff */; };
+		E71640C307832DBD00978D5A /* tab_canvas.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640BB07832DBD00978D5A /* tab_canvas.tiff */; };
+		E71640C407832DBD00978D5A /* tab_graphic_sel.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640BC07832DBD00978D5A /* tab_graphic_sel.tiff */; };
+		E71640C507832DBD00978D5A /* tab_graphic.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640BD07832DBD00978D5A /* tab_graphic.tiff */; };
+		E71640C607832DBD00978D5A /* tab_metrics_sel.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640BE07832DBD00978D5A /* tab_metrics_sel.tiff */; };
+		E71640C707832DBD00978D5A /* tab_metrics.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640BF07832DBD00978D5A /* tab_metrics.tiff */; };
+		E71640C807832DBD00978D5A /* tab_text_sel.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640C007832DBD00978D5A /* tab_text_sel.tiff */; };
+		E71640C907832DBD00978D5A /* tab_text.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E71640C107832DBD00978D5A /* tab_text.tiff */; };
+		E71C780D0788A81F00B6131D /* CanvasManagedUndoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71C780C0788A81F00B6131D /* CanvasManagedUndoController.m */; };
+		E7265CB10785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7265CB00785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.m */; };
+		E738D8C70794A8DB0072588E /* CanvasViewAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = E738D8C60794A8DB0072588E /* CanvasViewAccessibility.m */; };
+		E738D9610794D40A0072588E /* AccessibleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E738D9600794D40A0072588E /* AccessibleProxy.m */; };
+		E745D9200789DE4500F71733 /* CanvasZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E745D91F0789DE4500F71733 /* CanvasZoomingScrollView.m */; };
+		E745D9FF0789EEBB00F71733 /* add.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E745D9FD0789EEBA00F71733 /* add.tiff */; };
+		E745DA000789EEBC00F71733 /* remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E745D9FE0789EEBB00F71733 /* remove.tiff */; };
+		E747673C071A29D900BEC599 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = E747673B071A29D900BEC599 /* CanvasView.m */; };
+		E7494B390781C6F700D1B215 /* CanvasProxyTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7494B380781C6F700D1B215 /* CanvasProxyTabView.m */; };
+		E7494BB40781CE4B00D1B215 /* CanvasInspectorBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7494BB30781CE4B00D1B215 /* CanvasInspectorBorderView.m */; };
+		E75D0F41078BB44D00CFBAF2 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75D0F40078BB44D00CFBAF2 /* ApplicationServices.framework */; };
+		E760ABAA0752DA6900788BAD /* Inspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = E760ABA80752DA6900788BAD /* Inspector.nib */; };
+		E760ABB90752DBE800788BAD /* CanvasInspectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = E760ABB80752DBE800788BAD /* CanvasInspectorController.m */; };
+		E76B4FF3078B0888006B2A29 /* CanvasToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B4FF2078B0888006B2A29 /* CanvasToolbarController.m */; };
+		E77DDA680788E73800383E54 /* UndoCanvasDoc.strings in Resources */ = {isa = PBXBuildFile; fileRef = E77DDA660788E73800383E54 /* UndoCanvasDoc.strings */; };
+		E77DDD00078903EF00383E54 /* UndoCanvasTextObject.strings in Resources */ = {isa = PBXBuildFile; fileRef = E77DDCFC078903EF00383E54 /* UndoCanvasTextObject.strings */; };
+		E77DDD01078903EF00383E54 /* UndoCanvasObject.strings in Resources */ = {isa = PBXBuildFile; fileRef = E77DDCFE078903EF00383E54 /* UndoCanvasObject.strings */; };
+		E77EADF907255C190068F68C /* AccessibleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E77EADF807255C190068F68C /* AccessibleView.m */; };
+		E77EAE0207255D150068F68C /* AccessibleViewKVCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E77EAE0107255D150068F68C /* AccessibleViewKVCUtilities.m */; };
+		E78E4E88078955C30011C5EF /* Inspector.strings in Resources */ = {isa = PBXBuildFile; fileRef = E78E4E84078955C30011C5EF /* Inspector.strings */; };
+		E78E4E89078955C30011C5EF /* Accessibility.strings in Resources */ = {isa = PBXBuildFile; fileRef = E78E4E86078955C30011C5EF /* Accessibility.strings */; };
+		E78E4F0807896C200011C5EF /* ToolbarItems.strings in Resources */ = {isa = PBXBuildFile; fileRef = E78E4F0607896C200011C5EF /* ToolbarItems.strings */; };
+		E78E4F960789D01F0011C5EF /* inspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E78E4F950789D01F0011C5EF /* inspector.tiff */; };
+		E7977753071A184D00A19F82 /* CanvasObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7977752071A184D00A19F82 /* CanvasObject.m */; };
+		E797775B071A1A3900A19F82 /* CanvasObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = E797775A071A1A3900A19F82 /* CanvasObjectView.m */; };
+		E7DF91B4078B64CC00071A43 /* CanvasDocBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF91B3078B64CC00071A43 /* CanvasDocBorderView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E7FDBF76071E2C6C007ECFC2 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXBuildStyle section */
+		4A9504D0FFE6A4CB11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		4A9504D1FFE6A4CB11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* CanvasDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasDoc.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* CanvasDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasDoc.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CanvasDoc.nib; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF750370BD2300C91783 /* AXCanvas_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXCanvas_Prefix.pch; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* AXCanvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXCanvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B547001C072FEAF000B5DFAF /* CanvasTextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasTextObject.h; sourceTree = SOURCE_ROOT; };
+		B547001D072FEAF000B5DFAF /* CanvasTextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasTextObject.m; sourceTree = SOURCE_ROOT; };
+		B5470057072FED3900B5DFAF /* CanvasTextObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasTextObjectView.h; sourceTree = "<group>"; };
+		B5470058072FED3900B5DFAF /* CanvasTextObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasTextObjectView.m; sourceTree = "<group>"; };
+		E710064D078BC6D000058084 /* move_forward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = move_forward.tiff; path = Resources/move_forward.tiff; sourceTree = "<group>"; };
+		E710064E078BC6D000058084 /* move_backward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = move_backward.tiff; path = Resources/move_backward.tiff; sourceTree = "<group>"; };
+		E71607FD078BE963008EEF35 /* CanvasObjectViewAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasObjectViewAccessibility.h; sourceTree = "<group>"; };
+		E71607FE078BE963008EEF35 /* CanvasObjectViewAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasObjectViewAccessibility.m; sourceTree = "<group>"; };
+		E716088B078BF4B0008EEF35 /* NSSet_Intersection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSSet_Intersection.m; sourceTree = "<group>"; };
+		E716088C078BF4B0008EEF35 /* NSSet_Intersection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSSet_Intersection.h; sourceTree = "<group>"; };
+		E71640BA07832DBD00978D5A /* tab_canvas_sel.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_canvas_sel.tiff; path = Resources/tab_canvas_sel.tiff; sourceTree = "<group>"; };
+		E71640BB07832DBD00978D5A /* tab_canvas.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_canvas.tiff; path = Resources/tab_canvas.tiff; sourceTree = "<group>"; };
+		E71640BC07832DBD00978D5A /* tab_graphic_sel.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_graphic_sel.tiff; path = Resources/tab_graphic_sel.tiff; sourceTree = "<group>"; };
+		E71640BD07832DBD00978D5A /* tab_graphic.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_graphic.tiff; path = Resources/tab_graphic.tiff; sourceTree = "<group>"; };
+		E71640BE07832DBD00978D5A /* tab_metrics_sel.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_metrics_sel.tiff; path = Resources/tab_metrics_sel.tiff; sourceTree = "<group>"; };
+		E71640BF07832DBD00978D5A /* tab_metrics.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_metrics.tiff; path = Resources/tab_metrics.tiff; sourceTree = "<group>"; };
+		E71640C007832DBD00978D5A /* tab_text_sel.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_text_sel.tiff; path = Resources/tab_text_sel.tiff; sourceTree = "<group>"; };
+		E71640C107832DBD00978D5A /* tab_text.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = tab_text.tiff; path = Resources/tab_text.tiff; sourceTree = "<group>"; };
+		E71C780B0788A81F00B6131D /* CanvasManagedUndoController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CanvasManagedUndoController.h; sourceTree = "<group>"; };
+		E71C780C0788A81F00B6131D /* CanvasManagedUndoController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CanvasManagedUndoController.m; sourceTree = "<group>"; };
+		E7265CAF0785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasTextObjectViewAccessibility.h; sourceTree = "<group>"; };
+		E7265CB00785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasTextObjectViewAccessibility.m; sourceTree = "<group>"; };
+		E738D8C50794A8DB0072588E /* CanvasViewAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewAccessibility.h; sourceTree = "<group>"; };
+		E738D8C60794A8DB0072588E /* CanvasViewAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewAccessibility.m; sourceTree = "<group>"; };
+		E738D95F0794D40A0072588E /* AccessibleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessibleProxy.h; sourceTree = "<group>"; };
+		E738D9600794D40A0072588E /* AccessibleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessibleProxy.m; sourceTree = "<group>"; };
+		E745D91E0789DE4500F71733 /* CanvasZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasZoomingScrollView.h; sourceTree = "<group>"; };
+		E745D91F0789DE4500F71733 /* CanvasZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasZoomingScrollView.m; sourceTree = "<group>"; };
+		E745D9FD0789EEBA00F71733 /* add.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = add.tiff; path = Resources/add.tiff; sourceTree = "<group>"; };
+		E745D9FE0789EEBB00F71733 /* remove.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = remove.tiff; path = Resources/remove.tiff; sourceTree = "<group>"; };
+		E747673A071A29D900BEC599 /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		E747673B071A29D900BEC599 /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		E7494B370781C6F700D1B215 /* CanvasProxyTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasProxyTabView.h; sourceTree = "<group>"; };
+		E7494B380781C6F700D1B215 /* CanvasProxyTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasProxyTabView.m; sourceTree = "<group>"; };
+		E7494BB20781CE4B00D1B215 /* CanvasInspectorBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasInspectorBorderView.h; sourceTree = "<group>"; };
+		E7494BB30781CE4B00D1B215 /* CanvasInspectorBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasInspectorBorderView.m; sourceTree = "<group>"; };
+		E75D0F40078BB44D00CFBAF2 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		E760ABA90752DA6900788BAD /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Inspector.nib; sourceTree = "<group>"; };
+		E760ABB70752DBE800788BAD /* CanvasInspectorController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CanvasInspectorController.h; sourceTree = "<group>"; };
+		E760ABB80752DBE800788BAD /* CanvasInspectorController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CanvasInspectorController.m; sourceTree = "<group>"; };
+		E76B4FF1078B0888006B2A29 /* CanvasToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasToolbarController.h; sourceTree = "<group>"; };
+		E76B4FF2078B0888006B2A29 /* CanvasToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasToolbarController.m; sourceTree = "<group>"; };
+		E77DDA670788E73800383E54 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/UndoCanvasDoc.strings; sourceTree = "<group>"; };
+		E77DDCFD078903EF00383E54 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/UndoCanvasTextObject.strings; sourceTree = "<group>"; };
+		E77DDCFF078903EF00383E54 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/UndoCanvasObject.strings; sourceTree = "<group>"; };
+		E77EADF707255C190068F68C /* AccessibleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessibleView.h; sourceTree = "<group>"; };
+		E77EADF807255C190068F68C /* AccessibleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessibleView.m; sourceTree = "<group>"; };
+		E77EAE0007255D150068F68C /* AccessibleViewKVCUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessibleViewKVCUtilities.h; sourceTree = "<group>"; };
+		E77EAE0107255D150068F68C /* AccessibleViewKVCUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessibleViewKVCUtilities.m; sourceTree = "<group>"; };
+		E78E4E85078955C30011C5EF /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Inspector.strings; sourceTree = "<group>"; };
+		E78E4E87078955C30011C5EF /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Accessibility.strings; sourceTree = "<group>"; };
+		E78E4F0707896C200011C5EF /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ToolbarItems.strings; sourceTree = "<group>"; };
+		E78E4F950789D01F0011C5EF /* inspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = inspector.tiff; path = Resources/inspector.tiff; sourceTree = "<group>"; };
+		E7977751071A184D00A19F82 /* CanvasObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasObject.h; sourceTree = "<group>"; };
+		E7977752071A184D00A19F82 /* CanvasObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasObject.m; sourceTree = "<group>"; };
+		E7977759071A1A3900A19F82 /* CanvasObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasObjectView.h; sourceTree = "<group>"; };
+		E797775A071A1A3900A19F82 /* CanvasObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasObjectView.m; sourceTree = "<group>"; };
+		E7DF91B2078B64CC00071A43 /* CanvasDocBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasDocBorderView.h; sourceTree = "<group>"; };
+		E7DF91B3078B64CC00071A43 /* CanvasDocBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasDocBorderView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				E75D0F41078BB44D00CFBAF2 /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E75D0F40078BB44D00CFBAF2 /* ApplicationServices.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* AXCanvas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* AXCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = AXCanvas;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E760E9B8071B30760072F603 /* Models */,
+				E7FDBF9D071E35BD007ECFC2 /* Controllers */,
+				E760E9B9071B30800072F603 /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* AXCanvas_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+				E716088C078BF4B0008EEF35 /* NSSet_Intersection.h */,
+				E716088B078BF4B0008EEF35 /* NSSet_Intersection.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7494AE20780FD2600D1B215 /* Images */,
+				E78E4EC1078956E00011C5EF /* Nibs */,
+				E78E4EC00789569C0011C5EF /* Strings */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B547002A072FEB0E00B5DFAF /* Canvas objects */ = {
+			isa = PBXGroup;
+			children = (
+				E7977751071A184D00A19F82 /* CanvasObject.h */,
+				E7977752071A184D00A19F82 /* CanvasObject.m */,
+				B547001C072FEAF000B5DFAF /* CanvasTextObject.h */,
+				B547001D072FEAF000B5DFAF /* CanvasTextObject.m */,
+			);
+			name = "Canvas objects";
+			sourceTree = "<group>";
+		};
+		E71C777C07887F9B00B6131D /* Model views */ = {
+			isa = PBXGroup;
+			children = (
+				E7977759071A1A3900A19F82 /* CanvasObjectView.h */,
+				E797775A071A1A3900A19F82 /* CanvasObjectView.m */,
+				B5470057072FED3900B5DFAF /* CanvasTextObjectView.h */,
+				B5470058072FED3900B5DFAF /* CanvasTextObjectView.m */,
+				E747673A071A29D900BEC599 /* CanvasView.h */,
+				E747673B071A29D900BEC599 /* CanvasView.m */,
+			);
+			name = "Model views";
+			sourceTree = "<group>";
+		};
+		E7494AE20780FD2600D1B215 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E745D9FD0789EEBA00F71733 /* add.tiff */,
+				E78E4F950789D01F0011C5EF /* inspector.tiff */,
+				E710064D078BC6D000058084 /* move_forward.tiff */,
+				E710064E078BC6D000058084 /* move_backward.tiff */,
+				E745D9FE0789EEBB00F71733 /* remove.tiff */,
+				E71640BA07832DBD00978D5A /* tab_canvas_sel.tiff */,
+				E71640BB07832DBD00978D5A /* tab_canvas.tiff */,
+				E71640BC07832DBD00978D5A /* tab_graphic_sel.tiff */,
+				E71640BD07832DBD00978D5A /* tab_graphic.tiff */,
+				E71640BE07832DBD00978D5A /* tab_metrics_sel.tiff */,
+				E71640BF07832DBD00978D5A /* tab_metrics.tiff */,
+				E71640C007832DBD00978D5A /* tab_text_sel.tiff */,
+				E71640C107832DBD00978D5A /* tab_text.tiff */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E760E9B8071B30760072F603 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E78E4EDD078967450011C5EF /* Document */,
+				B547002A072FEB0E00B5DFAF /* Canvas objects */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E760E9B9071B30800072F603 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E78E4EC9078957370011C5EF /* Accessibility */,
+				E71C777C07887F9B00B6131D /* Model views */,
+				E745D91E0789DE4500F71733 /* CanvasZoomingScrollView.h */,
+				E745D91F0789DE4500F71733 /* CanvasZoomingScrollView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E77DDA690788E74000383E54 /* Undo */ = {
+			isa = PBXGroup;
+			children = (
+				E77DDA660788E73800383E54 /* UndoCanvasDoc.strings */,
+				E77DDCFE078903EF00383E54 /* UndoCanvasObject.strings */,
+				E77DDCFC078903EF00383E54 /* UndoCanvasTextObject.strings */,
+			);
+			name = Undo;
+			sourceTree = "<group>";
+		};
+		E78E4EC00789569C0011C5EF /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				E77DDA690788E74000383E54 /* Undo */,
+				E78E4E86078955C30011C5EF /* Accessibility.strings */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				E78E4E84078955C30011C5EF /* Inspector.strings */,
+				E78E4F0607896C200011C5EF /* ToolbarItems.strings */,
+			);
+			name = Strings;
+			sourceTree = "<group>";
+		};
+		E78E4EC1078956E00011C5EF /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B4FDCFA73011CA2CEA /* CanvasDoc.nib */,
+				E760ABA80752DA6900788BAD /* Inspector.nib */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		E78E4EC9078957370011C5EF /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				E77EAE0007255D150068F68C /* AccessibleViewKVCUtilities.h */,
+				E77EAE0107255D150068F68C /* AccessibleViewKVCUtilities.m */,
+				E77EADF707255C190068F68C /* AccessibleView.h */,
+				E77EADF807255C190068F68C /* AccessibleView.m */,
+				E738D95F0794D40A0072588E /* AccessibleProxy.h */,
+				E738D9600794D40A0072588E /* AccessibleProxy.m */,
+				E7DF91B2078B64CC00071A43 /* CanvasDocBorderView.h */,
+				E7DF91B3078B64CC00071A43 /* CanvasDocBorderView.m */,
+				E7494BB20781CE4B00D1B215 /* CanvasInspectorBorderView.h */,
+				E7494BB30781CE4B00D1B215 /* CanvasInspectorBorderView.m */,
+				E7494B370781C6F700D1B215 /* CanvasProxyTabView.h */,
+				E7494B380781C6F700D1B215 /* CanvasProxyTabView.m */,
+				E71607FD078BE963008EEF35 /* CanvasObjectViewAccessibility.h */,
+				E71607FE078BE963008EEF35 /* CanvasObjectViewAccessibility.m */,
+				E7265CAF0785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.h */,
+				E7265CB00785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.m */,
+				E738D8C50794A8DB0072588E /* CanvasViewAccessibility.h */,
+				E738D8C60794A8DB0072588E /* CanvasViewAccessibility.m */,
+			);
+			name = Accessibility;
+			sourceTree = "<group>";
+		};
+		E78E4EDD078967450011C5EF /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4AEFDCFA73011CA2CEA /* CanvasDoc.h */,
+				2A37F4ACFDCFA73011CA2CEA /* CanvasDoc.m */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		E7FDBF9D071E35BD007ECFC2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E71C780B0788A81F00B6131D /* CanvasManagedUndoController.h */,
+				E71C780C0788A81F00B6131D /* CanvasManagedUndoController.m */,
+				E76B4FF1078B0888006B2A29 /* CanvasToolbarController.h */,
+				E76B4FF2078B0888006B2A29 /* CanvasToolbarController.m */,
+				E760ABB70752DBE800788BAD /* CanvasInspectorController.h */,
+				E760ABB80752DBE800788BAD /* CanvasInspectorController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* AXCanvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B094542C5B03B18007DA776 /* Build configuration list for PBXNativeTarget "AXCanvas" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				E7AE07A1079DDA1100DF8794 /* ShellScript */,
+			);
+			buildRules = (
+				E7FDBF76071E2C6C007ECFC2 /* PBXBuildRule */,
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AXCanvas_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = $DSTROOT/Developer/Examples/Accessibility/AXCanvas;
+				PRODUCT_NAME = AXCanvas;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = AXCanvas;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AXCanvas;
+			productReference = 8D15AC370486D014006FF6A4 /* AXCanvas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6B094546C5B03B18007DA776 /* Build configuration list for PBXProject "AXCanvas" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504D0FFE6A4CB11CA0CBA /* Development */,
+				4A9504D1FFE6A4CB11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* AXCanvas */;
+			projectDirPath = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* AXCanvas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
+				8D15AC2E0486D014006FF6A4 /* CanvasDoc.nib in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				E760ABAA0752DA6900788BAD /* Inspector.nib in Resources */,
+				E71640C207832DBD00978D5A /* tab_canvas_sel.tiff in Resources */,
+				E71640C307832DBD00978D5A /* tab_canvas.tiff in Resources */,
+				E71640C407832DBD00978D5A /* tab_graphic_sel.tiff in Resources */,
+				E71640C507832DBD00978D5A /* tab_graphic.tiff in Resources */,
+				E71640C607832DBD00978D5A /* tab_metrics_sel.tiff in Resources */,
+				E71640C707832DBD00978D5A /* tab_metrics.tiff in Resources */,
+				E71640C807832DBD00978D5A /* tab_text_sel.tiff in Resources */,
+				E71640C907832DBD00978D5A /* tab_text.tiff in Resources */,
+				E77DDA680788E73800383E54 /* UndoCanvasDoc.strings in Resources */,
+				E77DDD00078903EF00383E54 /* UndoCanvasTextObject.strings in Resources */,
+				E77DDD01078903EF00383E54 /* UndoCanvasObject.strings in Resources */,
+				E78E4E88078955C30011C5EF /* Inspector.strings in Resources */,
+				E78E4E89078955C30011C5EF /* Accessibility.strings in Resources */,
+				E78E4F0807896C200011C5EF /* ToolbarItems.strings in Resources */,
+				E78E4F960789D01F0011C5EF /* inspector.tiff in Resources */,
+				E745D9FF0789EEBB00F71733 /* add.tiff in Resources */,
+				E745DA000789EEBC00F71733 /* remove.tiff in Resources */,
+				E710064F078BC6D000058084 /* move_forward.tiff in Resources */,
+				E7100650078BC6D000058084 /* move_backward.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E7AE07A1079DDA1100DF8794 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/tcsh;
+			shellScript = "xcodebuild installsrc SRCROOT=$DSTROOT/Developer/Examples/Accessibility/AXCanvas\n/bin/rm -rf $DSTROOT/Developer/Examples/Accessibility/AXCanvas/build/\n/usr/sbin/chown root:wheel $DSTROOT/Developer/Examples/Accessibility/AXCanvas/*\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* CanvasDoc.m in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				E7977753071A184D00A19F82 /* CanvasObject.m in Sources */,
+				E797775B071A1A3900A19F82 /* CanvasObjectView.m in Sources */,
+				E747673C071A29D900BEC599 /* CanvasView.m in Sources */,
+				E77EADF907255C190068F68C /* AccessibleView.m in Sources */,
+				E77EAE0207255D150068F68C /* AccessibleViewKVCUtilities.m in Sources */,
+				B547001E072FEAF000B5DFAF /* CanvasTextObject.m in Sources */,
+				B5470059072FED3900B5DFAF /* CanvasTextObjectView.m in Sources */,
+				E760ABB90752DBE800788BAD /* CanvasInspectorController.m in Sources */,
+				E7494B390781C6F700D1B215 /* CanvasProxyTabView.m in Sources */,
+				E7494BB40781CE4B00D1B215 /* CanvasInspectorBorderView.m in Sources */,
+				E7265CB10785E1FA0084C7DC /* CanvasTextObjectViewAccessibility.m in Sources */,
+				E71C780D0788A81F00B6131D /* CanvasManagedUndoController.m in Sources */,
+				E745D9200789DE4500F71733 /* CanvasZoomingScrollView.m in Sources */,
+				E76B4FF3078B0888006B2A29 /* CanvasToolbarController.m in Sources */,
+				E7DF91B4078B64CC00071A43 /* CanvasDocBorderView.m in Sources */,
+				E71607FF078BE963008EEF35 /* CanvasObjectViewAccessibility.m in Sources */,
+				E716088D078BF4B0008EEF35 /* NSSet_Intersection.m in Sources */,
+				E738D8C70794A8DB0072588E /* CanvasViewAccessibility.m in Sources */,
+				E738D9610794D40A0072588E /* AccessibleProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* CanvasDoc.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = CanvasDoc.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E760ABA80752DA6900788BAD /* Inspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E760ABA90752DA6900788BAD /* English */,
+			);
+			name = Inspector.nib;
+			sourceTree = "<group>";
+		};
+		E77DDA660788E73800383E54 /* UndoCanvasDoc.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E77DDA670788E73800383E54 /* English */,
+			);
+			name = UndoCanvasDoc.strings;
+			sourceTree = "<group>";
+		};
+		E77DDCFC078903EF00383E54 /* UndoCanvasTextObject.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E77DDCFD078903EF00383E54 /* English */,
+			);
+			name = UndoCanvasTextObject.strings;
+			sourceTree = "<group>";
+		};
+		E77DDCFE078903EF00383E54 /* UndoCanvasObject.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E77DDCFF078903EF00383E54 /* English */,
+			);
+			name = UndoCanvasObject.strings;
+			sourceTree = "<group>";
+		};
+		E78E4E84078955C30011C5EF /* Inspector.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E78E4E85078955C30011C5EF /* English */,
+			);
+			name = Inspector.strings;
+			sourceTree = "<group>";
+		};
+		E78E4E86078955C30011C5EF /* Accessibility.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E78E4E87078955C30011C5EF /* English */,
+			);
+			name = Accessibility.strings;
+			sourceTree = "<group>";
+		};
+		E78E4F0607896C200011C5EF /* ToolbarItems.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E78E4F0707896C200011C5EF /* English */,
+			);
+			name = ToolbarItems.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B094543C5B03B18007DA776 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AXCanvas_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = $DSTROOT/Developer/Examples/Accessibility/AXCanvas;
+				PRODUCT_NAME = AXCanvas;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		6B094544C5B03B18007DA776 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AXCanvas_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = $DSTROOT/Developer/Examples/Accessibility/AXCanvas;
+				PRODUCT_NAME = AXCanvas;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		6B094545C5B03B18007DA776 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AXCanvas_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = $DSTROOT/Developer/Examples/Accessibility/AXCanvas;
+				PRODUCT_NAME = AXCanvas;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		6B094547C5B03B18007DA776 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		6B094548C5B03B18007DA776 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		6B094549C5B03B18007DA776 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B094542C5B03B18007DA776 /* Build configuration list for PBXNativeTarget "AXCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B094543C5B03B18007DA776 /* Development */,
+				6B094544C5B03B18007DA776 /* Deployment */,
+				6B094545C5B03B18007DA776 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		6B094546C5B03B18007DA776 /* Build configuration list for PBXProject "AXCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B094547C5B03B18007DA776 /* Development */,
+				6B094548C5B03B18007DA776 /* Deployment */,
+				6B094549C5B03B18007DA776 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

@@ -1,0 +1,1472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		089C165FFE840EACC02AAC07 = {
+			children = (
+				089C1660FE840EACC02AAC07,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		089C1660FE840EACC02AAC07 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//100
+//101
+//102
+//103
+//104
+		1058C7A6FEA54F5311CA2CBB = {
+			children = (
+				1058C7A7FEA54F5311CA2CBB,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1058C7A7FEA54F5311CA2CBB = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1058C7A8FEA54F5311CA2CBB = {
+			children = (
+				E75D0F40078BB44D00CFBAF2,
+				2A37F4C5FDCFA73011CA2CEA,
+				2A37F4C4FDCFA73011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//100
+//101
+//102
+//103
+//104
+//190
+//191
+//192
+//193
+//194
+		19C28FB0FE9D524F11CA2CBB = {
+			children = (
+				8D15AC370486D014006FF6A4,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//2A0
+//2A1
+//2A2
+//2A3
+//2A4
+		2A37F4A9FDCFA73011CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504D0FFE6A4CB11CA0CBA,
+				4A9504D1FFE6A4CB11CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA;
+			projectDirPath = "";
+			targets = (
+				8D15AC270486D014006FF6A4,
+			);
+		};
+		2A37F4AAFDCFA73011CA2CEA = {
+			children = (
+				2A37F4ABFDCFA73011CA2CEA,
+				2A37F4AFFDCFA73011CA2CEA,
+				2A37F4B8FDCFA73011CA2CEA,
+				2A37F4C3FDCFA73011CA2CEA,
+				19C28FB0FE9D524F11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = AXCanvas;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA = {
+			children = (
+				E760E9B8071B30760072F603,
+				E7FDBF9D071E35BD007ECFC2,
+				E760E9B9071B30800072F603,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4ACFDCFA73011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasDoc.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4AEFDCFA73011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasDoc.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA = {
+			children = (
+				32DBCF750370BD2300C91783,
+				2A37F4B0FDCFA73011CA2CEA,
+				E716088C078BF4B0008EEF35,
+				E716088B078BF4B0008EEF35,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B0FDCFA73011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = main.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA = {
+			children = (
+				2A37F4B5FDCFA73011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = CanvasDoc.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B5FDCFA73011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/CanvasDoc.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA = {
+			children = (
+				2A37F4B7FDCFA73011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = MainMenu.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B7FDCFA73011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/MainMenu.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA = {
+			children = (
+				E7494AE20780FD2600D1B215,
+				E78E4EC1078956E00011C5EF,
+				E78E4EC00789569C0011C5EF,
+				2A37F4B9FDCFA73011CA2CEA,
+				8D15AC360486D014006FF6A4,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA = {
+			children = (
+				2A37F4BAFDCFA73011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Credits.rtf;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4BAFDCFA73011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			name = English;
+			path = English.lproj/Credits.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA = {
+			children = (
+				1058C7A6FEA54F5311CA2CBB,
+				1058C7A8FEA54F5311CA2CBB,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		2A37F4C4FDCFA73011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		2A37F4C5FDCFA73011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//2A0
+//2A1
+//2A2
+//2A3
+//2A4
+//320
+//321
+//322
+//323
+//324
+		32DBCF750370BD2300C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AXCanvas_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+		4A9504D0FFE6A4CB11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		4A9504D1FFE6A4CB11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D15AC270486D014006FF6A4 = {
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4,
+				8D15AC300486D014006FF6A4,
+				8D15AC330486D014006FF6A4,
+				E7AE07A1079DDA1100DF8794,
+			);
+			buildRules = (
+				E7FDBF76071E2C6C007ECFC2,
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AXCanvas_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = $DSTROOT/Developer/Examples/Accessibility/AXCanvas;
+				PRODUCT_NAME = AXCanvas;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = AXCanvas;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AXCanvas;
+			productReference = 8D15AC370486D014006FF6A4;
+			productType = "com.apple.product-type.application";
+		};
+		8D15AC2B0486D014006FF6A4 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4,
+				8D15AC2D0486D014006FF6A4,
+				8D15AC2E0486D014006FF6A4,
+				8D15AC2F0486D014006FF6A4,
+				E760ABAA0752DA6900788BAD,
+				E71640C207832DBD00978D5A,
+				E71640C307832DBD00978D5A,
+				E71640C407832DBD00978D5A,
+				E71640C507832DBD00978D5A,
+				E71640C607832DBD00978D5A,
+				E71640C707832DBD00978D5A,
+				E71640C807832DBD00978D5A,
+				E71640C907832DBD00978D5A,
+				E77DDA680788E73800383E54,
+				E77DDD00078903EF00383E54,
+				E77DDD01078903EF00383E54,
+				E78E4E88078955C30011C5EF,
+				E78E4E89078955C30011C5EF,
+				E78E4F0807896C200011C5EF,
+				E78E4F960789D01F0011C5EF,
+				E745D9FF0789EEBB00F71733,
+				E745DA000789EEBC00F71733,
+				E710064F078BC6D000058084,
+				E7100650078BC6D000058084,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D15AC2C0486D014006FF6A4 = {
+			fileRef = 2A37F4B9FDCFA73011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D15AC2D0486D014006FF6A4 = {
+			fileRef = 2A37F4B6FDCFA73011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D15AC2E0486D014006FF6A4 = {
+			fileRef = 2A37F4B4FDCFA73011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D15AC2F0486D014006FF6A4 = {
+			fileRef = 089C165FFE840EACC02AAC07;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D15AC300486D014006FF6A4 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4,
+				8D15AC320486D014006FF6A4,
+				E7977753071A184D00A19F82,
+				E797775B071A1A3900A19F82,
+				E747673C071A29D900BEC599,
+				E77EADF907255C190068F68C,
+				E77EAE0207255D150068F68C,
+				B547001E072FEAF000B5DFAF,
+				B5470059072FED3900B5DFAF,
+				E760ABB90752DBE800788BAD,
+				E7494B390781C6F700D1B215,
+				E7494BB40781CE4B00D1B215,
+				E7265CB10785E1FA0084C7DC,
+				E71C780D0788A81F00B6131D,
+				E745D9200789DE4500F71733,
+				E76B4FF3078B0888006B2A29,
+				E7DF91B4078B64CC00071A43,
+				E71607FF078BE963008EEF35,
+				E716088D078BF4B0008EEF35,
+				E738D8C70794A8DB0072588E,
+				E738D9610794D40A0072588E,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D15AC310486D014006FF6A4 = {
+			fileRef = 2A37F4ACFDCFA73011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		8D15AC320486D014006FF6A4 = {
+			fileRef = 2A37F4B0FDCFA73011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		8D15AC330486D014006FF6A4 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4,
+				E75D0F41078BB44D00CFBAF2,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D15AC340486D014006FF6A4 = {
+			fileRef = 1058C7A7FEA54F5311CA2CBB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D15AC360486D014006FF6A4 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D15AC370486D014006FF6A4 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = AXCanvas.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//B50
+//B51
+//B52
+//B53
+//B54
+		B547001C072FEAF000B5DFAF = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasTextObject.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		B547001D072FEAF000B5DFAF = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasTextObject.m;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		B547001E072FEAF000B5DFAF = {
+			fileRef = B547001D072FEAF000B5DFAF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B547002A072FEB0E00B5DFAF = {
+			children = (
+				E7977751071A184D00A19F82,
+				E7977752071A184D00A19F82,
+				B547001C072FEAF000B5DFAF,
+				B547001D072FEAF000B5DFAF,
+			);
+			isa = PBXGroup;
+			name = "Canvas objects";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		B5470057072FED3900B5DFAF = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasTextObjectView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		B5470058072FED3900B5DFAF = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasTextObjectView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		B5470059072FED3900B5DFAF = {
+			fileRef = B5470058072FED3900B5DFAF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//B50
+//B51
+//B52
+//B53
+//B54
+//E70
+//E71
+//E72
+//E73
+//E74
+		E710064D078BC6D000058084 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = move_forward.tiff;
+			path = Resources/move_forward.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E710064E078BC6D000058084 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = move_backward.tiff;
+			path = Resources/move_backward.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E710064F078BC6D000058084 = {
+			fileRef = E710064D078BC6D000058084;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7100650078BC6D000058084 = {
+			fileRef = E710064E078BC6D000058084;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71607FD078BE963008EEF35 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasObjectViewAccessibility.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71607FE078BE963008EEF35 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasObjectViewAccessibility.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71607FF078BE963008EEF35 = {
+			fileRef = E71607FE078BE963008EEF35;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E716088B078BF4B0008EEF35 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = NSSet_Intersection.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E716088C078BF4B0008EEF35 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = NSSet_Intersection.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E716088D078BF4B0008EEF35 = {
+			fileRef = E716088B078BF4B0008EEF35;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640BA07832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_canvas_sel.tiff;
+			path = Resources/tab_canvas_sel.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640BB07832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_canvas.tiff;
+			path = Resources/tab_canvas.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640BC07832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_graphic_sel.tiff;
+			path = Resources/tab_graphic_sel.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640BD07832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_graphic.tiff;
+			path = Resources/tab_graphic.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640BE07832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_metrics_sel.tiff;
+			path = Resources/tab_metrics_sel.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640BF07832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_metrics.tiff;
+			path = Resources/tab_metrics.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640C007832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_text_sel.tiff;
+			path = Resources/tab_text_sel.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640C107832DBD00978D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = tab_text.tiff;
+			path = Resources/tab_text.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71640C207832DBD00978D5A = {
+			fileRef = E71640BA07832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C307832DBD00978D5A = {
+			fileRef = E71640BB07832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C407832DBD00978D5A = {
+			fileRef = E71640BC07832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C507832DBD00978D5A = {
+			fileRef = E71640BD07832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C607832DBD00978D5A = {
+			fileRef = E71640BE07832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C707832DBD00978D5A = {
+			fileRef = E71640BF07832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C807832DBD00978D5A = {
+			fileRef = E71640C007832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71640C907832DBD00978D5A = {
+			fileRef = E71640C107832DBD00978D5A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E71C777C07887F9B00B6131D = {
+			children = (
+				E7977759071A1A3900A19F82,
+				E797775A071A1A3900A19F82,
+				B5470057072FED3900B5DFAF,
+				B5470058072FED3900B5DFAF,
+				E747673A071A29D900BEC599,
+				E747673B071A29D900BEC599,
+			);
+			isa = PBXGroup;
+			name = "Model views";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71C780B0788A81F00B6131D = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasManagedUndoController.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71C780C0788A81F00B6131D = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasManagedUndoController.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E71C780D0788A81F00B6131D = {
+			fileRef = E71C780C0788A81F00B6131D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7265CAF0785E1FA0084C7DC = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasTextObjectViewAccessibility.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7265CB00785E1FA0084C7DC = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasTextObjectViewAccessibility.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7265CB10785E1FA0084C7DC = {
+			fileRef = E7265CB00785E1FA0084C7DC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E738D8C50794A8DB0072588E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasViewAccessibility.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E738D8C60794A8DB0072588E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasViewAccessibility.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E738D8C70794A8DB0072588E = {
+			fileRef = E738D8C60794A8DB0072588E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E738D95F0794D40A0072588E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AccessibleProxy.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E738D9600794D40A0072588E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = AccessibleProxy.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E738D9610794D40A0072588E = {
+			fileRef = E738D9600794D40A0072588E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E745D91E0789DE4500F71733 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasZoomingScrollView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E745D91F0789DE4500F71733 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasZoomingScrollView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E745D9200789DE4500F71733 = {
+			fileRef = E745D91F0789DE4500F71733;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E745D9FD0789EEBA00F71733 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = add.tiff;
+			path = Resources/add.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E745D9FE0789EEBB00F71733 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = remove.tiff;
+			path = Resources/remove.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E745D9FF0789EEBB00F71733 = {
+			fileRef = E745D9FD0789EEBA00F71733;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E745DA000789EEBC00F71733 = {
+			fileRef = E745D9FE0789EEBB00F71733;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E747673A071A29D900BEC599 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E747673B071A29D900BEC599 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E747673C071A29D900BEC599 = {
+			fileRef = E747673B071A29D900BEC599;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7494AE20780FD2600D1B215 = {
+			children = (
+				E745D9FD0789EEBA00F71733,
+				E78E4F950789D01F0011C5EF,
+				E710064D078BC6D000058084,
+				E710064E078BC6D000058084,
+				E745D9FE0789EEBB00F71733,
+				E71640BA07832DBD00978D5A,
+				E71640BB07832DBD00978D5A,
+				E71640BC07832DBD00978D5A,
+				E71640BD07832DBD00978D5A,
+				E71640BE07832DBD00978D5A,
+				E71640BF07832DBD00978D5A,
+				E71640C007832DBD00978D5A,
+				E71640C107832DBD00978D5A,
+			);
+			isa = PBXGroup;
+			name = Images;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7494B370781C6F700D1B215 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasProxyTabView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7494B380781C6F700D1B215 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasProxyTabView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7494B390781C6F700D1B215 = {
+			fileRef = E7494B380781C6F700D1B215;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7494BB20781CE4B00D1B215 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasInspectorBorderView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7494BB30781CE4B00D1B215 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasInspectorBorderView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7494BB40781CE4B00D1B215 = {
+			fileRef = E7494BB30781CE4B00D1B215;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E75D0F40078BB44D00CFBAF2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = ApplicationServices.framework;
+			path = /System/Library/Frameworks/ApplicationServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E75D0F41078BB44D00CFBAF2 = {
+			fileRef = E75D0F40078BB44D00CFBAF2;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E760ABA80752DA6900788BAD = {
+			children = (
+				E760ABA90752DA6900788BAD,
+			);
+			isa = PBXVariantGroup;
+			name = Inspector.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E760ABA90752DA6900788BAD = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/Inspector.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E760ABAA0752DA6900788BAD = {
+			fileRef = E760ABA80752DA6900788BAD;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E760ABB70752DBE800788BAD = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasInspectorController.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E760ABB80752DBE800788BAD = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasInspectorController.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E760ABB90752DBE800788BAD = {
+			fileRef = E760ABB80752DBE800788BAD;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E760E9B8071B30760072F603 = {
+			children = (
+				E78E4EDD078967450011C5EF,
+				B547002A072FEB0E00B5DFAF,
+			);
+			isa = PBXGroup;
+			name = Models;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E760E9B9071B30800072F603 = {
+			children = (
+				E78E4EC9078957370011C5EF,
+				E71C777C07887F9B00B6131D,
+				E745D91E0789DE4500F71733,
+				E745D91F0789DE4500F71733,
+			);
+			isa = PBXGroup;
+			name = Views;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E76B4FF1078B0888006B2A29 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasToolbarController.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E76B4FF2078B0888006B2A29 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasToolbarController.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E76B4FF3078B0888006B2A29 = {
+			fileRef = E76B4FF2078B0888006B2A29;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E77DDA660788E73800383E54 = {
+			children = (
+				E77DDA670788E73800383E54,
+			);
+			isa = PBXVariantGroup;
+			name = UndoCanvasDoc.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDA670788E73800383E54 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/UndoCanvasDoc.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDA680788E73800383E54 = {
+			fileRef = E77DDA660788E73800383E54;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E77DDA690788E74000383E54 = {
+			children = (
+				E77DDA660788E73800383E54,
+				E77DDCFE078903EF00383E54,
+				E77DDCFC078903EF00383E54,
+			);
+			isa = PBXGroup;
+			name = Undo;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDCFC078903EF00383E54 = {
+			children = (
+				E77DDCFD078903EF00383E54,
+			);
+			isa = PBXVariantGroup;
+			name = UndoCanvasTextObject.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDCFD078903EF00383E54 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/UndoCanvasTextObject.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDCFE078903EF00383E54 = {
+			children = (
+				E77DDCFF078903EF00383E54,
+			);
+			isa = PBXVariantGroup;
+			name = UndoCanvasObject.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDCFF078903EF00383E54 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/UndoCanvasObject.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77DDD00078903EF00383E54 = {
+			fileRef = E77DDCFC078903EF00383E54;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E77DDD01078903EF00383E54 = {
+			fileRef = E77DDCFE078903EF00383E54;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E77EADF707255C190068F68C = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AccessibleView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77EADF807255C190068F68C = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = AccessibleView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77EADF907255C190068F68C = {
+			fileRef = E77EADF807255C190068F68C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E77EAE0007255D150068F68C = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = AccessibleViewKVCUtilities.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77EAE0107255D150068F68C = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = AccessibleViewKVCUtilities.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E77EAE0207255D150068F68C = {
+			fileRef = E77EAE0107255D150068F68C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E78E4E84078955C30011C5EF = {
+			children = (
+				E78E4E85078955C30011C5EF,
+			);
+			isa = PBXVariantGroup;
+			name = Inspector.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4E85078955C30011C5EF = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/Inspector.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4E86078955C30011C5EF = {
+			children = (
+				E78E4E87078955C30011C5EF,
+			);
+			isa = PBXVariantGroup;
+			name = Accessibility.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4E87078955C30011C5EF = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/Accessibility.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4E88078955C30011C5EF = {
+			fileRef = E78E4E84078955C30011C5EF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E78E4E89078955C30011C5EF = {
+			fileRef = E78E4E86078955C30011C5EF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E78E4EC00789569C0011C5EF = {
+			children = (
+				E77DDA690788E74000383E54,
+				E78E4E86078955C30011C5EF,
+				089C165FFE840EACC02AAC07,
+				E78E4E84078955C30011C5EF,
+				E78E4F0607896C200011C5EF,
+			);
+			isa = PBXGroup;
+			name = Strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4EC1078956E00011C5EF = {
+			children = (
+				2A37F4B4FDCFA73011CA2CEA,
+				E760ABA80752DA6900788BAD,
+				2A37F4B6FDCFA73011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Nibs;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4EC9078957370011C5EF = {
+			children = (
+				E77EAE0007255D150068F68C,
+				E77EAE0107255D150068F68C,
+				E77EADF707255C190068F68C,
+				E77EADF807255C190068F68C,
+				E738D95F0794D40A0072588E,
+				E738D9600794D40A0072588E,
+				E7DF91B2078B64CC00071A43,
+				E7DF91B3078B64CC00071A43,
+				E7494BB20781CE4B00D1B215,
+				E7494BB30781CE4B00D1B215,
+				E7494B370781C6F700D1B215,
+				E7494B380781C6F700D1B215,
+				E71607FD078BE963008EEF35,
+				E71607FE078BE963008EEF35,
+				E7265CAF0785E1FA0084C7DC,
+				E7265CB00785E1FA0084C7DC,
+				E738D8C50794A8DB0072588E,
+				E738D8C60794A8DB0072588E,
+			);
+			isa = PBXGroup;
+			name = Accessibility;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4EDD078967450011C5EF = {
+			children = (
+				2A37F4AEFDCFA73011CA2CEA,
+				2A37F4ACFDCFA73011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Document;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4F0607896C200011C5EF = {
+			children = (
+				E78E4F0707896C200011C5EF,
+			);
+			isa = PBXVariantGroup;
+			name = ToolbarItems.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4F0707896C200011C5EF = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/ToolbarItems.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4F0807896C200011C5EF = {
+			fileRef = E78E4F0607896C200011C5EF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E78E4F950789D01F0011C5EF = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			name = inspector.tiff;
+			path = Resources/inspector.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E78E4F960789D01F0011C5EF = {
+			fileRef = E78E4F950789D01F0011C5EF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7977751071A184D00A19F82 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasObject.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7977752071A184D00A19F82 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasObject.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7977753071A184D00A19F82 = {
+			fileRef = E7977752071A184D00A19F82;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7977759071A1A3900A19F82 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasObjectView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E797775A071A1A3900A19F82 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasObjectView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E797775B071A1A3900A19F82 = {
+			fileRef = E797775A071A1A3900A19F82;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7AE07A1079DDA1100DF8794 = {
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/tcsh;
+			shellScript = "xcodebuild installsrc SRCROOT=$DSTROOT/Developer/Examples/Accessibility/AXCanvas\n/bin/rm -rf $DSTROOT/Developer/Examples/Accessibility/AXCanvas/build/\n/usr/sbin/chown root:wheel $DSTROOT/Developer/Examples/Accessibility/AXCanvas/*\n";
+		};
+		E7DF91B2078B64CC00071A43 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CanvasDocBorderView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7DF91B3078B64CC00071A43 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CanvasDocBorderView.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E7DF91B4078B64CC00071A43 = {
+			fileRef = E7DF91B3078B64CC00071A43;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E7FDBF76071E2C6C007ECFC2 = {
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			isa = PBXBuildRule;
+			outputFiles = (
+			);
+		};
+		E7FDBF9D071E35BD007ECFC2 = {
+			children = (
+				E71C780B0788A81F00B6131D,
+				E71C780C0788A81F00B6131D,
+				E76B4FF1078B0888006B2A29,
+				E76B4FF2078B0888006B2A29,
+				E760ABB70752DBE800788BAD,
+				E760ABB80752DBE800788BAD,
+			);
+			isa = PBXGroup;
+			name = Controllers;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA;
+}

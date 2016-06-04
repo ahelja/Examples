@@ -1,0 +1,1164 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		8A925D9A08BD2032003A9B53 /* All Applications */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8A925DA108BD2049003A9B53 /* Build configuration list for PBXAggregateTarget "All Applications" */;
+			buildPhases = (
+			);
+			buildSettings = {
+				PRODUCT_NAME = "All Applications";
+			};
+			dependencies = (
+				8A925D9C08BD2038003A9B53 /* PBXTargetDependency */,
+				8A925D9E08BD203A003A9B53 /* PBXTargetDependency */,
+				8A925DA008BD203C003A9B53 /* PBXTargetDependency */,
+			);
+			name = "All Applications";
+			productName = "All Applications";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		8A0F08C607C5551200F2D228 /* GridMPIApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F08C407C5551200F2D228 /* GridMPIApplicationDelegate.m */; };
+		8A0F08D907C555DB00F2D228 /* addFile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3607692DA30086DA5D /* addFile.tiff */; };
+		8A0F08DA07C555DB00F2D228 /* clone.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3707692DA30086DA5D /* clone.tiff */; };
+		8A0F08DB07C555DC00F2D228 /* delete.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3807692DA30086DA5D /* delete.tiff */; };
+		8A0F08DC07C555DD00F2D228 /* GridSampleApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4EF077377DC00BB4258 /* GridSampleApplicationDelegate.m */; };
+		8A0F08DD07C555DE00F2D228 /* GridSampleConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F1077377DC00BB4258 /* GridSampleConnectionController.m */; };
+		8A0F08DE07C555DE00F2D228 /* GridSampleJobInfoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B5ED9076A78B10026504F /* GridSampleJobInfoWindowController.m */; };
+		8A0F08DF07C555DF00F2D228 /* GridSampleJobResultsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B5F34076A7DE10026504F /* GridSampleJobResultsWindowController.m */; };
+		8A0F08E007C555DF00F2D228 /* GridSampleJobStateToStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F3077377DC00BB4258 /* GridSampleJobStateToStringTransformer.m */; };
+		8A0F08E107C555E000F2D228 /* GridSampleLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F5077377DC00BB4258 /* GridSampleLoginController.m */; };
+		8A0F08E207C555E100F2D228 /* GridSampleMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A97F97807650E9A0073AAC0 /* GridSampleMainWindowController.m */; };
+		8A0F08E307C555E200F2D228 /* GridSampleNewJobWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B477D076A3FF00026504F /* GridSampleNewJobWindowController.m */; };
+		8A0F08E407C555E200F2D228 /* GridSampleServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F7077377DC00BB4258 /* GridSampleServiceBrowser.m */; };
+		8A0F08E507C555E400F2D228 /* GridSampleToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F9077377DC00BB4258 /* GridSampleToolbarController.m */; };
+		8A0F08E707C555E500F2D228 /* info.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D5607692E080086DA5D /* info.tiff */; };
+		8A0F08E807C555E700F2D228 /* new.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3907692DA30086DA5D /* new.tiff */; };
+		8A0F08E907C555E800F2D228 /* stop.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3A07692DA30086DA5D /* stop.tiff */; };
+		8A0F08EA07C5561000F2D228 /* JobResults.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B5F68076A7F880026504F /* JobResults.nib */; };
+		8A0F08EC07C5561000F2D228 /* MainWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97F9D7076510C20073AAC0 /* MainWindow.nib */; };
+		8A0F08ED07C5561000F2D228 /* Login.nib in Resources */ = {isa = PBXBuildFile; fileRef = A470CF4F07683DAC000C5DC3 /* Login.nib */; };
+		8A0F08EF07C5561000F2D228 /* JobInfo.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B5EEE076A79850026504F /* JobInfo.nib */; };
+		8A0F08F807C556F800F2D228 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0F08F507C556E400F2D228 /* MainMenu.nib */; };
+		8A0F090607C5576000F2D228 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		8A0F090707C5577300F2D228 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8A0F090807C5577800F2D228 /* XgridFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97F94207650BC80073AAC0 /* XgridFoundation.framework */; };
+		8A0F091407C55A6200F2D228 /* GridMPINewJobWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F091307C55A6200F2D228 /* GridMPINewJobWindowController.m */; };
+		8A0F092607C55AF200F2D228 /* NewJob.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0F092407C55AF200F2D228 /* NewJob.nib */; };
+		8A8AC58B07737D6100BB4258 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8A8AC58C07737D6100BB4258 /* MainWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97F9D7076510C20073AAC0 /* MainWindow.nib */; };
+		8A8AC58D07737D6100BB4258 /* Login.nib in Resources */ = {isa = PBXBuildFile; fileRef = A470CF4F07683DAC000C5DC3 /* Login.nib */; };
+		8A8AC58E07737D6100BB4258 /* NewJob.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B4785076A409B0026504F /* NewJob.nib */; };
+		8A8AC58F07737D6100BB4258 /* JobInfo.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B5EEE076A79850026504F /* JobInfo.nib */; };
+		8A8AC59007737D6100BB4258 /* JobResults.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B5F68076A7F880026504F /* JobResults.nib */; };
+		8A8AC59107737D6100BB4258 /* addFile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3607692DA30086DA5D /* addFile.tiff */; };
+		8A8AC59207737D6100BB4258 /* clone.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3707692DA30086DA5D /* clone.tiff */; };
+		8A8AC59307737D6100BB4258 /* delete.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3807692DA30086DA5D /* delete.tiff */; };
+		8A8AC59407737D6100BB4258 /* info.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D5607692E080086DA5D /* info.tiff */; };
+		8A8AC59507737D6100BB4258 /* new.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3907692DA30086DA5D /* new.tiff */; };
+		8A8AC59607737D6100BB4258 /* stop.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3A07692DA30086DA5D /* stop.tiff */; };
+		8A8AC59707737D7500BB4258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		8A8AC59807737D7500BB4258 /* GridSampleApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4EF077377DC00BB4258 /* GridSampleApplicationDelegate.m */; };
+		8A8AC59907737D7500BB4258 /* GridSampleConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F1077377DC00BB4258 /* GridSampleConnectionController.m */; };
+		8A8AC59A07737D7500BB4258 /* GridSampleJobInfoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B5ED9076A78B10026504F /* GridSampleJobInfoWindowController.m */; };
+		8A8AC59B07737D7500BB4258 /* GridSampleJobResultsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B5F34076A7DE10026504F /* GridSampleJobResultsWindowController.m */; };
+		8A8AC59C07737D7500BB4258 /* GridSampleJobStateToStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F3077377DC00BB4258 /* GridSampleJobStateToStringTransformer.m */; };
+		8A8AC59D07737D7500BB4258 /* GridSampleLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F5077377DC00BB4258 /* GridSampleLoginController.m */; };
+		8A8AC59E07737D7500BB4258 /* GridSampleMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A97F97807650E9A0073AAC0 /* GridSampleMainWindowController.m */; };
+		8A8AC59F07737D7500BB4258 /* GridSampleNewJobWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B477D076A3FF00026504F /* GridSampleNewJobWindowController.m */; };
+		8A8AC5A007737D7500BB4258 /* GridSampleServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F7077377DC00BB4258 /* GridSampleServiceBrowser.m */; };
+		8A8AC5A107737D7500BB4258 /* GridSampleToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F9077377DC00BB4258 /* GridSampleToolbarController.m */; };
+		8A8AC5A207737D7E00BB4258 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8A8AC5A307737D7E00BB4258 /* XgridFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97F94207650BC80073AAC0 /* XgridFoundation.framework */; };
+		8A94640907C6CA300012D149 /* xgridmpiboot in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A94640807C6CA300012D149 /* xgridmpiboot */; };
+		8AEE504107D63BDD00BAEFEB /* GridFeederApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE503E07D63BDD00BAEFEB /* GridFeederApplicationDelegate.m */; };
+		8AEE504207D63BDD00BAEFEB /* GridFeederNewJobWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE504007D63BDD00BAEFEB /* GridFeederNewJobWindowController.m */; };
+		8AEE504D07D63C5D00BAEFEB /* GridSampleLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F5077377DC00BB4258 /* GridSampleLoginController.m */; };
+		8AEE504E07D63C5D00BAEFEB /* GridSampleJobResultsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B5F34076A7DE10026504F /* GridSampleJobResultsWindowController.m */; };
+		8AEE504F07D63C5E00BAEFEB /* GridSampleJobInfoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B5ED9076A78B10026504F /* GridSampleJobInfoWindowController.m */; };
+		8AEE505007D63C6000BAEFEB /* GridSampleMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A97F97807650E9A0073AAC0 /* GridSampleMainWindowController.m */; };
+		8AEE505107D63C6000BAEFEB /* GridSampleToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F9077377DC00BB4258 /* GridSampleToolbarController.m */; };
+		8AEE505207D63C6100BAEFEB /* GridSampleServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F7077377DC00BB4258 /* GridSampleServiceBrowser.m */; };
+		8AEE505307D63C6100BAEFEB /* GridSampleJobStateToStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F3077377DC00BB4258 /* GridSampleJobStateToStringTransformer.m */; };
+		8AEE505407D63C6200BAEFEB /* GridSampleNewJobWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B477D076A3FF00026504F /* GridSampleNewJobWindowController.m */; };
+		8AEE505507D63C6300BAEFEB /* GridSampleApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4EF077377DC00BB4258 /* GridSampleApplicationDelegate.m */; };
+		8AEE505607D63C6300BAEFEB /* GridSampleConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AC4F1077377DC00BB4258 /* GridSampleConnectionController.m */; };
+		8AEE505707D63C6D00BAEFEB /* delete.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3807692DA30086DA5D /* delete.tiff */; };
+		8AEE505807D63C6E00BAEFEB /* stop.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3A07692DA30086DA5D /* stop.tiff */; };
+		8AEE505907D63C6F00BAEFEB /* addFile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3607692DA30086DA5D /* addFile.tiff */; };
+		8AEE505A07D63C6F00BAEFEB /* new.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3907692DA30086DA5D /* new.tiff */; };
+		8AEE505B07D63C7000BAEFEB /* clone.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D3707692DA30086DA5D /* clone.tiff */; };
+		8AEE505C07D63C7000BAEFEB /* info.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8A804D5607692E080086DA5D /* info.tiff */; };
+		8AEE506107D63CBA00BAEFEB /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE505D07D63CBA00BAEFEB /* MainMenu.nib */; };
+		8AEE506207D63CBA00BAEFEB /* NewJob.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE505F07D63CBA00BAEFEB /* NewJob.nib */; };
+		8AEE506307D63CD500BAEFEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		8AEE506707D63CEE00BAEFEB /* XgridFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A97F94207650BC80073AAC0 /* XgridFoundation.framework */; };
+		8AEE506807D63CEF00BAEFEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8AEE507007D63DCC00BAEFEB /* JobResults.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B5F68076A7F880026504F /* JobResults.nib */; };
+		8AEE507107D63DCC00BAEFEB /* MainWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A97F9D7076510C20073AAC0 /* MainWindow.nib */; };
+		8AEE507207D63DCC00BAEFEB /* Login.nib in Resources */ = {isa = PBXBuildFile; fileRef = A470CF4F07683DAC000C5DC3 /* Login.nib */; };
+		8AEE507307D63DCC00BAEFEB /* JobInfo.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7B5EEE076A79850026504F /* JobInfo.nib */; };
+		8AEE509E07D6452600BAEFEB /* GridFeederArgumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE509D07D6452600BAEFEB /* GridFeederArgumentViewController.m */; };
+		8AEE50A407D6456900BAEFEB /* GridFeederColorBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE50A307D6456900BAEFEB /* GridFeederColorBackgroundView.m */; };
+		8AEE50AF07D645D200BAEFEB /* ArgumentView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE50AD07D645D200BAEFEB /* ArgumentView.nib */; };
+		8AEE50C707D646C600BAEFEB /* GridFeederArgumentContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE50C607D646C600BAEFEB /* GridFeederArgumentContainerController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		8A925D9B08BD2038003A9B53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A8AC57F07737D4400BB4258;
+			remoteInfo = "Xgrid Sample";
+		};
+		8A925D9D08BD203A003A9B53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AEE502C07D63A7E00BAEFEB;
+			remoteInfo = "Xgrid Feeder Sample";
+		};
+		8A925D9F08BD203C003A9B53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A0F08B607C5544400F2D228;
+			remoteInfo = "Xgrid MPI Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A0F098607C5688400F2D228 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8A94640907C6CA300012D149 /* xgridmpiboot in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* GridSample_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSample_Prefix.pch; sourceTree = "<group>"; };
+		8A0F08B707C5544400F2D228 /* Xgrid MPI Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xgrid MPI Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0F08C307C5551200F2D228 /* GridMPIApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridMPIApplicationDelegate.h; sourceTree = "<group>"; };
+		8A0F08C407C5551200F2D228 /* GridMPIApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridMPIApplicationDelegate.m; sourceTree = "<group>"; };
+		8A0F08C507C5551200F2D228 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A0F08F607C556E400F2D228 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		8A0F091207C55A6200F2D228 /* GridMPINewJobWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridMPINewJobWindowController.h; sourceTree = "<group>"; };
+		8A0F091307C55A6200F2D228 /* GridMPINewJobWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridMPINewJobWindowController.m; sourceTree = "<group>"; };
+		8A0F092507C55AF200F2D228 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/NewJob.nib; sourceTree = "<group>"; };
+		8A7B477C076A3FF00026504F /* GridSampleNewJobWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleNewJobWindowController.h; path = Sample/GridSampleNewJobWindowController.h; sourceTree = "<group>"; };
+		8A7B477D076A3FF00026504F /* GridSampleNewJobWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleNewJobWindowController.m; path = Sample/GridSampleNewJobWindowController.m; sourceTree = "<group>"; };
+		8A7B4786076A409B0026504F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/NewJob.nib; sourceTree = "<group>"; };
+		8A7B5ED8076A78B10026504F /* GridSampleJobInfoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleJobInfoWindowController.h; path = Sample/GridSampleJobInfoWindowController.h; sourceTree = "<group>"; };
+		8A7B5ED9076A78B10026504F /* GridSampleJobInfoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleJobInfoWindowController.m; path = Sample/GridSampleJobInfoWindowController.m; sourceTree = "<group>"; };
+		8A7B5EEF076A79850026504F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/JobInfo.nib; sourceTree = "<group>"; };
+		8A7B5F33076A7DE10026504F /* GridSampleJobResultsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleJobResultsWindowController.h; path = Sample/GridSampleJobResultsWindowController.h; sourceTree = "<group>"; };
+		8A7B5F34076A7DE10026504F /* GridSampleJobResultsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleJobResultsWindowController.m; path = Sample/GridSampleJobResultsWindowController.m; sourceTree = "<group>"; };
+		8A7B5F69076A7F880026504F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/JobResults.nib; sourceTree = "<group>"; };
+		8A804D3607692DA30086DA5D /* addFile.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = addFile.tiff; sourceTree = "<group>"; };
+		8A804D3707692DA30086DA5D /* clone.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = clone.tiff; sourceTree = "<group>"; };
+		8A804D3807692DA30086DA5D /* delete.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = delete.tiff; sourceTree = "<group>"; };
+		8A804D3907692DA30086DA5D /* new.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = new.tiff; sourceTree = "<group>"; };
+		8A804D3A07692DA30086DA5D /* stop.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop.tiff; sourceTree = "<group>"; };
+		8A804D5607692E080086DA5D /* info.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = info.tiff; sourceTree = "<group>"; };
+		8A8AC4EE077377DC00BB4258 /* GridSampleApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleApplicationDelegate.h; path = Sample/GridSampleApplicationDelegate.h; sourceTree = "<group>"; };
+		8A8AC4EF077377DC00BB4258 /* GridSampleApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleApplicationDelegate.m; path = Sample/GridSampleApplicationDelegate.m; sourceTree = "<group>"; };
+		8A8AC4F0077377DC00BB4258 /* GridSampleConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleConnectionController.h; path = Sample/GridSampleConnectionController.h; sourceTree = "<group>"; };
+		8A8AC4F1077377DC00BB4258 /* GridSampleConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleConnectionController.m; path = Sample/GridSampleConnectionController.m; sourceTree = "<group>"; };
+		8A8AC4F2077377DC00BB4258 /* GridSampleJobStateToStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleJobStateToStringTransformer.h; path = Sample/GridSampleJobStateToStringTransformer.h; sourceTree = "<group>"; };
+		8A8AC4F3077377DC00BB4258 /* GridSampleJobStateToStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleJobStateToStringTransformer.m; path = Sample/GridSampleJobStateToStringTransformer.m; sourceTree = "<group>"; };
+		8A8AC4F4077377DC00BB4258 /* GridSampleLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleLoginController.h; path = Sample/GridSampleLoginController.h; sourceTree = "<group>"; };
+		8A8AC4F5077377DC00BB4258 /* GridSampleLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleLoginController.m; path = Sample/GridSampleLoginController.m; sourceTree = "<group>"; };
+		8A8AC4F6077377DC00BB4258 /* GridSampleServiceBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleServiceBrowser.h; path = Sample/GridSampleServiceBrowser.h; sourceTree = "<group>"; };
+		8A8AC4F7077377DC00BB4258 /* GridSampleServiceBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleServiceBrowser.m; path = Sample/GridSampleServiceBrowser.m; sourceTree = "<group>"; };
+		8A8AC4F8077377DC00BB4258 /* GridSampleToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleToolbarController.h; path = Sample/GridSampleToolbarController.h; sourceTree = "<group>"; };
+		8A8AC4F9077377DC00BB4258 /* GridSampleToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleToolbarController.m; path = Sample/GridSampleToolbarController.m; sourceTree = "<group>"; };
+		8A8AC58007737D4400BB4258 /* Xgrid Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xgrid Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A94640807C6CA300012D149 /* xgridmpiboot */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xgridmpiboot; sourceTree = "<group>"; };
+		8A97F94207650BC80073AAC0 /* XgridFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XgridFoundation.framework; path = /System/Library/Frameworks/XgridFoundation.framework; sourceTree = "<absolute>"; };
+		8A97F97707650E9A0073AAC0 /* GridSampleMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridSampleMainWindowController.h; path = Sample/GridSampleMainWindowController.h; sourceTree = "<group>"; };
+		8A97F97807650E9A0073AAC0 /* GridSampleMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridSampleMainWindowController.m; path = Sample/GridSampleMainWindowController.m; sourceTree = "<group>"; };
+		8A97F9D8076510C20073AAC0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainWindow.nib; sourceTree = "<group>"; };
+		8AEE502D07D63A7E00BAEFEB /* Xgrid Feeder Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xgrid Feeder Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEE503907D63B7E00BAEFEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEE503D07D63BDD00BAEFEB /* GridFeederApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFeederApplicationDelegate.h; sourceTree = "<group>"; };
+		8AEE503E07D63BDD00BAEFEB /* GridFeederApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFeederApplicationDelegate.m; sourceTree = "<group>"; };
+		8AEE503F07D63BDD00BAEFEB /* GridFeederNewJobWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFeederNewJobWindowController.h; sourceTree = "<group>"; };
+		8AEE504007D63BDD00BAEFEB /* GridFeederNewJobWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFeederNewJobWindowController.m; sourceTree = "<group>"; };
+		8AEE505E07D63CBA00BAEFEB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		8AEE506007D63CBA00BAEFEB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/NewJob.nib; sourceTree = "<group>"; };
+		8AEE509C07D6452600BAEFEB /* GridFeederArgumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFeederArgumentViewController.h; sourceTree = "<group>"; };
+		8AEE509D07D6452600BAEFEB /* GridFeederArgumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFeederArgumentViewController.m; sourceTree = "<group>"; };
+		8AEE50A207D6456900BAEFEB /* GridFeederColorBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFeederColorBackgroundView.h; sourceTree = "<group>"; };
+		8AEE50A307D6456900BAEFEB /* GridFeederColorBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFeederColorBackgroundView.m; sourceTree = "<group>"; };
+		8AEE50AE07D645D200BAEFEB /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ArgumentView.nib; sourceTree = "<group>"; };
+		8AEE50C507D646C600BAEFEB /* GridFeederArgumentContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridFeederArgumentContainerController.h; sourceTree = "<group>"; };
+		8AEE50C607D646C600BAEFEB /* GridFeederArgumentContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridFeederArgumentContainerController.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		A470CF5007683DAC000C5DC3 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Login.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A0F08B507C5544400F2D228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0F090707C5577300F2D228 /* Cocoa.framework in Frameworks */,
+				8A0F090807C5577800F2D228 /* XgridFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8AC57E07737D4400BB4258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8AC5A207737D7E00BB4258 /* Cocoa.framework in Frameworks */,
+				8A8AC5A307737D7E00BB4258 /* XgridFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEE502B07D63A7E00BAEFEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEE506707D63CEE00BAEFEB /* XgridFoundation.framework in Frameworks */,
+				8AEE506807D63CEF00BAEFEB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A97F94207650BC80073AAC0 /* XgridFoundation.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A8AC58007737D4400BB4258 /* Xgrid Sample.app */,
+				8A0F08B707C5544400F2D228 /* Xgrid MPI Sample.app */,
+				8AEE502D07D63A7E00BAEFEB /* Xgrid Feeder Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GridSample */ = {
+			isa = PBXGroup;
+			children = (
+				8A8AC4CD0773773400BB4258 /* Sample */,
+				8AEE503607D63B6000BAEFEB /* Feeder */,
+				8A0F08C207C5551200F2D228 /* MPI */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = GridSample;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GridSample_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A0F08C207C5551200F2D228 /* MPI */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F08F207C556A300F2D228 /* Classes */,
+				8A0F08F307C556AC00F2D228 /* Resources */,
+			);
+			path = MPI;
+			sourceTree = "<group>";
+		};
+		8A0F08F207C556A300F2D228 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F08C307C5551200F2D228 /* GridMPIApplicationDelegate.h */,
+				8A0F08C407C5551200F2D228 /* GridMPIApplicationDelegate.m */,
+				8A0F091207C55A6200F2D228 /* GridMPINewJobWindowController.h */,
+				8A0F091307C55A6200F2D228 /* GridMPINewJobWindowController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8A0F08F307C556AC00F2D228 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F08C507C5551200F2D228 /* Info.plist */,
+				8A94640807C6CA300012D149 /* xgridmpiboot */,
+				8A0F08F407C556C700F2D228 /* Nibs */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8A0F08F407C556C700F2D228 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F08F507C556E400F2D228 /* MainMenu.nib */,
+				8A0F092407C55AF200F2D228 /* NewJob.nib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		8A7B5F4A076A7EC30026504F /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A97F97707650E9A0073AAC0 /* GridSampleMainWindowController.h */,
+				8A97F97807650E9A0073AAC0 /* GridSampleMainWindowController.m */,
+				8A7B477C076A3FF00026504F /* GridSampleNewJobWindowController.h */,
+				8A7B477D076A3FF00026504F /* GridSampleNewJobWindowController.m */,
+				8A7B5ED8076A78B10026504F /* GridSampleJobInfoWindowController.h */,
+				8A7B5ED9076A78B10026504F /* GridSampleJobInfoWindowController.m */,
+				8A7B5F33076A7DE10026504F /* GridSampleJobResultsWindowController.h */,
+				8A7B5F34076A7DE10026504F /* GridSampleJobResultsWindowController.m */,
+			);
+			name = WindowControllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		8A804D3407692D490086DA5D /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				8A7B5F68076A7F880026504F /* JobResults.nib */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				8A97F9D7076510C20073AAC0 /* MainWindow.nib */,
+				A470CF4F07683DAC000C5DC3 /* Login.nib */,
+				8A7B4785076A409B0026504F /* NewJob.nib */,
+				8A7B5EEE076A79850026504F /* JobInfo.nib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		8A804D3507692D510086DA5D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8A804D5607692E080086DA5D /* info.tiff */,
+				8A804D3607692DA30086DA5D /* addFile.tiff */,
+				8A804D3707692DA30086DA5D /* clone.tiff */,
+				8A804D3807692DA30086DA5D /* delete.tiff */,
+				8A804D3907692DA30086DA5D /* new.tiff */,
+				8A804D3A07692DA30086DA5D /* stop.tiff */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8A8AC4CD0773773400BB4258 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				8A8AC52507737A3F00BB4258 /* Classes */,
+				8A8AC52607737A4800BB4258 /* Resources */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		8A8AC52507737A3F00BB4258 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8A7B5F4A076A7EC30026504F /* WindowControllers */,
+				A449740D076E661600E7092A /* Other */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8A8AC52607737A4800BB4258 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				8A804D3507692D510086DA5D /* Images */,
+				8A804D3407692D490086DA5D /* Nibs */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8AEE503607D63B6000BAEFEB /* Feeder */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE503A07D63B8700BAEFEB /* Classes */,
+				8AEE503B07D63B8C00BAEFEB /* Resources */,
+			);
+			path = Feeder;
+			sourceTree = "<group>";
+		};
+		8AEE503A07D63B8700BAEFEB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE503D07D63BDD00BAEFEB /* GridFeederApplicationDelegate.h */,
+				8AEE503E07D63BDD00BAEFEB /* GridFeederApplicationDelegate.m */,
+				8AEE503F07D63BDD00BAEFEB /* GridFeederNewJobWindowController.h */,
+				8AEE504007D63BDD00BAEFEB /* GridFeederNewJobWindowController.m */,
+				8AEE50C507D646C600BAEFEB /* GridFeederArgumentContainerController.h */,
+				8AEE50C607D646C600BAEFEB /* GridFeederArgumentContainerController.m */,
+				8AEE509C07D6452600BAEFEB /* GridFeederArgumentViewController.h */,
+				8AEE509D07D6452600BAEFEB /* GridFeederArgumentViewController.m */,
+				8AEE50A207D6456900BAEFEB /* GridFeederColorBackgroundView.h */,
+				8AEE50A307D6456900BAEFEB /* GridFeederColorBackgroundView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8AEE503B07D63B8C00BAEFEB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE503907D63B7E00BAEFEB /* Info.plist */,
+				8AEE503C07D63B9800BAEFEB /* Nibs */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8AEE503C07D63B9800BAEFEB /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE505D07D63CBA00BAEFEB /* MainMenu.nib */,
+				8AEE505F07D63CBA00BAEFEB /* NewJob.nib */,
+				8AEE50AD07D645D200BAEFEB /* ArgumentView.nib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		A449740D076E661600E7092A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8A8AC4EE077377DC00BB4258 /* GridSampleApplicationDelegate.h */,
+				8A8AC4EF077377DC00BB4258 /* GridSampleApplicationDelegate.m */,
+				8A8AC4F0077377DC00BB4258 /* GridSampleConnectionController.h */,
+				8A8AC4F1077377DC00BB4258 /* GridSampleConnectionController.m */,
+				8A8AC4F2077377DC00BB4258 /* GridSampleJobStateToStringTransformer.h */,
+				8A8AC4F3077377DC00BB4258 /* GridSampleJobStateToStringTransformer.m */,
+				8A8AC4F4077377DC00BB4258 /* GridSampleLoginController.h */,
+				8A8AC4F5077377DC00BB4258 /* GridSampleLoginController.m */,
+				8A8AC4F6077377DC00BB4258 /* GridSampleServiceBrowser.h */,
+				8A8AC4F7077377DC00BB4258 /* GridSampleServiceBrowser.m */,
+				8A8AC4F8077377DC00BB4258 /* GridSampleToolbarController.h */,
+				8A8AC4F9077377DC00BB4258 /* GridSampleToolbarController.m */,
+			);
+			name = Other;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A0F08B607C5544400F2D228 /* Xgrid MPI Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A51C3E2088435D7007E3447 /* Build configuration list for PBXNativeTarget "Xgrid MPI Sample" */;
+			buildPhases = (
+				8A0F098607C5688400F2D228 /* CopyFiles */,
+				8A0F08B307C5544400F2D228 /* Resources */,
+				8A0F08B407C5544400F2D228 /* Sources */,
+				8A0F08B507C5544400F2D228 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = MPI/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Xgrid MPI Sample";
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "Xgrid MPI Sample";
+			productName = "Xgrid MPI Sample";
+			productReference = 8A0F08B707C5544400F2D228 /* Xgrid MPI Sample.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Xgrid MPI Sample</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Xgrid_MPI_Sample</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>22</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		8A8AC57F07737D4400BB4258 /* Xgrid Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A51C3DA088435D7007E3447 /* Build configuration list for PBXNativeTarget "Xgrid Sample" */;
+			buildPhases = (
+				8A8AC57C07737D4400BB4258 /* Resources */,
+				8A8AC57D07737D4400BB4258 /* Sources */,
+				8A8AC57E07737D4400BB4258 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = Sample/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Xgrid Sample";
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "Xgrid Sample";
+			productName = "Xgrid Sample";
+			productReference = 8A8AC58007737D4400BB4258 /* Xgrid Sample.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Xgrid Sample</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Xgrid_Sample</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>22</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		8AEE502C07D63A7E00BAEFEB /* Xgrid Feeder Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A51C3DE088435D7007E3447 /* Build configuration list for PBXNativeTarget "Xgrid Feeder Sample" */;
+			buildPhases = (
+				8AEE502907D63A7E00BAEFEB /* Resources */,
+				8AEE502A07D63A7E00BAEFEB /* Sources */,
+				8AEE502B07D63A7E00BAEFEB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = Feeder/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Xgrid Feeder Sample";
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "Xgrid Feeder Sample";
+			productName = "Xgrid Feeder Sample";
+			productReference = 8AEE502D07D63A7E00BAEFEB /* Xgrid Feeder Sample.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Xgrid Feeder Sample</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Xgrid_Feeder_Sample</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>22</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8A51C3EA088435D7007E3447 /* Build configuration list for PBXProject "GridSample" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GridSample */;
+			projectDirPath = "";
+			targets = (
+				8A925D9A08BD2032003A9B53 /* All Applications */,
+				8A8AC57F07737D4400BB4258 /* Xgrid Sample */,
+				8AEE502C07D63A7E00BAEFEB /* Xgrid Feeder Sample */,
+				8A0F08B607C5544400F2D228 /* Xgrid MPI Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A0F08B307C5544400F2D228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0F08D907C555DB00F2D228 /* addFile.tiff in Resources */,
+				8A0F08DA07C555DB00F2D228 /* clone.tiff in Resources */,
+				8A0F08DB07C555DC00F2D228 /* delete.tiff in Resources */,
+				8A0F08E707C555E500F2D228 /* info.tiff in Resources */,
+				8A0F08E807C555E700F2D228 /* new.tiff in Resources */,
+				8A0F08E907C555E800F2D228 /* stop.tiff in Resources */,
+				8A0F08EA07C5561000F2D228 /* JobResults.nib in Resources */,
+				8A0F08EC07C5561000F2D228 /* MainWindow.nib in Resources */,
+				8A0F08ED07C5561000F2D228 /* Login.nib in Resources */,
+				8A0F08EF07C5561000F2D228 /* JobInfo.nib in Resources */,
+				8A0F08F807C556F800F2D228 /* MainMenu.nib in Resources */,
+				8A0F092607C55AF200F2D228 /* NewJob.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8AC57C07737D4400BB4258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8AC58B07737D6100BB4258 /* MainMenu.nib in Resources */,
+				8A8AC58C07737D6100BB4258 /* MainWindow.nib in Resources */,
+				8A8AC58D07737D6100BB4258 /* Login.nib in Resources */,
+				8A8AC58E07737D6100BB4258 /* NewJob.nib in Resources */,
+				8A8AC58F07737D6100BB4258 /* JobInfo.nib in Resources */,
+				8A8AC59007737D6100BB4258 /* JobResults.nib in Resources */,
+				8A8AC59107737D6100BB4258 /* addFile.tiff in Resources */,
+				8A8AC59207737D6100BB4258 /* clone.tiff in Resources */,
+				8A8AC59307737D6100BB4258 /* delete.tiff in Resources */,
+				8A8AC59407737D6100BB4258 /* info.tiff in Resources */,
+				8A8AC59507737D6100BB4258 /* new.tiff in Resources */,
+				8A8AC59607737D6100BB4258 /* stop.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEE502907D63A7E00BAEFEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEE505707D63C6D00BAEFEB /* delete.tiff in Resources */,
+				8AEE505807D63C6E00BAEFEB /* stop.tiff in Resources */,
+				8AEE505907D63C6F00BAEFEB /* addFile.tiff in Resources */,
+				8AEE505A07D63C6F00BAEFEB /* new.tiff in Resources */,
+				8AEE505B07D63C7000BAEFEB /* clone.tiff in Resources */,
+				8AEE505C07D63C7000BAEFEB /* info.tiff in Resources */,
+				8AEE507007D63DCC00BAEFEB /* JobResults.nib in Resources */,
+				8AEE507107D63DCC00BAEFEB /* MainWindow.nib in Resources */,
+				8AEE507207D63DCC00BAEFEB /* Login.nib in Resources */,
+				8AEE507307D63DCC00BAEFEB /* JobInfo.nib in Resources */,
+				8AEE506107D63CBA00BAEFEB /* MainMenu.nib in Resources */,
+				8AEE506207D63CBA00BAEFEB /* NewJob.nib in Resources */,
+				8AEE50AF07D645D200BAEFEB /* ArgumentView.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A0F08B407C5544400F2D228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0F08C607C5551200F2D228 /* GridMPIApplicationDelegate.m in Sources */,
+				8A0F08DC07C555DD00F2D228 /* GridSampleApplicationDelegate.m in Sources */,
+				8A0F08DD07C555DE00F2D228 /* GridSampleConnectionController.m in Sources */,
+				8A0F08DE07C555DE00F2D228 /* GridSampleJobInfoWindowController.m in Sources */,
+				8A0F08DF07C555DF00F2D228 /* GridSampleJobResultsWindowController.m in Sources */,
+				8A0F08E007C555DF00F2D228 /* GridSampleJobStateToStringTransformer.m in Sources */,
+				8A0F08E107C555E000F2D228 /* GridSampleLoginController.m in Sources */,
+				8A0F08E207C555E100F2D228 /* GridSampleMainWindowController.m in Sources */,
+				8A0F08E307C555E200F2D228 /* GridSampleNewJobWindowController.m in Sources */,
+				8A0F08E407C555E200F2D228 /* GridSampleServiceBrowser.m in Sources */,
+				8A0F08E507C555E400F2D228 /* GridSampleToolbarController.m in Sources */,
+				8A0F090607C5576000F2D228 /* main.m in Sources */,
+				8A0F091407C55A6200F2D228 /* GridMPINewJobWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8AC57D07737D4400BB4258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8AC59707737D7500BB4258 /* main.m in Sources */,
+				8A8AC59807737D7500BB4258 /* GridSampleApplicationDelegate.m in Sources */,
+				8A8AC59907737D7500BB4258 /* GridSampleConnectionController.m in Sources */,
+				8A8AC59A07737D7500BB4258 /* GridSampleJobInfoWindowController.m in Sources */,
+				8A8AC59B07737D7500BB4258 /* GridSampleJobResultsWindowController.m in Sources */,
+				8A8AC59C07737D7500BB4258 /* GridSampleJobStateToStringTransformer.m in Sources */,
+				8A8AC59D07737D7500BB4258 /* GridSampleLoginController.m in Sources */,
+				8A8AC59E07737D7500BB4258 /* GridSampleMainWindowController.m in Sources */,
+				8A8AC59F07737D7500BB4258 /* GridSampleNewJobWindowController.m in Sources */,
+				8A8AC5A007737D7500BB4258 /* GridSampleServiceBrowser.m in Sources */,
+				8A8AC5A107737D7500BB4258 /* GridSampleToolbarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEE502A07D63A7E00BAEFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEE504107D63BDD00BAEFEB /* GridFeederApplicationDelegate.m in Sources */,
+				8AEE504207D63BDD00BAEFEB /* GridFeederNewJobWindowController.m in Sources */,
+				8AEE504D07D63C5D00BAEFEB /* GridSampleLoginController.m in Sources */,
+				8AEE504E07D63C5D00BAEFEB /* GridSampleJobResultsWindowController.m in Sources */,
+				8AEE504F07D63C5E00BAEFEB /* GridSampleJobInfoWindowController.m in Sources */,
+				8AEE505007D63C6000BAEFEB /* GridSampleMainWindowController.m in Sources */,
+				8AEE505107D63C6000BAEFEB /* GridSampleToolbarController.m in Sources */,
+				8AEE505207D63C6100BAEFEB /* GridSampleServiceBrowser.m in Sources */,
+				8AEE505307D63C6100BAEFEB /* GridSampleJobStateToStringTransformer.m in Sources */,
+				8AEE505407D63C6200BAEFEB /* GridSampleNewJobWindowController.m in Sources */,
+				8AEE505507D63C6300BAEFEB /* GridSampleApplicationDelegate.m in Sources */,
+				8AEE505607D63C6300BAEFEB /* GridSampleConnectionController.m in Sources */,
+				8AEE506307D63CD500BAEFEB /* main.m in Sources */,
+				8AEE509E07D6452600BAEFEB /* GridFeederArgumentViewController.m in Sources */,
+				8AEE50A407D6456900BAEFEB /* GridFeederColorBackgroundView.m in Sources */,
+				8AEE50C707D646C600BAEFEB /* GridFeederArgumentContainerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A925D9C08BD2038003A9B53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A8AC57F07737D4400BB4258 /* Xgrid Sample */;
+			targetProxy = 8A925D9B08BD2038003A9B53 /* PBXContainerItemProxy */;
+		};
+		8A925D9E08BD203A003A9B53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AEE502C07D63A7E00BAEFEB /* Xgrid Feeder Sample */;
+			targetProxy = 8A925D9D08BD203A003A9B53 /* PBXContainerItemProxy */;
+		};
+		8A925DA008BD203C003A9B53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A0F08B607C5544400F2D228 /* Xgrid MPI Sample */;
+			targetProxy = 8A925D9F08BD203C003A9B53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		8A0F08F507C556E400F2D228 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A0F08F607C556E400F2D228 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		8A0F092407C55AF200F2D228 /* NewJob.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A0F092507C55AF200F2D228 /* English */,
+			);
+			name = NewJob.nib;
+			sourceTree = "<group>";
+		};
+		8A7B4785076A409B0026504F /* NewJob.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A7B4786076A409B0026504F /* English */,
+			);
+			name = NewJob.nib;
+			sourceTree = "<group>";
+		};
+		8A7B5EEE076A79850026504F /* JobInfo.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A7B5EEF076A79850026504F /* English */,
+			);
+			name = JobInfo.nib;
+			sourceTree = "<group>";
+		};
+		8A7B5F68076A7F880026504F /* JobResults.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A7B5F69076A7F880026504F /* English */,
+			);
+			name = JobResults.nib;
+			sourceTree = "<group>";
+		};
+		8A97F9D7076510C20073AAC0 /* MainWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A97F9D8076510C20073AAC0 /* English */,
+			);
+			name = MainWindow.nib;
+			sourceTree = "<group>";
+		};
+		8AEE505D07D63CBA00BAEFEB /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AEE505E07D63CBA00BAEFEB /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		8AEE505F07D63CBA00BAEFEB /* NewJob.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AEE506007D63CBA00BAEFEB /* English */,
+			);
+			name = NewJob.nib;
+			sourceTree = "<group>";
+		};
+		8AEE50AD07D645D200BAEFEB /* ArgumentView.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AEE50AE07D645D200BAEFEB /* English */,
+			);
+			name = ArgumentView.nib;
+			sourceTree = "<group>";
+		};
+		A470CF4F07683DAC000C5DC3 /* Login.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A470CF5007683DAC000C5DC3 /* English */,
+			);
+			name = Login.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A51C3DB088435D7007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = Sample/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid Sample";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8A51C3DC088435D7007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = Sample/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid Sample";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8A51C3DF088435D7007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = Feeder/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid Feeder Sample";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8A51C3E0088435D7007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = Feeder/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid Feeder Sample";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8A51C3E3088435D7007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = MPI/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid MPI Sample";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8A51C3E4088435D7007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridSample_Prefix.pch;
+				INFOPLIST_FILE = MPI/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid MPI Sample";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8A51C3EB088435D7007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		8A51C3EC088435D7007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		8A925DA208BD2049003A9B53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "All Applications";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8A925DA308BD2049003A9B53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = "All Applications";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A51C3DA088435D7007E3447 /* Build configuration list for PBXNativeTarget "Xgrid Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3DB088435D7007E3447 /* Debug */,
+				8A51C3DC088435D7007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A51C3DE088435D7007E3447 /* Build configuration list for PBXNativeTarget "Xgrid Feeder Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3DF088435D7007E3447 /* Debug */,
+				8A51C3E0088435D7007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A51C3E2088435D7007E3447 /* Build configuration list for PBXNativeTarget "Xgrid MPI Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3E3088435D7007E3447 /* Debug */,
+				8A51C3E4088435D7007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A51C3EA088435D7007E3447 /* Build configuration list for PBXProject "GridSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3EB088435D7007E3447 /* Debug */,
+				8A51C3EC088435D7007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A925DA108BD2049003A9B53 /* Build configuration list for PBXAggregateTarget "All Applications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A925DA208BD2049003A9B53 /* Debug */,
+				8A925DA308BD2049003A9B53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

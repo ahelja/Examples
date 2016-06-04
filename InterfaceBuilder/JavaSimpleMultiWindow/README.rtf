@@ -1,0 +1,51 @@
+{\rtf1\mac\ansicpg10000\cocoartf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs24 \cf0 Objective
+\f1\b0 :\
+\
+Although the tendency is to put all of your windows and controllers in one nib, chance are that the user will not open every single window in your application. Therefore it doesn't make sense to load them all at launch time. Instead, only load the nibs you need when you need them. This example will show you how to use multiple nibs within a single application. \
+\
+This sample project has four major points of interest:\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\li340\fi-340\ql\qnatural
+\cf0 \
+
+\f0\b SMWAppDelegate
+\f1\b0  - This is our NSApplication delegate. It has an action which creates the second window called displaySecondWindow(). If we wanted to refine the behavior of our Application, we could do so here.\
+
+\f0\b \
+SMWSecondWindowController
+\f1\b0  - This is a subclass of NSWindowController. It will manage our second window.\
+
+\f0\b \
+MainMenu.nib
+\f1\b0  - This nib contains the Main Menu and Main Window for our application. It contains an instance of an SMWAppDelegate object.\
+\
+
+\f0\b SecondWindow.nib
+\f1\b0  - This nib contains our second window. Its File's Owner is set to SMWSecondWindowController so it can connect to the answerQuestion() action as well as the questionField and answerField outlets. But wait, there's more! Because SMWSecondWindowController is a subclass of NSWindowController, it contains an outlet called window. This outlet is connected to the window contained within the SecondWindow.nib file.\
+\
+
+\f0\b Overview:
+\f1\b0 \
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+\cf0 When the application is launched, the system looks at the Info.plist in the Application wrapper to determine what the NSPrincipalClass is. Given our application settings, it will proceed to create an instance of type NSApplication. The NSApplication object then looks through the Info.plist to figure out what the main nib is. We've set this entry to MainMenu, so MainMenu.nib will be loaded.\
+\
+An SMWAppDelegate object will be instantiated as a top level object and attached to the NSApplication object as its delegate.\
+\
+As part of the nib loading process, the system will hook our displaySecondWindow() action to the button in MainMenu.nib. If we had created any outlets in MainMenu.nib, they would be connected at this time. Now the system waits for the user to react. It's important to note that we don't go on to load the SecondWindow nib until the user clicks the button. \
+\
+Eventually the user will be compelled to click the Ask a Question button. When they do, the displaySecondWindow() action will be called and we'll go about creating the second window. We first look to see if we've already made a controller and create one if we haven't. \
+\
+We create a new SMWSecondWindowController and call its constructor. The constructor of SMWSecondWindowController will call the constructor for NSWindowController.\
+\
+NSWindowController does its work lazily, so the associated nib will only be loaded when the window is shown. After a call to showWindow(), the system will connect the actions and outlets declared in the nib to the File's Owner, which in this case is SMWSecondWindowController. \
+\
+If the user closes the window and later clicks the Second Window button, we'll simply call showWindow() to make it visible again.\
+\
+The user will have the opportunity to click on the Ask button after the second window appears. This button has been connected to the answerQuestion() action in SMWSecondWindowController. Therefore, when the user clicks the button, askQuestion() will be called. This function uses the questionField and answerField outlets to display a string. When the window was loaded, questionField and answerField outlets were filled with NSTextField objects. We can use the NSTextField method setStringValue() to change the string displayed by the text field.\
+\
+The method increaseFont() was added to the FirstResponder so that the menu item Increase Font could be connected to the First Responder and the increaseFont message could be sent along through the responder chain until it lands on the SMWSecondWindowController object which implements a method called increaseFont() which, surprisingly, increases the font of the Text Field.  Notice that it doesn't matter which nib those UI elements are in, if they are in the responder chain, they can implement methods added to the First Responder.}

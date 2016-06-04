@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                resetNow = id; 
+                setFrequency = id; 
+                startResetStorm = id; 
+                stopResetStorm = id; 
+                timerIntervalExpired = id; 
+                toggleLowLevelResets = id; 
+            }; 
+            CLASS = ApplicationController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fFrequencySlider = id; fStartButton = id; fStopButton = id; fTimer = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

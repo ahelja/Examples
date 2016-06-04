@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		0867D6AAFE840B52C02AAC07 = {
+			children = (
+				0867D6ABFE840B52C02AAC07,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0867D6ABFE840B52C02AAC07 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//180
+//181
+//182
+//183
+//184
+		180EAAB80677D02C006A18D0 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = NavSaveDialog.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		180EAAB90677D02C006A18D0 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = NavSaveDialog.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		180EAABB0677D02C006A18D0 = {
+			fileRef = 180EAAB90677D02C006A18D0;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		183026EB06668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = HelpTextFrame.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026EC06668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = HelpTextFrame.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026ED06668043003BA807 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/Localizable.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026EE06668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = main.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026EF06668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MLTEShowcase_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026F006668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MLTEShowcaseDefines.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026F106668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = MLTEShowcaseUtils.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026F206668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MLTEShowcaseUtils.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026F706668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = TextView.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026F806668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = TextView.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		183026F906668043003BA807 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = version.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1830270006668043003BA807 = {
+			fileRef = 183026EB06668043003BA807;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1830270306668043003BA807 = {
+			fileRef = 183026EE06668043003BA807;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1830270606668043003BA807 = {
+			fileRef = 183026F106668043003BA807;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1830270C06668043003BA807 = {
+			fileRef = 183026F706668043003BA807;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1830270E06668043003BA807 = {
+			fileRef = 183026F906668043003BA807;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		183027110666805B003BA807 = {
+			children = (
+				180EAAB80677D02C006A18D0,
+				180EAAB90677D02C006A18D0,
+				935FC5B106774BBD00F9E274,
+				935FC5B206774BBD00F9E274,
+				935FC673067761C900F9E274,
+				935FC674067761C900F9E274,
+			);
+			isa = PBXGroup;
+			name = Nav;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		185491590678FC5500965536 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.jpeg;
+			path = rainbowpark.jpg;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1854915A0678FC5500965536 = {
+			fileRef = 185491590678FC5500965536;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		188C34FC071CFFB100533008 = {
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/tcsh;
+			shellScript = "xcodebuild installsrc SRCROOT=$DSTROOT/Developer/Examples/Carbon/MLTEShowcase\n/bin/rm -rf $DSTROOT/Developer/Examples/Carbon/MLTEShowcase/build/\n/usr/sbin/chown root:wheel $DSTROOT/Developer/Examples/Carbon/MLTEShowcase/*\n";
+		};
+//180
+//181
+//182
+//183
+//184
+//190
+//191
+//192
+//193
+//194
+		195DF8CFFE9D517E11CA2CBB = {
+			children = (
+				8D0C4E970486CD37000505A6,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//200
+//201
+//202
+//203
+//204
+		20286C28FDCF999611CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA,
+				4A9504C6FFE6A39111CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 20286C29FDCF999611CA2CEA;
+			projectDirPath = "";
+			targets = (
+				8D0C4E890486CD37000505A6,
+			);
+		};
+		20286C29FDCF999611CA2CEA = {
+			children = (
+				89CEB69D07B06DB9004459AA,
+				20286C2AFDCF999611CA2CEA,
+				183027110666805B003BA807,
+				20286C2CFDCF999611CA2CEA,
+				20286C32FDCF999611CA2CEA,
+				195DF8CFFE9D517E11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = MLTEShowcase;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA = {
+			children = (
+				183026EF06668043003BA807,
+				183026F006668043003BA807,
+				183026EE06668043003BA807,
+				183026F806668043003BA807,
+				183026F706668043003BA807,
+				183026EC06668043003BA807,
+				183026EB06668043003BA807,
+				183026F206668043003BA807,
+				183026F106668043003BA807,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA = {
+			children = (
+				8968514707CE7EB300A15BB0,
+				185491590678FC5500965536,
+				93C7BA45066D2CAE00045152,
+				183026F906668043003BA807,
+				8D0C4E960486CD37000505A6,
+				936F3C9E06800E5B002DE69D,
+				0867D6AAFE840B52C02AAC07,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA = {
+			children = (
+				89CEB63F07B06D47004459AA,
+				89CEB48C07B06D30004459AA,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		20286C33FDCF999611CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Carbon.framework;
+			path = /System/Library/Frameworks/Carbon.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//200
+//201
+//202
+//203
+//204
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+		4A9504C5FFE6A39111CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		4A9504C8FFE6A3BC11CA0CBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = ApplicationServices.framework;
+			path = /System/Library/Frameworks/ApplicationServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4A9504CAFFE6A41611CA0CBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreServices.framework;
+			path = /System/Library/Frameworks/CoreServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//4A0
+//4A1
+//4A2
+//4A3
+//4A4
+//890
+//891
+//892
+//893
+//894
+		8968514707CE7EB300A15BB0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			path = MLTEShowcaseSample.mlte;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8968514807CE7EB300A15BB0 = {
+			fileRef = 8968514707CE7EB300A15BB0;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		89CEB48C07B06D30004459AA = {
+			children = (
+				4A9504C8FFE6A3BC11CA0CBA,
+				4A9504CAFFE6A41611CA0CBA,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		89CEB63F07B06D47004459AA = {
+			children = (
+				20286C33FDCF999611CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		89CEB69D07B06DB9004459AA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			path = MLTEShowcaseREADME.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//890
+//891
+//892
+//893
+//894
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D0C4E890486CD37000505A6 = {
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6,
+				8D0C4E8F0486CD37000505A6,
+				8D0C4E910486CD37000505A6,
+				188C34FC071CFFB100533008,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MLTEShowcase_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = $DSTROOT/Developer/Examples/Carbon/MLTEShowcase;
+				PRODUCT_NAME = MLTEShowcase;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = MLTEShowcase;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MLTEShowcase;
+			productReference = 8D0C4E970486CD37000505A6;
+			productType = "com.apple.product-type.application";
+		};
+		8D0C4E8C0486CD37000505A6 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6,
+				936F3C9F06800E5B002DE69D,
+				1830270E06668043003BA807,
+				93C7BA47066D2CAE00045152,
+				1854915A0678FC5500965536,
+				8968514807CE7EB300A15BB0,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0C4E8D0486CD37000505A6 = {
+			fileRef = 0867D6AAFE840B52C02AAC07;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D0C4E8F0486CD37000505A6 = {
+			buildActionMask = 2147483647;
+			files = (
+				1830270006668043003BA807,
+				1830270306668043003BA807,
+				1830270606668043003BA807,
+				1830270C06668043003BA807,
+				935FC5B406774BBD00F9E274,
+				935FC676067761C900F9E274,
+				180EAABB0677D02C006A18D0,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0C4E910486CD37000505A6 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0C4E920486CD37000505A6 = {
+			fileRef = 20286C33FDCF999611CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D0C4E960486CD37000505A6 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D0C4E970486CD37000505A6 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = MLTEShowcase.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//930
+//931
+//932
+//933
+//934
+		935FC5B106774BBD00F9E274 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = NavOpenDialog.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		935FC5B206774BBD00F9E274 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = NavOpenDialog.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		935FC5B406774BBD00F9E274 = {
+			fileRef = 935FC5B206774BBD00F9E274;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		935FC673067761C900F9E274 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = NavUtils.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		935FC674067761C900F9E274 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = NavUtils.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		935FC676067761C900F9E274 = {
+			fileRef = 935FC674067761C900F9E274;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		936F3C9E06800E5B002DE69D = {
+			children = (
+				183026ED06668043003BA807,
+			);
+			isa = PBXVariantGroup;
+			name = Localizable.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		936F3C9F06800E5B002DE69D = {
+			fileRef = 936F3C9E06800E5B002DE69D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		93C7BA45066D2CAE00045152 = {
+			children = (
+				93C7BA46066D2CAE00045152,
+			);
+			isa = PBXVariantGroup;
+			name = main.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		93C7BA46066D2CAE00045152 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/main.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		93C7BA47066D2CAE00045152 = {
+			fileRef = 93C7BA45066D2CAE00045152;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 20286C28FDCF999611CA2CEA;
+}

@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B86001BDB6411CA292A /* JumpingBox.java in Sources */ = {isa = PBXBuildFile; fileRef = 00E68290FEC88D7311DB9C8B /* JumpingBox.java */; };
+		130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E68291FEC88ED911DB9C8B /* example1.html */; };
+		F50138490381C05601EA643E /* adapt-or-die.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501383B0381BF4101EA643E /* adapt-or-die.au */; };
+		F501384A0381C05601EA643E /* cannot.be.completed.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501383C0381BF4101EA643E /* cannot.be.completed.au */; };
+		F501384B0381C05601EA643E /* ip.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501383D0381BF4101EA643E /* ip.au */; };
+		F501384C0381C05601EA643E /* that.hurts.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501383E0381BF4101EA643E /* that.hurts.au */; };
+		F501384D0381C05601EA643E /* thin.bell.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F501383F0381BF4101EA643E /* thin.bell.au */; };
+		F501384E0381C05601EA643E /* tiptoe.thru.the.tulips.au in CopyFiles */ = {isa = PBXBuildFile; fileRef = F50138400381BF4101EA643E /* tiptoe.thru.the.tulips.au */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B80001BD9A911CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B81001BD9A911CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130F8B89001BDB6411CA292A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = JumpingBox;
+			dstSubfolderSpec = 16;
+			files = (
+				130F8B8A001BDB6411CA292A /* example1.html in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50138480381C03F01EA643E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = JumpingBox/sounds;
+			dstSubfolderSpec = 16;
+			files = (
+				F50138490381C05601EA643E /* adapt-or-die.au in CopyFiles */,
+				F501384A0381C05601EA643E /* cannot.be.completed.au in CopyFiles */,
+				F501384B0381C05601EA643E /* ip.au in CopyFiles */,
+				F501384C0381C05601EA643E /* that.hurts.au in CopyFiles */,
+				F501384D0381C05601EA643E /* thin.bell.au in CopyFiles */,
+				F501384E0381C05601EA643E /* tiptoe.thru.the.tulips.au in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E68290FEC88D7311DB9C8B /* JumpingBox.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = JumpingBox.java; sourceTree = "<group>"; };
+		00E68291FEC88ED911DB9C8B /* example1.html */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.html; path = example1.html; sourceTree = "<group>"; };
+		F501383B0381BF4101EA643E /* adapt-or-die.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = "adapt-or-die.au"; sourceTree = "<group>"; };
+		F501383C0381BF4101EA643E /* cannot.be.completed.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = cannot.be.completed.au; sourceTree = "<group>"; };
+		F501383D0381BF4101EA643E /* ip.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = ip.au; sourceTree = "<group>"; };
+		F501383E0381BF4101EA643E /* that.hurts.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = that.hurts.au; sourceTree = "<group>"; };
+		F501383F0381BF4101EA643E /* thin.bell.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = thin.bell.au; sourceTree = "<group>"; };
+		F50138400381BF4101EA643E /* tiptoe.thru.the.tulips.au */ = {isa = PBXFileReference; lastKnownFileType = audio.au; path = tiptoe.thru.the.tulips.au; sourceTree = "<group>"; };
+		F50138540381C09D01EA643E /* JumpingBox */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = JumpingBox; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B88001BDB6411CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				00E68290FEC88D7311DB9C8B /* JumpingBox.java */,
+				00E68291FEC88ED911DB9C8B /* example1.html */,
+				F501383A0381BF4101EA643E /* sounds */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F50138540381C09D01EA643E /* JumpingBox */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F501383A0381BF4101EA643E /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F501383B0381BF4101EA643E /* adapt-or-die.au */,
+				F501383C0381BF4101EA643E /* cannot.be.completed.au */,
+				F501383D0381BF4101EA643E /* ip.au */,
+				F501383E0381BF4101EA643E /* that.hurts.au */,
+				F501383F0381BF4101EA643E /* thin.bell.au */,
+				F50138400381BF4101EA643E /* tiptoe.thru.the.tulips.au */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B87001BDB6411CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2342D608DF2E93008B0BD4 /* Build configuration list for PBXProject "JumpingBox" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B80001BD9A911CA292A /* Development */,
+				130F8B81001BD9A911CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B84001BDB6411CA292A /* JumpingBox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B85001BDB6411CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B86001BDB6411CA292A /* JumpingBox.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B84001BDB6411CA292A /* JumpingBox */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2342D208DF2E93008B0BD4 /* Build configuration list for PBXToolTarget "JumpingBox" */;
+			buildPhases = (
+				130F8B85001BDB6411CA292A /* Sources */,
+				130F8B87001BDB6411CA292A /* JavaArchive */,
+				130F8B88001BDB6411CA292A /* Frameworks */,
+				130F8B89001BDB6411CA292A /* CopyFiles */,
+				F50138480381C03F01EA643E /* CopyFiles */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JumpingBox;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = JumpingBox;
+			productInstallPath = /Developer/Examples/Java/Applets;
+			productName = JavaAWTApplet;
+			productReference = F50138540381C09D01EA643E /* JumpingBox */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2342D308DF2E93008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JumpingBox;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2342D408DF2E93008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/Applets;
+				JAVA_ARCHIVE_CLASSES = NO;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = JumpingBox;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2342D708DF2E93008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2342D808DF2E93008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2342D208DF2E93008B0BD4 /* Build configuration list for PBXToolTarget "JumpingBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342D308DF2E93008B0BD4 /* Debug */,
+				4C2342D408DF2E93008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2342D608DF2E93008B0BD4 /* Build configuration list for PBXProject "JumpingBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2342D708DF2E93008B0BD4 /* Debug */,
+				4C2342D808DF2E93008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

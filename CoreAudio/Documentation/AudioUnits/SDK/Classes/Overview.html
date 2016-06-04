@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>Overview</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h2>AudioUnit SDK Overview</h2>
+
+The classes described here are used for implementing your own AudioUnits. 
+You should be familiar with the <a href='../../Overview/index.html' target='_top'>AudioUnit API</a> 
+first, before you begin using this to implement an AudioUnit. While it appears that there
+is a lot of code here that you must understand, actually the SDK is doing a lot for you
+and the part of the SDK you need to deal with is limited. Refer to the sample code
+to see examples of how this SDK is used to write an AudioUnit.
+
+<h3><a href="AUBase_fs.html" target="_top">AUBase</a></h3>
+<a href="AUBase_fs.html" target="_top">AUBase</a> is the base class for an AudioUnit. There are several subclasses of 
+AUBase which support various flavors of AudioUnits, such as effects (<a href="AUEffectBase_fs.html" target="_top">AUEffectBase</a>) and 
+music devices (<a href="MusicDeviceBase_fs.html" target="_top">MusicDeviceBase</a>). Effect classes contain instances of the <a href="AUKernelBase_fs.html" target="_top">AUKernelBase</a> 
+class as the place to perform the signal processing and contain the related state information
+for each buss.
+
+<h3><a href="AUScope_fs.html" target="_top">AUScope</a> and <a href="AUElement_fs.html" target="_top">AUElement</a></h3>
+AudioUnit parameters are referenced by scope and element. Each AudioUnit has 
+several <a href="AUScope_fs.html" target="_top">AUScope</a> objects which are containers for parameter values. 
+There are four scopes referenced by the constants kAudioUnitScope_Input,
+kAudioUnitScope_Output, kAudioUnitScope_Global, or kAudioUnitScope_Group.
+Each scope of an AudioUnit contains elements which contain the parameters 
+that can be set in that scope. Elements are implemented via the <a href="AUElement_fs.html" target="_top">AUElement</a> class
+and its subclasses.
+For input and output scopes, elements represent busses and each buss
+contains some number of channels of audio. For global scope there is
+a single element containing all of the parameters that affect the
+entire audio unit. For group scope, the parameters affect that group.
+
+<h3><a href="AUCarbonViewBase_fs.html" target="_top">AUCarbonViewBase</a></h3>
+There are a set of classes for implementing user interface views in Carbon.
+The documentation on these classes will be forthcoming.
+
+<br/><br/><hr/><br/>
+This is a class diagram showing inheritance and containment of AUBase and its subclasses.
+Arrows indicate inheritance and lines with 1..*  indicate containment. 
+AUBase contains instances of AUScope which in turn contain instances of AUElement.<br/>
+<center><img src='AUBase.jpg'/></center>
+
+	</body></html>

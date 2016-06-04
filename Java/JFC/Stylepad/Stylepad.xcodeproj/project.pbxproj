@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F8B92001BDF0A11CA292A /* Stylepad.java in Sources */ = {isa = PBXBuildFile; fileRef = 010341B7FEEF030011DB9C8B /* Stylepad.java */; };
+		9598961A0655964200EBDC0C /* Stylepad_zh_CN.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = 959896190655964200EBDC0C /* Stylepad_zh_CN.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		9598961C0655968500EBDC0C /* Notepad_zh_CN.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = 9598961B0655968500EBDC0C /* Notepad_zh_CN.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB100340DB8301B2DA19 /* HelloWorld.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E0BAFC0340DB8201B2DA19 /* HelloWorld.java */; };
+		F5E0BB120340DB8301B2DA19 /* alice.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BAFF0340DB8301B2DA19 /* alice.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB130340DB8301B2DA19 /* bold.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB000340DB8301B2DA19 /* bold.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB140340DB8301B2DA19 /* bullets.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB010340DB8301B2DA19 /* bullets.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB150340DB8301B2DA19 /* caterpillar.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB020340DB8301B2DA19 /* caterpillar.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB160340DB8301B2DA19 /* center.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB030340DB8301B2DA19 /* center.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB170340DB8301B2DA19 /* fg.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB040340DB8301B2DA19 /* fg.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB180340DB8301B2DA19 /* hatter.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB050340DB8301B2DA19 /* hatter.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB190340DB8301B2DA19 /* italic.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB060340DB8301B2DA19 /* italic.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB1A0340DB8301B2DA19 /* left.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB070340DB8301B2DA19 /* left.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB1B0340DB8301B2DA19 /* rabbit.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB080340DB8301B2DA19 /* rabbit.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB1C0340DB8301B2DA19 /* rabbit2.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB090340DB8301B2DA19 /* rabbit2.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB1D0340DB8301B2DA19 /* right.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB0A0340DB8301B2DA19 /* right.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB1E0340DB8301B2DA19 /* Stylepad.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB0B0340DB8301B2DA19 /* Stylepad.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB1F0340DB8301B2DA19 /* Stylepad_sv.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB0C0340DB8301B2DA19 /* Stylepad_sv.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB210340DB8301B2DA19 /* underline.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB0E0340DB8301B2DA19 /* underline.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB220340DB8301B2DA19 /* Wonderland.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E0BB0F0340DB8301B2DA19 /* Wonderland.java */; };
+		F5E0BB240340DC1A01B2DA19 /* Notepad.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E0BB230340DC1A01B2DA19 /* Notepad.java */; };
+		F5E0BB260340DC3C01B2DA19 /* ElementTreePanel.java in Sources */ = {isa = PBXBuildFile; fileRef = F5E0BB250340DC3C01B2DA19 /* ElementTreePanel.java */; };
+		F5E0BB330340DDAF01B2DA19 /* copy.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB290340DDAF01B2DA19 /* copy.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB340340DDAF01B2DA19 /* cut.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB2A0340DDAF01B2DA19 /* cut.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB350340DDAF01B2DA19 /* new.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB2B0340DDAF01B2DA19 /* new.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB360340DDAF01B2DA19 /* Notepad.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB2C0340DDAF01B2DA19 /* Notepad.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB370340DDAF01B2DA19 /* Notepad_fr.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB2D0340DDAF01B2DA19 /* Notepad_fr.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB380340DDAF01B2DA19 /* Notepad_sv.properties in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB2E0340DDAF01B2DA19 /* Notepad_sv.properties */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB3A0340DDAF01B2DA19 /* open.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB300340DDAF01B2DA19 /* open.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB3B0340DDAF01B2DA19 /* paste.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB310340DDAF01B2DA19 /* paste.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+		F5E0BB3C0340DDAF01B2DA19 /* save.gif in JavaArchive */ = {isa = PBXBuildFile; fileRef = F5E0BB320340DDAF01B2DA19 /* save.gif */; settings = {JAVA_ARCHIVE_SUBDIR = resources; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		130F8B95001BDF0A11CA292A /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		130F8B96001BDF0A11CA292A /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		010341B7FEEF030011DB9C8B /* Stylepad.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Stylepad.java; sourceTree = "<group>"; };
+		6A8008AE02C7B68F0CC91562 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		6A9ED92C02B0286D0CC91562 /* Stylepad.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = Stylepad.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		959896190655964200EBDC0C /* Stylepad_zh_CN.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Stylepad_zh_CN.properties; sourceTree = "<group>"; };
+		9598961B0655968500EBDC0C /* Notepad_zh_CN.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Notepad_zh_CN.properties; sourceTree = "<group>"; };
+		F5E0BAFC0340DB8201B2DA19 /* HelloWorld.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = HelloWorld.java; sourceTree = "<group>"; };
+		F5E0BAFD0340DB8201B2DA19 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F5E0BAFF0340DB8301B2DA19 /* alice.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = alice.gif; sourceTree = "<group>"; };
+		F5E0BB000340DB8301B2DA19 /* bold.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bold.gif; sourceTree = "<group>"; };
+		F5E0BB010340DB8301B2DA19 /* bullets.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bullets.gif; sourceTree = "<group>"; };
+		F5E0BB020340DB8301B2DA19 /* caterpillar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = caterpillar.gif; sourceTree = "<group>"; };
+		F5E0BB030340DB8301B2DA19 /* center.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = center.gif; sourceTree = "<group>"; };
+		F5E0BB040340DB8301B2DA19 /* fg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fg.gif; sourceTree = "<group>"; };
+		F5E0BB050340DB8301B2DA19 /* hatter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hatter.gif; sourceTree = "<group>"; };
+		F5E0BB060340DB8301B2DA19 /* italic.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = italic.gif; sourceTree = "<group>"; };
+		F5E0BB070340DB8301B2DA19 /* left.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = left.gif; sourceTree = "<group>"; };
+		F5E0BB080340DB8301B2DA19 /* rabbit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rabbit.gif; sourceTree = "<group>"; };
+		F5E0BB090340DB8301B2DA19 /* rabbit2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rabbit2.gif; sourceTree = "<group>"; };
+		F5E0BB0A0340DB8301B2DA19 /* right.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = right.gif; sourceTree = "<group>"; };
+		F5E0BB0B0340DB8301B2DA19 /* Stylepad.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Stylepad.properties; sourceTree = "<group>"; };
+		F5E0BB0C0340DB8301B2DA19 /* Stylepad_sv.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Stylepad_sv.properties; sourceTree = "<group>"; };
+		F5E0BB0E0340DB8301B2DA19 /* underline.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = underline.gif; sourceTree = "<group>"; };
+		F5E0BB0F0340DB8301B2DA19 /* Wonderland.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; path = Wonderland.java; sourceTree = "<group>"; };
+		F5E0BB230340DC1A01B2DA19 /* Notepad.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; name = Notepad.java; path = ../Notepad/Notepad.java; sourceTree = SOURCE_ROOT; };
+		F5E0BB250340DC3C01B2DA19 /* ElementTreePanel.java */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.java; name = ElementTreePanel.java; path = ../Notepad/ElementTreePanel.java; sourceTree = SOURCE_ROOT; };
+		F5E0BB290340DDAF01B2DA19 /* copy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = copy.gif; sourceTree = "<group>"; };
+		F5E0BB2A0340DDAF01B2DA19 /* cut.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cut.gif; sourceTree = "<group>"; };
+		F5E0BB2B0340DDAF01B2DA19 /* new.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = new.gif; sourceTree = "<group>"; };
+		F5E0BB2C0340DDAF01B2DA19 /* Notepad.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Notepad.properties; sourceTree = "<group>"; };
+		F5E0BB2D0340DDAF01B2DA19 /* Notepad_fr.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Notepad_fr.properties; sourceTree = "<group>"; };
+		F5E0BB2E0340DDAF01B2DA19 /* Notepad_sv.properties */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = Notepad_sv.properties; sourceTree = "<group>"; };
+		F5E0BB300340DDAF01B2DA19 /* open.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = open.gif; sourceTree = "<group>"; };
+		F5E0BB310340DDAF01B2DA19 /* paste.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = paste.gif; sourceTree = "<group>"; };
+		F5E0BB320340DDAF01B2DA19 /* save.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = save.gif; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		130F8B94001BDF0A11CA292A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E6828FFEC88D1A11DB9C8B = {
+			isa = PBXGroup;
+			children = (
+				010341B7FEEF030011DB9C8B /* Stylepad.java */,
+				F5E0BAFC0340DB8201B2DA19 /* HelloWorld.java */,
+				F5E0BB0F0340DB8301B2DA19 /* Wonderland.java */,
+				F5E0BAFE0340DB8201B2DA19 /* resources */,
+				F5E0BB270340DD8501B2DA19 /* sources from Notepad */,
+				F5E0BB280340DDAF01B2DA19 /* resources from Notepad */,
+				F5E0BAFD0340DB8201B2DA19 /* README.txt */,
+				6A8008AE02C7B68F0CC91562 /* Manifest */,
+				0120612AFEC8923411DB9C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0120612AFEC8923411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A9ED92C02B0286D0CC91562 /* Stylepad.jar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5E0BAFE0340DB8201B2DA19 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5E0BAFF0340DB8301B2DA19 /* alice.gif */,
+				F5E0BB000340DB8301B2DA19 /* bold.gif */,
+				F5E0BB010340DB8301B2DA19 /* bullets.gif */,
+				F5E0BB020340DB8301B2DA19 /* caterpillar.gif */,
+				F5E0BB030340DB8301B2DA19 /* center.gif */,
+				F5E0BB040340DB8301B2DA19 /* fg.gif */,
+				F5E0BB050340DB8301B2DA19 /* hatter.gif */,
+				F5E0BB060340DB8301B2DA19 /* italic.gif */,
+				F5E0BB070340DB8301B2DA19 /* left.gif */,
+				F5E0BB080340DB8301B2DA19 /* rabbit.gif */,
+				F5E0BB090340DB8301B2DA19 /* rabbit2.gif */,
+				F5E0BB0A0340DB8301B2DA19 /* right.gif */,
+				F5E0BB0B0340DB8301B2DA19 /* Stylepad.properties */,
+				F5E0BB0C0340DB8301B2DA19 /* Stylepad_sv.properties */,
+				959896190655964200EBDC0C /* Stylepad_zh_CN.properties */,
+				F5E0BB0E0340DB8301B2DA19 /* underline.gif */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		F5E0BB270340DD8501B2DA19 /* sources from Notepad */ = {
+			isa = PBXGroup;
+			children = (
+				F5E0BB230340DC1A01B2DA19 /* Notepad.java */,
+				F5E0BB250340DC3C01B2DA19 /* ElementTreePanel.java */,
+			);
+			name = "sources from Notepad";
+			sourceTree = SOURCE_ROOT;
+		};
+		F5E0BB280340DDAF01B2DA19 /* resources from Notepad */ = {
+			isa = PBXGroup;
+			children = (
+				F5E0BB290340DDAF01B2DA19 /* copy.gif */,
+				F5E0BB2A0340DDAF01B2DA19 /* cut.gif */,
+				F5E0BB2B0340DDAF01B2DA19 /* new.gif */,
+				F5E0BB2C0340DDAF01B2DA19 /* Notepad.properties */,
+				F5E0BB2D0340DDAF01B2DA19 /* Notepad_fr.properties */,
+				F5E0BB2E0340DDAF01B2DA19 /* Notepad_sv.properties */,
+				9598961B0655968500EBDC0C /* Notepad_zh_CN.properties */,
+				F5E0BB300340DDAF01B2DA19 /* open.gif */,
+				F5E0BB310340DDAF01B2DA19 /* paste.gif */,
+				F5E0BB320340DDAF01B2DA19 /* save.gif */,
+			);
+			name = "resources from Notepad";
+			path = ../Notepad/resources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		130F8B93001BDF0A11CA292A /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E0BB120340DB8301B2DA19 /* alice.gif in JavaArchive */,
+				F5E0BB130340DB8301B2DA19 /* bold.gif in JavaArchive */,
+				F5E0BB140340DB8301B2DA19 /* bullets.gif in JavaArchive */,
+				F5E0BB150340DB8301B2DA19 /* caterpillar.gif in JavaArchive */,
+				F5E0BB160340DB8301B2DA19 /* center.gif in JavaArchive */,
+				F5E0BB170340DB8301B2DA19 /* fg.gif in JavaArchive */,
+				F5E0BB180340DB8301B2DA19 /* hatter.gif in JavaArchive */,
+				F5E0BB190340DB8301B2DA19 /* italic.gif in JavaArchive */,
+				F5E0BB1A0340DB8301B2DA19 /* left.gif in JavaArchive */,
+				F5E0BB1B0340DB8301B2DA19 /* rabbit.gif in JavaArchive */,
+				F5E0BB1C0340DB8301B2DA19 /* rabbit2.gif in JavaArchive */,
+				F5E0BB1D0340DB8301B2DA19 /* right.gif in JavaArchive */,
+				F5E0BB1E0340DB8301B2DA19 /* Stylepad.properties in JavaArchive */,
+				F5E0BB1F0340DB8301B2DA19 /* Stylepad_sv.properties in JavaArchive */,
+				9598961A0655964200EBDC0C /* Stylepad_zh_CN.properties in JavaArchive */,
+				F5E0BB210340DB8301B2DA19 /* underline.gif in JavaArchive */,
+				F5E0BB330340DDAF01B2DA19 /* copy.gif in JavaArchive */,
+				F5E0BB340340DDAF01B2DA19 /* cut.gif in JavaArchive */,
+				F5E0BB350340DDAF01B2DA19 /* new.gif in JavaArchive */,
+				F5E0BB360340DDAF01B2DA19 /* Notepad.properties in JavaArchive */,
+				F5E0BB370340DDAF01B2DA19 /* Notepad_fr.properties in JavaArchive */,
+				F5E0BB380340DDAF01B2DA19 /* Notepad_sv.properties in JavaArchive */,
+				9598961C0655968500EBDC0C /* Notepad_zh_CN.properties in JavaArchive */,
+				F5E0BB3A0340DDAF01B2DA19 /* open.gif in JavaArchive */,
+				F5E0BB3B0340DDAF01B2DA19 /* paste.gif in JavaArchive */,
+				F5E0BB3C0340DDAF01B2DA19 /* save.gif in JavaArchive */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXProject section */
+		00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4C2343AE08DF2E9B008B0BD4 /* Build configuration list for PBXProject "Stylepad" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				130F8B95001BDF0A11CA292A /* Development */,
+				130F8B96001BDF0A11CA292A /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 00E6828FFEC88D1A11DB9C8B;
+			productRefGroup = 0120612AFEC8923411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				130F8B90001BDF0A11CA292A /* Stylepad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		130F8B91001BDF0A11CA292A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F8B92001BDF0A11CA292A /* Stylepad.java in Sources */,
+				F5E0BB100340DB8301B2DA19 /* HelloWorld.java in Sources */,
+				F5E0BB220340DB8301B2DA19 /* Wonderland.java in Sources */,
+				F5E0BB240340DC1A01B2DA19 /* Notepad.java in Sources */,
+				F5E0BB260340DC3C01B2DA19 /* ElementTreePanel.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXToolTarget section */
+		130F8B90001BDF0A11CA292A /* Stylepad */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 4C2343AA08DF2E9B008B0BD4 /* Build configuration list for PBXToolTarget "Stylepad" */;
+			buildPhases = (
+				130F8B91001BDF0A11CA292A /* Sources */,
+				130F8B93001BDF0A11CA292A /* JavaArchive */,
+				130F8B94001BDF0A11CA292A /* Frameworks */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/Stylepad;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Stylepad;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			dependencies = (
+			);
+			name = Stylepad;
+			productInstallPath = /Developer/Examples/Java/JFC/Stylepad;
+			productName = Stylepad;
+			productReference = 6A9ED92C02B0286D0CC91562 /* Stylepad.jar */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin XCBuildConfiguration section */
+		4C2343AB08DF2E9B008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/Stylepad;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Stylepad;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4C2343AC08DF2E9B008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /Developer/Examples/Java/JFC/Stylepad;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_COMPRESSION = NO;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				PRODUCT_NAME = Stylepad;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+			};
+			name = Release;
+		};
+		4C2343AF08DF2E9B008B0BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4C2343B008DF2E9B008B0BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C2343AA08DF2E9B008B0BD4 /* Build configuration list for PBXToolTarget "Stylepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2343AB08DF2E9B008B0BD4 /* Debug */,
+				4C2343AC08DF2E9B008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2343AE08DF2E9B008B0BD4 /* Build configuration list for PBXProject "Stylepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2343AF08DF2E9B008B0BD4 /* Debug */,
+				4C2343B008DF2E9B008B0BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6828EFEC88D1A11DB9C8B /* Project object */;
+}

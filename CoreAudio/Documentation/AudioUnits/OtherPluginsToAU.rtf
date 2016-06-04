@@ -1,0 +1,272 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fnil\fcharset77 Monaco;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17800\viewh14260\viewkind0
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b\fs24 \cf0 Audio Unit Migration Services from pre-existing plug-in formats\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\b0 \cf0 \
+With the range of different plug-in formats that were available on Mac OS 9, and the move of host applications on Mac OS X to support Audio Units (AU), users have the difficult situation of opening documents that used other plug-in formats on the older OS, and that these documents would continue to work with Mac OS X, where the plug-in is now an Audio Unit.\
+\
+To facilitate this migration, a host has to be able to do several things:\
+(1) Identify from the original format, which AU can represent the original plugin\
+(2) Provide the original data contained in the document to the AU to configure its appropriate state\
+(3) Translate any automation data that was expressed in the original control/parameter structures into the AU's current value range.\
+\
+The structs and property ID's that are required for this support are not defined in the Panther headers. Their definitions are provided in the accompanying AUPropertiesPostPantherAdditions.h file, and will consequently be defined in the AudioUnitProperties.h header in the AudioUnit framework.\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b \cf0 (1) Identifying AU for Original Plug-In\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\b0 \cf0 \
+An AU can return from the read only property: \
+	
+\f2\fs20 kAudioUnitMigrateProperty_FromPlugin
+\f1\fs24 \
+\
+a CFArray of values of type: \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\fs20 \cf0 typedef struct  AudioUnitOtherPluginDesc\
+\{\
+	UInt32 				format; //kOtherPluginFormat_kMAS, etc\
+	AudioClassDescription	plugin;\
+\} AudioUnitOtherPluginDesc;\
+\
+/*\
+struct AudioClassDescription \{\
+    OSType mType;\
+    OSType mSubType;\
+    OSType mManufacturer;\
+\};\
+is defined in <CoreAudio/CoreAudioTypes.h>\
+\
+How these fields are used varies for each format.\
+In general, \
+	mType specifies a generic, plugin format defined descriptor, \
+	mSubType is usually left to the manufacturer to use at their discretion\
+	mManufacturer is a registered code to identify all plugins from the same manufacturer\
+\
+See below for plugin format specific details\
+*/\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\fs24 \cf0 \
+The host should release this CFArray after it is finished with it. \
+\
+Each element of the array is a pointer to the AudioUnitOtherPluginDesc struct. For an example of how to manage this, see the documentation and examples for the handling of the Factory Presets CFArray (for instance, in the SampleEffectUnit in the SDK).\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b \cf0 (2) Configuring an AU's state from Original Plug-In data\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\b0 \cf0 When a plug-in is used, its state has been saved as part of an application's document. There needs to be some mechanism to establish the state of the AU from the original plug-in's saved state.\
+\
+Once a host app has:\
+(1) Discovered that a given AU can translate another plug-in format\
+(2) Has this pre-existing preset data\
+\
+Then it needs to establish the state of the AU from this original state. It thus can also assume that the AU can interpret preset data of the format native to the other plug-in format.\
+\
+An AU's state is configured using the \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\fs20 \cf0 	kAudioUnitProperty_ClassInfo
+\f1\fs24 \
+\
+which takes a CFDictionary. (This is generally known as the aupreset dictionary).\
+\
+The host then constructs a CFDictionary from this preset by adding the original plugin preset data to this dictionary with the appropriate key/value paring:\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b \cf0 	Plug-in Type		Key 			Value \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\b0\fs20 \cf0 					CFString		CFDataRef\
+	MAS				"masdata"		MAS preset data block - see addendum for details\
+	
+\f1\fs24 	\
+
+\f2\fs20 	VST				"vstdata"		vst preset data block - see addendum for details\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\fs24 \cf0 \
+A valid aupreset dictionary is required to contain a number of predefined key-value pairs. The host should also set these values in the CFDictionary that it passes to the AudioUnit. These are:\
+"version" - at this stage this can be set to zero\
+"name" - this is the name of the preset. If possible, it is recommended that the host set this to the name of the VST/MAS preset if present, otherwise it can use "Untitled"\
+The following three fields are derived from the Component Info (specifically the ComponentDescription) of the AU in question. These values are thus of the AU that the preset is being set on, not the MAS/VST plug-in identifiers.\
+"type" - The  Audio Unit component's type ID. For example, 'aufx'\
+"subtype" - The  Audio Unit component's sub type ID. For example, 'MyFx'\
+"manufacturer" - The Audio Unit component's manufacturer ID. For example, 'appl'\
+\
+An example of how these are set can be found in the AUPublic's AUBase class in the SaveState method.\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b \cf0 (3) Translating existing Parameter Values to the Current AU's Parameter Ranges.\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\b0 \cf0 \
+When using a plug-in, the host may also have stored automation data for that plug-in. Given the differences between different plug-in formats and the means through which they publish parameters, there may need to be a translation of these values, and even the parameter identifier itself, in order for the host application to correctly translate the existing parameter automation to the parameter ID and values that are supported in the AU version.\
+\
+To this end a new property is defined - it is "read only" in that it is only used with AudioUnitGetProperty\
+	
+\f2\fs20 kAudioUnitMigrateProperty_OldAutomation
+\f1\fs24 \
+\
+This property takes the following structure:\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\fs20 \cf0 typedef struct AudioUnitParameterValueTranslation \{\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\fs24 \cf0 	
+\f2\fs20 AudioUnitOtherPluginDesc		otherDesc;\
+	UInt32						otherParamID;\
+	Float32						otherValue;\
+	AudioUnitParamterID			auParamID;\
+	Float32						auValue;\
+\} AudioUnitParameterValueTranslation;\
+
+\f1\fs24 \
+This property is called on the same scope and elementID that the parameter automation needs to be applied too (this will typically be GlobalScope, El==0)\
+\
+The host must supply values for 
+\f2\fs20 otherDesc
+\f1\fs24 , 
+\f2\fs20 otherParamID
+\f1\fs24 , 
+\f2\fs20 otherValue
+\f1\fs24 . The AudioUnit can do one of three things:\
+	(1) Provide both 
+\f2\fs20 auParamID
+\f1\fs24  and 
+\f2\fs20 auValue
+\f1\fs24  (even if there is no difference between the old and new values in a particular instance) and return noErr\
+	(2) If the AU is reusing the same paramID and value range as it was using (ie. no translation of either paramID and/or values are required), then the AU can return a new result from AudioUnitGetProperty:\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\fs20 \cf0 	\
+	\CocoaLigature0 kAudioUnitErr_PropertyNotInUse\CocoaLigature1 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\fs24 \cf0 	\
+This can save considerable time for the host, as it can assume that all values it currently has for the specified paramID can be applied to the AU as is. In this case, the AU is not required to fill in 
+\f2\fs20 auParamID
+\f1\fs24  or 
+\f2\fs20 auValue
+\f1\fs24 .\
+\
+	(3) If that parameter is unsupported in the AU version, the AU can return:\
+	
+\f2\fs20 \CocoaLigature0 kAudioUnitErr_InvalidPropertyValue
+\f1\fs24 \CocoaLigature1 \
+\
+In this case, the host must assume that this automation data (for that 
+\f2\fs20 otherParamID
+\f1\fs24 ) is no longer valid and take an appropriate action as it sees fit. The AU should not use this to indicate an invalid value, but valid paramID - it should return in that case a reasonable translation of the value itself with a valid 
+\f2\fs20 auParamID
+\f1\fs24 .\
+\
+\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b \cf0 ADDENDUM
+\f1\b0 \
+\
+This addendum details the structures that the AU can expect to see in the other plug-in formats' data segments of the aupreset dictionary.\
+\
+
+\f0\b MAS
+\f1\b0 \
+(1) MAS Settings in AU Preset\
+key: <masdata> \
+value (CFDataRef) \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2\fs20 \cf0 \
+
+\f1\fs24 The value contains one instance of the following struct
+\f2\fs20  AudioUnitPresetMAS_Settings\
+\
+typedef struct AudioUnitPresetMAS_Settings\
+\{\
+	UInt32 						manufacturerID;\
+	UInt32 						effectID;\
+	UInt32 						variantID;\
+	UInt32 						settingsVersion;\
+	UInt32 						numberOfSettings;\
+	AudioUnitPresetMAS_SettingData 	settings[1];\
+\} AudioUnitPresetMAS_Settings;\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\fs24 \cf0 \
+Which of course can contain 
+\f2\fs20 numberOfSettings
+\f1\fs24  instances of the following struct 
+\f2\fs20 AudioUnitPresetMAS_SettingData
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2\fs20 \cf0 \
+typedef struct AudioUnitPresetMAS_SettingData\
+\{\
+	UInt32 			isStockSetting; // zero or 1  i.e. "long bool"\
+	UInt32 			settingID;\
+	UInt32 			dataLen; //length of following data\
+	char 			data[1];\
+\} AudioUnitPresetMAS_SettingData;\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f1\fs24 \cf0 (2) AudioUnitOtherPluginDesc\
+\
+The following values should be applied in this struct(s) by an AU for MAS:\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\fs20 \cf0 \
+AudioUnitOtherPluginDesc masDesc;\
+masDesc.format = kOtherPluginFormat_kMAS;\
+masDesc.plugin.mType = masEffectID of MAS plugin (same as would be seen in MAS_Setting's effectID)\
+masDesc.plugin.mSubType = masVariantID of MAS plugin (same as would be seen in MAS_Setting's variantID)\
+masDesc.plugin.mManufacturer = masManufacturer of MAS plugin (same as would be seen in MAS_Setting's manufacturerID)\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f0\b\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 VST
+\f1\b0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 (1) VST Settings in AU Preset\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 key: <vstdata>\
+value (CFDataRef)\
+\
+The 'vstdata' key will hold a CFDataRef. This contains VST chunk data with no additional information. If the original VST plugin did not support data chunks, the host should handle the settings by calling SetParameter for every single parameter, using the AudioUnitParameterValueTranslation information as described above.\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 (2) AudioUnitOtherPluginDesc\
+\
+The following values should be applied in this struct(s) by an AU for VST:\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\f2\fs20 \cf0 \
+AudioUnitOtherPluginDesc vstDesc;\
+vstDesc.format = kOtherPluginFormat_kVST;\
+vstDesc.plugin.mType = 0; // not used in VST spec\
+vstDesc.plugin.mSubType = vstID of VST plugin (VST defines a single unique identifier)\
+vstDesc.plugin.mManufacturer = 0; // not used in VST spec\
+}

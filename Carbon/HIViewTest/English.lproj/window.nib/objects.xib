@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<object class="NSIBObjectData">
+  <string name="targetFramework">IBCarbonFramework</string>
+  <object name="rootObject" class="NSCustomObject" id="1">
+    <string name="customClass">NSApplication</string>
+  </object>
+  <array count="4" name="allObjects">
+    <object class="IBCarbonWindow" id="166">
+      <string name="windowRect">313 333 673 813 </string>
+      <string name="title">Window</string>
+      <object name="rootControl" class="IBCarbonRootControl" id="167">
+        <string name="bounds">0 0 360 480 </string>
+        <string name="viewFrame">0 0 480 360 </string>
+        <array count="2" name="subviews">
+          <object class="IBCarbonHIView" id="190">
+            <string name="bounds">29 20 89 80 </string>
+            <string name="viewFrame">20 29 60 60 </string>
+            <string name="classID">com.apple.sample.HITestView</string>
+            <dictionary count="3" name="parameters">
+              <string>names</string>
+              <array count="3">
+                <string>gren</string>
+                <string>blue</string>
+                <string>redx</string>
+              </array>
+              <string>types</string>
+              <array count="3">
+                <string>doub</string>
+                <string>doub</string>
+                <string>doub</string>
+              </array>
+              <string>values</string>
+              <array count="3">
+                <string>0</string>
+                <string>0</string>
+                <string>1</string>
+              </array>
+            </dictionary>
+          </object>
+          <object class="IBCarbonHIView" id="191">
+            <string name="bounds">29 111 89 171 </string>
+            <string name="viewFrame">111 29 60 60 </string>
+            <string name="classID">com.apple.sample.ttestview</string>
+          </object>
+        </array>
+      </object>
+      <boolean name="receiveUpdates">FALSE</boolean>
+      <boolean name="liveResize">TRUE</boolean>
+      <boolean name="compositing">TRUE</boolean>
+      <int name="themeBrush">49</int>
+    </object>
+    <reference idRef="167"/>
+    <reference idRef="190"/>
+    <reference idRef="191"/>
+  </array>
+  <array count="4" name="allParents">
+    <reference idRef="1"/>
+    <reference idRef="166"/>
+    <reference idRef="167"/>
+    <reference idRef="167"/>
+  </array>
+  <dictionary count="4" name="nameTable">
+    <string>Files Owner</string>
+    <reference idRef="1"/>
+    <string>MainWindow</string>
+    <reference idRef="166"/>
+    <string>View1</string>
+    <reference idRef="190"/>
+    <string>View11</string>
+    <reference idRef="191"/>
+  </dictionary>
+  <unsigned_int name="nextObjectID">192</unsigned_int>
+</object>

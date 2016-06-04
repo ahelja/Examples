@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUOutputBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUOutputBase</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "AUBase_fs.html" target="_top">AUBase</a><br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUOutputBase<br>
+<br><pre>class AUOutputBase : public AUBase </pre>
+<p>This is a base class for units that are the root of a graph.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUOutputBase">AUOutputBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUOutputBase(
+          ComponentInstance               inInstance,
+          UInt32                          numInputs,
+          UInt32                          numOutputs,
+          UInt32                          numGroups = 0
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Control</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Start">Start</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Start();</pre>
+<p>Override to perform actions when starting the graph running.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Stop">Stop</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Stop();</pre>
+<p>Override to perform actions when stopping the graph.</p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ComponentEntryDispatch">ComponentEntryDispatch</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static ComponentResult ComponentEntryDispatch(
+          ComponentParameters*            params,
+          AUOutputBase*                   This
+    );</pre>
+<p></p><br>
+<hr>
+</body></html>

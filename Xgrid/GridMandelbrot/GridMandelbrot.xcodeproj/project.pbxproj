@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A423D2750754FCEF007712BC /* GMMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A423D2730754FCEF007712BC /* GMMainWindowController.m */; };
+		A423D2A30754FF19007712BC /* MainWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = A423D2A10754FF19007712BC /* MainWindow.nib */; };
+		A42968E60753EA9000AB9C97 /* GMConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42968E20753EA9000AB9C97 /* GMConnectionController.m */; };
+		A42968E80753EA9000AB9C97 /* GMServiceBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = A42968E40753EA9000AB9C97 /* GMServiceBrowser.m */; };
+		A4E4EEA20752B63500D6EF5A /* XgridFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E4EEA10752B63500D6EF5A /* XgridFoundation.framework */; };
+		A4E4EEBA0752B6C900D6EF5A /* mandelTool.c in Sources */ = {isa = PBXBuildFile; fileRef = A4E4EEB00752B6A900D6EF5A /* mandelTool.c */; settings = {COMPILER_FLAGS = "-faltivec"; }; };
+		A4E4EEBB0752B6C900D6EF5A /* mandelToolMain.c in Sources */ = {isa = PBXBuildFile; fileRef = A4E4EEB20752B6A900D6EF5A /* mandelToolMain.c */; settings = {COMPILER_FLAGS = "-faltivec"; }; };
+		A4E4EEE40752BB0D00D6EF5A /* tour.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E4EEE30752BB0D00D6EF5A /* tour.txt */; };
+		A4E4EEE50752BB2B00D6EF5A /* MandelTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4E4EEB80752B6B800D6EF5A /* MandelTool */; };
+		A4E4EEF00752BB7300D6EF5A /* GMCropMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E4EEEC0752BB7300D6EF5A /* GMCropMarker.m */; };
+		A4E4EEF10752BB7300D6EF5A /* Hand.tif in Resources */ = {isa = PBXBuildFile; fileRef = A4E4EEED0752BB7300D6EF5A /* Hand.tif */; };
+		A4E4EEF20752BB7300D6EF5A /* GMRectangleDraggerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E4EEEF0752BB7300D6EF5A /* GMRectangleDraggerView.m */; };
+		A4E4F1150752BC9E00D6EF5A /* GMApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E4F1130752BC9E00D6EF5A /* GMApplicationDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		A4E4F10A0752BC1700D6EF5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E4EEB70752B6B800D6EF5A;
+			remoteInfo = MandelTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4E4EF2A0752BBCC00D6EF5A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				A4E4EEE50752BB2B00D6EF5A /* MandelTool in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* GridMandelbrot_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridMandelbrot_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Xgrid Mandelbrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xgrid Mandelbrot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A423D2720754FCEF007712BC /* GMMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMainWindowController.h; sourceTree = "<group>"; };
+		A423D2730754FCEF007712BC /* GMMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMainWindowController.m; sourceTree = "<group>"; };
+		A423D2A20754FF19007712BC /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainWindow.nib; sourceTree = "<group>"; };
+		A42968E10753EA9000AB9C97 /* GMConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMConnectionController.h; sourceTree = "<group>"; };
+		A42968E20753EA9000AB9C97 /* GMConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMConnectionController.m; sourceTree = "<group>"; };
+		A42968E30753EA9000AB9C97 /* GMServiceBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMServiceBrowser.h; sourceTree = "<group>"; };
+		A42968E40753EA9000AB9C97 /* GMServiceBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMServiceBrowser.m; sourceTree = "<group>"; };
+		A4E4EEA10752B63500D6EF5A /* XgridFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XgridFoundation.framework; path = /System/Library/Frameworks/XgridFoundation.framework; sourceTree = "<absolute>"; };
+		A4E4EEB00752B6A900D6EF5A /* mandelTool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mandelTool.c; sourceTree = "<group>"; };
+		A4E4EEB10752B6A900D6EF5A /* mandelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mandelTool.h; sourceTree = "<group>"; };
+		A4E4EEB20752B6A900D6EF5A /* mandelToolMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mandelToolMain.c; sourceTree = "<group>"; };
+		A4E4EEB80752B6B800D6EF5A /* MandelTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MandelTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E4EEE30752BB0D00D6EF5A /* tour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tour.txt; sourceTree = "<group>"; };
+		A4E4EEEB0752BB7300D6EF5A /* GMCropMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCropMarker.h; sourceTree = "<group>"; };
+		A4E4EEEC0752BB7300D6EF5A /* GMCropMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMCropMarker.m; sourceTree = "<group>"; };
+		A4E4EEED0752BB7300D6EF5A /* Hand.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Hand.tif; sourceTree = "<group>"; };
+		A4E4EEEE0752BB7300D6EF5A /* GMRectangleDraggerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRectangleDraggerView.h; sourceTree = "<group>"; };
+		A4E4EEEF0752BB7300D6EF5A /* GMRectangleDraggerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRectangleDraggerView.m; sourceTree = "<group>"; };
+		A4E4F1120752BC9E00D6EF5A /* GMApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMApplicationDelegate.h; sourceTree = "<group>"; };
+		A4E4F1130752BC9E00D6EF5A /* GMApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMApplicationDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				A4E4EEA20752B63500D6EF5A /* XgridFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E4EEB60752B6B800D6EF5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A42968E10753EA9000AB9C97 /* GMConnectionController.h */,
+				A42968E20753EA9000AB9C97 /* GMConnectionController.m */,
+				A42968E30753EA9000AB9C97 /* GMServiceBrowser.h */,
+				A42968E40753EA9000AB9C97 /* GMServiceBrowser.m */,
+				A4E4EEEB0752BB7300D6EF5A /* GMCropMarker.h */,
+				A4E4EEEC0752BB7300D6EF5A /* GMCropMarker.m */,
+				A4E4EEEE0752BB7300D6EF5A /* GMRectangleDraggerView.h */,
+				A4E4EEEF0752BB7300D6EF5A /* GMRectangleDraggerView.m */,
+				A4E4F1120752BC9E00D6EF5A /* GMApplicationDelegate.h */,
+				A4E4F1130752BC9E00D6EF5A /* GMApplicationDelegate.m */,
+				A423D2720754FCEF007712BC /* GMMainWindowController.h */,
+				A423D2730754FCEF007712BC /* GMMainWindowController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4EEA10752B63500D6EF5A /* XgridFoundation.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Xgrid Mandelbrot.app */,
+				A4E4EEB80752B6B800D6EF5A /* MandelTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GridMandelbrot */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				A4E4EEAF0752B69200D6EF5A /* MandelTool */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = GridMandelbrot;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GridMandelbrot_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4EEED0752BB7300D6EF5A /* Hand.tif */,
+				A4E4EEE30752BB0D00D6EF5A /* tour.txt */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				A423D2A10754FF19007712BC /* MainWindow.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4E4EEAF0752B69200D6EF5A /* MandelTool */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4EEB00752B6A900D6EF5A /* mandelTool.c */,
+				A4E4EEB10752B6A900D6EF5A /* mandelTool.h */,
+				A4E4EEB20752B6A900D6EF5A /* mandelToolMain.c */,
+			);
+			name = MandelTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Xgrid Mandelbrot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A51C3CF088435A1007E3447 /* Build configuration list for PBXNativeTarget "Xgrid Mandelbrot" */;
+			buildPhases = (
+				A4E4EF2A0752BBCC00D6EF5A /* CopyFiles */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridMandelbrot_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Xgrid Mandelbrot";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+				A4E4F10B0752BC1700D6EF5A /* PBXTargetDependency */,
+			);
+			name = "Xgrid Mandelbrot";
+			productInstallPath = "$(HOME)/Applications";
+			productName = GridMandelbrot;
+			productReference = 8D1107320486CEB800E47090 /* Xgrid Mandelbrot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4E4EEB70752B6B800D6EF5A /* MandelTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A51C3CB088435A1007E3447 /* Build configuration list for PBXNativeTarget "MandelTool" */;
+			buildPhases = (
+				A4E4EEB50752B6B800D6EF5A /* Sources */,
+				A4E4EEB60752B6B800D6EF5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = MandelTool;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			dependencies = (
+			);
+			name = MandelTool;
+			productName = MandelTool;
+			productReference = A4E4EEB80752B6B800D6EF5A /* MandelTool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8A51C3D3088435A1007E3447 /* Build configuration list for PBXProject "GridMandelbrot" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GridMandelbrot */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Xgrid Mandelbrot */,
+				A4E4EEB70752B6B800D6EF5A /* MandelTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				A4E4EEE40752BB0D00D6EF5A /* tour.txt in Resources */,
+				A4E4EEF10752BB7300D6EF5A /* Hand.tif in Resources */,
+				A423D2A30754FF19007712BC /* MainWindow.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				A4E4EEF00752BB7300D6EF5A /* GMCropMarker.m in Sources */,
+				A4E4EEF20752BB7300D6EF5A /* GMRectangleDraggerView.m in Sources */,
+				A4E4F1150752BC9E00D6EF5A /* GMApplicationDelegate.m in Sources */,
+				A42968E60753EA9000AB9C97 /* GMConnectionController.m in Sources */,
+				A42968E80753EA9000AB9C97 /* GMServiceBrowser.m in Sources */,
+				A423D2750754FCEF007712BC /* GMMainWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E4EEB50752B6B800D6EF5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E4EEBA0752B6C900D6EF5A /* mandelTool.c in Sources */,
+				A4E4EEBB0752B6C900D6EF5A /* mandelToolMain.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4E4F10B0752BC1700D6EF5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E4EEB70752B6B800D6EF5A /* MandelTool */;
+			targetProxy = A4E4F10A0752BC1700D6EF5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		A423D2A10754FF19007712BC /* MainWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A423D2A20754FF19007712BC /* English */,
+			);
+			name = MainWindow.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A51C3CC088435A1007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = MandelTool;
+			};
+			name = Debug;
+		};
+		8A51C3CD088435A1007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = MandelTool;
+			};
+			name = Release;
+		};
+		8A51C3D0088435A1007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridMandelbrot_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid Mandelbrot";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8A51C3D1088435A1007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CURRENT_PROJECT_VERSION = 22;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GridMandelbrot_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Xgrid Mandelbrot";
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8A51C3D4088435A1007E3447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		8A51C3D5088435A1007E3447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A51C3CB088435A1007E3447 /* Build configuration list for PBXNativeTarget "MandelTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3CC088435A1007E3447 /* Debug */,
+				8A51C3CD088435A1007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A51C3CF088435A1007E3447 /* Build configuration list for PBXNativeTarget "Xgrid Mandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3D0088435A1007E3447 /* Debug */,
+				8A51C3D1088435A1007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A51C3D3088435A1007E3447 /* Build configuration list for PBXProject "GridMandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A51C3D4088435A1007E3447 /* Debug */,
+				8A51C3D5088435A1007E3447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

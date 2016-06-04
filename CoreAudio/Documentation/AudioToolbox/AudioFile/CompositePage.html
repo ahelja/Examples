@@ -1,0 +1,1708 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>AudioFile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; }--></style>
+</head>
+<body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">AudioFile</font></h1>
+<br><a name="//apple_ref/doc/header/AudioFile.h" title="AudioFile"></a><h2>Discussion</h2>
+<p>
+This header defines the types, constants, data structures and functions of the AudioFile API. 
+The AudioFile API is used for reading and writing audio files on disk or in memory.</p>
+<hr>
+<br><h2>Functions</h2>
+<a name="HeaderDoc_functions"></a><dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileCreate" target="_top">AudioFileCreate</a></tt></dt>
+<dd>creates a new audio file
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileInitialize" target="_top">AudioFileInitialize</a></tt></dt>
+<dd>Write over an existing audio file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileOpen" target="_top">AudioFileOpen</a></tt></dt>
+<dd>Open an existing audio file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileInitializeWithCallbacks" target="_top">AudioFileInitializeWithCallbacks</a></tt></dt>
+<dd>Wipe clean an existing file. You provide callbacks that the AudioFile API
+will use to get the data.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileOpenWithCallbacks" target="_top">AudioFileOpenWithCallbacks</a></tt></dt>
+<dd>Open an existing file. You provide callbacks that the AudioFile API
+will use to get the data.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileClose" target="_top">AudioFileClose</a></tt></dt>
+<dd>Close an existing audio file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileOptimize" target="_top">AudioFileOptimize</a></tt></dt>
+<dd>Move the audio data to the end of the file and other internal optimizations of the file structure.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileReadBytes" target="_top">AudioFileReadBytes</a></tt></dt>
+<dd>Read bytes of audio data from the audio file.</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileWriteBytes" target="_top">AudioFileWriteBytes</a></tt></dt>
+<dd>Write bytes of audio data to the audio file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileReadPackets" target="_top">AudioFileReadPackets</a></tt></dt>
+<dd>Read packets of audio data from the audio file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileWritePackets" target="_top">AudioFileWritePackets</a></tt></dt>
+<dd>Write packets of audio data to the audio file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileCountUserData" target="_top">AudioFileCountUserData</a></tt></dt>
+<dd>Get the number of user data items with a certain ID in the file
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileGetUserDataSize" target="_top">AudioFileGetUserDataSize</a></tt></dt>
+<dd>Get the size of user data in a file
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileGetUserData" target="_top">AudioFileGetUserData</a></tt></dt>
+<dd>Get the data of a chunk in a file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileSetUserData" target="_top">AudioFileSetUserData</a></tt></dt>
+<dd>Set the data of a chunk in a file.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileGetPropertyInfo" target="_top">AudioFileGetPropertyInfo</a></tt></dt>
+<dd>Get information about the size of a property of an AudioFile  and whether it can be set.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileGetProperty" target="_top">AudioFileGetProperty</a></tt></dt>
+<dd>Copies the value for a property of an AudioFile into a buffer.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileSetProperty" target="_top">AudioFileSetProperty</a></tt></dt>
+<dd>Sets the value for a property of an AudioFile .
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileGetGlobalInfoSize" target="_top">AudioFileGetGlobalInfoSize</a></tt></dt>
+<dd>Get information about the size of a global property.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/c/func/AudioFileGetGlobalInfo" target="_top">AudioFileGetGlobalInfo</a></tt></dt>
+<dd>Copies the value for a global property into a buffer.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileCreate;  name=AudioFileCreate --><a name="//apple_ref/doc/compositePage/c/func/AudioFileCreate"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileCreate">AudioFileCreate</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>creates a new audio file
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileCreate" logicalPath="//apple_ref/c/instm/AudioFileCreate //apple_ref/c/clm/AudioFileCreate //apple_ref/c/intfcm/AudioFileCreate //apple_ref/c/func/AudioFileCreate" target="_top"><font class="function">AudioFileCreate</font></a> (
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/FSRef //apple_ref/c/cl/FSRef //apple_ref/c/tdef/FSRef //apple_ref/c/tag/FSRef //apple_ref/c/econst/FSRef //apple_ref/c/struct/FSRef //apple_ref/c/clconst/FSRef" --><font class="type">FSRef</font><!-- /a --> *<font class="param">inParentRef</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="param">inFileName</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="param">inFileType</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a --> *<font class="param">inFormat</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inFlags</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/FSRef //apple_ref/c/cl/FSRef //apple_ref/c/tdef/FSRef //apple_ref/c/tag/FSRef //apple_ref/c/econst/FSRef //apple_ref/c/struct/FSRef //apple_ref/c/clconst/FSRef" --><font class="type">FSRef</font><!-- /a --> *<font class="param">outNewFileRef</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> *<font class="param">outAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inParentRef</i></code></dt>
+<dd>an FSRef to the directory where  the new file should be created.</dd>
+<dt><code><i>inFileName</i></code></dt>
+<dd>a CFStringRef containing the name of the file to be created.</dd>
+<dt><code><i>inFileType</i></code></dt>
+<dd>an AudioFileTypeID indicating the type of audio file to create.</dd>
+<dt><code><i>inFormat</i></code></dt>
+<dd>an AudioStreamBasicDescription describing the data format that will be
+added to the audio file.</dd>
+<dt><code><i>inFlags</i></code></dt>
+<dd>relevant flags for creating/opening the file. Currently zero.</dd>
+<dt><code><i>outNewFileRef</i></code></dt>
+<dd>if successful, the FSRef of the newly created file.</dd>
+<dt><code><i>outAudioFile</i></code></dt>
+<dd>if successful, an AudioFileID that can be used for subsequent AudioFile calls.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>creates a new audio file located in the parent directory 
+provided. Upon success, an AudioFileID is returned which can
+be used for subsequent calls to the AudioFile APIs.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileInitialize;  name=AudioFileInitialize --><a name="//apple_ref/doc/compositePage/c/func/AudioFileInitialize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileInitialize">AudioFileInitialize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Write over an existing audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileInitialize" logicalPath="//apple_ref/c/instm/AudioFileInitialize //apple_ref/c/clm/AudioFileInitialize //apple_ref/c/intfcm/AudioFileInitialize //apple_ref/c/func/AudioFileInitialize" target="_top"><font class="function">AudioFileInitialize</font></a> (
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/FSRef //apple_ref/c/cl/FSRef //apple_ref/c/tdef/FSRef //apple_ref/c/tag/FSRef //apple_ref/c/econst/FSRef //apple_ref/c/struct/FSRef //apple_ref/c/clconst/FSRef" --><font class="type">FSRef</font><!-- /a --> *<font class="param">inFileRef</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="param">inFileType</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a --> *<font class="param">inFormat</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inFlags</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> *<font class="param">outAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inFileRef</i></code></dt>
+<dd>the FSRef of an existing audio file.</dd>
+<dt><code><i>inFileType</i></code></dt>
+<dd>an AudioFileTypeID indicating the type of audio file to initialize the file to.</dd>
+<dt><code><i>inFormat</i></code></dt>
+<dd>an AudioStreamBasicDescription describing the data format that will be
+added to the audio file.</dd>
+<dt><code><i>inFlags</i></code></dt>
+<dd>flags for creating/opening the file. Currently zero.</dd>
+<dt><code><i>outAudioFile</i></code></dt>
+<dd>upon success, an AudioFileID that can be used for subsequent
+AudioFile calls.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Use AudioFileInitialize to wipe clean an existing audio file
+and prepare it to be populated with new data.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileOpen;  name=AudioFileOpen --><a name="//apple_ref/doc/compositePage/c/func/AudioFileOpen"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileOpen">AudioFileOpen</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Open an existing audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileOpen" logicalPath="//apple_ref/c/instm/AudioFileOpen //apple_ref/c/clm/AudioFileOpen //apple_ref/c/intfcm/AudioFileOpen //apple_ref/c/func/AudioFileOpen" target="_top"><font class="function">AudioFileOpen</font></a> (
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/FSRef //apple_ref/c/cl/FSRef //apple_ref/c/tdef/FSRef //apple_ref/c/tag/FSRef //apple_ref/c/econst/FSRef //apple_ref/c/struct/FSRef //apple_ref/c/clconst/FSRef" --><font class="type">FSRef</font><!-- /a --> *<font class="param">inFileRef</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt8 //apple_ref/c/cl/SInt8 //apple_ref/c/tdef/SInt8 //apple_ref/c/tag/SInt8 //apple_ref/c/econst/SInt8 //apple_ref/c/struct/SInt8 //apple_ref/c/clconst/SInt8" --><font class="type">SInt8</font><!-- /a --> <font class="param">inPermissions</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="param">inFileTypeHint</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> *<font class="param">outAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inFileRef</i></code></dt>
+<dd>the FSRef of an existing audio file.</dd>
+<dt><code><i>inPermissions</i></code></dt>
+<dd>use the permission constants used by FSOpenFork().</dd>
+<dt><code><i>inFileTypeHint</i></code></dt>
+<dd>For files which have no filename extension and whose type cannot be easily or
+uniquely determined from the data (ADTS,AC3), this hint can be used to indicate the file type. 
+Otherwise you can pass zero for this. The hint is only used on OS versions 10.3.1 or greater.
+For OS versions prior to that, opening files of the above description will fail.</dd>
+<dt><code><i>outAudioFile</i></code></dt>
+<dd>upon success, an AudioFileID that can be used for subsequent
+AudioFile calls.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Open an existing audio file for reading or reading and writing.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileInitializeWithCallbacks;  name=AudioFileInitializeWithCallbacks --><a name="//apple_ref/doc/compositePage/c/func/AudioFileInitializeWithCallbacks"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileInitializeWithCallbacks">AudioFileInitializeWithCallbacks</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Wipe clean an existing file. You provide callbacks that the AudioFile API
+will use to get the data.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileInitializeWithCallbacks" logicalPath="//apple_ref/c/instm/AudioFileInitializeWithCallbacks //apple_ref/c/clm/AudioFileInitializeWithCallbacks //apple_ref/c/intfcm/AudioFileInitializeWithCallbacks //apple_ref/c/func/AudioFileInitializeWithCallbacks" target="_top"><font class="function">AudioFileInitializeWithCallbacks</font></a> ( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_ReadProc" logicalPath="//apple_ref/c/cl/AudioFile_ReadProc //apple_ref/c/cl/AudioFile_ReadProc //apple_ref/c/tdef/AudioFile_ReadProc" target="_top"><font class="type">AudioFile_ReadProc</font></a> <font class="param">inReadFunc</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_WriteProc" logicalPath="//apple_ref/c/cl/AudioFile_WriteProc //apple_ref/c/cl/AudioFile_WriteProc //apple_ref/c/tdef/AudioFile_WriteProc" target="_top"><font class="type">AudioFile_WriteProc</font></a> <font class="param">inWriteFunc</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_GetSizeProc" logicalPath="//apple_ref/c/cl/AudioFile_GetSizeProc //apple_ref/c/cl/AudioFile_GetSizeProc //apple_ref/c/tdef/AudioFile_GetSizeProc" target="_top"><font class="type">AudioFile_GetSizeProc</font></a> <font class="param">inGetSizeFunc</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_SetSizeProc" logicalPath="//apple_ref/c/cl/AudioFile_SetSizeProc //apple_ref/c/cl/AudioFile_SetSizeProc //apple_ref/c/tdef/AudioFile_SetSizeProc" target="_top"><font class="type">AudioFile_SetSizeProc</font></a> <font class="param">inSetSizeFunc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="param">inFileType</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/cl/AudioStreamBasicDescription //apple_ref/c/tdef/AudioStreamBasicDescription //apple_ref/c/tag/AudioStreamBasicDescription //apple_ref/c/econst/AudioStreamBasicDescription //apple_ref/c/struct/AudioStreamBasicDescription //apple_ref/c/clconst/AudioStreamBasicDescription" --><font class="type">AudioStreamBasicDescription</font><!-- /a --> *<font class="param">inFormat</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inFlags</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> *<font class="param">outAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inRefCon</i></code></dt>
+<dd>a constant that will be passed to your callbacks.</dd>
+<dt><code><i>inReadFunc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to read data.</dd>
+<dt><code><i>inWriteFunc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to write data.</dd>
+<dt><code><i>inGetSizeFunc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to know the file size.</dd>
+<dt><code><i>inSetSizeFunc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to set the file size.
+<br><br>
+</dd>
+<dt><code><i>inFileType</i></code></dt>
+<dd>an AudioFileTypeID indicating the type of audio file to which to initialize the file.</dd>
+<dt><code><i>inFormat</i></code></dt>
+<dd>an AudioStreamBasicDescription describing the data format that will be
+added to the audio file.</dd>
+<dt><code><i>inFlags</i></code></dt>
+<dd>flags for creating/opening the file. Currently zero.</dd>
+<dt><code><i>outAudioFile</i></code></dt>
+<dd>upon success, an AudioFileID that can be used for subsequent
+AudioFile calls.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileOpenWithCallbacks;  name=AudioFileOpenWithCallbacks --><a name="//apple_ref/doc/compositePage/c/func/AudioFileOpenWithCallbacks"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileOpenWithCallbacks">AudioFileOpenWithCallbacks</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Open an existing file. You provide callbacks that the AudioFile API
+will use to get the data.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileOpenWithCallbacks" logicalPath="//apple_ref/c/instm/AudioFileOpenWithCallbacks //apple_ref/c/clm/AudioFileOpenWithCallbacks //apple_ref/c/intfcm/AudioFileOpenWithCallbacks //apple_ref/c/func/AudioFileOpenWithCallbacks" target="_top"><font class="function">AudioFileOpenWithCallbacks</font></a> ( <font class="comment">// not seekable, read only</font> 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_ReadProc" logicalPath="//apple_ref/c/cl/AudioFile_ReadProc //apple_ref/c/cl/AudioFile_ReadProc //apple_ref/c/tdef/AudioFile_ReadProc" target="_top"><font class="type">AudioFile_ReadProc</font></a> <font class="param">inReadFunc</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_WriteProc" logicalPath="//apple_ref/c/cl/AudioFile_WriteProc //apple_ref/c/cl/AudioFile_WriteProc //apple_ref/c/tdef/AudioFile_WriteProc" target="_top"><font class="type">AudioFile_WriteProc</font></a> <font class="param">inWriteFunc</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_GetSizeProc" logicalPath="//apple_ref/c/cl/AudioFile_GetSizeProc //apple_ref/c/cl/AudioFile_GetSizeProc //apple_ref/c/tdef/AudioFile_GetSizeProc" target="_top"><font class="type">AudioFile_GetSizeProc</font></a> <font class="param">inGetSizeFunc</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFile_SetSizeProc" logicalPath="//apple_ref/c/cl/AudioFile_SetSizeProc //apple_ref/c/cl/AudioFile_SetSizeProc //apple_ref/c/tdef/AudioFile_SetSizeProc" target="_top"><font class="type">AudioFile_SetSizeProc</font></a> <font class="param">inSetSizeFunc</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="param">inFileTypeHint</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> *<font class="param">outAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inRefCon</i></code></dt>
+<dd>a constant that will be passed to your callbacks.</dd>
+<dt><code><i>AudioFile_ReadProc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to read data.</dd>
+<dt><code><i>AudioFile_WriteProc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to write data.</dd>
+<dt><code><i>AudioFile_GetSizeProc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to know the file size.</dd>
+<dt><code><i>AudioFile_SetSizeProc</i></code></dt>
+<dd>a function that will be called when AudioFile needs to set the file size.
+<br><br>
+</dd>
+<dt><code><i>inFileTypeHint</i></code></dt>
+<dd>For files which have no filename extension and whose type cannot be easily or
+uniquely determined from the data (ADTS,AC3), this hint can be used to indicate the file type. 
+Otherwise you can pass zero for this. The hint is only used on OS versions 10.3.1 or greater.
+For OS versions prior to that, opening files of the above description will fail.</dd>
+<dt><code><i>outAudioFile</i></code></dt>
+<dd>upon success, an AudioFileID that can be used for subsequent
+AudioFile calls.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileClose;  name=AudioFileClose --><a name="//apple_ref/doc/compositePage/c/func/AudioFileClose"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileClose">AudioFileClose</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Close an existing audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileClose" logicalPath="//apple_ref/c/instm/AudioFileClose //apple_ref/c/clm/AudioFileClose //apple_ref/c/intfcm/AudioFileClose //apple_ref/c/func/AudioFileClose" target="_top"><font class="function">AudioFileClose</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileOptimize;  name=AudioFileOptimize --><a name="//apple_ref/doc/compositePage/c/func/AudioFileOptimize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileOptimize">AudioFileOptimize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Move the audio data to the end of the file and other internal optimizations of the file structure.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileOptimize" logicalPath="//apple_ref/c/instm/AudioFileOptimize //apple_ref/c/clm/AudioFileOptimize //apple_ref/c/intfcm/AudioFileOptimize //apple_ref/c/func/AudioFileOptimize" target="_top"><font class="function">AudioFileOptimize</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Optimize the file so additional audio data can be appended to 
+the existing data. Generally, this will place the audio data at 
+the end of the file so additional writes can be placed to the 
+file end. This can be a potentially expensive and time-consuming operation 
+and should not be used during time critical operations. There is 
+a kAudioFilePropertyIsOptimized property for checking on the optimized state 
+of the file.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileReadBytes;  name=AudioFileReadBytes --><a name="//apple_ref/doc/compositePage/c/func/AudioFileReadBytes"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileReadBytes">AudioFileReadBytes</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Read bytes of audio data from the audio file.</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileReadBytes" logicalPath="//apple_ref/c/instm/AudioFileReadBytes //apple_ref/c/clm/AudioFileReadBytes //apple_ref/c/intfcm/AudioFileReadBytes //apple_ref/c/func/AudioFileReadBytes" target="_top"><font class="function">AudioFileReadBytes</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">inUseCache</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inStartingByte</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioNumBytes</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outBuffer</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUseCache</i></code></dt>
+<dd>true if it is desired to cache the data upon read, else false</dd>
+<dt><code><i>inStartingByte</i></code></dt>
+<dd>the byte offset of the audio data desired to be returned</dd>
+<dt><code><i>ioNumBytes</i></code></dt>
+<dd>on input, the number of bytes to read, on output, the number of
+bytes actually read.</dd>
+<dt><code><i>outBuffer</i></code></dt>
+<dd>outBuffer should be a void * to user allocated memory large enough for the requested bytes.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Returns eofErr when read encounters end of file.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileWriteBytes;  name=AudioFileWriteBytes --><a name="//apple_ref/doc/compositePage/c/func/AudioFileWriteBytes"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileWriteBytes">AudioFileWriteBytes</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Write bytes of audio data to the audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileWriteBytes" logicalPath="//apple_ref/c/instm/AudioFileWriteBytes //apple_ref/c/clm/AudioFileWriteBytes //apple_ref/c/intfcm/AudioFileWriteBytes //apple_ref/c/func/AudioFileWriteBytes" target="_top"><font class="function">AudioFileWriteBytes</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">inUseCache</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inStartingByte</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioNumBytes</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inBuffer</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUseCache</i></code></dt>
+<dd>true if it is desired to cache the data upon write, else false</dd>
+<dt><code><i>inStartingByte</i></code></dt>
+<dd>the byte offset where the audio data should be written</dd>
+<dt><code><i>ioNumBytes</i></code></dt>
+<dd>on input, the number of bytes to write, on output, the number of
+bytes actually written.</dd>
+<dt><code><i>inBuffer</i></code></dt>
+<dd>inBuffer should be a void * containing the bytes to be written</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileReadPackets;  name=AudioFileReadPackets --><a name="//apple_ref/doc/compositePage/c/func/AudioFileReadPackets"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileReadPackets">AudioFileReadPackets</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Read packets of audio data from the audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileReadPackets" logicalPath="//apple_ref/c/instm/AudioFileReadPackets //apple_ref/c/clm/AudioFileReadPackets //apple_ref/c/intfcm/AudioFileReadPackets //apple_ref/c/func/AudioFileReadPackets" target="_top"><font class="function">AudioFileReadPackets</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">inUseCache</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outNumBytes</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/tdef/AudioStreamPacketDescription //apple_ref/c/tag/AudioStreamPacketDescription //apple_ref/c/econst/AudioStreamPacketDescription //apple_ref/c/struct/AudioStreamPacketDescription //apple_ref/c/clconst/AudioStreamPacketDescription" --><font class="type">AudioStreamPacketDescription</font><!-- /a --> *<font class="param">outPacketDescriptions</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inStartingPacket</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioNumPackets</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outBuffer</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUseCache</i></code></dt>
+<dd>true if it is desired to cache the data upon read, else false</dd>
+<dt><code><i>outNumBytes</i></code></dt>
+<dd>on output, the number of bytes actually returned</dd>
+<dt><code><i>outPacketDescriptions</i></code></dt>
+<dd>on output, an array of packet descriptions describing
+the packets being returned. NULL may be passed for this
+parameter. Nothing will be returned for linear pcm data.</dd>
+<dt><code><i>inStartingPacket</i></code></dt>
+<dd>the packet index of the first packet desired to be returned</dd>
+<dt><code><i>ioNumPackets</i></code></dt>
+<dd>on input, the number of packets to read, on output, the number of
+packets actually read.</dd>
+<dt><code><i>outBuffer</i></code></dt>
+<dd>outBuffer should be a pointer to user allocated memory of size: 
+number of packets requested times file's maximum (or upper bound on)
+packet size.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>For all uncompressed formats, packets == frames.
+ioNumPackets less than requested indicates end of file.
+<br><br></p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileWritePackets;  name=AudioFileWritePackets --><a name="//apple_ref/doc/compositePage/c/func/AudioFileWritePackets"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileWritePackets">AudioFileWritePackets</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Write packets of audio data to the audio file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Functions/Functions.html#//apple_ref/c/func/AudioFileWritePackets" logicalPath="//apple_ref/c/instm/AudioFileWritePackets //apple_ref/c/clm/AudioFileWritePackets //apple_ref/c/intfcm/AudioFileWritePackets //apple_ref/c/func/AudioFileWritePackets" target="_top"><font class="function">AudioFileWritePackets</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/econst/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/clconst/Boolean" --><font class="type">Boolean</font><!-- /a --> <font class="param">inUseCache</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inNumBytes</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/cl/AudioStreamPacketDescription //apple_ref/c/tdef/AudioStreamPacketDescription //apple_ref/c/tag/AudioStreamPacketDescription //apple_ref/c/econst/AudioStreamPacketDescription //apple_ref/c/struct/AudioStreamPacketDescription //apple_ref/c/clconst/AudioStreamPacketDescription" --><font class="type">AudioStreamPacketDescription</font><!-- /a --> *<font class="param">inPacketDescriptions</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inStartingPacket</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioNumPackets</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inBuffer</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUseCache</i></code></dt>
+<dd>true if it is desired to cache the data upon write, else false</dd>
+<dt><code><i>inNumBytes</i></code></dt>
+<dd>the number of bytes being provided for write</dd>
+<dt><code><i>inPacketDescriptions</i></code></dt>
+<dd>an array of packet descriptions describing the packets being 
+provided. Not all formats require packet descriptions to be 
+provided. NULL may be passed if no descriptions are required.</dd>
+<dt><code><i>inStartingPacket</i></code></dt>
+<dd>the packet index of where the first packet provided should be placed.</dd>
+<dt><code><i>ioNumPackets</i></code></dt>
+<dd>on input, the number of packets to write, on output, the number of
+packets actually written.</dd>
+<dt><code><i>inBuffer</i></code></dt>
+<dd>a void * to user allocated memory containing the packets to write.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>For all uncompressed formats, packets == frames.
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileCountUserData;  name=AudioFileCountUserData --><a name="//apple_ref/doc/compositePage/c/func/AudioFileCountUserData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileCountUserData">AudioFileCountUserData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get the number of user data items with a certain ID in the file
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/Categories/AudioFileCountUserData/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileCountUserData" logicalPath="//apple_ref/c/instm/AudioFileCountUserData" target="_top"><font class="function">AudioFileCountUserData</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outNumberItems</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>outNumberItems</i></code></dt>
+<dd>on output, if successful, number of chunks of this type in the file.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>"User Data" refers to chunks in AIFF, CAF and WAVE files, or resources 
+in Sound Designer II files, and possibly other things in other files.
+For simplicity, referred to below as "chunks".
+</p>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileGetUserDataSize;  name=AudioFileGetUserDataSize --><a name="//apple_ref/doc/compositePage/c/func/AudioFileGetUserDataSize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetUserDataSize">AudioFileGetUserDataSize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get the size of user data in a file
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileGetUserDataSize" logicalPath="//apple_ref/c/instm/AudioFileGetUserDataSize" target="_top"><font class="function">AudioFileGetUserDataSize</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inIndex</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outUserDataSize</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>inIndex</i></code></dt>
+<dd>an index specifying which chunk if there are more than one.</dd>
+<dt><code><i>outUserDataSize</i></code></dt>
+<dd>on output, if successful, the size of the user data chunk.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileGetUserData;  name=AudioFileGetUserData --><a name="//apple_ref/doc/compositePage/c/func/AudioFileGetUserData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetUserData">AudioFileGetUserData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get the data of a chunk in a file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileGetUserData" logicalPath="//apple_ref/c/instm/AudioFileGetUserData" target="_top"><font class="function">AudioFileGetUserData</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inIndex</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioUserDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outUserData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>inIndex</i></code></dt>
+<dd>an index specifying which chunk if there are more than one.</dd>
+<dt><code><i>ioUserDataSize</i></code></dt>
+<dd>the size of the buffer on input, size of bytes copied to buffer on output</dd>
+<dt><code><i>outUserData</i></code></dt>
+<dd>a pointer to a buffer in which to copy the chunk data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileSetUserData;  name=AudioFileSetUserData --><a name="//apple_ref/doc/compositePage/c/func/AudioFileSetUserData"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileSetUserData">AudioFileSetUserData</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Set the data of a chunk in a file.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileSetUserData" logicalPath="//apple_ref/c/instm/AudioFileSetUserData" target="_top"><font class="function">AudioFileSetUserData</font></a> (
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inIndex</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inUserDataSize</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inUserData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inUserDataID</i></code></dt>
+<dd>the four char code of the chunk.</dd>
+<dt><code><i>inIndex</i></code></dt>
+<dd>an index specifying which chunk if there are more than one.</dd>
+<dt><code><i>inUserDataSize</i></code></dt>
+<dd>on input the size of the data to copy, on output, size of bytes copied from the buffer</dd>
+<dt><code><i>inUserData</i></code></dt>
+<dd>a pointer to a buffer from which to copy the chunk data 
+(only the contents of the chunk, not including the chunk header).</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.4.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileGetPropertyInfo;  name=AudioFileGetPropertyInfo --><a name="//apple_ref/doc/compositePage/c/func/AudioFileGetPropertyInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetPropertyInfo">AudioFileGetPropertyInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get information about the size of a property of an AudioFile  and whether it can be set.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileGetPropertyInfo" logicalPath="//apple_ref/c/instm/AudioFileGetPropertyInfo" target="_top"><font class="function">AudioFileGetPropertyInfo</font></a>(
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID" logicalPath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">isWritable</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileProperty constant.</dd>
+<dt><code><i>outDataSize</i></code></dt>
+<dd>the size in bytes of the current value of the property. In order to get the property value, 
+you will need a buffer of this size.</dd>
+<dt><code><i>isWritable</i></code></dt>
+<dd>will be set to 1 if writable, or 0 if read only.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileGetProperty;  name=AudioFileGetProperty --><a name="//apple_ref/doc/compositePage/c/func/AudioFileGetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetProperty">AudioFileGetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Copies the value for a property of an AudioFile into a buffer.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileGetProperty" logicalPath="//apple_ref/c/instm/AudioFileGetProperty" target="_top"><font class="function">AudioFileGetProperty</font></a>(
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID" logicalPath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileProperty constant.</dd>
+<dt><code><i>ioDataSize</i></code></dt>
+<dd>on input the size of the outPropertyData buffer. On output the number of bytes written to the buffer.</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>the buffer in which to write the property data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileSetProperty;  name=AudioFileSetProperty --><a name="//apple_ref/doc/compositePage/c/func/AudioFileSetProperty"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileSetProperty">AudioFileSetProperty</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Sets the value for a property of an AudioFile .
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileSetProperty" logicalPath="//apple_ref/c/instm/AudioFileSetProperty" target="_top"><font class="function">AudioFileSetProperty</font></a>(
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFileID" logicalPath="//apple_ref/c/cl/AudioFileID //apple_ref/c/cl/AudioFileID //apple_ref/c/tdef/AudioFileID" target="_top"><font class="type">AudioFileID</font></a> <font class="param">inAudioFile</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID" logicalPath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inDataSize</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAudioFile</i></code></dt>
+<dd>an AudioFileID.</dd>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileProperty constant.</dd>
+<dt><code><i>inDataSize</i></code></dt>
+<dd>the size of the property data.</dd>
+<dt><code><i>inPropertyData</i></code></dt>
+<dd>the buffer containing the property data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.2
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileGetGlobalInfoSize;  name=AudioFileGetGlobalInfoSize --><a name="//apple_ref/doc/compositePage/c/func/AudioFileGetGlobalInfoSize"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetGlobalInfoSize">AudioFileGetGlobalInfoSize</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Get information about the size of a global property.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileGetGlobalInfoSize" logicalPath="//apple_ref/c/instm/AudioFileGetGlobalInfoSize" target="_top"><font class="function">AudioFileGetGlobalInfoSize</font></a>(
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID" logicalPath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inSpecifierSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSpecifier</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">outDataSize</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileGlobalInfo property constant.</dd>
+<dt><code><i>inSpecifierSize</i></code></dt>
+<dd>The size of the specifier data.</dd>
+<dt><code><i>inSpecifier</i></code></dt>
+<dd>A specifier is a buffer of data used as an input argument to some of the global info properties.</dd>
+<dt><code><i>outDataSize</i></code></dt>
+<dd>the size in bytes of the current value of the property. In order to get the property value, 
+you will need a buffer of this size.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<hr>
+<!-- headerDoc=func;  uid=//apple_ref/doc/compositePage/c/func/AudioFileGetGlobalInfo;  name=AudioFileGetGlobalInfo --><a name="//apple_ref/doc/compositePage/c/func/AudioFileGetGlobalInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileGetGlobalInfo">AudioFileGetGlobalInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Copies the value for a global property into a buffer.
+</p>
+<blockquote><pre><font class="keyword">extern</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> <a href="../../AudioToolbox/AudioFile/index.html?Methods/Methods.html#//apple_ref/c/instm/AudioFileGetGlobalInfo" logicalPath="//apple_ref/c/instm/AudioFileGetGlobalInfo" target="_top"><font class="function">AudioFileGetGlobalInfo</font></a>(
+    <a href="../../AudioToolbox/AudioFile/index.html?DataTypes/DataTypes.html#//apple_ref/c/tdef/AudioFilePropertyID" logicalPath="//apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/cl/AudioFilePropertyID //apple_ref/c/tdef/AudioFilePropertyID" target="_top"><font class="type">AudioFilePropertyID</font></a> <font class="param">inPropertyID</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="param">inSpecifierSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inSpecifier</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> *<font class="param">ioDataSize</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">outPropertyData</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inPropertyID</i></code></dt>
+<dd>an AudioFileGlobalInfo property constant.</dd>
+<dt><code><i>inSpecifierSize</i></code></dt>
+<dd>The size of the specifier data.</dd>
+<dt><code><i>inSpecifier</i></code></dt>
+<dd>A specifier is a buffer of data used as an input argument to some of the global info properties.</dd>
+<dt><code><i>ioDataSize</i></code></dt>
+<dd>on input the size of the outPropertyData buffer. On output the number of bytes written to the buffer.</dd>
+<dt><code><i>outPropertyData</i></code></dt>
+<dd>the buffer in which to write the property data.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i>function result</i></dt>
+<dd>returns noErr if successful.
+</dd>
+<dt><i>Availability</i></dt>
+<dd>Introduced in Mac OS X 10.3.
+</dd>
+</dl>
+<h2>Typedefs</h2>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/doc/compositePage/c/tdef/AudioFileID;  name=AudioFileID --><a name="//apple_ref/doc/compositePage/c/tdef/AudioFileID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileID">AudioFileID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An opaque reference to an AudioFile object.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <font class="keyword">struct</font> <!-- a logicalPath="//apple_ref/c/cl/OpaqueAudioFileID //apple_ref/c/cl/OpaqueAudioFileID //apple_ref/c/tdef/OpaqueAudioFileID //apple_ref/c/tag/OpaqueAudioFileID //apple_ref/c/econst/OpaqueAudioFileID //apple_ref/c/struct/OpaqueAudioFileID //apple_ref/c/clconst/OpaqueAudioFileID" --><font class="type">OpaqueAudioFileID</font><!-- /a --> <font class="type">*</font><font class="var">AudioFileID</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/doc/compositePage/c/tdef/AudioFilePropertyID;  name=AudioFilePropertyID --><a name="//apple_ref/doc/compositePage/c/tdef/AudioFilePropertyID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFilePropertyID">AudioFilePropertyID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A constant for an AudioFile property.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">AudioFilePropertyID</font>; </pre></blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/doc/compositePage/c/tdef/AudioFile_ReadProc;  name=AudioFile_ReadProc --><a name="//apple_ref/doc/compositePage/c/tdef/AudioFile_ReadProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_ReadProc">AudioFile_ReadProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for reading data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_ReadProc //apple_ref/c/clm/AudioFile_ReadProc //apple_ref/c/intfcm/AudioFile_ReadProc //apple_ref/c/func/AudioFile_ReadProc //apple_ref/c/ftmplt/AudioFile_ReadProc //apple_ref/c/defn/AudioFile_ReadProc //apple_ref/c/macro/AudioFile_ReadProc" --><font class="function">AudioFile_ReadProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inPosition</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="param">requestCount</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">buffer</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> *<font class="param">actualCount</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+<dt><code>inPosition</code></dt>
+<dd>An offset into the data from which to read.</dd>
+<dt><code>requestCount</code></dt>
+<dd>The number of bytes to read.</dd>
+<dt><code>buffer</code></dt>
+<dd>The buffer in which to put the data read.</dd>
+<dt><code>actualCount</code></dt>
+<dd>The callback should set this to the number of bytes successfully read.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return noErr on success, or an appropriate error code on failure.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to read data.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/doc/compositePage/c/tdef/AudioFile_WriteProc;  name=AudioFile_WriteProc --><a name="//apple_ref/doc/compositePage/c/tdef/AudioFile_WriteProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_WriteProc">AudioFile_WriteProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for writing data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_WriteProc //apple_ref/c/clm/AudioFile_WriteProc //apple_ref/c/intfcm/AudioFile_WriteProc //apple_ref/c/func/AudioFile_WriteProc //apple_ref/c/ftmplt/AudioFile_WriteProc //apple_ref/c/defn/AudioFile_WriteProc //apple_ref/c/macro/AudioFile_WriteProc" --><font class="function">AudioFile_WriteProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inPosition</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> <font class="param">requestCount</font>, 
+    <font class="keyword">const</font> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">buffer</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/ByteCount //apple_ref/c/cl/ByteCount //apple_ref/c/tdef/ByteCount //apple_ref/c/tag/ByteCount //apple_ref/c/econst/ByteCount //apple_ref/c/struct/ByteCount //apple_ref/c/clconst/ByteCount" --><font class="type">ByteCount</font><!-- /a --> *<font class="param">actualCount</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+<dt><code>inPosition</code></dt>
+<dd>An offset into the data from which to read.</dd>
+<dt><code>requestCount</code></dt>
+<dd>The number of bytes to write.</dd>
+<dt><code>buffer</code></dt>
+<dd>The buffer containing the data to write.</dd>
+<dt><code>actualCount</code></dt>
+<dd>The callback should set this to the number of bytes successfully written.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return noErr on success, or an appropriate error code on failure.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to write data.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/doc/compositePage/c/tdef/AudioFile_GetSizeProc;  name=AudioFile_GetSizeProc --><a name="//apple_ref/doc/compositePage/c/tdef/AudioFile_GetSizeProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_GetSizeProc">AudioFile_GetSizeProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for getting the size of the file data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_GetSizeProc //apple_ref/c/clm/AudioFile_GetSizeProc //apple_ref/c/intfcm/AudioFile_GetSizeProc //apple_ref/c/func/AudioFile_GetSizeProc //apple_ref/c/ftmplt/AudioFile_GetSizeProc //apple_ref/c/defn/AudioFile_GetSizeProc //apple_ref/c/macro/AudioFile_GetSizeProc" --><font class="function">AudioFile_GetSizeProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return the size of the data.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to determine the size of the file data. This size is for all of the 
+data in the file, not just the audio data.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tdef;  uid=//apple_ref/doc/compositePage/c/tdef/AudioFile_SetSizeProc;  name=AudioFile_SetSizeProc --><a name="//apple_ref/doc/compositePage/c/tdef/AudioFile_SetSizeProc"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_SetSizeProc">AudioFile_SetSizeProc</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A callback for setting the size of the file data. used with AudioFileOpenWithCallbacks or AudioFileInitializeWithCallbacks.
+</p>
+<blockquote><pre><font class="keyword">typedef</font> <!-- a logicalPath="//apple_ref/c/cl/OSStatus //apple_ref/c/cl/OSStatus //apple_ref/c/tdef/OSStatus //apple_ref/c/tag/OSStatus //apple_ref/c/econst/OSStatus //apple_ref/c/struct/OSStatus //apple_ref/c/clconst/OSStatus" --><font class="type">OSStatus</font><!-- /a --> (*<!-- a logicalPath="//apple_ref/c/instm/AudioFile_SetSizeProc //apple_ref/c/clm/AudioFile_SetSizeProc //apple_ref/c/intfcm/AudioFile_SetSizeProc //apple_ref/c/func/AudioFile_SetSizeProc //apple_ref/c/ftmplt/AudioFile_SetSizeProc //apple_ref/c/defn/AudioFile_SetSizeProc //apple_ref/c/macro/AudioFile_SetSizeProc" --><font class="function">AudioFile_SetSizeProc</font><!-- /a -->)( 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/econst/void //apple_ref/c/struct/void //apple_ref/c/clconst/void" --><font class="type">void</font><!-- /a --> *<font class="param">inRefCon</font>, 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="param">inSize</font>); </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>inRefCon</code></dt>
+<dd>A pointer to the client data as set in the inRefCon parameter to AudioFileXXXWithCallbacks.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>The callback should return the size of the data.
+</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>a function that will be called when AudioFile needs to set the size of the file data. This size is for all of the 
+data in the file, not just the audio data. This will only be called if the file is written to.
+</p>
+</dl>
+<h2>Structs and Unions</h2>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFile_SMPTE_Time;  name=AudioFile_SMPTE_Time --><a name="//apple_ref/doc/compositePage/c/tag/AudioFile_SMPTE_Time"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile_SMPTE_Time">AudioFile_SMPTE_Time</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A struct for describing a SMPTE time.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFile_SMPTE_Time" logicalPath="//apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/tdef/AudioFile_SMPTE_Time //apple_ref/c/tag/AudioFile_SMPTE_Time" target="_top"><font class="type">AudioFile_SMPTE_Time</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt8 //apple_ref/c/cl/SInt8 //apple_ref/c/tdef/SInt8 //apple_ref/c/tag/SInt8 //apple_ref/c/econst/SInt8 //apple_ref/c/struct/SInt8 //apple_ref/c/clconst/SInt8" --><font class="type">SInt8</font><!-- /a --> <font class="var">mHours</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">mMinutes</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">mSeconds</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt8 //apple_ref/c/cl/UInt8 //apple_ref/c/tdef/UInt8 //apple_ref/c/tag/UInt8 //apple_ref/c/econst/UInt8 //apple_ref/c/struct/UInt8 //apple_ref/c/clconst/UInt8" --><font class="type">UInt8</font><!-- /a --> <font class="var">mFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mSubFrameSampleOffset</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mHours</code></dt>
+<dd>The hours.</dd>
+<dt><code>mMinutes</code></dt>
+<dd>The minutes.</dd>
+<dt><code>mSeconds</code></dt>
+<dd>The seconds.</dd>
+<dt><code>mFrames</code></dt>
+<dd>The frames.</dd>
+<dt><code>mSubFrameSampleOffset</code></dt>
+<dd>The sample offset within a frame.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileMarker;  name=AudioFileMarker --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileMarker"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileMarker">AudioFileMarker</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A marker annotates a position in an audio file with additional information.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarker" logicalPath="//apple_ref/c/cl/AudioFileMarker //apple_ref/c/cl/AudioFileMarker //apple_ref/c/tdef/AudioFileMarker //apple_ref/c/tag/AudioFileMarker" target="_top"><font class="type">AudioFileMarker</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/Float64 //apple_ref/c/cl/Float64 //apple_ref/c/tdef/Float64 //apple_ref/c/tag/Float64 //apple_ref/c/econst/Float64 //apple_ref/c/struct/Float64 //apple_ref/c/clconst/Float64" --><font class="type">Float64</font><!-- /a --> <font class="var">mFramePosition</font>;  
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">mName</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">mMarkerID</font>;  
+    <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFile_SMPTE_Time" logicalPath="//apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/cl/AudioFile_SMPTE_Time //apple_ref/c/tdef/AudioFile_SMPTE_Time //apple_ref/c/tag/AudioFile_SMPTE_Time" target="_top"><font class="type">AudioFile_SMPTE_Time</font></a> <font class="var">mSMPTETime</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">mReserved</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt16 //apple_ref/c/cl/UInt16 //apple_ref/c/tdef/UInt16 //apple_ref/c/tag/UInt16 //apple_ref/c/econst/UInt16 //apple_ref/c/struct/UInt16 //apple_ref/c/clconst/UInt16" --><font class="type">UInt16</font><!-- /a --> <font class="var">mChannel</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mFramePosition</code></dt>
+<dd>The frame in the file counting from the start of the audio data.</dd>
+<dt><code>mName</code></dt>
+<dd>The name of this marker.</dd>
+<dt><code>mMarkerID</code></dt>
+<dd>A unique ID for this marker.</dd>
+<dt><code>mSMPTETime</code></dt>
+<dd>The SMPTE time for this marker.</dd>
+<dt><code>mType</code></dt>
+<dd>The marker type.</dd>
+<dt><code>mReserved</code></dt>
+<dd>A reserved field. Set to zero.</dd>
+<dt><code>mChannel</code></dt>
+<dd>The channel number that the marker refers to. Set to zero if marker applies to all channels.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(description)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileMarkerList;  name=AudioFileMarkerList --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileMarkerList"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileMarkerList">AudioFileMarkerList</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>(description)
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarkerList" logicalPath="//apple_ref/c/cl/AudioFileMarkerList //apple_ref/c/cl/AudioFileMarkerList //apple_ref/c/tdef/AudioFileMarkerList //apple_ref/c/tag/AudioFileMarkerList" target="_top"><font class="type">AudioFileMarkerList</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mSMPTE_TimeType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mNumberMarkers</font>; 
+    <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarker" logicalPath="//apple_ref/c/cl/AudioFileMarker //apple_ref/c/cl/AudioFileMarker //apple_ref/c/tdef/AudioFileMarker //apple_ref/c/tag/AudioFileMarker" target="_top"><font class="type">AudioFileMarker</font></a> <!-- a logicalPath="//apple_ref/c/cl/mMarkers //apple_ref/c/cl/mMarkers //apple_ref/c/tdef/mMarkers //apple_ref/c/tag/mMarkers //apple_ref/c/econst/mMarkers //apple_ref/c/struct/mMarkers //apple_ref/c/clconst/mMarkers" --><font class="type">mMarkers</font><!-- /a -->[<!-- a logicalPath="//apple_ref/c/cl/kVariableLengthArray //apple_ref/c/cl/kVariableLengthArray //apple_ref/c/tdef/kVariableLengthArray //apple_ref/c/tag/kVariableLengthArray //apple_ref/c/econst/kVariableLengthArray //apple_ref/c/struct/kVariableLengthArray //apple_ref/c/clconst/kVariableLengthArray" --><font class="type">kVariableLengthArray</font><!-- /a -->]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code></code></dt>
+<dd>(name) (description)</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>(description)
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileRegion;  name=AudioFileRegion --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileRegion"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileRegion">AudioFileRegion</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>An AudioFileRegion specifies a segment of audio data.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegion" logicalPath="//apple_ref/c/cl/AudioFileRegion //apple_ref/c/cl/AudioFileRegion //apple_ref/c/tdef/AudioFileRegion //apple_ref/c/tag/AudioFileRegion" target="_top"><font class="type">AudioFileRegion</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mRegionID</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/CFStringRef //apple_ref/c/cl/CFStringRef //apple_ref/c/tdef/CFStringRef //apple_ref/c/tag/CFStringRef //apple_ref/c/econst/CFStringRef //apple_ref/c/struct/CFStringRef //apple_ref/c/clconst/CFStringRef" --><font class="type">CFStringRef</font><!-- /a --> <font class="var">mName</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mFlags</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mNumberMarkers</font>; 
+    <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileMarker" logicalPath="//apple_ref/c/cl/AudioFileMarker //apple_ref/c/cl/AudioFileMarker //apple_ref/c/tdef/AudioFileMarker //apple_ref/c/tag/AudioFileMarker" target="_top"><font class="type">AudioFileMarker</font></a> <!-- a logicalPath="//apple_ref/c/cl/mMarkers //apple_ref/c/cl/mMarkers //apple_ref/c/tdef/mMarkers //apple_ref/c/tag/mMarkers //apple_ref/c/econst/mMarkers //apple_ref/c/struct/mMarkers //apple_ref/c/clconst/mMarkers" --><font class="type">mMarkers</font><!-- /a -->[<!-- a logicalPath="//apple_ref/c/cl/kVariableLengthArray //apple_ref/c/cl/kVariableLengthArray //apple_ref/c/tdef/kVariableLengthArray //apple_ref/c/tag/kVariableLengthArray //apple_ref/c/econst/kVariableLengthArray //apple_ref/c/struct/kVariableLengthArray //apple_ref/c/clconst/kVariableLengthArray" --><font class="type">kVariableLengthArray</font><!-- /a -->]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mRegionID</code></dt>
+<dd>each region must have a unique ID.</dd>
+<dt><code>mName</code></dt>
+<dd>The name of the region.</dd>
+<dt><code>mFlags</code></dt>
+<dd>AudioFileRegionFlags.</dd>
+<dt><code>mNumberMarkers</code></dt>
+<dd>The number of markers in the mMarkers array.</dd>
+<dt><code>mMarkers</code></dt>
+<dd>A variable length array of AudioFileMarkers.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Generally a region consists of at least two markers marking the beginning and end of the segment.
+There may also be other markers defining other meta information such as sync point.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileRegionList;  name=AudioFileRegionList --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileRegionList"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileRegionList">AudioFileRegionList</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>A list of the AudioFileRegions in a file.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegionList" logicalPath="//apple_ref/c/cl/AudioFileRegionList //apple_ref/c/cl/AudioFileRegionList //apple_ref/c/tdef/AudioFileRegionList //apple_ref/c/tag/AudioFileRegionList" target="_top"><font class="type">AudioFileRegionList</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mSMPTE_TimeType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mNumberRegions</font>; 
+    <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegion" logicalPath="//apple_ref/c/cl/AudioFileRegion //apple_ref/c/cl/AudioFileRegion //apple_ref/c/tdef/AudioFileRegion //apple_ref/c/tag/AudioFileRegion" target="_top"><font class="type">AudioFileRegion</font></a> <!-- a logicalPath="//apple_ref/c/cl/mRegions //apple_ref/c/cl/mRegions //apple_ref/c/tdef/mRegions //apple_ref/c/tag/mRegions //apple_ref/c/econst/mRegions //apple_ref/c/struct/mRegions //apple_ref/c/clconst/mRegions" --><font class="type">mRegions</font><!-- /a -->[<!-- a logicalPath="//apple_ref/c/cl/kVariableLengthArray //apple_ref/c/cl/kVariableLengthArray //apple_ref/c/tdef/kVariableLengthArray //apple_ref/c/tag/kVariableLengthArray //apple_ref/c/econst/kVariableLengthArray //apple_ref/c/struct/kVariableLengthArray //apple_ref/c/clconst/kVariableLengthArray" --><font class="type">kVariableLengthArray</font><!-- /a -->]; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mSMPTE_TimeType</code></dt>
+<dd>This defines the SMPTE timing scheme used in the file. See CAFFile.h for the values used here.</dd>
+<dt><code>mNumberRegions</code></dt>
+<dd>The number of regions in the mRegions list.</dd>
+<dt><code>mRegions</code></dt>
+<dd>A list of AudioFileRegions. Note that AudioFileMarkers are variable length, so this list cannot 
+be accessed as an array. Use the NextAudioFileRegion macro for traversing the list instead.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This is the struct used by the kAudioFilePropertyRegionList property.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFramePacketTranslation;  name=AudioFramePacketTranslation --><a name="//apple_ref/doc/compositePage/c/tag/AudioFramePacketTranslation"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFramePacketTranslation">AudioFramePacketTranslation</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>used for properties kAudioFilePropertyPacketToFrame and kAudioFilePropertyFrameToPacket
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFramePacketTranslation" logicalPath="//apple_ref/c/cl/AudioFramePacketTranslation //apple_ref/c/cl/AudioFramePacketTranslation //apple_ref/c/tdef/AudioFramePacketTranslation //apple_ref/c/tag/AudioFramePacketTranslation" target="_top"><font class="type">AudioFramePacketTranslation</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="var">mFrame</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="var">mPacket</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mFrameOffsetInPacket</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mFrame</code></dt>
+<dd>a frame number.</dd>
+<dt><code>mPacket</code></dt>
+<dd>a packet number.</dd>
+<dt><code>mFrameOffsetInPacket</code></dt>
+<dd>a frame offset in a packet.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>See description of kAudioFilePropertyPacketToFrame and kAudioFilePropertyFrameToPacket
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFilePacketTableInfo;  name=AudioFilePacketTableInfo --><a name="//apple_ref/doc/compositePage/c/tag/AudioFilePacketTableInfo"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFilePacketTableInfo">AudioFilePacketTableInfo</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>This contains information about the number of valid frames in a file and where they begin and end.
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFilePacketTableInfo" logicalPath="//apple_ref/c/cl/AudioFilePacketTableInfo //apple_ref/c/cl/AudioFilePacketTableInfo //apple_ref/c/tdef/AudioFilePacketTableInfo //apple_ref/c/tag/AudioFilePacketTableInfo" target="_top"><font class="type">AudioFilePacketTableInfo</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt64 //apple_ref/c/cl/SInt64 //apple_ref/c/tdef/SInt64 //apple_ref/c/tag/SInt64 //apple_ref/c/econst/SInt64 //apple_ref/c/struct/SInt64 //apple_ref/c/clconst/SInt64" --><font class="type">SInt64</font><!-- /a --> <font class="var">mNumberValidFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">mPrimingFrames</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/SInt32 //apple_ref/c/cl/SInt32 //apple_ref/c/tdef/SInt32 //apple_ref/c/tag/SInt32 //apple_ref/c/econst/SInt32 //apple_ref/c/struct/SInt32 //apple_ref/c/clconst/SInt32" --><font class="type">SInt32</font><!-- /a --> <font class="var">mRemainderFrames</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mNumberValidFrames</code></dt>
+<dd>the number of valid frames in the file.</dd>
+<dt><code>mPrimingFrames</code></dt>
+<dd>the number of invalid frames at the beginning of the file.</dd>
+<dt><code>mRemainderFrames</code></dt>
+<dd>the number of invalid frames at the end of the file.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>Some data formats may have packets whose contents are not completely valid, but represent priming or remainder 
+frames that are not meant to be played. For example a file with 100 packets of AAC is nominally 1024 * 100 = 102400 frames
+of data. However the first 2112 frames of that may be priming frames and there may be some 
+number of remainder frames added to pad out to a full packet of 1024 frames. The priming and remainder frames should be 
+discarded. The total number of packets in the file times the frames per packet (or counting each packet's frames 
+individually for a variable frames per packet format) minus mPrimingFrames, minus mRemainderFrames, should 
+equal mNumberValidFrames.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileTypeAndFormatID;  name=AudioFileTypeAndFormatID --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileTypeAndFormatID"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileTypeAndFormatID">AudioFileTypeAndFormatID</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>This is used as a specifier for kAudioFileGlobalInfo_AvailableStreamDescriptions
+</p>
+<blockquote><pre><font class="keyword">struct</font> <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileTypeAndFormatID" logicalPath="//apple_ref/c/cl/AudioFileTypeAndFormatID //apple_ref/c/cl/AudioFileTypeAndFormatID //apple_ref/c/tdef/AudioFileTypeAndFormatID //apple_ref/c/tag/AudioFileTypeAndFormatID" target="_top"><font class="type">AudioFileTypeAndFormatID</font></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/AudioFileTypeID //apple_ref/c/cl/AudioFileTypeID //apple_ref/c/tdef/AudioFileTypeID //apple_ref/c/tag/AudioFileTypeID //apple_ref/c/econst/AudioFileTypeID //apple_ref/c/struct/AudioFileTypeID //apple_ref/c/clconst/AudioFileTypeID" --><font class="type">AudioFileTypeID</font><!-- /a --> <font class="var">mFileType</font>; 
+    <!-- a logicalPath="//apple_ref/c/cl/UInt32 //apple_ref/c/cl/UInt32 //apple_ref/c/tdef/UInt32 //apple_ref/c/tag/UInt32 //apple_ref/c/econst/UInt32 //apple_ref/c/struct/UInt32 //apple_ref/c/clconst/UInt32" --><font class="type">UInt32</font><!-- /a --> <font class="var">mFormatID</font>; 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Field Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code>mFileType</code></dt>
+<dd>a four char code for the file type such as kAudioFileAIFFType, kAudioFileCAFType, etc.</dd>
+<dt><code>mFormatID</code></dt>
+<dd>a four char code for the format ID such as kAudioFormatLinearPCM, kAudioFormatMPEG4AAC, etc.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This struct is used to specify a desired audio file type and data format ID  so
+that a list of stream descriptions of available formats can be obtained.
+</p>
+</dl>
+<h2>Enumerations</h2>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/Audio%32File%32Types;  name=AudioFileTypes --><a name="//apple_ref/doc/compositePage/c/tag/Audio%32File%32Types"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="Audio%32File%32Types">Audio File Types</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Constants for the built-in audio file types.
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileAIFFType" logicalPath="//apple_ref/c/cl/kAudioFileAIFFType //apple_ref/c/cl/kAudioFileAIFFType //apple_ref/c/tdef/kAudioFileAIFFType //apple_ref/c/tag/kAudioFileAIFFType //apple_ref/c/econst/kAudioFileAIFFType" target="_top"><font class="type">kAudioFileAIFFType</font></a> = '<font class="char">AIFF</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileAIFCType" logicalPath="//apple_ref/c/cl/kAudioFileAIFCType //apple_ref/c/cl/kAudioFileAIFCType //apple_ref/c/tdef/kAudioFileAIFCType //apple_ref/c/tag/kAudioFileAIFCType //apple_ref/c/econst/kAudioFileAIFCType" target="_top"><font class="type">kAudioFileAIFCType</font></a> = '<font class="char">AIFC</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileWAVEType" logicalPath="//apple_ref/c/cl/kAudioFileWAVEType //apple_ref/c/cl/kAudioFileWAVEType //apple_ref/c/tdef/kAudioFileWAVEType //apple_ref/c/tag/kAudioFileWAVEType //apple_ref/c/econst/kAudioFileWAVEType" target="_top"><font class="type">kAudioFileWAVEType</font></a> = '<font class="char">WAVE</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileSoundDesigner2Type" logicalPath="//apple_ref/c/cl/kAudioFileSoundDesigner2Type //apple_ref/c/cl/kAudioFileSoundDesigner2Type //apple_ref/c/tdef/kAudioFileSoundDesigner2Type //apple_ref/c/tag/kAudioFileSoundDesigner2Type //apple_ref/c/econst/kAudioFileSoundDesigner2Type" target="_top"><font class="type">kAudioFileSoundDesigner2Type</font></a> = '<font class="char">Sd2f</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileNextType" logicalPath="//apple_ref/c/cl/kAudioFileNextType //apple_ref/c/cl/kAudioFileNextType //apple_ref/c/tdef/kAudioFileNextType //apple_ref/c/tag/kAudioFileNextType //apple_ref/c/econst/kAudioFileNextType" target="_top"><font class="type">kAudioFileNextType</font></a> = '<font class="char">NeXT</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileMP3Type" logicalPath="//apple_ref/c/cl/kAudioFileMP3Type //apple_ref/c/cl/kAudioFileMP3Type //apple_ref/c/tdef/kAudioFileMP3Type //apple_ref/c/tag/kAudioFileMP3Type //apple_ref/c/econst/kAudioFileMP3Type" target="_top"><font class="type">kAudioFileMP3Type</font></a> = '<font class="char">MPG3</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileAC3Type" logicalPath="//apple_ref/c/cl/kAudioFileAC3Type //apple_ref/c/cl/kAudioFileAC3Type //apple_ref/c/tdef/kAudioFileAC3Type //apple_ref/c/tag/kAudioFileAC3Type //apple_ref/c/econst/kAudioFileAC3Type" target="_top"><font class="type">kAudioFileAC3Type</font></a> = '<font class="char">ac</font>-<font class="char">3</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileAAC_ADTSType" logicalPath="//apple_ref/c/cl/kAudioFileAAC_ADTSType //apple_ref/c/cl/kAudioFileAAC_ADTSType //apple_ref/c/tdef/kAudioFileAAC_ADTSType //apple_ref/c/tag/kAudioFileAAC_ADTSType //apple_ref/c/econst/kAudioFileAAC_ADTSType" target="_top"><font class="type">kAudioFileAAC_ADTSType</font></a> = '<font class="char">adts</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileMPEG4Type" logicalPath="//apple_ref/c/cl/kAudioFileMPEG4Type //apple_ref/c/cl/kAudioFileMPEG4Type //apple_ref/c/tdef/kAudioFileMPEG4Type //apple_ref/c/tag/kAudioFileMPEG4Type //apple_ref/c/econst/kAudioFileMPEG4Type" target="_top"><font class="type">kAudioFileMPEG4Type</font></a> = '<font class="char">mp4f</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileM4AType" logicalPath="//apple_ref/c/cl/kAudioFileM4AType //apple_ref/c/cl/kAudioFileM4AType //apple_ref/c/tdef/kAudioFileM4AType //apple_ref/c/tag/kAudioFileM4AType //apple_ref/c/econst/kAudioFileM4AType" target="_top"><font class="type">kAudioFileM4AType</font></a> = '<font class="char">m4af</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileCAFType" logicalPath="//apple_ref/c/cl/kAudioFileCAFType //apple_ref/c/cl/kAudioFileCAFType //apple_ref/c/tdef/kAudioFileCAFType //apple_ref/c/tag/kAudioFileCAFType //apple_ref/c/econst/kAudioFileCAFType" target="_top"><font class="type">kAudioFileCAFType</font></a> = '<font class="char">caff</font>' 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFileAIFFType</code></dt>
+<dd>Audio Interchange File Format (AIFF)</dd>
+<dt><code>kAudioFileAIFCType</code></dt>
+<dd>Audio Interchange File Format Compressed (AIFF-C)</dd>
+<dt><code>kAudioFileWAVEType</code></dt>
+<dd>Microsoft WAVE</dd>
+<dt><code>kAudioFileSoundDesigner2Type</code></dt>
+<dd>Sound Designer II</dd>
+<dt><code>kAudioFileNextType</code></dt>
+<dd>NeXT / Sun</dd>
+<dt><code>kAudioFileMP3Type</code></dt>
+<dd>MPEG 2 Layer 3 (.mp3)</dd>
+<dt><code>kAudioFileAC3Type</code></dt>
+<dd>AC-3</dd>
+<dt><code>kAudioFileAAC_ADTSType</code></dt>
+<dd>Advanced Audio Coding (AAC) Audio Data Transport Stream (ADTS)</dd>
+<dt><code>kAudioFileMPEG4Type</code></dt>
+<dd></dd>
+<dt><code>kAudioFileM4AType</code></dt>
+<dd></dd>
+<dt><code>kAudioFileCAFType</code></dt>
+<dd>CoreAudio File Format.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>These constants are used to indicate the type of file to be written, or as a hint to
+what type of file to expect from data provided.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFile;  name=AudioFile --><a name="//apple_ref/doc/compositePage/c/tag/AudioFile"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFile">AudioFile</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>These are the error codes returned from the AudioFile API.
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileUnspecifiedError" logicalPath="//apple_ref/c/cl/kAudioFileUnspecifiedError //apple_ref/c/cl/kAudioFileUnspecifiedError //apple_ref/c/tdef/kAudioFileUnspecifiedError //apple_ref/c/tag/kAudioFileUnspecifiedError //apple_ref/c/econst/kAudioFileUnspecifiedError" target="_top"><font class="type">kAudioFileUnspecifiedError</font></a> = '<font class="char">wht</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileUnsupportedFileTypeError" logicalPath="//apple_ref/c/cl/kAudioFileUnsupportedFileTypeError //apple_ref/c/cl/kAudioFileUnsupportedFileTypeError //apple_ref/c/tdef/kAudioFileUnsupportedFileTypeError //apple_ref/c/tag/kAudioFileUnsupportedFileTypeError //apple_ref/c/econst/kAudioFileUnsupportedFileTypeError" target="_top"><font class="type">kAudioFileUnsupportedFileTypeError</font></a> = '<font class="char">typ</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileUnsupportedDataFormatError" logicalPath="//apple_ref/c/cl/kAudioFileUnsupportedDataFormatError //apple_ref/c/cl/kAudioFileUnsupportedDataFormatError //apple_ref/c/tdef/kAudioFileUnsupportedDataFormatError //apple_ref/c/tag/kAudioFileUnsupportedDataFormatError //apple_ref/c/econst/kAudioFileUnsupportedDataFormatError" target="_top"><font class="type">kAudioFileUnsupportedDataFormatError</font></a> = '<font class="char">fmt</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileUnsupportedPropertyError" logicalPath="//apple_ref/c/cl/kAudioFileUnsupportedPropertyError //apple_ref/c/cl/kAudioFileUnsupportedPropertyError //apple_ref/c/tdef/kAudioFileUnsupportedPropertyError //apple_ref/c/tag/kAudioFileUnsupportedPropertyError //apple_ref/c/econst/kAudioFileUnsupportedPropertyError" target="_top"><font class="type">kAudioFileUnsupportedPropertyError</font></a> = '<font class="char">pty</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileBadPropertySizeError" logicalPath="//apple_ref/c/cl/kAudioFileBadPropertySizeError //apple_ref/c/cl/kAudioFileBadPropertySizeError //apple_ref/c/tdef/kAudioFileBadPropertySizeError //apple_ref/c/tag/kAudioFileBadPropertySizeError //apple_ref/c/econst/kAudioFileBadPropertySizeError" target="_top"><font class="type">kAudioFileBadPropertySizeError</font></a> = '!<font class="char">siz</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePermissionsError" logicalPath="//apple_ref/c/cl/kAudioFilePermissionsError //apple_ref/c/cl/kAudioFilePermissionsError //apple_ref/c/tdef/kAudioFilePermissionsError //apple_ref/c/tag/kAudioFilePermissionsError //apple_ref/c/econst/kAudioFilePermissionsError" target="_top"><font class="type">kAudioFilePermissionsError</font></a> = '<font class="char">prm</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileNotOptimizedError" logicalPath="//apple_ref/c/cl/kAudioFileNotOptimizedError //apple_ref/c/cl/kAudioFileNotOptimizedError //apple_ref/c/tdef/kAudioFileNotOptimizedError //apple_ref/c/tag/kAudioFileNotOptimizedError //apple_ref/c/econst/kAudioFileNotOptimizedError" target="_top"><font class="type">kAudioFileNotOptimizedError</font></a> = '<font class="char">optm</font>', 
+    <font class="comment">// file format specific error codes</font> 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileInvalidChunkError" logicalPath="//apple_ref/c/cl/kAudioFileInvalidChunkError //apple_ref/c/cl/kAudioFileInvalidChunkError //apple_ref/c/tdef/kAudioFileInvalidChunkError //apple_ref/c/tag/kAudioFileInvalidChunkError //apple_ref/c/econst/kAudioFileInvalidChunkError" target="_top"><font class="type">kAudioFileInvalidChunkError</font></a> = '<font class="char">chk</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileDoesNotAllow64BitDataSizeError" logicalPath="//apple_ref/c/cl/kAudioFileDoesNotAllow64BitDataSizeError //apple_ref/c/cl/kAudioFileDoesNotAllow64BitDataSizeError //apple_ref/c/tdef/kAudioFileDoesNotAllow64BitDataSizeError //apple_ref/c/tag/kAudioFileDoesNotAllow64BitDataSizeError //apple_ref/c/econst/kAudioFileDoesNotAllow64BitDataSizeError" target="_top"><font class="type">kAudioFileDoesNotAllow64BitDataSizeError</font></a> = '<font class="char">off</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileInvalidPacketOffsetError" logicalPath="//apple_ref/c/cl/kAudioFileInvalidPacketOffsetError //apple_ref/c/cl/kAudioFileInvalidPacketOffsetError //apple_ref/c/tdef/kAudioFileInvalidPacketOffsetError //apple_ref/c/tag/kAudioFileInvalidPacketOffsetError //apple_ref/c/econst/kAudioFileInvalidPacketOffsetError" target="_top"><font class="type">kAudioFileInvalidPacketOffsetError</font></a> = '<font class="char">pck</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileInvalidFileError" logicalPath="//apple_ref/c/cl/kAudioFileInvalidFileError //apple_ref/c/cl/kAudioFileInvalidFileError //apple_ref/c/tdef/kAudioFileInvalidFileError //apple_ref/c/tag/kAudioFileInvalidFileError //apple_ref/c/econst/kAudioFileInvalidFileError" target="_top"><font class="type">kAudioFileInvalidFileError</font></a> = '<font class="char">dta</font>?', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileOperationNotSupportedError" logicalPath="//apple_ref/c/cl/kAudioFileOperationNotSupportedError //apple_ref/c/cl/kAudioFileOperationNotSupportedError //apple_ref/c/tdef/kAudioFileOperationNotSupportedError //apple_ref/c/tag/kAudioFileOperationNotSupportedError //apple_ref/c/econst/kAudioFileOperationNotSupportedError" target="_top"><font class="type">kAudioFileOperationNotSupportedError</font></a> = <font class="var">0x6F703F3F</font> <font class="comment">// 'op??', integer used because of trigraph</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFileUnspecifiedError</code></dt>
+<dd>An unspecified error has occurred.</dd>
+<dt><code>kAudioFileUnsupportedFileTypeError</code></dt>
+<dd>The file type is not supported.</dd>
+<dt><code>kAudioFileUnsupportedDataFormatError</code></dt>
+<dd>The data format is not supported by this file type.</dd>
+<dt><code>kAudioFileUnsupportedPropertyError</code></dt>
+<dd>The property is not supported.</dd>
+<dt><code>kAudioFileBadPropertySizeError</code></dt>
+<dd>The size of the property data was not correct.</dd>
+<dt><code>kAudioFilePermissionsError</code></dt>
+<dd>The operation violated the file permissions. For example, trying to write to a file opened with fsRdPerm.</dd>
+<dt><code>kAudioFileNotOptimizedError</code></dt>
+<dd>There are chunks following the audio data chunk that prevent extending the audio data chunk. 
+The file must be optimized in order to write more audio data.</dd>
+<dt><code>kAudioFileInvalidChunkError</code></dt>
+<dd>The chunk does not exist in the file or is not supported by the file.</dd>
+<dt><code>kAudioFileDoesNotAllow64BitDataSizeError</code></dt>
+<dd>The a file offset was too large for the file type. AIFF and WAVE have a 32 bit file size limit.</dd>
+<dt><code>kAudioFileInvalidPacketOffsetError</code></dt>
+<dd>A packet offset was past the end of the file, or not at the end of the file when writing a VBR format, 
+or a corrupt packet size was read when building the packet table.</dd>
+<dt><code>kAudioFileInvalidFileError</code></dt>
+<dd>The file is malformed, or otherwise not a valid instance of an audio file of its type.</dd>
+<dt><code>kAudioFileOperationNotSupportedError</code></dt>
+<dd>The operation cannot be performed. For example, setting kAudioFilePropertyAudioDataByteCount to increase 
+the size of the audio data in a file is not a supported operation. Write the data instead.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>error codes</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileLoopDirection;  name=AudioFileLoopDirection --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileLoopDirection"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileLoopDirection">AudioFileLoopDirection</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>These constants describe the playback direction of a looped segment of a file.
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileLoopDirection_NoLooping" logicalPath="//apple_ref/c/cl/kAudioFileLoopDirection_NoLooping //apple_ref/c/cl/kAudioFileLoopDirection_NoLooping //apple_ref/c/tdef/kAudioFileLoopDirection_NoLooping //apple_ref/c/tag/kAudioFileLoopDirection_NoLooping //apple_ref/c/econst/kAudioFileLoopDirection_NoLooping" target="_top"><font class="type">kAudioFileLoopDirection_NoLooping</font></a> = <font class="number">0</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileLoopDirection_Forward" logicalPath="//apple_ref/c/cl/kAudioFileLoopDirection_Forward //apple_ref/c/cl/kAudioFileLoopDirection_Forward //apple_ref/c/tdef/kAudioFileLoopDirection_Forward //apple_ref/c/tag/kAudioFileLoopDirection_Forward //apple_ref/c/econst/kAudioFileLoopDirection_Forward" target="_top"><font class="type">kAudioFileLoopDirection_Forward</font></a> = <font class="number">1</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileLoopDirection_ForwardAndBackward" logicalPath="//apple_ref/c/cl/kAudioFileLoopDirection_ForwardAndBackward //apple_ref/c/cl/kAudioFileLoopDirection_ForwardAndBackward //apple_ref/c/tdef/kAudioFileLoopDirection_ForwardAndBackward //apple_ref/c/tag/kAudioFileLoopDirection_ForwardAndBackward //apple_ref/c/econst/kAudioFileLoopDirection_ForwardAndBackward" target="_top"><font class="type">kAudioFileLoopDirection_ForwardAndBackward</font></a> = <font class="number">2</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileLoopDirection_Backward" logicalPath="//apple_ref/c/cl/kAudioFileLoopDirection_Backward //apple_ref/c/cl/kAudioFileLoopDirection_Backward //apple_ref/c/tdef/kAudioFileLoopDirection_Backward //apple_ref/c/tag/kAudioFileLoopDirection_Backward //apple_ref/c/econst/kAudioFileLoopDirection_Backward" target="_top"><font class="type">kAudioFileLoopDirection_Backward</font></a> = <font class="number">3</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFileLoopDirection_NoLooping</code></dt>
+<dd>The segment is not looped.</dd>
+<dt><code>kAudioFileLoopDirection_Forward</code></dt>
+<dd>play segment forward.</dd>
+<dt><code>kAudioFileLoopDirection_Backward</code></dt>
+<dd>play segment backward.</dd>
+<dt><code>kAudioFileLoopDirection_ForwardAndBackward</code></dt>
+<dd>play segment forward and backward.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileMarkerType;  name=AudioFileMarkerType --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileMarkerType"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileMarkerType">AudioFileMarkerType</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>constants for types of markers within a file. Used in the mType field of AudioFileMarker.
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileMarkerType_Generic" logicalPath="//apple_ref/c/cl/kAudioFileMarkerType_Generic //apple_ref/c/cl/kAudioFileMarkerType_Generic //apple_ref/c/tdef/kAudioFileMarkerType_Generic //apple_ref/c/tag/kAudioFileMarkerType_Generic //apple_ref/c/econst/kAudioFileMarkerType_Generic" target="_top"><font class="type">kAudioFileMarkerType_Generic</font></a> = <font class="number">0</font>, 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFileMarkerType_Generic</code></dt>
+<dd>A generic marker. See CAFFile.h for marker types specific to CAF files.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/AudioFileRegionFlags;  name=AudioFileRegionFlags --><a name="//apple_ref/doc/compositePage/c/tag/AudioFileRegionFlags"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="AudioFileRegionFlags">AudioFileRegionFlags</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>These are flags for an AudioFileRegion that specify a playback direction.
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileRegionFlag_LoopEnable" logicalPath="//apple_ref/c/cl/kAudioFileRegionFlag_LoopEnable //apple_ref/c/cl/kAudioFileRegionFlag_LoopEnable //apple_ref/c/tdef/kAudioFileRegionFlag_LoopEnable //apple_ref/c/tag/kAudioFileRegionFlag_LoopEnable //apple_ref/c/econst/kAudioFileRegionFlag_LoopEnable" target="_top"><font class="type">kAudioFileRegionFlag_LoopEnable</font></a> = <font class="number">1</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileRegionFlag_PlayForward" logicalPath="//apple_ref/c/cl/kAudioFileRegionFlag_PlayForward //apple_ref/c/cl/kAudioFileRegionFlag_PlayForward //apple_ref/c/tdef/kAudioFileRegionFlag_PlayForward //apple_ref/c/tag/kAudioFileRegionFlag_PlayForward //apple_ref/c/econst/kAudioFileRegionFlag_PlayForward" target="_top"><font class="type">kAudioFileRegionFlag_PlayForward</font></a> = <font class="number">2</font>, 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileRegionFlag_PlayBackward" logicalPath="//apple_ref/c/cl/kAudioFileRegionFlag_PlayBackward //apple_ref/c/cl/kAudioFileRegionFlag_PlayBackward //apple_ref/c/tdef/kAudioFileRegionFlag_PlayBackward //apple_ref/c/tag/kAudioFileRegionFlag_PlayBackward //apple_ref/c/econst/kAudioFileRegionFlag_PlayBackward" target="_top"><font class="type">kAudioFileRegionFlag_PlayBackward</font></a> = <font class="number">4</font> 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFileRegionFlag_LoopEnable</code></dt>
+<dd>If this flag is set, the region will be looped. One or both of the following must also be set.</dd>
+<dt><code>kAudioFileRegionFlag_PlayForward</code></dt>
+<dd>If this flag is set, the region will be played forward.</dd>
+<dt><code>kAudioFileRegionFlag_PlayBackward</code></dt>
+<dd>If this flag is set, the region will be played backward.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>One or multiple of these flags can be set. For example, if both kAudioFileRegionFlag_LoopEnable and 
+kAudioFileRegionFlag_PlayForward are set, then the region will play as a forward loop. If only 
+kAudioFileRegionFlag_PlayForward is set, then the region will be played forward once.
+</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/Audio;  name=Audio --><a name="//apple_ref/doc/compositePage/c/tag/Audio"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="Audio">Audio</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>constants for AudioFile get/set property calls
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyFileFormat" logicalPath="//apple_ref/c/cl/kAudioFilePropertyFileFormat //apple_ref/c/cl/kAudioFilePropertyFileFormat //apple_ref/c/tdef/kAudioFilePropertyFileFormat //apple_ref/c/tag/kAudioFilePropertyFileFormat //apple_ref/c/econst/kAudioFilePropertyFileFormat" target="_top"><font class="type">kAudioFilePropertyFileFormat</font></a> = '<font class="char">ffmt</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyDataFormat" logicalPath="//apple_ref/c/cl/kAudioFilePropertyDataFormat //apple_ref/c/cl/kAudioFilePropertyDataFormat //apple_ref/c/tdef/kAudioFilePropertyDataFormat //apple_ref/c/tag/kAudioFilePropertyDataFormat //apple_ref/c/econst/kAudioFilePropertyDataFormat" target="_top"><font class="type">kAudioFilePropertyDataFormat</font></a> = '<font class="char">dfmt</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyIsOptimized" logicalPath="//apple_ref/c/cl/kAudioFilePropertyIsOptimized //apple_ref/c/cl/kAudioFilePropertyIsOptimized //apple_ref/c/tdef/kAudioFilePropertyIsOptimized //apple_ref/c/tag/kAudioFilePropertyIsOptimized //apple_ref/c/econst/kAudioFilePropertyIsOptimized" target="_top"><font class="type">kAudioFilePropertyIsOptimized</font></a> = '<font class="char">optm</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyMagicCookieData" logicalPath="//apple_ref/c/cl/kAudioFilePropertyMagicCookieData //apple_ref/c/cl/kAudioFilePropertyMagicCookieData //apple_ref/c/tdef/kAudioFilePropertyMagicCookieData //apple_ref/c/tag/kAudioFilePropertyMagicCookieData //apple_ref/c/econst/kAudioFilePropertyMagicCookieData" target="_top"><font class="type">kAudioFilePropertyMagicCookieData</font></a> = '<font class="char">mgic</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyAudioDataByteCount" logicalPath="//apple_ref/c/cl/kAudioFilePropertyAudioDataByteCount //apple_ref/c/cl/kAudioFilePropertyAudioDataByteCount //apple_ref/c/tdef/kAudioFilePropertyAudioDataByteCount //apple_ref/c/tag/kAudioFilePropertyAudioDataByteCount //apple_ref/c/econst/kAudioFilePropertyAudioDataByteCount" target="_top"><font class="type">kAudioFilePropertyAudioDataByteCount</font></a> = '<font class="char">bcnt</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyAudioDataPacketCount" logicalPath="//apple_ref/c/cl/kAudioFilePropertyAudioDataPacketCount //apple_ref/c/cl/kAudioFilePropertyAudioDataPacketCount //apple_ref/c/tdef/kAudioFilePropertyAudioDataPacketCount //apple_ref/c/tag/kAudioFilePropertyAudioDataPacketCount //apple_ref/c/econst/kAudioFilePropertyAudioDataPacketCount" target="_top"><font class="type">kAudioFilePropertyAudioDataPacketCount</font></a> = '<font class="char">pcnt</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyMaximumPacketSize" logicalPath="//apple_ref/c/cl/kAudioFilePropertyMaximumPacketSize //apple_ref/c/cl/kAudioFilePropertyMaximumPacketSize //apple_ref/c/tdef/kAudioFilePropertyMaximumPacketSize //apple_ref/c/tag/kAudioFilePropertyMaximumPacketSize //apple_ref/c/econst/kAudioFilePropertyMaximumPacketSize" target="_top"><font class="type">kAudioFilePropertyMaximumPacketSize</font></a> = '<font class="char">psze</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyDataOffset" logicalPath="//apple_ref/c/cl/kAudioFilePropertyDataOffset //apple_ref/c/cl/kAudioFilePropertyDataOffset //apple_ref/c/tdef/kAudioFilePropertyDataOffset //apple_ref/c/tag/kAudioFilePropertyDataOffset //apple_ref/c/econst/kAudioFilePropertyDataOffset" target="_top"><font class="type">kAudioFilePropertyDataOffset</font></a> = '<font class="char">doff</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyChannelLayout" logicalPath="//apple_ref/c/cl/kAudioFilePropertyChannelLayout //apple_ref/c/cl/kAudioFilePropertyChannelLayout //apple_ref/c/tdef/kAudioFilePropertyChannelLayout //apple_ref/c/tag/kAudioFilePropertyChannelLayout //apple_ref/c/econst/kAudioFilePropertyChannelLayout" target="_top"><font class="type">kAudioFilePropertyChannelLayout</font></a> = '<font class="char">cmap</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyDeferSizeUpdates" logicalPath="//apple_ref/c/cl/kAudioFilePropertyDeferSizeUpdates //apple_ref/c/cl/kAudioFilePropertyDeferSizeUpdates //apple_ref/c/tdef/kAudioFilePropertyDeferSizeUpdates //apple_ref/c/tag/kAudioFilePropertyDeferSizeUpdates //apple_ref/c/econst/kAudioFilePropertyDeferSizeUpdates" target="_top"><font class="type">kAudioFilePropertyDeferSizeUpdates</font></a> = '<font class="char">dszu</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyDataFormatName" logicalPath="//apple_ref/c/cl/kAudioFilePropertyDataFormatName //apple_ref/c/cl/kAudioFilePropertyDataFormatName //apple_ref/c/tdef/kAudioFilePropertyDataFormatName //apple_ref/c/tag/kAudioFilePropertyDataFormatName //apple_ref/c/econst/kAudioFilePropertyDataFormatName" target="_top"><font class="type">kAudioFilePropertyDataFormatName</font></a> = '<font class="char">fnme</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyMarkerList" logicalPath="//apple_ref/c/cl/kAudioFilePropertyMarkerList //apple_ref/c/cl/kAudioFilePropertyMarkerList //apple_ref/c/tdef/kAudioFilePropertyMarkerList //apple_ref/c/tag/kAudioFilePropertyMarkerList //apple_ref/c/econst/kAudioFilePropertyMarkerList" target="_top"><font class="type">kAudioFilePropertyMarkerList</font></a> = '<font class="char">mkls</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyRegionList" logicalPath="//apple_ref/c/cl/kAudioFilePropertyRegionList //apple_ref/c/cl/kAudioFilePropertyRegionList //apple_ref/c/tdef/kAudioFilePropertyRegionList //apple_ref/c/tag/kAudioFilePropertyRegionList //apple_ref/c/econst/kAudioFilePropertyRegionList" target="_top"><font class="type">kAudioFilePropertyRegionList</font></a> = '<font class="char">rgls</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyPacketToFrame" logicalPath="//apple_ref/c/cl/kAudioFilePropertyPacketToFrame //apple_ref/c/cl/kAudioFilePropertyPacketToFrame //apple_ref/c/tdef/kAudioFilePropertyPacketToFrame //apple_ref/c/tag/kAudioFilePropertyPacketToFrame //apple_ref/c/econst/kAudioFilePropertyPacketToFrame" target="_top"><font class="type">kAudioFilePropertyPacketToFrame</font></a> = '<font class="char">pkfr</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyFrameToPacket" logicalPath="//apple_ref/c/cl/kAudioFilePropertyFrameToPacket //apple_ref/c/cl/kAudioFilePropertyFrameToPacket //apple_ref/c/tdef/kAudioFilePropertyFrameToPacket //apple_ref/c/tag/kAudioFilePropertyFrameToPacket //apple_ref/c/econst/kAudioFilePropertyFrameToPacket" target="_top"><font class="type">kAudioFilePropertyFrameToPacket</font></a> = '<font class="char">frpk</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyChunkIDs" logicalPath="//apple_ref/c/cl/kAudioFilePropertyChunkIDs //apple_ref/c/cl/kAudioFilePropertyChunkIDs //apple_ref/c/tdef/kAudioFilePropertyChunkIDs //apple_ref/c/tag/kAudioFilePropertyChunkIDs //apple_ref/c/econst/kAudioFilePropertyChunkIDs" target="_top"><font class="type">kAudioFilePropertyChunkIDs</font></a> = '<font class="char">chid</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyInfoDictionary" logicalPath="//apple_ref/c/cl/kAudioFilePropertyInfoDictionary //apple_ref/c/cl/kAudioFilePropertyInfoDictionary //apple_ref/c/tdef/kAudioFilePropertyInfoDictionary //apple_ref/c/tag/kAudioFilePropertyInfoDictionary //apple_ref/c/econst/kAudioFilePropertyInfoDictionary" target="_top"><font class="type">kAudioFilePropertyInfoDictionary</font></a> = '<font class="char">info</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFilePropertyPacketTableInfo" logicalPath="//apple_ref/c/cl/kAudioFilePropertyPacketTableInfo //apple_ref/c/cl/kAudioFilePropertyPacketTableInfo //apple_ref/c/tdef/kAudioFilePropertyPacketTableInfo //apple_ref/c/tag/kAudioFilePropertyPacketTableInfo //apple_ref/c/econst/kAudioFilePropertyPacketTableInfo" target="_top"><font class="type">kAudioFilePropertyPacketTableInfo</font></a> = '<font class="char">pnfo</font>' 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFilePropertyFileFormat</code></dt>
+<dd>An AudioFileTypeID that identifies the format of the file</dd>
+<dt><code>kAudioFilePropertyDataFormat</code></dt>
+<dd>An AudioStreamBasicDescription describing the format of the audio data</dd>
+<dt><code>kAudioFilePropertyIsOptimized</code></dt>
+<dd>A UInt32 indicating whether an Audio File has been optimized.
+Optimized means it is ready to start having sound data written to it. 
+A value of 0 indicates the file needs to be optimized.
+A value of 1 indicates the file is currently optimized.</dd>
+<dt><code>kAudioFilePropertyMagicCookieData</code></dt>
+<dd>A void * pointing to memory set up by the caller.
+Some file types require that a magic cookie be provided before packets can be written
+to the file, so this property should be set before calling 
+AudioFileWriteBytes()/AudioFileWritePackets() if a magic cookie exists.</dd>
+<dt><code>kAudioFilePropertyAudioDataByteCount</code></dt>
+<dd>a UInt64 that indicates the number of bytes of audio data contained in the file</dd>
+<dt><code>kAudioFilePropertyAudioDataPacketCount</code></dt>
+<dd>a UInt64 that indicates the number of packets of audio data contained in the file</dd>
+<dt><code>kAudioFilePropertyMaximumPacketSize</code></dt>
+<dd>a UInt32 that indicates the maximum size of a packet for the data contained in the file</dd>
+<dt><code>kAudioFilePropertyDataOffset</code></dt>
+<dd>a SInt64 that indicates the byte offset in the file of the audio data.</dd>
+<dt><code>kAudioFilePropertyChannelLayout</code></dt>
+<dd>An AudioChannelLayout struct.</dd>
+<dt><code>kAudioFilePropertyDeferSizeUpdates</code></dt>
+<dd>A UInt32. If 1, then updating the files sizes in the header is not done for every write, 
+but deferred until the file is read, optimized or closed. This is more efficient, but less safe
+since, if the application crashes before the size is updated, the file may not be readable.
+The default value is zero, it always updates header.</dd>
+<dt><code>kAudioFilePropertyDataFormatName</code></dt>
+<dd>This is deprecated. Use kAudioFormatProperty_FormatName in AudioFormat.h instead.</dd>
+<dt><code>kAudioFilePropertyMarkerList</code></dt>
+<dd>access the list of markers defined in the file. returns an AudioFileMarkerList.
+The CFStringRefs in the returned structs must be released by the client.
+(available in 10.2.4 and later)</dd>
+<dt><code>kAudioFilePropertyRegionList</code></dt>
+<dd>access the list of regions defined in the file. returns an Array of AudioFileRegions.
+The CFStringRefs in the returned structs must be released by the client.
+(available in 10.2.4 and later)</dd>
+<dt><code>kAudioFilePropertyPacketToFrame</code></dt>
+<dd>pass a AudioFramePacketTranslation with mPacket filled out and get mFrame back. mFrameOffsetInPacket is ignored.</dd>
+<dt><code>kAudioFilePropertyFrameToPacket</code></dt>
+<dd>pass a AudioFramePacketTranslation with mFrame filled out and get mPacket and mFrameOffsetInPacket back.</dd>
+<dt><code>kAudioFilePropertyChunkIDs</code></dt>
+<dd>returns an array of OSType four char codes for each kind of chunk in the file.</dd>
+<dt><code>kAudioFilePropertyInfoDictionary</code></dt>
+<dd>returns a CFDictionary filled with information about the data contined in the file. 
+See dictionary key constants already defined for info string types. 
+AudioFileComponents are free to add keys to the dictionaries that they return for this property...
+caller is responsible for releasing the CFObject</dd>
+<dt><code>kAudioFilePropertyPacketTableInfo</code></dt>
+<dd>Gets or sets an AudioFilePacketTableInfo struct for CAF files.
+When setting, the sum of mNumberValidFrames, mPrimingFrames and mRemainderFrames must be the same as the total
+number of frames in all packets. If not you will get a paramErr. The best way to ensure this is to get the value of
+the property and make sure the sum of the three values you set has the same sum as the three values you got.</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>File Properties</p>
+</dl>
+<hr>
+<!-- headerDoc=tag;  uid=//apple_ref/doc/compositePage/c/tag/Audio;  name=Audio --><a name="//apple_ref/doc/compositePage/c/tag/Audio"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="Audio">Audio</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>constants for AudioFileGetGlobalInfo properties
+</p>
+<blockquote><pre><font class="keyword">enum</font> { 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_ReadableTypes" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_ReadableTypes //apple_ref/c/cl/kAudioFileGlobalInfo_ReadableTypes //apple_ref/c/tdef/kAudioFileGlobalInfo_ReadableTypes //apple_ref/c/tag/kAudioFileGlobalInfo_ReadableTypes //apple_ref/c/econst/kAudioFileGlobalInfo_ReadableTypes" target="_top"><font class="type">kAudioFileGlobalInfo_ReadableTypes</font></a> = '<font class="char">afrf</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_WritableTypes" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_WritableTypes //apple_ref/c/cl/kAudioFileGlobalInfo_WritableTypes //apple_ref/c/tdef/kAudioFileGlobalInfo_WritableTypes //apple_ref/c/tag/kAudioFileGlobalInfo_WritableTypes //apple_ref/c/econst/kAudioFileGlobalInfo_WritableTypes" target="_top"><font class="type">kAudioFileGlobalInfo_WritableTypes</font></a> = '<font class="char">afwf</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_FileTypeName" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_FileTypeName //apple_ref/c/cl/kAudioFileGlobalInfo_FileTypeName //apple_ref/c/tdef/kAudioFileGlobalInfo_FileTypeName //apple_ref/c/tag/kAudioFileGlobalInfo_FileTypeName //apple_ref/c/econst/kAudioFileGlobalInfo_FileTypeName" target="_top"><font class="type">kAudioFileGlobalInfo_FileTypeName</font></a> = '<font class="char">ftnm</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_ExtensionsForType" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_ExtensionsForType //apple_ref/c/cl/kAudioFileGlobalInfo_ExtensionsForType //apple_ref/c/tdef/kAudioFileGlobalInfo_ExtensionsForType //apple_ref/c/tag/kAudioFileGlobalInfo_ExtensionsForType //apple_ref/c/econst/kAudioFileGlobalInfo_ExtensionsForType" target="_top"><font class="type">kAudioFileGlobalInfo_ExtensionsForType</font></a> = '<font class="char">fext</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_AllExtensions" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_AllExtensions //apple_ref/c/cl/kAudioFileGlobalInfo_AllExtensions //apple_ref/c/tdef/kAudioFileGlobalInfo_AllExtensions //apple_ref/c/tag/kAudioFileGlobalInfo_AllExtensions //apple_ref/c/econst/kAudioFileGlobalInfo_AllExtensions" target="_top"><font class="type">kAudioFileGlobalInfo_AllExtensions</font></a> = '<font class="char">alxt</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_AvailableFormatIDs" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_AvailableFormatIDs //apple_ref/c/cl/kAudioFileGlobalInfo_AvailableFormatIDs //apple_ref/c/tdef/kAudioFileGlobalInfo_AvailableFormatIDs //apple_ref/c/tag/kAudioFileGlobalInfo_AvailableFormatIDs //apple_ref/c/econst/kAudioFileGlobalInfo_AvailableFormatIDs" target="_top"><font class="type">kAudioFileGlobalInfo_AvailableFormatIDs</font></a> = '<font class="char">fmid</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat //apple_ref/c/cl/kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat //apple_ref/c/tdef/kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat //apple_ref/c/tag/kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat //apple_ref/c/econst/kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat" target="_top"><font class="type">kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat</font></a> = '<font class="char">sdid</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_HFSTypeCodesForType" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_HFSTypeCodesForType //apple_ref/c/cl/kAudioFileGlobalInfo_HFSTypeCodesForType //apple_ref/c/tdef/kAudioFileGlobalInfo_HFSTypeCodesForType //apple_ref/c/tag/kAudioFileGlobalInfo_HFSTypeCodesForType //apple_ref/c/econst/kAudioFileGlobalInfo_HFSTypeCodesForType" target="_top"><font class="type">kAudioFileGlobalInfo_HFSTypeCodesForType</font></a> = '<font class="char">fhfs</font>', 
+    <a href="../../AudioToolbox/AudioFile/index.html?Enums/Enums.html#//apple_ref/c/econst/kAudioFileGlobalInfo_AllHFSTypeCodes" logicalPath="//apple_ref/c/cl/kAudioFileGlobalInfo_AllHFSTypeCodes //apple_ref/c/cl/kAudioFileGlobalInfo_AllHFSTypeCodes //apple_ref/c/tdef/kAudioFileGlobalInfo_AllHFSTypeCodes //apple_ref/c/tag/kAudioFileGlobalInfo_AllHFSTypeCodes //apple_ref/c/econst/kAudioFileGlobalInfo_AllHFSTypeCodes" target="_top"><font class="type">kAudioFileGlobalInfo_AllHFSTypeCodes</font></a> = '<font class="char">ahfs</font>' 
+}; </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<blockquote>
+<dl>
+<dt><code>kAudioFileGlobalInfo_ReadableTypes</code></dt>
+<dd>No specifier needed. Must be set to NULL.
+Returns an array of UInt32 containing the file types 
+(i.e. AIFF, WAVE, etc) that can be opened for reading.</dd>
+<dt><code>kAudioFileGlobalInfo_WritableTypes</code></dt>
+<dd>No specifier needed. Must be set to NULL.
+Returns an array of UInt32 containing the file types 
+(i.e. AIFF, WAVE, etc) that can be opened for writing.</dd>
+<dt><code>kAudioFileGlobalInfo_FileTypeName</code></dt>
+<dd>Specifier is a pointer to a AudioFileTypeID containing a file type.
+Returns a CFString containing the name for the file type.</dd>
+<dt><code>kAudioFileGlobalInfo_ExtensionsForType</code></dt>
+<dd>Specifier is a pointer to a AudioFileTypeID containing a file type.
+Returns a CFArray of CFStrings containing the file extensions 
+that are recognized for this file type.</dd>
+<dt><code>kAudioFileGlobalInfo_AllExtensions</code></dt>
+<dd>No specifier needed. Must be set to NULL.
+Returns a CFArray of CFStrings containing all file extensions 
+that are recognized. The array be used when creating an NSOpenPanel.</dd>
+<dt><code>kAudioFileGlobalInfo_AvailableFormatIDs</code></dt>
+<dd>Specifier is a pointer to a AudioFileTypeID containing a file type.
+Returns a array of format IDs for formats that can be read.</dd>
+<dt><code>kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat</code></dt>
+<dd>Specifier is a pointer to a AudioFileTypeAndFormatID struct defined below.
+Returns an array of AudioStreamBasicDescriptions which have all of the 
+formats for a particular file type and format ID. The AudioStreamBasicDescriptions
+have the following fields filled in: mFormatID, mFormatFlags, mBitsPerChannel</dd>
+<dt><code>kAudioFileGlobalInfo_HFSTypeCodesForType</code></dt>
+<dd>Specifier is a pointer to an AudioFileTypeID.
+Returns an array of HFSTypeCodes corresponding to that file type.
+The first type in the array is the preferred one for use when
+writing new files.</dd>
+<dt><code>kAudioFileGlobalInfo_AllHFSTypeCodes</code></dt>
+<dd>No specifier needed. Must be set to NULL.
+Returns an array of HFSTypeCode's containing all HFSTypeCodes
+that are recognized.
+<br><br>
+</dd>
+</dl>
+</blockquote>
+<dl>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>File Global Info Properties</p>
+</dl>
+<h2>#defines</h2>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/doc/compositePage/c/macro/NumBytesToNumAudioFileMarkers;  name=NumBytesToNumAudioFileMarkers --><a name="//apple_ref/doc/compositePage/c/macro/NumBytesToNumAudioFileMarkers"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="NumBytesToNumAudioFileMarkers">NumBytesToNumAudioFileMarkers</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a size in bytes to the number of AudioFileMarkers that can be contained in that number of bytes.</p>
+<blockquote><pre>#define <a href="../../AudioToolbox/AudioFile/index.html?PDefines/PDefines.html#//apple_ref/c/macro/NumBytesToNumAudioFileMarkers" logicalPath="//apple_ref/c/instm/NumBytesToNumAudioFileMarkers //apple_ref/c/clm/NumBytesToNumAudioFileMarkers //apple_ref/c/intfcm/NumBytesToNumAudioFileMarkers //apple_ref/c/func/NumBytesToNumAudioFileMarkers //apple_ref/c/ftmplt/NumBytesToNumAudioFileMarkers //apple_ref/c/defn/NumBytesToNumAudioFileMarkers //apple_ref/c/macro/NumBytesToNumAudioFileMarkers" target="_top"><font class="function">NumBytesToNumAudioFileMarkers</font></a>(
+    <font class="var">inNumBytes</font>)  </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inNumBytes</i></code></dt>
+<dd>a number of bytes.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>the number of AudioFileMarkers that can be contained in that number of bytes.</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This can be used for the kAudioFilePropertyMarkerList property when calculating the number of 
+markers that will be returned. </p>
+</dl>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/doc/compositePage/c/macro/NumAudioFileMarkersToNumBytes;  name=NumAudioFileMarkersToNumBytes --><a name="//apple_ref/doc/compositePage/c/macro/NumAudioFileMarkersToNumBytes"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="NumAudioFileMarkersToNumBytes">NumAudioFileMarkersToNumBytes</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>Converts a number of AudioFileMarkers to a size in bytes.</p>
+<blockquote><pre>#define <a href="../../AudioToolbox/AudioFile/index.html?PDefines/PDefines.html#//apple_ref/c/macro/NumAudioFileMarkersToNumBytes" logicalPath="//apple_ref/c/instm/NumAudioFileMarkersToNumBytes //apple_ref/c/clm/NumAudioFileMarkersToNumBytes //apple_ref/c/intfcm/NumAudioFileMarkersToNumBytes //apple_ref/c/func/NumAudioFileMarkersToNumBytes //apple_ref/c/ftmplt/NumAudioFileMarkersToNumBytes //apple_ref/c/defn/NumAudioFileMarkersToNumBytes //apple_ref/c/macro/NumAudioFileMarkersToNumBytes" target="_top"><font class="function">NumAudioFileMarkersToNumBytes</font></a>(
+    <font class="var">inNumMarkers</font>)  </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inNumMarkers</i></code></dt>
+<dd>a number of AudioFileMarkers.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>the size in bytes required to contain that number of AudioFileMarkers.</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>This can be used for the kAudioFilePropertyMarkerList property when calculating the size required to 
+contain a number of AudioFileMarkers. </p>
+</dl>
+<hr>
+<!-- headerDoc=macro;  uid=//apple_ref/doc/compositePage/c/macro/NextAudioFileRegion;  name=NextAudioFileRegion --><a name="//apple_ref/doc/compositePage/c/macro/NextAudioFileRegion"></a><table border="0" cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5">
+<h3><a name="NextAudioFileRegion">NextAudioFileRegion</a></h3>
+</td></tr></table>
+<hr>
+<dl></dl>
+<p>convenience macro for traversing the region list.</p>
+<blockquote><pre>#define <a href="../../AudioToolbox/AudioFile/index.html?PDefines/PDefines.html#//apple_ref/c/macro/NextAudioFileRegion" logicalPath="//apple_ref/c/instm/NextAudioFileRegion //apple_ref/c/clm/NextAudioFileRegion //apple_ref/c/intfcm/NextAudioFileRegion //apple_ref/c/func/NextAudioFileRegion //apple_ref/c/ftmplt/NextAudioFileRegion //apple_ref/c/defn/NextAudioFileRegion //apple_ref/c/macro/NextAudioFileRegion" target="_top"><font class="function">NextAudioFileRegion</font></a>(
+    <font class="var">inAFRegionPtr</font>) \ ((
+    <a href="../../AudioToolbox/AudioFile/index.html?Structs/Structs.html#//apple_ref/c/tag/AudioFileRegion" logicalPath="//apple_ref/c/cl/AudioFileRegion //apple_ref/c/cl/AudioFileRegion //apple_ref/c/tdef/AudioFileRegion //apple_ref/c/tag/AudioFileRegion" target="_top"><font class="type">AudioFileRegion</font></a>*)((
+    <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/econst/char //apple_ref/c/struct/char //apple_ref/c/clconst/char" --><font class="type">char</font><!-- /a -->*)(
+    <font class="var">inAFRegionPtr</font>) + <!-- a logicalPath="//apple_ref/c/instm/offsetof //apple_ref/c/clm/offsetof //apple_ref/c/intfcm/offsetof //apple_ref/c/func/offsetof //apple_ref/c/ftmplt/offsetof //apple_ref/c/defn/offsetof //apple_ref/c/macro/offsetof" --><font class="function">offsetof</font><!-- /a -->(
+    <font class="var">AudioFileRegion</font>, <font class="var">mMarkers</font>) + ((
+    <font class="var">inAFRegionPtr</font>)-&gt;<font class="var">mNumberMarkers</font>)*<!-- a logicalPath="//apple_ref/c/instm/sizeof //apple_ref/c/clm/sizeof //apple_ref/c/intfcm/sizeof //apple_ref/c/func/sizeof //apple_ref/c/ftmplt/sizeof //apple_ref/c/defn/sizeof //apple_ref/c/macro/sizeof" --><font class="function">sizeof</font><!-- /a -->(
+    <font class="var">CAFMarker</font>))) </pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><code><i>inAFRegionPtr</i></code></dt>
+<dd>a pointer to the current region.</dd>
+</dl>
+</blockquote>
+<dl>
+<dt><i> result</i></dt>
+<dd>a pointer to the region after the current region. This does not protect you from walking off the end of the list, 
+so obey mNumberRegions.</dd>
+<h5><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<p>because AudioFileRegions are variable length, you cannot access them as an array. Use NextAudioFileRegion 
+to walk the list.</p>
+</dl>
+<p>(Last Updated July 18, 2005)
+</p>
+</body>
+</html>

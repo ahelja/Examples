@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>html</string>
+				<string>htm</string>
+				<string>shtml</string>
+				<string>jhtml</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string></string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text/html</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>HTML document</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>HTML</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>BlotDocument</string>
+		</dict>
+                <dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>webarchive</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string></string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-webarchive</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Web archive</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>BlotDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>Blot</string>
+	<key>CFBundleIconFile</key>
+	<string>blot.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.intrigue.blot</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>blot</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Web site URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>http</string>
+				<string>https</string>
+			</array>
+			<key>LSIsAppleDefaultForScheme</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>local file URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>file</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1</string>
+	<key>MailLinkSupported</key>
+	<true/>
+	<key>MailPageSupported</key>
+	<true/>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>BlotApp</string>
+</dict>
+</plist>

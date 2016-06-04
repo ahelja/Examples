@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUMIDIBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUMIDIBase</a></h1>
+<big><b>Superclasses : </b></big>
+none<br>
+<big><b>Subclasses : </b></big>
+<a href = "AUMIDIEffectBase_fs.html" target="_top">AUMIDIEffectBase</a>, <a href = "MusicDeviceBase_fs.html" target="_top">MusicDeviceBase</a><br>
+<big><b>Header : </b></big>AUMIDIBase<br>
+<br><pre>class AUMIDIBase </pre>
+<p>This is a base class for units that handle MIDI.</p><hr>
+<h2>Methods</h2>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUMIDIBase">AUMIDIBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUMIDIBase(AUBase* inBase);</pre>
+<p></p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUMIDIBase">~AUMIDIBase</a></h4>
+</td><td width="50%">
+<h4>public virtual destructor</h4>
+</td></tr></table>
+<br><pre> virtual ~AUMIDIBase();</pre>
+<p></p><br>
+<hr>
+<h3><u>MIDI</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleAllNotesOff">HandleAllNotesOff</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleAllNotesOff(int inChannel);</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleAllSoundOff">HandleAllSoundOff</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleAllSoundOff(int inChannel);</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleChannelPressure">HandleChannelPressure</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleChannelPressure(
+          int                             inChannel,
+          UInt8                           inValue,
+          long                            inStartFrame
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleControlChange">HandleControlChange</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleControlChange(
+          int                             inChannel,
+          UInt8                           inController,
+          UInt8                           inValue,
+          long                            inStartFrame
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleMidiEvent">HandleMidiEvent</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus HandleMidiEvent(
+          UInt8                           inStatus,
+          UInt8                           inChannel,
+          UInt8                           inData1,
+          UInt8                           inData2,
+          long                            inStartFrame
+    );</pre>
+<p>This method dispatches a MIDI event to one of the other handler 
+			methods declared in this class.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleNoteOff">HandleNoteOff</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleNoteOff(
+          int                             inChannel,
+          UInt8                           inNoteNumber,
+          UInt8                           inVelocity,
+          long                            inStartFrame
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleNoteOn">HandleNoteOn</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleNoteOn(
+          int                             inChannel,
+          UInt8                           inNoteNumber,
+          UInt8                           inVelocity,
+          long                            inStartFrame
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandlePitchWheel">HandlePitchWheel</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandlePitchWheel(
+          int                             inChannel,
+          UInt8                           inPitch1,
+          UInt8                           inPitch2,
+          long                            inStartFrame
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandlePolyPressure">HandlePolyPressure</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandlePolyPressure(
+          int                             inChannel,
+          UInt8                           inKey,
+          UInt8                           inValue,
+          long                            inStartFrame
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleProgramChange">HandleProgramChange</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleProgramChange(
+          int                             inChannel,
+          UInt8                           inValue
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleResetAllControllers">HandleResetAllControllers</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleResetAllControllers(int inChannel);</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleSysEx">HandleSysEx</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleSysEx(
+          unsigned char*                  inData,
+          UInt32                          inLength
+    );</pre>
+<p>Override this method to handle the this type of MIDI event.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="MIDIEvent">MIDIEvent</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult MIDIEvent(
+          UInt32                          inStatus,
+          UInt32                          inData1,
+          UInt32                          inData2,
+          UInt32                          inOffsetSampleFrame
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SysEx">SysEx</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult SysEx(
+          UInt8*                          inData,
+          UInt32                          inLength
+    );</pre>
+<p></p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ComponentEntryDispatch">ComponentEntryDispatch</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static ComponentResult ComponentEntryDispatch(
+          ComponentParameters*            params,
+          AUMIDIBase*                     This
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DelegateGetProperty">DelegateGetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult DelegateGetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          void*                           outData
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DelegateGetPropertyInfo">DelegateGetPropertyInfo</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult DelegateGetPropertyInfo(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          UInt32&                         outDataSize,
+          Boolean&                        outWritable
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DelegateSetProperty">DelegateSetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult DelegateSetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const void*                     inData,
+          UInt32                          inDataSize
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetXMLNames">GetXMLNames</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetXMLNames(CFURLRef *outNameDocument);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleMIDIPacketList">HandleMIDIPacketList</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult HandleMIDIPacketList(const MIDIPacketList *pktlist);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleNonNoteEvent">HandleNonNoteEvent</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void HandleNonNoteEvent (
+          UInt8                           status,
+          UInt8                           channel,
+          UInt8                           data1,
+          UInt8                           data2,
+          UInt32                          inStartFrame
+    );</pre>
+<p></p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAUBaseInstance">mAUBaseInstance</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AUBase& mAUBaseInstance;</pre>
+<p></p><br>
+<hr>
+</body></html>

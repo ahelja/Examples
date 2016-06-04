@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAppleScriptBuildPhase section */
+		DA7CAE8F015CFCCA03C91932 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				DA206CF5015C4E8B03C91932 /* Multi-Language.applescript in AppleScript */,
+				DA8F777C023EF55603A80105 /* Objective-C.applescript in AppleScript */,
+				DA8F777E023EF56003A80105 /* C.applescript in AppleScript */,
+				DA8F7780023EF56303A80105 /* C++.applescript in AppleScript */,
+				DA8F7782023EF56803A80105 /* Java.applescript in AppleScript */,
+				DA8F778F023EF8A303A80105 /* AppleScript.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXAppleScriptBuildPhase section */
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* Multi-Language */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = 4E4B605508859621007FFB18 /* Build configuration list for PBXApplicationTarget "Multi-Language" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				DA7CAE8F015CFCCA03C91932 /* AppleScript */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Multi-Language";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "Multi-Language";
+			productInstallPath = "$(HOME)/Applications";
+			productName = Application;
+			productReference = 17587328FF379C6511CA2CBB /* Multi-Language.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Multi-Language</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.AppleScriptStudioExamples.MultiLanguage</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Multi-Language</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.4</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.4</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>YES</string>
+	<key>NSJavaNeeded</key>
+	<string>YES</string>
+	<key>NSJavaPath</key>
+	<array>
+		<string>Multi-Language.jar</string>
+	</array>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		29B9732CFDCFA39411CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		DA206CF2015C4E2903C91932 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		DA206CF5015C4E8B03C91932 /* Multi-Language.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA206CF3015C4E8B03C91932 /* Multi-Language.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		DA8F777C023EF55603A80105 /* Objective-C.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA8F777B023EF55603A80105 /* Objective-C.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		DA8F777E023EF56003A80105 /* C.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA8F777D023EF56003A80105 /* C.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		DA8F7780023EF56303A80105 /* C++.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA8F777F023EF56303A80105 /* C++.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		DA8F7782023EF56803A80105 /* Java.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA8F7781023EF56803A80105 /* Java.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		DA8F7784023EF80703A80105 /* JavaLanguage.java in Sources */ = {isa = PBXBuildFile; fileRef = DA8F7783023EF80703A80105 /* JavaLanguage.java */; };
+		DA8F7787023EF84403A80105 /* C.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8F7785023EF84403A80105 /* C.h */; };
+		DA8F7788023EF84403A80105 /* C.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8F7786023EF84403A80105 /* C.c */; };
+		DA8F778F023EF8A303A80105 /* AppleScript.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA8F778E023EF8A303A80105 /* AppleScript.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		DA8F7792023EF8FB03A80105 /* Objective-C.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8F7790023EF8FB03A80105 /* Objective-C.h */; };
+		DA8F7793023EF8FB03A80105 /* Objective-C.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8F7791023EF8FB03A80105 /* Objective-C.m */; };
+		DA8F7796023EF91203A80105 /* C++.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8F7794023EF91203A80105 /* C++.h */; };
+		DA8F7797023EF91203A80105 /* C++.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA8F7795023EF91203A80105 /* C++.cpp */; };
+		DA8F779E023EFD5503A80105 /* Multi-Language.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8F779C023EFD5503A80105 /* Multi-Language.h */; };
+		DA8F77A3023F100003A80105 /* Multi-Language.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA8F77A2023F100003A80105 /* Multi-Language.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_OSAFLAGS = "-x";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17587328FF379C6511CA2CBB /* Multi-Language.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "Multi-Language.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		65024E5F078DDA6200CC0C36 /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
+		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
+		DA206CF3015C4E8B03C91932 /* Multi-Language.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = "Multi-Language.applescript"; sourceTree = "<group>"; };
+		DA8F777B023EF55603A80105 /* Objective-C.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = "Objective-C.applescript"; sourceTree = "<group>"; };
+		DA8F777D023EF56003A80105 /* C.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = C.applescript; sourceTree = "<group>"; };
+		DA8F777F023EF56303A80105 /* C++.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = "C++.applescript"; sourceTree = "<group>"; };
+		DA8F7781023EF56803A80105 /* Java.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = Java.applescript; sourceTree = "<group>"; };
+		DA8F7783023EF80703A80105 /* JavaLanguage.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = JavaLanguage.java; sourceTree = "<group>"; };
+		DA8F7785023EF84403A80105 /* C.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = C.h; sourceTree = "<group>"; };
+		DA8F7786023EF84403A80105 /* C.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = C.c; sourceTree = "<group>"; };
+		DA8F778E023EF8A303A80105 /* AppleScript.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = AppleScript.applescript; sourceTree = "<group>"; };
+		DA8F7790023EF8FB03A80105 /* Objective-C.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "Objective-C.h"; sourceTree = "<group>"; };
+		DA8F7791023EF8FB03A80105 /* Objective-C.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "Objective-C.m"; sourceTree = "<group>"; };
+		DA8F7794023EF91203A80105 /* C++.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "C++.h"; sourceTree = "<group>"; };
+		DA8F7795023EF91203A80105 /* C++.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = "C++.cpp"; sourceTree = "<group>"; };
+		DA8F779C023EFD5503A80105 /* Multi-Language.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "Multi-Language.h"; sourceTree = "<group>"; };
+		DA8F77A2023F100003A80105 /* Multi-Language.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = "Multi-Language.mm"; sourceTree = "<group>"; };
+		DA9D808B023FC66003A80105 /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+				DA206CF2015C4E2903C91932 /* AppleScriptKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F778D023EF88303A80105 /* AppleScript */,
+				DA8F778C023EF87903A80105 /* Objective-C */,
+				DA8F7789023EF84F03A80105 /* C */,
+				DA8F778A023EF86A03A80105 /* C++ */,
+				DA8F778B023EF87203A80105 /* Java */,
+			);
+			name = Languages;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* Multi-Language.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DA9D808B023FC66003A80105 /* Read Me.rtf */,
+				DA206CF3015C4E8B03C91932 /* Multi-Language.applescript */,
+				DA8F779C023EFD5503A80105 /* Multi-Language.h */,
+				DA8F77A2023F100003A80105 /* Multi-Language.mm */,
+				080E96DDFE201D6D7F000001 /* Languages */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				65024E5F078DDA6200CC0C36 /* AppleScriptKit.sdef */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA8F7789023EF84F03A80105 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F777D023EF56003A80105 /* C.applescript */,
+				DA8F7785023EF84403A80105 /* C.h */,
+				DA8F7786023EF84403A80105 /* C.c */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		DA8F778A023EF86A03A80105 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F777F023EF56303A80105 /* C++.applescript */,
+				DA8F7794023EF91203A80105 /* C++.h */,
+				DA8F7795023EF91203A80105 /* C++.cpp */,
+			);
+			name = "C++";
+			sourceTree = "<group>";
+		};
+		DA8F778B023EF87203A80105 /* Java */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F7781023EF56803A80105 /* Java.applescript */,
+				DA8F7783023EF80703A80105 /* JavaLanguage.java */,
+			);
+			name = Java;
+			sourceTree = "<group>";
+		};
+		DA8F778C023EF87903A80105 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F777B023EF55603A80105 /* Objective-C.applescript */,
+				DA8F7790023EF8FB03A80105 /* Objective-C.h */,
+				DA8F7791023EF8FB03A80105 /* Objective-C.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		DA8F778D023EF88303A80105 /* AppleScript */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F778E023EF8A303A80105 /* AppleScript.applescript */,
+			);
+			name = AppleScript;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8F7787023EF84403A80105 /* C.h in Headers */,
+				DA8F7792023EF8FB03A80105 /* Objective-C.h in Headers */,
+				DA8F7796023EF91203A80105 /* C++.h in Headers */,
+				DA8F779E023EFD5503A80105 /* Multi-Language.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4E4B605908859621007FFB18 /* Build configuration list for PBXProject "Multi-Language" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Application */;
+			projectDirPath = "";
+			targets = (
+				29B97326FDCFA39411CA2CEA /* Multi-Language */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */,
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
+				DA8F7784023EF80703A80105 /* JavaLanguage.java in Sources */,
+				DA8F7788023EF84403A80105 /* C.c in Sources */,
+				DA8F7793023EF8FB03A80105 /* Objective-C.m in Sources */,
+				DA8F7797023EF91203A80105 /* C++.cpp in Sources */,
+				DA8F77A3023F100003A80105 /* Multi-Language.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E4B605608859621007FFB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Multi-Language";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4E4B605708859621007FFB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_OSAFLAGS = "-x";
+				PRODUCT_NAME = "Multi-Language";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4E4B605A08859621007FFB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		4E4B605B08859621007FFB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E4B605508859621007FFB18 /* Build configuration list for PBXApplicationTarget "Multi-Language" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E4B605608859621007FFB18 /* Debug */,
+				4E4B605708859621007FFB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E4B605908859621007FFB18 /* Build configuration list for PBXProject "Multi-Language" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E4B605A08859621007FFB18 /* Debug */,
+				4E4B605B08859621007FFB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

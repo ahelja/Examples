@@ -1,0 +1,1091 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		02CF5538FF13BCF511CA2CE8 = {
+			explicitFileType = wrapper.application;
+			isa = PBXFileReference;
+			path = Sketch.app;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//020
+//021
+//022
+//023
+//024
+//070
+//071
+//072
+//073
+//074
+		07A997C9FF96622C11CA2CEA = {
+			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		07A997CAFF96622C11CA2CEA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//070
+//071
+//072
+//073
+//074
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+		1A4F6685FE92D20011CA2CEA = {
+			buildSettings = {
+			};
+			buildStyles = (
+				07A997C9FF96622C11CA2CEA,
+				07A997CAFF96622C11CA2CEA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 1A4F6686FE92D20011CA2CEA;
+			projectDirPath = "";
+			targets = (
+				1A4F66D6FE92D20011CA2CEA,
+			);
+		};
+		1A4F6686FE92D20011CA2CEA = {
+			children = (
+				1A4F6687FE92D20011CA2CEA,
+				1A4F66BAFE92D20011CA2CEA,
+				1A4F668FFE92D20011CA2CEA,
+				1A4F66B1FE92D20011CA2CEA,
+				1A4F66C8FE92D20011CA2CEA,
+				1A4F66D1FE92D20011CA2CEA,
+				20846A40FE943B0C11CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Sketch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6687FE92D20011CA2CEA = {
+			children = (
+				1A4F6688FE92D20011CA2CEA,
+				1A4F6689FE92D20011CA2CEA,
+				1A4F668AFE92D20011CA2CEA,
+				1A4F668BFE92D20011CA2CEA,
+				1A4F668CFE92D20011CA2CEA,
+				1A4F668DFE92D20011CA2CEA,
+				1A4F668EFE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "View & Controller Classes";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6688FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTDrawAppDelegate.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6689FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTDrawWindowController.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F668AFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTGraphicView.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F668BFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTInspectorController.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F668CFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTToolPaletteController.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F668DFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTGridPanelController.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F668EFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTGridView.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F668FFE92D20011CA2CEA = {
+			children = (
+				1A4F6690FE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6690FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = Sketch_main.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6692FE92D20011CA2CEA = {
+			children = (
+				1A4F6693FE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Inspector.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6693FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/Inspector.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6695FE92D20011CA2CEA = {
+			children = (
+				1A4F6696FE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = GridPanel.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6696FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/GridPanel.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6698FE92D20011CA2CEA = {
+			children = (
+				1A4F6699FE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = DrawWindow.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F6699FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/DrawWindow.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F669AFE92D20011CA2CEA = {
+			children = (
+				1A4F669BFE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = ToolPalette.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F669BFE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/ToolPalette.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F669DFE92D20011CA2CEA = {
+			children = (
+				1A4F669FFE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Draw2Java.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F669FFE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = English;
+			path = English.lproj/Draw2Java.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A0FE92D20011CA2CEA = {
+			children = (
+				1A4F66A1FE92D20011CA2CEA,
+				1A4F66A5FE92D20011CA2CEA,
+				1A4F66A3FE92D20011CA2CEA,
+				1A4F66AFFE92D20011CA2CEA,
+				1A4F66A8FE92D20011CA2CEA,
+				1A4F66ACFE92D20011CA2CEA,
+				1A4F66A7FE92D20011CA2CEA,
+				1A4F66A2FE92D20011CA2CEA,
+				1A4F66A4FE92D20011CA2CEA,
+				1A4F66B0FE92D20011CA2CEA,
+				1A4F66AAFE92D20011CA2CEA,
+				1A4F66AEFE92D20011CA2CEA,
+				1A4F66A6FE92D20011CA2CEA,
+				1A4F66A9FE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Images;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A1FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Draw2App.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A2FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Curve.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A3FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Draw2File.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A4FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Line.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A5FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = Draw2App.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A6FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Scribble.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A7FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Cross.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A8FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Arrow.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66A9FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = TextGraphic.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66AAFE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Polygon.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66ACFE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Circle.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66AEFE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Rectangle.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66AFFE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.icns;
+			path = Draw2File.icns;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B0FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.tiff;
+			path = Pencil.tiff;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B1FE92D20011CA2CEA = {
+			children = (
+				1A4F669DFE92D20011CA2CEA,
+				1A4F6698FE92D20011CA2CEA,
+				1A4F6692FE92D20011CA2CEA,
+				1A4F669AFE92D20011CA2CEA,
+				1A4F6695FE92D20011CA2CEA,
+				1A4F66B7FE92D20011CA2CEA,
+				1A4F66B4FE92D20011CA2CEA,
+				1A4F66B6FE92D20011CA2CEA,
+				1A4F66B2FE92D20011CA2CEA,
+				1A4F66A0FE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B2FE92D20011CA2CEA = {
+			children = (
+				1A4F66B3FE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Sketch.scriptTerminology;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B3FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = English;
+			path = English.lproj/Sketch.scriptTerminology;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B4FE92D20011CA2CEA = {
+			children = (
+				1A4F66B5FE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = Credits.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B5FE92D20011CA2CEA = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			name = English;
+			path = English.lproj/Credits.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B6FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = Sketch.scriptSuite;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B7FE92D20011CA2CEA = {
+			children = (
+				1A4F66B8FE92D20011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66B8FE92D20011CA2CEA = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66BAFE92D20011CA2CEA = {
+			children = (
+				1A4F66BCFE92D20011CA2CEA,
+				1A4F66BDFE92D20011CA2CEA,
+				1A4F66BEFE92D20011CA2CEA,
+				1A4F66BFFE92D20011CA2CEA,
+				1A4F66C0FE92D20011CA2CEA,
+				1A4F66C1FE92D20011CA2CEA,
+				1A4F66C2FE92D20011CA2CEA,
+				1A4F66C3FE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Model Classes";
+			path = DocumentModel.subproj;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66BCFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTDrawDocument.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66BDFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTGraphic.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66BEFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTRectangle.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66BFFE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTCircle.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66C0FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTLine.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66C1FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTTextArea.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66C2FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTImage.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66C3FE92D20011CA2CEA = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = SKTRenderingView.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66C8FE92D20011CA2CEA = {
+			children = (
+				1A4F66D0FE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Notes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66D0FE92D20011CA2CEA = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			path = ReadMe.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66D1FE92D20011CA2CEA = {
+			children = (
+				1C318A97FFC339F411CA2CEA,
+				1A4F66D3FE92D20011CA2CEA,
+				1A4F66D4FE92D20011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A4F66D3FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1A4F66D4FE92D20011CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1A4F66D6FE92D20011CA2CEA = {
+			buildPhases = (
+				1A4F66D8FE92D20011CA2CEA,
+				1A4F66F2FE92D20011CA2CEA,
+				1A4F6703FE92D20011CA2CEA,
+				1B2F20BBFE92DA7C11CA2CEA,
+			);
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 46;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Sketch;
+				RC_PROJECT_NAME = DrawJava;
+				SECTORDER_FLAGS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = Sketch;
+			productName = Sketch;
+			productReference = 02CF5538FF13BCF511CA2CE8;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>sketch</string>
+				<string>draw2</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>Draw2File</string>
+			<key>CFBundleTypeName</key>
+			<string>Apple Sketch Graphic Format</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>SKTDrawDocument</string>
+			<key>NSExportableAs</key>
+			<array>
+				<string>NSPDFPboardType</string>
+				<string>NSTIFFPboardType</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>pdf</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>NSPDFPboardType</string>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>tiff</string>
+				<string>tif</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>NSTIFFPboardType</string>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>Sketch</string>
+	<key>CFBundleIconFile</key>
+	<string>Draw2App</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.CocoaExamples.Sketch</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.3.3</string>
+	<key>CFBundleSignature</key>
+	<string>sktc</string>
+	<key>CFBundleVersion</key>
+	<string>46</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>YES</string>
+	<key>NSJavaNeeded</key>
+	<string>YES</string>
+	<key>NSJavaPath</key>
+	<array>
+		<string>Sketch.jar</string>
+	</array>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+	<key>NSMainNibFile</key>
+	<string>Draw2Java.nib</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+		1A4F66D8FE92D20011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				1A4F66D9FE92D20011CA2CEA,
+				1A4F66DAFE92D20011CA2CEA,
+				1A4F66DBFE92D20011CA2CEA,
+				1A4F66DCFE92D20011CA2CEA,
+				1A4F66DDFE92D20011CA2CEA,
+				1A4F66DEFE92D20011CA2CEA,
+				1A4F66DFFE92D20011CA2CEA,
+				1A4F66E0FE92D20011CA2CEA,
+				1A4F66E1FE92D20011CA2CEA,
+				1A4F66E2FE92D20011CA2CEA,
+				1A4F66E3FE92D20011CA2CEA,
+				1A4F66E4FE92D20011CA2CEA,
+				1A4F66E5FE92D20011CA2CEA,
+				1A4F66E6FE92D20011CA2CEA,
+				1A4F66E7FE92D20011CA2CEA,
+				1A4F66E9FE92D20011CA2CEA,
+				1A4F66EBFE92D20011CA2CEA,
+				1A4F66ECFE92D20011CA2CEA,
+				1A4F66EDFE92D20011CA2CEA,
+				1A4F66EEFE92D20011CA2CEA,
+				1A4F66EFFE92D20011CA2CEA,
+				1A4F66F0FE92D20011CA2CEA,
+				1A4F66F1FE92D20011CA2CEA,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A4F66D9FE92D20011CA2CEA = {
+			fileRef = 1A4F6692FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66DAFE92D20011CA2CEA = {
+			fileRef = 1A4F6695FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66DBFE92D20011CA2CEA = {
+			fileRef = 1A4F6698FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66DCFE92D20011CA2CEA = {
+			fileRef = 1A4F669AFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66DDFE92D20011CA2CEA = {
+			fileRef = 1A4F669DFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66DEFE92D20011CA2CEA = {
+			fileRef = 1A4F66A1FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66DFFE92D20011CA2CEA = {
+			fileRef = 1A4F66A2FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E0FE92D20011CA2CEA = {
+			fileRef = 1A4F66A3FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E1FE92D20011CA2CEA = {
+			fileRef = 1A4F66A4FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E2FE92D20011CA2CEA = {
+			fileRef = 1A4F66A5FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E3FE92D20011CA2CEA = {
+			fileRef = 1A4F66A6FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E4FE92D20011CA2CEA = {
+			fileRef = 1A4F66A7FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E5FE92D20011CA2CEA = {
+			fileRef = 1A4F66A8FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E6FE92D20011CA2CEA = {
+			fileRef = 1A4F66A9FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E7FE92D20011CA2CEA = {
+			fileRef = 1A4F66AAFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66E9FE92D20011CA2CEA = {
+			fileRef = 1A4F66ACFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66EBFE92D20011CA2CEA = {
+			fileRef = 1A4F66AEFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66ECFE92D20011CA2CEA = {
+			fileRef = 1A4F66AFFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66EDFE92D20011CA2CEA = {
+			fileRef = 1A4F66B0FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66EEFE92D20011CA2CEA = {
+			fileRef = 1A4F66B2FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66EFFE92D20011CA2CEA = {
+			fileRef = 1A4F66B4FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66F0FE92D20011CA2CEA = {
+			fileRef = 1A4F66B6FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66F1FE92D20011CA2CEA = {
+			fileRef = 1A4F66B7FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1A4F66F2FE92D20011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				1A4F66F3FE92D20011CA2CEA,
+				1A4F66F4FE92D20011CA2CEA,
+				1A4F66F5FE92D20011CA2CEA,
+				1A4F66F6FE92D20011CA2CEA,
+				1A4F66F7FE92D20011CA2CEA,
+				1A4F66F8FE92D20011CA2CEA,
+				1A4F66F9FE92D20011CA2CEA,
+				1A4F66FAFE92D20011CA2CEA,
+				1A4F66FBFE92D20011CA2CEA,
+				1A4F66FCFE92D20011CA2CEA,
+				1A4F66FDFE92D20011CA2CEA,
+				1A4F66FEFE92D20011CA2CEA,
+				1A4F66FFFE92D20011CA2CEA,
+				1A4F6700FE92D20011CA2CEA,
+				1A4F6701FE92D20011CA2CEA,
+				1A4F6702FE92D20011CA2CEA,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A4F66F3FE92D20011CA2CEA = {
+			fileRef = 1A4F6688FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66F4FE92D20011CA2CEA = {
+			fileRef = 1A4F6689FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66F5FE92D20011CA2CEA = {
+			fileRef = 1A4F668AFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66F6FE92D20011CA2CEA = {
+			fileRef = 1A4F668BFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66F7FE92D20011CA2CEA = {
+			fileRef = 1A4F668CFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66F8FE92D20011CA2CEA = {
+			fileRef = 1A4F668DFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66F9FE92D20011CA2CEA = {
+			fileRef = 1A4F668EFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66FAFE92D20011CA2CEA = {
+			fileRef = 1A4F6690FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66FBFE92D20011CA2CEA = {
+			fileRef = 1A4F66BCFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66FCFE92D20011CA2CEA = {
+			fileRef = 1A4F66BDFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66FDFE92D20011CA2CEA = {
+			fileRef = 1A4F66BEFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66FEFE92D20011CA2CEA = {
+			fileRef = 1A4F66BFFE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F66FFFE92D20011CA2CEA = {
+			fileRef = 1A4F66C0FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F6700FE92D20011CA2CEA = {
+			fileRef = 1A4F66C1FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F6701FE92D20011CA2CEA = {
+			fileRef = 1A4F66C2FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F6702FE92D20011CA2CEA = {
+			fileRef = 1A4F66C3FE92D20011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		1A4F6703FE92D20011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				1C318A98FFC339F411CA2CEA,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+//1B0
+//1B1
+//1B2
+//1B3
+//1B4
+		1B2F20BBFE92DA7C11CA2CEA = {
+			buildActionMask = 8;
+			files = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# This shell-script build phase happens only when installing and causes the \n# project sources (which are shipped as an example) to be installed\n# along with the application.\n\nEXAMPLESDIR=${SYSTEM_DEVELOPER_DIR}/Examples/Java/Cocoa\n\n# install the source\nxcodebuild installsrc \"SYMROOT=${SYMROOT}\" \"OBJROOT=${OBJROOT}\" \"DSTROOT=${DSTROOT}\" \"SRCROOT=${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}\"\n\n# strip out garbage\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*~\" -exec rm -rf {} \\; -prune ; \nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -type d -name \"CVS\" -exec rm -rf {} \\; -prune ;\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*.mode1\" -exec rm -rf {} \\; ;\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*.mode2\" -exec rm -rf {} \\; ;\nfind ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME} -name \"*.pbxuser\" -exec rm -rf {} \\; ;\nrm -rf ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}/build\n\n# set permissions\nchmod -R u+rwX,go+rX,go-w ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}\nchown -R ${INSTALL_OWNER}.${INSTALL_GROUP} ${DSTROOT}${EXAMPLESDIR}/${PRODUCT_NAME}\n";
+		};
+//1B0
+//1B1
+//1B2
+//1B3
+//1B4
+//1C0
+//1C1
+//1C2
+//1C3
+//1C4
+		1C318A97FFC339F411CA2CEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1C318A98FFC339F411CA2CEA = {
+			fileRef = 1C318A97FFC339F411CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//1C0
+//1C1
+//1C2
+//1C3
+//1C4
+//200
+//201
+//202
+//203
+//204
+		20846A40FE943B0C11CA2CEA = {
+			children = (
+				02CF5538FF13BCF511CA2CE8,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 1A4F6685FE92D20011CA2CEA;
+}

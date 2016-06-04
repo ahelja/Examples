@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>attributes</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>date</string>
+			<key>type</key>
+			<string>calendar date</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>imageURL</string>
+			<key>type</key>
+			<string>url</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>title</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+	</array>
+	<key>className</key>
+	<string>Media</string>
+	<key>displayName</key>
+	<string>Media</string>
+	<key>entityName</key>
+	<string>com.mycompany.syncexamples.Media</string>
+	<key>identityKeys</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>date</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>title</string>
+		</dict>
+	</array>
+	<key>name</key>
+	<string>Media</string>
+	<key>relationships</key>
+	<array>
+		<dict>
+			<key>deleteRule</key>
+			<string>nullify</string>
+			<key>destination</key>
+			<string>com.mycompany.syncexamples.Event</string>
+			<key>displayName</key>
+			<string>Event</string>
+			<key>isToMany</key>
+			<string>no</string>
+			<key>name</key>
+			<string>event</string>
+			<key>required</key>
+			<string>no</string>
+			<key>source</key>
+			<string>com.mycompany.syncexamples.Media</string>
+		</dict>
+	</array>
+</dict>
+</plist>

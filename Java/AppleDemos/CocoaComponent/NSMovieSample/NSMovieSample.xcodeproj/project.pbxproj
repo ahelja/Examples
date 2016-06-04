@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		364AA7C403D79A8700C91562 /* MovieSample */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5D2D7683087F59FD00ECE750 /* Build configuration list for PBXAggregateTarget "MovieSample" */;
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MovieSample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+				364AA7D103D79ADF00C91562 /* PBXTargetDependency */,
+				364AA7D903D79B5000C91562 /* PBXTargetDependency */,
+				4CFC2B1E08FC7C3A00D01556 /* PBXTargetDependency */,
+			);
+			name = MovieSample;
+			productName = MovieSample;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		364AA7D203D79B0E00C91562 /* NSMovieView.java in Sources */ = {isa = PBXBuildFile; fileRef = F54C9C8403D3B05001C914BD /* NSMovieView.java */; };
+		4CFC2B0F08FC7A7D00D01556 /* Manifest in JavaArchive */ = {isa = PBXBuildFile; fileRef = 4CFC2B0E08FC7A7D00D01556 /* Manifest */; settings = {JAVA_ARCHIVE_SUBDIR = ""; }; };
+		4CFC2B1308FC7B7900D01556 /* sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* sample.m */; };
+		4CFC2B1508FC7B7900D01556 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		4CFC2B1608FC7B7900D01556 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54C9C5B03D3AE3401C914BD /* JavaVM.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA420018CDE011CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA430018CDE011CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		F506583103D545F801000102 /* BuildStyle */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = BuildStyle;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		4CFC2B1D08FC7C3A00D01556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CFC2B1008FC7B7900D01556;
+			remoteInfo = "JNILib (Upgraded)";
+		};
+		9529CD31065997A50036EBF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364AA7D703D79B4C00C91562;
+			remoteInfo = CreateHeaders;
+		};
+		9529CD33065997A50036EBF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364AA7CE03D79ACA00C91562;
+			remoteInfo = NSMovieView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = file; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08FB77B6FE84183AC02AAC07 /* sample.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = sample.m; sourceTree = "<group>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		364AA7D803D79B4C00C91562 /* Headers/NSMovieView.h */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = Headers/NSMovieView.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		364AA7DB03D79C0000C91562 /* NSMovieView.jar */ = {isa = PBXFileReference; explicitFileType = archive.jar; includeInIndex = 0; path = NSMovieView.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CFC2B0E08FC7A7D00D01556 /* Manifest */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Manifest; sourceTree = "<group>"; };
+		4CFC2B1C08FC7B7900D01556 /* libsample.jnilib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libsample.jnilib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54C9C5B03D3AE3401C914BD /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
+		F54C9C8403D3B05001C914BD /* NSMovieView.java */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.java; path = NSMovieView.java; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		364AA7CD03D79ACA00C91562 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364AA7D503D79B4C00C91562 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CFC2B1408FC7B7900D01556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFC2B1508FC7B7900D01556 /* Cocoa.framework in Frameworks */,
+				4CFC2B1608FC7B7900D01556 /* JavaVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* NSMovieSample */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = NSMovieSample;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC2B0E08FC7A7D00D01556 /* Manifest */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77B6FE84183AC02AAC07 /* sample.m */,
+				F54C9C8403D3B05001C914BD /* NSMovieView.java */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				F54C9C5B03D3AE3401C914BD /* JavaVM.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				364AA7DB03D79C0000C91562 /* NSMovieView.jar */,
+				364AA7D803D79B4C00C91562 /* Headers/NSMovieView.h */,
+				4CFC2B1C08FC7B7900D01556 /* libsample.jnilib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		364AA7D303D79B4C00C91562 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CFC2B1108FC7B7900D01556 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXJavaArchiveBuildPhase section */
+		364AA7CC03D79ACA00C91562 /* JavaArchive */ = {
+			isa = PBXJavaArchiveBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFC2B0F08FC7A7D00D01556 /* Manifest in JavaArchive */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXJavaArchiveBuildPhase section */
+
+/* Begin PBXLibraryTarget section */
+		364AA7CE03D79ACA00C91562 /* NSMovieView */ = {
+			isa = PBXLibraryTarget;
+			buildConfigurationList = 5D2D7674087F59FD00ECE750 /* Build configuration list for PBXLibraryTarget "NSMovieView" */;
+			buildPhases = (
+				364AA7CB03D79ACA00C91562 /* Sources */,
+				364AA7CC03D79ACA00C91562 /* JavaArchive */,
+				364AA7CD03D79ACA00C91562 /* Frameworks */,
+			);
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = NSMovieView;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = NSMovieView;
+			productInstallPath = /usr/local/lib;
+			productName = NSMovieSampleView;
+			productReference = 364AA7DB03D79C0000C91562 /* NSMovieView.jar */;
+		};
+		364AA7D703D79B4C00C91562 /* CreateHeaders */ = {
+			isa = PBXLibraryTarget;
+			buildConfigurationList = 5D2D7679087F59FD00ECE750 /* Build configuration list for PBXLibraryTarget "CreateHeaders" */;
+			buildPhases = (
+				364AA7DA03D79B7000C91562 /* ShellScript */,
+				364AA7D303D79B4C00C91562 /* Headers */,
+				364AA7D403D79B4C00C91562 /* Sources */,
+				364AA7D503D79B4C00C91562 /* Frameworks */,
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Headers/NSMovieView.h;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = CreateHeaders;
+			productInstallPath = /usr/local/lib;
+			productName = CreateHeaders;
+			productReference = 364AA7D803D79B4C00C91562 /* Headers/NSMovieView.h */;
+		};
+/* End PBXLibraryTarget section */
+
+/* Begin PBXNativeTarget section */
+		4CFC2B1008FC7B7900D01556 /* JNILib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CFC2B1808FC7B7900D01556 /* Build configuration list for PBXNativeTarget "JNILib" */;
+			buildPhases = (
+				4CFC2B1108FC7B7900D01556 /* Headers */,
+				4CFC2B1208FC7B7900D01556 /* Sources */,
+				4CFC2B1408FC7B7900D01556 /* Frameworks */,
+				4CFC2B1708FC7B7900D01556 /* Rez */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"${TARGET_TEMP_DIR}/Headers",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Headers",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libsample.jnilib;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = JNILib;
+			productInstallPath = /usr/local/lib;
+			productName = JNILib;
+			productReference = 4CFC2B1C08FC7B7900D01556 /* libsample.jnilib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5D2D7688087F59FD00ECE750 /* Build configuration list for PBXProject "NSMovieSample" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA420018CDE011CA2923 /* Development */,
+				014CEA430018CDE011CA2923 /* Deployment */,
+				F506583103D545F801000102 /* BuildStyle */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* NSMovieSample */;
+			projectDirPath = "";
+			targets = (
+				364AA7C403D79A8700C91562 /* MovieSample */,
+				364AA7CE03D79ACA00C91562 /* NSMovieView */,
+				364AA7D703D79B4C00C91562 /* CreateHeaders */,
+				4CFC2B1008FC7B7900D01556 /* JNILib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		4CFC2B1708FC7B7900D01556 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		364AA7DA03D79B7000C91562 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "javah -classpath \"${TARGET_BUILD_DIR}/NSMovieView.jar\" -force -d \"${TARGET_BUILD_DIR}/Headers\" \"NSMovieView\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		364AA7CB03D79ACA00C91562 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364AA7D203D79B0E00C91562 /* NSMovieView.java in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364AA7D403D79B4C00C91562 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CFC2B1208FC7B7900D01556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFC2B1308FC7B7900D01556 /* sample.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		364AA7D103D79ADF00C91562 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364AA7CE03D79ACA00C91562 /* NSMovieView */;
+			targetProxy = 9529CD33065997A50036EBF1 /* PBXContainerItemProxy */;
+		};
+		364AA7D903D79B5000C91562 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364AA7D703D79B4C00C91562 /* CreateHeaders */;
+			targetProxy = 9529CD31065997A50036EBF1 /* PBXContainerItemProxy */;
+		};
+		4CFC2B1E08FC7C3A00D01556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CFC2B1008FC7B7900D01556 /* JNILib */;
+			targetProxy = 4CFC2B1D08FC7C3A00D01556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CFC2B1908FC7B7900D01556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = jnilib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"${TARGET_TEMP_DIR}/Headers",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Headers",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = libsample;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4CFC2B1A08FC7B7900D01556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = jnilib;
+				EXECUTABLE_PREFIX = lib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = (
+					"${TARGET_TEMP_DIR}/Headers",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Headers",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = sample;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		4CFC2B1B08FC7B7900D01556 /* BuildStyle */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = jnilib;
+				HEADER_SEARCH_PATHS = (
+					"${TARGET_TEMP_DIR}/Headers",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Headers",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libsample;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = BuildStyle;
+		};
+		5D2D7675087F59FD00ECE750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DISABLE_PARALLEL_BUILDING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				LIBRARY_STYLE = STATIC;
+				PRODUCT_NAME = NSMovieView;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		5D2D7676087F59FD00ECE750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DISABLE_PARALLEL_BUILDING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_MANIFEST_FILE = Manifest;
+				JAVA_SOURCE_SUBDIR = .;
+				LIBRARY_STYLE = STATIC;
+				PRODUCT_NAME = NSMovieView;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		5D2D7677087F59FD00ECE750 /* BuildStyle */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DISABLE_PARALLEL_BUILDING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				JAVA_ARCHIVE_CLASSES = YES;
+				JAVA_ARCHIVE_TYPE = JAR;
+				JAVA_COMPILER = /usr/bin/javac;
+				JAVA_SOURCE_SUBDIR = .;
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = NSMovieView;
+				PURE_JAVA = YES;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = BuildStyle;
+		};
+		5D2D767A087F59FD00ECE750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				LIBRARY_STYLE = STATIC;
+				PRODUCT_NAME = Headers/NSMovieView.h;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		5D2D767B087F59FD00ECE750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				LIBRARY_STYLE = STATIC;
+				PRODUCT_NAME = Headers/NSMovieView.h;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		5D2D767C087F59FD00ECE750 /* BuildStyle */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOL_FLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Headers/NSMovieView.h;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = BuildStyle;
+		};
+		5D2D7684087F59FD00ECE750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = MovieSample;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		5D2D7685087F59FD00ECE750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = MovieSample;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		5D2D7686087F59FD00ECE750 /* BuildStyle */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MovieSample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = BuildStyle;
+		};
+		5D2D7689087F59FD00ECE750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		5D2D768A087F59FD00ECE750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		5D2D768B087F59FD00ECE750 /* BuildStyle */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = BuildStyle;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CFC2B1808FC7B7900D01556 /* Build configuration list for PBXNativeTarget "JNILib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CFC2B1908FC7B7900D01556 /* Debug */,
+				4CFC2B1A08FC7B7900D01556 /* Release */,
+				4CFC2B1B08FC7B7900D01556 /* BuildStyle */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D2D7674087F59FD00ECE750 /* Build configuration list for PBXLibraryTarget "NSMovieView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D2D7675087F59FD00ECE750 /* Debug */,
+				5D2D7676087F59FD00ECE750 /* Release */,
+				5D2D7677087F59FD00ECE750 /* BuildStyle */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D2D7679087F59FD00ECE750 /* Build configuration list for PBXLibraryTarget "CreateHeaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D2D767A087F59FD00ECE750 /* Debug */,
+				5D2D767B087F59FD00ECE750 /* Release */,
+				5D2D767C087F59FD00ECE750 /* BuildStyle */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D2D7683087F59FD00ECE750 /* Build configuration list for PBXAggregateTarget "MovieSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D2D7684087F59FD00ECE750 /* Debug */,
+				5D2D7685087F59FD00ECE750 /* Release */,
+				5D2D7686087F59FD00ECE750 /* BuildStyle */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D2D7688087F59FD00ECE750 /* Build configuration list for PBXProject "NSMovieSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D2D7689087F59FD00ECE750 /* Debug */,
+				5D2D768A087F59FD00ECE750 /* Release */,
+				5D2D768B087F59FD00ECE750 /* BuildStyle */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

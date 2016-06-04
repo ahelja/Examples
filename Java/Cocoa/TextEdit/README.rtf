@@ -1,0 +1,170 @@
+{\rtf1\mac\ansicpg10000\cocoartf805
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\info}\vieww12000\viewh15840\viewkind0
+\deftab720
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs48 \cf0 TextEdit
+\f1\b0 \
+
+\fs24 \
+This directory contains the source code for the Cocoa/Java version of TextEdit, which is a simple text editor based on the text system in Cocoa.  
+\f0\b This is not the source for TextEdit which ships in /Applications
+\f1\b0 ; that is the Objective-C version, and the source code for it can be found in /Developer/Examples/AppKit/TextEdit. \
+\
+This demo is written using the Java language, and a mix of the Cocoa/Java and basic Java APIs to get its job done. In addition, for demo purposes, there is one ObjC class in the program, implementing text find capabilities.\
+\
+This version of TextEdit is missing many features and changes present in the Objective-C version. For instance, this version does not do sheets, and the user interface has not been updated since Mac OS X 10.1. If in doubt about a feature that good Mac OS X applications should have, check the Objective-C version of TextEdit.\
+\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 Major source files and what's interesting about them:\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 Document.java\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+Contains the implementation for the 
+\f0\b Document
+\f1\b0  class. One instance of this is created for every document (new or saved) in TextEdit.  The internal designated constructor for this class is 
+\f0\b Document()
+\f1\b0 ; however, external clients should go through 
+\f0\b Document()
+\f1\b0 ; or better yet 
+\f0\b openUntitled()
+\f1\b0  or 
+\f0\b openDocumentWithPath()
+\f1\b0 .\
+\
+The text contents (characters, attachments, attributes) of the document are kept in an instance of NSTextStorage. There is also an NSLayoutManager, and one or more NSTextViews (depending on whether "wrap to page" mode is selected). 
+\f0\b setHasMultiplePages()
+\f1\b0  determines whether the document is in "wrap to page" mode or not; study this method, 
+\f0\b addPage()
+\f1\b0 , and 
+\f0\b removePage()
+\f1\b0  to see how to create and manipulate NSTextViews programmatically.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b \cf0 setRichText() 
+\f1\b0 demonstrates what needs to happen when you want to convert an attributed string from being "rich" to "plain" and back. Note that in the new text system setting setRichText(boolean) on a text view simply prevents the user from manipulating attributes; however, the backing store can still contain multiple fonts, colors, etc. This is why this method needs to do the things it does.\
+\
+As you will note, there is a good deal of code to deal with encoding of the characters in the document when the document contains plain text. The instance variable 
+\f0\b documentEncoding
+\f1\b0  stores the encoding of the document; this is either deduced from the file or specified by the user when the document is opened. Keeping this encoding around allows the document to be saved with the same encoding as it was read. (When in memory the character encoding of the document is somewhat meaningless, because the characters in the document are stored in a String, whose backing stores are always expressed in terms of Unicode characters. The encoding determines how to save the document when saved as plain text.)\
+\
+The character encodings recognized by the system are defined in Cocoa. TextEdit shows a subset of these encodings in its open and save panels to allow users to specify encodings if necessary. The list of encodings shown is read from the optional resource file 
+\f0\b Encodings.txt
+\f1\b0 . If this file isn't around, a default built-in list of encodings is used. Note that as shipped, TextEdit contains 
+\f0\b DefaultEncodings.txt
+\f1\b0 , for reference; copy this to Encodings.txt and modify if you wish to change the list of encodings.\
+\
+TextEdit uses additional values for encodings to denote unknown encoding, RTF, RTFD, and HTML; this is somewhat of a hack, but the chosen values are unlikely to be used as encoding values in the system.\
+\
+Document class contains an instance of NSPrintInfo to store the default settings for printing. Setting horizontal pagination to 
+\f0\b NSPrintInfo.FitPagination
+\f1\b0  allows the text to be printed with the same wrapping as on the screen. In non-"wrap to page" mode this means the text might need to be scaled smaller when printed.\
+\
+The method 
+\f0\b doForegroundLayoutToCharacterIndex() 
+\f1\b0 shows how to get the text system to lay text out in the foreground up to a certain character location. By default the text system does its layout in the background, which allows bringing up the window fairly quickly. The user can even edit, print, or save the document while the background layout is going on. Although this is rather interesting in practice, having the scrollbar race down the page when the document first comes up can be confusing to some users. Thus TextEdit causes a portion of the document (by default the first 100,000 characters) to be laid out before the document is displayed. For documents that are larger the layout will still continue in the background once the document is displayed. Note that the user can always cause a full layout to happen by hitting the "End" key on the keyboard.\
+\
+There are a couple of instances of Windows-specific code in Document.java. Both are concerned with tweaking the look of the document scrollview to match the Windows guidelines. Note that we look at the interface style to dynamically match the look & feel.\
+\
+Features poorly implemented in Document include 
+\f0\b saveTo()
+\f1\b0  (which would save the document elsewhere without changing its current path) and dynamically changing the tab stops in plain text documents on font changes (this should really be handled by the text system at some point). \
+\
+Regarding file I/O, the method 
+\f0\b loadFromPath()
+\f1\b0  opens the specified file using the specified encoding, and the method
+\f0\b   saveToPath()
+\f1\b0  saves the document using the specified name and encoding.
+\f0\b  
+\f1\b0 \
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 TextReadWrite.java\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+This class contains utility functions for collecting the various busy work involved in reading/writing various file formats. The actual read/write code is provided by the frameworks, but the code in this class simply tries to recognize file types, identify encodings, and implement extra features, such as the ability to open rich files as plain text.\
+\
+There are several calls to 
+\f0\b System.gc()
+\f1\b0  and 
+\f0\b System.runFinalization()
+\f1\b0  in this file. These are here for two reasons: One, assure that references to files are released as early as possible, allowing files to be closed; Two, performance, in order to get timely garbage collection to clean up unneeded memory.  In order to clear out final references to objects that should be released, some local variables are also explicitly set to NULL before these calls.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 Controller.java\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+This file contains the central controller object for TextEditJava, which responds to application messages such as openFile(), printFile(), etc, and also implements the info panel.\
+\
+A piece of Windows-specific code in this file assures that when the users double-click on a TXT.rtf within a .rtfd directory, the .rtfd is opened instead of the TXT.rtf. This gets around the fact that we cannot (yet) allow opening directories as documents from the Explorer.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 MultiplePageView.java\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 In "wrap to page" mode there is one TextView per page. 
+\f0\b MultiplePageView
+\f1\b0  is the top level view which groups all of these views.  It is inserted as the document view of the scroll view in the document window. MultiplePageView is fairly simple, providing support for conversions between page numbers and rects, and drawing the background for the pages.\
+\
+A possible enhancement to this class would be to have it allow the user to manipulate the page margins by dragging guides around. An advanced exercise would be to add custom markers to the ruler to allow changing the page margins via the ruler as well.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 ScalingScrollView.java\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 Contains 
+\f0\b ScalingScrollView
+\f1\b0 , a subclass of View to implement a scroll view with a popup to allow setting the zoom factor. This class is fairly generic and can easily be used in a variety of cases.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 TextFinder.m\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 This class is written in Objective C and demonstrates that one can effectively write applications where Objective C and Java are freely mixed.\
+\
+Along with the corresponding nib file 
+\f0\b FindPanel.nib
+\f1\b0  implements basic replace and find functionality on text stored in a NSTextStorage.  Among other things demonstrates communicating with the pasteboard to get/set the find string.\
+\
+Note the implementation of replaceAll:; in order to play along with the text system's undo mechanism, it calls 
+\f0\b shouldReplaceCharactersInRange:replacementString:
+\f1\b0  in  NSTextView, and in order to do that, it prebuilds the region in which replacements are being done. By doing this with appends only (as opposed to replacements), the performance is assured to be pretty good, even with many replacements on a large document. \
+\
+Note that these days AppKit text system has a standard find panel, so the use of this class is really not needed for basic usages.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs28 \cf0 Preferences.java\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f1\b0\fs24 \cf0 Provides a preferences controller to read/write preferences stored in the defaults database. Provides support for specifying default values for the preferences, and tries to minimize the amount of information written out to the database by removing entries which have default values. \
+\
+Note that the preferences panel in TextEditJava does not have an "OK" button to confirm the changes; changes take place immediately. However the Preferences class supports a panel with OK/Revert buttons; simply connect the OK button to 
+\f0\b ok()
+\f1\b0 , and the Revert button to 
+\f0\b revert()
+\f1\b0 .\
+\
+}

@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		590FDE0505D0594A006D3E83 /* dru_devices.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A95617D04390F99001491DE /* dru_devices.h */; };
+		590FDE0705D0594A006D3E83 /* drioctl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A95617704390F49001491DE /* drioctl.c */; };
+		590FDE0805D0594A006D3E83 /* dru_devices.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A95617C04390F99001491DE /* dru_devices.c */; };
+		590FDE0A05D0594A006D3E83 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A95618604390FC8001491DE /* CoreFoundation.framework */; };
+		590FDE0B05D0594A006D3E83 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A95618704390FC8001491DE /* DiscRecording.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA520018CE5811CA2923 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		014CEA530018CE5811CA2923 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		590FDE0D05D0594A006D3E83 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		590FDE0F05D0594A006D3E83 /* drioctl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = drioctl; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A95617704390F49001491DE /* drioctl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drioctl.c; sourceTree = SOURCE_ROOT; };
+		8A95617C04390F99001491DE /* dru_devices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dru_devices.c; sourceTree = "<group>"; };
+		8A95617D04390F99001491DE /* dru_devices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dru_devices.h; sourceTree = "<group>"; };
+		8A95618604390FC8001491DE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		8A95618704390FC8001491DE /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		590FDE0905D0594A006D3E83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590FDE0A05D0594A006D3E83 /* CoreFoundation.framework in Frameworks */,
+				590FDE0B05D0594A006D3E83 /* DiscRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* drioctl */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				8A95617904390F99001491DE /* discrecutils */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				8A95618604390FC8001491DE /* CoreFoundation.framework */,
+				8A95618704390FC8001491DE /* DiscRecording.framework */,
+			);
+			name = drioctl;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8A95617704390F49001491DE /* drioctl.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				590FDE0F05D0594A006D3E83 /* drioctl */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A95617904390F99001491DE /* discrecutils */ = {
+			isa = PBXGroup;
+			children = (
+				8A95617C04390F99001491DE /* dru_devices.c */,
+				8A95617D04390F99001491DE /* dru_devices.h */,
+			);
+			name = discrecutils;
+			path = ../discrecutils;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		590FDE0405D0594A006D3E83 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590FDE0505D0594A006D3E83 /* dru_devices.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		590FDE0305D0594A006D3E83 /* drioctl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59756B1E087C51D9002CB306 /* Build configuration list for PBXNativeTarget "drioctl" */;
+			buildPhases = (
+				590FDE0405D0594A006D3E83 /* Headers */,
+				590FDE0605D0594A006D3E83 /* Sources */,
+				590FDE0905D0594A006D3E83 /* Frameworks */,
+				590FDE0C05D0594A006D3E83 /* Rez */,
+				590FDE0D05D0594A006D3E83 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = drioctl;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = drioctl;
+			productInstallPath = "$(HOME)/bin";
+			productName = drioctl;
+			productReference = 590FDE0F05D0594A006D3E83 /* drioctl */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 59756B22087C51D9002CB306 /* Build configuration list for PBXProject "drioctl" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA520018CE5811CA2923 /* Development */,
+				014CEA530018CE5811CA2923 /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* drioctl */;
+			projectDirPath = "";
+			targets = (
+				590FDE0305D0594A006D3E83 /* drioctl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		590FDE0C05D0594A006D3E83 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		590FDE0605D0594A006D3E83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590FDE0705D0594A006D3E83 /* drioctl.c in Sources */,
+				590FDE0805D0594A006D3E83 /* dru_devices.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		59756B1F087C51D9002CB306 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = drioctl;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		59756B20087C51D9002CB306 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = drioctl;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		59756B21087C51D9002CB306 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = drioctl;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		59756B23087C51D9002CB306 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		59756B24087C51D9002CB306 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		59756B25087C51D9002CB306 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59756B1E087C51D9002CB306 /* Build configuration list for PBXNativeTarget "drioctl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59756B1F087C51D9002CB306 /* Development */,
+				59756B20087C51D9002CB306 /* Deployment */,
+				59756B21087C51D9002CB306 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		59756B22087C51D9002CB306 /* Build configuration list for PBXProject "drioctl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59756B23087C51D9002CB306 /* Development */,
+				59756B24087C51D9002CB306 /* Deployment */,
+				59756B25087C51D9002CB306 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

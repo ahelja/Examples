@@ -1,0 +1,1836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5601F32107B19FE900796960 /* animate.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F31A07B19FE900796960 /* animate.c */; };
+		5601F32207B19FE900796960 /* chess.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F31B07B19FE900796960 /* chess.c */; };
+		5601F32307B19FE900796960 /* chess.inp in Resources */ = {isa = PBXBuildFile; fileRef = 5601F31D07B19FE900796960 /* chess.inp */; };
+		5601F32407B19FE900796960 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F31E07B19FE900796960 /* main.c */; };
+		5601F32507B19FE900796960 /* pathplan.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F31F07B19FE900796960 /* pathplan.c */; };
+		5601F32607B19FE900796960 /* texture.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F32007B19FE900796960 /* texture.c */; };
+		5601F32707B19FFD00796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F32807B19FFF00796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F33307B1A04D00796960 /* decal.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F33207B1A04D00796960 /* decal.c */; };
+		5601F33407B1A05200796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F33507B1A05300796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F34B07B1A0EA00796960 /* display.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F34007B1A0EA00796960 /* display.c */; };
+		5601F34C07B1A0EA00796960 /* faceline.dat in Resources */ = {isa = PBXBuildFile; fileRef = 5601F34107B1A0EA00796960 /* faceline.dat */; };
+		5601F34D07B1A0EA00796960 /* fileio.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F34207B1A0EA00796960 /* fileio.c */; };
+		5601F34E07B1A0EA00796960 /* index.dat in Resources */ = {isa = PBXBuildFile; fileRef = 5601F34407B1A0EA00796960 /* index.dat */; };
+		5601F34F07B1A0EA00796960 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F34507B1A0EA00796960 /* main.c */; };
+		5601F35007B1A0EA00796960 /* make_face.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F34607B1A0EA00796960 /* make_face.c */; };
+		5601F35107B1A0EA00796960 /* muscle.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F34807B1A0EA00796960 /* muscle.c */; };
+		5601F35207B1A0EA00796960 /* muscle.dat in Resources */ = {isa = PBXBuildFile; fileRef = 5601F34907B1A0EA00796960 /* muscle.dat */; };
+		5601F35307B1A0EA00796960 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 5601F34A07B1A0EA00796960 /* README */; };
+		5601F35407B1A0F100796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F35507B1A0F300796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F36F07B1A1C400796960 /* board.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F35607B1A18B00796960 /* board.c */; };
+		5601F37007B1A1C500796960 /* boards.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5601F35707B1A18B00796960 /* boards.txt */; };
+		5601F37107B1A1C500796960 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F35807B1A18B00796960 /* game.c */; };
+		5601F37207B1A1C600796960 /* gliq.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F35907B1A18B00796960 /* gliq.c */; };
+		5601F37307B1A1C700796960 /* pick.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F35B07B1A18B00796960 /* pick.c */; };
+		5601F37407B1A1C700796960 /* score.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F35C07B1A18B00796960 /* score.c */; };
+		5601F37507B1A1C700796960 /* scores.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5601F35D07B1A18B00796960 /* scores.txt */; };
+		5601F37607B1A1C800796960 /* spr_ouch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5601F35E07B1A18B00796960 /* spr_ouch.wav */; };
+		5601F37707B1A1CC00796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F37807B1A1CE00796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F37A07B1A1E100796960 /* tb.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F30D07B19F9400796960 /* tb.c */; };
+		5601F37B07B1A1E300796960 /* trackball.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F31107B19F9400796960 /* trackball.c */; };
+		5601F38407B1A26F00796960 /* glutmech.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F38307B1A26F00796960 /* glutmech.c */; };
+		5601F38507B1A27C00796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F38607B1A28000796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F3B407B1A30400796960 /* caust00.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F38E07B1A30400796960 /* caust00.bw */; };
+		5601F3B507B1A30400796960 /* caust01.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F38F07B1A30400796960 /* caust01.bw */; };
+		5601F3B607B1A30400796960 /* caust02.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39007B1A30400796960 /* caust02.bw */; };
+		5601F3B707B1A30400796960 /* caust03.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39107B1A30400796960 /* caust03.bw */; };
+		5601F3B807B1A30400796960 /* caust04.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39207B1A30400796960 /* caust04.bw */; };
+		5601F3B907B1A30400796960 /* caust05.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39307B1A30400796960 /* caust05.bw */; };
+		5601F3BA07B1A30400796960 /* caust06.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39407B1A30400796960 /* caust06.bw */; };
+		5601F3BB07B1A30400796960 /* caust07.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39507B1A30400796960 /* caust07.bw */; };
+		5601F3BC07B1A30400796960 /* caust08.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39607B1A30400796960 /* caust08.bw */; };
+		5601F3BD07B1A30400796960 /* caust09.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39707B1A30400796960 /* caust09.bw */; };
+		5601F3BE07B1A30400796960 /* caust10.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39807B1A30400796960 /* caust10.bw */; };
+		5601F3BF07B1A30400796960 /* caust11.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39907B1A30400796960 /* caust11.bw */; };
+		5601F3C007B1A30400796960 /* caust12.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39A07B1A30400796960 /* caust12.bw */; };
+		5601F3C107B1A30400796960 /* caust13.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39B07B1A30400796960 /* caust13.bw */; };
+		5601F3C207B1A30400796960 /* caust14.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39C07B1A30400796960 /* caust14.bw */; };
+		5601F3C307B1A30400796960 /* caust15.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39D07B1A30400796960 /* caust15.bw */; };
+		5601F3C407B1A30400796960 /* caust16.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39E07B1A30400796960 /* caust16.bw */; };
+		5601F3C507B1A30400796960 /* caust17.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F39F07B1A30400796960 /* caust17.bw */; };
+		5601F3C607B1A30400796960 /* caust18.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A007B1A30400796960 /* caust18.bw */; };
+		5601F3C707B1A30400796960 /* caust19.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A107B1A30400796960 /* caust19.bw */; };
+		5601F3C807B1A30400796960 /* caust20.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A207B1A30400796960 /* caust20.bw */; };
+		5601F3C907B1A30400796960 /* caust21.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A307B1A30400796960 /* caust21.bw */; };
+		5601F3CA07B1A30400796960 /* caust22.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A407B1A30400796960 /* caust22.bw */; };
+		5601F3CB07B1A30400796960 /* caust23.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A507B1A30400796960 /* caust23.bw */; };
+		5601F3CC07B1A30400796960 /* caust24.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A607B1A30400796960 /* caust24.bw */; };
+		5601F3CD07B1A30400796960 /* caust25.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A707B1A30400796960 /* caust25.bw */; };
+		5601F3CE07B1A30400796960 /* caust26.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A807B1A30400796960 /* caust26.bw */; };
+		5601F3CF07B1A30400796960 /* caust27.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3A907B1A30400796960 /* caust27.bw */; };
+		5601F3D007B1A30400796960 /* caust28.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3AA07B1A30400796960 /* caust28.bw */; };
+		5601F3D107B1A30400796960 /* caust29.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3AB07B1A30400796960 /* caust29.bw */; };
+		5601F3D207B1A30400796960 /* caust30.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3AC07B1A30400796960 /* caust30.bw */; };
+		5601F3D307B1A30400796960 /* caust31.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3AD07B1A30400796960 /* caust31.bw */; };
+		5601F3D407B1A30400796960 /* dino.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F3AE07B1A30400796960 /* dino.c */; };
+		5601F3D507B1A30400796960 /* floor.rgb in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3B007B1A30400796960 /* floor.rgb */; };
+		5601F3D607B1A30400796960 /* texload.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F3B107B1A30400796960 /* texload.c */; };
+		5601F3D707B1A30400796960 /* underwater.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F3B307B1A30400796960 /* underwater.c */; };
+		5601F3D807B1A31100796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F3D907B1A31200796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F3EB07B1A39700796960 /* usespheremap.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F3EA07B1A39700796960 /* usespheremap.c */; };
+		5601F3EC07B1A3A400796960 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5601F3ED07B1A3A500796960 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5601F3EE07B1A3B000796960 /* texture.c in Sources */ = {isa = PBXBuildFile; fileRef = 5601F30F07B19F9400796960 /* texture.c */; };
+		5601F3F007B1A3D900796960 /* spheremap.rgb in Resources */ = {isa = PBXBuildFile; fileRef = 5601F3EF07B1A3D900796960 /* spheremap.rgb */; };
+		5673FEB007B19D9600AF4085 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5673FEB907B19DAB00AF4085 /* newave.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FEB407B19DAB00AF4085 /* newave.c */; };
+		5673FEBA07B19DAB00AF4085 /* spheremap.rgb in Resources */ = {isa = PBXBuildFile; fileRef = 5673FEB507B19DAB00AF4085 /* spheremap.rgb */; };
+		5673FEBB07B19DAB00AF4085 /* texmap.rgb in Resources */ = {isa = PBXBuildFile; fileRef = 5673FEB607B19DAB00AF4085 /* texmap.rgb */; };
+		5673FEBC07B19DAB00AF4085 /* texture.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FEB707B19DAB00AF4085 /* texture.c */; };
+		5673FEC107B19E0000AF4085 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5673FED507B19E8300AF4085 /* atlantis.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE8C07B19D7100AF4085 /* atlantis.c */; };
+		5673FED607B19E8300AF4085 /* dolphin.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE8E07B19D7100AF4085 /* dolphin.c */; };
+		5673FED707B19E8400AF4085 /* shark.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE8F07B19D7100AF4085 /* shark.c */; };
+		5673FED807B19E8400AF4085 /* swim.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE9007B19D7100AF4085 /* swim.c */; };
+		5673FED907B19E8500AF4085 /* whale.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE9107B19D7100AF4085 /* whale.c */; };
+		5673FEDA07B19E9B00AF4085 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5673FEDB07B19E9D00AF4085 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+		5673FEE607B19F3600AF4085 /* bluepony.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE9707B19D8400AF4085 /* bluepony.c */; };
+		5673FEE707B19F3700AF4085 /* logo.bw in Resources */ = {isa = PBXBuildFile; fileRef = 5673FE9807B19D8400AF4085 /* logo.bw */; };
+		5673FEE807B19F3700AF4085 /* readtex.c in Sources */ = {isa = PBXBuildFile; fileRef = 5673FE9907B19D8400AF4085 /* readtex.c */; };
+		5673FEE907B19F4400AF4085 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607DA4107B19C0000C2151B /* GLUT.framework */; };
+		5673FEEA07B19F4500AF4085 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5673FEC007B19E0000AF4085 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		5607DA2E07B19B9D00C2151B /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		5607DA2F07B19B9D00C2151B /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		5601F30D07B19F9400796960 /* tb.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = tb.c; path = common/tb.c; sourceTree = SOURCE_ROOT; };
+		5601F30E07B19F9400796960 /* tb.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = tb.h; path = common/tb.h; sourceTree = SOURCE_ROOT; };
+		5601F30F07B19F9400796960 /* texture.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = texture.c; path = common/texture.c; sourceTree = SOURCE_ROOT; };
+		5601F31007B19F9400796960 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = texture.h; path = common/texture.h; sourceTree = SOURCE_ROOT; };
+		5601F31107B19F9400796960 /* trackball.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = trackball.c; path = common/trackball.c; sourceTree = SOURCE_ROOT; };
+		5601F31207B19F9400796960 /* trackball.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = trackball.h; path = common/trackball.h; sourceTree = SOURCE_ROOT; };
+		5601F31707B19FAB00796960 /* Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F31907B19FAB00796960 /* Chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Chess-Info.plist"; sourceTree = "<group>"; };
+		5601F31A07B19FE900796960 /* animate.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = animate.c; path = chess/animate.c; sourceTree = SOURCE_ROOT; };
+		5601F31B07B19FE900796960 /* chess.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = chess.c; path = chess/chess.c; sourceTree = SOURCE_ROOT; };
+		5601F31C07B19FE900796960 /* chess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = chess.h; path = chess/chess.h; sourceTree = SOURCE_ROOT; };
+		5601F31D07B19FE900796960 /* chess.inp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = chess.inp; path = chess/chess.inp; sourceTree = SOURCE_ROOT; };
+		5601F31E07B19FE900796960 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = main.c; path = chess/main.c; sourceTree = SOURCE_ROOT; };
+		5601F31F07B19FE900796960 /* pathplan.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pathplan.c; path = chess/pathplan.c; sourceTree = SOURCE_ROOT; };
+		5601F32007B19FE900796960 /* texture.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = texture.c; path = chess/texture.c; sourceTree = SOURCE_ROOT; };
+		5601F32D07B1A03600796960 /* Decal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F32F07B1A03600796960 /* Decal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Decal-Info.plist"; sourceTree = "<group>"; };
+		5601F33207B1A04D00796960 /* decal.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = decal.c; path = decal/decal.c; sourceTree = SOURCE_ROOT; };
+		5601F33D07B1A0C200796960 /* GeoFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F33F07B1A0C200796960 /* GeoFace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GeoFace-Info.plist"; sourceTree = "<group>"; };
+		5601F34007B1A0EA00796960 /* display.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = display.c; path = geoface/display.c; sourceTree = SOURCE_ROOT; };
+		5601F34107B1A0EA00796960 /* faceline.dat */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = faceline.dat; path = geoface/faceline.dat; sourceTree = SOURCE_ROOT; };
+		5601F34207B1A0EA00796960 /* fileio.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = fileio.c; path = geoface/fileio.c; sourceTree = SOURCE_ROOT; };
+		5601F34307B1A0EA00796960 /* head.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = head.h; path = geoface/head.h; sourceTree = SOURCE_ROOT; };
+		5601F34407B1A0EA00796960 /* index.dat */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = index.dat; path = geoface/index.dat; sourceTree = SOURCE_ROOT; };
+		5601F34507B1A0EA00796960 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = main.c; path = geoface/main.c; sourceTree = SOURCE_ROOT; };
+		5601F34607B1A0EA00796960 /* make_face.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = make_face.c; path = geoface/make_face.c; sourceTree = SOURCE_ROOT; };
+		5601F34707B1A0EA00796960 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = memory.h; path = geoface/memory.h; sourceTree = SOURCE_ROOT; };
+		5601F34807B1A0EA00796960 /* muscle.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = muscle.c; path = geoface/muscle.c; sourceTree = SOURCE_ROOT; };
+		5601F34907B1A0EA00796960 /* muscle.dat */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = muscle.dat; path = geoface/muscle.dat; sourceTree = SOURCE_ROOT; };
+		5601F34A07B1A0EA00796960 /* README */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = README; path = geoface/README; sourceTree = SOURCE_ROOT; };
+		5601F35607B1A18B00796960 /* board.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = board.c; path = gliq/board.c; sourceTree = SOURCE_ROOT; };
+		5601F35707B1A18B00796960 /* boards.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = boards.txt; path = gliq/boards.txt; sourceTree = SOURCE_ROOT; };
+		5601F35807B1A18B00796960 /* game.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = game.c; path = gliq/game.c; sourceTree = SOURCE_ROOT; };
+		5601F35907B1A18B00796960 /* gliq.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = gliq.c; path = gliq/gliq.c; sourceTree = SOURCE_ROOT; };
+		5601F35A07B1A18B00796960 /* gliq.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gliq.h; path = gliq/gliq.h; sourceTree = SOURCE_ROOT; };
+		5601F35B07B1A18B00796960 /* pick.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pick.c; path = gliq/pick.c; sourceTree = SOURCE_ROOT; };
+		5601F35C07B1A18B00796960 /* score.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = score.c; path = gliq/score.c; sourceTree = SOURCE_ROOT; };
+		5601F35D07B1A18B00796960 /* scores.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = scores.txt; path = gliq/scores.txt; sourceTree = SOURCE_ROOT; };
+		5601F35E07B1A18B00796960 /* spr_ouch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spr_ouch.wav; path = gliq/spr_ouch.wav; sourceTree = SOURCE_ROOT; };
+		5601F36307B1A19C00796960 /* GLIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F36507B1A19C00796960 /* GLIQ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GLIQ-Info.plist"; sourceTree = "<group>"; };
+		5601F38007B1A25500796960 /* GLUTMech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLUTMech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F38207B1A25500796960 /* GLUTMech-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GLUTMech-Info.plist"; sourceTree = "<group>"; };
+		5601F38307B1A26F00796960 /* glutmech.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = glutmech.c; path = glutmech/glutmech.c; sourceTree = SOURCE_ROOT; };
+		5601F38B07B1A2C700796960 /* Underwater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Underwater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F38D07B1A2C700796960 /* Underwater-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Underwater-Info.plist"; sourceTree = "<group>"; };
+		5601F38E07B1A30400796960 /* caust00.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust00.bw; path = underwater/caust00.bw; sourceTree = SOURCE_ROOT; };
+		5601F38F07B1A30400796960 /* caust01.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust01.bw; path = underwater/caust01.bw; sourceTree = SOURCE_ROOT; };
+		5601F39007B1A30400796960 /* caust02.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust02.bw; path = underwater/caust02.bw; sourceTree = SOURCE_ROOT; };
+		5601F39107B1A30400796960 /* caust03.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust03.bw; path = underwater/caust03.bw; sourceTree = SOURCE_ROOT; };
+		5601F39207B1A30400796960 /* caust04.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust04.bw; path = underwater/caust04.bw; sourceTree = SOURCE_ROOT; };
+		5601F39307B1A30400796960 /* caust05.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust05.bw; path = underwater/caust05.bw; sourceTree = SOURCE_ROOT; };
+		5601F39407B1A30400796960 /* caust06.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust06.bw; path = underwater/caust06.bw; sourceTree = SOURCE_ROOT; };
+		5601F39507B1A30400796960 /* caust07.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust07.bw; path = underwater/caust07.bw; sourceTree = SOURCE_ROOT; };
+		5601F39607B1A30400796960 /* caust08.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust08.bw; path = underwater/caust08.bw; sourceTree = SOURCE_ROOT; };
+		5601F39707B1A30400796960 /* caust09.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust09.bw; path = underwater/caust09.bw; sourceTree = SOURCE_ROOT; };
+		5601F39807B1A30400796960 /* caust10.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust10.bw; path = underwater/caust10.bw; sourceTree = SOURCE_ROOT; };
+		5601F39907B1A30400796960 /* caust11.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust11.bw; path = underwater/caust11.bw; sourceTree = SOURCE_ROOT; };
+		5601F39A07B1A30400796960 /* caust12.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust12.bw; path = underwater/caust12.bw; sourceTree = SOURCE_ROOT; };
+		5601F39B07B1A30400796960 /* caust13.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust13.bw; path = underwater/caust13.bw; sourceTree = SOURCE_ROOT; };
+		5601F39C07B1A30400796960 /* caust14.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust14.bw; path = underwater/caust14.bw; sourceTree = SOURCE_ROOT; };
+		5601F39D07B1A30400796960 /* caust15.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust15.bw; path = underwater/caust15.bw; sourceTree = SOURCE_ROOT; };
+		5601F39E07B1A30400796960 /* caust16.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust16.bw; path = underwater/caust16.bw; sourceTree = SOURCE_ROOT; };
+		5601F39F07B1A30400796960 /* caust17.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust17.bw; path = underwater/caust17.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A007B1A30400796960 /* caust18.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust18.bw; path = underwater/caust18.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A107B1A30400796960 /* caust19.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust19.bw; path = underwater/caust19.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A207B1A30400796960 /* caust20.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust20.bw; path = underwater/caust20.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A307B1A30400796960 /* caust21.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust21.bw; path = underwater/caust21.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A407B1A30400796960 /* caust22.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust22.bw; path = underwater/caust22.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A507B1A30400796960 /* caust23.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust23.bw; path = underwater/caust23.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A607B1A30400796960 /* caust24.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust24.bw; path = underwater/caust24.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A707B1A30400796960 /* caust25.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust25.bw; path = underwater/caust25.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A807B1A30400796960 /* caust26.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust26.bw; path = underwater/caust26.bw; sourceTree = SOURCE_ROOT; };
+		5601F3A907B1A30400796960 /* caust27.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust27.bw; path = underwater/caust27.bw; sourceTree = SOURCE_ROOT; };
+		5601F3AA07B1A30400796960 /* caust28.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust28.bw; path = underwater/caust28.bw; sourceTree = SOURCE_ROOT; };
+		5601F3AB07B1A30400796960 /* caust29.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust29.bw; path = underwater/caust29.bw; sourceTree = SOURCE_ROOT; };
+		5601F3AC07B1A30400796960 /* caust30.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust30.bw; path = underwater/caust30.bw; sourceTree = SOURCE_ROOT; };
+		5601F3AD07B1A30400796960 /* caust31.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = caust31.bw; path = underwater/caust31.bw; sourceTree = SOURCE_ROOT; };
+		5601F3AE07B1A30400796960 /* dino.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = dino.c; path = underwater/dino.c; sourceTree = SOURCE_ROOT; };
+		5601F3AF07B1A30400796960 /* dino.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = dino.h; path = underwater/dino.h; sourceTree = SOURCE_ROOT; };
+		5601F3B007B1A30400796960 /* floor.rgb */ = {isa = PBXFileReference; lastKnownFileType = file; name = floor.rgb; path = underwater/floor.rgb; sourceTree = SOURCE_ROOT; };
+		5601F3B107B1A30400796960 /* texload.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = texload.c; path = underwater/texload.c; sourceTree = SOURCE_ROOT; };
+		5601F3B207B1A30400796960 /* texload.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = texload.h; path = underwater/texload.h; sourceTree = SOURCE_ROOT; };
+		5601F3B307B1A30400796960 /* underwater.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = underwater.c; path = underwater/underwater.c; sourceTree = SOURCE_ROOT; };
+		5601F3E607B1A38100796960 /* UseSphereMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseSphereMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601F3E807B1A38100796960 /* UseSphereMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "UseSphereMap-Info.plist"; sourceTree = "<group>"; };
+		5601F3EA07B1A39700796960 /* usespheremap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = usespheremap.c; path = usespheremap/usespheremap.c; sourceTree = SOURCE_ROOT; };
+		5601F3EF07B1A3D900796960 /* spheremap.rgb */ = {isa = PBXFileReference; lastKnownFileType = file; name = spheremap.rgb; path = data/spheremap.rgb; sourceTree = SOURCE_ROOT; };
+		5607DA4107B19C0000C2151B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		5673FE8307B19D4B00AF4085 /* NewWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5673FE8607B19D4B00AF4085 /* NewWave-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "NewWave-Info.plist"; sourceTree = "<group>"; };
+		5673FE8C07B19D7100AF4085 /* atlantis.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = atlantis.c; path = atlantis/atlantis.c; sourceTree = SOURCE_ROOT; };
+		5673FE8D07B19D7100AF4085 /* atlantis.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = atlantis.h; path = atlantis/atlantis.h; sourceTree = SOURCE_ROOT; };
+		5673FE8E07B19D7100AF4085 /* dolphin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = dolphin.c; path = atlantis/dolphin.c; sourceTree = SOURCE_ROOT; };
+		5673FE8F07B19D7100AF4085 /* shark.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = shark.c; path = atlantis/shark.c; sourceTree = SOURCE_ROOT; };
+		5673FE9007B19D7100AF4085 /* swim.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = swim.c; path = atlantis/swim.c; sourceTree = SOURCE_ROOT; };
+		5673FE9107B19D7100AF4085 /* whale.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = whale.c; path = atlantis/whale.c; sourceTree = SOURCE_ROOT; };
+		5673FE9707B19D8400AF4085 /* bluepony.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = bluepony.c; path = bluepony/bluepony.c; sourceTree = SOURCE_ROOT; };
+		5673FE9807B19D8400AF4085 /* logo.bw */ = {isa = PBXFileReference; lastKnownFileType = file; name = logo.bw; path = bluepony/logo.bw; sourceTree = SOURCE_ROOT; };
+		5673FE9907B19D8400AF4085 /* readtex.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = readtex.c; path = bluepony/readtex.c; sourceTree = SOURCE_ROOT; };
+		5673FE9A07B19D8400AF4085 /* readtex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = readtex.h; path = bluepony/readtex.h; sourceTree = SOURCE_ROOT; };
+		5673FEB407B19DAB00AF4085 /* newave.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = newave.c; path = newave/newave.c; sourceTree = SOURCE_ROOT; };
+		5673FEB507B19DAB00AF4085 /* spheremap.rgb */ = {isa = PBXFileReference; lastKnownFileType = file; name = spheremap.rgb; path = newave/spheremap.rgb; sourceTree = SOURCE_ROOT; };
+		5673FEB607B19DAB00AF4085 /* texmap.rgb */ = {isa = PBXFileReference; lastKnownFileType = file; name = texmap.rgb; path = newave/texmap.rgb; sourceTree = SOURCE_ROOT; };
+		5673FEB707B19DAB00AF4085 /* texture.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = texture.c; path = newave/texture.c; sourceTree = SOURCE_ROOT; };
+		5673FEB807B19DAB00AF4085 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = texture.h; path = newave/texture.h; sourceTree = SOURCE_ROOT; };
+		5673FEC007B19E0000AF4085 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		5673FECD07B19E4E00AF4085 /* Atlantis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlantis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5673FECF07B19E4E00AF4085 /* Atlantis-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Atlantis-Info.plist"; sourceTree = "<group>"; };
+		5673FEE007B19EB200AF4085 /* BluePony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluePony.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5673FEE207B19EB200AF4085 /* BluePony-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BluePony-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5601F31507B19FAB00796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F32707B19FFD00796960 /* GLUT.framework in Frameworks */,
+				5601F32807B19FFF00796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F32B07B1A03600796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F33407B1A05200796960 /* GLUT.framework in Frameworks */,
+				5601F33507B1A05300796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F33B07B1A0C200796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F35407B1A0F100796960 /* GLUT.framework in Frameworks */,
+				5601F35507B1A0F300796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F36107B1A19C00796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F37707B1A1CC00796960 /* GLUT.framework in Frameworks */,
+				5601F37807B1A1CE00796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F37E07B1A25500796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F38507B1A27C00796960 /* GLUT.framework in Frameworks */,
+				5601F38607B1A28000796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F38907B1A2C700796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F3D807B1A31100796960 /* GLUT.framework in Frameworks */,
+				5601F3D907B1A31200796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F3E407B1A38100796960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F3EC07B1A3A400796960 /* GLUT.framework in Frameworks */,
+				5601F3ED07B1A3A500796960 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FE8107B19D4B00AF4085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEB007B19D9600AF4085 /* GLUT.framework in Frameworks */,
+				5673FEC107B19E0000AF4085 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FECB07B19E4E00AF4085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEDA07B19E9B00AF4085 /* GLUT.framework in Frameworks */,
+				5673FEDB07B19E9D00AF4085 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FEDE07B19EB200AF4085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEE907B19F4400AF4085 /* GLUT.framework in Frameworks */,
+				5673FEEA07B19F4500AF4085 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5601F46A07B1BA7A00796960 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				5673FE8607B19D4B00AF4085 /* NewWave-Info.plist */,
+				5673FECF07B19E4E00AF4085 /* Atlantis-Info.plist */,
+				5673FEE207B19EB200AF4085 /* BluePony-Info.plist */,
+				5601F31907B19FAB00796960 /* Chess-Info.plist */,
+				5601F32F07B1A03600796960 /* Decal-Info.plist */,
+				5601F33F07B1A0C200796960 /* GeoFace-Info.plist */,
+				5601F36507B1A19C00796960 /* GLIQ-Info.plist */,
+				5601F38207B1A25500796960 /* GLUTMech-Info.plist */,
+				5601F38D07B1A2C700796960 /* Underwater-Info.plist */,
+				5601F3E807B1A38100796960 /* UseSphereMap-Info.plist */,
+			);
+			name = Plists;
+			sourceTree = "<group>";
+		};
+		5607DA2C07B19B9D00C2151B = {
+			isa = PBXGroup;
+			children = (
+				5673FEC007B19E0000AF4085 /* OpenGL.framework */,
+				5607DA4107B19C0000C2151B /* GLUT.framework */,
+				5607DA4007B19BE500C2151B /* Atlantis */,
+				5607DA3F07B19BE000C2151B /* BluePony */,
+				5607DA3E07B19BDC00C2151B /* Common */,
+				5607DA3D07B19BD700C2151B /* Chess */,
+				5607DA3C07B19BD100C2151B /* Decal */,
+				5607DA3B07B19BCD00C2151B /* GeoFace */,
+				5607DA3A07B19BC600C2151B /* GLIQ */,
+				5607DA3907B19BBC00C2151B /* GLUTMech */,
+				5607DA3807B19BB700C2151B /* NewWave */,
+				5607DA3707B19BB000C2151B /* Underwater */,
+				5607DA3607B19BA700C2151B /* UseSphereMap */,
+				5673FE8407B19D4B00AF4085 /* Products */,
+				5601F46A07B1BA7A00796960 /* Plists */,
+			);
+			sourceTree = "<group>";
+		};
+		5607DA3607B19BA700C2151B /* UseSphereMap */ = {
+			isa = PBXGroup;
+			children = (
+				5601F3EF07B1A3D900796960 /* spheremap.rgb */,
+				5601F3EA07B1A39700796960 /* usespheremap.c */,
+			);
+			name = UseSphereMap;
+			sourceTree = "<group>";
+		};
+		5607DA3707B19BB000C2151B /* Underwater */ = {
+			isa = PBXGroup;
+			children = (
+				5601F38E07B1A30400796960 /* caust00.bw */,
+				5601F38F07B1A30400796960 /* caust01.bw */,
+				5601F39007B1A30400796960 /* caust02.bw */,
+				5601F39107B1A30400796960 /* caust03.bw */,
+				5601F39207B1A30400796960 /* caust04.bw */,
+				5601F39307B1A30400796960 /* caust05.bw */,
+				5601F39407B1A30400796960 /* caust06.bw */,
+				5601F39507B1A30400796960 /* caust07.bw */,
+				5601F39607B1A30400796960 /* caust08.bw */,
+				5601F39707B1A30400796960 /* caust09.bw */,
+				5601F39807B1A30400796960 /* caust10.bw */,
+				5601F39907B1A30400796960 /* caust11.bw */,
+				5601F39A07B1A30400796960 /* caust12.bw */,
+				5601F39B07B1A30400796960 /* caust13.bw */,
+				5601F39C07B1A30400796960 /* caust14.bw */,
+				5601F39D07B1A30400796960 /* caust15.bw */,
+				5601F39E07B1A30400796960 /* caust16.bw */,
+				5601F39F07B1A30400796960 /* caust17.bw */,
+				5601F3A007B1A30400796960 /* caust18.bw */,
+				5601F3A107B1A30400796960 /* caust19.bw */,
+				5601F3A207B1A30400796960 /* caust20.bw */,
+				5601F3A307B1A30400796960 /* caust21.bw */,
+				5601F3A407B1A30400796960 /* caust22.bw */,
+				5601F3A507B1A30400796960 /* caust23.bw */,
+				5601F3A607B1A30400796960 /* caust24.bw */,
+				5601F3A707B1A30400796960 /* caust25.bw */,
+				5601F3A807B1A30400796960 /* caust26.bw */,
+				5601F3A907B1A30400796960 /* caust27.bw */,
+				5601F3AA07B1A30400796960 /* caust28.bw */,
+				5601F3AB07B1A30400796960 /* caust29.bw */,
+				5601F3AC07B1A30400796960 /* caust30.bw */,
+				5601F3AD07B1A30400796960 /* caust31.bw */,
+				5601F3AE07B1A30400796960 /* dino.c */,
+				5601F3AF07B1A30400796960 /* dino.h */,
+				5601F3B007B1A30400796960 /* floor.rgb */,
+				5601F3B107B1A30400796960 /* texload.c */,
+				5601F3B207B1A30400796960 /* texload.h */,
+				5601F3B307B1A30400796960 /* underwater.c */,
+			);
+			name = Underwater;
+			sourceTree = "<group>";
+		};
+		5607DA3807B19BB700C2151B /* NewWave */ = {
+			isa = PBXGroup;
+			children = (
+				5673FEB407B19DAB00AF4085 /* newave.c */,
+				5673FEB507B19DAB00AF4085 /* spheremap.rgb */,
+				5673FEB607B19DAB00AF4085 /* texmap.rgb */,
+				5673FEB707B19DAB00AF4085 /* texture.c */,
+				5673FEB807B19DAB00AF4085 /* texture.h */,
+			);
+			name = NewWave;
+			sourceTree = "<group>";
+		};
+		5607DA3907B19BBC00C2151B /* GLUTMech */ = {
+			isa = PBXGroup;
+			children = (
+				5601F38307B1A26F00796960 /* glutmech.c */,
+			);
+			name = GLUTMech;
+			sourceTree = "<group>";
+		};
+		5607DA3A07B19BC600C2151B /* GLIQ */ = {
+			isa = PBXGroup;
+			children = (
+				5601F35607B1A18B00796960 /* board.c */,
+				5601F35707B1A18B00796960 /* boards.txt */,
+				5601F35807B1A18B00796960 /* game.c */,
+				5601F35907B1A18B00796960 /* gliq.c */,
+				5601F35A07B1A18B00796960 /* gliq.h */,
+				5601F35B07B1A18B00796960 /* pick.c */,
+				5601F35C07B1A18B00796960 /* score.c */,
+				5601F35D07B1A18B00796960 /* scores.txt */,
+				5601F35E07B1A18B00796960 /* spr_ouch.wav */,
+			);
+			name = GLIQ;
+			sourceTree = "<group>";
+		};
+		5607DA3B07B19BCD00C2151B /* GeoFace */ = {
+			isa = PBXGroup;
+			children = (
+				5601F34007B1A0EA00796960 /* display.c */,
+				5601F34107B1A0EA00796960 /* faceline.dat */,
+				5601F34207B1A0EA00796960 /* fileio.c */,
+				5601F34307B1A0EA00796960 /* head.h */,
+				5601F34407B1A0EA00796960 /* index.dat */,
+				5601F34507B1A0EA00796960 /* main.c */,
+				5601F34607B1A0EA00796960 /* make_face.c */,
+				5601F34707B1A0EA00796960 /* memory.h */,
+				5601F34807B1A0EA00796960 /* muscle.c */,
+				5601F34907B1A0EA00796960 /* muscle.dat */,
+				5601F34A07B1A0EA00796960 /* README */,
+			);
+			name = GeoFace;
+			sourceTree = "<group>";
+		};
+		5607DA3C07B19BD100C2151B /* Decal */ = {
+			isa = PBXGroup;
+			children = (
+				5601F33207B1A04D00796960 /* decal.c */,
+			);
+			name = Decal;
+			sourceTree = "<group>";
+		};
+		5607DA3D07B19BD700C2151B /* Chess */ = {
+			isa = PBXGroup;
+			children = (
+				5601F31A07B19FE900796960 /* animate.c */,
+				5601F31B07B19FE900796960 /* chess.c */,
+				5601F31C07B19FE900796960 /* chess.h */,
+				5601F31D07B19FE900796960 /* chess.inp */,
+				5601F31E07B19FE900796960 /* main.c */,
+				5601F31F07B19FE900796960 /* pathplan.c */,
+				5601F32007B19FE900796960 /* texture.c */,
+			);
+			name = Chess;
+			sourceTree = "<group>";
+		};
+		5607DA3E07B19BDC00C2151B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5601F30D07B19F9400796960 /* tb.c */,
+				5601F30E07B19F9400796960 /* tb.h */,
+				5601F30F07B19F9400796960 /* texture.c */,
+				5601F31007B19F9400796960 /* texture.h */,
+				5601F31107B19F9400796960 /* trackball.c */,
+				5601F31207B19F9400796960 /* trackball.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		5607DA3F07B19BE000C2151B /* BluePony */ = {
+			isa = PBXGroup;
+			children = (
+				5673FE9707B19D8400AF4085 /* bluepony.c */,
+				5673FE9807B19D8400AF4085 /* logo.bw */,
+				5673FE9907B19D8400AF4085 /* readtex.c */,
+				5673FE9A07B19D8400AF4085 /* readtex.h */,
+			);
+			name = BluePony;
+			sourceTree = "<group>";
+		};
+		5607DA4007B19BE500C2151B /* Atlantis */ = {
+			isa = PBXGroup;
+			children = (
+				5673FE8C07B19D7100AF4085 /* atlantis.c */,
+				5673FE8D07B19D7100AF4085 /* atlantis.h */,
+				5673FE8E07B19D7100AF4085 /* dolphin.c */,
+				5673FE8F07B19D7100AF4085 /* shark.c */,
+				5673FE9007B19D7100AF4085 /* swim.c */,
+				5673FE9107B19D7100AF4085 /* whale.c */,
+			);
+			name = Atlantis;
+			sourceTree = "<group>";
+		};
+		5673FE8407B19D4B00AF4085 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5673FE8307B19D4B00AF4085 /* NewWave.app */,
+				5673FECD07B19E4E00AF4085 /* Atlantis.app */,
+				5673FEE007B19EB200AF4085 /* BluePony.app */,
+				5601F31707B19FAB00796960 /* Chess.app */,
+				5601F32D07B1A03600796960 /* Decal.app */,
+				5601F33D07B1A0C200796960 /* GeoFace.app */,
+				5601F36307B1A19C00796960 /* GLIQ.app */,
+				5601F38007B1A25500796960 /* GLUTMech.app */,
+				5601F38B07B1A2C700796960 /* Underwater.app */,
+				5601F3E607B1A38100796960 /* UseSphereMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5601F31607B19FAB00796960 /* Chess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25A708BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Chess" */;
+			buildPhases = (
+				5601F31307B19FAB00796960 /* Resources */,
+				5601F31407B19FAB00796960 /* Sources */,
+				5601F31507B19FAB00796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Chess-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Chess;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = Chess;
+			productName = Chess;
+			productReference = 5601F31707B19FAB00796960 /* Chess.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Chess</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Chess</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5601F32C07B1A03600796960 /* Decal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25AB08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Decal" */;
+			buildPhases = (
+				5601F32907B1A03600796960 /* Resources */,
+				5601F32A07B1A03600796960 /* Sources */,
+				5601F32B07B1A03600796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Decal-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Decal;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = Decal;
+			productName = Decal;
+			productReference = 5601F32D07B1A03600796960 /* Decal.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Decal</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Decal</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5601F33C07B1A0C200796960 /* GeoFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25AF08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "GeoFace" */;
+			buildPhases = (
+				5601F33907B1A0C200796960 /* Resources */,
+				5601F33A07B1A0C200796960 /* Sources */,
+				5601F33B07B1A0C200796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "GeoFace-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = GeoFace;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = GeoFace;
+			productName = GeoFace;
+			productReference = 5601F33D07B1A0C200796960 /* GeoFace.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>GeoFace</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.GeoFace</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5601F36207B1A19C00796960 /* GLIQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25B308BBC88F006E9215 /* Build configuration list for PBXNativeTarget "GLIQ" */;
+			buildPhases = (
+				5601F35F07B1A19C00796960 /* Resources */,
+				5601F36007B1A19C00796960 /* Sources */,
+				5601F36107B1A19C00796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "GLIQ-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = GLIQ;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = GLIQ;
+			productName = GLIQ;
+			productReference = 5601F36307B1A19C00796960 /* GLIQ.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>GLIQ</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.GLIQ</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5601F37F07B1A25500796960 /* GLUTMech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25B708BBC88F006E9215 /* Build configuration list for PBXNativeTarget "GLUTMech" */;
+			buildPhases = (
+				5601F37C07B1A25500796960 /* Resources */,
+				5601F37D07B1A25500796960 /* Sources */,
+				5601F37E07B1A25500796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "GLUTMech-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = GLUTMech;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = GLUTMech;
+			productName = GLUTMech;
+			productReference = 5601F38007B1A25500796960 /* GLUTMech.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>GLUTMech</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.GLUTMech</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5601F38A07B1A2C700796960 /* Underwater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25BF08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Underwater" */;
+			buildPhases = (
+				5601F38707B1A2C700796960 /* Resources */,
+				5601F38807B1A2C700796960 /* Sources */,
+				5601F38907B1A2C700796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Underwater-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Underwater;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = Underwater;
+			productName = Underwater;
+			productReference = 5601F38B07B1A2C700796960 /* Underwater.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Underwater</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Underwater</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5601F3E507B1A38100796960 /* UseSphereMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25C308BBC88F006E9215 /* Build configuration list for PBXNativeTarget "UseSphereMap" */;
+			buildPhases = (
+				5601F3E207B1A38100796960 /* Resources */,
+				5601F3E307B1A38100796960 /* Sources */,
+				5601F3E407B1A38100796960 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "UseSphereMap-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = UseSphereMap;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = UseSphereMap;
+			productName = UseSphereMap;
+			productReference = 5601F3E607B1A38100796960 /* UseSphereMap.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>UseSphereMap</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.UseSphereMap</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5673FE8207B19D4B00AF4085 /* NewWave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25BB08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "NewWave" */;
+			buildPhases = (
+				5673FE7F07B19D4B00AF4085 /* Resources */,
+				5673FE8007B19D4B00AF4085 /* Sources */,
+				5673FE8107B19D4B00AF4085 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "NewWave-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = NewWave;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = NewWave;
+			productName = NewWave;
+			productReference = 5673FE8307B19D4B00AF4085 /* NewWave.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>NewWave</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.NewWave</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5673FECC07B19E4E00AF4085 /* Atlantis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC259F08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Atlantis" */;
+			buildPhases = (
+				5673FEC907B19E4E00AF4085 /* Resources */,
+				5673FECA07B19E4E00AF4085 /* Sources */,
+				5673FECB07B19E4E00AF4085 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Atlantis-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Atlantis;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = Atlantis;
+			productName = Atlantis;
+			productReference = 5673FECD07B19E4E00AF4085 /* Atlantis.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Atlantis</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Atlantis</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		5673FEDF07B19EB200AF4085 /* BluePony */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC25A308BBC88F006E9215 /* Build configuration list for PBXNativeTarget "BluePony" */;
+			buildPhases = (
+				5673FEDC07B19EB200AF4085 /* Resources */,
+				5673FEDD07B19EB200AF4085 /* Sources */,
+				5673FEDE07B19EB200AF4085 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "BluePony-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = BluePony;
+				SECTORDER_FLAGS = "";
+			};
+			dependencies = (
+			);
+			name = BluePony;
+			productName = BluePony;
+			productReference = 5673FEE007B19EB200AF4085 /* BluePony.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>BluePony</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.BluePony</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5607DA3007B19B9D00C2151B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F0EC25C708BBC88F006E9215 /* Build configuration list for PBXProject "GLUTExamples" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				5607DA2E07B19B9D00C2151B /* Development */,
+				5607DA2F07B19B9D00C2151B /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = 5607DA2C07B19B9D00C2151B;
+			productRefGroup = 5673FE8407B19D4B00AF4085 /* Products */;
+			projectDirPath = "";
+			targets = (
+				5673FECC07B19E4E00AF4085 /* Atlantis */,
+				5673FEDF07B19EB200AF4085 /* BluePony */,
+				5601F31607B19FAB00796960 /* Chess */,
+				5601F32C07B1A03600796960 /* Decal */,
+				5601F33C07B1A0C200796960 /* GeoFace */,
+				5601F36207B1A19C00796960 /* GLIQ */,
+				5601F37F07B1A25500796960 /* GLUTMech */,
+				5673FE8207B19D4B00AF4085 /* NewWave */,
+				5601F38A07B1A2C700796960 /* Underwater */,
+				5601F3E507B1A38100796960 /* UseSphereMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5601F31307B19FAB00796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F32307B19FE900796960 /* chess.inp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F32907B1A03600796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F33907B1A0C200796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F34C07B1A0EA00796960 /* faceline.dat in Resources */,
+				5601F34E07B1A0EA00796960 /* index.dat in Resources */,
+				5601F35207B1A0EA00796960 /* muscle.dat in Resources */,
+				5601F35307B1A0EA00796960 /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F35F07B1A19C00796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F37007B1A1C500796960 /* boards.txt in Resources */,
+				5601F37507B1A1C700796960 /* scores.txt in Resources */,
+				5601F37607B1A1C800796960 /* spr_ouch.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F37C07B1A25500796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F38707B1A2C700796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F3B407B1A30400796960 /* caust00.bw in Resources */,
+				5601F3B507B1A30400796960 /* caust01.bw in Resources */,
+				5601F3B607B1A30400796960 /* caust02.bw in Resources */,
+				5601F3B707B1A30400796960 /* caust03.bw in Resources */,
+				5601F3B807B1A30400796960 /* caust04.bw in Resources */,
+				5601F3B907B1A30400796960 /* caust05.bw in Resources */,
+				5601F3BA07B1A30400796960 /* caust06.bw in Resources */,
+				5601F3BB07B1A30400796960 /* caust07.bw in Resources */,
+				5601F3BC07B1A30400796960 /* caust08.bw in Resources */,
+				5601F3BD07B1A30400796960 /* caust09.bw in Resources */,
+				5601F3BE07B1A30400796960 /* caust10.bw in Resources */,
+				5601F3BF07B1A30400796960 /* caust11.bw in Resources */,
+				5601F3C007B1A30400796960 /* caust12.bw in Resources */,
+				5601F3C107B1A30400796960 /* caust13.bw in Resources */,
+				5601F3C207B1A30400796960 /* caust14.bw in Resources */,
+				5601F3C307B1A30400796960 /* caust15.bw in Resources */,
+				5601F3C407B1A30400796960 /* caust16.bw in Resources */,
+				5601F3C507B1A30400796960 /* caust17.bw in Resources */,
+				5601F3C607B1A30400796960 /* caust18.bw in Resources */,
+				5601F3C707B1A30400796960 /* caust19.bw in Resources */,
+				5601F3C807B1A30400796960 /* caust20.bw in Resources */,
+				5601F3C907B1A30400796960 /* caust21.bw in Resources */,
+				5601F3CA07B1A30400796960 /* caust22.bw in Resources */,
+				5601F3CB07B1A30400796960 /* caust23.bw in Resources */,
+				5601F3CC07B1A30400796960 /* caust24.bw in Resources */,
+				5601F3CD07B1A30400796960 /* caust25.bw in Resources */,
+				5601F3CE07B1A30400796960 /* caust26.bw in Resources */,
+				5601F3CF07B1A30400796960 /* caust27.bw in Resources */,
+				5601F3D007B1A30400796960 /* caust28.bw in Resources */,
+				5601F3D107B1A30400796960 /* caust29.bw in Resources */,
+				5601F3D207B1A30400796960 /* caust30.bw in Resources */,
+				5601F3D307B1A30400796960 /* caust31.bw in Resources */,
+				5601F3D507B1A30400796960 /* floor.rgb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F3E207B1A38100796960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F3F007B1A3D900796960 /* spheremap.rgb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FE7F07B19D4B00AF4085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEBA07B19DAB00AF4085 /* spheremap.rgb in Resources */,
+				5673FEBB07B19DAB00AF4085 /* texmap.rgb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FEC907B19E4E00AF4085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FEDC07B19EB200AF4085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEE707B19F3700AF4085 /* logo.bw in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5601F31407B19FAB00796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F32107B19FE900796960 /* animate.c in Sources */,
+				5601F32207B19FE900796960 /* chess.c in Sources */,
+				5601F32407B19FE900796960 /* main.c in Sources */,
+				5601F32507B19FE900796960 /* pathplan.c in Sources */,
+				5601F32607B19FE900796960 /* texture.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F32A07B1A03600796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F33307B1A04D00796960 /* decal.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F33A07B1A0C200796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F34B07B1A0EA00796960 /* display.c in Sources */,
+				5601F34D07B1A0EA00796960 /* fileio.c in Sources */,
+				5601F34F07B1A0EA00796960 /* main.c in Sources */,
+				5601F35007B1A0EA00796960 /* make_face.c in Sources */,
+				5601F35107B1A0EA00796960 /* muscle.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F36007B1A19C00796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F36F07B1A1C400796960 /* board.c in Sources */,
+				5601F37107B1A1C500796960 /* game.c in Sources */,
+				5601F37207B1A1C600796960 /* gliq.c in Sources */,
+				5601F37307B1A1C700796960 /* pick.c in Sources */,
+				5601F37407B1A1C700796960 /* score.c in Sources */,
+				5601F37A07B1A1E100796960 /* tb.c in Sources */,
+				5601F37B07B1A1E300796960 /* trackball.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F37D07B1A25500796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F38407B1A26F00796960 /* glutmech.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F38807B1A2C700796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F3D407B1A30400796960 /* dino.c in Sources */,
+				5601F3D607B1A30400796960 /* texload.c in Sources */,
+				5601F3D707B1A30400796960 /* underwater.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5601F3E307B1A38100796960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601F3EB07B1A39700796960 /* usespheremap.c in Sources */,
+				5601F3EE07B1A3B000796960 /* texture.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FE8007B19D4B00AF4085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEB907B19DAB00AF4085 /* newave.c in Sources */,
+				5673FEBC07B19DAB00AF4085 /* texture.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FECA07B19E4E00AF4085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FED507B19E8300AF4085 /* atlantis.c in Sources */,
+				5673FED607B19E8300AF4085 /* dolphin.c in Sources */,
+				5673FED707B19E8400AF4085 /* shark.c in Sources */,
+				5673FED807B19E8400AF4085 /* swim.c in Sources */,
+				5673FED907B19E8500AF4085 /* whale.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5673FEDD07B19EB200AF4085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5673FEE607B19F3600AF4085 /* bluepony.c in Sources */,
+				5673FEE807B19F3700AF4085 /* readtex.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F0EC25A008BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Atlantis-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Atlantis;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25A108BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Atlantis-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Atlantis;
+			};
+			name = Release;
+		};
+		F0EC25A408BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "BluePony-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = BluePony;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25A508BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "BluePony-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = BluePony;
+			};
+			name = Release;
+		};
+		F0EC25A808BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Chess-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Chess;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25A908BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Chess-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Chess;
+			};
+			name = Release;
+		};
+		F0EC25AC08BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Decal-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Decal;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25AD08BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Decal-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Decal;
+			};
+			name = Release;
+		};
+		F0EC25B008BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "GeoFace-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = GeoFace;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25B108BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "GeoFace-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = GeoFace;
+			};
+			name = Release;
+		};
+		F0EC25B408BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "GLIQ-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = GLIQ;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25B508BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "GLIQ-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = GLIQ;
+			};
+			name = Release;
+		};
+		F0EC25B808BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "GLUTMech-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = GLUTMech;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25B908BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "GLUTMech-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = GLUTMech;
+			};
+			name = Release;
+		};
+		F0EC25BC08BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "NewWave-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = NewWave;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25BD08BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "NewWave-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = NewWave;
+			};
+			name = Release;
+		};
+		F0EC25C008BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Underwater-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Underwater;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25C108BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "Underwater-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = Underwater;
+			};
+			name = Release;
+		};
+		F0EC25C408BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "UseSphereMap-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = UseSphereMap;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25C508BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = "UseSphereMap-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				PRODUCT_NAME = UseSphereMap;
+			};
+			name = Release;
+		};
+		F0EC25C808BBC88F006E9215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		F0EC25C908BBC88F006E9215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0EC259F08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Atlantis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25A008BBC88F006E9215 /* Debug */,
+				F0EC25A108BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25A308BBC88F006E9215 /* Build configuration list for PBXNativeTarget "BluePony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25A408BBC88F006E9215 /* Debug */,
+				F0EC25A508BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25A708BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Chess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25A808BBC88F006E9215 /* Debug */,
+				F0EC25A908BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25AB08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Decal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25AC08BBC88F006E9215 /* Debug */,
+				F0EC25AD08BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25AF08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "GeoFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25B008BBC88F006E9215 /* Debug */,
+				F0EC25B108BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25B308BBC88F006E9215 /* Build configuration list for PBXNativeTarget "GLIQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25B408BBC88F006E9215 /* Debug */,
+				F0EC25B508BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25B708BBC88F006E9215 /* Build configuration list for PBXNativeTarget "GLUTMech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25B808BBC88F006E9215 /* Debug */,
+				F0EC25B908BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25BB08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "NewWave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25BC08BBC88F006E9215 /* Debug */,
+				F0EC25BD08BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25BF08BBC88F006E9215 /* Build configuration list for PBXNativeTarget "Underwater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25C008BBC88F006E9215 /* Debug */,
+				F0EC25C108BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25C308BBC88F006E9215 /* Build configuration list for PBXNativeTarget "UseSphereMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25C408BBC88F006E9215 /* Debug */,
+				F0EC25C508BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC25C708BBC88F006E9215 /* Build configuration list for PBXProject "GLUTExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC25C808BBC88F006E9215 /* Debug */,
+				F0EC25C908BBC88F006E9215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5607DA3007B19B9D00C2151B /* Project object */;
+}

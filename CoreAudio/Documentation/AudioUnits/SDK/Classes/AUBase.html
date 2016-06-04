@@ -1,0 +1,1229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUBase</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUBase</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "ComponentBase_fs.html" target="_top">ComponentBase</a>, <a href = "AUElementCreator_fs.html" target="_top">AUElementCreator</a><br>
+<big><b>Subclasses : </b></big>
+<a href = "AUEffectBase_fs.html" target="_top">AUEffectBase</a>, <a href = "MusicDeviceBase_fs.html" target="_top">MusicDeviceBase</a>, <a href = "AUOutputBase_fs.html" target="_top">AUOutputBase</a><br>
+<big><b>Header : </b></big>AUBase<br>
+<br><pre>class AUBase : public ComponentBase, public AUElementCreator </pre>
+<p>
+	<p>
+	This is the base class for writing your own AudioUnit. It handles many of the bookkeeping chores to support an AudioUnit.
+	An AudioUnit is responsible for providing a lot of features and information about itself through the property mechanism.
+	AUBase provides support for many of these properties for you and makes it simpler for you to support those that you must provide yourself.
+	</p><p>If you are writing an effect processor, you will probably want to use <a href="AUEffectBase_fs.html" target="_top">AUEffectBase</a> or <a href="AUInlineEffectBase_fs.html" target="_top">AUInlineEffectBase</a> instead of AUBase. 
+	If you are writing a MIDI controlled unit then you will want to use <a href="AUMIDIEffectBase_fs.html" target="_top">AUMIDIEffectBase</a>.
+	</p>
+	</p><hr>
+<h2>Methods</h2>
+<h3><u>Connections</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasInput">HasInput</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool HasInput(AudioUnitElement inElement);</pre>
+<p>Predicate. Returns whether an input is connected or has a callback.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetConnection">SetConnection</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetConnection(const AudioUnitConnection& inConnection);</pre>
+<p>Makes a connection from another AudioUnit to an input of this unit.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetInputCallback">SetInputCallback</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetInputCallback(
+          UInt32                          inPropertyID,
+          AudioUnitElement                inElement,
+          ProcPtr                         inProc,
+          void*                           inRefCon
+    );</pre>
+<p>Set a function to call to get data for an input to this AudioUnit.</p><br>
+<hr>
+<h3><u>Constructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AUBase">AUBase</a></h4>
+</td><td width="50%">
+<h4>public  constructor</h4>
+</td></tr></table>
+<br><pre> AUBase(
+          AudioUnit                       inInstance,
+          UInt32                          numInputElements,
+          UInt32                          numOutputElements,
+          UInt32                          numGroupElements = 0,
+          UInt32                          numPartElements = 0
+    );</pre>
+<p>Create an instance of AUBase. Arguments specify numbers of initial inputs, outputs and groups and the owning AudioUnit.</p><br>
+<hr>
+<h3><u>Destructor</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="~AUBase">~AUBase</a></h4>
+</td><td width="50%">
+<h4>public virtual destructor</h4>
+</td></tr></table>
+<br><pre> virtual ~AUBase();</pre>
+<p>The destructor.</p><br>
+<hr>
+<h3><u>Elements</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CreateElement">CreateElement</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual AUElement* CreateElement(
+          AudioUnitScope                  scope,
+          AudioUnitElement                element
+    );</pre>
+<p>Internal. The proper type of element will be created for the scope provided.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CreateElements">CreateElements</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void CreateElements();</pre>
+<p>Internal. This creates the elements for a scope.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetElement">GetElement</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUElement* GetElement(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p>Accessor. Get the specified element. Will return null if there is no such element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetGroup">GetGroup</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUGroupElement* GetGroup(AudioUnitElement inElement);</pre>
+<p>Accessor. Get the specified group element. Will throw an exception if there is no such element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetInput">GetInput</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUInputElement* GetInput(AudioUnitElement inElement);</pre>
+<p>Accessor. Get the specified input element. Will throw an exception if there is no such element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetOutput">GetOutput</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUOutputElement* GetOutput(AudioUnitElement inElement);</pre>
+<p>Accessor. Get the specified output element. Will throw an exception if there is no such element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetScope">GetScope</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUScope& GetScope(AudioUnitScope inScope);</pre>
+<p>Accessor. Get the specified <a href="AUScope_fs.html" target="_top">AUScope</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GlobalScope">GlobalScope</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUScope& GlobalScope();</pre>
+<p>Accessor. Get the global scope <a href="AUScope_fs.html" target="_top">AUScope</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Globals">Globals</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUElement* Globals();</pre>
+<p>Accessor. Get the global scope <a href="AUElement_fs.html" target="_top">AUElement</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Groups">Groups</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUScope& Parts();</pre>
+<p>Accessor. Get the group scope <a href="AUScope_fs.html" target="_top">AUScope</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Inputs">Inputs</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUScope& Inputs();</pre>
+<p>Accessor. Get the input scope <a href="AUScope_fs.html" target="_top">AUScope</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Outputs">Outputs</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUScope& Outputs();</pre>
+<p>Accessor. Get the output scope <a href="AUScope_fs.html" target="_top">AUScope</a> object.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SafeGetElement">SafeGetElement</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUElement* SafeGetElement(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p>Accessor. Get the specified element.  Will throw an exception if there is no such element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetNumberOfElements">SetNumberOfElements</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetNumberOfElements(
+          AudioUnitScope                  inScope,
+          UInt32                          numElements
+    );</pre>
+<p>Sets the number of elements for a scope.</p><br>
+<hr>
+<h3><u>Format</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ChangeStreamFormat">ChangeStreamFormat</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult ChangeStreamFormat(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const CAStreamBasicDescription& inPrevFormat,
+          const CAStreamBasicDescription& inNewFormat
+    );</pre>
+<p>This method gets called in response to setting kAudioUnitProperty_StreamFormat or kAudioUnitProperty_SampleRate.
+			Classes intended to be base classes that need to do some additional bookkeeping when changing stream format
+			may want to override this method. Will only be called after <a href="#IsStreamFormatWritable">IsStreamFormatWritable</a> and <a href="#ValidFormat">ValidFormat</a> have succeeded.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="FormatIsCanonical">FormatIsCanonical</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool FormatIsCanonical(const CAStreamBasicDescription &format);</pre>
+<p>Predicate. Returns true if format is canonical. A canonical format is floating point samples in the host's endianness and the 
+			interleave-edness matches that of the AudioUnit API version which is interleaved for version 1 and noninterleaved for version 2.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetStreamFormat">GetStreamFormat</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual const CAStreamBasicDescription& GetStreamFormat(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p>Returns the stream format for the specified element.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsStreamFormatWritable">IsStreamFormatWritable</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool IsStreamFormatWritable(
+          AudioUnitScope                  scope,
+          AudioUnitElement                element
+    );</pre>
+<p>Predicate. Returns whether an input or output's stream format can be set. 
+			The scope argument should be either kAudioUnitScope_Input or kAudioUnitScope_Output</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="MakeCanonicalFormat">MakeCanonicalFormat</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void MakeCanonicalFormat(
+          CAStreamBasicDescription&       outDesc,
+          int                             numChannels = 2
+    );</pre>
+<p>Convenience function to fill in a CAStreamBasicDescription with a canonical format description of the specified number of channels.
+			See <a href="#FormatIsCanonical">FormatIsCanonical</a> for a description of canonical format.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="StreamFormatWritable">StreamFormatWritable</a></h4>
+</td><td width="50%">
+<h4>public pure virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool StreamFormatWritable(
+          AudioUnitScope                  scope,
+          AudioUnitElement                element
+    ) = 0;</pre>
+<p>Override this to tell whether one of your input or output elements can have the stream format changed.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ValidFormat">ValidFormat</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool ValidFormat(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const CAStreamBasicDescription& inNewFormat
+    );</pre>
+<p>Override to return whether a particular stream format is valid for one of your input or output elements. 
+			The default implementation returns the result of <a href="#FormatIsCanonical">FormatIsCanonical</a>.</p><br>
+<hr>
+<h3><u>Initialization</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Cleanup">Cleanup</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void Cleanup();</pre>
+<p>Override this to do any necessary clean up. </p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DoCleanup">DoCleanup</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void DoCleanup();</pre>
+<p>DoCleanup calls <a href="#Cleanup">Cleanup</a>, making sure that clean up is only attempted once. Your clean up code should be in <a href="#Cleanup">Cleanup</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DoInitialize">DoInitialize</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DoInitialize();</pre>
+<p>DoInitialize calls <a href="#Initialize">Initialize</a>, making sure that initialization is only attempted once. Your initialization code should be in <a href="#Initialize">Initialize</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Initialize">Initialize</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Initialize();</pre>
+<p>Override this to do your initialization. </p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsInitialized">IsInitialized</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool IsInitialized() const;</pre>
+<p>Predicate. Returns whether the unit is initialized. </p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PostConstructor">PostConstructor</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void PostConstructor();</pre>
+<p>Allows base class to do additional initialization once the derived class is fully constructed. This gets called automatically. 
+			Can be overridden to do any initialization that requires a fully constructed object with working virtual methods.
+			AUBase calls <a href="#CreateElements">CreateElements</a> here.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ReallocateBuffers">ReallocateBuffers</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void ReallocateBuffers();</pre>
+<p>Internal. This gets called by <a href="#DoInitialize">DoInitialize</a> and <a href="#SetMaxFramesPerSlice">SetMaxFramesPerSlice</a>. </p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AudioUnitAPIVersion">AudioUnitAPIVersion</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> UInt8 AudioUnitAPIVersion() const;</pre>
+<p>Return the version number of the AudioUnit API.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="BusCountWritable">BusCountWritable</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool BusCountWritable(AudioUnitScope inScope);</pre>
+<p>This method gets called in response to handling kAudioUnitProperty_BusCount. 
+			Returns whether the number of buses can be changed. The default method returns false. 
+			Override if your AudioUnit can have a variable number of buses for input or output.
+			kAudioUnitProperty_BusCount may only be set if this method returns true and the unit has not been initialized.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CallHostBeatAndTempo">CallHostBeatAndTempo</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> OSStatus CallHostBeatAndTempo (
+          Float64*                        outCurrentBeat,
+          Float64*                        outCurrentTempo
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CallHostMusicalTimeLocation">CallHostMusicalTimeLocation</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> OSStatus CallHostMusicalTimeLocation (
+          UInt32*                         outDeltaSampleOffsetToNextBeat,
+          Float32*                        outTimeSig_Numerator,
+          UInt32*                         outTimeSig_Denominator,
+          Float64*                        outCurrentMeasureDownBeat
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CallHostTransportState">CallHostTransportState</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> OSStatus CallHostTransportState (
+          Boolean*                        outIsPlaying,
+          Boolean*                        outTransportStateChanged,
+          Float64*                        outCurrentSampleInTimeLine,
+          Boolean*                        outIsCycling,
+          Float64*                        outCycleStartBeat,
+          Float64*                        outCycleEndBeat
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="CanSetMaxFrames">CanSetMaxFrames</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus CanSetMaxFrames() const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ClearPropertyUsage">ClearPropertyUsage</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult RemovePropertyValue (
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ComponentEntryDispatch">ComponentEntryDispatch</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static ComponentResult ComponentEntryDispatch(
+          ComponentParameters*            params,
+          AUBase*                         This
+    );</pre>
+<p>Internal. This does the dispatching of component selectors to AudioUnit methods.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetAudioChannelLayout">GetAudioChannelLayout</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual UInt32 GetAudioChannelLayout(
+          AudioUnitScope                  scope,
+          AudioUnitElement                element,
+          AudioChannelLayout*             outLayoutPtr,
+          Boolean&                        outWritable
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetGroupParameter">GetGroupParameter</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetGroupParameter(
+          AudioUnitParameterID            inID,
+          AudioUnitElement                inElement,
+          Float32&                        outValue
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetIOElement">GetIOElement</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUIOElement* GetIOElement(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetIconLocation">GetIconLocation</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual CFURLRef GetIconLocation ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetNumCustomUIComponents">GetNumCustomUIComponents</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual int GetNumCustomUIComponents ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetUIComponentDescs">GetUIComponentDescs</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void GetUIComponentDescs (ComponentDescription* inDescArray);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetVectorUnitType">GetVectorUnitType</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static SInt32 GetVectorUnitType();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasAltivec">HasAltivec</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static bool HasAltivec();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasIcon">HasIcon</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool HasIcon ();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasSSE2">HasSSE2</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static bool HasSSE2();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasSSE3">HasSSE3</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static bool HasSSE3();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HasVectorUnit">HasVectorUnit</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static bool HasVectorUnit();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="IsRenderThread">IsRenderThread</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool InRenderThread () const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PreDestructor">PreDestructor</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void PreDestructor();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RemoveAudioChannelLayout">RemoveAudioChannelLayout</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus RemoveAudioChannelLayout(
+          AudioUnitScope                  scope,
+          AudioUnitElement                element
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetAudioChannelLayout">SetAudioChannelLayout</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus SetAudioChannelLayout(
+          AudioUnitScope                  scope,
+          AudioUnitElement                element,
+          const AudioChannelLayout*       inLayout
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetGroupParameter">SetGroupParameter</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetGroupParameter(
+          AudioUnitParameterID            inID,
+          AudioUnitElement                inElement,
+          Float32                         inValue,
+          UInt32                          inBufferOffsetInFrames
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetWantsRenderThreadID">SetWantsRenderThreadID</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void SetWantsRenderThreadID (bool inFlag);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SupportedNumChannels">SupportedNumChannels</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual UInt32 SupportedNumChannels (const AUChannelInfo** outInfo);</pre>
+<p>Returns a list of the supported input and output channel configurations.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="WantsRenderThreadID">WantsRenderThreadID</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool WantsRenderThreadID () const;</pre>
+<p></p><br>
+<hr>
+<h3><u>Parameters</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="FillInParameterName">FillInParameterName</a></h4>
+</td><td width="50%">
+<h4>protected static method</h4>
+</td></tr></table>
+<br><pre> static void FillInParameterName (
+          AudioUnitParameterInfo&         ioInfo,
+          CFStringRef                     inName,
+          bool                            inShouldRelease
+    );</pre>
+<p>Service. A convenience function for putting the name of the parameter from a CFStringRef into an AudioUnitParameterInfo.
+			You will use this when you write your <a href="#GetParameterInfo">GetParameterInfo</a> method.
+			This method's signature has been changed to highlight the fact that the AU should declare if the CFString parameter name should be 
+			released by the client of not.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameter">GetParameter</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetParameter(
+          AudioUnitParameterID            inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          Float32&                        outValue
+    );</pre>
+<p>Returns the value of a parameter.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameterInfo">GetParameterInfo</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetParameterInfo(
+          AudioUnitScope                  inScope,
+          AudioUnitParameterID            inParameterID,
+          AudioUnitParameterInfo&         outParameterInfo
+    );</pre>
+<p>Override this to return info on the parameters for your AudioUnit.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameterList">GetParameterList</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetParameterList(
+          AudioUnitScope                  inScope,
+          AudioUnitParameterID*           outParameterList,
+          UInt32&                         outNumParameters
+    );</pre>
+<p>Internal. This provides support for a call to <a href="#GetProperty">GetProperty</a> on the kAudioUnitProperty_ParameterList property.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetParameterValueStrings">GetParameterValueStrings</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetParameterValueStrings(
+          AudioUnitScope                  inScope,
+          AudioUnitParameterID            inParameterID,
+          CFArrayRef*                     outStrings
+    );</pre>
+<p>Internal. This provides support for a call to <a href="#GetProperty">GetProperty</a> on the kAudioUnitProperty_ParameterValueStrings property.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RestoreState">RestoreState</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult RestoreState(CFPropertyListRef inData);</pre>
+<p>Restores all parameter values from the CFPropertyListRef.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SaveState">SaveState</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SaveState(CFPropertyListRef* outData);</pre>
+<p>Stores the values of all parameters into a CFPropertyListRef.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ScheduleParameter">ScheduleParameter</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult ScheduleParameter (
+          const AudioUnitParameterEvent*  inParameterEvent,
+          UInt32                          inNumEvents
+    );</pre>
+<p>Enters parameter changes into a queue for the audio unit.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetParameter">SetParameter</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetParameter(
+          AudioUnitParameterID            inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          Float32                         inValue,
+          UInt32                          inBufferOffsetInFrames
+    );</pre>
+<p>Set a parameter value.</p><br>
+<hr>
+<h3><u>Presets</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetPresets">GetPresets</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetPresets (CFArrayRef* outData) const;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="NewFactoryPresetSet">NewFactoryPresetSet</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual OSStatus NewFactoryPresetSet (const AUPreset& inNewFactoryPreset);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetAFactoryPresetAsCurrent">SetAFactoryPresetAsCurrent</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool SetAFactoryPresetAsCurrent (const AUPreset& inPreset);</pre>
+<p></p><br>
+<hr>
+<h3><u>Properties</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="AddPropertyListener">AddPropertyListener</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult AddPropertyListener(
+          AudioUnitPropertyID             inID,
+          AudioUnitPropertyListenerProc   inProc,
+          void*                           inProcRefCon
+    );</pre>
+<p>Registers a function to call whenever there is a change to a property.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DispatchGetProperty">DispatchGetProperty</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DispatchGetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          void*                           outData
+    );</pre>
+<p>Certain properties are dispatched to be handled with different virtual methods. 
+			Your own properties should be handled by overriding <a href="#GetProperty">GetProperty</a>, not DispatchGetProperty.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DispatchGetPropertyInfo">DispatchGetPropertyInfo</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DispatchGetPropertyInfo(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          UInt32&                         outDataSize,
+          Boolean&                        outWritable
+    );</pre>
+<p>Certain properties are dispatched to be handled with different virtual methods. 
+			Your own properties should be handled by overriding <a href="#GetPropertyInfo">GetPropertyInfo</a>, not DispatchGetPropertyInfo.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DispatchSetProperty">DispatchSetProperty</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DispatchSetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const void*                     inData,
+          UInt32                          inDataSize
+    );</pre>
+<p>Certain properties are dispatched to be handled with different virtual methods. 
+			Your own properties should be handled by overriding <a href="#SetProperty">SetProperty</a>, not DispatchSetProperty.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetLatency">GetLatency</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual Float64 GetLatency();</pre>
+<p>Returns the throughput latency of the unit in seconds. Override this if your AudioUnit has a throughput latency. 
+			The default method returns zero.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetProperty">GetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          void*                           outData
+    );</pre>
+<p>Override to return values for your own properties.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetPropertyInfo">GetPropertyInfo</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult GetPropertyInfo(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          UInt32&                         outDataSize,
+          Boolean&                        outWritable
+    );</pre>
+<p>Override to return info for your own properties.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetTailTime">GetTailTime</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual Float64 GetTailTime();</pre>
+<p>Override this method if your AudioUnit takes some time to decay after the source has ended. 
+			If you override this then you should also override <a href="#SupportsRampAndTail">SupportsRampAndTail</a></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PropertyChanged">PropertyChanged</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void PropertyChanged(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p>Internal. Notifies property listeners that a property value has changed.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RemovePropertyListener">RemovePropertyListener</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult RemovePropertyListener(
+          AudioUnitPropertyID             inID,
+          AudioUnitPropertyListenerProc   inProc
+    );</pre>
+<p>Removes a property listener proc for the property.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetProperty">SetProperty</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetProperty(
+          AudioUnitPropertyID             inID,
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement,
+          const void*                     inData,
+          UInt32                          inDataSize
+    );</pre>
+<p>Override to set values for your own properties.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SupportsRampAndTail">SupportsRampAndTail</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool SupportsTail ();</pre>
+<p>Override to return true if your audio unit has a ramp time and tail time. The default method returns false.
+			If you override this then you should also override either or both <a href="#GetRampUpTime">GetRampUpTime</a> and 
+			<a href="#GetTailTime">GetTailTime</a>
+			</p><br>
+<hr>
+<h3><u>Rendering</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DoRender">DoRender</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DoRender(
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inBusNumber,
+          UInt32                          inNumberFrames,
+          AudioBufferList&                ioData
+    );</pre>
+<p>Internal. Handles rendering of audio. This will call <a href="#RenderBus">RenderBus</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DoRenderBus">DoRenderBus</a></h4>
+</td><td width="50%">
+<h4>private nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DoRenderBus(
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inBusNumber,
+          AUOutputElement*                theOutput,
+          UInt32                          inNumberFrames,
+          AudioBufferList&                ioData
+    );</pre>
+<p>Internal. Handles common code for rendering audio.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="DoRenderSlice">DoRenderSlice</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult DoRenderSlice(
+          AudioUnitRenderActionFlags      inActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inBusNumber,
+          AudioBufferList&                ioData
+    );</pre>
+<p>Internal. Handles rendering of audio. This will call <a href="#RenderBus">RenderBus</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetMaxFramesPerSlice">GetMaxFramesPerSlice</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> UInt32 GetMaxFramesPerSlice() const;</pre>
+<p>Accessor. Get the maximum number of frames that can be requested in a render call.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="NeedsToRender">NeedsToRender</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> bool NeedsToRender(Float64 inSampleTime);</pre>
+<p>Returns whether the audio unit needs to call render for this sample time. If it has already rendered for this time, then it returns false.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="PullInput">PullInput</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> ComponentResult PullInput(
+          UInt32                          inBusNumber,
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inNumberFrames
+    );</pre>
+<p>Convenience function to pull an input. You would use this in your <a href="#Render">Render</a> method.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RemoveRenderNotification">RemoveRenderNotification</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult RemoveRenderNotification(
+          ProcPtr                         inProc,
+          void*                           inRefCon
+    );</pre>
+<p>Removes the notification function from the list of functions called before and after rendering. See also <a href="#SetRenderNotification">SetRenderNotification</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Render">Render</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Render(
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inNumberFrames
+    );</pre>
+<p>
+			This method is called in response to another AudioUnit or function requesting a buffer of output from your unit.
+			Your signal processing needs to be done in here or in a function called from here.
+
+			If your AudioUnit processes multiple output busses together, not independantly override this method.
+			Otherwise override RenderBus.
+
+			N.B. For a unit with only one output bus, it can assume in its implementation of this 
+			method that the output's buffer list has already been prepared and access it with 
+			GetOutput(0)->GetBufferList() instead of GetOutput(0)->PrepareBuffer(nFrames)
+				-- if PrepareBuffer is called, a copy may occur after rendering.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="RenderBus">RenderBus</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult RenderBus(
+          AudioUnitRenderActionFlags&     ioActionFlags,
+          const AudioTimeStamp&           inTimeStamp,
+          UInt32                          inBusNumber,
+          UInt32                          inNumberFrames
+    );</pre>
+<p>Override this method if your AudioUnit processes multiple output busses completely independently
+			(you'll want to just call Render without the NeedsToRender check). Otherwise, override Render.
+
+			N.B. Implementations of this method can assume that the output's buffer list has already been
+			prepared and access it with GetOutput(inBusNumber)->GetBufferList() instead of 
+			GetOutput(inBusNumber)->PrepareBuffer(nFrames) -- if PrepareBuffer is called, a
+			copy may occur after rendering.
+			</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Reset">Reset</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult Reset(
+          AudioUnitScope                  inScope,
+          AudioUnitElement                inElement
+    );</pre>
+<p>Resets the unit to restart audio processing. AUEffectBase overrides this to reset the DSP kernels.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetMaxFramesPerSlice">SetMaxFramesPerSlice</a></h4>
+</td><td width="50%">
+<h4>protected virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void SetMaxFramesPerSlice(UInt32 nFrames);</pre>
+<p>An accessor to set the maximum number of frames that can be requested in a render call. Buffers will be reallocated if necessary.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetRenderNotification">SetRenderNotification</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual ComponentResult SetRenderNotification(
+          ProcPtr                         inProc,
+          void*                           inRefCon
+    );</pre>
+<p>Adds the notification function to a list of functions called before and after rendering. See also <a href="#RemoveRenderNotification">RemoveRenderNotification</a>.</p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Elements</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mScopes">mScopes</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AUScope mScopes[kNumScopes];</pre>
+<p>List of the <a href="AUScope_fs.html" target="_top">AUScope</a> objects which in turn contain AUElements.</p><br>
+<hr>
+<h3><u>Initialization</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mBuffersAllocated">mBuffersAllocated</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> bool mBuffersAllocated;</pre>
+<p>Whether buffers have yet been allocated.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mElementsCreated">mElementsCreated</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mElementsCreated;</pre>
+<p>Whether <a href="#CreateElements">CreateElements</a> has yet been called.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mInitialized">mInitialized</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> bool mInitialized;</pre>
+<p>Whether <a href="#Initialize">Initialize</a> has been called successfully. See also <a href="#IsInitialized">IsInitialized</a>.</p><br>
+<hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mAudioUnitAPIVersion">mAudioUnitAPIVersion</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt8 mAudioUnitAPIVersion;</pre>
+<p>The AudioUnit API version number. Currently either 1 or 2.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mContextInfo">mContextInfo</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> CFStringRef mContextName;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mHostCallbackInfo">mHostCallbackInfo</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> HostCallbackInfo mHostCallbackInfo;</pre>
+<p>A place to store the information for the beat and tempo callback.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mInitNumGroupEls">mInitNumGroupEls</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mInitNumGroupEls;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mInitNumInputEls">mInitNumInputEls</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mInitNumInputEls;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mInitNumOutputEls">mInitNumOutputEls</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mInitNumOutputEls;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mInitNumPartEls">mInitNumPartEls</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mInitNumPartEls;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mRenderThreadID">mRenderThreadID</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre>#if TARGET_OS_MAC pthread_t mRenderThreadID;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mWantsRenderThreadID">mWantsRenderThreadID</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> bool mWantsRenderThreadID;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="sVectorUnitType">sVectorUnitType</a></h4>
+</td><td width="50%">
+<h4>private static variable</h4>
+</td></tr></table>
+<br><pre> static SInt32 sVectorUnitType;</pre>
+<p>enum value indicating which type of vector unit this machine has, if any. See <a href="#GetVectorUnitType">GetVectorUnitType</a>.</p><br>
+<hr>
+<h3><u>Parameters</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParamList">mParamList</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> ParameterEventList mParamList;</pre>
+<p>List of scheduled ParameterEvents.</p><br>
+<hr>
+<h3><u>Presets</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mCurrentPreset">mCurrentPreset</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> AUPreset mCurrentPreset;</pre>
+<p>The current preset number and name.</p><br>
+<hr>
+<h3><u>Properties</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mPropertyListeners">mPropertyListeners</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> PropertyListeners mPropertyListeners;</pre>
+<p>List of functions to call when a property changes.</p><br>
+<hr>
+<h3><u>Rendering</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mLastRenderError">mLastRenderError</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> OSStatus mLastRenderError;</pre>
+<p>The first render error that occurred after the last time kAudioUnitProperty_LastRenderError was checked.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mLastRenderedSampleTime">mLastRenderedSampleTime</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> Float64 mLastRenderedSampleTime;</pre>
+<p>Set by <a href="#NeedsToRender">NeedsToRender</a>.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mMaxFramesPerSlice">mMaxFramesPerSlice</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> UInt32 mMaxFramesPerSlice;</pre>
+<p>The maximum number of frames that can be requested in a render call.</p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mRenderCallbacks">mRenderCallbacks</a></h4>
+</td><td width="50%">
+<h4>private instance variable</h4>
+</td></tr></table>
+<br><pre> RenderCallbackList mRenderCallbacks;</pre>
+<p>List of functions to call before and after rendering.</p><br>
+<hr>
+</body></html>

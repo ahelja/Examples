@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head>
+<title>AUCarbonViewControl</title>
+</head><body bgcolor="#F0F0F0">
+<basefont face="optima" size="2"><h1><a name="top">AUCarbonViewControl</a></h1>
+<big><b>Superclasses : </b></big>
+<a href = "CarbonEventHandler_fs.html" target="_top">CarbonEventHandler</a><br>
+<big><b>Subclasses : </b></big>
+none<br>
+<big><b>Header : </b></big>AUCarbonViewControl<br>
+<br><pre>class AUCarbonViewControl : public CarbonEventHandler </pre>
+<p></p><hr>
+<h2>Methods</h2>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Bind">Bind</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void Bind();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ControlRef">ControlRef</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> operator ControlRef();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ControlToParameter">ControlToParameter</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void ControlToParameter();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetOwnerView">GetOwnerView</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> AUCarbonViewBase* GetOwnerView();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetTextValue">GetTextValue</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual CFStringRef GetTextValue();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetValue">GetValue</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual long GetValue();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="GetValueFract">GetValueFract</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual double GetValueFract();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="HandleEvent">HandleEvent</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual bool HandleEvent(EventRef event);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="NumericKeyFilterCallback">NumericKeyFilterCallback</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static pascal ControlKeyFilterResult NumericKeyFilterCallback(
+          ControlRef                      theControl,
+          SInt16*                         keyCode,
+          SInt16*                         charCode,
+          EventModifiers*                 modifiers
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ParamInfo">ParamInfo</a></h4>
+</td><td width="50%">
+<h4>protected nonvirtual method</h4>
+</td></tr></table>
+<br><pre> const AudioUnitParameterInfo &ParamInfo();</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="ParameterToControl">ParameterToControl</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void ParameterToControl(Float32 newValue);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetTextValue">SetTextValue</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void SetTextValue(CFStringRef str);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetValue">SetValue</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void SetValue(long value);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SetValueFract">SetValueFract</a></h4>
+</td><td width="50%">
+<h4>public virtual method</h4>
+</td></tr></table>
+<br><pre> virtual void SetValueFract(double value);</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SizeControlToFit">SizeControlToFit</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static Boolean SizeControlToFit(
+          ControlRef                      inControl,
+          SInt16*                         outWidth = NULL,
+          SInt16*                         outHeight = NULL
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="SliderTrackProc">SliderTrackProc</a></h4>
+</td><td width="50%">
+<h4>public static method</h4>
+</td></tr></table>
+<br><pre> static pascal void SliderTrackProc(
+          ControlRef                      theControl,
+          ControlPartCode                 partCode
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="StdKeyFilterCallback">StdKeyFilterCallback</a></h4>
+</td><td width="50%">
+<h4>protected static method</h4>
+</td></tr></table>
+<br><pre> static pascal ControlKeyFilterResult StdKeyFilterCallback(
+          ControlRef                      theControl,
+          SInt16*                         keyCode,
+          SInt16*                         charCode,
+          EventModifiers*                 modifiers
+    );</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="Update">Update</a></h4>
+</td><td width="50%">
+<h4>public nonvirtual method</h4>
+</td></tr></table>
+<br><pre> void Update (bool inUIThread);</pre>
+<p></p><br>
+<hr>
+<h2>Data</h2><hr>
+<h3><u>Other</u></h3><hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mControl">mControl</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> ControlRef mControl;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mListener">mListener</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AUParameterListenerRef mListener;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mOwnerView">mOwnerView</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> AUCarbonViewBase* mOwnerView;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mParam">mParam</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> CAAUParameter mParam;</pre>
+<p></p><br>
+<hr>
+<table  width="100%"><tr><td width="50%">
+<h4><a name="mType">mType</a></h4>
+</td><td width="50%">
+<h4>protected instance variable</h4>
+</td></tr></table>
+<br><pre> ControlType mType;</pre>
+<p></p><br>
+<hr>
+</body></html>

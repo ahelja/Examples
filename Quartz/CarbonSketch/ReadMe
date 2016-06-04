@@ -1,0 +1,15 @@
+Successor of "CarbonDraw", where the name hints at 
+    /Developer/Examples/AppKit/Sketch/.
+
+In contrast to the old CarbonDraw, there is no Quickdraw API being used;
+and in contrast to AppKit/Sketch, it is a plain HIToolbox-based Carbon
+application.
+
+Demonstrates the usage of an overlay window for mouse-tracking feedback,
+and the usage of a 1x1-CGBitmapContext for hit-testing.
+
+Includes support for printing, and a separate item "Save As PDF File".
+
+Version 1.0
+2-2-2004
+Joseph Maurer

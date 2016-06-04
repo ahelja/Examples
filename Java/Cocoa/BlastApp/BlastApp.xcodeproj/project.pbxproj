@@ -1,0 +1,1037 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		04857A99FEEDB62A11CA0C5D /* BlastApp */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = B69BDC4B08A2DD92008AC9B5 /* Build configuration list for PBXApplicationTarget "BlastApp" */;
+			buildPhases = (
+				04857A9AFEEDB62A11CA0C5D /* Headers */,
+				04857A9BFEEDB62A11CA0C5D /* Resources */,
+				04857AD7FEEDB62A11CA0C5D /* Sources */,
+				04857B2EFEEDB62A11CA0C5D /* Frameworks */,
+				04857B31FEEDB62A11CA0C5D /* Rez */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlastApp;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = BlastApp;
+			productInstallPath = "$(LOCAL_DEVELOPER_DIR)/Demos";
+			productName = BlastApp;
+			productReference = 01146B80FF672EF811CA0C5D /* BlastApp.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
+	<key>CFBundleExecutable</key>
+	<string>BlastApp</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string>blastapp.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.BlastApp</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BlastApp</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>5.3</string>
+	<key>CFBundleSignature</key>
+	<string></string>
+	<key>CFBundleVersion</key>
+	<string>67</string>
+	<key>NSJavaNeeded</key>
+	<string>YES</string>
+	<key>NSJavaPath</key>
+	<array>
+		<string>BlastApp.jar</string>
+	</array>
+	<key>NSJavaRoot</key>
+	<string>Contents/Resources/Java</string>
+	<key>NSMainNibFile</key>
+	<string>BlastApp</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		04857A9CFEEDB62A11CA0C5D /* Prefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 04857A49FEEDB62A11CA0C5D /* Prefs.nib */; };
+		04857A9DFEEDB62A11CA0C5D /* Game.nib in Resources */ = {isa = PBXBuildFile; fileRef = 04857A4BFEEDB62A11CA0C5D /* Game.nib */; };
+		04857A9EFEEDB62A11CA0C5D /* BlastApp.nib in Resources */ = {isa = PBXBuildFile; fileRef = 04857A4DFEEDB62A11CA0C5D /* BlastApp.nib */; };
+		04857A9FFEEDB62A11CA0C5D /* UserName.nib in Resources */ = {isa = PBXBuildFile; fileRef = 04857A50FEEDB62A11CA0C5D /* UserName.nib */; };
+		04857AA0FEEDB62A11CA0C5D /* backshooterexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A53FEEDB62A11CA0C5D /* backshooterexplosion.tiff */; };
+		04857AA1FEEDB62A11CA0C5D /* gunes.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A54FEEDB62A11CA0C5D /* gunes.tiff */; };
+		04857AA2FEEDB62A11CA0C5D /* greenboing.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A55FEEDB62A11CA0C5D /* greenboing.tiff */; };
+		04857AA3FEEDB62A11CA0C5D /* sentry.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A56FEEDB62A11CA0C5D /* sentry.tiff */; };
+		04857AA4FEEDB62A11CA0C5D /* bigexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A57FEEDB62A11CA0C5D /* bigexplosion.tiff */; };
+		04857AA5FEEDB62A11CA0C5D /* donut.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A58FEEDB62A11CA0C5D /* donut.tiff */; };
+		04857AA6FEEDB62A11CA0C5D /* arrow.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A59FEEDB62A11CA0C5D /* arrow.tiff */; };
+		04857AA7FEEDB62A11CA0C5D /* smartmbexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A5AFEEDB62A11CA0C5D /* smartmbexplosion.tiff */; };
+		04857AA8FEEDB62A11CA0C5D /* smallmineexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A5BFEEDB62A11CA0C5D /* smallmineexplosion.tiff */; };
+		04857AA9FEEDB62A11CA0C5D /* hbexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A5CFEEDB62A11CA0C5D /* hbexplosion.tiff */; };
+		04857AAAFEEDB62A11CA0C5D /* wave.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A5DFEEDB62A11CA0C5D /* wave.tiff */; };
+		04857AABFEEDB62A11CA0C5D /* helicopter.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A5EFEEDB62A11CA0C5D /* helicopter.tiff */; };
+		04857AACFEEDB62A11CA0C5D /* smallexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A5FFEEDB62A11CA0C5D /* smallexplosion.tiff */; };
+		04857AADFEEDB62A11CA0C5D /* mbexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A60FEEDB62A11CA0C5D /* mbexplosion.tiff */; };
+		04857AAEFEEDB62A11CA0C5D /* largemine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A61FEEDB62A11CA0C5D /* largemine.tiff */; };
+		04857AAFFEEDB62A11CA0C5D /* fog.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A62FEEDB62A11CA0C5D /* fog.tiff */; };
+		04857AB0FEEDB62A11CA0C5D /* dropshipexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A63FEEDB62A11CA0C5D /* dropshipexplosion.tiff */; };
+		04857AB1FEEDB62A11CA0C5D /* smartmbase.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A64FEEDB62A11CA0C5D /* smartmbase.tiff */; };
+		04857AB2FEEDB62A11CA0C5D /* smartmineexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A65FEEDB62A11CA0C5D /* smartmineexplosion.tiff */; };
+		04857AB3FEEDB62A11CA0C5D /* proximitymine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A66FEEDB62A11CA0C5D /* proximitymine.tiff */; };
+		04857AB4FEEDB62A11CA0C5D /* smallmine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A67FEEDB62A11CA0C5D /* smallmine.tiff */; };
+		04857AB5FEEDB62A11CA0C5D /* arrowbase.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A68FEEDB62A11CA0C5D /* arrowbase.tiff */; };
+		04857AB6FEEDB62A11CA0C5D /* hexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A69FEEDB62A11CA0C5D /* hexplosion.tiff */; };
+		04857AB7FEEDB62A11CA0C5D /* smartmine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A6AFEEDB62A11CA0C5D /* smartmine.tiff */; };
+		04857AB8FEEDB62A11CA0C5D /* blastapp.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A6BFEEDB62A11CA0C5D /* blastapp.tiff */; };
+		04857AB9FEEDB62A11CA0C5D /* fourmines.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A6CFEEDB62A11CA0C5D /* fourmines.tiff */; };
+		04857ABAFEEDB62A11CA0C5D /* bomb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A6DFEEDB62A11CA0C5D /* bomb.tiff */; };
+		04857ABBFEEDB62A11CA0C5D /* fatsentry.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A6EFEEDB62A11CA0C5D /* fatsentry.tiff */; };
+		04857ABCFEEDB62A11CA0C5D /* redmine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A6FFEEDB62A11CA0C5D /* redmine.tiff */; };
+		04857ABDFEEDB62A11CA0C5D /* hole.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A70FEEDB62A11CA0C5D /* hole.tiff */; };
+		04857ABEFEEDB62A11CA0C5D /* dropship.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A71FEEDB62A11CA0C5D /* dropship.tiff */; };
+		04857ABFFEEDB62A11CA0C5D /* hblock.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A72FEEDB62A11CA0C5D /* hblock.tiff */; };
+		04857AC0FEEDB62A11CA0C5D /* missile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A73FEEDB62A11CA0C5D /* missile.tiff */; };
+		04857AC1FEEDB62A11CA0C5D /* smartmissile.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A74FEEDB62A11CA0C5D /* smartmissile.tiff */; };
+		04857AC2FEEDB62A11CA0C5D /* mbase.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A75FEEDB62A11CA0C5D /* mbase.tiff */; };
+		04857AC3FEEDB62A11CA0C5D /* arrowbaseexplosion.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A76FEEDB62A11CA0C5D /* arrowbaseexplosion.tiff */; };
+		04857AC4FEEDB62A11CA0C5D /* keypad.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A77FEEDB62A11CA0C5D /* keypad.tiff */; };
+		04857AC5FEEDB62A11CA0C5D /* vblock.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A78FEEDB62A11CA0C5D /* vblock.tiff */; };
+		04857AC6FEEDB62A11CA0C5D /* hbase.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A79FEEDB62A11CA0C5D /* hbase.tiff */; };
+		04857AC7FEEDB62A11CA0C5D /* spider.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A7AFEEDB62A11CA0C5D /* spider.tiff */; };
+		04857AC8FEEDB62A11CA0C5D /* bullet.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A7BFEEDB62A11CA0C5D /* bullet.tiff */; };
+		04857AC9FEEDB62A11CA0C5D /* boing.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A7CFEEDB62A11CA0C5D /* boing.tiff */; };
+		04857ACAFEEDB62A11CA0C5D /* throton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A7DFEEDB62A11CA0C5D /* throton.tiff */; };
+		04857ACBFEEDB62A11CA0C5D /* switch.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A7EFEEDB62A11CA0C5D /* switch.tiff */; };
+		04857ACCFEEDB62A11CA0C5D /* sheep.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A7FFEEDB62A11CA0C5D /* sheep.tiff */; };
+		04857ACDFEEDB62A11CA0C5D /* bubblemine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A80FEEDB62A11CA0C5D /* bubblemine.tiff */; };
+		04857ACEFEEDB62A11CA0C5D /* backshooter.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04857A81FEEDB62A11CA0C5D /* backshooter.tiff */; };
+		04857ACFFEEDB62A11CA0C5D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 04857A83FEEDB62A11CA0C5D /* Credits.rtf */; };
+		04857AD0FEEDB62A11CA0C5D /* EnemyFire.snd in Resources */ = {isa = PBXBuildFile; fileRef = 04857A85FEEDB62A11CA0C5D /* EnemyFire.snd */; };
+		04857AD1FEEDB62A11CA0C5D /* LowExplosion.snd in Resources */ = {isa = PBXBuildFile; fileRef = 04857A86FEEDB62A11CA0C5D /* LowExplosion.snd */; };
+		04857AD2FEEDB62A11CA0C5D /* LoudExplosion.snd in Resources */ = {isa = PBXBuildFile; fileRef = 04857A87FEEDB62A11CA0C5D /* LoudExplosion.snd */; };
+		04857AD3FEEDB62A11CA0C5D /* LevelFileInfo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 04857A88FEEDB62A11CA0C5D /* LevelFileInfo.rtf */; };
+		04857AD4FEEDB62A11CA0C5D /* LevelData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04857A89FEEDB62A11CA0C5D /* LevelData.txt */; };
+		04857AD5FEEDB62A11CA0C5D /* DemoLevelData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04857A8BFEEDB62A11CA0C5D /* DemoLevelData.txt */; };
+		04857AD6FEEDB62A11CA0C5D /* blastapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 04857A8DFEEDB62A11CA0C5D /* blastapp.icns */; };
+		04857AD8FEEDB62A11CA0C5D /* BlastAppController.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F1FEEDB62A11CA0C5D /* BlastAppController.java */; settings = {ATTRIBUTES = (); }; };
+		04857AD9FEEDB62A11CA0C5D /* Game.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F2FEEDB62A11CA0C5D /* Game.java */; settings = {ATTRIBUTES = (); }; };
+		04857ADAFEEDB62A11CA0C5D /* InputIndicator.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F3FEEDB62A11CA0C5D /* InputIndicator.java */; settings = {ATTRIBUTES = (); }; };
+		04857ADBFEEDB62A11CA0C5D /* RemainingHelicopters.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F4FEEDB62A11CA0C5D /* RemainingHelicopters.java */; settings = {ATTRIBUTES = (); }; };
+		04857ADCFEEDB62A11CA0C5D /* AwardView.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F5FEEDB62A11CA0C5D /* AwardView.java */; settings = {ATTRIBUTES = (); }; };
+		04857ADDFEEDB62A11CA0C5D /* GamePiece.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F6FEEDB62A11CA0C5D /* GamePiece.java */; settings = {ATTRIBUTES = (); }; };
+		04857ADEFEEDB62A11CA0C5D /* Background.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F7FEEDB62A11CA0C5D /* Background.java */; settings = {ATTRIBUTES = (); }; };
+		04857ADFFEEDB62A11CA0C5D /* Helicopter.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F8FEEDB62A11CA0C5D /* Helicopter.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE0FEEDB62A11CA0C5D /* HelicopterExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579F9FEEDB62A11CA0C5D /* HelicopterExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE1FEEDB62A11CA0C5D /* AutoPilotHelicopter.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579FAFEEDB62A11CA0C5D /* AutoPilotHelicopter.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE2FEEDB62A11CA0C5D /* UntouchablePiece.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579FBFEEDB62A11CA0C5D /* UntouchablePiece.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE3FEEDB62A11CA0C5D /* Missile.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579FCFEEDB62A11CA0C5D /* Missile.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE4FEEDB62A11CA0C5D /* Bullet.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579FDFEEDB62A11CA0C5D /* Bullet.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE5FEEDB62A11CA0C5D /* Wave.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579FEFEEDB62A11CA0C5D /* Wave.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE6FEEDB62A11CA0C5D /* KillerWave.java in Sources */ = {isa = PBXBuildFile; fileRef = 048579FFFEEDB62A11CA0C5D /* KillerWave.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE7FEEDB62A11CA0C5D /* SmartMissileBaseExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A00FEEDB62A11CA0C5D /* SmartMissileBaseExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE8FEEDB62A11CA0C5D /* AttackShip.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A01FEEDB62A11CA0C5D /* AttackShip.java */; settings = {ATTRIBUTES = (); }; };
+		04857AE9FEEDB62A11CA0C5D /* BigAttackShip.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A02FEEDB62A11CA0C5D /* BigAttackShip.java */; settings = {ATTRIBUTES = (); }; };
+		04857AEAFEEDB62A11CA0C5D /* SmartAttackShip.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A03FEEDB62A11CA0C5D /* SmartAttackShip.java */; settings = {ATTRIBUTES = (); }; };
+		04857AEBFEEDB62A11CA0C5D /* EnemyBullet.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A04FEEDB62A11CA0C5D /* EnemyBullet.java */; settings = {ATTRIBUTES = (); }; };
+		04857AECFEEDB62A11CA0C5D /* SmartMissile.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A05FEEDB62A11CA0C5D /* SmartMissile.java */; settings = {ATTRIBUTES = (); }; };
+		04857AEDFEEDB62A11CA0C5D /* KillerMissile.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A06FEEDB62A11CA0C5D /* KillerMissile.java */; settings = {ATTRIBUTES = (); }; };
+		04857AEEFEEDB62A11CA0C5D /* Bomb.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A07FEEDB62A11CA0C5D /* Bomb.java */; settings = {ATTRIBUTES = (); }; };
+		04857AEFFEEDB62A11CA0C5D /* MissileBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A08FEEDB62A11CA0C5D /* MissileBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF0FEEDB62A11CA0C5D /* RapidFireMissileBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A09FEEDB62A11CA0C5D /* RapidFireMissileBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF1FEEDB62A11CA0C5D /* MissileBaseExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A0AFEEDB62A11CA0C5D /* MissileBaseExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF2FEEDB62A11CA0C5D /* SmallHarmlessExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A0BFEEDB62A11CA0C5D /* SmallHarmlessExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF3FEEDB62A11CA0C5D /* SmartMissileBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A0CFEEDB62A11CA0C5D /* SmartMissileBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF4FEEDB62A11CA0C5D /* KillerMissileBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A0DFEEDB62A11CA0C5D /* KillerMissileBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF5FEEDB62A11CA0C5D /* DumHangingBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A0EFEEDB62A11CA0C5D /* DumHangingBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF6FEEDB62A11CA0C5D /* HangingBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A0FFEEDB62A11CA0C5D /* HangingBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF7FEEDB62A11CA0C5D /* RapidFireHangingBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A10FEEDB62A11CA0C5D /* RapidFireHangingBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF8FEEDB62A11CA0C5D /* SmartHangingBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A11FEEDB62A11CA0C5D /* SmartHangingBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AF9FEEDB62A11CA0C5D /* SneakyHangingBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A12FEEDB62A11CA0C5D /* SneakyHangingBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857AFAFEEDB62A11CA0C5D /* HangingBaseExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A13FEEDB62A11CA0C5D /* HangingBaseExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857AFBFEEDB62A11CA0C5D /* BackShooter.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A14FEEDB62A11CA0C5D /* BackShooter.java */; settings = {ATTRIBUTES = (); }; };
+		04857AFCFEEDB62A11CA0C5D /* BackShooterExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A15FEEDB62A11CA0C5D /* BackShooterExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857AFDFEEDB62A11CA0C5D /* Mine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A16FEEDB62A11CA0C5D /* Mine.java */; settings = {ATTRIBUTES = (); }; };
+		04857AFEFEEDB62A11CA0C5D /* BombGenerator.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A17FEEDB62A11CA0C5D /* BombGenerator.java */; settings = {ATTRIBUTES = (); }; };
+		04857AFFFEEDB62A11CA0C5D /* SmallMineExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A18FEEDB62A11CA0C5D /* SmallMineExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857B00FEEDB62A11CA0C5D /* BigExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A19FEEDB62A11CA0C5D /* BigExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857B01FEEDB62A11CA0C5D /* BigMultipleExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A1AFEEDB62A11CA0C5D /* BigMultipleExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857B02FEEDB62A11CA0C5D /* SmallMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A1BFEEDB62A11CA0C5D /* SmallMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B03FEEDB62A11CA0C5D /* StopMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A1CFEEDB62A11CA0C5D /* StopMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B04FEEDB62A11CA0C5D /* ProximityMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A1DFEEDB62A11CA0C5D /* ProximityMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B05FEEDB62A11CA0C5D /* Throton.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A1EFEEDB62A11CA0C5D /* Throton.java */; settings = {ATTRIBUTES = (); }; };
+		04857B06FEEDB62A11CA0C5D /* AmeobaMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A1FFEEDB62A11CA0C5D /* AmeobaMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B07FEEDB62A11CA0C5D /* RandomMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A20FEEDB62A11CA0C5D /* RandomMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B08FEEDB62A11CA0C5D /* SmartMineExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A21FEEDB62A11CA0C5D /* SmartMineExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857B09FEEDB62A11CA0C5D /* SmartMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A22FEEDB62A11CA0C5D /* SmartMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B0AFEEDB62A11CA0C5D /* RealSmartMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A23FEEDB62A11CA0C5D /* RealSmartMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B0BFEEDB62A11CA0C5D /* DonutMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A24FEEDB62A11CA0C5D /* DonutMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B0CFEEDB62A11CA0C5D /* Sentry.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A25FEEDB62A11CA0C5D /* Sentry.java */; settings = {ATTRIBUTES = (); }; };
+		04857B0DFEEDB62A11CA0C5D /* FatSentry.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A26FEEDB62A11CA0C5D /* FatSentry.java */; settings = {ATTRIBUTES = (); }; };
+		04857B0EFEEDB62A11CA0C5D /* LargeMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A27FEEDB62A11CA0C5D /* LargeMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B0FFEEDB62A11CA0C5D /* Fog.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A28FEEDB62A11CA0C5D /* Fog.java */; settings = {ATTRIBUTES = (); }; };
+		04857B10FEEDB62A11CA0C5D /* Arrow.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A29FEEDB62A11CA0C5D /* Arrow.java */; settings = {ATTRIBUTES = (); }; };
+		04857B11FEEDB62A11CA0C5D /* ArrowBase.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A2AFEEDB62A11CA0C5D /* ArrowBase.java */; settings = {ATTRIBUTES = (); }; };
+		04857B12FEEDB62A11CA0C5D /* ArrowBaseExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A2BFEEDB62A11CA0C5D /* ArrowBaseExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857B13FEEDB62A11CA0C5D /* Gunes.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A2CFEEDB62A11CA0C5D /* Gunes.java */; settings = {ATTRIBUTES = (); }; };
+		04857B14FEEDB62A11CA0C5D /* FourMines.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A2DFEEDB62A11CA0C5D /* FourMines.java */; settings = {ATTRIBUTES = (); }; };
+		04857B15FEEDB62A11CA0C5D /* Gate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A2EFEEDB62A11CA0C5D /* Gate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B16FEEDB62A11CA0C5D /* VertGate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A2FFEEDB62A11CA0C5D /* VertGate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B17FEEDB62A11CA0C5D /* HorizGate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A30FEEDB62A11CA0C5D /* HorizGate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B18FEEDB62A11CA0C5D /* TimedHorizGate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A31FEEDB62A11CA0C5D /* TimedHorizGate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B19FEEDB62A11CA0C5D /* TimedVertGate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A32FEEDB62A11CA0C5D /* TimedVertGate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B1AFEEDB62A11CA0C5D /* SwitchedVertGate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A33FEEDB62A11CA0C5D /* SwitchedVertGate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B1BFEEDB62A11CA0C5D /* PassableVertGate.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A34FEEDB62A11CA0C5D /* PassableVertGate.java */; settings = {ATTRIBUTES = (); }; };
+		04857B1CFEEDB62A11CA0C5D /* HorizMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A35FEEDB62A11CA0C5D /* HorizMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B1DFEEDB62A11CA0C5D /* ToughGoodSheep.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A36FEEDB62A11CA0C5D /* ToughGoodSheep.java */; settings = {ATTRIBUTES = (); }; };
+		04857B1EFEEDB62A11CA0C5D /* GoodSheep.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A37FEEDB62A11CA0C5D /* GoodSheep.java */; settings = {ATTRIBUTES = (); }; };
+		04857B1FFEEDB62A11CA0C5D /* BadSheep.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A38FEEDB62A11CA0C5D /* BadSheep.java */; settings = {ATTRIBUTES = (); }; };
+		04857B20FEEDB62A11CA0C5D /* Spider.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A39FEEDB62A11CA0C5D /* Spider.java */; settings = {ATTRIBUTES = (); }; };
+		04857B21FEEDB62A11CA0C5D /* ToughSpider.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A3AFEEDB62A11CA0C5D /* ToughSpider.java */; settings = {ATTRIBUTES = (); }; };
+		04857B22FEEDB62A11CA0C5D /* BoingBall.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A3BFEEDB62A11CA0C5D /* BoingBall.java */; settings = {ATTRIBUTES = (); }; };
+		04857B23FEEDB62A11CA0C5D /* BouncingBoingBall.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A3CFEEDB62A11CA0C5D /* BouncingBoingBall.java */; settings = {ATTRIBUTES = (); }; };
+		04857B24FEEDB62A11CA0C5D /* SneakyBoingBall.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A3DFEEDB62A11CA0C5D /* SneakyBoingBall.java */; settings = {ATTRIBUTES = (); }; };
+		04857B25FEEDB62A11CA0C5D /* BubbleMine.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A3EFEEDB62A11CA0C5D /* BubbleMine.java */; settings = {ATTRIBUTES = (); }; };
+		04857B26FEEDB62A11CA0C5D /* Switch.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A3FFEEDB62A11CA0C5D /* Switch.java */; settings = {ATTRIBUTES = (); }; };
+		04857B27FEEDB62A11CA0C5D /* Hole.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A40FEEDB62A11CA0C5D /* Hole.java */; settings = {ATTRIBUTES = (); }; };
+		04857B28FEEDB62A11CA0C5D /* WaveGenerator.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A41FEEDB62A11CA0C5D /* WaveGenerator.java */; settings = {ATTRIBUTES = (); }; };
+		04857B29FEEDB62A11CA0C5D /* KillerWaveGenerator.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A42FEEDB62A11CA0C5D /* KillerWaveGenerator.java */; settings = {ATTRIBUTES = (); }; };
+		04857B2AFEEDB62A11CA0C5D /* DropShip.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A43FEEDB62A11CA0C5D /* DropShip.java */; settings = {ATTRIBUTES = (); }; };
+		04857B2BFEEDB62A11CA0C5D /* DropShipExplosion.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A44FEEDB62A11CA0C5D /* DropShipExplosion.java */; settings = {ATTRIBUTES = (); }; };
+		04857B2CFEEDB62A11CA0C5D /* RapidFireDropShip.java in Sources */ = {isa = PBXBuildFile; fileRef = 04857A45FEEDB62A11CA0C5D /* RapidFireDropShip.java */; settings = {ATTRIBUTES = (); }; };
+		04857B2DFEEDB62A11CA0C5D /* BlastApp_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04857A47FEEDB62A11CA0C5D /* BlastApp_main.m */; settings = {ATTRIBUTES = (); }; };
+		04857B2FFEEDB62A11CA0C5D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04857A97FEEDB62A11CA0C5D /* AppKit.framework */; };
+		04857B30FEEDB62A11CA0C5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04857A98FEEDB62A11CA0C5D /* Foundation.framework */; };
+		418FBE8D05E2D5E900442541 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 418FBE8B05E2D5E900442541 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		023F5A16FFA5FA1411CA0C5D /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		023F5A17FFA5FA1411CA0C5D /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		01146B80FF672EF811CA0C5D /* BlastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = BlastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		048579F1FEEDB62A11CA0C5D /* BlastAppController.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BlastAppController.java; sourceTree = "<group>"; };
+		048579F2FEEDB62A11CA0C5D /* Game.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Game.java; sourceTree = "<group>"; };
+		048579F3FEEDB62A11CA0C5D /* InputIndicator.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = InputIndicator.java; sourceTree = "<group>"; };
+		048579F4FEEDB62A11CA0C5D /* RemainingHelicopters.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RemainingHelicopters.java; sourceTree = "<group>"; };
+		048579F5FEEDB62A11CA0C5D /* AwardView.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = AwardView.java; sourceTree = "<group>"; };
+		048579F6FEEDB62A11CA0C5D /* GamePiece.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = GamePiece.java; sourceTree = "<group>"; };
+		048579F7FEEDB62A11CA0C5D /* Background.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Background.java; sourceTree = "<group>"; };
+		048579F8FEEDB62A11CA0C5D /* Helicopter.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Helicopter.java; sourceTree = "<group>"; };
+		048579F9FEEDB62A11CA0C5D /* HelicopterExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = HelicopterExplosion.java; sourceTree = "<group>"; };
+		048579FAFEEDB62A11CA0C5D /* AutoPilotHelicopter.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = AutoPilotHelicopter.java; sourceTree = "<group>"; };
+		048579FBFEEDB62A11CA0C5D /* UntouchablePiece.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = UntouchablePiece.java; sourceTree = "<group>"; };
+		048579FCFEEDB62A11CA0C5D /* Missile.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Missile.java; sourceTree = "<group>"; };
+		048579FDFEEDB62A11CA0C5D /* Bullet.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Bullet.java; sourceTree = "<group>"; };
+		048579FEFEEDB62A11CA0C5D /* Wave.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Wave.java; sourceTree = "<group>"; };
+		048579FFFEEDB62A11CA0C5D /* KillerWave.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = KillerWave.java; sourceTree = "<group>"; };
+		04857A00FEEDB62A11CA0C5D /* SmartMissileBaseExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartMissileBaseExplosion.java; sourceTree = "<group>"; };
+		04857A01FEEDB62A11CA0C5D /* AttackShip.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = AttackShip.java; sourceTree = "<group>"; };
+		04857A02FEEDB62A11CA0C5D /* BigAttackShip.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BigAttackShip.java; sourceTree = "<group>"; };
+		04857A03FEEDB62A11CA0C5D /* SmartAttackShip.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartAttackShip.java; sourceTree = "<group>"; };
+		04857A04FEEDB62A11CA0C5D /* EnemyBullet.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = EnemyBullet.java; sourceTree = "<group>"; };
+		04857A05FEEDB62A11CA0C5D /* SmartMissile.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartMissile.java; sourceTree = "<group>"; };
+		04857A06FEEDB62A11CA0C5D /* KillerMissile.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = KillerMissile.java; sourceTree = "<group>"; };
+		04857A07FEEDB62A11CA0C5D /* Bomb.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Bomb.java; sourceTree = "<group>"; };
+		04857A08FEEDB62A11CA0C5D /* MissileBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MissileBase.java; sourceTree = "<group>"; };
+		04857A09FEEDB62A11CA0C5D /* RapidFireMissileBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RapidFireMissileBase.java; sourceTree = "<group>"; };
+		04857A0AFEEDB62A11CA0C5D /* MissileBaseExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MissileBaseExplosion.java; sourceTree = "<group>"; };
+		04857A0BFEEDB62A11CA0C5D /* SmallHarmlessExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmallHarmlessExplosion.java; sourceTree = "<group>"; };
+		04857A0CFEEDB62A11CA0C5D /* SmartMissileBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartMissileBase.java; sourceTree = "<group>"; };
+		04857A0DFEEDB62A11CA0C5D /* KillerMissileBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = KillerMissileBase.java; sourceTree = "<group>"; };
+		04857A0EFEEDB62A11CA0C5D /* DumHangingBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = DumHangingBase.java; sourceTree = "<group>"; };
+		04857A0FFEEDB62A11CA0C5D /* HangingBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = HangingBase.java; sourceTree = "<group>"; };
+		04857A10FEEDB62A11CA0C5D /* RapidFireHangingBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RapidFireHangingBase.java; sourceTree = "<group>"; };
+		04857A11FEEDB62A11CA0C5D /* SmartHangingBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartHangingBase.java; sourceTree = "<group>"; };
+		04857A12FEEDB62A11CA0C5D /* SneakyHangingBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SneakyHangingBase.java; sourceTree = "<group>"; };
+		04857A13FEEDB62A11CA0C5D /* HangingBaseExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = HangingBaseExplosion.java; sourceTree = "<group>"; };
+		04857A14FEEDB62A11CA0C5D /* BackShooter.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BackShooter.java; sourceTree = "<group>"; };
+		04857A15FEEDB62A11CA0C5D /* BackShooterExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BackShooterExplosion.java; sourceTree = "<group>"; };
+		04857A16FEEDB62A11CA0C5D /* Mine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Mine.java; sourceTree = "<group>"; };
+		04857A17FEEDB62A11CA0C5D /* BombGenerator.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BombGenerator.java; sourceTree = "<group>"; };
+		04857A18FEEDB62A11CA0C5D /* SmallMineExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmallMineExplosion.java; sourceTree = "<group>"; };
+		04857A19FEEDB62A11CA0C5D /* BigExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BigExplosion.java; sourceTree = "<group>"; };
+		04857A1AFEEDB62A11CA0C5D /* BigMultipleExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BigMultipleExplosion.java; sourceTree = "<group>"; };
+		04857A1BFEEDB62A11CA0C5D /* SmallMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmallMine.java; sourceTree = "<group>"; };
+		04857A1CFEEDB62A11CA0C5D /* StopMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = StopMine.java; sourceTree = "<group>"; };
+		04857A1DFEEDB62A11CA0C5D /* ProximityMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ProximityMine.java; sourceTree = "<group>"; };
+		04857A1EFEEDB62A11CA0C5D /* Throton.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Throton.java; sourceTree = "<group>"; };
+		04857A1FFEEDB62A11CA0C5D /* AmeobaMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = AmeobaMine.java; sourceTree = "<group>"; };
+		04857A20FEEDB62A11CA0C5D /* RandomMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RandomMine.java; sourceTree = "<group>"; };
+		04857A21FEEDB62A11CA0C5D /* SmartMineExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartMineExplosion.java; sourceTree = "<group>"; };
+		04857A22FEEDB62A11CA0C5D /* SmartMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SmartMine.java; sourceTree = "<group>"; };
+		04857A23FEEDB62A11CA0C5D /* RealSmartMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RealSmartMine.java; sourceTree = "<group>"; };
+		04857A24FEEDB62A11CA0C5D /* DonutMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = DonutMine.java; sourceTree = "<group>"; };
+		04857A25FEEDB62A11CA0C5D /* Sentry.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Sentry.java; sourceTree = "<group>"; };
+		04857A26FEEDB62A11CA0C5D /* FatSentry.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = FatSentry.java; sourceTree = "<group>"; };
+		04857A27FEEDB62A11CA0C5D /* LargeMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = LargeMine.java; sourceTree = "<group>"; };
+		04857A28FEEDB62A11CA0C5D /* Fog.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Fog.java; sourceTree = "<group>"; };
+		04857A29FEEDB62A11CA0C5D /* Arrow.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Arrow.java; sourceTree = "<group>"; };
+		04857A2AFEEDB62A11CA0C5D /* ArrowBase.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ArrowBase.java; sourceTree = "<group>"; };
+		04857A2BFEEDB62A11CA0C5D /* ArrowBaseExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ArrowBaseExplosion.java; sourceTree = "<group>"; };
+		04857A2CFEEDB62A11CA0C5D /* Gunes.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Gunes.java; sourceTree = "<group>"; };
+		04857A2DFEEDB62A11CA0C5D /* FourMines.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = FourMines.java; sourceTree = "<group>"; };
+		04857A2EFEEDB62A11CA0C5D /* Gate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Gate.java; sourceTree = "<group>"; };
+		04857A2FFEEDB62A11CA0C5D /* VertGate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = VertGate.java; sourceTree = "<group>"; };
+		04857A30FEEDB62A11CA0C5D /* HorizGate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = HorizGate.java; sourceTree = "<group>"; };
+		04857A31FEEDB62A11CA0C5D /* TimedHorizGate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = TimedHorizGate.java; sourceTree = "<group>"; };
+		04857A32FEEDB62A11CA0C5D /* TimedVertGate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = TimedVertGate.java; sourceTree = "<group>"; };
+		04857A33FEEDB62A11CA0C5D /* SwitchedVertGate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SwitchedVertGate.java; sourceTree = "<group>"; };
+		04857A34FEEDB62A11CA0C5D /* PassableVertGate.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = PassableVertGate.java; sourceTree = "<group>"; };
+		04857A35FEEDB62A11CA0C5D /* HorizMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = HorizMine.java; sourceTree = "<group>"; };
+		04857A36FEEDB62A11CA0C5D /* ToughGoodSheep.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ToughGoodSheep.java; sourceTree = "<group>"; };
+		04857A37FEEDB62A11CA0C5D /* GoodSheep.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = GoodSheep.java; sourceTree = "<group>"; };
+		04857A38FEEDB62A11CA0C5D /* BadSheep.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BadSheep.java; sourceTree = "<group>"; };
+		04857A39FEEDB62A11CA0C5D /* Spider.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Spider.java; sourceTree = "<group>"; };
+		04857A3AFEEDB62A11CA0C5D /* ToughSpider.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ToughSpider.java; sourceTree = "<group>"; };
+		04857A3BFEEDB62A11CA0C5D /* BoingBall.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BoingBall.java; sourceTree = "<group>"; };
+		04857A3CFEEDB62A11CA0C5D /* BouncingBoingBall.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BouncingBoingBall.java; sourceTree = "<group>"; };
+		04857A3DFEEDB62A11CA0C5D /* SneakyBoingBall.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = SneakyBoingBall.java; sourceTree = "<group>"; };
+		04857A3EFEEDB62A11CA0C5D /* BubbleMine.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = BubbleMine.java; sourceTree = "<group>"; };
+		04857A3FFEEDB62A11CA0C5D /* Switch.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Switch.java; sourceTree = "<group>"; };
+		04857A40FEEDB62A11CA0C5D /* Hole.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Hole.java; sourceTree = "<group>"; };
+		04857A41FEEDB62A11CA0C5D /* WaveGenerator.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = WaveGenerator.java; sourceTree = "<group>"; };
+		04857A42FEEDB62A11CA0C5D /* KillerWaveGenerator.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = KillerWaveGenerator.java; sourceTree = "<group>"; };
+		04857A43FEEDB62A11CA0C5D /* DropShip.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = DropShip.java; sourceTree = "<group>"; };
+		04857A44FEEDB62A11CA0C5D /* DropShipExplosion.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = DropShipExplosion.java; sourceTree = "<group>"; };
+		04857A45FEEDB62A11CA0C5D /* RapidFireDropShip.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RapidFireDropShip.java; sourceTree = "<group>"; };
+		04857A47FEEDB62A11CA0C5D /* BlastApp_main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlastApp_main.m; sourceTree = "<group>"; };
+		04857A4AFEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Prefs.nib; sourceTree = "<group>"; };
+		04857A4CFEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Game.nib; sourceTree = "<group>"; };
+		04857A4FFEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BlastApp.nib; sourceTree = "<group>"; };
+		04857A51FEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/UserName.nib; sourceTree = "<group>"; };
+		04857A53FEEDB62A11CA0C5D /* backshooterexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = backshooterexplosion.tiff; sourceTree = "<group>"; };
+		04857A54FEEDB62A11CA0C5D /* gunes.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = gunes.tiff; sourceTree = "<group>"; };
+		04857A55FEEDB62A11CA0C5D /* greenboing.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = greenboing.tiff; sourceTree = "<group>"; };
+		04857A56FEEDB62A11CA0C5D /* sentry.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sentry.tiff; sourceTree = "<group>"; };
+		04857A57FEEDB62A11CA0C5D /* bigexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bigexplosion.tiff; sourceTree = "<group>"; };
+		04857A58FEEDB62A11CA0C5D /* donut.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = donut.tiff; sourceTree = "<group>"; };
+		04857A59FEEDB62A11CA0C5D /* arrow.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = arrow.tiff; sourceTree = "<group>"; };
+		04857A5AFEEDB62A11CA0C5D /* smartmbexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smartmbexplosion.tiff; sourceTree = "<group>"; };
+		04857A5BFEEDB62A11CA0C5D /* smallmineexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smallmineexplosion.tiff; sourceTree = "<group>"; };
+		04857A5CFEEDB62A11CA0C5D /* hbexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hbexplosion.tiff; sourceTree = "<group>"; };
+		04857A5DFEEDB62A11CA0C5D /* wave.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = wave.tiff; sourceTree = "<group>"; };
+		04857A5EFEEDB62A11CA0C5D /* helicopter.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = helicopter.tiff; sourceTree = "<group>"; };
+		04857A5FFEEDB62A11CA0C5D /* smallexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smallexplosion.tiff; sourceTree = "<group>"; };
+		04857A60FEEDB62A11CA0C5D /* mbexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = mbexplosion.tiff; sourceTree = "<group>"; };
+		04857A61FEEDB62A11CA0C5D /* largemine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = largemine.tiff; sourceTree = "<group>"; };
+		04857A62FEEDB62A11CA0C5D /* fog.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = fog.tiff; sourceTree = "<group>"; };
+		04857A63FEEDB62A11CA0C5D /* dropshipexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dropshipexplosion.tiff; sourceTree = "<group>"; };
+		04857A64FEEDB62A11CA0C5D /* smartmbase.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smartmbase.tiff; sourceTree = "<group>"; };
+		04857A65FEEDB62A11CA0C5D /* smartmineexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smartmineexplosion.tiff; sourceTree = "<group>"; };
+		04857A66FEEDB62A11CA0C5D /* proximitymine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = proximitymine.tiff; sourceTree = "<group>"; };
+		04857A67FEEDB62A11CA0C5D /* smallmine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smallmine.tiff; sourceTree = "<group>"; };
+		04857A68FEEDB62A11CA0C5D /* arrowbase.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = arrowbase.tiff; sourceTree = "<group>"; };
+		04857A69FEEDB62A11CA0C5D /* hexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hexplosion.tiff; sourceTree = "<group>"; };
+		04857A6AFEEDB62A11CA0C5D /* smartmine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smartmine.tiff; sourceTree = "<group>"; };
+		04857A6BFEEDB62A11CA0C5D /* blastapp.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = blastapp.tiff; sourceTree = "<group>"; };
+		04857A6CFEEDB62A11CA0C5D /* fourmines.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = fourmines.tiff; sourceTree = "<group>"; };
+		04857A6DFEEDB62A11CA0C5D /* bomb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bomb.tiff; sourceTree = "<group>"; };
+		04857A6EFEEDB62A11CA0C5D /* fatsentry.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = fatsentry.tiff; sourceTree = "<group>"; };
+		04857A6FFEEDB62A11CA0C5D /* redmine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = redmine.tiff; sourceTree = "<group>"; };
+		04857A70FEEDB62A11CA0C5D /* hole.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hole.tiff; sourceTree = "<group>"; };
+		04857A71FEEDB62A11CA0C5D /* dropship.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dropship.tiff; sourceTree = "<group>"; };
+		04857A72FEEDB62A11CA0C5D /* hblock.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hblock.tiff; sourceTree = "<group>"; };
+		04857A73FEEDB62A11CA0C5D /* missile.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = missile.tiff; sourceTree = "<group>"; };
+		04857A74FEEDB62A11CA0C5D /* smartmissile.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = smartmissile.tiff; sourceTree = "<group>"; };
+		04857A75FEEDB62A11CA0C5D /* mbase.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = mbase.tiff; sourceTree = "<group>"; };
+		04857A76FEEDB62A11CA0C5D /* arrowbaseexplosion.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = arrowbaseexplosion.tiff; sourceTree = "<group>"; };
+		04857A77FEEDB62A11CA0C5D /* keypad.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = keypad.tiff; sourceTree = "<group>"; };
+		04857A78FEEDB62A11CA0C5D /* vblock.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = vblock.tiff; sourceTree = "<group>"; };
+		04857A79FEEDB62A11CA0C5D /* hbase.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = hbase.tiff; sourceTree = "<group>"; };
+		04857A7AFEEDB62A11CA0C5D /* spider.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = spider.tiff; sourceTree = "<group>"; };
+		04857A7BFEEDB62A11CA0C5D /* bullet.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bullet.tiff; sourceTree = "<group>"; };
+		04857A7CFEEDB62A11CA0C5D /* boing.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = boing.tiff; sourceTree = "<group>"; };
+		04857A7DFEEDB62A11CA0C5D /* throton.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = throton.tiff; sourceTree = "<group>"; };
+		04857A7EFEEDB62A11CA0C5D /* switch.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = switch.tiff; sourceTree = "<group>"; };
+		04857A7FFEEDB62A11CA0C5D /* sheep.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sheep.tiff; sourceTree = "<group>"; };
+		04857A80FEEDB62A11CA0C5D /* bubblemine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bubblemine.tiff; sourceTree = "<group>"; };
+		04857A81FEEDB62A11CA0C5D /* backshooter.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = backshooter.tiff; sourceTree = "<group>"; };
+		04857A84FEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		04857A85FEEDB62A11CA0C5D /* EnemyFire.snd */ = {isa = PBXFileReference; lastKnownFileType = file; path = EnemyFire.snd; sourceTree = "<group>"; };
+		04857A86FEEDB62A11CA0C5D /* LowExplosion.snd */ = {isa = PBXFileReference; lastKnownFileType = file; path = LowExplosion.snd; sourceTree = "<group>"; };
+		04857A87FEEDB62A11CA0C5D /* LoudExplosion.snd */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoudExplosion.snd; sourceTree = "<group>"; };
+		04857A88FEEDB62A11CA0C5D /* LevelFileInfo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LevelFileInfo.rtf; sourceTree = "<group>"; };
+		04857A8AFEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = text; name = English; path = English.lproj/LevelData.txt; sourceTree = "<group>"; };
+		04857A8CFEEDB62A11CA0C5D /* English */ = {isa = PBXFileReference; lastKnownFileType = text; name = English; path = English.lproj/DemoLevelData.txt; sourceTree = "<group>"; };
+		04857A8DFEEDB62A11CA0C5D /* blastapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = blastapp.icns; sourceTree = "<group>"; };
+		04857A95FEEDB62A11CA0C5D /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		04857A97FEEDB62A11CA0C5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		04857A98FEEDB62A11CA0C5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		418FBE8C05E2D5E900442541 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04857B2EFEEDB62A11CA0C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04857B2FFEEDB62A11CA0C5D /* AppKit.framework in Frameworks */,
+				04857B30FEEDB62A11CA0C5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		048579EDFEEDB62A11CA0C5D /* BlastApp */ = {
+			isa = PBXGroup;
+			children = (
+				04857A95FEEDB62A11CA0C5D /* README.rtf */,
+				048579F0FEEDB62A11CA0C5D /* Classes */,
+				04857A46FEEDB62A11CA0C5D /* Other Sources */,
+				04857A48FEEDB62A11CA0C5D /* Interfaces */,
+				04857A52FEEDB62A11CA0C5D /* Images */,
+				04857A82FEEDB62A11CA0C5D /* Resources */,
+				04857A96FEEDB62A11CA0C5D /* External Frameworks and Libraries */,
+				048579EEFEEDB62A11CA0C5D /* Products */,
+			);
+			name = BlastApp;
+			sourceTree = "<group>";
+		};
+		048579EEFEEDB62A11CA0C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01146B80FF672EF811CA0C5D /* BlastApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		048579F0FEEDB62A11CA0C5D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				048579F1FEEDB62A11CA0C5D /* BlastAppController.java */,
+				048579F2FEEDB62A11CA0C5D /* Game.java */,
+				048579F3FEEDB62A11CA0C5D /* InputIndicator.java */,
+				048579F4FEEDB62A11CA0C5D /* RemainingHelicopters.java */,
+				048579F5FEEDB62A11CA0C5D /* AwardView.java */,
+				048579F6FEEDB62A11CA0C5D /* GamePiece.java */,
+				048579F7FEEDB62A11CA0C5D /* Background.java */,
+				048579F8FEEDB62A11CA0C5D /* Helicopter.java */,
+				048579F9FEEDB62A11CA0C5D /* HelicopterExplosion.java */,
+				048579FAFEEDB62A11CA0C5D /* AutoPilotHelicopter.java */,
+				048579FBFEEDB62A11CA0C5D /* UntouchablePiece.java */,
+				048579FCFEEDB62A11CA0C5D /* Missile.java */,
+				048579FDFEEDB62A11CA0C5D /* Bullet.java */,
+				048579FEFEEDB62A11CA0C5D /* Wave.java */,
+				048579FFFEEDB62A11CA0C5D /* KillerWave.java */,
+				04857A00FEEDB62A11CA0C5D /* SmartMissileBaseExplosion.java */,
+				04857A01FEEDB62A11CA0C5D /* AttackShip.java */,
+				04857A02FEEDB62A11CA0C5D /* BigAttackShip.java */,
+				04857A03FEEDB62A11CA0C5D /* SmartAttackShip.java */,
+				04857A04FEEDB62A11CA0C5D /* EnemyBullet.java */,
+				04857A05FEEDB62A11CA0C5D /* SmartMissile.java */,
+				04857A06FEEDB62A11CA0C5D /* KillerMissile.java */,
+				04857A07FEEDB62A11CA0C5D /* Bomb.java */,
+				04857A08FEEDB62A11CA0C5D /* MissileBase.java */,
+				04857A09FEEDB62A11CA0C5D /* RapidFireMissileBase.java */,
+				04857A0AFEEDB62A11CA0C5D /* MissileBaseExplosion.java */,
+				04857A0BFEEDB62A11CA0C5D /* SmallHarmlessExplosion.java */,
+				04857A0CFEEDB62A11CA0C5D /* SmartMissileBase.java */,
+				04857A0DFEEDB62A11CA0C5D /* KillerMissileBase.java */,
+				04857A0EFEEDB62A11CA0C5D /* DumHangingBase.java */,
+				04857A0FFEEDB62A11CA0C5D /* HangingBase.java */,
+				04857A10FEEDB62A11CA0C5D /* RapidFireHangingBase.java */,
+				04857A11FEEDB62A11CA0C5D /* SmartHangingBase.java */,
+				04857A12FEEDB62A11CA0C5D /* SneakyHangingBase.java */,
+				04857A13FEEDB62A11CA0C5D /* HangingBaseExplosion.java */,
+				04857A14FEEDB62A11CA0C5D /* BackShooter.java */,
+				04857A15FEEDB62A11CA0C5D /* BackShooterExplosion.java */,
+				04857A16FEEDB62A11CA0C5D /* Mine.java */,
+				04857A17FEEDB62A11CA0C5D /* BombGenerator.java */,
+				04857A18FEEDB62A11CA0C5D /* SmallMineExplosion.java */,
+				04857A19FEEDB62A11CA0C5D /* BigExplosion.java */,
+				04857A1AFEEDB62A11CA0C5D /* BigMultipleExplosion.java */,
+				04857A1BFEEDB62A11CA0C5D /* SmallMine.java */,
+				04857A1CFEEDB62A11CA0C5D /* StopMine.java */,
+				04857A1DFEEDB62A11CA0C5D /* ProximityMine.java */,
+				04857A1EFEEDB62A11CA0C5D /* Throton.java */,
+				04857A1FFEEDB62A11CA0C5D /* AmeobaMine.java */,
+				04857A20FEEDB62A11CA0C5D /* RandomMine.java */,
+				04857A21FEEDB62A11CA0C5D /* SmartMineExplosion.java */,
+				04857A22FEEDB62A11CA0C5D /* SmartMine.java */,
+				04857A23FEEDB62A11CA0C5D /* RealSmartMine.java */,
+				04857A24FEEDB62A11CA0C5D /* DonutMine.java */,
+				04857A25FEEDB62A11CA0C5D /* Sentry.java */,
+				04857A26FEEDB62A11CA0C5D /* FatSentry.java */,
+				04857A27FEEDB62A11CA0C5D /* LargeMine.java */,
+				04857A28FEEDB62A11CA0C5D /* Fog.java */,
+				04857A29FEEDB62A11CA0C5D /* Arrow.java */,
+				04857A2AFEEDB62A11CA0C5D /* ArrowBase.java */,
+				04857A2BFEEDB62A11CA0C5D /* ArrowBaseExplosion.java */,
+				04857A2CFEEDB62A11CA0C5D /* Gunes.java */,
+				04857A2DFEEDB62A11CA0C5D /* FourMines.java */,
+				04857A2EFEEDB62A11CA0C5D /* Gate.java */,
+				04857A2FFEEDB62A11CA0C5D /* VertGate.java */,
+				04857A30FEEDB62A11CA0C5D /* HorizGate.java */,
+				04857A31FEEDB62A11CA0C5D /* TimedHorizGate.java */,
+				04857A32FEEDB62A11CA0C5D /* TimedVertGate.java */,
+				04857A33FEEDB62A11CA0C5D /* SwitchedVertGate.java */,
+				04857A34FEEDB62A11CA0C5D /* PassableVertGate.java */,
+				04857A35FEEDB62A11CA0C5D /* HorizMine.java */,
+				04857A36FEEDB62A11CA0C5D /* ToughGoodSheep.java */,
+				04857A37FEEDB62A11CA0C5D /* GoodSheep.java */,
+				04857A38FEEDB62A11CA0C5D /* BadSheep.java */,
+				04857A39FEEDB62A11CA0C5D /* Spider.java */,
+				04857A3AFEEDB62A11CA0C5D /* ToughSpider.java */,
+				04857A3BFEEDB62A11CA0C5D /* BoingBall.java */,
+				04857A3CFEEDB62A11CA0C5D /* BouncingBoingBall.java */,
+				04857A3DFEEDB62A11CA0C5D /* SneakyBoingBall.java */,
+				04857A3EFEEDB62A11CA0C5D /* BubbleMine.java */,
+				04857A3FFEEDB62A11CA0C5D /* Switch.java */,
+				04857A40FEEDB62A11CA0C5D /* Hole.java */,
+				04857A41FEEDB62A11CA0C5D /* WaveGenerator.java */,
+				04857A42FEEDB62A11CA0C5D /* KillerWaveGenerator.java */,
+				04857A43FEEDB62A11CA0C5D /* DropShip.java */,
+				04857A44FEEDB62A11CA0C5D /* DropShipExplosion.java */,
+				04857A45FEEDB62A11CA0C5D /* RapidFireDropShip.java */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		04857A46FEEDB62A11CA0C5D /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				04857A47FEEDB62A11CA0C5D /* BlastApp_main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		04857A48FEEDB62A11CA0C5D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				04857A49FEEDB62A11CA0C5D /* Prefs.nib */,
+				04857A4BFEEDB62A11CA0C5D /* Game.nib */,
+				04857A4DFEEDB62A11CA0C5D /* BlastApp.nib */,
+				04857A50FEEDB62A11CA0C5D /* UserName.nib */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		04857A52FEEDB62A11CA0C5D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04857A53FEEDB62A11CA0C5D /* backshooterexplosion.tiff */,
+				04857A54FEEDB62A11CA0C5D /* gunes.tiff */,
+				04857A55FEEDB62A11CA0C5D /* greenboing.tiff */,
+				04857A56FEEDB62A11CA0C5D /* sentry.tiff */,
+				04857A57FEEDB62A11CA0C5D /* bigexplosion.tiff */,
+				04857A58FEEDB62A11CA0C5D /* donut.tiff */,
+				04857A59FEEDB62A11CA0C5D /* arrow.tiff */,
+				04857A5AFEEDB62A11CA0C5D /* smartmbexplosion.tiff */,
+				04857A5BFEEDB62A11CA0C5D /* smallmineexplosion.tiff */,
+				04857A5CFEEDB62A11CA0C5D /* hbexplosion.tiff */,
+				04857A5DFEEDB62A11CA0C5D /* wave.tiff */,
+				04857A5EFEEDB62A11CA0C5D /* helicopter.tiff */,
+				04857A5FFEEDB62A11CA0C5D /* smallexplosion.tiff */,
+				04857A60FEEDB62A11CA0C5D /* mbexplosion.tiff */,
+				04857A61FEEDB62A11CA0C5D /* largemine.tiff */,
+				04857A62FEEDB62A11CA0C5D /* fog.tiff */,
+				04857A63FEEDB62A11CA0C5D /* dropshipexplosion.tiff */,
+				04857A64FEEDB62A11CA0C5D /* smartmbase.tiff */,
+				04857A65FEEDB62A11CA0C5D /* smartmineexplosion.tiff */,
+				04857A66FEEDB62A11CA0C5D /* proximitymine.tiff */,
+				04857A67FEEDB62A11CA0C5D /* smallmine.tiff */,
+				04857A68FEEDB62A11CA0C5D /* arrowbase.tiff */,
+				04857A69FEEDB62A11CA0C5D /* hexplosion.tiff */,
+				04857A6AFEEDB62A11CA0C5D /* smartmine.tiff */,
+				04857A6BFEEDB62A11CA0C5D /* blastapp.tiff */,
+				04857A6CFEEDB62A11CA0C5D /* fourmines.tiff */,
+				04857A6DFEEDB62A11CA0C5D /* bomb.tiff */,
+				04857A6EFEEDB62A11CA0C5D /* fatsentry.tiff */,
+				04857A6FFEEDB62A11CA0C5D /* redmine.tiff */,
+				04857A70FEEDB62A11CA0C5D /* hole.tiff */,
+				04857A71FEEDB62A11CA0C5D /* dropship.tiff */,
+				04857A72FEEDB62A11CA0C5D /* hblock.tiff */,
+				04857A73FEEDB62A11CA0C5D /* missile.tiff */,
+				04857A74FEEDB62A11CA0C5D /* smartmissile.tiff */,
+				04857A75FEEDB62A11CA0C5D /* mbase.tiff */,
+				04857A76FEEDB62A11CA0C5D /* arrowbaseexplosion.tiff */,
+				04857A77FEEDB62A11CA0C5D /* keypad.tiff */,
+				04857A78FEEDB62A11CA0C5D /* vblock.tiff */,
+				04857A79FEEDB62A11CA0C5D /* hbase.tiff */,
+				04857A7AFEEDB62A11CA0C5D /* spider.tiff */,
+				04857A7BFEEDB62A11CA0C5D /* bullet.tiff */,
+				04857A7CFEEDB62A11CA0C5D /* boing.tiff */,
+				04857A7DFEEDB62A11CA0C5D /* throton.tiff */,
+				04857A7EFEEDB62A11CA0C5D /* switch.tiff */,
+				04857A7FFEEDB62A11CA0C5D /* sheep.tiff */,
+				04857A80FEEDB62A11CA0C5D /* bubblemine.tiff */,
+				04857A81FEEDB62A11CA0C5D /* backshooter.tiff */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		04857A82FEEDB62A11CA0C5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				418FBE8B05E2D5E900442541 /* InfoPlist.strings */,
+				04857A83FEEDB62A11CA0C5D /* Credits.rtf */,
+				04857A85FEEDB62A11CA0C5D /* EnemyFire.snd */,
+				04857A86FEEDB62A11CA0C5D /* LowExplosion.snd */,
+				04857A87FEEDB62A11CA0C5D /* LoudExplosion.snd */,
+				04857A88FEEDB62A11CA0C5D /* LevelFileInfo.rtf */,
+				04857A89FEEDB62A11CA0C5D /* LevelData.txt */,
+				04857A8BFEEDB62A11CA0C5D /* DemoLevelData.txt */,
+				04857A8DFEEDB62A11CA0C5D /* blastapp.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		04857A96FEEDB62A11CA0C5D /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				04857A97FEEDB62A11CA0C5D /* AppKit.framework */,
+				04857A98FEEDB62A11CA0C5D /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04857A9AFEEDB62A11CA0C5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXProject section */
+		048579ECFEEDB62A11CA0C5D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDC4F08A2DD92008AC9B5 /* Build configuration list for PBXProject "BlastApp" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				023F5A16FFA5FA1411CA0C5D /* Development */,
+				023F5A17FFA5FA1411CA0C5D /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 048579EDFEEDB62A11CA0C5D /* BlastApp */;
+			productRefGroup = 048579EEFEEDB62A11CA0C5D /* Products */;
+			projectDirPath = "";
+			targets = (
+				04857A99FEEDB62A11CA0C5D /* BlastApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04857A9BFEEDB62A11CA0C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04857A9CFEEDB62A11CA0C5D /* Prefs.nib in Resources */,
+				04857A9DFEEDB62A11CA0C5D /* Game.nib in Resources */,
+				04857A9EFEEDB62A11CA0C5D /* BlastApp.nib in Resources */,
+				04857A9FFEEDB62A11CA0C5D /* UserName.nib in Resources */,
+				04857AA0FEEDB62A11CA0C5D /* backshooterexplosion.tiff in Resources */,
+				04857AA1FEEDB62A11CA0C5D /* gunes.tiff in Resources */,
+				04857AA2FEEDB62A11CA0C5D /* greenboing.tiff in Resources */,
+				04857AA3FEEDB62A11CA0C5D /* sentry.tiff in Resources */,
+				04857AA4FEEDB62A11CA0C5D /* bigexplosion.tiff in Resources */,
+				04857AA5FEEDB62A11CA0C5D /* donut.tiff in Resources */,
+				04857AA6FEEDB62A11CA0C5D /* arrow.tiff in Resources */,
+				04857AA7FEEDB62A11CA0C5D /* smartmbexplosion.tiff in Resources */,
+				04857AA8FEEDB62A11CA0C5D /* smallmineexplosion.tiff in Resources */,
+				04857AA9FEEDB62A11CA0C5D /* hbexplosion.tiff in Resources */,
+				04857AAAFEEDB62A11CA0C5D /* wave.tiff in Resources */,
+				04857AABFEEDB62A11CA0C5D /* helicopter.tiff in Resources */,
+				04857AACFEEDB62A11CA0C5D /* smallexplosion.tiff in Resources */,
+				04857AADFEEDB62A11CA0C5D /* mbexplosion.tiff in Resources */,
+				04857AAEFEEDB62A11CA0C5D /* largemine.tiff in Resources */,
+				04857AAFFEEDB62A11CA0C5D /* fog.tiff in Resources */,
+				04857AB0FEEDB62A11CA0C5D /* dropshipexplosion.tiff in Resources */,
+				04857AB1FEEDB62A11CA0C5D /* smartmbase.tiff in Resources */,
+				04857AB2FEEDB62A11CA0C5D /* smartmineexplosion.tiff in Resources */,
+				04857AB3FEEDB62A11CA0C5D /* proximitymine.tiff in Resources */,
+				04857AB4FEEDB62A11CA0C5D /* smallmine.tiff in Resources */,
+				04857AB5FEEDB62A11CA0C5D /* arrowbase.tiff in Resources */,
+				04857AB6FEEDB62A11CA0C5D /* hexplosion.tiff in Resources */,
+				04857AB7FEEDB62A11CA0C5D /* smartmine.tiff in Resources */,
+				04857AB8FEEDB62A11CA0C5D /* blastapp.tiff in Resources */,
+				04857AB9FEEDB62A11CA0C5D /* fourmines.tiff in Resources */,
+				04857ABAFEEDB62A11CA0C5D /* bomb.tiff in Resources */,
+				04857ABBFEEDB62A11CA0C5D /* fatsentry.tiff in Resources */,
+				04857ABCFEEDB62A11CA0C5D /* redmine.tiff in Resources */,
+				04857ABDFEEDB62A11CA0C5D /* hole.tiff in Resources */,
+				04857ABEFEEDB62A11CA0C5D /* dropship.tiff in Resources */,
+				04857ABFFEEDB62A11CA0C5D /* hblock.tiff in Resources */,
+				04857AC0FEEDB62A11CA0C5D /* missile.tiff in Resources */,
+				04857AC1FEEDB62A11CA0C5D /* smartmissile.tiff in Resources */,
+				04857AC2FEEDB62A11CA0C5D /* mbase.tiff in Resources */,
+				04857AC3FEEDB62A11CA0C5D /* arrowbaseexplosion.tiff in Resources */,
+				04857AC4FEEDB62A11CA0C5D /* keypad.tiff in Resources */,
+				04857AC5FEEDB62A11CA0C5D /* vblock.tiff in Resources */,
+				04857AC6FEEDB62A11CA0C5D /* hbase.tiff in Resources */,
+				04857AC7FEEDB62A11CA0C5D /* spider.tiff in Resources */,
+				04857AC8FEEDB62A11CA0C5D /* bullet.tiff in Resources */,
+				04857AC9FEEDB62A11CA0C5D /* boing.tiff in Resources */,
+				04857ACAFEEDB62A11CA0C5D /* throton.tiff in Resources */,
+				04857ACBFEEDB62A11CA0C5D /* switch.tiff in Resources */,
+				04857ACCFEEDB62A11CA0C5D /* sheep.tiff in Resources */,
+				04857ACDFEEDB62A11CA0C5D /* bubblemine.tiff in Resources */,
+				04857ACEFEEDB62A11CA0C5D /* backshooter.tiff in Resources */,
+				04857ACFFEEDB62A11CA0C5D /* Credits.rtf in Resources */,
+				04857AD0FEEDB62A11CA0C5D /* EnemyFire.snd in Resources */,
+				04857AD1FEEDB62A11CA0C5D /* LowExplosion.snd in Resources */,
+				04857AD2FEEDB62A11CA0C5D /* LoudExplosion.snd in Resources */,
+				04857AD3FEEDB62A11CA0C5D /* LevelFileInfo.rtf in Resources */,
+				04857AD4FEEDB62A11CA0C5D /* LevelData.txt in Resources */,
+				04857AD5FEEDB62A11CA0C5D /* DemoLevelData.txt in Resources */,
+				04857AD6FEEDB62A11CA0C5D /* blastapp.icns in Resources */,
+				418FBE8D05E2D5E900442541 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		04857B31FEEDB62A11CA0C5D /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04857AD7FEEDB62A11CA0C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04857AD8FEEDB62A11CA0C5D /* BlastAppController.java in Sources */,
+				04857AD9FEEDB62A11CA0C5D /* Game.java in Sources */,
+				04857ADAFEEDB62A11CA0C5D /* InputIndicator.java in Sources */,
+				04857ADBFEEDB62A11CA0C5D /* RemainingHelicopters.java in Sources */,
+				04857ADCFEEDB62A11CA0C5D /* AwardView.java in Sources */,
+				04857ADDFEEDB62A11CA0C5D /* GamePiece.java in Sources */,
+				04857ADEFEEDB62A11CA0C5D /* Background.java in Sources */,
+				04857ADFFEEDB62A11CA0C5D /* Helicopter.java in Sources */,
+				04857AE0FEEDB62A11CA0C5D /* HelicopterExplosion.java in Sources */,
+				04857AE1FEEDB62A11CA0C5D /* AutoPilotHelicopter.java in Sources */,
+				04857AE2FEEDB62A11CA0C5D /* UntouchablePiece.java in Sources */,
+				04857AE3FEEDB62A11CA0C5D /* Missile.java in Sources */,
+				04857AE4FEEDB62A11CA0C5D /* Bullet.java in Sources */,
+				04857AE5FEEDB62A11CA0C5D /* Wave.java in Sources */,
+				04857AE6FEEDB62A11CA0C5D /* KillerWave.java in Sources */,
+				04857AE7FEEDB62A11CA0C5D /* SmartMissileBaseExplosion.java in Sources */,
+				04857AE8FEEDB62A11CA0C5D /* AttackShip.java in Sources */,
+				04857AE9FEEDB62A11CA0C5D /* BigAttackShip.java in Sources */,
+				04857AEAFEEDB62A11CA0C5D /* SmartAttackShip.java in Sources */,
+				04857AEBFEEDB62A11CA0C5D /* EnemyBullet.java in Sources */,
+				04857AECFEEDB62A11CA0C5D /* SmartMissile.java in Sources */,
+				04857AEDFEEDB62A11CA0C5D /* KillerMissile.java in Sources */,
+				04857AEEFEEDB62A11CA0C5D /* Bomb.java in Sources */,
+				04857AEFFEEDB62A11CA0C5D /* MissileBase.java in Sources */,
+				04857AF0FEEDB62A11CA0C5D /* RapidFireMissileBase.java in Sources */,
+				04857AF1FEEDB62A11CA0C5D /* MissileBaseExplosion.java in Sources */,
+				04857AF2FEEDB62A11CA0C5D /* SmallHarmlessExplosion.java in Sources */,
+				04857AF3FEEDB62A11CA0C5D /* SmartMissileBase.java in Sources */,
+				04857AF4FEEDB62A11CA0C5D /* KillerMissileBase.java in Sources */,
+				04857AF5FEEDB62A11CA0C5D /* DumHangingBase.java in Sources */,
+				04857AF6FEEDB62A11CA0C5D /* HangingBase.java in Sources */,
+				04857AF7FEEDB62A11CA0C5D /* RapidFireHangingBase.java in Sources */,
+				04857AF8FEEDB62A11CA0C5D /* SmartHangingBase.java in Sources */,
+				04857AF9FEEDB62A11CA0C5D /* SneakyHangingBase.java in Sources */,
+				04857AFAFEEDB62A11CA0C5D /* HangingBaseExplosion.java in Sources */,
+				04857AFBFEEDB62A11CA0C5D /* BackShooter.java in Sources */,
+				04857AFCFEEDB62A11CA0C5D /* BackShooterExplosion.java in Sources */,
+				04857AFDFEEDB62A11CA0C5D /* Mine.java in Sources */,
+				04857AFEFEEDB62A11CA0C5D /* BombGenerator.java in Sources */,
+				04857AFFFEEDB62A11CA0C5D /* SmallMineExplosion.java in Sources */,
+				04857B00FEEDB62A11CA0C5D /* BigExplosion.java in Sources */,
+				04857B01FEEDB62A11CA0C5D /* BigMultipleExplosion.java in Sources */,
+				04857B02FEEDB62A11CA0C5D /* SmallMine.java in Sources */,
+				04857B03FEEDB62A11CA0C5D /* StopMine.java in Sources */,
+				04857B04FEEDB62A11CA0C5D /* ProximityMine.java in Sources */,
+				04857B05FEEDB62A11CA0C5D /* Throton.java in Sources */,
+				04857B06FEEDB62A11CA0C5D /* AmeobaMine.java in Sources */,
+				04857B07FEEDB62A11CA0C5D /* RandomMine.java in Sources */,
+				04857B08FEEDB62A11CA0C5D /* SmartMineExplosion.java in Sources */,
+				04857B09FEEDB62A11CA0C5D /* SmartMine.java in Sources */,
+				04857B0AFEEDB62A11CA0C5D /* RealSmartMine.java in Sources */,
+				04857B0BFEEDB62A11CA0C5D /* DonutMine.java in Sources */,
+				04857B0CFEEDB62A11CA0C5D /* Sentry.java in Sources */,
+				04857B0DFEEDB62A11CA0C5D /* FatSentry.java in Sources */,
+				04857B0EFEEDB62A11CA0C5D /* LargeMine.java in Sources */,
+				04857B0FFEEDB62A11CA0C5D /* Fog.java in Sources */,
+				04857B10FEEDB62A11CA0C5D /* Arrow.java in Sources */,
+				04857B11FEEDB62A11CA0C5D /* ArrowBase.java in Sources */,
+				04857B12FEEDB62A11CA0C5D /* ArrowBaseExplosion.java in Sources */,
+				04857B13FEEDB62A11CA0C5D /* Gunes.java in Sources */,
+				04857B14FEEDB62A11CA0C5D /* FourMines.java in Sources */,
+				04857B15FEEDB62A11CA0C5D /* Gate.java in Sources */,
+				04857B16FEEDB62A11CA0C5D /* VertGate.java in Sources */,
+				04857B17FEEDB62A11CA0C5D /* HorizGate.java in Sources */,
+				04857B18FEEDB62A11CA0C5D /* TimedHorizGate.java in Sources */,
+				04857B19FEEDB62A11CA0C5D /* TimedVertGate.java in Sources */,
+				04857B1AFEEDB62A11CA0C5D /* SwitchedVertGate.java in Sources */,
+				04857B1BFEEDB62A11CA0C5D /* PassableVertGate.java in Sources */,
+				04857B1CFEEDB62A11CA0C5D /* HorizMine.java in Sources */,
+				04857B1DFEEDB62A11CA0C5D /* ToughGoodSheep.java in Sources */,
+				04857B1EFEEDB62A11CA0C5D /* GoodSheep.java in Sources */,
+				04857B1FFEEDB62A11CA0C5D /* BadSheep.java in Sources */,
+				04857B20FEEDB62A11CA0C5D /* Spider.java in Sources */,
+				04857B21FEEDB62A11CA0C5D /* ToughSpider.java in Sources */,
+				04857B22FEEDB62A11CA0C5D /* BoingBall.java in Sources */,
+				04857B23FEEDB62A11CA0C5D /* BouncingBoingBall.java in Sources */,
+				04857B24FEEDB62A11CA0C5D /* SneakyBoingBall.java in Sources */,
+				04857B25FEEDB62A11CA0C5D /* BubbleMine.java in Sources */,
+				04857B26FEEDB62A11CA0C5D /* Switch.java in Sources */,
+				04857B27FEEDB62A11CA0C5D /* Hole.java in Sources */,
+				04857B28FEEDB62A11CA0C5D /* WaveGenerator.java in Sources */,
+				04857B29FEEDB62A11CA0C5D /* KillerWaveGenerator.java in Sources */,
+				04857B2AFEEDB62A11CA0C5D /* DropShip.java in Sources */,
+				04857B2BFEEDB62A11CA0C5D /* DropShipExplosion.java in Sources */,
+				04857B2CFEEDB62A11CA0C5D /* RapidFireDropShip.java in Sources */,
+				04857B2DFEEDB62A11CA0C5D /* BlastApp_main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04857A49FEEDB62A11CA0C5D /* Prefs.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A4AFEEDB62A11CA0C5D /* English */,
+			);
+			name = Prefs.nib;
+			sourceTree = "<group>";
+		};
+		04857A4BFEEDB62A11CA0C5D /* Game.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A4CFEEDB62A11CA0C5D /* English */,
+			);
+			name = Game.nib;
+			sourceTree = "<group>";
+		};
+		04857A4DFEEDB62A11CA0C5D /* BlastApp.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A4FFEEDB62A11CA0C5D /* English */,
+			);
+			name = BlastApp.nib;
+			sourceTree = "<group>";
+		};
+		04857A50FEEDB62A11CA0C5D /* UserName.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A51FEEDB62A11CA0C5D /* English */,
+			);
+			name = UserName.nib;
+			sourceTree = "<group>";
+		};
+		04857A83FEEDB62A11CA0C5D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A84FEEDB62A11CA0C5D /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		04857A89FEEDB62A11CA0C5D /* LevelData.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A8AFEEDB62A11CA0C5D /* English */,
+			);
+			name = LevelData.txt;
+			sourceTree = "<group>";
+		};
+		04857A8BFEEDB62A11CA0C5D /* DemoLevelData.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04857A8CFEEDB62A11CA0C5D /* English */,
+			);
+			name = DemoLevelData.txt;
+			sourceTree = "<group>";
+		};
+		418FBE8B05E2D5E900442541 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				418FBE8C05E2D5E900442541 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDC4C08A2DD92008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlastApp;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDC4D08A2DD92008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlastApp;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDC4E08A2DD92008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlastApp;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		B69BDC5008A2DD92008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		B69BDC5108A2DD92008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		B69BDC5208A2DD92008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDC4B08A2DD92008AC9B5 /* Build configuration list for PBXApplicationTarget "BlastApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDC4C08A2DD92008AC9B5 /* Development */,
+				B69BDC4D08A2DD92008AC9B5 /* Deployment */,
+				B69BDC4E08A2DD92008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDC4F08A2DD92008AC9B5 /* Build configuration list for PBXProject "BlastApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDC5008A2DD92008AC9B5 /* Development */,
+				B69BDC5108A2DD92008AC9B5 /* Deployment */,
+				B69BDC5208A2DD92008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 048579ECFEEDB62A11CA0C5D /* Project object */;
+}
